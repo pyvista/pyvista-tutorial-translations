@@ -45,7 +45,7 @@ jobs:
     - name: update
       env:
         SPHINXINTL_TRANSIFEX_USERNAME: api
-        SPHINXINTL_TRANSIFEX_PROJECT_NAME: pyvista-doc
+        SPHINXINTL_TRANSIFEX_PROJECT_NAME: pyvista-tutorial
         TX_TOKEN: ${{ secrets.TX_TOKEN }}
       run: |
         set -x
