@@ -1,0 +1,2 @@
+sphinx-intl[transifex]==2.0.1
+-r pyvista-tutorial/requirements_docs.txt
