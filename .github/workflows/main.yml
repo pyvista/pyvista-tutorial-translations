@@ -64,9 +64,6 @@ jobs:
         sh ./locale/update.sh
         ls ./pyvista-tutorial/doc/tutorial
         mv ./pyvista-tutorial/doc/tutorial ./locale
-        ls ./pyvista-tutorial/doc/images
-        rm -Rf ./locale/images
-        mv ./pyvista-tutorial/doc/images ./locale
     - name: commit
       if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'main')
       env:
