@@ -231,6 +231,8 @@ msgid ""
 "Research Software Engineer working at the intersection of geoscience, "
 "visualization, and data science."
 msgstr ""
+"PyVistaの共同開発者である `Bane Sullivan <https://banesullivan.com>`_ "
+"は，球科学，可視化，データサイエンスの交差点で働く研究ソフトウェア技術者です．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:140
 msgid ""
@@ -239,10 +241,12 @@ msgid ""
 "presenting PyVista at `Transform 2021 "
 "<https://www.youtube.com/watch?v=FmNmRBsEBHE>`_."
 msgstr ""
+"Baneは地球物理学者/水文学者であり，地下の地球科学コミュニティにおけるPyVistaの普及に努めており，過去には `Transform 2021 "
+"<https://www.youtube.com/watch?v=FmNmRBsEBHE>`_ でPyVistaを発表しています．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:143
 msgid "Tetsuo Koyama"
-msgstr ""
+msgstr "Tetsuo Koyama"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:145
 msgid ""
@@ -250,34 +254,44 @@ msgid ""
 " computing and visualization with computer graphics. Developer team member "
 "of PyVista. Past experience as a speaker:"
 msgstr ""
+"`Tetsuo Koyama <https://github.com/tkoyama010>`_ "
+"は科学計算とコンピュータグラフィックスによる可視化に興味がります．PyVistaの開発メンバー．講演経験あり．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:149
 msgid ""
 "`PyConJP 2019 speaker \"Introduction to FEM Analysis with Python\" "
 "<https://youtu.be/6JuB1GiDLQQ>`_"
 msgstr ""
+"`PyConJP 2019 speaker \"Introduction to FEM Analysis with Python\" "
+"<https://youtu.be/6JuB1GiDLQQ>`_"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:150
 msgid ""
 "`PyConJP 2020 speaker \"How to plot unstructured mesh file on Jupyter "
 "Notebook\" <https://youtu.be/X3Z54Kw4I6Y>`_"
 msgstr ""
+"`PyConJP 2020 speaker \"How to plot unstructured mesh file on Jupyter "
+"Notebook\" <https://youtu.be/X3Z54Kw4I6Y>`_"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:151
 msgid ""
 "`SciPy Japan 2020 speaker \"Translation Project of Mayavi2 documents\" "
 "<https://youtu.be/epxm9SjLMS0>`_"
 msgstr ""
+"`SciPy Japan 2020 speaker \"Translation Project of Mayavi2 documents\" "
+"<https://youtu.be/epxm9SjLMS0>`_"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:152
 msgid ""
 "`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
 "matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 msgstr ""
+"`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
+"matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:155
 msgid "Tutorial Prerequisites"
-msgstr ""
+msgstr "チュートリアルの前提条件"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:157
 msgid ""
@@ -286,9 +300,10 @@ msgid ""
 " fact, our tutorial instructors and community members are involved in any "
 "domain."
 msgstr ""
+"このチュートリアルは，Pythonの基本的なユーザーから上級のパワーユーザーまで，あらゆる分野のデータを可視化したいと考えるすべての人を対象にしています．実際，私たちのチュートリアル講師やコミュニティメンバーは，どのような分野にも携わっています．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:168
 msgid ""
 "Advanced users will be familiar with GUI frameworks like Qt, VTK, and "
 "advanced data science."
-msgstr ""
+msgstr "上級者はQtなどのGUIフレームワークやVTK，高度なデータサイエンスに精通することになります．"
