@@ -1,0 +1,3 @@
+[submodule "pyvista-tutorial"]
+	path = pyvista-tutorial
+	url = https://github.com/pyvista/pyvista-tutorial
