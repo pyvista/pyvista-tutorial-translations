@@ -60,7 +60,7 @@ jobs:
         cd pyvista-tutorial
         make -C doc html SPHINXOPTS="-w build_errors.txt -N"
         cd ../
-        cp ../pyvista-tutorial/doc/*.vtk .
+        cp ./pyvista-tutorial/doc/*.vtk .
         sh ./locale/update.sh
         ls ./pyvista-tutorial/doc/examples
         mv ./pyvista-tutorial/doc/examples ./locale
