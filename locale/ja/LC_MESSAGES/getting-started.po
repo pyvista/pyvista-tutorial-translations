@@ -57,77 +57,79 @@ msgstr "PyVistaは，いくつかの環境にインストールすることが�
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:21
 msgid "**Locally**"
-msgstr ""
+msgstr "**ローカル**"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:23
 msgid ":ref:`pip`"
-msgstr ""
+msgstr ":ref:`pip`"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:24
 msgid ":ref:`conda`"
-msgstr ""
+msgstr ":ref:`conda`"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:26
 msgid "**Cloud**"
-msgstr ""
+msgstr "**クラウド**"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:28
 msgid ":ref:`colab`"
-msgstr ""
+msgstr ":ref:`colab`"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:29
 msgid ":ref:`mybinder`"
-msgstr ""
+msgstr ":ref:`mybinder`"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:35
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:67
 msgid "pip"
-msgstr ""
+msgstr "pip"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:37
 msgid "If you're using ``pip``, then installation is just::"
-msgstr ""
+msgstr "もし， ``pip`` を使っているならば，インストールは以下だけです::"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:47
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:73
 msgid "conda"
-msgstr ""
+msgstr "conda"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:49
 msgid "Install PyVista using the `Anaconda Distribution`_::"
-msgstr ""
+msgstr "`Anaconda Distribution`_ を使用してPyVistaをインストールします．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:60
 msgid "Additional Packages"
-msgstr ""
+msgstr "追加パッケージ"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:62
 msgid ""
 "If you prefer working within a Jupyter environment, we recommend you install"
 " the following packages:"
-msgstr ""
+msgstr "Jupyter環境での作業を希望される場合は，以下のパッケージのインストールをお勧めします．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:80
 msgid ""
 "You can then plot using Jupyterlab or Jupyter Notebook interactively with "
 "one of three backends:"
 msgstr ""
+"その後，JupyterlabまたはJupyter "
+"Notebookを使用して，3つのバックエンドのうちの1つを使用して対話的にプロットすることができます:"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:84
 msgid "ipyvtklink"
-msgstr ""
+msgstr "ipyvtklink"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:101
 msgid "panel"
-msgstr ""
+msgstr "panel"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:112
 msgid "pythreejs"
-msgstr ""
+msgstr "pythreejs"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:129
 msgid "Google Colab"
-msgstr ""
+msgstr "Google Colab"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:130
 msgid ""
@@ -137,6 +139,9 @@ msgid ""
 "example for `Google Colab <https://colab.research.google.com/>`_ with static"
 " plotting."
 msgstr ""
+"Google Colabは動いているターゲットで，PyVistaをとても素晴らしいものにしている \"クラウド対応\" "
+"のJavaScriptプロット環境の多くは，Google Colabでは利用できないようです．しかし，静的プロット機能を持つ `Google Colab"
+" <https://colab.research.google.com/>`_ 用の PyVista サンプルはまだ動作しています．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:135
 msgid ""
@@ -145,10 +150,13 @@ msgid ""
 " notebook to see PyVista in action. The minimum code to get PyVista running "
 "in a Colab environment is:"
 msgstr ""
+"`PyVista on Colab "
+"<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_"
+" ノートブックで，PyVistaが実際に動いているところをご覧ください．Colab環境でPyVistaを動作させるための最小限のコードは以下の通りです．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:153
 msgid "MyBinder"
-msgstr ""
+msgstr "MyBinder"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:154
 msgid ""
@@ -156,12 +164,14 @@ msgid ""
 "the cloud. Click on the link below to open up a MyBinder environment to run "
 "PyVista."
 msgstr ""
+"MyBinderはGoogle "
+"Colabと同様に，クラウド上でJupyterノートブックを実行することができます．以下のリンクをクリックして，PyVistaを実行するためのMyBinder環境を開いてみてください．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:158
 msgid "|binder|"
-msgstr ""
+msgstr "|binder|"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Launch on Binder"
-msgstr ""
+msgstr "Binderでの起動"
