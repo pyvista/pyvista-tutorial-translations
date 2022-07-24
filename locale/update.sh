@@ -11,9 +11,9 @@ set -ex
 cd `dirname $0`
 sphinx-intl create-transifexrc
 #rm -R pot  # skip this line cause "already unused pot files will not removed" but we must keep these files to avoid commit for only "POT-Creation-Time" line updated. see: https://github.com/sphinx-doc/sphinx/issues/3443
-sphinx-build -T -b gettext ../pyvista-tutorial/doc pot || true  # will fail on VTK9
-sphinx-build -T -b gettext ../pyvista-tutorial/doc pot || true  # need it again due to all our docstring examples
-sphinx-build -T -b gettext ../pyvista-tutorial/doc pot
+sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot || true  # will fail on VTK9
+sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot || true  # need it again due to all our docstring examples
+sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot
 sphinx-intl update-txconfig-resources -p pot -d .
 cat .tx/config
 tx push -s --skip
