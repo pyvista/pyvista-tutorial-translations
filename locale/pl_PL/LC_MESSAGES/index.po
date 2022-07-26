@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 16:06+0000\n"
+"POT-Creation-Date: 2022-07-26 00:43+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Polish (Poland) (https://www.transifex.com/tkoyama010/teams/112279/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -45,12 +45,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:31
-msgid "iPython"
+msgid "IPython"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:33
 msgid ""
-"Here's a quick demo of PyVista running within a terminal using `iPython "
+"Here's a quick demo of PyVista running within a terminal using `IPython "
 "<https://ipython.org/>`_."
 msgstr ""
 
@@ -100,7 +100,7 @@ msgid ""
 "PyVista exposes a Pythonic API to the `Visualization Toolkit (VTK) "
 "<http://www.vtk.org>`_ to provide tooling that is immediately usable without"
 " any prior knowledge of VTK and is being built as the 3D equivalent of "
-"`matplotlib <https://matplotlib.org/>`_, with plugins to `Jupyter "
+"`Matplotlib <https://matplotlib.org/>`_, with plugins to `Jupyter "
 "<https://jupyter.org/>`_ to enable visualization of 3D data using both "
 "server and client-side rendering."
 msgstr ""
@@ -243,7 +243,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/index.rst:152
 msgid ""
 "`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
-"matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
+"Matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:155

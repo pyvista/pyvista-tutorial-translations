@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the PyVista Tutorial package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Li Zhou, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 16:06+0000\n"
+"POT-Creation-Date: 2022-07-26 00:43+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
+"Last-Translator: Li Zhou, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,12 +49,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:31
-msgid "iPython"
+msgid "IPython"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:33
 msgid ""
-"Here's a quick demo of PyVista running within a terminal using `iPython "
+"Here's a quick demo of PyVista running within a terminal using `IPython "
 "<https://ipython.org/>`_."
 msgstr ""
 
@@ -60,7 +64,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:51
 msgid "Getting Started"
-msgstr ""
+msgstr "开始"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:54
 msgid "Get PyVista setup on your environment."
@@ -100,7 +104,7 @@ msgid ""
 "PyVista exposes a Pythonic API to the `Visualization Toolkit (VTK) "
 "<http://www.vtk.org>`_ to provide tooling that is immediately usable without"
 " any prior knowledge of VTK and is being built as the 3D equivalent of "
-"`matplotlib <https://matplotlib.org/>`_, with plugins to `Jupyter "
+"`Matplotlib <https://matplotlib.org/>`_, with plugins to `Jupyter "
 "<https://jupyter.org/>`_ to enable visualization of 3D data using both "
 "server and client-side rendering."
 msgstr ""
@@ -243,7 +247,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/index.rst:152
 msgid ""
 "`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
-"matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
+"Matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:155
