@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-31 00:39+0000\n"
+"POT-Creation-Date: 2022-08-01 00:47+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/tkoyama010/teams/112279/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -265,7 +265,7 @@ msgid "Now let's plot them all in one window"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:118
-msgid "**Total running time of the script:** ( 0 minutes  2.970 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.094 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:0
@@ -339,9 +339,9 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:236
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:477
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:391
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8177
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8193
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:388
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:590
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:592
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:366
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:222
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:213
@@ -353,7 +353,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:160
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:135
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:604
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:591
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:603
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:223
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:215
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:279
@@ -702,7 +702,7 @@ msgid "Computation times"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:8
-msgid "**00:02.970** total execution time for **tutorial_00_intro** files:"
+msgid "**00:01.094** total execution time for **tutorial_00_intro** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
@@ -710,7 +710,7 @@ msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py` (``a_basic.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
-msgid "00:02.970"
+msgid "00:01.094"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
@@ -842,7 +842,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:276
-msgid "**Total running time of the script:** ( 0 minutes  9.620 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  10.491 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:298
@@ -1097,7 +1097,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
-msgid "**00:09.620** total execution time for **tutorial_01_basic** files:"
+msgid "**00:10.491** total execution time for **tutorial_01_basic** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
@@ -1106,7 +1106,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
-msgid "00:09.620"
+msgid "00:10.491"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
@@ -1130,7 +1130,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:281
-msgid "**Total running time of the script:** ( 0 minutes  4.040 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.698 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:303
@@ -1147,7 +1147,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:04.040** total execution time for **tutorial_01_basic_solutions** "
+"**00:04.698** total execution time for **tutorial_01_basic_solutions** "
 "files:"
 msgstr ""
 
@@ -1158,7 +1158,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:11
-msgid "00:04.040"
+msgid "00:04.698"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:13
@@ -1198,14 +1198,14 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:67
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:218
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:336
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8037
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8053
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:76
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:133
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:64
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:158
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:323
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:377
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:410
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:325
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:379
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:412
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:58
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:99
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:70
@@ -1339,7 +1339,7 @@ msgid "Note how this varies from assigning scalars to each point"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:407
-msgid "**Total running time of the script:** ( 0 minutes  3.872 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.258 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:429
@@ -1570,7 +1570,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:185
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:321
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:533
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:535
 msgid "Exercise"
 msgstr ""
 
@@ -1581,50 +1581,50 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:191
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8021
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8037
 msgid ""
 "Here are some example 3D data using random data. Feel free to use your own "
 "3D numpy array here!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:204
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8048
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8064
 msgid "Create the :class:`pyvista.UniformGrid`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:206
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8050
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8066
 msgid ""
 "Hint, you will likely need to ``ravel`` the array with F-ordering: "
 "``arr.ravel(order=\"F\")``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:230
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8091
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8107
 msgid "Example"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:231
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8092
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8108
 msgid "Here are some examples of this kind of data in PyVista!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:233
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8094
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8110
 msgid ""
 "See the PyVista documentation for further details on `Volume Rendering "
 "<https://docs.pyvista.org/examples/02-plot/volume.html>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:281
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8164
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8180
 msgid ""
 ":download:`Download Python source code: c_create-uniform-grid.py <c_create-"
 "uniform-grid.py>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:287
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8170
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8186
 msgid ""
 ":download:`Download Jupyter notebook: c_create-uniform-grid.ipynb <c_create-"
 "uniform-grid.ipynb>`"
@@ -1762,70 +1762,70 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:66
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:305
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:307
 msgid ""
 "The following code block uses a built-in example file, displays an airplane "
 "mesh and returns the camera's position:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:81
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:334
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:336
 msgid ""
 "Note the above filename, it's a ``.ply`` file - one of the many supported "
 "formats in PyVista."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:84
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:337
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:339
 msgid "Use ``pv.read`` to load the file as a mesh:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:98
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:362
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:364
 msgid "The points from the mesh are directly accessible as a NumPy array:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:110
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:394
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:396
 msgid "The faces from the mesh are also directly accessible as a NumPy array:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:123
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:427
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:429
 msgid ""
 "Loading other files types is just as easy! Simply pass your file path to the"
 " :func:`pyvista.read` function and that's it!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:126
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:430
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:432
 msgid ""
 "Here are a few other examples - simply replace ``examples.download_*`` in "
 "the examples below with ``pyvista.read('path/to/you/file.ext')``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:131
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:435
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:437
 msgid "Example STL file:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:144
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:459
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:461
 msgid "Example OBJ file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:157
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:483
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:485
 msgid "Example BYU file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:170
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:507
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:509
 msgid "Example VTK file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:186
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:534
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:536
 msgid ""
 "Read a file yourself with :func:`pyvista.read`. If you have a supported file"
 " format, use that! Otherwise, download this file: "
@@ -1834,13 +1834,13 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:223
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:577
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:579
 msgid ""
 ":download:`Download Python source code: e_read-file.py <e_read-file.py>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:229
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:583
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:585
 msgid ""
 ":download:`Download Jupyter notebook: e_read-file.ipynb <e_read-file.ipynb>`"
 msgstr ""
@@ -2033,7 +2033,7 @@ msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:8
-msgid "**00:03.872** total execution time for **tutorial_02_mesh** files:"
+msgid "**00:04.258** total execution time for **tutorial_02_mesh** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:11
@@ -2042,7 +2042,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:11
-msgid "00:03.872"
+msgid "00:04.258"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:13
@@ -2053,7 +2053,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:356
-msgid "**Total running time of the script:** ( 0 minutes  3.486 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.504 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:13
@@ -2063,8 +2063,8 @@ msgid ""
 "in your browser via Binder"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8142
-msgid "**Total running time of the script:** ( 0 minutes  6.005 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8158
+msgid "**Total running time of the script:** ( 0 minutes  6.302 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:13
@@ -2075,7 +2075,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:353
-msgid "**Total running time of the script:** ( 0 minutes  1.561 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.623 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:13
@@ -2085,13 +2085,13 @@ msgid ""
 "browser via Binder"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:555
-msgid "**Total running time of the script:** ( 0 minutes  2.258 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:557
+msgid "**Total running time of the script:** ( 0 minutes  2.723 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:8
 msgid ""
-"**00:13.309** total execution time for **tutorial_02_mesh_soultions** files:"
+"**00:14.152** total execution time for **tutorial_02_mesh_soultions** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
@@ -2101,7 +2101,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
-msgid "00:06.005"
+msgid "00:06.302"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
@@ -2111,7 +2111,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
-msgid "00:03.486"
+msgid "00:03.504"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
@@ -2121,7 +2121,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
-msgid "00:02.258"
+msgid "00:02.723"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
@@ -2131,7 +2131,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
-msgid "00:01.561"
+msgid "00:01.623"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:13
@@ -2241,7 +2241,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:331
-msgid "**Total running time of the script:** ( 0 minutes  4.629 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.994 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:353
@@ -2314,7 +2314,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:187
-msgid "**Total running time of the script:** ( 0 minutes  1.837 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.927 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:209
@@ -2379,7 +2379,7 @@ msgid "Combine custom lighting and physically based rendering."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:178
-msgid "**Total running time of the script:** ( 1 minutes  1.303 seconds)"
+msgid "**Total running time of the script:** ( 1 minutes  10.279 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:200
@@ -2454,7 +2454,7 @@ msgid "This example will label each point with their scalar values"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:396
-msgid "**Total running time of the script:** ( 0 minutes  1.030 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.159 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:418
@@ -2505,7 +2505,7 @@ msgid "Orbit around the Mt. St Helens dataset."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:158
-msgid "**Total running time of the script:** ( 0 minutes  59.694 seconds)"
+msgid "**Total running time of the script:** ( 1 minutes  37.284 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:180
@@ -2518,23 +2518,23 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:8
 msgid ""
-"**02:02.026** total execution time for **tutorial_03_figures_bonus** files:"
+"**02:48.723** total execution time for **tutorial_03_figures_bonus** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
-msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
-msgid "01:01.303"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
+msgid "01:37.284"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
-msgid "00:59.694"
+msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
+msgid "01:10.279"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
@@ -2543,7 +2543,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
-msgid "00:01.030"
+msgid "00:01.159"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:13
@@ -2609,7 +2609,7 @@ msgid "Read the GeoTIFF as a ``Texture`` in PyVista:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:275
-msgid "**Total running time of the script:** ( 0 minutes  6.122 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  7.193 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:297
@@ -2647,7 +2647,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:92
-msgid "**Total running time of the script:** ( 0 minutes  3.107 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.344 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:114
@@ -2688,52 +2688,52 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:54
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:406
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:418
 msgid "Plot that mesh with the edges of cells displayed"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:67
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:430
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:442
 msgid ""
 "Plot that mesh with the colored edges and as a show the surface as a solid "
 "color (use a named color!)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:81
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:455
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:467
 msgid "Display with a points representation style"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:94
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:479
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:491
 msgid "And adjust the points display size"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:107
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:503
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:515
 msgid "Change the color map and the color limits"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:120
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:527
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:539
 msgid "Add some opacity"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:133
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:551
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:563
 msgid ""
 "There you go! Those are a few of the most commonly used display options!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:160
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:578
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:590
 msgid ""
 ":download:`Download Python source code: a_display_options.py "
 "<a_display_options.py>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:166
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:584
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:596
 msgid ""
 ":download:`Download Jupyter notebook: a_display_options.ipynb "
 "<a_display_options.ipynb>`"
@@ -3075,7 +3075,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:8
-msgid "**00:15.695** total execution time for **tutorial_03_figures** files:"
+msgid "**00:17.458** total execution time for **tutorial_03_figures** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
@@ -3085,7 +3085,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
-msgid "00:06.122"
+msgid "00:07.193"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
@@ -3095,7 +3095,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
-msgid "00:04.629"
+msgid "00:04.994"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
@@ -3103,7 +3103,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-msgid "00:03.107"
+msgid "00:03.344"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
@@ -3111,7 +3111,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
-msgid "00:01.837"
+msgid "00:01.927"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:13
@@ -3128,8 +3128,8 @@ msgid ""
 "https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:556
-msgid "**Total running time of the script:** ( 0 minutes  3.099 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:568
+msgid "**Total running time of the script:** ( 0 minutes  3.543 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:13
@@ -3145,7 +3145,7 @@ msgid "First, lets take a look at the mesh with default lighting conditions"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:188
-msgid "**Total running time of the script:** ( 0 minutes  4.390 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  5.041 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:13
@@ -3156,12 +3156,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:180
-msgid "**Total running time of the script:** ( 0 minutes  14.830 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  16.871 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:22.319** total execution time for **tutorial_03_figures_solutions** "
+"**00:25.455** total execution time for **tutorial_03_figures_solutions** "
 "files:"
 msgstr ""
 
@@ -3170,7 +3170,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:11
-msgid "00:14.830"
+msgid "00:16.871"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
@@ -3180,7 +3180,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
-msgid "00:04.390"
+msgid "00:05.041"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
@@ -3190,7 +3190,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
-msgid "00:03.099"
+msgid "00:03.543"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:13
@@ -3345,7 +3345,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:244
-msgid "**Total running time of the script:** ( 0 minutes  2.162 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.380 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:266
@@ -3742,7 +3742,7 @@ msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:8
-msgid "**00:02.162** total execution time for **tutorial_04_filters** files:"
+msgid "**00:02.380** total execution time for **tutorial_04_filters** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
@@ -3752,7 +3752,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
-msgid "00:02.162"
+msgid "00:02.380"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:13
@@ -3763,7 +3763,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:583
-msgid "**Total running time of the script:** ( 0 minutes  2.241 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.595 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:13
@@ -3774,7 +3774,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:185
-msgid "**Total running time of the script:** ( 0 minutes  16.409 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  17.887 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:13
@@ -3786,7 +3786,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:312
-msgid "**Total running time of the script:** ( 0 minutes  4.760 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  5.234 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:13
@@ -3797,12 +3797,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:307
-msgid "**Total running time of the script:** ( 0 minutes  1.388 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.542 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:24.799** total execution time for **tutorial_04_filters_solutions** "
+"**00:27.259** total execution time for **tutorial_04_filters_solutions** "
 "files:"
 msgstr ""
 
@@ -3813,7 +3813,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:11
-msgid "00:16.409"
+msgid "00:17.887"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:13
@@ -3823,7 +3823,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:13
-msgid "00:04.760"
+msgid "00:05.234"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
@@ -3833,7 +3833,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
-msgid "00:02.241"
+msgid "00:02.595"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
@@ -3842,7 +3842,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
-msgid "00:01.388"
+msgid "00:01.542"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:50
@@ -4181,7 +4181,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:520
-msgid "**Total running time of the script:** ( 0 minutes  1.366 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.539 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:542
@@ -4302,7 +4302,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:253
-msgid "**Total running time of the script:** ( 0 minutes  1.381 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.598 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:275
@@ -4354,7 +4354,7 @@ msgid "Create ``vtkStructuredGrid``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:216
-msgid "**Total running time of the script:** ( 0 minutes  0.752 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.832 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:238
@@ -4460,7 +4460,7 @@ msgid "See https://kitware.github.io/vtk-examples/site/Python/"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1391
-msgid "**Total running time of the script:** ( 0 minutes  0.862 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.973 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1413
@@ -4518,7 +4518,7 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:8
-msgid "**00:04.361** total execution time for **tutorial_06_vtk** files:"
+msgid "**00:04.941** total execution time for **tutorial_06_vtk** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
@@ -4527,7 +4527,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
-msgid "00:01.381"
+msgid "00:01.598"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
@@ -4537,7 +4537,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
-msgid "00:01.366"
+msgid "00:01.539"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
@@ -4547,7 +4547,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-msgid "00:00.862"
+msgid "00:00.973"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
@@ -4555,7 +4555,7 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
-msgid "00:00.752"
+msgid "00:00.832"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:10
@@ -4800,7 +4800,7 @@ msgid "After interacting with the scene, the clipped mesh is available as:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:113
-msgid "**Total running time of the script:** ( 0 minutes  7.200 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  8.351 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:135
@@ -4867,7 +4867,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:175
-msgid "**Total running time of the script:** ( 0 minutes  0.858 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.927 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:197
@@ -4911,7 +4911,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:102
-msgid "**Total running time of the script:** ( 0 minutes  1.458 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.699 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:124
@@ -4951,7 +4951,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:138
-msgid "**Total running time of the script:** ( 0 minutes  0.338 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.378 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:160
@@ -5037,7 +5037,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:303
-msgid "**Total running time of the script:** ( 0 minutes  8.384 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  8.735 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:325
@@ -5096,7 +5096,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:162
-msgid "**Total running time of the script:** ( 0 minutes  2.738 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.261 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:184
@@ -5170,7 +5170,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:269
-msgid "**Total running time of the script:** ( 0 minutes  1.167 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.261 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:291
@@ -5215,7 +5215,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:95
-msgid "**Total running time of the script:** ( 0 minutes  0.489 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.562 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:117
@@ -5294,7 +5294,7 @@ msgid ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:8
-msgid "**00:22.631** total execution time for **tutorial_08_widgets** files:"
+msgid "**00:25.174** total execution time for **tutorial_08_widgets** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:11
@@ -5304,7 +5304,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:11
-msgid "00:08.384"
+msgid "00:08.735"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:13
@@ -5313,7 +5313,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:13
-msgid "00:07.200"
+msgid "00:08.351"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:15
@@ -5323,7 +5323,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:15
-msgid "00:02.738"
+msgid "00:03.261"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:17
@@ -5332,7 +5332,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:17
-msgid "00:01.458"
+msgid "00:01.699"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:19
@@ -5342,7 +5342,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:19
-msgid "00:01.167"
+msgid "00:01.261"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:21
@@ -5352,7 +5352,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:21
-msgid "00:00.858"
+msgid "00:00.927"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:23
@@ -5362,7 +5362,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:23
-msgid "00:00.489"
+msgid "00:00.562"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:25
@@ -5372,7 +5372,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:25
-msgid "00:00.338"
+msgid "00:00.378"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:10
