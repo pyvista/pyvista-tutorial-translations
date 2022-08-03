@@ -53,13 +53,14 @@ msgstr "`Jupyterlab <https://jupyter.org/>`_ 内で動作するPyVistaの簡単�
 
 #: ../../pyvista-tutorial/doc/source/index.rst:31
 msgid "IPython"
-msgstr ""
+msgstr "IPython"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:33
 msgid ""
 "Here's a quick demo of PyVista running within a terminal using `IPython "
 "<https://ipython.org/>`_."
 msgstr ""
+"ここでは， `IPython <https://ipython.org/>`_ を使用してターミナル内でPyVistaを実行する簡単なデモを紹介します．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:45
 msgid "Quick Links"
@@ -115,6 +116,10 @@ msgid ""
 "<https://jupyter.org/>`_ to enable visualization of 3D data using both "
 "server and client-side rendering."
 msgstr ""
+"PyVistaは， `Visualization Toolkit (VTK) <http://www.vtk.org>`_ にPythonic "
+"APIを公開し，VTKの予備知識がなくてもすぐに使えるツールを提供します．また， `Matplotlib "
+"<https://matplotlib.org/>`_ と同等の3Dとして構築されており， `Jupyter "
+"<https://jupyter.org/>`_ へのプラグインによりサーバーサイドレンダリングを用いた3Dデータの視覚化を可能にするものです．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:94
 msgid ""
@@ -281,6 +286,8 @@ msgid ""
 "`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
 "Matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 msgstr ""
+"`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
+"Matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:155
 msgid "Tutorial Prerequisites"
