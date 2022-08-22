@@ -1,16 +1,16 @@
-# translated tutorial for pyvista official document
+# translated tutorial for pyvista official tutorial
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-This is a project to provide pyvista official documentation with multiple versions and multiple languages.
+This is a project to provide pyvista official tutorial with multiple versions and multiple languages.
 
 ## URLs
 
-* Documentation pages for each languages:
+* Tutorial pages for each languages:
 
-  * https://pyvista.github.io/pyvista-tutorial-dev-ja/
+  * https://pyvista.github.io/pyvista-tutorial-ja/
 
 
 ## How to update po files
