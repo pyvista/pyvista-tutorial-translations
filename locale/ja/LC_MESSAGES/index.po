@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-26 00:43+0000\n"
+"POT-Creation-Date: 2022-08-22 23:53+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -150,8 +150,8 @@ msgid ""
 msgstr "PyVistaのクラスとデータ構造の概要を実例を交えて解説します．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:103
-msgid "Be familiar of the various filters and features of PyVista."
-msgstr "PyVistaの様々なフィルタや機能を使いこなすことができる．"
+msgid "Be familiar with the various filters and features of PyVista."
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:104
 msgid ""
@@ -187,10 +187,9 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:116
 msgid ""
-"Advanced users should be familiar the Visualization Toolkit (VTK), general "
-"data science, and GUI frameworks like Qt."
+"Advanced users should be familiar with the Visualization Toolkit (VTK), "
+"general data science, and GUI frameworks like Qt."
 msgstr ""
-"上級者はVisualization Toolkit (VTK)，一般的なデータサイエンス，QtのようなGUIフレームワークに精通している必要があります．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:121
 msgid "Instructor Bios"

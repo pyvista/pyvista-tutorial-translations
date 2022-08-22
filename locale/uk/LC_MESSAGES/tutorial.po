@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-22 16:17+0000\n"
+"POT-Creation-Date: 2022-08-22 23:53+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Ukrainian (https://www.transifex.com/tkoyama010/teams/112279/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -405,9 +405,9 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:20
 msgid ""
-"PyVista is one of many visulization libraries built on top `VTK - The "
+"PyVista is one of many visualization libraries built on top `VTK - The "
 "Visualization Toolkit <https://vtk.org/>`_. It's primary intent was to be an"
-" abstraction layer over VTK to provide conviencece and functionality to VTK "
+" abstraction layer over VTK to provide convenience and functionality to VTK "
 "exposed \"Pythonically\"."
 msgstr ""
 
@@ -539,7 +539,7 @@ msgstr ""
 msgid ""
 "VTK is powerful, really powerful! You can do just about anything within VTK "
 "and PyVista just wants to make it easier to do it using ``numpy``-like and "
-"``matplotlib``-like syntax. For example, if you wanted to be able to plot a "
+"``Matplotlib``-like syntax. For example, if you wanted to be able to plot a "
 "simple surface mesh:"
 msgstr ""
 
@@ -1882,7 +1882,7 @@ msgid ""
 "This is a very high level overview of the PyVista API to familiarize users "
 "with PyVista's data structures.  For further details regarding our data "
 "model, how it relates to the underlying VTK data model, and how to create "
-"your own meshes, please see `this detailed guide of of the Data Model "
+"your own meshes, please see `this detailed guide of the Data Model "
 "<https://docs.pyvista.org/user-guide/data_model.html>`_."
 msgstr ""
 
@@ -2147,6 +2147,7 @@ msgid "``add_mesh``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:45
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:47
 msgid ""
 "When plotting, users must first create a :class:`pyvista.Plotter` instance "
 "(much like a Matplotlib figure). Then data are added to the plotter instance"
@@ -2225,7 +2226,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:270
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:244
-msgid "Aexs can be added to the scene with :func:`pyvista.Plotter.show_axes`"
+msgid "Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:299
@@ -2241,7 +2242,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:331
-msgid "**Total running time of the script:** ( 0 minutes  4.254 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  6.571 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:353
@@ -2803,7 +2804,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:107
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:159
 msgid ""
-"Demonstration of all diffues, specular, and ambient in use together (feel "
+"Demonstration of all diffuse, specular, and ambient in use together (feel "
 "free to adjust)"
 msgstr ""
 
@@ -2922,7 +2923,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:23
-msgid "Color mapping scalar values with ``matplotlib`` colormaps"
+msgid "Color mapping scalar values with ``Matplotlib`` colormaps"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:24
@@ -2970,16 +2971,8 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:40
 msgid ""
 "PyVista's plotting API is data-centric, where the 3D data are individually "
-"added to the scene with different display parameters in a matplotlib-like "
+"added to the scene with different display parameters in a Matplotlib-like "
 "fashion."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:47
-msgid ""
-"When plotting, users must first create a :class:`pyvista.Plotter` instance "
-"(much like a matplotlib figure). Then data are added to the plotter instance"
-" through the :func:`pyvista.Plotter.add_mesh` method. This workflow "
-"typically looks like:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:192
@@ -3075,43 +3068,42 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:8
-msgid "**00:15.081** total execution time for **tutorial_03_figures** files:"
+msgid "**00:06.571** total execution time for **tutorial_03_figures** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
-msgid ""
-":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
-"map.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
-msgid "00:06.847"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
 msgid ""
 ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` "
 "(``a_lesson_figures.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
+msgid "00:06.571"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
-msgid "00:04.254"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-msgid "00:02.496"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
-msgid "00:01.485"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
+msgid "00:00.000"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
+msgid ""
+":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
+"map.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
+msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:13
@@ -3145,7 +3137,7 @@ msgid "First, lets take a look at the mesh with default lighting conditions"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:188
-msgid "**Total running time of the script:** ( 0 minutes  4.065 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.161 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:13
@@ -3161,36 +3153,28 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:20.830** total execution time for **tutorial_03_figures_solutions** "
+"**00:04.161** total execution time for **tutorial_03_figures_solutions** "
 "files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:11
-msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:11
-msgid "00:13.968"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
 msgid ""
 ":ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py` "
 "(``b_lighting_mesh.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
-msgid "00:04.065"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:11
+msgid "00:04.161"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
 msgid ""
 ":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` "
 "(``a_display_options.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
-msgid "00:02.796"
+msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:13
@@ -4210,6 +4194,7 @@ msgid "PyVista and VTK Together"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:24
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:301
 msgid ""
 "PyVista is best known for is easy to use plotting API -- being familiar to "
 "most Python users already experienced with libraries like Matplotlib. Many "
@@ -4452,7 +4437,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1383
 msgid ""
 "Take a look at VTK's examples and documentation to find a filter you'd like "
-"to apply to you mesh. The instructors will be around to help you implement."
+"to apply to your mesh. The instructors will be around to help you implement."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1386
@@ -4460,7 +4445,7 @@ msgid "See https://kitware.github.io/vtk-examples/site/Python/"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1391
-msgid "**Total running time of the script:** ( 0 minutes  0.776 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.926 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1413
@@ -4492,15 +4477,6 @@ msgid ""
 " of the PyVista documentation."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:301
-msgid ""
-"PyVista is best known for is easy to use plotting API -- being familiar to "
-"most Python users already experienced with libraries like matplotlib. Many "
-"people benefit from combining the power of VTK's Python bindings for their "
-"data pipelines and the flexibility and simplicity of PyVista for 3D "
-"rendering. The following section demonstrates this usage scenario."
-msgstr ""
-
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:402
 msgid ":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py`"
 msgstr ""
@@ -4518,16 +4494,17 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:8
-msgid "**00:03.921** total execution time for **tutorial_06_vtk** files:"
+msgid "**00:00.926** total execution time for **tutorial_06_vtk** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
 msgid ""
-":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
+":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
+"(``c_vtk_algorithms.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
-msgid "00:01.271"
+msgid "00:00.926"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
@@ -4536,26 +4513,13 @@ msgid ""
 "(``a_1_transition_vtk.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
-msgid "00:01.218"
-msgstr ""
-
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
 msgid ""
-":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
-"(``c_vtk_algorithms.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-msgid "00:00.776"
+":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
 msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
-msgid "00:00.655"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:10
@@ -4577,13 +4541,13 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:23
 msgid ""
 "PyVista allows you to generate static or dynamic images directly within "
-"Sphinx much like the `matplotlib plot_directive "
+"Sphinx much like the `Matplotlib plot_directive "
 "<https://matplotlib.org/stable/api/sphinxext_plot_directive_api.html>`_. "
 "Rather than manually creating and adding plots after code sections, you can "
 "instead dynamically generate images and embed them directly within your "
 "documentation. This also works seamlessly with `sphinx-gallery "
 "<https://sphinx-gallery.github.io/>`_, so you can create notebook examples "
-"just like the `matplotlib Example Gallery "
+"just like the `Matplotlib Example Gallery "
 "<https://matplotlib.org/stable/gallery/index.html>`_."
 msgstr ""
 
@@ -5492,7 +5456,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:147
 msgid ""
 "`VesselVio <https://jacobbumgarner.github.io/VesselVio/>`_ is open-source "
-"application for the analysis and visualization of segemented vasculature "
+"application for the analysis and visualization of segmented vasculature "
 "datasets."
 msgstr ""
 

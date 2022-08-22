@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-26 00:43+0000\n"
+"POT-Creation-Date: 2022-08-22 23:53+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Spanish (https://www.transifex.com/tkoyama010/teams/112279/es/)\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:103
-msgid "Be familiar of the various filters and features of PyVista."
+msgid "Be familiar with the various filters and features of PyVista."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:104
@@ -164,8 +164,8 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:116
 msgid ""
-"Advanced users should be familiar the Visualization Toolkit (VTK), general "
-"data science, and GUI frameworks like Qt."
+"Advanced users should be familiar with the Visualization Toolkit (VTK), "
+"general data science, and GUI frameworks like Qt."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:121
