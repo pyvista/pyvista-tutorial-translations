@@ -55,15 +55,15 @@ jobs:
         Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
         sleep 3
         set +x
-        rm -f ./locale/tutorial/*/*.py
-        mv ./locale/tutorial ./pyvista-tutorial/doc
+        rm -f ./locale/source/tutorial/*/*.py
+        mv ./locale/source/tutorial ./pyvista-tutorial/doc/source
         cd pyvista-tutorial
         make -C doc html SPHINXOPTS="-w build_errors.txt -N"
         cd ../
         cp ./pyvista-tutorial/doc/*.vtk ./locale
         sh ./locale/update.sh
-        ls ./pyvista-tutorial/doc/tutorial
-        mv ./pyvista-tutorial/doc/tutorial ./locale
+        ls ./pyvista-tutorial/doc/source/tutorial
+        mv ./pyvista-tutorial/doc/source/tutorial ./locale/source
     - name: commit
       if: contains(github.event.head_commit.message, '[ci skip]') == false && contains(github.ref, 'main')
       env:
