@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-21 00:38+0000\n"
+"POT-Creation-Date: 2022-08-22 00:43+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -278,7 +278,7 @@ msgid "Now let's plot them all in one window"
 msgstr "ここで，すべてを1つのウィンドウにプロットします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:118
-msgid "**Total running time of the script:** ( 0 minutes  3.898 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.922 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:0
@@ -759,7 +759,7 @@ msgid "Computation times"
 msgstr "計算時間"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:8
-msgid "**00:03.898** total execution time for **tutorial_00_intro** files:"
+msgid "**00:00.922** total execution time for **tutorial_00_intro** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
@@ -767,7 +767,7 @@ msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py` (``a_basic.py``)"
 msgstr ":ref:`sphx_glr_tutorial_00_intro_a_basic.py` (``a_basic.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
-msgid "00:03.898"
+msgid "00:00.922"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
@@ -921,7 +921,7 @@ msgid ""
 msgstr "これもまた :class:`pyvista.UniformGrid` で、ボリューム的にプロットすることができます。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:276
-msgid "**Total running time of the script:** ( 0 minutes  8.868 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  9.526 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:298
@@ -1212,7 +1212,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
-msgid "**00:08.868** total execution time for **tutorial_01_basic** files:"
+msgid "**00:09.526** total execution time for **tutorial_01_basic** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
@@ -1222,7 +1222,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` (``a_lesson_basic.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
-msgid "00:08.868"
+msgid "00:09.526"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
@@ -1254,7 +1254,7 @@ msgstr ""
 "https://www.thingiverse.com/thing:5412753 からダウンロードします。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:281
-msgid "**Total running time of the script:** ( 0 minutes  3.877 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  5.168 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:303
@@ -1275,7 +1275,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:03.877** total execution time for **tutorial_01_basic_solutions** "
+"**00:05.168** total execution time for **tutorial_01_basic_solutions** "
 "files:"
 msgstr ""
 
@@ -1288,7 +1288,7 @@ msgstr ""
 "(``a_load_examples_solution.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:11
-msgid "00:03.877"
+msgid "00:05.168"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:13
@@ -1481,7 +1481,7 @@ msgid "Note how this varies from assigning scalars to each point"
 msgstr "これは，各点にスカラーを割り当てるのとは異なることに注意してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:407
-msgid "**Total running time of the script:** ( 0 minutes  3.536 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.615 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:429
@@ -2278,7 +2278,7 @@ msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:8
-msgid "**00:03.536** total execution time for **tutorial_02_mesh** files:"
+msgid "**00:03.615** total execution time for **tutorial_02_mesh** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:11
@@ -2288,7 +2288,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py` (``a_lesson_mesh.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:11
-msgid "00:03.536"
+msgid "00:03.615"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:13
@@ -2302,7 +2302,7 @@ msgstr ""
 " your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:356
-msgid "**Total running time of the script:** ( 0 minutes  3.250 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.923 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:13
@@ -2316,7 +2316,7 @@ msgstr ""
 "in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8158
-msgid "**Total running time of the script:** ( 0 minutes  5.280 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  5.646 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:13
@@ -2330,7 +2330,7 @@ msgstr ""
 "your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:353
-msgid "**Total running time of the script:** ( 0 minutes  1.375 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.343 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:13
@@ -2344,12 +2344,12 @@ msgstr ""
 "browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:557
-msgid "**Total running time of the script:** ( 0 minutes  2.171 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  3.037 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:8
 msgid ""
-"**00:12.075** total execution time for **tutorial_02_mesh_soultions** files:"
+"**00:13.949** total execution time for **tutorial_02_mesh_soultions** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
@@ -2361,7 +2361,7 @@ msgstr ""
 "(``c_create-uniform-grid.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
-msgid "00:05.280"
+msgid "00:05.646"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
@@ -2373,7 +2373,7 @@ msgstr ""
 "(``b_create-point-cloud.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
-msgid "00:03.250"
+msgid "00:03.923"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
@@ -2385,7 +2385,7 @@ msgstr ""
 "file.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
-msgid "00:02.171"
+msgid "00:03.037"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
@@ -2397,7 +2397,7 @@ msgstr ""
 "(``d_create-tri-surface.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
-msgid "00:01.375"
+msgid "00:01.343"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:13
@@ -2526,7 +2526,7 @@ msgstr ""
 "<https://docs.pyvista.org/examples/02-plot/bounds.html>`_ を参照してください。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:331
-msgid "**Total running time of the script:** ( 0 minutes  4.126 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.164 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:353
@@ -2612,7 +2612,7 @@ msgid ""
 msgstr "キーワード引数の ``split_sharp_edges`` は，物理ベースのレンダリングにも対応しています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:187
-msgid "**Total running time of the script:** ( 0 minutes  1.595 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.607 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:209
@@ -2685,7 +2685,7 @@ msgid "Combine custom lighting and physically based rendering."
 msgstr "カスタム照明と物理ベースレンダリングを組み合わせます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:178
-msgid "**Total running time of the script:** ( 0 minutes  56.261 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  59.233 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:200
@@ -2765,7 +2765,7 @@ msgid "This example will label each point with their scalar values"
 msgstr "この例では，各ポイントにスカラー値のラベルを付けます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:396
-msgid "**Total running time of the script:** ( 0 minutes  0.950 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.955 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:418
@@ -2826,7 +2826,7 @@ msgid "Orbit around the Mt. St Helens dataset."
 msgstr "St Helens山のデータセット周辺のオービット．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:158
-msgid "**Total running time of the script:** ( 1 minutes  22.863 seconds)"
+msgid "**Total running time of the script:** ( 1 minutes  21.803 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:180
@@ -2839,7 +2839,7 @@ msgstr ":download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:8
 msgid ""
-"**02:20.074** total execution time for **tutorial_03_figures_bonus** files:"
+"**02:21.991** total execution time for **tutorial_03_figures_bonus** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
@@ -2847,7 +2847,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
-msgid "01:22.863"
+msgid "01:21.803"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
@@ -2855,7 +2855,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
-msgid "00:56.261"
+msgid "00:59.233"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
@@ -2865,7 +2865,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
-msgid "00:00.950"
+msgid "00:00.955"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:13
@@ -2942,7 +2942,7 @@ msgid "Read the GeoTIFF as a ``Texture`` in PyVista:"
 msgstr "GeoTIFFをPyVistaで ``Texture`` として読み込みます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:275
-msgid "**Total running time of the script:** ( 0 minutes  5.683 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  5.869 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:297
@@ -2989,7 +2989,7 @@ msgstr ""
 "を使って色空間のサイズを小さくしてください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:92
-msgid "**Total running time of the script:** ( 0 minutes  2.743 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.742 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:114
@@ -3404,6 +3404,9 @@ msgid ""
 "`API documentation "
 "<https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html>`_"
 msgstr ""
+":class:`pyvista.Plotter` のメソッドの一覧は、 `API documentation "
+"<https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html>`_ "
+"を参照してください。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:295
 msgid ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py`"
@@ -3423,7 +3426,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_d_gif.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:378
 msgid "Bonus Content"
-msgstr ""
+msgstr "ボーナスコンテンツ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:391
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`"
@@ -3462,7 +3465,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:8
-msgid "**00:14.146** total execution time for **tutorial_03_figures** files:"
+msgid "**00:14.382** total execution time for **tutorial_03_figures** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
@@ -3474,7 +3477,7 @@ msgstr ""
 "map.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
-msgid "00:05.683"
+msgid "00:05.869"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
@@ -3486,7 +3489,7 @@ msgstr ""
 "(``a_lesson_figures.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
-msgid "00:04.126"
+msgid "00:04.164"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
@@ -3494,7 +3497,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-msgid "00:02.743"
+msgid "00:02.742"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
@@ -3502,7 +3505,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
-msgid "00:01.595"
+msgid "00:01.607"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:13
@@ -3522,9 +3525,11 @@ msgid ""
 "See also "
 "https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html"
 msgstr ""
+"関連項目: "
+"https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:568
-msgid "**Total running time of the script:** ( 0 minutes  2.951 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.894 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:13
@@ -3541,10 +3546,10 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:56
 msgid "First, lets take a look at the mesh with default lighting conditions"
-msgstr ""
+msgstr "まず、デフォルトの照明条件でのメッシュを見てみましょう。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:188
-msgid "**Total running time of the script:** ( 0 minutes  4.225 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.142 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:13
@@ -3558,12 +3563,12 @@ msgstr ""
 "via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:180
-msgid "**Total running time of the script:** ( 0 minutes  13.852 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  14.139 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:21.029** total execution time for **tutorial_03_figures_solutions** "
+"**00:21.175** total execution time for **tutorial_03_figures_solutions** "
 "files:"
 msgstr ""
 
@@ -3572,7 +3577,7 @@ msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py` (``c_edl.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:11
-msgid "00:13.852"
+msgid "00:14.139"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
@@ -3584,7 +3589,7 @@ msgstr ""
 "(``b_lighting_mesh.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
-msgid "00:04.225"
+msgid "00:04.142"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
@@ -3596,7 +3601,7 @@ msgstr ""
 "(``a_display_options.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
-msgid "00:02.951"
+msgid "00:02.894"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:13
@@ -3612,11 +3617,11 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:178
 msgid "Using Common Filters"
-msgstr ""
+msgstr "共通フィルタの使用"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:26
 msgid "Using common filters like thresholding and clipping."
-msgstr ""
+msgstr "閾値設定やクリッピングなどの一般的なフィルタを使用します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:45
 msgid ""
@@ -3624,13 +3629,15 @@ msgid ""
 "immediate use directly on the object. These filters include the following "
 "(see :ref:`filters_ref` for a complete list):"
 msgstr ""
+"PyVistaラップされたデータオブジェクトには，オブジェクト上で直接使用できるように，一連の共通フィルタが用意されています．これらのフィルタには，次のものがあります(完全なリストについては"
+" :ref:`filters_ref` を参照)．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:49
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:25
 msgid ""
 "`slice()`_ creates a single slice through the input dataset on a user "
 "defined plane"
-msgstr ""
+msgstr "`slice()`_ は、入力データセットをユーザー定義平面でスライスします。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:50
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:26
@@ -3638,6 +3645,8 @@ msgid ""
 "`slice_orthogonal()`_: creates a :class:`pyvista.MultiBlock` dataset of "
 "three orthogonal slices"
 msgstr ""
+"`slice_orthogonal()`_: 3つの直交スライスからなる :class:`pyvista.MultiBlock` "
+"データセットを作成します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:51
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:27
@@ -3645,39 +3654,41 @@ msgid ""
 "`slice_along_axis()`_: creates a :class:`pyvista.MultiBlock` dataset of many"
 " slices along a specified axis"
 msgstr ""
+"`slice_along_axis()`_: 指定された軸に沿った多くのスライスからなる :class:`pyvista.MultiBlock` "
+"データセットを作成します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:52
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:28
 msgid ""
 "`threshold()`_: Thresholds a dataset by a single value or range of values"
-msgstr ""
+msgstr "`threshold()`_: データセットを 1 つの値あるいは値の範囲で閾値処理します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:53
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:29
 msgid "`threshold_percent()`_: Threshold by percentages of the scalar range"
-msgstr ""
+msgstr "`threshold_percent()`_: スカラー範囲のパーセンテージによる閾値"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:54
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:30
 msgid "`clip()`_: Clips the dataset by a user defined plane"
-msgstr ""
+msgstr "`clip()`_: ユーザー定義平面でデータセットを切り取ります。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:55
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:31
 msgid "`outline_corners()`_: Outlines the corners of the data extent"
-msgstr ""
+msgstr "`outline_corners()`_: データ領域のコーナーをアウトライン化します"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:56
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:32
 msgid "`extract_geometry()`_: Extract surface geometry"
-msgstr ""
+msgstr "`extract_geometry()`_: 表面の形状を抽出します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:67
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:44
 msgid ""
 "To use these filters, call the method of your choice directly on your data "
 "object:"
-msgstr ""
+msgstr "これらのフィルタを使用するには，データ・オブジェクトで選択したメソッドを直接呼び出します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:92
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:73
@@ -3688,25 +3699,29 @@ msgid ""
 "filter attached to PyVista objects with either ``help(dataset.threshold)`` "
 "or using ``shift+tab`` in an IPython environment."
 msgstr ""
+"これで，新しい ``threshed`` "
+"オブジェクトに入力データセットのしきい値が設定されたバージョンがあります．フィルタの実行方法を変更するためにどのようなキーワード引数を使用できるかを調べるには，"
+" ``help(dataset.threshold)`` またはIPython環境で ``shift+tab`` "
+"を使用してPyVistaオブジェクトに付加されたフィルタのdocstringを出力します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:98
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:79
 msgid ""
 "We can now plot this filtered dataset along side an outline of the original "
 "dataset"
-msgstr ""
+msgstr "このフィルタ処理されたデータセットを，元のデータセットのアウトラインに沿ってプロットできるようになりました．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:127
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:93
 msgid ""
 "What about other filters? Let's collect a few filter results and compare "
 "them:"
-msgstr ""
+msgstr "他のフィルターはどうですか?いくつかのフィルタ結果を収集して比較してみましょう．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:186
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:134
 msgid "Filter Pipeline"
-msgstr ""
+msgstr "フィルタパイプライン"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:188
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:136
@@ -3716,35 +3731,36 @@ msgid ""
 "filtering pipeline through a chain; attaching each filter to the last "
 "filter. In the following example, several filters are chained together:"
 msgstr ""
+"VTKでは，フィルタがパイプラインで使用されることが多く，各アルゴリズムはその出力を次のフィルタリング・アルゴリズムに渡します．PyVistaでは，次のようにしてフィルタリングパイプラインを模倣できます．各フィルタを最後のフィルタにアタッチします．次の例では，複数のフィルタが連結されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:193
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:141
 msgid "First, and empty ``threshold`` filter to clean out any ``NaN`` values."
-msgstr ""
+msgstr "まず， ``threshold`` フィルタを空にして， ``NaN`` 値をすべて消去します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:194
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:142
 msgid ""
 "Use an ``elevation`` filter to generate scalar values corresponding to "
 "height."
-msgstr ""
+msgstr "``elevation`` フィルタを使用して，高さに対応するスカラー値を生成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:195
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:143
 msgid "Use the ``clip`` filter to cut the dataset in half."
-msgstr ""
+msgstr "``clip`` フィルタを使用して，データセットを半分にカットします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:144
 msgid ""
 "Create three slices along each axial plane using the ``slice_orthogonal`` "
 "filter."
-msgstr ""
+msgstr "``slice_orthogonal`` フィルタを使用して，各軸平面に沿ってスライスを3つ作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:146
 msgid "Apply a filtering chain"
-msgstr ""
+msgstr "フィルタリングチェーンを適用する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:216
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:152
@@ -3752,9 +3768,11 @@ msgid ""
 "And to view this filtered data, simply call the ``plot`` method "
 "(``result.plot()``) or create a rendering scene:"
 msgstr ""
+"フィルタリングされたデータを表示するには， ``plot`` メソッド (``result.plot()``) "
+"を呼び出すか，レンダリングシーンを作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:244
-msgid "**Total running time of the script:** ( 0 minutes  2.016 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.033 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:266
@@ -3788,34 +3806,34 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:307
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:24
 msgid "Clipping with Planes & Boxes"
-msgstr ""
+msgstr "平面とボックスでクリップします"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:26
 msgid "Clip/cut any dataset using using planes or boxes."
-msgstr ""
+msgstr "平面またはボックスを使用してデータセットをクリップ/カットします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:37
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:45
 msgid "Clip with Plane"
-msgstr ""
+msgstr "平面付きクリップ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:47
 msgid ""
 "Clip any dataset by a user defined plane using the "
 ":func:`pyvista.DataSetFilters.clip` filter"
-msgstr ""
+msgstr ":func:`pyvista.DataSetFilters.clip` フィルタを使用したユーザ定義平面によるデータセットのクリップ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:59
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:177
 msgid "Perform a clip with a Y axis normal"
-msgstr ""
+msgstr "Y軸法線によるクリップを実行する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:85
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:243
 msgid "Clip with Bounds"
-msgstr ""
+msgstr "境界付きクリップ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:87
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:245
@@ -3823,6 +3841,8 @@ msgid ""
 "Clip any dataset by a set of XYZ bounds using the "
 ":func:`pyvista.DataSetFilters.clip_box` filter."
 msgstr ""
+":func:`pyvista.DataSetFilters.clip_box` "
+"フィルタを使用して，XYZ境界のセットによってデータセットをクリップします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:106
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:340
@@ -3830,11 +3850,13 @@ msgid ""
 "Clip the dataset with a bounding box defined by the values in ``bounds`` "
 "(xmin, xmax, ymin, ymax, zmin, zmax)"
 msgstr ""
+"``bounds`` (xmin, xmax, ymin, ymax, zmin, zmax) "
+"で定義されるバウンディングボックスでデータセットを切り取ります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:133
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:408
 msgid "Clip with Rotated Box"
-msgstr ""
+msgstr "回転ボックス付きクリップ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:135
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:410
@@ -3842,6 +3864,8 @@ msgid ""
 "Clip any dataset by an arbitrarily rotated solid box using the "
 ":func:`pyvista.DataSetFilters.clip_box` filter."
 msgstr ""
+":func:`pyvista.DataSetFilters.clip_box` "
+"フィルタを使用して任意に回転したソリッドボックスでデータセットをクリップします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:156
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:442
@@ -4021,19 +4045,19 @@ msgstr "2 Dサーフェスメッシュからスカラーフィールドの1 D等
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:80
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:221
 msgid "Iso-Surfaces"
-msgstr ""
+msgstr "等値面"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:82
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:223
 msgid "Let's extract 2D iso-surfaces of a scalar field from a 3D mesh."
-msgstr ""
+msgstr "3 Dメッシュからスカラーフィールドの2 D等値面を抽出してみましょう．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:95
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:267
 msgid ""
 "For this example dataset, let's create 5 contour levels between the values "
 "of 50 and 200"
-msgstr ""
+msgstr "この例のデータセットでは、50から200の値の間に5つの輪郭レベルを作成しましょう"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:145
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:334
@@ -4066,23 +4090,23 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:370
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:24
 msgid "Plotting Glyphs (Vectors or PolyData)"
-msgstr ""
+msgstr "字形のプロット (ベクトルかPolyData)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:26
 msgid "Use vectors in a dataset to plot and orient glyphs/geometric objects."
-msgstr ""
+msgstr "データセット内のベクトルを使用して，記号/ジオメトリオブジェクトを印刷したり方向を設定します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:37
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:45
 msgid "Example dataset with normals"
-msgstr ""
+msgstr "法線のあるデータセット例"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:48
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:62
 msgid ""
 "Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter"
-msgstr ""
+msgstr "グリフィイングは :func:`pyvista.DataSetFilters.glyph` フィルターを介して行うことができる"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:59
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:170
@@ -4092,11 +4116,12 @@ msgid ""
 "by using a merging tolerance. Here we specify a merging tolerance of five "
 "percent which equates to five percent of the bounding box's length."
 msgstr ""
+"入力データセットのすべてのノードにグリフが必要ない場合があります．この場合，マージ許容値を使用して，入力データセットのサブセットのグリフを作成することを選択できます．ここでは，5パーセントのマージ許容値を指定します．これは，バウンディングボックスの長さの5パーセントに相当します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:64
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:175
 msgid "create a subset of arrows using the glyph filter"
-msgstr ""
+msgstr "グリフフィルタを使用して矢印のサブセットを作成する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:86
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:214
@@ -4104,11 +4129,13 @@ msgid ""
 "A common approach is to load vectors directly to the mesh object and then "
 "access the :attr:`pyvista.DataSet.arrows` property to produce glyphs."
 msgstr ""
+"一般的な方法は、メッシュオブジェクトに直接ベクトルをロードして、グリフを生成するために :attr:`pyvista.DataSet.arrows` "
+"プロパティにアクセスする方法です。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:123
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:282
 msgid "Plot the arrows and the sphere."
-msgstr ""
+msgstr "矢印と球体をプロットします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:159
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:329
@@ -4123,12 +4150,12 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:10
 msgid "Filters"
-msgstr ""
+msgstr "フィルタ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:12
 msgid ""
 "Demonstrate the PyVista filters API to perform mesh analysis and alteration"
-msgstr ""
+msgstr "メッシュの解析と変更を行うためのPyVistaフィルタAPIのデモを行います。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:17
 msgid ""
@@ -4136,6 +4163,9 @@ msgid ""
 "`PyVista's Example Gallery "
 "<https://docs.pyvista.org/examples/index.html#filtering>`_."
 msgstr ""
+"このチュートリアルのセクションは `PyVista's Example Gallery "
+"<https://docs.pyvista.org/examples/index.html#filtering>`_ "
+"のフィルタリングセクションから採用されたものです。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:21
 msgid ""
@@ -4143,6 +4173,8 @@ msgid ""
 "directly on the object. These filters include the following (see `Filters "
 "API <https://docs.pyvista.org/api/core/filters.html>`_ for a complete list):"
 msgstr ""
+"PyVistaのメッシュオブジェクトには、オブジェクト上で直接すぐに使える一般的なフィルタが用意されています。これらのフィルタには以下のものがあります（完全なリストは"
+" `Filters API <https://docs.pyvista.org/api/core/filters.html>`_ を参照してください）。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:178
 msgid ":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py`"
@@ -4181,7 +4213,7 @@ msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:8
-msgid "**00:02.016** total execution time for **tutorial_04_filters** files:"
+msgid "**00:02.033** total execution time for **tutorial_04_filters** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
@@ -4193,7 +4225,7 @@ msgstr ""
 "(``a_lesson_filters.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
-msgid "00:02.016"
+msgid "00:02.033"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:13
@@ -4207,7 +4239,7 @@ msgstr ""
 " the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:583
-msgid "**Total running time of the script:** ( 0 minutes  2.198 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.310 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:13
@@ -4221,7 +4253,7 @@ msgstr ""
 "your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:185
-msgid "**Total running time of the script:** ( 0 minutes  15.435 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  15.940 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:13
@@ -4237,7 +4269,7 @@ msgstr ""
 "Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:312
-msgid "**Total running time of the script:** ( 0 minutes  4.560 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  4.811 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:13
@@ -4251,12 +4283,12 @@ msgstr ""
 "the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:307
-msgid "**Total running time of the script:** ( 0 minutes  1.284 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.211 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:23.477** total execution time for **tutorial_04_filters_solutions** "
+"**00:24.272** total execution time for **tutorial_04_filters_solutions** "
 "files:"
 msgstr ""
 
@@ -4269,7 +4301,7 @@ msgstr ""
 "(``c_compute-normals.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:11
-msgid "00:15.435"
+msgid "00:15.940"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:13
@@ -4281,7 +4313,7 @@ msgstr ""
 "(``d_contouring.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:13
-msgid "00:04.560"
+msgid "00:04.811"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
@@ -4293,7 +4325,7 @@ msgstr ""
 "(``b_clipping.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
-msgid "00:02.198"
+msgid "00:02.310"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
@@ -4303,7 +4335,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py` (``e_glyphs.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
-msgid "00:01.284"
+msgid "00:01.211"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:50
@@ -4507,6 +4539,10 @@ msgid ""
 "vectors/vector fields, n = tensors/tensor fields). Here, shape and values "
 "are stored concretely in one variable."
 msgstr ""
+"PyVistaでは，データの次元（ :class:`numpy.ndarray` "
+"の形をしている）とデータの値を1行にまとめています．VTKでは，データの形状(空間上の位置)を表すために \"タプル\" "
+"を使用し，データの種類(1=スカラー/スカラーフィールド，2=ベクトル/ベクトルフィールド，n=テンソル/テンソルフィールド)を表すために "
+"\"コンポーネント\" を使用しています．ここでは，1つの変数に形状と値が具体的に格納されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:204
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:93
@@ -4517,6 +4553,9 @@ msgid ""
 " like images, values in the dataset are evenly spaced apart like pixels in "
 "an image."
 msgstr ""
+":class:`pyvista.UniformGrid` は `vtk.vtkImageData`_ "
+"をラップしたものです．名前が違うだけで，どちらも等間隔の点のコンテナです．どちらも等間隔の点のコンテナです． `vtk.vtkImageData`_ "
+"で使用するデータは \"画像\" である必要はありません．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:210
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:99
@@ -4529,6 +4568,9 @@ msgid ""
 "something more complex, you can dive deeper. For example, changing the "
 "origin and spacing is as simple as:"
 msgstr ""
+"さらに，コンテナが等間隔のデータ用であることがわかっているので， pyvista はデフォルトで原点と間隔を ``(0, 0, 0)`` と ``(1,"
+" 1, 1)`` "
+"に設定します．これは，PyVistaとPythonのもう一つの素晴らしい点です．VTKライブラリのすべてを前もって知っておく必要はなく，非常に簡単に始めることができます．慣れてきて，もっと複雑なことをする必要が出てきたら，もっと深く掘り下げることができます．例えば，原点と間隔の変更は以下のように簡単にできます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:223
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:112
@@ -4543,6 +4585,11 @@ msgid ""
 "nicely and it's made more explicit in the code, following the Python best "
 "practice of \"Explicit is better than implicit\"."
 msgstr ""
+":attr:`point_array &lt;pyvista.point_array&gt;` "
+"の名前は，辞書形式で直接与えられます．また，VTKはデータをヒープ(RAMの線形セグメント．C++の概念)に保存するため，データをフラット化してFortranの順序(多次元データが物理的に1次元のメモリにどのようにレイアウトされるかを制御する．numpyはデフォルトで"
+" \"C \"スタイルのメモリレイアウトを使用する)にする必要があります．先ほどの例で， ``SetValue()`` の最初の引数が ``x*300 "
+"+ y`` と書かれていたのはこのためです．ここでは，numpyがこれをうまく処理してくれるので，Pythonのベストプラクティスである "
+"\"Explicit is better than implicit\" に従って，コードの中でより明示的にしています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:234
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:123
@@ -4551,16 +4598,17 @@ msgid ""
 "to immediately plot the mesh without also setting up the plot. For example, "
 "in VTK you would have to do:"
 msgstr ""
+"最後に，PyVistaでは，各ジオメトリクラスにメソッドが用意されているので，プロットの設定をしなくても，すぐにメッシュをプロットすることができます．例えば，VTKでは次のようにする必要があります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:255
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:142
 msgid "However, with PyVista you only need:"
-msgstr ""
+msgstr "しかし，PyVistaでは，必要なのは以下だけです:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:280
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:172
 msgid "PointSet Construction"
-msgstr ""
+msgstr "ポイントセット構築"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:281
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:173
@@ -4570,6 +4618,9 @@ msgid ""
 "normally loop through all the points of a list and supply that to a  "
 "`vtkPoints`_ class.  For example:"
 msgstr ""
+"PyVista は，VTK の C 配列を効率的に割り当て，アクセスするために NumPy に大きく依存しています． "
+"例えば，VTKで点の配列を作るには，通常，リストのすべての点をループして，それを `vtkPoints`_ クラスに供給します． "
+"例えば，以下のようになります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:337
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:197
@@ -4648,7 +4699,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:520
-msgid "**Total running time of the script:** ( 0 minutes  1.287 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.228 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:542
@@ -4776,7 +4827,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:253
-msgid "**Total running time of the script:** ( 0 minutes  1.326 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.285 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:275
@@ -4835,7 +4886,7 @@ msgid "Create ``vtkStructuredGrid``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:216
-msgid "**Total running time of the script:** ( 0 minutes  0.696 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.661 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:238
@@ -4947,7 +4998,7 @@ msgid "See https://kitware.github.io/vtk-examples/site/Python/"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1391
-msgid "**Total running time of the script:** ( 0 minutes  0.827 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.826 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1413
@@ -5009,7 +5060,7 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:8
-msgid "**00:04.137** total execution time for **tutorial_06_vtk** files:"
+msgid "**00:04.001** total execution time for **tutorial_06_vtk** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
@@ -5019,7 +5070,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
-msgid "00:01.326"
+msgid "00:01.285"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
@@ -5031,7 +5082,7 @@ msgstr ""
 "(``a_1_transition_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
-msgid "00:01.287"
+msgid "00:01.228"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
@@ -5043,7 +5094,7 @@ msgstr ""
 "(``c_vtk_algorithms.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-msgid "00:00.827"
+msgid "00:00.826"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
@@ -5051,7 +5102,7 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
-msgid "00:00.696"
+msgid "00:00.661"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:10
@@ -5303,7 +5354,7 @@ msgid "After interacting with the scene, the clipped mesh is available as:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:113
-msgid "**Total running time of the script:** ( 0 minutes  6.736 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  6.785 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:135
@@ -5376,7 +5427,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:175
-msgid "**Total running time of the script:** ( 0 minutes  0.760 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.778 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:197
@@ -5427,8 +5478,8 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:102
-msgid "**Total running time of the script:** ( 0 minutes  1.458 seconds)"
-msgstr ""
+msgid "**Total running time of the script:** ( 0 minutes  1.695 seconds)"
+msgstr "**Total running time of the script:** ( 0 minutes  1.695 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:124
 msgid ""
@@ -5473,7 +5524,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:138
-msgid "**Total running time of the script:** ( 0 minutes  0.317 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.327 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:160
@@ -5570,7 +5621,7 @@ msgstr ""
 "そして，これは ``InteractionEvent`` オブザーバを介して，ユーザーが継続的にこのイベントを操作している画面のキャプチャです．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:303
-msgid "**Total running time of the script:** ( 0 minutes  7.926 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  8.992 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:325
@@ -5643,7 +5694,7 @@ msgstr ""
 "``add_mesh`` における ``name`` 引数の使用に注意してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:162
-msgid "**Total running time of the script:** ( 0 minutes  2.634 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  2.514 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:184
@@ -5728,7 +5779,7 @@ msgid ""
 msgstr "これは，4つの球体ウィジェットを使用してサーフェス上の摂動を更新し，いくつかの境界条件でそれらの間を補間する最もクールな方法です．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:269
-msgid "**Total running time of the script:** ( 0 minutes  1.070 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  1.038 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:291
@@ -5787,7 +5838,7 @@ msgstr ""
 ":func:`pyvista.Plotter.slice_along_line` フィルタを活用する便利なヘルパーメソッドを追加しました．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:95
-msgid "**Total running time of the script:** ( 0 minutes  0.453 seconds)"
+msgid "**Total running time of the script:** ( 0 minutes  0.430 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:117
@@ -5875,7 +5926,7 @@ msgid ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:8
-msgid "**00:21.354** total execution time for **tutorial_08_widgets** files:"
+msgid "**00:22.559** total execution time for **tutorial_08_widgets** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:11
@@ -5887,7 +5938,7 @@ msgstr ""
 "widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:11
-msgid "00:07.926"
+msgid "00:08.992"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:13
@@ -5897,7 +5948,7 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``a_box-widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:13
-msgid "00:06.736"
+msgid "00:06.785"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:15
@@ -5909,7 +5960,7 @@ msgstr ""
 "widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:15
-msgid "00:02.634"
+msgid "00:02.514"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:17
@@ -5919,8 +5970,8 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``c_line-widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:17
-msgid "00:01.458"
-msgstr ""
+msgid "00:01.695"
+msgstr "00:01.695"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:19
 msgid ""
@@ -5931,7 +5982,7 @@ msgstr ""
 "widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:19
-msgid "00:01.070"
+msgid "00:01.038"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:21
@@ -5943,7 +5994,7 @@ msgstr ""
 "widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:21
-msgid "00:00.760"
+msgid "00:00.778"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:23
@@ -5955,7 +6006,7 @@ msgstr ""
 "widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:23
-msgid "00:00.453"
+msgid "00:00.430"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:25
@@ -5967,7 +6018,7 @@ msgstr ""
 "slider-widget.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:25
-msgid "00:00.317"
+msgid "00:00.327"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:10
