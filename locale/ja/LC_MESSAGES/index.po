@@ -151,13 +151,13 @@ msgstr "PyVistaのクラスとデータ構造の概要を実例を交えて解�
 
 #: ../../pyvista-tutorial/doc/source/index.rst:103
 msgid "Be familiar with the various filters and features of PyVista."
-msgstr ""
+msgstr "PyVistaの様々なフィルタや機能を使いこなすことができる．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:104
 msgid ""
 "Know which Python libraries are used and can be used by PyVista (meshio, "
 "trimesh etc)."
-msgstr "PyVistaで使用されている，または使用できるPythonライブラリ（meshio、trimeshなど）を知ります．"
+msgstr "PyVistaで使用されている，または使用できるPythonライブラリ（meshio，trimeshなど）を知ります．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:107
 msgid ""
@@ -190,6 +190,7 @@ msgid ""
 "Advanced users should be familiar with the Visualization Toolkit (VTK), "
 "general data science, and GUI frameworks like Qt."
 msgstr ""
+"上級者はVisualization Toolkit (VTK)，一般的なデータサイエンス，QtのようなGUIフレームワークに精通している必要があります．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:121
 msgid "Instructor Bios"

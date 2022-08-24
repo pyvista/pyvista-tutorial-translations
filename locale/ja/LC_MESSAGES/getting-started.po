@@ -31,7 +31,7 @@ msgid ""
 "have Python yet and want the simplest way to get started, we recommend you "
 "use the `Anaconda Distribution`_."
 msgstr ""
-"PyVistaをインストールするための唯一の前提条件は，Pythonそのものです．Pythonをまだ持っていなくて，最も簡単な方法で始めたい場合は、 "
+"PyVistaをインストールするための唯一の前提条件は，Pythonそのものです．Pythonをまだ持っていなくて，最も簡単な方法で始めたい場合は， "
 "`Anaconda Distribution`_ を使うことをお勧めします．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:10
