@@ -206,7 +206,7 @@ msgid ""
 "PyVista and creator of the `PyAnsys <https://github.com/pyansys>`_ "
 "organization."
 msgstr ""
-"Alex Kaszynski <https://github.com/akaszynski/resume>`_ ，PyVistaの共同制作者であり， "
+"`Alex Kaszynski <https://github.com/akaszynski/resume>`_ ，PyVistaの共同制作者であり， "
 "`PyAnsys <https://github.com/pyansys>`_ organization の制作者でもあります．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:129
@@ -232,7 +232,7 @@ msgid ""
 "visualization, and data science."
 msgstr ""
 "PyVistaの共同開発者である `Bane Sullivan <https://banesullivan.com>`_ "
-"は，球科学，可視化，データサイエンスの交差点で働く研究ソフトウェア技術者です．"
+"は，地球科学，可視化，データサイエンスの交差点で働く研究ソフトウェア技術者です．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:140
 msgid ""
