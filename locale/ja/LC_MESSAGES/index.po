@@ -129,8 +129,8 @@ msgid ""
 "through a comprehensive overview highlighting popular 3D visualization use "
 "cases."
 msgstr ""
-"PyVistaの既存の "
-"`サンプルJupyterノートブック<https://docs.pyvista.org/examples/index.html>`_ "
+"PyVistaの既存の `Jupyterノートブックのサンプル "
+"<https://docs.pyvista.org/examples/index.html>`_ "
 "の多くを通じて，インターネットアクセスとコンピュータがあれば誰でもアクセスできる実践的なチュートリアルと，人気のある3D可視化の使用例に焦点を当てた包括的な概要を通じて新しい教材を提供します．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:98
@@ -151,7 +151,7 @@ msgstr "PyVistaのクラスとデータ構造の概要を実例を交えて解�
 
 #: ../../pyvista-tutorial/doc/source/index.rst:103
 msgid "Be familiar with the various filters and features of PyVista."
-msgstr "PyVistaの様々なフィルタや機能を使いこなすことができる．"
+msgstr "PyVistaの様々なフィルタや機能を使いこなすことができます．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:104
 msgid ""
@@ -219,7 +219,7 @@ msgid ""
 msgstr ""
 "オープンソースを支持し， `Ansys <https://ansys.github.io/>`_  と  `PyMAPDL "
 "<https://https://github.com/pyansys/pymapdl>`_ "
-"のオープンソースプロジェクトの作成に貢献した．Pythonのプレゼンテーションやデモを楽しんでおり，特に3DビジュアライゼーションやCAEやオートメーションへの応用を得意としています．"
+"のオープンソースプロジェクトの作成に貢献しました．Pythonのプレゼンテーションやデモを楽しんでおり，特に3DビジュアライゼーションやCAEやオートメーションへの応用を得意としています．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:136
 msgid "Bane Sullivan"
