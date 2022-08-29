@@ -231,7 +231,7 @@ msgstr ":ref:`widgets`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:85
 msgid "Use PyVista with a variety of helpful widgets."
-msgstr "様々な便利なウィジェットを使って，PyVistaを使いこなしましょう．"
+msgstr "様々な便利なウィジェットを使って，PyVistaを使います．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:87
 msgid ":ref:`qt`"
@@ -483,11 +483,11 @@ msgid ""
 "https://doi.org/10.21105/joss.01450 "
 "<https://joss.theoj.org/papers/10.21105/joss.01450>`_"
 msgstr ""
-"論文`Sullivan, B., & Kaszynski, A. (2019)を発表しました． PyVista: 3D plotting and "
-"mesh analysis through a streamlined interface for the Visualization Toolkit "
+"論文 `Sullivan, B., & Kaszynski, A. (2019). PyVista: 3D plotting and mesh "
+"analysis through a streamlined interface for the Visualization Toolkit "
 "(VTK). Journal of Open Source Software, 4(37), 1450. "
 "https://doi.org/10.21105/joss.01450 "
-"<https://joss.theoj.org/papers/10.21105/joss.01450>`_"
+"<https://joss.theoj.org/papers/10.21105/joss.01450>`_ を発表しました．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:44
 msgid ""
@@ -4424,7 +4424,7 @@ msgstr "Open Mining Format (omf) の3 D表示"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:5
 msgid "PyVista in Action"
-msgstr "PyVistaの動作"
+msgstr "PyVistaの活用"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:7
 msgid ""
