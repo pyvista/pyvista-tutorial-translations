@@ -922,7 +922,7 @@ msgstr "これもまた :class:`pyvista.UniformGrid` で，ボリューム的に
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:279
 msgid "**Total running time of the script:** ( 0 minutes  9.023 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  9.023 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:301
 msgid ""
@@ -1213,7 +1213,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
 msgid "**00:09.023** total execution time for **tutorial_01_basic** files:"
-msgstr ""
+msgstr "**00:09.023** total execution time for **tutorial_01_basic** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid ""
@@ -1223,7 +1223,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid "00:09.023"
-msgstr ""
+msgstr "00:09.023"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -2948,7 +2948,7 @@ msgstr "GeoTIFFをPyVistaで ``Texture`` として読み込みます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:276
 msgid "**Total running time of the script:** ( 0 minutes  6.795 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  6.795 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:298
 msgid ""
@@ -3460,7 +3460,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:8
 msgid "**00:06.795** total execution time for **tutorial_03_figures** files:"
-msgstr ""
+msgstr "**00:06.795** total execution time for **tutorial_03_figures** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
 msgid ""
@@ -3472,7 +3472,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:11
 msgid "00:06.795"
-msgstr ""
+msgstr "00:06.795"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
 msgid ""
@@ -3760,7 +3760,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:244
 msgid "**Total running time of the script:** ( 0 minutes  1.961 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  1.961 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:266
 msgid ""
@@ -4209,7 +4209,7 @@ msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:8
 msgid "**00:01.961** total execution time for **tutorial_04_filters** files:"
-msgstr ""
+msgstr "**00:01.961** total execution time for **tutorial_04_filters** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
 msgid ""
@@ -4221,7 +4221,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/sg_execution_times.rst:11
 msgid "00:01.961"
-msgstr ""
+msgstr "00:01.961"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:13
 msgid ""
