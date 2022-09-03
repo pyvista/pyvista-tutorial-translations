@@ -2070,9 +2070,8 @@ msgid ""
 "<https://docs.pyvista.org/user-guide/what-is-a-mesh.html>`_ chapter of the "
 "User Guide in the PyVista documentation."
 msgstr ""
-"チュートリアルのこのセクションは，PyVista ドキュメントのユーザーガイドの `What is a "
-"mesh?<https://docs.pyvista.org/user-guide/what-is-a-mesh.html>`_ "
-"の章から採用されています．"
+"チュートリアルのこのセクションは，PyVista ドキュメントのユーザーガイドの `What is a mesh? "
+"<https://docs.pyvista.org/user-guide/what-is-a-mesh.html>`_ の章から採用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:21
 msgid ""
