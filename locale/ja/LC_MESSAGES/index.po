@@ -171,7 +171,7 @@ msgstr ""
 msgid ""
 "Basic knowledge of Python to get started. Be able to install Jupyter Lab on "
 "your machine and be up and running."
-msgstr "Pythonの基本的な知識を持っていること．Jupyter Labをあなたのマシンにインストールし，働させることができること．"
+msgstr "Pythonの基本的な知識を持っていること．Jupyter Labをあなたのマシンにインストールし，実行することができること．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:112
 #: ../../pyvista-tutorial/doc/source/index.rst:164
