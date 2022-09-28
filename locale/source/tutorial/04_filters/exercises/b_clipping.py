@@ -27,8 +27,8 @@ clipped
 
 ###############################################################################
 p = pv.Plotter()
-p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
-p.add_mesh(clipped, label="Clipped")
+p.add_mesh(dataset, style='wireframe', color='blue', label='Input')
+p.add_mesh(clipped, label='Clipped')
 p.add_legend()
 p.camera_position = [(0.24, 0.32, 0.7), (0.02, 0.03, -0.02), (-0.12, 0.93, -0.34)]
 p.show()
@@ -54,8 +54,8 @@ clipped
 
 ###############################################################################
 p = pv.Plotter()
-p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
-p.add_mesh(clipped, label="Clipped")
+p.add_mesh(dataset, style='wireframe', color='blue', label='Input')
+p.add_mesh(clipped, label='Clipped')
 p.add_legend()
 p.show()
 
@@ -69,9 +69,7 @@ p.show()
 mesh = examples.load_airplane()
 
 # Use `pv.Box()` or `pv.Cube()` to create a region of interest
-roi = pv.Cube(
-    center=(0.9e3, 0.2e3, mesh.center[2]), x_length=500, y_length=500, z_length=500
-)
+roi = pv.Cube(center=(0.9e3, 0.2e3, mesh.center[2]), x_length=500, y_length=500, z_length=500)
 roi.rotate_z(33, inplace=True)
 
 p = pv.Plotter()
@@ -125,9 +123,9 @@ crinkled = mesh.clip(..., normal=normal)
 # Plot comparison
 p = pv.Plotter(shape=(1, 2))
 p.add_mesh(clipped, show_edges=True)
-p.add_mesh(plane.extract_feature_edges(), color="r")
+p.add_mesh(plane.extract_feature_edges(), color='r')
 p.subplot(0, 1)
 p.add_mesh(crinkled, show_edges=True)
-p.add_mesh(plane.extract_feature_edges(), color="r")
+p.add_mesh(plane.extract_feature_edges(), color='r')
 p.link_views()
 p.show()

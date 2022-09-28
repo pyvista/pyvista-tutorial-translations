@@ -99,7 +99,7 @@ arr.shape
 
 vol = pv.UniformGrid()
 vol.dimensions = arr.shape
-vol["array"] = arr.ravel(order="F")
+vol['array'] = arr.ravel(order="F")
 
 ###############################################################################
 vol.plot()

@@ -59,9 +59,7 @@ surf.plot(show_edges=True)
 # Create the points to triangulate
 x = np.arange(10, dtype=float)
 xx, yy, zz = np.meshgrid(x, x, [0])
-points = np.column_stack(
-    (xx.ravel(order="F"), yy.ravel(order="F"), zz.ravel(order="F"))
-)
+points = np.column_stack((xx.ravel(order="F"), yy.ravel(order="F"), zz.ravel(order="F")))
 # Perturb the points
 points[:, 0] += np.random.rand(len(points)) * 0.3
 points[:, 1] += np.random.rand(len(points)) * 0.3

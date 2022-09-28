@@ -20,11 +20,7 @@ from pyvista import examples
 
 mesh = examples.download_st_helens().warp_by_scalar()
 
-cpos = [
-    (575848.0, 5128459.0, 22289.0),
-    (562835.0, 5114981.5, 2294.5),
-    (-0.5, -0.5, 0.7),
-]
+cpos = [(575848.0, 5128459.0, 22289.0), (562835.0, 5114981.5, 2294.5), (-0.5, -0.5, 0.7)]
 
 ###############################################################################
 # First, lets take a look at the mesh with default lighting conditions
@@ -42,12 +38,12 @@ p = pv.Plotter(shape=(1, 2), window_size=[1500, 500])
 
 p.subplot(0, 0)
 p.add_mesh(mesh, show_scalar_bar=False)
-p.add_text("No Specular")
+p.add_text('No Specular')
 
 p.subplot(0, 1)
 specular = 1.0
 p.add_mesh(mesh, specular=specular, show_scalar_bar=False)
-p.add_text(f"Specular of {specular}")
+p.add_text(f'Specular of {specular}')
 
 p.link_views()
 p.view_isometric()

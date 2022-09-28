@@ -13,8 +13,8 @@ module and external files.
 # Configure for panel
 import pyvista
 
-pyvista.set_jupyter_backend("panel")
-pyvista.set_plot_theme("document")
+pyvista.set_jupyter_backend('panel')
+pyvista.set_plot_theme('document')
 
 
 ###############################################################################
@@ -40,7 +40,7 @@ dataset
 # Note how this is a :class:`pyvista.PolyData`, which is effectively a surface
 # dataset containing points, lines, and/or faces. We can immediately plot this with:
 
-dataset.plot(color="tan")
+dataset.plot(color='tan')
 
 ###############################################################################
 # This is a fairly basic plot. You can change how its plotted by adding
@@ -75,7 +75,7 @@ dataset.plot(volume=True)
 
 import pyvista as pv
 
-dataset = pv.read("ironProt.vtk")
+dataset = pv.read('ironProt.vtk')
 dataset
 
 ###############################################################################
