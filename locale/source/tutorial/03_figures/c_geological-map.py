@@ -24,7 +24,9 @@ topo
 # Load the GeoTIFF/texture (this could take a minute to download)
 # https://dl.dropbox.com/s/bp9j3fl3wbi0fld/downsampled_Geologic_map_on_air_photo.tif?dl=0
 url = "https://dl.dropbox.com/s/bp9j3fl3wbi0fld/downsampled_Geologic_map_on_air_photo.tif?dl=0"
-filename, _ = examples.downloads._retrieve_file(url, "downsampled_Geologic_map_on_air_photo.tif")
+filename, _ = examples.downloads._retrieve_file(
+    url, "downsampled_Geologic_map_on_air_photo.tif"
+)
 filename
 
 ###############################################################################

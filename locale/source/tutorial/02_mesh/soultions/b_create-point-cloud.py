@@ -25,7 +25,9 @@ from pyvista import examples
 def generate_points(subset=0.02):
     """A helper to make a 3D NumPy array of points (n_points by 3)"""
     dataset = examples.download_lidar()
-    ids = np.random.randint(low=0, high=dataset.n_points - 1, size=int(dataset.n_points * subset))
+    ids = np.random.randint(
+        low=0, high=dataset.n_points - 1, size=int(dataset.n_points * subset)
+    )
     return dataset.points[ids]
 
 
@@ -107,22 +109,24 @@ vectors[0:5, :]
 ###############################################################################
 # Add the vector array as point data to the new mesh:
 
-point_cloud['vectors'] = vectors
+point_cloud["vectors"] = vectors
 
 ###############################################################################
 # Now we can make arrows using those vectors using the glyph filter
 # (see `this example <https://docs.pyvista.org/examples/01-filter/glyphs.html>`_ for more details).
 
 arrows = point_cloud.glyph(
-    orient='vectors',
+    orient="vectors",
     scale=False,
     factor=0.15,
 )
 
 # Display the arrows
 plotter = pv.Plotter()
-plotter.add_mesh(point_cloud, color='maroon', point_size=10.0, render_points_as_spheres=True)
-plotter.add_mesh(arrows, color='lightblue')
+plotter.add_mesh(
+    point_cloud, color="maroon", point_size=10.0, render_points_as_spheres=True
+)
+plotter.add_mesh(arrows, color="lightblue")
 # plotter.add_point_labels([point_cloud.center,], ['Center',],
 #                          point_color='yellow', point_size=20)
 plotter.show_grid()

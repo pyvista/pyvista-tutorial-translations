@@ -136,7 +136,7 @@ grid.point_data["values"] = values.flatten(order="F")
 ###############################################################################
 # However, with PyVista you only need:
 
-grid.plot(cpos='xy', show_scalar_bar=False, cmap='coolwarm')
+grid.plot(cpos="xy", show_scalar_bar=False, cmap="coolwarm")
 
 
 ###############################################################################
@@ -228,8 +228,8 @@ out, n_coll = mesh_a.collision(mesh_b, generate_scalars=True, contact_mode=2)
 
 pl = pv.Plotter()
 pl.add_mesh(out)
-pl.add_mesh(mesh_b, style='wireframe', color='k')
-pl.camera_position = 'xy'
+pl.add_mesh(mesh_b, style="wireframe", color="k")
+pl.camera_position = "xy"
 pl.show()
 
 ###############################################################################

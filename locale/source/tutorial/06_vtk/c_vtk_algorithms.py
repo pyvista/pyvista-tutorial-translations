@@ -16,8 +16,8 @@ Let's see if we can try a few VTK algorithms with that standard workflow.
 """
 
 import pyvista as pv
-from pyvista import examples
 import vtk
+from pyvista import examples
 
 ###############################################################################
 # Here is a sample mesh
@@ -61,7 +61,7 @@ outline
 ###############################################################################
 p = pv.Plotter()
 p.add_mesh(mesh)
-p.add_mesh(outline, color='k')
+p.add_mesh(outline, color="k")
 p.show()
 
 

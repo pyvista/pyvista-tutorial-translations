@@ -131,7 +131,7 @@ pl.show()
 # Field data is not directly associated with either the points or cells but
 # still should be attached to the mesh. This may be a string array storing notes.
 mesh = pv.Cube()
-mesh.field_data['metadata'] = ['Foo', 'bar']
+mesh.field_data["metadata"] = ["Foo", "bar"]
 mesh.field_data
 
 ###############################################################################
