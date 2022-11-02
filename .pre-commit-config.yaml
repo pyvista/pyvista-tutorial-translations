@@ -4,3 +4,4 @@ repos:
   rev: 0.18.4
   hooks:
     - id: check-github-workflows
+    - id: requirements-txt-fixer
