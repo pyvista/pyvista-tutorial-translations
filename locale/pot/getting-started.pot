@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 16:06+0000\n"
+"POT-Creation-Date: 2022-11-14 22:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,7 +126,6 @@ msgstr ""
 msgid "|binder|"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Launch on Binder"
 msgstr ""
