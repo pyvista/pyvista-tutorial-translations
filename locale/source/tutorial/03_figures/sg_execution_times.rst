@@ -5,10 +5,10 @@
 
 Computation times
 =================
-**00:06.795** total execution time for **tutorial_03_figures** files:
+**00:05.980** total execution time for **tutorial_03_figures** files:
 
 +-----------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-map.py``) | 00:06.795 | 0.0 MB |
+| :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-map.py``) | 00:05.980 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` (``a_lesson_figures.py``) | 00:00.000 | 0.0 MB |
 +-----------------------------------------------------------------------------------+-----------+--------+

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-24 16:06+0000\n"
+"POT-Creation-Date: 2022-11-14 22:30+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2022\n"
 "Language-Team: Japanese (https://www.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -171,7 +171,6 @@ msgstr ""
 msgid "|binder|"
 msgstr "|binder|"
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Launch on Binder"
 msgstr "Binderでの起動"
