@@ -2007,7 +2007,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:198
 msgid "Do it yourself"
-msgstr "自分でやる"
+msgstr "やってみよう"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:302
