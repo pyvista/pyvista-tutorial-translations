@@ -36,6 +36,7 @@ jobs:
       run: |
         git submodule update --remote
         sudo apt-get update
+        sudo apt-get dist-upgrade -y
         sudo apt-get install -y --no-install-recommends python3-setuptools
         sudo apt-get install -y --no-install-recommends libgl1-mesa-dev xvfb ffmpeg
         sudo apt-get install -y --no-install-recommends python3-venv
