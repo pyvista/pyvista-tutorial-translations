@@ -65,7 +65,7 @@ jobs:
         cd ../
         cp ./pyvista-tutorial/doc/*.vtk ./locale
         curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
-        sh ./locale/update.sh
+        bash ./locale/update.sh
         ls ./pyvista-tutorial/doc/source/tutorial
         mv ./pyvista-tutorial/doc/source/tutorial ./locale/source
     - name: commit
