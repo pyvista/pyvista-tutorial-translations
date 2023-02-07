@@ -14,7 +14,7 @@ sphinx-intl create-transifexrc --transifex-token=$TX_TOKEN
 sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot || true  # will fail on VTK9
 sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot || true  # need it again due to all our docstring examples
 sphinx-build -T -b gettext ../pyvista-tutorial/doc/source pot
-sphinx-intl update-txconfig-resources -p pot -d .
+sphinx-intl update-txconfig-resources -p pot -d . --transifex-organization-name="tkoyama010"
 cat .tx/config
 tx push -s --skip
 rm -Rf ja zh zh_CN zh_Hans zh_TW en_CA en_US de_DE jv nb pl pl_PL ru es uk fa
