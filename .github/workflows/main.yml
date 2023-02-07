@@ -45,6 +45,8 @@ jobs:
         pip install -U pip setuptools wheel
         pip install -r ./requirements.txt
         pip install -r pyvista-tutorial/requirements_docs.txt
+        curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+        mv tx /usr/local/bin/tx
     - name: update
       env:
         SPHINXINTL_TRANSIFEX_USERNAME: api
@@ -64,7 +66,6 @@ jobs:
         make -C doc html SPHINXOPTS="-w build_errors.txt -N"
         cd ../
         cp ./pyvista-tutorial/doc/*.vtk ./locale
-        curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
         bash ./locale/update.sh
         ls ./pyvista-tutorial/doc/source/tutorial
         mv ./pyvista-tutorial/doc/source/tutorial ./locale/source
