@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, PyVista Developers
+# This file is distributed under the same license as the PyVista Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Li Zhou, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyVista Tutorial\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-14 22:30+0000\n"
+"PO-Revision-Date: 2022-07-24 15:42+0000\n"
+"Last-Translator: Li Zhou, 2022\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:4
+msgid "Getting Started"
+msgstr "新手入门"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:6
+msgid ""
+"The only prerequisite for installing PyVista is Python itself. If you don’t "
+"have Python yet and want the simplest way to get started, we recommend you "
+"use the `Anaconda Distribution`_."
+msgstr ""
+"在安装PyVista之前，必须首先安装Python。如果您还没有安装Python，并且希望以最简单的方式开始，我们建议您使用“Anaconda发行版”。"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:10
+msgid ""
+"PyVista can be installed locally with :ref:`conda`, with :ref:`pip`. If "
+"you'd prefer it, you can also run PyVista on the cloud using :ref:`colab` or"
+" :ref:`mybinder`. For more detailed instructions, see the installation guide"
+" below."
+msgstr ""
+"PyVista可以使用：ref:'conda'，或者使用：ref:'pip'在本地安装。您也可以使用：ref:'colab'或：ref:'mybinder'在云端运行PyVista。有关更多详细说明，请参阅下面的安装指南。"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:17
+msgid "Installation"
+msgstr "安装"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:19
+msgid ""
+"PyVista can be installed on several environments, including, but not limited"
+" to:"
+msgstr "PyVista可以安装在多个环境中，包括但不限于："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:21
+msgid "**Locally**"
+msgstr "“本地的”"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:23
+msgid ":ref:`pip`"
+msgstr ":ref:`pip`"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:24
+msgid ":ref:`conda`"
+msgstr ":ref:`conda`"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:26
+msgid "**Cloud**"
+msgstr "\"云端\""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:28
+msgid ":ref:`colab`"
+msgstr ":ref:`colab`"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:29
+msgid ":ref:`mybinder`"
+msgstr ":ref:`mybinder`"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:35
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:67
+msgid "pip"
+msgstr "pip"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:37
+msgid "If you're using ``pip``, then installation is just::"
+msgstr "如果您使用的是“pip”，那么安装就是："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:47
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:73
+msgid "conda"
+msgstr "conda"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:49
+msgid "Install PyVista using the `Anaconda Distribution`_::"
+msgstr "使用“Anaconda发行版”安装PyVista："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:60
+msgid "Additional Packages"
+msgstr "附加的其他软件包"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:62
+msgid ""
+"If you prefer working within a Jupyter environment, we recommend you install"
+" the following packages:"
+msgstr "如果您喜欢在Jupyter环境中工作，我们建议您安装以下软件包："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:80
+msgid ""
+"You can then plot using Jupyterlab or Jupyter Notebook interactively with "
+"one of three backends:"
+msgstr "然后，您可以使用Jupyterlab或Jupyter Notebook与三个后端之一交互绘图："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:84
+msgid "ipyvtklink"
+msgstr "ipyvtklink"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:101
+msgid "panel"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:112
+msgid "pythreejs"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:129
+msgid "Google Colab"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:130
+msgid ""
+"Google Colab is a moving target and many of the \"cloud ready\" JavaScript "
+"plotting environments that make PyVista so great to work with do not seem to"
+" be available on Google Colab. However, we still have a working PyVista "
+"example for `Google Colab <https://colab.research.google.com/>`_ with static"
+" plotting."
+msgstr ""
+"Google Colab是一个移动的目标，许多让PyVista如此好用的“云就绪”JavaScript绘图环境似乎在Google Colab上不可用。然而，我们仍然有一个“Google Colab”的PyVista示例\n"
+"<https://colab.research.google.com/>`_ with static plotting."
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:135
+msgid ""
+"Visit the `PyVista on Colab  "
+"<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_"
+" notebook to see PyVista in action. The minimum code to get PyVista running "
+"in a Colab environment is:"
+msgstr ""
+"参考Colab上的PyVista<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_查看PyVista的笔记本。使PyVista在Colab环境中运行的最低代码是："
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:153
+msgid "MyBinder"
+msgstr "MyBinder"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:154
+msgid ""
+"MyBinder, similar to Google Colab, allows you to run Jupyter notebooks on "
+"the cloud. Click on the link below to open up a MyBinder environment to run "
+"PyVista."
+msgstr ""
+"MyBinder类似于Google Colab，允许您在云上运行Jupyter笔记本电脑。单击下面的链接打开MyBinder环境以运行PyVista。"
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:158
+msgid "|binder|"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Launch on Binder"
+msgstr ""
