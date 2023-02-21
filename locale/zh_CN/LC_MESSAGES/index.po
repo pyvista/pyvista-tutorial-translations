@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, PyVista Developers
+# This file is distributed under the same license as the PyVista Tutorial package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyVista Tutorial\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-14 22:30+0000\n"
+"PO-Revision-Date: 2022-07-24 15:42+0000\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../pyvista-tutorial/doc/source/index.rst:2
+msgid "PyVista Tutorial"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:11
+msgid "Welcome to PyVista's tutorial!"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:13
+msgid ""
+"Here you can find all the resources to be up and running with PyVista in no "
+"time. Feel free to reference our dedicated documentation at `PyVista "
+"Documentation <https://docs.pyvista.org/>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:0
+msgid "JupyterLab"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:21
+msgid ""
+"Here's a quick demo of PyVista running within `Jupyterlab "
+"<https://jupyter.org/>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:0
+msgid "IPython"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:33
+msgid ""
+"Here's a quick demo of PyVista running within a terminal using `IPython "
+"<https://ipython.org/>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:45
+msgid "Quick Links"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:54
+msgid "Jump right to the tutorial content."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:77
+msgid "Get PyVista setup on your environment."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:83
+msgid "Example Gallery"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:85
+msgid "Click below for our extensive example gallery!"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:92
+msgid "PyVista Overview"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:94
+msgid ""
+"`PyVista <https://github.com/pyvista/pyvista>`_ is a general purpose 3D "
+"visualization library used for over 500+ open source projects and many "
+"closed source projects for the visualization of everything from `computer "
+"aided engineering and geophysics to volcanoes and digital artwork "
+"<https://dev.pyvista.org/getting-started/external_examples.html>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:96
+msgid ""
+"PyVista exposes a Pythonic API to the `Visualization Toolkit (VTK) "
+"<http://www.vtk.org>`_ to provide tooling that is immediately usable without"
+" any prior knowledge of VTK and is being built as the 3D equivalent of "
+"`Matplotlib <https://matplotlib.org/>`_, with plugins to `Jupyter "
+"<https://jupyter.org/>`_ to enable visualization of 3D data using both "
+"server and client-side rendering."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:98
+msgid ""
+"We will provide a hands-on tutorial accessible to anyone with internet "
+"access and a computer via many of PyVista's existing `example Jupyter "
+"notebooks <https://docs.pyvista.org/examples/index.html>`_ and new material "
+"through a comprehensive overview highlighting popular 3D visualization use "
+"cases."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:102
+msgid "Tutorial Description"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:104
+msgid ""
+"Use PyVista to create 3D visualizations from a variety of datasets in common"
+" formats."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:106
+msgid ""
+"Overview the classes and data structures of PyVista with real-world "
+"examples."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:107
+msgid "Be familiar with the various filters and features of PyVista."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:108
+msgid ""
+"Know which Python libraries are used and can be used by PyVista (meshio, "
+"trimesh etc)."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:111
+msgid ""
+"We see this tutorial catering to anyone who wants to visualize data in any "
+"domain, and this ranges from basic Python users to advanced power users."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:114
+#: ../../pyvista-tutorial/doc/source/index.rst:166
+msgid ""
+"Basic knowledge of Python to get started. Be able to install Jupyter Lab on "
+"your machine and be up and running."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:116
+#: ../../pyvista-tutorial/doc/source/index.rst:168
+msgid ""
+"Intermediate users will want to be familiar with `NumPy "
+"<https://numpy.org/>`_ and other libraries that are compatible with PyVista,"
+" like `trimesh <https://trimsh.org/examples.html>`_ or `meshio "
+"<https://github.com/nschloe/meshio>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:120
+msgid ""
+"Advanced users should be familiar with the Visualization Toolkit (VTK), "
+"general data science, and GUI frameworks like Qt."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:125
+msgid "Instructor Bios"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:128
+msgid "Alexander Kaszynski"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:130
+msgid ""
+"`Alex Kaszynski <https://github.com/akaszynski/resume>`_, co-creator of "
+"PyVista and creator of the `PyAnsys <https://github.com/pyansys>`_ "
+"organization."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:133
+msgid ""
+"Advocate for all things open source and has contributed to the creation of "
+"Ansys's open source projects at `Ansys <https://ansys.github.io/>`_ and "
+"`PyMAPDL <https://https://github.com/pyansys/pymapdl>`_. Enjoys presenting "
+"and demoing Python, especially 3D visualization but also its application to "
+"CAE and automation."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:140
+msgid "Bane Sullivan"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:142
+msgid ""
+"`Bane Sullivan <https://banesullivan.com>`_, co-creator of PyVista, is a "
+"Research Software Engineer working at the intersection of geoscience, "
+"visualization, and data science."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:144
+msgid ""
+"Bane is a geophysicist/hydrologist by training and has been working to grow "
+"PyVista's adoption within the subsurface geoscience communities, previously "
+"presenting PyVista at `Transform 2021 "
+"<https://www.youtube.com/watch?v=FmNmRBsEBHE>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:147
+msgid "Tetsuo Koyama"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:149
+msgid ""
+"`Tetsuo Koyama <https://github.com/tkoyama010>`_ is interested in scientific"
+" computing and visualization with computer graphics. Developer team member "
+"of PyVista. Past experience as a speaker:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:153
+msgid ""
+"`PyConJP 2019 speaker \"Introduction to FEM Analysis with Python\" "
+"<https://youtu.be/6JuB1GiDLQQ>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:154
+msgid ""
+"`PyConJP 2020 speaker \"How to plot unstructured mesh file on Jupyter "
+"Notebook\" <https://youtu.be/X3Z54Kw4I6Y>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:155
+msgid ""
+"`SciPy Japan 2020 speaker \"Translation Project of Mayavi2 documents\" "
+"<https://youtu.be/epxm9SjLMS0>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:156
+msgid ""
+"`PyConJP 2021 speaker \"Visualize 3D scientific data in a Pythonic way like "
+"Matplotlib\" <https://youtu.be/ru-nENLgleo>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:159
+msgid "Tutorial Prerequisites"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:161
+msgid ""
+"We see this tutorial catering to anyone who wants to visualize data in any "
+"domain, and this ranges from basic Python users to advanced power users.  In"
+" fact, our tutorial instructors and community members are involved in any "
+"domain."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:172
+msgid ""
+"Advanced users will be familiar with GUI frameworks like Qt, VTK, and "
+"advanced data science."
+msgstr ""
