@@ -775,8 +775,8 @@ msgid ""
 "formats <https://docs.pyvista.org/api/readers/index.html>`_. Since we're "
 "just starting out, let's load a file."
 msgstr ""
-"PyVistaにデータを取り込む方法は主に2つあります．ゼロから自分で作成するか， "
-"`互換性のあるファイルフォーマット<https://docs.pyvista.org/api/readers/index.html>`_ "
+"PyVistaにデータを取り込む方法は主に2つあります．ゼロから自分で作成するか， `互換性のあるファイルフォーマット "
+"<https://docs.pyvista.org/api/readers/index.html>`_ "
 "のいずれかからデータセットを読み込むかです．これから始めるので，ファイルをロードしてみましょう．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:101
