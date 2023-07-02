@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-14 22:30+0000\n"
+"POT-Creation-Date: 2023-07-02 00:42+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -273,7 +273,7 @@ msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:153
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:329
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:314
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:334
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:172
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:241
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:316
@@ -284,7 +284,7 @@ msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:231
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:461
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:391
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8193
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9312
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:388
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:592
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:366
@@ -311,7 +311,7 @@ msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:220
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:347
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:342
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:555
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:551
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:288
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1426
@@ -779,7 +779,7 @@ msgstr ""
 "<https://docs.pyvista.org/api/readers/index.html>`_ "
 "のいずれかからデータセットを読み込むかです．これから始めるので，ファイルをロードしてみましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:101
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:102
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:54
 msgid ""
 "Note how this is a :class:`pyvista.PolyData`, which is effectively a surface"
@@ -789,7 +789,7 @@ msgstr ""
 "これは :class:`pyvista.PolyData` "
 "であり，事実上，点，線，面を含むサーフェスデータセットであることに注意してください．このデータセットを使って，すぐにプロットすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:125
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:137
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:63
 msgid ""
 "This is a fairly basic plot. You can change how its plotted by adding "
@@ -802,24 +802,21 @@ msgstr ""
 "を別の値に設定して色を変更することで，プロット方法を変更することができます．これらのことは，PyVistaのAPIドキュメントである "
 ":func:`pyvista.plot` に記載されていますが，ここでは別のデータセットを見てみましょう．これは体積のデータセットです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:173
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:198
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:76
 msgid ""
-"This is a :class:`pyvista.UniformGrid`, which is a dataset containing a "
+"This is a :class:`pyvista.ImageData`, which is a dataset containing a "
 "uniform set of points with consistent spacing. When we plot this dataset, we"
 " have the option of enabling volumetric plotting, which plots individual "
 "cells based on the content of the data associated with those cells."
 msgstr ""
-"これは :class:`pyvista.UniformGrid` "
-"で，一貫した間隔を持つ一様な点の集合を含むデータセットです．このデータセットをプロットするとき，個々のセルを，そのセルに関連するデータの内容に基づいてプロットする，volumetric"
-" plottingを有効にするオプションがあります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:201
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:226
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:96
 msgid "Read from a file"
 msgstr "ファイルから読み込む"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:202
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:227
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:97
 msgid ""
 "You can read datasets directly from a file if you have access to it locally "
@@ -831,7 +828,7 @@ msgstr ""
 " `meshio <https://github.com/nschloe/meshio>`_ "
 "のようなライブラリに依存できるように，サポートしていない多くのファイルフォーマットでもあり得ます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:207
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:232
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:102
 msgid ""
 "In the following example, we load VTK's iron protein dataset `ironProt.vtk "
@@ -842,18 +839,18 @@ msgstr ""
 "<https://github.com/naucoin/VTKData/blob/master/Data/ironProt.vtk>`_ を "
 ":func:`pyvista.read` を使ってファイルからロードしています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:255
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:280
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:114
 msgid ""
-"This is again a :class:`pyvista.UniformGrid` and we can plot it "
-"volumetrically with:"
-msgstr "これもまた :class:`pyvista.UniformGrid` で，ボリューム的にプロットすることができます．"
+"This is again a :class:`pyvista.ImageData` and we can plot it volumetrically"
+" with:"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:279
-msgid "**Total running time of the script:** ( 0 minutes  9.023 seconds)"
-msgstr "**Total running time of the script:** ( 0 minutes  9.023 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:304
+msgid "**Total running time of the script:** ( 0 minutes  11.759 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:301
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:323
 msgid ""
 ":download:`Download Python source code: a_lesson_basic.py "
 "<a_lesson_basic.py>`"
@@ -861,7 +858,7 @@ msgstr ""
 ":download:`Download Python source code: a_lesson_basic.py "
 "<a_lesson_basic.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:307
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:327
 msgid ""
 ":download:`Download Jupyter notebook: a_lesson_basic.ipynb "
 "<a_lesson_basic.ipynb>`"
@@ -1149,8 +1146,8 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
-msgid "**00:09.023** total execution time for **tutorial_01_basic** files:"
-msgstr "**00:09.023** total execution time for **tutorial_01_basic** files:"
+msgid "**00:11.759** total execution time for **tutorial_01_basic** files:"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid ""
@@ -1159,8 +1156,8 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` (``a_lesson_basic.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
-msgid "00:09.023"
-msgstr "00:09.023"
+msgid "00:11.759"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -1267,10 +1264,6 @@ msgstr "ポイントクラウドから始めましょう – これは頂点の�
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:78
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:146
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:286
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:67
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:218
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:336
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8053
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:76
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:133
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:64
@@ -1286,9 +1279,6 @@ msgstr "ポイントクラウドから始めましょう – これは頂点の�
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:78
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:76
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:241
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:121
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:313
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:445
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:88
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:155
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:183
@@ -1618,11 +1608,9 @@ msgstr "値の3D NumPy配列から単純な均一グリッドを作成します�
 msgid ""
 "Take a 3D NumPy array of data values that holds some spatial data where each"
 " axis corresponds to the XYZ cartesian axes. This example will create a "
-":class:`pyvista.UniformGrid` object that will hold the spatial reference for"
-" a 3D grid which a 3D NumPy array of values can be plotted against."
+":class:`pyvista.ImageData` object that will hold the spatial reference for a"
+" 3D grid which a 3D NumPy array of values can be plotted against."
 msgstr ""
-"各軸がXYZデカルト軸に対応する空間データを保持するデータ値の3 D NumPy配列を取ります．この例では，値の3 D NumPy配列をプロットできる3"
-" Dグリッドの空間参照を保持する :class:`pyvista.UniformGrid` オブジェクトを作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:44
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:50
@@ -1634,82 +1622,79 @@ msgstr ""
 "nz)であるように空間的に参照さます"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:76
 msgid "Create the PyVista object"
 msgstr "PyVistaオブジェクトの作成"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:70
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:94
 msgid ""
 "Set the grid dimensions: shape + 1 because we want to inject our values on"
 msgstr "に値を注入したいので，グリッドの寸法を shape + 1 に設定します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:70
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:94
 msgid "the CELL data"
 msgstr "CELLデータ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:81
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:113
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:111
 msgid "Edit the spatial reference"
 msgstr "空間リファレンスを編集する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:93
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:154
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:131
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:254
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:129
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:250
 msgid "Add the data values to the cell data"
 msgstr "セルデータにデータ値を追加する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:105
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:166
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:174
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:297
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:172
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:293
 msgid "Now plot the grid!"
 msgstr "さて，グリッドをプロットしてみましょう!"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:117
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:197
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:195
 msgid ""
 "Don't like cell data? You could also add the NumPy array to the point data "
-"of a :class:`pyvista.UniformGrid`. Take note of the subtle difference when "
+"of a :class:`pyvista.ImageData`. Take note of the subtle difference when "
 "setting the grid dimensions upon initialization."
 msgstr ""
-"セルデータが嫌いですか？NumPyの配列を :class:`pyvista.UniformGrid` "
-"の点データに追加することもできます．初期化時にグリッドの寸法を設定する際に，微妙な違いに注意してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:135
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:229
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:225
 msgid "Create the PyVista object and set the same attributes like above"
 msgstr "PyVistaオブジェクトを作成し，上記と同じように属性を設定します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:185
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:321
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:317
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:535
 msgid "Exercise"
 msgstr "演習"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:180
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:322
-msgid ""
-"Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!"
-msgstr "それでは，3D NumPyの配列から，あなた自身の :class:`pyvista.UniformGrid` を作ってみましょう!"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:318
+msgid "Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:191
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8037
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9163
 msgid ""
 "Here are some example 3D data using random data. Feel free to use your own "
 "3D numpy array here!"
 msgstr "ランダムデータを使った3Dデータの例を紹介します．ここで，ご自分の3D numpy配列を自由に使ってみてください!"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:204
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8064
-msgid "Create the :class:`pyvista.UniformGrid`"
-msgstr "クラス :`pyvista.UniformGrid` を作成します．"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9188
+msgid "Create the :class:`pyvista.ImageData`"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:206
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8066
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9190
 msgid ""
 "Hint, you will likely need to ``ravel`` the array with F-ordering: "
 "``arr.ravel(order=\"F\")``"
@@ -1718,17 +1703,17 @@ msgstr ""
 "とします．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:230
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8107
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9231
 msgid "Example"
 msgstr "例"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:231
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8108
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9232
 msgid "Here are some examples of this kind of data in PyVista!"
 msgstr "このようなデータをPyVistaで表示した例をご紹介します!"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:233
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8110
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9234
 msgid ""
 "See the PyVista documentation for further details on `Volume Rendering "
 "<https://docs.pyvista.org/examples/02-plot/volume.html>`_"
@@ -1737,7 +1722,7 @@ msgstr ""
 "の詳細については，PyVistaのドキュメントを参照してください"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:278
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8180
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9301
 msgid ""
 ":download:`Download Python source code: c_create-uniform-grid.py <c_create-"
 "uniform-grid.py>`"
@@ -1746,7 +1731,7 @@ msgstr ""
 "uniform-grid.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:282
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8186
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9305
 msgid ""
 ":download:`Download Jupyter notebook: c_create-uniform-grid.ipynb <c_create-"
 "uniform-grid.ipynb>`"
@@ -2267,9 +2252,9 @@ msgstr ""
 "uniform-grid.py>` to download the full example code or to run this example "
 "in your browser via Binder"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:8158
-msgid "**Total running time of the script:** ( 0 minutes  5.354 seconds)"
-msgstr "**Total running time of the script:** ( 0 minutes  5.354 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9282
+msgid "**Total running time of the script:** ( 0 minutes  7.066 seconds)"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:13
 msgid ""
@@ -2301,9 +2286,8 @@ msgstr "**Total running time of the script:** ( 0 minutes  3.294 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:8
 msgid ""
-"**00:14.369** total execution time for **tutorial_02_mesh_soultions** files:"
+"**00:07.066** total execution time for **tutorial_02_mesh_soultions** files:"
 msgstr ""
-"**00:14.369** total execution time for **tutorial_02_mesh_soultions** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
 msgid ""
@@ -2314,8 +2298,8 @@ msgstr ""
 "(``c_create-uniform-grid.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
-msgid "00:05.354"
-msgstr "00:05.354"
+msgid "00:07.066"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
 msgid ""
@@ -2326,22 +2310,20 @@ msgstr ""
 "(``b_create-point-cloud.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
-msgid "00:04.447"
-msgstr "00:04.447"
-
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
-msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
-"file.py``)"
-msgstr ""
-":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
-"file.py``)"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
-msgid "00:03.294"
-msgstr "00:03.294"
-
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
+msgid "00:00.000"
+msgstr "00:00.000"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
 msgid ""
 ":ref:`sphx_glr_tutorial_02_mesh_soultions_d_create-tri-surface.py` "
 "(``d_create-tri-surface.py``)"
@@ -2350,8 +2332,12 @@ msgstr ""
 "(``d_create-tri-surface.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
-msgid "00:01.275"
-msgstr "00:01.275"
+msgid ""
+":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
+"file.py``)"
+msgstr ""
+":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
+"file.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:13
 msgid ""
@@ -3448,17 +3434,6 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` "
 "(``a_lesson_figures.py``)"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
-msgid "00:00.000"
-msgstr "00:00.000"
-
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
@@ -4485,7 +4460,7 @@ msgstr "画像構造の作成"
 msgid "Assign the values to the image"
 msgstr "画像に値を割り当てる"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:130
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:56
 msgid ""
 "As you can see, there is quite a bit of boilerplate that goes into the "
@@ -4497,7 +4472,7 @@ msgstr ""
 "データセットを作成するためには，かなり多くのボイラープレートが必要です．PyVistaでは，より簡潔で，より \"Pythonic "
 "\"な構文が提供されています．PyVistaで同等のコードは以下の通りです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:154
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:152
 msgid ""
 "Use the meshgrid function to create 2D \"grids\" of the x and y values. This"
 " section effectively replaces the vtkDoubleArray."
@@ -4505,16 +4480,16 @@ msgstr ""
 "meshgrid 関数を使用して，x および y 値の 2D \"グリッド\" "
 "を作成します．ここでは，実質的にvtkDoubleArrayを置き換えています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:175
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:173
 msgid "Create the grid.  Note how the values must use Fortran ordering."
 msgstr "グリッドを作成します． 値がどのようにFortran順序を使用しなければならないかに注意してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:194
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:79
 msgid "Here, PyVista has done several things for us:"
 msgstr "ここでは，PyVistaがいくつかのことをしてくれています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:196
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:201
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:81
 msgid ""
 "PyVista combines the dimensionality of the data (in the shape of the "
@@ -4529,20 +4504,17 @@ msgstr ""
 "を使用し，データの種類(1=スカラー/スカラーフィールド，2=ベクトル/ベクトルフィールド，n=テンソル/テンソルフィールド)を表すために "
 "\"コンポーネント\" を使用しています．ここでは，1つの変数に形状と値が具体的に格納されています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:204
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:209
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:89
 msgid ""
-":class:`pyvista.UniformGrid` wraps `vtk.vtkImageData`_, just with a "
-"different name; they are both containers of evenly spaced points. Your data "
-"does not have to be an \"image\" to use it with `vtk.vtkImageData`_; rather,"
-" like images, values in the dataset are evenly spaced apart like pixels in "
-"an image."
+":class:`pyvista.ImageData` wraps `vtk.vtkImageData`_, just with a different "
+"name; they are both containers of evenly spaced points. Your data does not "
+"have to be an \"image\" to use it with `vtk.vtkImageData`_; rather, like "
+"images, values in the dataset are evenly spaced apart like pixels in an "
+"image."
 msgstr ""
-":class:`pyvista.UniformGrid` は `vtk.vtkImageData`_ "
-"をラップしたものです．名前が違うだけで，どちらも等間隔の点のコンテナです．どちらも等間隔の点のコンテナです． `vtk.vtkImageData`_ "
-"で使用するデータは \"画像\" である必要はありません．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:210
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:215
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:95
 msgid ""
 "Furthermore, since we know the container is for uniformly spaced data, "
@@ -4557,7 +4529,7 @@ msgstr ""
 " 1, 1)`` "
 "に設定します．これは，PyVistaとPythonのもう一つの素晴らしい点です．VTKライブラリのすべてを前もって知っておく必要はなく，非常に簡単に始めることができます．慣れてきて，もっと複雑なことをする必要が出てきたら，もっと深く掘り下げることができます．例えば，原点と間隔の変更は以下のように簡単にできます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:223
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:228
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:108
 msgid ""
 "The name for the :attr:`point_array <pyvista.point_array>` is given directly"
@@ -4576,7 +4548,7 @@ msgstr ""
 "+ y`` と書かれていたのはこのためです．ここでは，numpyがこれをうまく処理してくれるので，Pythonのベストプラクティスである "
 "\"Explicit is better than implicit\" に従って，コードの中でより明示的にしています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:234
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:239
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:119
 msgid ""
 "Finally, with PyVista, each geometry class contains methods that allow you "
@@ -4585,17 +4557,17 @@ msgid ""
 msgstr ""
 "最後に，PyVistaでは，各ジオメトリクラスにメソッドが用意されているので，プロットの設定をしなくても，すぐにメッシュをプロットすることができます．例えば，VTKでは次のようにする必要があります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:255
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:260
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:138
 msgid "However, with PyVista you only need:"
 msgstr "しかし，PyVistaでは，必要なのは以下だけです:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:280
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:285
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:168
 msgid "PointSet Construction"
 msgstr "ポイントセット構築"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:281
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:286
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:169
 msgid ""
 "PyVista heavily relies on NumPy to efficiently allocate and access VTK's C "
@@ -4607,13 +4579,13 @@ msgstr ""
 "例えば，VTKで点の配列を作るには，通常，リストのすべての点をループして，それを `vtkPoints`_ クラスに供給します． "
 "例えば，以下のようになります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:337
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:340
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:193
 msgid ""
 "To do the same within PyVista, you simply need to create a NumPy array:"
 msgstr "PyVistaで同じことをするには，単にNumPyの配列を作成する必要があります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:356
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:359
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:203
 msgid ""
 "You can use :func:`pyvista.vtk_points` to construct a `vtkPoints`_ object, "
@@ -4622,7 +4594,7 @@ msgstr ""
 ":func:`pyvista.vtk_points` を使って `vtkPoints`_ "
 "オブジェクトを構築することもできますが，ほとんどの状況では必要ありません．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:359
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:362
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:206
 msgid ""
 "Since the end goal is to construct a :class:`pyvista.DataSet "
@@ -4632,12 +4604,12 @@ msgstr ""
 "最終的な目的は， :class:`pyvista.DataSet &lt;pyvista.core.dataset.DataSet&gt;` "
 "を構築することなので， :class:`pyvista.PolyData` のコンストラクタに ``np_points`` の配列を渡すだけです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:380
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:383
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:215
 msgid "Whereas in VTK you would have to do:"
 msgstr "VTKではそうする必要があります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:399
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:402
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:222
 msgid ""
 "The same goes with assigning face or cell connectivity/topology.  With VTK "
@@ -4649,7 +4621,7 @@ msgstr ""
 ":func:`InsertCellPoint` を使ってループする必要があります． 例えば，一つのセル(三角形)を作成して，それを "
 "`vtkPolyData`_ に割り当てる場合:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:425
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:428
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:236
 msgid ""
 "In PyVista, we can assign this directly in the constructor and then access "
@@ -4658,19 +4630,19 @@ msgstr ""
 "PyVistaでは，コンストラクタでこれを直接割り当て， :attr:`faces &lt;pyvista.PolyData.faces&gt;` "
 "属性からアクセス（変更）することができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:457
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:458
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:248
 msgid "PyVista Tradeoffs"
 msgstr "PyVistaのトレードオフ"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:458
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:459
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:249
 msgid ""
 "While most features can, not everything can be simplified in PyVista without"
 " losing functionality or performance."
 msgstr "ほとんどの機能は可能ですが，PyVistaでは機能や性能を落とさずにすべてを簡略化できるわけではありません．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:461
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:462
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:252
 msgid ""
 "In the :class:`collision <pyvista.PolyDataFilters.collision>` filter, we "
@@ -4679,7 +4651,7 @@ msgstr ""
 ":class:`collision &lt;pyvista.PolyDataFilters.collision&gt;` "
 "フィルターでは，2つのメッシュ間のコリジョンを計算する方法を示します． 例えば，以下のようになります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:507
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:508
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:283
 msgid ""
 "Under the hood, the collision filter detects mesh collisions using oriented "
@@ -4701,11 +4673,11 @@ msgstr ""
 "<https://vtk.org/doc/nightly/html/classvtkCollisionDetectionFilter.html>`_ "
 "を使用した方が効率的です． ほとんどのデータサイエンスでは，純粋なPyVistaで十分ですが，VTKクラスを直接使用したい場合もあります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:520
-msgid "**Total running time of the script:** ( 0 minutes  1.218 seconds)"
-msgstr "**Total running time of the script:** ( 0 minutes  1.218 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:521
+msgid "**Total running time of the script:** ( 0 minutes  1.774 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:542
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:540
 msgid ""
 ":download:`Download Python source code: a_1_transition_vtk.py "
 "<a_1_transition_vtk.py>`"
@@ -4713,7 +4685,7 @@ msgstr ""
 ":download:`Download Python source code: a_1_transition_vtk.py "
 "<a_1_transition_vtk.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:548
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:544
 msgid ""
 ":download:`Download Jupyter notebook: a_1_transition_vtk.ipynb "
 "<a_1_transition_vtk.ipynb>`"
@@ -5065,38 +5037,38 @@ msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:8
-msgid "**00:00.926** total execution time for **tutorial_06_vtk** files:"
-msgstr "**00:00.926** total execution time for **tutorial_06_vtk** files:"
+msgid "**00:01.774** total execution time for **tutorial_06_vtk** files:"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
 msgid ""
-":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
-"(``c_vtk_algorithms.py``)"
+":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` "
+"(``a_1_transition_vtk.py``)"
 msgstr ""
-":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
-"(``c_vtk_algorithms.py``)"
+":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` "
+"(``a_1_transition_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
-msgid "00:00.926"
-msgstr "00:00.926"
+msgid "00:01.774"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
 msgid ""
-":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` "
-"(``a_1_transition_vtk.py``)"
+":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
 msgstr ""
-":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py` "
-"(``a_1_transition_vtk.py``)"
+":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-msgid ""
-":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
-msgstr ""
-":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` (``a_2_pyvista_vtk.py``)"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
 msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
+msgid ""
+":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
+"(``c_vtk_algorithms.py``)"
+msgstr ""
+":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
+"(``c_vtk_algorithms.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:6
 msgid "PyVista and Sphinx"
