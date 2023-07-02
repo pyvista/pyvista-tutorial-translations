@@ -118,8 +118,6 @@ Assign the values to the image
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -179,12 +177,19 @@ Create the grid.  Note how the values must use Fortran ordering.
 .. code-block:: default
 
 
-    grid = pv.UniformGrid(dims=(300, 300, 1))
+    grid = pv.ImageData(dims=(300, 300, 1))
     grid.point_data["values"] = values.flatten(order="F")
 
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/site-packages/pyvista/core/grid.py:514: PyVistaDeprecationWarning: `dims` argument is deprecated. Please use `dimensions`.
+      warnings.warn(
 
 
 
@@ -201,7 +206,7 @@ Here, PyVista has done several things for us:
    fields). Here, shape and values are stored concretely in one
    variable.
 
-#. :class:`pyvista.UniformGrid` wraps `vtk.vtkImageData`_, just with a
+#. :class:`pyvista.ImageData` wraps `vtk.vtkImageData`_, just with a
    different name; they are both containers of evenly spaced points. Your
    data does not have to be an "image" to use it with
    `vtk.vtkImageData`_; rather, like images, values in the dataset are
@@ -310,16 +315,14 @@ that to a  `vtkPoints`_ class.  For example:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    vtkPoints (0x559bfbec3830)
+    vtkPoints (0x55f75efded50)
       Debug: Off
-      Modified Time: 13176018
+      Modified Time: 753593
       Reference Count: 1
       Registered Events: (none)
-      Data: 0x559bfc693fe0
+      Data: 0x55f75f04e4c0
       Data Array Name: Points
       Number Of Points: 3
       Bounds: 
@@ -442,8 +445,6 @@ access it (or change it) from the :attr:`faces
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -517,35 +518,30 @@ you may want to use VTK classes directly.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.218 seconds)
+   **Total running time of the script:** ( 0 minutes  1.774 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_a_1_transition_vtk.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_1_transition_vtk.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_1_transition_vtk.py <a_1_transition_vtk.py>`
 
-     :download:`Download Python source code: a_1_transition_vtk.py <a_1_transition_vtk.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_1_transition_vtk.ipynb <a_1_transition_vtk.ipynb>`
+      :download:`Download Jupyter notebook: a_1_transition_vtk.ipynb <a_1_transition_vtk.ipynb>`
 
 
 .. only:: html

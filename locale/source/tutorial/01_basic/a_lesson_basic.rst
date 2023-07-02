@@ -81,10 +81,11 @@ out, let's load a file.
 
     <div class="output_subarea output_html rendered_html output_result">
 
-    <table>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>5131</td></tr>
     <tr><td>N Points</td><td>2669</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-2.001e+01, 2.000e+01</td></tr>
     <tr><td>Y Bounds</td><td>-6.480e-01, 4.024e+01</td></tr>
     <tr><td>Z Bounds</td><td>-6.093e-01, 1.513e+01</td></tr>
@@ -117,6 +118,17 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    INFO:root:awaiting runner setup
+    INFO:root:awaiting site startup
+    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7efc92f4b970>
+    INFO:root:Print WSLINK_READY_MSG
+    INFO:root:Schedule auto shutdown with timout 0
+    INFO:root:awaiting running future
+
 
 
 
@@ -140,13 +152,26 @@ one is a volumetric dataset.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.zraw HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.zraw HTTP/1.1" 200 5173190
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.mhd HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.mhd HTTP/1.1" 200 214
+
 
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
-    <tr><th>UniformGrid</th><th>Information</th></tr>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
+    <tr><th>ImageData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>31594185</td></tr>
     <tr><td>N Points</td><td>31960000</td></tr>
     <tr><td>X Bounds</td><td>0.000e+00, 4.990e+02</td></tr>
@@ -158,7 +183,7 @@ one is a volumetric dataset.
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>MetaImage</b></td><td>Points</td><td>uint8</td><td>1</td><td>0.000e+00</td><td>2.540e+02</td></tr>
     </table>
@@ -170,7 +195,7 @@ one is a volumetric dataset.
 
 .. GENERATED FROM PYTHON SOURCE LINES 56-60
 
-This is a :class:`pyvista.UniformGrid`, which is a dataset containing a uniform
+This is a :class:`pyvista.ImageData`, which is a dataset containing a uniform
 set of points with consistent spacing. When we plot this dataset, we have the
 option of enabling volumetric plotting, which plots individual cells based on
 the content of the data associated with those cells.
@@ -226,9 +251,9 @@ file using :func:`pyvista.read`.
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
-    <tr><th>UniformGrid</th><th>Information</th></tr>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
+    <tr><th>ImageData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>300763</td></tr>
     <tr><td>N Points</td><td>314432</td></tr>
     <tr><td>X Bounds</td><td>0.000e+00, 6.700e+01</td></tr>
@@ -240,7 +265,7 @@ file using :func:`pyvista.read`.
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>scalars</b></td><td>Points</td><td>uint8</td><td>1</td><td>0.000e+00</td><td>2.550e+02</td></tr>
     </table>
@@ -252,7 +277,7 @@ file using :func:`pyvista.read`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 82-84
 
-This is again a :class:`pyvista.UniformGrid` and we can plot it volumetrically
+This is again a :class:`pyvista.ImageData` and we can plot it volumetrically
 with:
 
 .. GENERATED FROM PYTHON SOURCE LINES 84-86
@@ -276,35 +301,30 @@ with:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.023 seconds)
+   **Total running time of the script:** ( 0 minutes  11.759 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_a_lesson_basic.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/01_basic/a_lesson_basic.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/01_basic/a_lesson_basic.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_lesson_basic.py <a_lesson_basic.py>`
 
-     :download:`Download Python source code: a_lesson_basic.py <a_lesson_basic.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_lesson_basic.ipynb <a_lesson_basic.ipynb>`
+      :download:`Download Jupyter notebook: a_lesson_basic.ipynb <a_lesson_basic.ipynb>`
 
 
 .. only:: html

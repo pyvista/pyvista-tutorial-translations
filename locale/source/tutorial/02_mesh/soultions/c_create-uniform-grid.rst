@@ -42,7 +42,7 @@ Create a simple uniform grid from a 3D NumPy array of values.
 
 Take a 3D NumPy array of data values that holds some spatial data where each
 axis corresponds to the XYZ cartesian axes. This example will create a
-:class:`pyvista.UniformGrid` object that will hold the spatial reference for
+:class:`pyvista.ImageData` object that will hold the spatial reference for
 a 3D grid which a 3D NumPy array of values can be plotted against.
 
 .. GENERATED FROM PYTHON SOURCE LINES 19-22
@@ -64,8 +64,6 @@ This is spatially referenced such that the grid is 20 by 5 by 10
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -81,7 +79,7 @@ Create the PyVista object
 
 .. code-block:: default
 
-    grid = pv.UniformGrid()
+    grid = pv.ImageData()
 
 
 
@@ -145,9 +143,9 @@ Add the data values to the cell data
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
-    <tr><th>UniformGrid</th><th>Information</th></tr>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
+    <tr><th>ImageData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>1000</td></tr>
     <tr><td>N Points</td><td>1386</td></tr>
     <tr><td>X Bounds</td><td>1.000e+02, 1.200e+02</td></tr>
@@ -159,7 +157,7 @@ Add the data values to the cell data
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>values</b></td><td>Cells</td><td>float64</td><td>1</td><td>0.000e+00</td><td>1.000e+01</td></tr>
     </table>
@@ -195,7 +193,7 @@ Now plot the grid!
 .. GENERATED FROM PYTHON SOURCE LINES 50-53
 
 Don't like cell data? You could also add the NumPy array to the point data of
-a :class:`pyvista.UniformGrid`. Take note of the subtle difference when
+a :class:`pyvista.ImageData`. Take note of the subtle difference when
 setting the grid dimensions upon initialization.
 
 .. GENERATED FROM PYTHON SOURCE LINES 53-60
@@ -215,8 +213,6 @@ setting the grid dimensions upon initialization.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -232,7 +228,7 @@ Create the PyVista object and set the same attributes like above
 
 .. code-block:: default
 
-    grid = pv.UniformGrid()
+    grid = pv.ImageData()
 
     # Set the grid dimensions: shape because we want to inject our values on the
     #   POINT data
@@ -268,9 +264,9 @@ Add the data values to the cell data
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
-    <tr><th>UniformGrid</th><th>Information</th></tr>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
+    <tr><th>ImageData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>684</td></tr>
     <tr><td>N Points</td><td>1000</td></tr>
     <tr><td>X Bounds</td><td>1.000e+02, 1.190e+02</td></tr>
@@ -282,7 +278,7 @@ Add the data values to the cell data
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>values</b></td><td>Points</td><td>float64</td><td>1</td><td>0.000e+00</td><td>1.000e+01</td></tr>
     </table>
@@ -319,13 +315,13 @@ Now plot the grid!
 
 Exercise
 ^^^^^^^^
-Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
+Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
 
 .. GENERATED FROM PYTHON SOURCE LINES 86-88
 
 .. code-block:: default
 
-    help(pv.UniformGrid)
+    help(pv.ImageData)
 
 
 
@@ -333,14 +329,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Help on class UniformGrid in module pyvista.core.grid:
+    Help on class ImageData in module pyvista.core.grid:
 
-    class UniformGrid(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.filters.uniform_grid.UniformGridFilters)
-     |  UniformGrid(uinput=None, *args, dims=None, spacing=(1.0, 1.0, 1.0), origin=(0.0, 0.0, 0.0))
+    class ImageData(vtkmodules.vtkCommonDataModel.vtkImageData, Grid, pyvista.core.filters.image_data.ImageDataFilters)
+     |  ImageData(uinput=None, *args, dimensions=None, spacing=(1.0, 1.0, 1.0), origin=(0.0, 0.0, 0.0), deep=False, **kwargs)
      |  
      |  Models datasets with uniform spacing in the three coordinate directions.
      |  
@@ -355,68 +349,73 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      ``vtk.vtkImageData``. Use keyword arguments to specify the
      |      dimensions, spacing, and origin of the uniform grid.
      |  
+     |  .. versionchanged:: 0.37.0
+     |      The ``dims`` parameter has been renamed to ``dimensions``.
+     |  
      |  Parameters
      |  ----------
-     |  uinput : str, vtk.vtkImageData, pyvista.UniformGrid, optional
+     |  uinput : str, vtk.vtkImageData, pyvista.ImageData, optional
      |      Filename or dataset to initialize the uniform grid from.  If
      |      set, remainder of arguments are ignored.
      |  
-     |  dims : iterable, optional
+     |  dimensions : sequence[int], optional
      |      Dimensions of the uniform grid.
      |  
-     |  spacing : iterable, optional
-     |      Spacing of the uniform in each dimension.  Defaults to
-     |      ``(1.0, 1.0, 1.0)``. Must be positive.
+     |  spacing : sequence[float], default: (1.0, 1.0, 1.0)
+     |      Spacing of the uniform grid in each dimension. Must be positive.
      |  
-     |  origin : iterable, optional
-     |      Origin of the uniform grid.  Defaults to ``(0.0, 0.0, 0.0)``.
+     |  origin : sequence[float], default: (0.0, 0.0, 0.0)
+     |      Origin of the uniform grid.
+     |  
+     |  deep : bool, default: False
+     |      Whether to deep copy a ``vtk.vtkImageData`` object.  Keyword only.
      |  
      |  Examples
      |  --------
-     |  Create an empty UniformGrid.
+     |  Create an empty ImageData.
      |  
      |  >>> import pyvista
-     |  >>> grid = pyvista.UniformGrid()
+     |  >>> grid = pyvista.ImageData()
      |  
      |  Initialize from a ``vtk.vtkImageData`` object.
      |  
      |  >>> import vtk
      |  >>> vtkgrid = vtk.vtkImageData()
-     |  >>> grid = pyvista.UniformGrid(vtkgrid)
+     |  >>> grid = pyvista.ImageData(vtkgrid)
      |  
-     |  Initialize using using just the grid dimensions and default
+     |  Initialize using just the grid dimensions and default
      |  spacing and origin. These must be keyword arguments.
      |  
-     |  >>> grid = pyvista.UniformGrid(dims=(10, 10, 10))
+     |  >>> grid = pyvista.ImageData(dimensions=(10, 10, 10))
      |  
      |  Initialize using dimensions and spacing.
      |  
-     |  >>> grid = pyvista.UniformGrid(
-     |  ...     dims=(10, 10, 10),
+     |  >>> grid = pyvista.ImageData(
+     |  ...     dimensions=(10, 10, 10),
      |  ...     spacing=(2, 1, 5),
      |  ... )
      |  
      |  Initialize using dimensions, spacing, and an origin.
      |  
-     |  >>> grid = pyvista.UniformGrid(
-     |  ...     dims=(10, 10, 10),
+     |  >>> grid = pyvista.ImageData(
+     |  ...     dimensions=(10, 10, 10),
      |  ...     spacing=(2, 1, 5),
      |  ...     origin=(10, 35, 50),
      |  ... )
      |  
-     |  Initialize from another UniformGrid.
+     |  Initialize from another ImageData.
      |  
-     |  >>> grid = pyvista.UniformGrid(
-     |  ...     dims=(10, 10, 10),
+     |  >>> grid = pyvista.ImageData(
+     |  ...     dimensions=(10, 10, 10),
      |  ...     spacing=(2, 1, 5),
      |  ...     origin=(10, 35, 50),
      |  ... )
-     |  >>> grid_from_grid = pyvista.UniformGrid(grid)
+     |  >>> grid_from_grid = pyvista.ImageData(grid)
      |  >>> grid_from_grid == grid
      |  True
      |  
      |  Method resolution order:
-     |      UniformGrid
+     |      ImageData
      |      vtkmodules.vtkCommonDataModel.vtkImageData
      |      vtkmodules.vtkCommonDataModel.vtkDataSet
      |      vtkmodules.vtkCommonDataModel.vtkDataObject
@@ -424,14 +423,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      vtkmodules.vtkCommonCore.vtkObjectBase
      |      Grid
      |      pyvista.core.dataset.DataSet
-     |      pyvista.core.filters.uniform_grid.UniformGridFilters
+     |      pyvista.core.filters.image_data.ImageDataFilters
      |      pyvista.core.filters.data_set.DataSetFilters
      |      pyvista.core.dataobject.DataObject
      |      builtins.object
      |  
      |  Methods defined here:
      |  
-     |  __init__(self, uinput=None, *args, dims=None, spacing=(1.0, 1.0, 1.0), origin=(0.0, 0.0, 0.0))
+     |  __init__(self, uinput=None, *args, dimensions=None, spacing=(1.0, 1.0, 1.0), origin=(0.0, 0.0, 0.0), deep=False, **kwargs)
      |      Initialize the uniform grid.
      |  
      |  __repr__(self)
@@ -456,6 +455,75 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      pyvista.StructuredGrid
      |          This grid as a structured grid.
      |  
+     |  to_tetrahedra(self, tetra_per_cell: int = 5, mixed: Union[Sequence[int], bool] = False, pass_cell_ids: bool = True, pass_data: bool = True, progress_bar: bool = False, **kwargs)
+     |      Create a tetrahedral mesh structured grid.
+     |      
+     |      Parameters
+     |      ----------
+     |      tetra_per_cell : int, default: 5
+     |          The number of tetrahedrons to divide each cell into. Can be
+     |          either ``5``, ``6``, or ``12``. If ``mixed=True``, this value is
+     |          overridden.
+     |      
+     |      mixed : str, bool, sequence, default: False
+     |          When set, subdivides some cells into 5 and some cells into 12. Set
+     |          to ``True`` to use the active cell scalars of the
+     |          :class:`pyvista.RectilinearGrid` to be either 5 or 12 to
+     |          determining the number of tetrahedra to generate per cell.
+     |      
+     |          When a sequence, uses these values to subdivide the cells. When a
+     |          string uses a cell array rather than the active array to determine
+     |          the number of tetrahedra to generate per cell.
+     |      
+     |      pass_cell_ids : bool, default: True
+     |          Set to ``True`` to make the tetrahedra have scalar data indicating
+     |          which cell they came from in the original
+     |          :class:`pyvista.RectilinearGrid`. The name of this array is
+     |          ``'vtkOriginalCellIds'`` within the ``cell_data``.
+     |      
+     |      pass_data : bool, default: True
+     |          Set to ``True`` to make the tetrahedra mesh have the cell data from
+     |          the original :class:`pyvista.RectilinearGrid`.  This uses
+     |          ``pass_cell_ids=True`` internally. If ``True``, ``pass_cell_ids``
+     |          will also be set to ``True``.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      **kwargs : dict, optional
+     |          Deprecated keyword argument ``pass_cell_data``.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.UnstructuredGrid
+     |          UnstructuredGrid containing the tetrahedral cells.
+     |      
+     |      Examples
+     |      --------
+     |      Divide a rectangular grid into tetrahedrons. Each cell contains by
+     |      default 5 tetrahedrons.
+     |      
+     |      First, create and plot the grid.
+     |      
+     |      >>> import numpy as np
+     |      >>> import pyvista as pv
+     |      >>> xrng = np.linspace(0, 1, 2)
+     |      >>> yrng = np.linspace(0, 1, 2)
+     |      >>> zrng = np.linspace(0, 2, 3)
+     |      >>> grid = pv.RectilinearGrid(xrng, yrng, zrng)
+     |      >>> grid.plot()
+     |      
+     |      Now, generate the tetrahedra plot in the exploded view of the cell.
+     |      
+     |      >>> tet_grid = grid.to_tetrahedra()
+     |      >>> tet_grid.explode(factor=0.5).plot(show_edges=True)
+     |      
+     |      Take the same grid but divide the first cell into 5 cells and the other
+     |      cell into 12 tetrahedrons per cell.
+     |      
+     |      >>> tet_grid = grid.to_tetrahedra(mixed=[5, 12])
+     |      >>> tet_grid.explode(factor=0.5).plot(show_edges=True)
+     |  
      |  ----------------------------------------------------------------------
      |  Readonly properties defined here:
      |  
@@ -465,7 +533,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(2, 2, 2))
+     |      >>> grid = pyvista.ImageData(dimensions=(2, 2, 2))
      |      >>> grid.x
      |      array([0., 1., 0., 1., 0., 1., 0., 1.])
      |  
@@ -475,7 +543,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(2, 2, 2))
+     |      >>> grid = pyvista.ImageData(dimensions=(2, 2, 2))
      |      >>> grid.y
      |      array([0., 0., 1., 1., 0., 0., 1., 1.])
      |  
@@ -485,7 +553,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(2, 2, 2))
+     |      >>> grid = pyvista.ImageData(dimensions=(2, 2, 2))
      |      >>> grid.z
      |      array([0., 0., 0., 0., 1., 1., 1., 1.])
      |  
@@ -493,16 +561,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  Data descriptors defined here:
      |  
      |  extent
-     |      Return or set the extent of the UniformGrid.
+     |      Return or set the extent of the ImageData.
      |      
      |      The extent is simply the first and last indices for each of the three axes.
      |      
      |      Examples
      |      --------
-     |      Create a ``UniformGrid`` and show its extent.
+     |      Create a ``ImageData`` and show its extent.
      |      
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(10, 10, 10))
+     |      >>> grid = pyvista.ImageData(dimensions=(10, 10, 10))
      |      >>> grid.extent
      |      (0, 9, 0, 9, 0, 9)
      |      
@@ -524,12 +592,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(5, 5, 5))
+     |      >>> grid = pyvista.ImageData(dimensions=(5, 5, 5))
      |      >>> grid.origin
      |      (0.0, 0.0, 0.0)
      |      
      |      Show how the origin is in the bottom "southwest" corner of the
-     |      UniformGrid.
+     |      ImageData.
      |      
      |      >>> pl = pyvista.Plotter()
      |      >>> _ = pl.add_mesh(grid, show_edges=True)
@@ -538,7 +606,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> pl.show()
      |      
      |      Set the origin to ``(1, 1, 1)`` and show how this shifts the
-     |      UniformGrid.
+     |      ImageData.
      |      
      |      >>> grid.origin = (1, 1, 1)
      |      >>> pl = pyvista.Plotter()
@@ -552,12 +620,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Notes
      |      -----
-     |      The ``points`` for a :class:`pyvista.UniformGrid` cannot be set.
+     |      The ``points`` for a :class:`pyvista.ImageData` cannot be set.
      |      
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(2, 2, 2))
+     |      >>> grid = pyvista.ImageData(dimensions=(2, 2, 2))
      |      >>> grid.points
      |      array([[0., 0., 0.],
      |             [1., 0., 0.],
@@ -582,7 +650,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Create a 5 x 5 x 5 uniform grid.
      |      
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(5, 5, 5))
+     |      >>> grid = pyvista.ImageData(dimensions=(5, 5, 5))
      |      >>> grid.spacing
      |      (1.0, 1.0, 1.0)
      |      >>> grid.plot(show_edges=True)
@@ -635,7 +703,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      C++: void ComputeInternalExtent(int *intExt, int *tgtExt,
      |          int *bnds)
      |      
-     |      Given how many pixel are required on a side for bounrary
+     |      Given how many pixel are required on a side for boundary
      |      conditions (in bnds), the target extent to traverse, compute the
      |      internal extent (the extent for this ImageData that does not
      |      suffer from any boundary conditions) and place it in intExt
@@ -876,10 +944,25 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      GetCellPoints(self, cellId:int, ptIds:vtkIdList) -> None
      |      C++: void GetCellPoints(vtkIdType cellId, vtkIdList *ptIds)
      |          override;
+     |      GetCellPoints(self, cellId:int, npts:int, pts:(int, ...),
+     |          ptIds:vtkIdList) -> None
+     |      C++: virtual void GetCellPoints(vtkIdType cellId, vtkIdType &npts,
+     |           vtkIdType const *&pts, vtkIdList *ptIds)
      |      
      |      Topological inquiry to get points defining cell. THIS METHOD IS
      |      THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND THE DATASET
      |      IS NOT MODIFIED
+     |  
+     |  GetCellSize(...)
+     |      GetCellSize(self, cellId:int) -> int
+     |      C++: vtkIdType GetCellSize(vtkIdType cellId) override;
+     |      
+     |      Get the size of cell with cellId such that: 0 <= cellId <
+     |      NumberOfCells. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
+     |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
+     |      
+     |      @warning This method MUST be overridden for performance reasons.
+     |      Default implementation is very unefficient.
      |  
      |  GetCellType(...)
      |      GetCellType(self, cellId:int) -> int
@@ -991,6 +1074,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      increments are up to date.  The first three methods compute the
      |      increments based on the active scalar field while the next three,
      |      the scalar field is passed in.
+     |      
+     |      Note that all methods which do not have the increments passed in
+     |      are not thread-safe. When working on a given `vtkImageData`
+     |      instance on multiple threads, each thread should use the `inc*`
+     |      overloads to compute the increments to avoid racing with other
+     |      threads.
      |  
      |  GetIndexToPhysicalMatrix(...)
      |      GetIndexToPhysicalMatrix(self) -> vtkMatrix4x4
@@ -1578,6 +1667,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Get the center of the bounding box. THIS METHOD IS NOT THREAD
      |      SAFE.
      |  
+     |  GetGhostArray(...)
+     |      GetGhostArray(self, type:int) -> vtkUnsignedCharArray
+     |      C++: vtkUnsignedCharArray *GetGhostArray(int type) override;
+     |      
+     |      Returns the ghost array for the given type (point or cell). Takes
+     |      advantage of the cache with the pointer to the array to save a
+     |      string comparison.
+     |  
      |  GetLength(...)
      |      GetLength(self) -> float
      |      C++: double GetLength()
@@ -1585,6 +1682,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Return the length of the diagonal of the bounding box. THIS
      |      METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND
      |      THE DATASET IS NOT MODIFIED
+     |  
+     |  GetLength2(...)
+     |      GetLength2(self) -> float
+     |      C++: double GetLength2()
+     |      
+     |      Return the squared length of the diagonal of the bounding box.
+     |      THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD
+     |      AND THE DATASET IS NOT MODIFIED
      |  
      |  GetMTime(...)
      |      GetMTime(self) -> int
@@ -1850,8 +1955,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      retrieve field data, use GetAttributesAsFieldData.
      |      
      |      @warning This method NEEDS to be
-     |      overriden in subclasses to work as documented. If not, it returns
-     |      nullptr for any type but FIELD.
+     |      overridden in subclasses to work as documented. If not, it
+     |      returns nullptr for any type but FIELD.
      |  
      |  GetDataReleased(...)
      |      GetDataReleased(self) -> int
@@ -1862,16 +1967,6 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  GetFieldData(...)
      |      GetFieldData(self) -> vtkFieldData
      |      C++: virtual vtkFieldData *GetFieldData()
-     |  
-     |  GetGhostArray(...)
-     |      GetGhostArray(self, type:int) -> vtkDataArray
-     |      C++: virtual vtkDataArray *GetGhostArray(int type)
-     |      
-     |      Returns the ghost arrays of the data object of the specified
-     |      atribute type. The type may be:  POINT    - Defined in vtkDataSet
-     |      subclasses CELL   - Defined in vtkDataSet subclasses.  The other
-     |      attribute types, will return nullptr since ghosts arrays are not
-     |      defined for now outside of point or cell.
      |  
      |  GetGlobalReleaseDataFlag(...)
      |      GetGlobalReleaseDataFlag() -> int
@@ -2141,6 +2236,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      GetGlobalWarningDisplay() -> int
      |      C++: static int GetGlobalWarningDisplay()
      |  
+     |  GetObjectDescription(...)
+     |      GetObjectDescription(self) -> str
+     |      C++: std::string GetObjectDescription() override;
+     |      
+     |      The object description printed in messages and PrintSelf output.
+     |      To be used only for reporting purposes.
+     |  
+     |  GetObjectName(...)
+     |      GetObjectName(self) -> str
+     |      C++: virtual std::string GetObjectName()
+     |  
      |  GlobalWarningDisplayOff(...)
      |      GlobalWarningDisplayOff() -> None
      |      C++: static void GlobalWarningDisplayOff()
@@ -2214,6 +2320,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      This is a global flag that controls whether any debug, warning or
      |      error messages are displayed.
+     |  
+     |  SetObjectName(...)
+     |      SetObjectName(self, objectName:str) -> None
+     |      C++: virtual void SetObjectName(const std::string &objectName)
+     |      
+     |      Set/get the name of this object for reporting purposes. The name
+     |      appears in warning and debug messages and in the Print output.
+     |      Setting the object name does not change the MTime and does not
+     |      invoke a ModifiedEvent. Derived classes implementing copying
+     |      methods are expected not to copy the ObjectName.
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
@@ -2296,6 +2412,38 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      has the same effect as invoking Delete() (i.e., it reduces the
      |      reference count by 1).
      |  
+     |  UsesGarbageCollector(...)
+     |      UsesGarbageCollector(self) -> bool
+     |      C++: virtual bool UsesGarbageCollector()
+     |      
+     |      Indicate whether the class uses `vtkGarbageCollector` or not.
+     |      
+     |      Most classes will not need to do this, but if the class
+     |      participates in a strongly-connected reference count cycle,
+     |      participation can resolve these cycles.
+     |      
+     |      If overriding this method to return true, the `ReportReferences`
+     |      method should be overridden to report references that may be in
+     |      cycles.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
+     |  
+     |  override(...) from builtins.type
+     |      This method can be used to override a VTK class with a Python subclass.
+     |      The class type passed to override will afterwards be instantiated
+     |      instead of the type override is called on.
+     |      For example,
+     |      
+     |      class foo(vtk.vtkPoints):
+     |        pass
+     |      vtk.vtkPoints.override(foo)
+     |      
+     |      will lead to foo being instantied everytime vtkPoints() is called.
+     |      The main objective of this functionality is to enable developers to
+     |      extend VTK classes with more pythonic subclasses that contain
+     |      convenience functionality.
+     |  
      |  ----------------------------------------------------------------------
      |  Data descriptors inherited from Grid:
      |  
@@ -2310,7 +2458,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Create a uniform grid with dimensions ``(1, 2, 3)``.
      |      
      |      >>> import pyvista
-     |      >>> grid = pyvista.UniformGrid(dims=(2, 3, 4))
+     |      >>> grid = pyvista.ImageData(dimensions=(2, 3, 4))
      |      >>> grid.dimensions
      |      (2, 3, 4)
      |      >>> grid.plot(show_edges=True)
@@ -2323,39 +2471,92 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.dataset.DataSet:
      |  
-     |  __getattr__(self, item) -> Any
+     |  __getattr__(self, item) -> 'Any'
      |      Get attribute from base class if not found.
      |  
-     |  __getitem__(self, index: Union[Iterable, str]) -> numpy.ndarray
+     |  __getitem__(self, index: 'Union[Iterable, str]') -> 'np.ndarray'
      |      Search both point, cell, and field data for an array.
      |  
-     |  __setitem__(self, name: str, scalars: numpy.ndarray)
+     |  __setitem__(self, name: 'str', scalars: 'Union[np.ndarray, collections.abc.Sequence]')
      |      Add/set an array in the point_data, or cell_data accordingly.
      |      
      |      It depends on the array's length, or specified mode.
      |  
-     |  cast_to_pointset(self, deep: bool = False) -> 'pyvista.PointSet'
-     |      Get a new representation of this object as a :class:`pyvista.PointSet`.
+     |  cast_to_pointset(self, pass_cell_data: 'bool' = False) -> 'pyvista.PointSet'
+     |      Extract the points of this dataset and return a :class:`pyvista.PointSet`.
      |      
      |      Parameters
      |      ----------
-     |      deep : bool, optional
-     |          When ``True`` makes a full copy of the object.  When ``False``,
-     |          performs a shallow copy where the points and data arrays are
-     |          references to the original object.
+     |      pass_cell_data : bool, default: False
+     |          Run the :func:`cell_data_to_point_data()
+     |          <pyvista.DataSetFilters.cell_data_to_point_data>` filter and pass
+     |          cell data fields to the new pointset.
      |      
      |      Returns
      |      -------
      |      pyvista.PointSet
      |          Dataset cast into a :class:`pyvista.PointSet`.
      |      
+     |      Notes
+     |      -----
+     |      This will produce a deep copy of the points and point/cell data of
+     |      the original mesh.
+     |      
      |      Examples
      |      --------
      |      >>> import pyvista
-     |      >>> mesh = pyvista.Sphere()
+     |      >>> mesh = pyvista.Wavelet()
      |      >>> pointset = mesh.cast_to_pointset()
      |      >>> type(pointset)
      |      <class 'pyvista.core.pointset.PointSet'>
+     |  
+     |  cast_to_poly_points(self, pass_cell_data: 'bool' = False) -> 'pyvista.PolyData'
+     |      Extract the points of this dataset and return a :class:`pyvista.PolyData`.
+     |      
+     |      Parameters
+     |      ----------
+     |      pass_cell_data : bool, default: False
+     |          Run the :func:`cell_data_to_point_data()
+     |          <pyvista.DataSetFilters.cell_data_to_point_data>` filter and pass
+     |          cell data fields to the new pointset.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.PolyData
+     |          Dataset cast into a :class:`pyvista.PolyData`.
+     |      
+     |      Notes
+     |      -----
+     |      This will produce a deep copy of the points and point/cell data of
+     |      the original mesh.
+     |      
+     |      Examples
+     |      --------
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.load_uniform()
+     |      >>> points = mesh.cast_to_poly_points(pass_cell_data=True)
+     |      >>> type(points)
+     |      <class 'pyvista.core.pointset.PolyData'>
+     |      >>> points.n_arrays
+     |      2
+     |      >>> points.point_data
+     |      pyvista DataSetAttributes
+     |      Association     : POINT
+     |      Active Scalars  : Spatial Point Data
+     |      Active Vectors  : None
+     |      Active Texture  : None
+     |      Active Normals  : None
+     |      Contains arrays :
+     |          Spatial Point Data      float64    (1000,)              SCALARS
+     |      >>> points.cell_data
+     |      pyvista DataSetAttributes
+     |      Association     : CELL
+     |      Active Scalars  : None
+     |      Active Vectors  : None
+     |      Active Texture  : None
+     |      Active Normals  : None
+     |      Contains arrays :
+     |          Spatial Cell Data       float64    (1000,)
      |  
      |  cast_to_unstructured_grid(self) -> 'pyvista.UnstructuredGrid'
      |      Get a new representation of this object as a :class:`pyvista.UnstructuredGrid`.
@@ -2378,8 +2579,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> type(grid)
      |      <class 'pyvista.core.pointset.UnstructuredGrid'>
      |  
-     |  cell_bounds(self, ind: int) -> Tuple[float, float, float, float, float, float]
+     |  cell_bounds(self, ind: 'int') -> 'BoundsLike'
      |      Return the bounding box of a cell.
+     |      
+     |      ..  deprecated:: 0.38.0
+     |          Use :attr:`pyvista.Cell.bounds` instead.
      |      
      |      Parameters
      |      ----------
@@ -2388,18 +2592,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      tuple(float)
+     |      tuple[float, float, float]
      |          The limits of the cell in the X, Y and Z directions respectively.
-     |      
-     |      Examples
-     |      --------
-     |      >>> from pyvista import examples
-     |      >>> mesh = examples.load_airplane()
-     |      >>> mesh.cell_bounds(0)
-     |      (896.9940185546875, 907.5390014648438, 48.760101318359375, 55.49020004272461, 80.74520111083984, 83.65809631347656)
      |  
-     |  cell_n_points(self, ind: int) -> int
+     |  cell_n_points(self, ind: 'int') -> 'int'
      |      Return the number of points in a cell.
+     |      
+     |      .. deprecated:: 0.38.0
+     |          Use :attr:`pyvista.Cell.n_points` instead.
      |      
      |      Parameters
      |      ----------
@@ -2410,16 +2610,213 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      -------
      |      int
      |          Number of points in the cell.
+     |  
+     |  cell_neighbors(self, ind: 'int', connections: 'str' = 'points') -> 'List[int]'
+     |      Get the cell neighbors of the ind-th cell.
+     |      
+     |      Concrete implementation of vtkDataSet's `GetCellNeighbors
+     |      <https://vtk.org/doc/nightly/html/classvtkDataSet.html#ae1ba413c15802ef50d9b1955a66521e4>`_.
+     |      
+     |      Parameters
+     |      ----------
+     |      ind : int
+     |          Cell ID.
+     |      
+     |      connections : str, default: "points"
+     |          Describe how the neighbor cell(s) must be connected to the current
+     |          cell to be considered as a neighbor.
+     |          Can be either ``'points'``, ``'edges'`` or ``'faces'``.
+     |      
+     |      Returns
+     |      -------
+     |      List[int]
+     |          List of neighbor cells IDs for the ind-th cell.
+     |      
+     |      Warnings
+     |      --------
+     |      For a :class:`pyvista.ExplicitStructuredGrid`, use :func:`pyvista.ExplicitStructuredGrid.neighbors`.
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSet.cell_neighbors_levels
      |      
      |      Examples
      |      --------
      |      >>> from pyvista import examples
      |      >>> mesh = examples.load_airplane()
-     |      >>> mesh.cell_n_points(0)
-     |      3
+     |      
+     |      Get the neighbor cell ids that have at least one point in common with
+     |      the 0-th cell.
+     |      
+     |      >>> mesh.cell_neighbors(0, "points")
+     |      [1, 2, 3, 388, 389, 11, 12, 395, 14, 209, 211, 212]
+     |      
+     |      Get the neighbor cell ids that have at least one edge in common with
+     |      the 0-th cell.
+     |      
+     |      >>> mesh.cell_neighbors(0, "edges")
+     |      [1, 3, 12]
+     |      
+     |      For unstructured grids with cells of dimension 3 (Tetrahedron for example),
+     |      cell neighbors can be defined using faces.
+     |      
+     |      >>> mesh = examples.download_tetrahedron()
+     |      >>> mesh.cell_neighbors(0, "faces")
+     |      [1, 5, 7]
+     |      
+     |      Show a visual example.
+     |      
+     |      >>> from functools import partial
+     |      >>> import pyvista
+     |      >>> mesh = pyvista.Sphere(theta_resolution=10)
+     |      >>>
+     |      >>> pl = pyvista.Plotter(shape=(1, 2))
+     |      >>> pl.link_views()
+     |      >>> add_point_labels = partial(
+     |      ...     pl.add_point_labels,
+     |      ...     text_color="white",
+     |      ...     font_size=20,
+     |      ...     shape=None,
+     |      ...     show_points=False,
+     |      ... )
+     |      >>>
+     |      >>> for i, connection in enumerate(["points", "edges"]):
+     |      ...     pl.subplot(0, i)
+     |      ...     pl.view_yx()
+     |      ...     _ = pl.add_title(
+     |      ...         f"{connection.capitalize()} neighbors",
+     |      ...         color="red",
+     |      ...         shadow=True,
+     |      ...         font_size=8,
+     |      ...     )
+     |      ...
+     |      ...     # Add current cell
+     |      ...     i_cell = 0
+     |      ...     current_cell = mesh.extract_cells(i_cell)
+     |      ...     _ = pl.add_mesh(
+     |      ...         current_cell, show_edges=True, color="blue"
+     |      ...     )
+     |      ...     _ = add_point_labels(
+     |      ...         current_cell.cell_centers().points,
+     |      ...         labels=[f"{i_cell}"],
+     |      ...     )
+     |      ...
+     |      ...     # Add neighbors
+     |      ...     ids = mesh.cell_neighbors(i_cell, connection)
+     |      ...     cells = mesh.extract_cells(ids)
+     |      ...     _ = pl.add_mesh(cells, color="red", show_edges=True)
+     |      ...     _ = add_point_labels(
+     |      ...         cells.cell_centers().points,
+     |      ...         labels=[f"{i}" for i in ids],
+     |      ...     )
+     |      ...
+     |      ...     # Add other cells
+     |      ...     ids.append(i_cell)
+     |      ...     others = mesh.extract_cells(ids, invert=True)
+     |      ...     _ = pl.add_mesh(others, show_edges=True)
+     |      ...
+     |      >>> pl.show()
      |  
-     |  cell_point_ids(self, ind: int) -> List[int]
+     |  cell_neighbors_levels(self, ind: 'int', connections: 'str' = 'points', n_levels: 'int' = 1) -> 'Generator[List[int], None, None]'
+     |      Get consecutive levels of cell neighbors.
+     |      
+     |      Parameters
+     |      ----------
+     |      ind : int
+     |          Cell ID.
+     |      
+     |      connections : str, default: "points"
+     |          Describe how the neighbor cell(s) must be connected to the current
+     |          cell to be considered as a neighbor.
+     |          Can be either ``'points'``, ``'edges'`` or ``'faces'``.
+     |      
+     |      n_levels : int, default: 1
+     |          Number of levels to search for cell neighbors.
+     |          When equal to 1, it is equivalent to :func:`pyvista.DataSet.point_neighbors`.
+     |      
+     |      Returns
+     |      -------
+     |      generator[list[int]]
+     |          A generator of list of cell IDs for each level.
+     |      
+     |      Warnings
+     |      --------
+     |      For a :class:`pyvista.ExplicitStructuredGrid`, use :func:`pyvista.ExplicitStructuredGrid.neighbors`.
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSet.cell_neighbors
+     |      
+     |      Examples
+     |      --------
+     |      Get the cell neighbors IDs starting from the 0-th cell
+     |      up until the third level.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Sphere(theta_resolution=10)
+     |      >>> nbr_levels = mesh.cell_neighbors_levels(
+     |      ...     0, connections="edges", n_levels=3
+     |      ... )
+     |      >>> nbr_levels = list(nbr_levels)
+     |      >>> nbr_levels[0]
+     |      [1, 21, 9]
+     |      >>> nbr_levels[1]
+     |      [2, 8, 74, 75, 20, 507]
+     |      >>> nbr_levels[2]
+     |      [128, 129, 3, 453, 7, 77, 23, 506]
+     |      
+     |      Visualize these cells IDs.
+     |      
+     |      >>> from functools import partial
+     |      >>> pv.global_theme.color_cycler = [
+     |      ...     'red',
+     |      ...     'green',
+     |      ...     'blue',
+     |      ...     'purple',
+     |      ... ]
+     |      >>> pl = pv.Plotter()
+     |      >>>
+     |      >>> # Define partial function to add point labels
+     |      >>> add_point_labels = partial(
+     |      ...     pl.add_point_labels,
+     |      ...     text_color="white",
+     |      ...     font_size=40,
+     |      ...     shape=None,
+     |      ...     show_points=False,
+     |      ... )
+     |      >>>
+     |      >>> # Add the 0-th cell to the plotter
+     |      >>> cell = mesh.extract_cells(0)
+     |      >>> _ = pl.add_mesh(cell, show_edges=True)
+     |      >>> _ = add_point_labels(cell.cell_centers().points, labels=["0"])
+     |      >>> other_ids = [0]
+     |      >>>
+     |      >>> # Add the neighbors to the plot
+     |      >>> neighbors = mesh.cell_neighbors_levels(
+     |      ...     0, connections="edges", n_levels=3
+     |      ... )
+     |      >>> for i, ids in enumerate(neighbors, start=1):
+     |      ...     cells = mesh.extract_cells(ids)
+     |      ...     _ = pl.add_mesh(cells, show_edges=True)
+     |      ...     _ = add_point_labels(
+     |      ...         cells.cell_centers().points, labels=[f"{i}"] * len(ids)
+     |      ...     )
+     |      ...     other_ids.extend(ids)
+     |      ...
+     |      >>>
+     |      >>> # Add the cell IDs that are not neighbors (ie. the rest of the sphere)
+     |      >>> cells = mesh.extract_cells(other_ids, invert=True)
+     |      >>> _ = pl.add_mesh(cells, color="white", show_edges=True)
+     |      >>>
+     |      >>> pl.view_yx()
+     |      >>> pl.camera.zoom(6.0)
+     |      >>> pl.show()
+     |  
+     |  cell_point_ids(self, ind: 'int') -> 'List[int]'
      |      Return the point ids in a cell.
+     |      
+     |      .. deprecated:: 0.38.0
+     |          You can use :attr:`pyvista.Cell.point_ids` instead.
      |      
      |      Parameters
      |      ----------
@@ -2430,21 +2827,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      -------
      |      list[int]
      |          Point Ids that are associated with the cell.
-     |      
-     |      Examples
-     |      --------
-     |      >>> from pyvista import examples
-     |      >>> mesh = examples.load_airplane()
-     |      >>> mesh.cell_type(0)
-     |      5
-     |      
-     |      Cell type 5 is a triangular cell with three points.
-     |      
-     |      >>> mesh.cell_point_ids(0)
-     |      [0, 1, 2]
      |  
-     |  cell_points(self, ind: int) -> numpy.ndarray
+     |  cell_points(self, ind: 'int') -> 'np.ndarray'
      |      Return the points in a cell.
+     |      
+     |      ..  deprecated:: 0.38.0
+     |          Use :attr:`pyvista.Cell.points` instead.
      |      
      |      Parameters
      |      ----------
@@ -2456,18 +2844,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      numpy.ndarray
      |          An array of floats with shape (number of points, 3) containing the coordinates of the
      |          cell corners.
-     |      
-     |      Examples
-     |      --------
-     |      >>> from pyvista import examples
-     |      >>> mesh = examples.load_airplane()
-     |      >>> mesh.cell_points(0)  # doctest:+SKIP
-     |      [[896.99401855  48.76010132  82.26560211]
-     |       [906.59301758  48.76010132  80.74520111]
-     |       [907.53900146  55.49020004  83.65809631]]
      |  
-     |  cell_type(self, ind: int) -> int
+     |  cell_type(self, ind: 'int') -> 'int'
      |      Return the type of a cell.
+     |      
+     |      .. deprecated:: 0.38.0
+     |          You can use :attr:`pyvista.Cell.type` instead.
      |      
      |      Parameters
      |      ----------
@@ -2477,26 +2859,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Returns
      |      -------
      |      int
-     |          VTK cell type. See `vtkCellType.h <https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html>`_ .
-     |      
-     |      Examples
-     |      --------
-     |      >>> from pyvista import examples
-     |      >>> mesh = examples.load_airplane()
-     |      >>> mesh.cell_type(0)
-     |      5
-     |  
-     |  clear_arrays(self)
-     |      Remove all arrays from point/cell/field data.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :func:`DataSet.clear_data` instead.
-     |  
-     |  clear_cell_arrays(self)
-     |      Remove all cell data.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :func:`DataSet.clear_cell_data` instead.
+     |          VTK cell type. See `vtkCellType.h
+     |          <https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html>`_ .
      |  
      |  clear_cell_data(self)
      |      Remove all cell arrays.
@@ -2517,12 +2881,6 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.point_data.keys()
      |      []
      |  
-     |  clear_point_arrays(self)
-     |      Remove all point data.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :func:`DataSet.clear_point_data` instead.
-     |  
      |  clear_point_data(self)
      |      Remove all point arrays.
      |      
@@ -2542,19 +2900,33 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  clear_textures(self)
      |      Clear the textures from this mesh.
      |      
+     |      .. deprecated:: 0.40.0
+     |          Texture tracking on datasets is deprecated and will be removed in a future version of PyVista.
+     |  
+     |  copy_from(self, mesh: '_vtk.vtkDataSet', deep: 'bool' = True)
+     |      Overwrite this dataset inplace with the new dataset's geometries and data.
+     |      
+     |      Parameters
+     |      ----------
+     |      mesh : vtk.vtkDataSet
+     |          The overwriting mesh.
+     |      
+     |      deep : bool, default: True
+     |          Whether to perform a deep or shallow copy.
+     |      
      |      Examples
      |      --------
-     |      Clear the texture from the globe example.
+     |      Create two meshes and overwrite ``mesh_a`` with ``mesh_b``.
+     |      Show that ``mesh_a`` is equal to ``mesh_b``.
      |      
-     |      >>> from pyvista import examples
-     |      >>> globe = examples.load_globe()
-     |      >>> globe.textures
-     |      {'2k_earth_daymap': ...}
-     |      >>> globe.clear_textures()
-     |      >>> globe.textures
-     |      {}
+     |      >>> import pyvista
+     |      >>> mesh_a = pyvista.Sphere()
+     |      >>> mesh_b = pyvista.Cube()
+     |      >>> mesh_a.copy_from(mesh_b)
+     |      >>> mesh_a == mesh_b
+     |      True
      |  
-     |  copy_meta_from(self, ido: 'DataSet', deep: bool = True)
+     |  copy_meta_from(self, ido: 'DataSet', deep: 'bool' = True)
      |      Copy pyvista meta data onto this object from another object.
      |      
      |      Parameters
@@ -2562,30 +2934,37 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      ido : pyvista.DataSet
      |          Dataset to copy the metadata from.
      |      
-     |      deep : bool, optional
+     |      deep : bool, default: True
      |          Deep or shallow copy.
      |  
-     |  find_cells_along_line(self, pointa: Iterable[float], pointb: Iterable[float], tolerance=0.0) -> numpy.ndarray
-     |      Find the index of cells in this mesh along a line.
+     |  find_cells_along_line(self, pointa: 'Iterable[float]', pointb: 'Iterable[float]', tolerance=0.0) -> 'np.ndarray'
+     |      Find the index of cells whose bounds intersect a line.
      |      
      |      Line is defined from ``pointa`` to ``pointb``.
      |      
      |      Parameters
      |      ----------
-     |      pointa : iterable(float)
+     |      pointa : sequence[float]
      |          Length 3 coordinate of the start of the line.
      |      
-     |      pointb : iterable(float)
+     |      pointb : sequence[float]
      |          Length 3 coordinate of the end of the line.
      |      
-     |      tolerance : float, optional
+     |      tolerance : float, default: 0.0
      |          The absolute tolerance to use to find cells along line.
      |      
      |      Returns
      |      -------
      |      numpy.ndarray
-     |          Index or indices of the cell in this mesh that are closest
-     |          to the given point.
+     |          Index or indices of the cell(s) whose bounds intersect
+     |          the line.
+     |      
+     |      Warnings
+     |      --------
+     |      This method returns cells whose bounds intersect the line.
+     |      This means that the line may not intersect the cell itself.
+     |      To obtain cells that intersect the line, use
+     |      :func:`pyvista.DataSet.find_cells_intersecting_line`.
      |      
      |      See Also
      |      --------
@@ -2593,19 +2972,59 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      DataSet.find_closest_cell
      |      DataSet.find_containing_cell
      |      DataSet.find_cells_within_bounds
+     |      DataSet.find_cells_intersecting_line
      |      
      |      Examples
      |      --------
      |      >>> import pyvista
      |      >>> mesh = pyvista.Sphere()
-     |      >>> index = mesh.find_cells_along_line([0, 0, 0], [0, 0, 1.0])
+     |      >>> mesh.find_cells_along_line([0.0, 0, 0], [1.0, 0, 0])
+     |      array([842, 843, 896, 897])
      |  
-     |  find_cells_within_bounds(self, bounds: Iterable[float]) -> numpy.ndarray
+     |  find_cells_intersecting_line(self, pointa: 'Iterable[float]', pointb: 'Iterable[float]', tolerance=0.0) -> 'np.ndarray'
+     |      Find the index of cells that intersect a line.
+     |      
+     |      Line is defined from ``pointa`` to ``pointb``.  This
+     |      method requires vtk version >=9.2.0.
+     |      
+     |      Parameters
+     |      ----------
+     |      pointa : sequence[float]
+     |          Length 3 coordinate of the start of the line.
+     |      
+     |      pointb : sequence[float]
+     |          Length 3 coordinate of the end of the line.
+     |      
+     |      tolerance : float, default: 0.0
+     |          The absolute tolerance to use to find cells along line.
+     |      
+     |      Returns
+     |      -------
+     |      numpy.ndarray
+     |          Index or indices of the cell(s) that intersect
+     |          the line.
+     |      
+     |      See Also
+     |      --------
+     |      DataSet.find_closest_point
+     |      DataSet.find_closest_cell
+     |      DataSet.find_containing_cell
+     |      DataSet.find_cells_within_bounds
+     |      DataSet.find_cells_along_line
+     |      
+     |      Examples
+     |      --------
+     |      >>> import pyvista
+     |      >>> mesh = pyvista.Sphere()
+     |      >>> mesh.find_cells_intersecting_line([0.0, 0, 0], [1.0, 0, 0])
+     |      array([896])
+     |  
+     |  find_cells_within_bounds(self, bounds: 'Iterable[float]') -> 'np.ndarray'
      |      Find the index of cells in this mesh within bounds.
      |      
      |      Parameters
      |      ----------
-     |      bounds : iterable(float)
+     |      bounds : sequence[float]
      |          Bounding box. The form is: ``[xmin, xmax, ymin, ymax, zmin, zmax]``.
      |      
      |      Returns
@@ -2625,18 +3044,20 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      --------
      |      >>> import pyvista
      |      >>> mesh = pyvista.Cube()
-     |      >>> index = mesh.find_cells_within_bounds([-2.0, 2.0, -2.0, 2.0, -2.0, 2.0])
+     |      >>> index = mesh.find_cells_within_bounds(
+     |      ...     [-2.0, 2.0, -2.0, 2.0, -2.0, 2.0]
+     |      ... )
      |  
-     |  find_closest_cell(self, point: Union[numpy.ndarray, Sequence[Union[List[float], Tuple[float, float, float], numpy.ndarray]], Sequence[Union[float, int, numpy.number]]], return_closest_point: bool = False) -> Union[int, numpy.ndarray, Tuple[Union[int, numpy.ndarray], numpy.ndarray]]
+     |  find_closest_cell(self, point: 'Union[VectorArray, NumericArray]', return_closest_point: 'bool' = False) -> 'Union[int, np.ndarray, Tuple[Union[int, np.ndarray], np.ndarray]]'
      |      Find index of closest cell in this mesh to the given point.
      |      
      |      Parameters
      |      ----------
-     |      point : Sequence(float) or np.ndarray
-     |          Coordinates of point to query (length 3) or a ``numpy`` array of ``n``
-     |          points with shape ``(n, 3)``.
+     |      point : array_like[float]
+     |          Coordinates of point to query (length 3) or a
+     |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
      |      
-     |      return_closest_point : bool, optional
+     |      return_closest_point : bool, default: False
      |          If ``True``, the closest point within a mesh cell to that point is
      |          returned.  This is not necessarily the closest nodal point on the
      |          mesh.  Default is ``False``.
@@ -2710,8 +3131,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      >>> unit_square = pyvista.Rectangle()
      |      >>> index, closest_point = unit_square.find_closest_cell(
-     |      ...     [0.25, 0.25, 0.5],
-     |      ...     return_closest_point=True
+     |      ...     [0.25, 0.25, 0.5], return_closest_point=True
      |      ... )
      |      >>> closest_point
      |      array([0.25, 0.25, 0.  ])
@@ -2721,13 +3141,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      desired, see :func:`DataSet.find_closest_point`.
      |      
      |      >>> index, closest_point = unit_square.find_closest_cell(
-     |      ...     [1.0, 1.0, 0.5],
-     |      ...     return_closest_point=True
+     |      ...     [1.0, 1.0, 0.5], return_closest_point=True
      |      ... )
      |      >>> closest_point
      |      array([1., 1., 0.])
      |  
-     |  find_closest_point(self, point: Iterable[float], n=1) -> int
+     |  find_closest_point(self, point: 'Iterable[float]', n=1) -> 'int'
      |      Find index of closest point in this mesh to the given point.
      |      
      |      If wanting to query many points, use a KDTree with scipy or another
@@ -2737,7 +3156,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      point : iterable(float)
+     |      point : sequence[float]
      |          Length 3 coordinate of the point to query.
      |      
      |      n : int, optional
@@ -2771,14 +3190,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.points[index]
      |      pyvista_ndarray([-0.05218758,  0.49653167,  0.02706946], dtype=float32)
      |  
-     |  find_containing_cell(self, point: Union[numpy.ndarray, Sequence[Union[List[float], Tuple[float, float, float], numpy.ndarray]], Sequence[Union[float, int, numpy.number]]]) -> Union[int, numpy.ndarray]
+     |  find_containing_cell(self, point: 'Union[VectorArray, NumericArray]') -> 'Union[int, np.ndarray]'
      |      Find index of a cell that contains the given point.
      |      
      |      Parameters
      |      ----------
-     |      point : Sequence(float) or np.ndarray
-     |          Coordinates of point to query (length 3) or a ``numpy`` array of ``n``
-     |          points with shape ``(n, 3)``.
+     |      point : array_like[float]
+     |          Coordinates of point to query (length 3) or a
+     |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
      |      
      |      Returns
      |      -------
@@ -2803,9 +3222,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      containing the point ``[0.3, 0.3, 0.0]`` is found.
      |      
      |      >>> import pyvista
-     |      >>> mesh = pyvista.UniformGrid(dims=[5, 5, 1], spacing=[1/4, 1/4, 0])
+     |      >>> mesh = pyvista.ImageData(
+     |      ...     dimensions=[5, 5, 1], spacing=[1 / 4, 1 / 4, 0]
+     |      ... )
      |      >>> mesh
-     |      UniformGrid...
+     |      ImageData...
      |      >>> mesh.find_containing_cell([0.3, 0.3, 0.0])
      |      5
      |      
@@ -2822,7 +3243,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> indices.shape
      |      (1000,)
      |  
-     |  flip_normal(self, normal: List[float], point=None, transform_all_input_vectors=False, inplace=False)
+     |  flip_normal(self, normal: 'List[float]', point=None, transform_all_input_vectors=False, inplace=False)
      |      Flip mesh about the normal.
      |      
      |      .. note::
@@ -2835,16 +3256,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      normal : tuple
      |         Normal vector to flip about.
      |      
-     |      point : list, optional
+     |      point : sequence[float]
      |          Point to rotate about.  Defaults to center of mesh at
      |          :attr:`center <pyvista.DataSet.center>`.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -2877,16 +3298,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      point : list, optional
+     |      point : sequence[float], optional
      |          Point to rotate about.  Defaults to center of mesh at
      |          :attr:`center <pyvista.DataSet.center>`.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -2919,16 +3340,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      point : list, optional
+     |      point : sequence[float], optional
      |          Point to rotate about.  Defaults to center of mesh at
      |          :attr:`center <pyvista.DataSet.center>`.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -2993,7 +3414,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(mesh2)
      |      >>> pl.show(cpos="xz")
      |  
-     |  get_array(self, name: str, preference: Literal['cell', 'point', 'field'] = 'cell') -> 'pyvista.pyvista_ndarray'
+     |  get_array(self, name: 'str', preference: "Literal[('cell', 'point', 'field')]" = 'cell') -> 'pyvista.pyvista_ndarray'
      |      Search both point, cell and field data for an array.
      |      
      |      Parameters
@@ -3001,7 +3422,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      name : str
      |          Name of the array.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "cell"
      |          When scalars is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
      |          ``'point'``, ``'cell'``, or ``'field'``.
@@ -3039,7 +3460,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.get_array('field-data')
      |      pyvista_ndarray(['a', 'b', 'c'], dtype='<U1')
      |  
-     |  get_array_association(self, name: str, preference: Literal['cell', 'point', 'field'] = 'cell') -> pyvista.utilities.helpers.FieldAssociation
+     |  get_array_association(self, name: 'str', preference: "Literal[('cell', 'point', 'field')]" = 'cell') -> 'FieldAssociation'
      |      Get the association of an array.
      |      
      |      Parameters
@@ -3047,14 +3468,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      name : str
      |          Name of the array.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "cell"
      |          When ``name`` is specified, this is the preferred array
      |          association to search for in the dataset.  Must be either
      |          ``'point'``, ``'cell'``, or ``'field'``.
      |      
      |      Returns
      |      -------
-     |      pyvista.FieldAssociation
+     |      pyvista.core.utilities.arrays.FieldAssociation
      |          Field association of the array.
      |      
      |      Examples
@@ -3085,7 +3506,60 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.get_array_association('field-data')
      |      <FieldAssociation.NONE: 2>
      |  
-     |  get_data_range(self, arr_var: Union[str, numpy.ndarray, NoneType] = None, preference='cell') -> Tuple[Union[float, numpy.ndarray], Union[float, numpy.ndarray]]
+     |  get_cell(self, index: 'int') -> 'pyvista.Cell'
+     |      Return a :class:`pyvista.Cell` object.
+     |      
+     |      Parameters
+     |      ----------
+     |      index : int
+     |          Cell ID.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.Cell
+     |          The i-th pyvista.Cell.
+     |      
+     |      Notes
+     |      -----
+     |      Cells returned from this method are deep copies of the original
+     |      cells. Changing properties (for example, ``points``) will not affect
+     |      the dataset they originated from.
+     |      
+     |      Examples
+     |      --------
+     |      Get the 0-th cell.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.load_airplane()
+     |      >>> cell = mesh.get_cell(0)
+     |      >>> cell
+     |      Cell ...
+     |      
+     |      Get the point ids of the first cell
+     |      
+     |      >>> cell.point_ids
+     |      [0, 1, 2]
+     |      
+     |      Get the point coordinates of the first cell
+     |      
+     |      >>> cell.points
+     |      array([[897.0,  48.8,  82.3],
+     |             [906.6,  48.8,  80.7],
+     |             [907.5,  55.5,  83.7]])
+     |      
+     |      For the first cell, get the points associated with the first edge
+     |      
+     |      >>> cell.edges[0].point_ids
+     |      [0, 1]
+     |      
+     |      For a Tetrahedron, get the point ids of the last face
+     |      
+     |      >>> mesh = examples.cells.Tetrahedron()
+     |      >>> cell = mesh.get_cell(0)
+     |      >>> cell.faces[-1].point_ids
+     |      [0, 2, 1]
+     |  
+     |  get_data_range(self, arr_var: 'Optional[Union[str, np.ndarray]]' = None, preference='cell') -> 'Tuple[Union[float, np.ndarray], Union[float, np.ndarray]]'
      |      Get the non-NaN min and max of a named array.
      |      
      |      Parameters
@@ -3094,7 +3568,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The name of the array to get the range. If ``None``, the
      |          active scalars is used.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "cell"
      |          When scalars is specified, this is the preferred array type
      |          to search for in the dataset.  Must be either ``'point'``,
      |          ``'cell'``, or ``'field'``.
@@ -3104,44 +3578,34 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      tuple
      |          ``(min, max)`` of the named array.
      |  
-     |  overwrite(self, mesh: vtkmodules.vtkCommonDataModel.vtkDataSet)
+     |  overwrite(self, mesh: '_vtk.vtkDataSet')
      |      Overwrite this dataset inplace with the new dataset's geometries and data.
+     |      
+     |      .. deprecated:: 0.37.0
+     |          Use :func:`DataSet.copy_from` instead.
      |      
      |      Parameters
      |      ----------
      |      mesh : vtk.vtkDataSet
      |          The overwriting mesh.
-     |      
-     |      Examples
-     |      --------
-     |      Create two meshes and overwrite ``mesh_a`` with ``mesh_b``.
-     |      Show that ``mesh_a`` is equal to ``mesh_b``.
-     |      
-     |      >>> import pyvista
-     |      >>> mesh_a = pyvista.Sphere()
-     |      >>> mesh_b = pyvista.Cube()
-     |      >>> mesh_a.overwrite(mesh_b)
-     |      >>> mesh_a == mesh_b
-     |      True
      |  
-     |  plot(var_item, off_screen=None, full_screen=None, screenshot=None, interactive=True, cpos=None, window_size=None, show_bounds=False, show_axes=None, notebook=None, background=None, text='', return_img=False, eye_dome_lighting=False, volume=False, parallel_projection=False, use_ipyvtk=None, jupyter_backend=None, return_viewer=False, return_cpos=False, jupyter_kwargs=None, theme=None, hidden_line_removal=None, anti_aliasing=None, zoom=None, border=None, border_color='k', border_width=2.0, **kwargs)
+     |  plot(var_item, off_screen=None, full_screen=None, screenshot=None, interactive=True, cpos=None, window_size=None, show_bounds=False, show_axes=None, notebook=None, background=None, text='', return_img=False, eye_dome_lighting=False, volume=False, parallel_projection=False, jupyter_backend=None, return_viewer=False, return_cpos=False, jupyter_kwargs=None, theme=None, hidden_line_removal=None, anti_aliasing=None, zoom=None, border=False, border_color='k', border_width=2.0, ssao=False, **kwargs)
      |      Plot a PyVista, numpy, or vtk object.
      |      
      |      Parameters
      |      ----------
-     |      var_item : pyvista.DataSet, vtk, or numpy object
-     |          PyVista, VTK, or ``numpy`` object to be plotted.
+     |      var_item : pyvista.DataSet
+     |          See :func:`Plotter.add_mesh <pyvista.Plotter.add_mesh>` for all
+     |          supported types.
      |      
      |      off_screen : bool, optional
      |          Plots off screen when ``True``.  Helpful for saving
      |          screenshots without a window popping up.  Defaults to the
      |          global setting ``pyvista.OFF_SCREEN``.
      |      
-     |      full_screen : bool, optional
+     |      full_screen : bool, default: :attr:`pyvista.themes.Theme.full_screen`
      |          Opens window in full screen.  When enabled, ignores
-     |          ``window_size``.  Defaults to active theme setting in
-     |          :attr:`pyvista.global_theme.full_screen
-     |          <pyvista.themes.DefaultTheme.full_screen>`.
+     |          ``window_size``.
      |      
      |      screenshot : str or bool, optional
      |          Saves screenshot to file when enabled.  See:
@@ -3151,53 +3615,45 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          When ``True``, takes screenshot and returns ``numpy`` array of
      |          image.
      |      
-     |      interactive : bool, optional
-     |          Allows user to pan and move figure.  Defaults to
-     |          :attr:`pyvista.global_theme.interactive <pyvista.themes.DefaultTheme.interactive>`.
+     |      interactive : bool, default: :attr:`pyvista.themes.Theme.interactive`
+     |          Allows user to pan and move figure.
      |      
      |      cpos : list, optional
      |          List of camera position, focal point, and view up.
      |      
-     |      window_size : list, optional
-     |          Window size in pixels.  Defaults to global theme
-     |          :attr:`pyvista.global_theme.window_size <pyvista.themes.DefaultTheme.window_size>`.
+     |      window_size : sequence, default: :attr:`pyvista.themes.Theme.window_size`
+     |          Window size in pixels.
      |      
-     |      show_bounds : bool, optional
-     |          Shows mesh bounds when ``True``.  Default ``False``.
+     |      show_bounds : bool, default: False
+     |          Shows mesh bounds when ``True``.
      |      
-     |      show_axes : bool, optional
-     |          Shows a vtk axes widget.  If ``None``, enabled according to
-     |          :attr:`pyvista.global_theme.axes.show <pyvista.themes._AxesConfig.show>`.
+     |      show_axes : bool, default: :attr:`pyvista.themes._AxesConfig.show`
+     |          Shows a vtk axes widget.
      |      
-     |      notebook : bool, optional
+     |      notebook : bool, default: :attr:`pyvista.themes.Theme.notebook`
      |          When ``True``, the resulting plot is placed inline a jupyter
      |          notebook.  Assumes a jupyter console is active.
      |      
-     |      background : color_like, optional
+     |      background : ColorLike, default: :attr:`pyvista.themes.Theme.background`
      |          Color of the background.
      |      
      |      text : str, optional
      |          Adds text at the bottom of the plot.
      |      
-     |      return_img : bool, optional
+     |      return_img : bool, default: False
      |          Returns numpy array of the last image rendered.
      |      
      |      eye_dome_lighting : bool, optional
      |          Enables eye dome lighting.
      |      
-     |      volume : bool, optional
+     |      volume : bool, default: False
      |          Use the :func:`Plotter.add_volume()
      |          <pyvista.Plotter.add_volume>` method for volume rendering.
      |      
-     |      parallel_projection : bool, optional
+     |      parallel_projection : bool, default: False
      |          Enable parallel projection.
      |      
-     |      use_ipyvtk : bool, optional
-     |          Deprecated.  Instead, set the backend either globally with
-     |          ``pyvista.set_jupyter_backend('ipyvtklink')`` or with
-     |          ``backend='ipyvtklink'``.
-     |      
-     |      jupyter_backend : str, optional
+     |      jupyter_backend : str, default: :attr:`pyvista.themes.Theme.jupyter_backend`
      |          Jupyter notebook plotting backend to use.  One of the
      |          following:
      |      
@@ -3205,45 +3661,43 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          * ``'static'`` : Display a static figure.
      |          * ``'ipygany'`` : Show a ``ipygany`` widget
      |          * ``'panel'`` : Show a ``panel`` widget.
+     |          * ``'trame'`` : Display using ``trame``.
      |      
      |          This can also be set globally with
      |          :func:`pyvista.set_jupyter_backend`.
      |      
-     |      return_viewer : bool, optional
+     |      return_viewer : bool, default: False
      |          Return the jupyterlab viewer, scene, or display object
      |          when plotting with jupyter notebook.
      |      
-     |      return_cpos : bool, optional
+     |      return_cpos : bool, default: False
      |          Return the last camera position from the render window
      |          when enabled.  Defaults to value in theme settings.
      |      
      |      jupyter_kwargs : dict, optional
      |          Keyword arguments for the Jupyter notebook plotting backend.
      |      
-     |      theme : pyvista.themes.DefaultTheme, optional
+     |      theme : pyvista.themes.Theme, optional
      |          Plot-specific theme.
      |      
-     |      hidden_line_removal : bool, optional
+     |      hidden_line_removal : bool, default: :attr:`pyvista.themes.Theme.hidden_line_removal`
      |          Wireframe geometry will be drawn using hidden line removal if
      |          the rendering engine supports it.  See
      |          :func:`Plotter.enable_hidden_line_removal
-     |          <Plotter.enable_hidden_line_removal>`.  Defaults to the
-     |          theme setting :attr:`pyvista.global_theme.hidden_line_removal
-     |          <pyvista.themes.DefaultTheme.hidden_line_removal>`.
+     |          <Plotter.enable_hidden_line_removal>`.
      |      
-     |      anti_aliasing : bool, optional
-     |          Enable or disable anti-aliasing.  Defaults to the theme
-     |          setting :attr:`pyvista.global_theme.antialiasing
-     |          <pyvista.themes.DefaultTheme.antialiasing>`.
+     |      anti_aliasing : bool, default: :attr:`pyvista.themes.Theme.anti_aliasing`
+     |          Enable or disable anti-aliasing.
      |      
      |      zoom : float, str, optional
-     |          Camera zoom.  Either ``'tight'`` or a float. A value greater than 1 is
-     |          a zoom-in, a value less than 1 is a zoom-out.  Must be greater than 0.
+     |          Camera zoom.  Either ``'tight'`` or a float. A value greater than 1
+     |          is a zoom-in, a value less than 1 is a zoom-out.  Must be greater
+     |          than 0.
      |      
-     |      border : bool, optional
-     |          Draw a border around each render window.  Default ``False``.
+     |      border : bool, default: False
+     |          Draw a border around each render window.
      |      
-     |      border_color : color_like, optional
+     |      border_color : ColorLike, default: "k"
      |          Either a string, rgb list, or hex color string.  For example:
      |      
      |              * ``color='white'``
@@ -3251,10 +3705,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |              * ``color=[1.0, 1.0, 1.0]``
      |              * ``color='#FFFFFF'``
      |      
-     |      border_width : float, optional
+     |      border_width : float, default: 2.0
      |          Width of the border in pixels when enabled.
      |      
-     |      **kwargs : optional keyword arguments
+     |      ssao : bool, optional
+     |          Enable surface space ambient occlusion (SSAO). See
+     |          :func:`Plotter.enable_ssao` for more details.
+     |      
+     |      **kwargs : dict, optional
      |          See :func:`pyvista.Plotter.add_mesh` for additional options.
      |      
      |      Returns
@@ -3276,7 +3734,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          * [Window height x Window width x 4] if the theme sets
      |            ``transparent_background=True``.
      |      
-     |      widget
+     |      widget : ipywidgets.Widget
      |          IPython widget when ``return_viewer=True``.
      |      
      |      Examples
@@ -3288,15 +3746,75 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.plot(show_edges=True)
      |      
      |      Plot a volume mesh. Color by distance from the center of the
-     |      UniformGrid. Note ``volume=True`` is passed.
+     |      ImageData. Note ``volume=True`` is passed.
      |      
      |      >>> import numpy as np
-     |      >>> grid = pv.UniformGrid(dims=(32, 32, 32), spacing=(0.5, 0.5, 0.5))
+     |      >>> grid = pv.ImageData(
+     |      ...     dimensions=(32, 32, 32), spacing=(0.5, 0.5, 0.5)
+     |      ... )
      |      >>> grid['data'] = np.linalg.norm(grid.center - grid.points, axis=1)
-     |      >>> grid['data'] = np.abs(grid['data'] - grid['data'].max())**3
+     |      >>> grid['data'] = np.abs(grid['data'] - grid['data'].max()) ** 3
      |      >>> grid.plot(volume=True)
      |  
-     |  point_is_inside_cell(self, ind: int, point: Union[numpy.ndarray, Sequence[Union[List[float], Tuple[float, float, float], numpy.ndarray]], Sequence[Union[float, int, numpy.number]]]) -> Union[int, numpy.ndarray]
+     |  point_cell_ids(self, ind: 'int') -> 'List[int]'
+     |      Get the cell IDs that use the ind-th point.
+     |      
+     |      Implements vtkDataSet's `GetPointCells <https://vtk.org/doc/nightly/html/classvtkDataSet.html#a36d1d8f67ad67adf4d1a9cfb30dade49>`_.
+     |      
+     |      Parameters
+     |      ----------
+     |      ind : int
+     |          Point ID.
+     |      
+     |      Returns
+     |      -------
+     |      List[int]
+     |          List of cell IDs using the ind-th point.
+     |      
+     |      Examples
+     |      --------
+     |      Get the cell ids using the 0-th point.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Sphere(theta_resolution=10)
+     |      >>> mesh.point_cell_ids(0)
+     |      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     |      
+     |      Plot them.
+     |      
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(mesh, show_edges=True)
+     |      >>>
+     |      >>> # Label the 0-th point
+     |      >>> _ = pl.add_point_labels(
+     |      ...     mesh.points[0], ["0"], text_color="blue", font_size=20
+     |      ... )
+     |      >>>
+     |      >>> # Get the cells ids using the 0-th point
+     |      >>> ids = mesh.point_cell_ids(0)
+     |      >>> cells = mesh.extract_cells(ids)
+     |      >>> _ = pl.add_mesh(cells, color="red", show_edges=True)
+     |      >>> centers = cells.cell_centers().points
+     |      >>> _ = pl.add_point_labels(
+     |      ...     centers,
+     |      ...     labels=[f"{i}" for i in ids],
+     |      ...     text_color="white",
+     |      ...     font_size=20,
+     |      ...     shape=None,
+     |      ...     show_points=False,
+     |      ... )
+     |      >>>
+     |      >>> # Plot the other cells
+     |      >>> others = mesh.extract_cells(
+     |      ...     [i for i in range(mesh.n_cells) if i not in ids]
+     |      ... )
+     |      >>> _ = pl.add_mesh(others, show_edges=True)
+     |      >>>
+     |      >>> pl.camera_position = "yx"
+     |      >>> pl.camera.zoom(7.0)
+     |      >>> pl.show()
+     |  
+     |  point_is_inside_cell(self, ind: 'int', point: 'Union[VectorArray, NumericArray]') -> 'Union[int, np.ndarray]'
      |      Return whether one or more points are inside a cell.
      |      
      |      .. versionadded:: 0.35.0
@@ -3306,9 +3824,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      ind : int
      |          Cell ID.
      |      
-     |      point : Sequence[float] or np.ndarray
-     |          Coordinates of point to query (length 3) or a ``numpy`` array of ``n``
-     |          points with shape ``(n, 3)``.
+     |      point : array_like[float]
+     |          Coordinates of point to query (length 3) or a
+     |          :class:`numpy.ndarray` of ``n`` points with shape ``(n, 3)``.
      |      
      |      Returns
      |      -------
@@ -3320,12 +3838,130 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      --------
      |      >>> from pyvista import examples
      |      >>> mesh = examples.load_hexbeam()
-     |      >>> mesh.cell_bounds(0)
+     |      >>> mesh.get_cell(0).bounds
      |      (0.0, 0.5, 0.0, 0.5, 0.0, 0.5)
      |      >>> mesh.point_is_inside_cell(0, [0.2, 0.2, 0.2])
      |      True
      |  
-     |  rename_array(self, old_name: str, new_name: str, preference='cell')
+     |  point_neighbors(self, ind: 'int') -> 'List[int]'
+     |      Get the point neighbors of the ind-th point.
+     |      
+     |      Parameters
+     |      ----------
+     |      ind : int
+     |          Point ID.
+     |      
+     |      Returns
+     |      -------
+     |      List[int]
+     |          List of neighbor points IDs for the ind-th point.
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSet.point_neighbors_levels
+     |      
+     |      Examples
+     |      --------
+     |      Get the point neighbors of the 0-th point.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Sphere(theta_resolution=10)
+     |      >>> mesh.point_neighbors(0)
+     |      [2, 226, 198, 170, 142, 114, 86, 254, 58, 30]
+     |      
+     |      Plot them.
+     |      
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(mesh, show_edges=True)
+     |      >>>
+     |      >>> # Label the 0-th point
+     |      >>> _ = pl.add_point_labels(
+     |      ...     mesh.points[0], ["0"], text_color="blue", font_size=40
+     |      ... )
+     |      >>>
+     |      >>> # Get the point neighbors and plot them
+     |      >>> neighbors = mesh.point_neighbors(0)
+     |      >>> _ = pl.add_point_labels(
+     |      ...     mesh.points[neighbors],
+     |      ...     labels=[f"{i}" for i in neighbors],
+     |      ...     text_color="red",
+     |      ...     font_size=40,
+     |      ... )
+     |      >>> pl.camera_position = "yx"
+     |      >>> pl.camera.zoom(7.0)
+     |      >>> pl.show()
+     |  
+     |  point_neighbors_levels(self, ind: 'int', n_levels: 'int' = 1) -> 'Generator[List[int], None, None]'
+     |      Get consecutive levels of point neighbors.
+     |      
+     |      Parameters
+     |      ----------
+     |      ind : int
+     |          Point ID.
+     |      
+     |      n_levels : int, default: 1
+     |          Number of levels to search for point neighbors.
+     |          When equal to 1, it is equivalent to :func:`pyvista.DataSet.point_neighbors`.
+     |      
+     |      Returns
+     |      -------
+     |      generator[list[[int]]
+     |          A generator of list of neighbor points IDs for the ind-th point.
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSet.point_neighbors
+     |      
+     |      Examples
+     |      --------
+     |      Get the point neighbors IDs starting from the 0-th point
+     |      up until the third level.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Sphere(theta_resolution=10)
+     |      >>> pt_nbr_levels = mesh.point_neighbors_levels(0, 3)
+     |      >>> pt_nbr_levels = list(pt_nbr_levels)
+     |      >>> pt_nbr_levels[0]
+     |      [2, 226, 198, 170, 142, 114, 86, 30, 58, 254]
+     |      >>> pt_nbr_levels[1]
+     |      [3, 227, 255, 199, 171, 143, 115, 87, 59, 31]
+     |      >>> pt_nbr_levels[2]
+     |      [256, 32, 4, 228, 200, 172, 144, 116, 88, 60]
+     |      
+     |      Visualize these points IDs.
+     |      
+     |      >>> from functools import partial
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(mesh, show_edges=True)
+     |      >>>
+     |      >>> # Define partial function to add point labels
+     |      >>> add_point_labels = partial(
+     |      ...     pl.add_point_labels,
+     |      ...     text_color="white",
+     |      ...     font_size=40,
+     |      ...     point_size=10,
+     |      ... )
+     |      >>>
+     |      >>> # Add the first point label
+     |      >>> _ = add_point_labels(
+     |      ...     mesh.points[0], labels=["0"], text_color="blue"
+     |      ... )
+     |      >>>
+     |      >>> # Add the neighbors to the plot
+     |      >>> neighbors = mesh.point_neighbors_levels(0, n_levels=3)
+     |      >>> for i, ids in enumerate(neighbors, start=1):
+     |      ...     _ = add_point_labels(
+     |      ...         mesh.points[ids],
+     |      ...         labels=[f"{i}"] * len(ids),
+     |      ...         text_color="red",
+     |      ...     )
+     |      ...
+     |      >>>
+     |      >>> pl.view_yx()
+     |      >>> pl.camera.zoom(4.0)
+     |      >>> pl.show()
+     |  
+     |  rename_array(self, old_name: 'str', new_name: 'str', preference='cell')
      |      Change array name by searching for the array then renaming it.
      |      
      |      Parameters
@@ -3336,7 +3972,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      new_name : str
      |          Name to rename the array to.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "cell"
      |          If there are two arrays of the same name associated with
      |          points, cells, or field data, it will prioritize an array
      |          matching this type.  Can be either ``'cell'``,
@@ -3355,7 +3991,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> cube['my_renamed_array']
      |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7])
      |  
-     |  rotate_vector(self, vector: Iterable[float], angle: float, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+     |  rotate_vector(self, vector: 'Iterable[float]', angle: 'float', point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
      |      Rotate mesh about a vector.
      |      
      |      .. note::
@@ -3365,21 +4001,21 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      vector : Iterable
-     |          Axes to rotate about.
+     |      vector : sequence[float]
+     |          Axis to rotate about.
      |      
      |      angle : float
      |          Angle in degrees to rotate about the vector.
      |      
-     |      point : list, optional
-     |          Point to rotate about.  Defaults to origin ``(0.0, 0.0, 0.0)``.
+     |      point : sequence[float], default: (0.0, 0.0, 0.0)
+     |          Point to rotate about.  Defaults to origin.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3403,7 +4039,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_x(self, angle: float, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+     |  rotate_x(self, angle: 'float', point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
      |      Rotate mesh about the x-axis.
      |      
      |      .. note::
@@ -3416,15 +4052,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      angle : float
      |          Angle in degrees to rotate about the x-axis.
      |      
-     |      point : list, optional
-     |          Point to rotate about.  Defaults to origin ``(0.0, 0.0, 0.0)``.
+     |      point : sequence[float], default: (0.0, 0.0, 0.0)
+     |          Point to rotate about. Defaults to origin.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3448,7 +4084,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_y(self, angle: float, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+     |  rotate_y(self, angle: 'float', point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
      |      Rotate mesh about the y-axis.
      |      
      |      .. note::
@@ -3461,15 +4097,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      angle : float
      |          Angle in degrees to rotate about the y-axis.
      |      
-     |      point : float, optional
+     |      point : sequence[float], default: (0.0, 0.0, 0.0)
      |          Point to rotate about.
      |      
-     |      transform_all_input_vectors : bool, optional
-     |          When ``True``, all input vectors are
-     |          transformed. Otherwise, only the points, normals and
-     |          active vectors are transformed.
+     |      transform_all_input_vectors : bool, default: False
+     |          When ``True``, all input vectors are transformed. Otherwise, only
+     |          the points, normals and active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3493,7 +4128,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_z(self, angle: float, point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
+     |  rotate_z(self, angle: 'float', point=(0.0, 0.0, 0.0), transform_all_input_vectors=False, inplace=False)
      |      Rotate mesh about the z-axis.
      |      
      |      .. note::
@@ -3506,15 +4141,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      angle : float
      |          Angle in degrees to rotate about the z-axis.
      |      
-     |      point : list, optional
-     |          Point to rotate about.  Defaults to origin ``(0.0, 0.0, 0.0)``.
+     |      point : sequence[float], default: (0.0, 0.0, 0.0)
+     |          Point to rotate about.  Defaults to origin.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3538,7 +4173,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  scale(self, xyz: Union[float, int, numpy.number, list, tuple, numpy.ndarray], transform_all_input_vectors=False, inplace=False)
+     |  scale(self, xyz: 'Union[Number, list, tuple, np.ndarray]', transform_all_input_vectors=False, inplace=False)
      |      Scale the mesh.
      |      
      |      .. note::
@@ -3548,17 +4183,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      xyz : float or list or tuple or np.ndarray
-     |          A scalar or length 3 list, tuple or array defining the scale
-     |          factors along x, y, and z. If a scalar, the same uniform scale is
-     |          used along all three axes.
+     |      xyz : float | sequence[float]
+     |          A scalar or length 3 sequence defining the scale factors along x,
+     |          y, and z. If a scalar, the same uniform scale is used along all
+     |          three axes.
      |      
-     |      transform_all_input_vectors : bool, optional
-     |          When ``True``, all input vectors are
-     |          transformed. Otherwise, only the points, normals and
-     |          active vectors are transformed.
+     |      transform_all_input_vectors : bool, default: False
+     |          When ``True``, all input vectors are transformed. Otherwise, only
+     |          the points, normals and active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3583,56 +4217,64 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(mesh2)
      |      >>> pl.show(cpos="xy")
      |  
-     |  set_active_scalars(self, name: Union[str, NoneType], preference='cell')
+     |  set_active_scalars(self, name: 'Optional[str]', preference='cell')
      |      Find the scalars by name and appropriately sets it as active.
      |      
      |      To deactivate any active scalars, pass ``None`` as the ``name``.
      |      
      |      Parameters
      |      ----------
-     |      name : str or None
+     |      name : str, optional
      |          Name of the scalars array to assign as active.  If
      |          ``None``, deactivates active scalars for both point and
      |          cell data.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "cell"
      |          If there are two arrays of the same name associated with
      |          points or cells, it will prioritize an array matching this
      |          type.  Can be either ``'cell'`` or ``'point'``.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.core.utilities.arrays.FieldAssociation
+     |          Association of the scalars matching ``name``.
+     |      
+     |      numpy.ndarray
+     |          An array from the dataset matching ``name``.
      |  
-     |  set_active_tensors(self, name: Union[str, NoneType], preference='point')
+     |  set_active_tensors(self, name: 'Optional[str]', preference='point')
      |      Find the tensors by name and appropriately sets it as active.
      |      
      |      To deactivate any active tensors, pass ``None`` as the ``name``.
      |      
      |      Parameters
      |      ----------
-     |      name : str
+     |      name : str, optional
      |          Name of the tensors array to assign as active.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          If there are two arrays of the same name associated with
      |          points, cells, or field data, it will prioritize an array
      |          matching this type.  Can be either ``'cell'``,
      |          ``'field'``, or ``'point'``.
      |  
-     |  set_active_vectors(self, name: Union[str, NoneType], preference='point')
+     |  set_active_vectors(self, name: 'Optional[str]', preference='point')
      |      Find the vectors by name and appropriately sets it as active.
      |      
      |      To deactivate any active vectors, pass ``None`` as the ``name``.
      |      
      |      Parameters
      |      ----------
-     |      name : str
+     |      name : str, optional
      |          Name of the vectors array to assign as active.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          If there are two arrays of the same name associated with
      |          points, cells, or field data, it will prioritize an array
      |          matching this type.  Can be either ``'cell'``,
      |          ``'field'``, or ``'point'``.
      |  
-     |  translate(self, xyz: Union[list, tuple, numpy.ndarray], transform_all_input_vectors=False, inplace=False)
+     |  translate(self, xyz: 'Union[list, tuple, np.ndarray]', transform_all_input_vectors=False, inplace=False)
      |      Translate the mesh.
      |      
      |      .. note::
@@ -3642,15 +4284,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      xyz : list or tuple or np.ndarray
-     |          Length 3 list, tuple or array.
+     |      xyz : sequence[float]
+     |          Length 3 sequence of floats.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are
      |          transformed. Otherwise, only the points, normals and
      |          active vectors are transformed.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
      |      Returns
@@ -3792,6 +4434,40 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.active_vectors_info
      |      ActiveArrayInfoTuple(association=<FieldAssociation.POINT: 0>, name='Normals')
      |  
+     |  area
+     |      Return the mesh area if 2D.
+     |      
+     |      This will return 0 for meshes with 3D cells.
+     |      
+     |      Returns
+     |      -------
+     |      float
+     |          Total area of the mesh.
+     |      
+     |      Examples
+     |      --------
+     |      Get the area of a square of size 2x2.
+     |      Note 5 points in each direction.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.ImageData(dimensions=(5, 5, 1))
+     |      >>> mesh.area
+     |      16.0
+     |      
+     |      A mesh with 3D cells does not have an area.  To get
+     |      the outer surface area, first extract the surface using
+     |      :func:`pyvista.DataSetFilters.extract_surface`.
+     |      
+     |      >>> mesh = pv.ImageData(dimensions=(5, 5, 5))
+     |      >>> mesh.area
+     |      0.0
+     |      
+     |      Get the area of a sphere.
+     |      
+     |      >>> mesh = pv.Sphere()
+     |      >>> mesh.volume
+     |      0.51825
+     |  
      |  array_names
      |      Return a list of array names for the dataset.
      |      
@@ -3845,11 +4521,33 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> cube.bounds
      |      (-0.5, 0.5, -0.5, 0.5, -0.5, 0.5)
      |  
-     |  cell_arrays
-     |      Return vtkCellData as DataSetAttributes.
+     |  cell
+     |      A generator that provides an easy way to loop over all cells.
      |      
-     |      .. deprecated:: 0.32.0
-     |          Use :attr:`DataSet.cell_data` to return cell data.
+     |      To access a single cell, use :func:`pyvista.DataSet.get_cell`.
+     |      
+     |      .. versionchanged:: 0.39.0
+     |          Now returns a generator instead of a list.
+     |          Use ``get_cell(i)`` instead of ``cell[i]``.
+     |      
+     |      Yields
+     |      ------
+     |      pyvista.Cell
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSet.get_cell
+     |      
+     |      Examples
+     |      --------
+     |      Loop over the cells
+     |      
+     |      >>> import pyvista as pv
+     |      >>> # Create a grid with 9 points and 4 cells
+     |      >>> mesh = pv.ImageData(dimensions=(3, 3, 1))
+     |      >>> for cell in mesh.cell:  # doctest: +SKIP
+     |      ...     cell
+     |      ...
      |  
      |  cell_data
      |      Return vtkCellData as DataSetAttributes.
@@ -3867,13 +4565,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.cell_data
      |      pyvista DataSetAttributes
      |      Association     : CELL
-     |      Active Scalars  : my_other_array
+     |      Active Scalars  : my_array
      |      Active Vectors  : None
      |      Active Texture  : None
      |      Active Normals  : None
      |      Contains arrays :
-     |          my_array                float64    (6,)
-     |          my_other_array          int64      (6,)                 SCALARS
+     |          my_array                float64    (6,)                 SCALARS
+     |          my_other_array          int64      (6,)
      |      
      |      Access an array from ``cell_data``.
      |      
@@ -3951,12 +4649,6 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  number_of_points
      |      Return the number of points.
      |  
-     |  point_arrays
-     |      Return vtkPointData as DataSetAttributes.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :attr:`DataSet.point_data` to return point data.
-     |  
      |  point_data
      |      Return vtkPointData as DataSetAttributes.
      |      
@@ -3973,13 +4665,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh.point_data
      |      pyvista DataSetAttributes
      |      Association     : POINT
-     |      Active Scalars  : my_other_array
+     |      Active Scalars  : my_array
      |      Active Vectors  : None
      |      Active Texture  : None
      |      Active Normals  : None
      |      Contains arrays :
-     |          my_array                float64    (8,)
-     |          my_other_array          int64      (8,)                 SCALARS
+     |          my_array                float64    (8,)                 SCALARS
+     |          my_other_array          int64      (8,)
      |      
      |      Access an array from ``point_data``.
      |      
@@ -3992,22 +4684,18 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      (8,)
      |  
      |  textures
-     |      Return a dictionary to hold compatible ``vtk.vtkTexture`` objects.
+     |      Return a dictionary to hold compatible ``pyvista.Texture`` objects.
+     |      
+     |      .. deprecated:: 0.40.0
+     |          Texture tracking on datasets is deprecated and will be removed in a future version of PyVista.
      |      
      |      When casting back to a VTK dataset or filtering this dataset,
      |      these textures will not be passed.
-     |      
-     |      Examples
-     |      --------
-     |      Return the active texture datasets from the globe example.
-     |      
-     |      >>> from pyvista import examples
-     |      >>> globe = examples.load_globe()
-     |      >>> globe.textures
-     |      {'2k_earth_daymap': ...}
      |  
      |  volume
      |      Return the mesh volume.
+     |      
+     |      This will return 0 for meshes with 2D cells.
      |      
      |      Returns
      |      -------
@@ -4016,10 +4704,24 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Examples
      |      --------
-     |      Get the volume of a sphere.
+     |      Get the volume of a cube of size 4x4x4.
+     |      Note that there are 5 points in each direction.
      |      
-     |      >>> import pyvista
-     |      >>> mesh = pyvista.Sphere()
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.ImageData(dimensions=(5, 5, 5))
+     |      >>> mesh.volume
+     |      64.0
+     |      
+     |      A mesh with 2D cells has no volume.
+     |      
+     |      >>> mesh = pv.ImageData(dimensions=(5, 5, 1))
+     |      >>> mesh.volume
+     |      0.0
+     |      
+     |      :class:`pyvista.PolyData` is special as a 2D surface can
+     |      enclose a 3D volume.
+     |      
+     |      >>> mesh = pv.Sphere()
      |      >>> mesh.volume
      |      0.51825
      |  
@@ -4076,21 +4778,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh_w_normals.active_vectors_name
      |      'Normals'
      |  
-     |  t_coords
-     |      Return the active texture coordinates on the points.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :attr:`DataSet.active_t_coords` to return the active
-     |          texture coordinates.
-     |  
-     |  vectors
-     |      Return active vectors.
-     |      
-     |      .. deprecated:: 0.32.0
-     |         Use of `DataSet.vectors` to return vector data is deprecated.
-     |  
      |  ----------------------------------------------------------------------
-     |  Methods inherited from pyvista.core.filters.uniform_grid.UniformGridFilters:
+     |  Methods inherited from pyvista.core.filters.image_data.ImageDataFilters:
      |  
      |  extract_subset(self, voi, rate=(1, 1, 1), boundary=False, progress_bar=False)
      |      Select piece (e.g., volume of interest).
@@ -4106,16 +4795,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      voi : tuple(int)
+     |      voi : sequence[int]
      |          Length 6 iterable of ints: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
      |          These bounds specify the volume of interest in i-j-k min/max
      |          indices.
      |      
-     |      rate : tuple(int), optional
+     |      rate : sequence[int], default: (1, 1, 1)
      |          Length 3 iterable of ints: ``(xrate, yrate, zrate)``.
-     |          Default: ``(1, 1, 1)``.
      |      
-     |      boundary : bool, optional
+     |      boundary : bool, default: False
      |          Control whether to enforce that the "boundary" of the grid
      |          is output in the subsampling process. This only has effect
      |          when the rate in any direction is not equal to 1. When
@@ -4124,13 +4812,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          even multiple of the grid dimensions. By default this is
      |          disabled.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
-     |          UniformGrid subset.
+     |      pyvista.ImageData
+     |          ImageData subset.
      |  
      |  fft(self, output_scalars_name=None, progress_bar=False)
      |      Apply a fast Fourier transform (FFT) to the active scalars.
@@ -4157,19 +4845,19 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The name of the output scalars. By default, this is the same as the
      |          active scalars of the dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
-     |          :class:`pyvista.UniformGrid` with applied FFT.
+     |      pyvista.ImageData
+     |          :class:`pyvista.ImageData` with applied FFT.
      |      
      |      See Also
      |      --------
-     |      rfft: The reverse transform.
-     |      low_pass: Low-pass filtering of FFT output.
-     |      high_pass: High-pass filtering of FFT output.
+     |      rfft : The reverse transform.
+     |      low_pass : Low-pass filtering of FFT output.
+     |      high_pass : High-pass filtering of FFT output.
      |      
      |      Examples
      |      --------
@@ -4195,39 +4883,42 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      radius_factor : float or iterable, optional
+     |      radius_factor : float | sequence[float], default: 1.5
      |          Unitless factor to limit the extent of the kernel.
      |      
-     |      std_dev : float or iterable, optional
+     |      std_dev : float | sequence[float], default: 2.0
      |          Standard deviation of the kernel in pixel units.
      |      
      |      scalars : str, optional
      |          Name of scalars to process. Defaults to currently active scalars.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
+     |      pyvista.ImageData
      |          Uniform grid with smoothed scalars.
      |      
      |      Notes
      |      -----
-     |      This filter only supports point data. Consider converting any cell
-     |      data to point data using the :func:`DataSet.cell_data_to_point_data`
-     |      filter to convert any cell data to point data.
+     |      This filter only supports point data. Consider converting any cell data
+     |      to point data using the :func:`cell_data_to_point_data()
+     |      <pyvista.DataSetFilters.cell_data_to_point_data>` filter to convert any
+     |      cell data to point data.
      |      
      |      Examples
      |      --------
      |      First, create sample data to smooth. Here, we use
-     |      :func:`pyvista.perlin_noise() <pyvista.core.common_data.perlin_noise>`
+     |      :func:`pyvista.perlin_noise() <pyvista.core.utilities.features.perlin_noise>`
      |      to create meaningful data.
      |      
      |      >>> import numpy as np
      |      >>> import pyvista
      |      >>> noise = pyvista.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
-     |      >>> grid = pyvista.sample_function(noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20))
+     |      >>> grid = pyvista.sample_function(
+     |      ...     noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
+     |      ... )
      |      >>> grid.plot(show_scalar_bar=False)
      |      
      |      Next, smooth the sample data.
@@ -4240,12 +4931,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  high_pass(self, x_cutoff, y_cutoff, z_cutoff, order=1, output_scalars_name=None, progress_bar=False)
      |      Perform a Butterworth high pass filter in the frequency domain.
      |      
-     |      This filter requires that the :class:`UniformGrid` have a complex point
-     |      scalars, usually generated after the :class:`UniformGrid` has been
-     |      converted to the frequency domain by a :func:`UniformGridFilters.fft`
+     |      This filter requires that the :class:`ImageData` have a complex point
+     |      scalars, usually generated after the :class:`ImageData` has been
+     |      converted to the frequency domain by a :func:`ImageDataFilters.fft`
      |      filter.
      |      
-     |      A :func:`UniformGridFilters.rfft` filter can be used to convert the
+     |      A :func:`ImageDataFilters.rfft` filter can be used to convert the
      |      output back into the spatial domain. This filter attenuates low
      |      frequency components.  Input and output are complex arrays with
      |      datatype :attr:`numpy.complex128`.
@@ -4259,16 +4950,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      x_cutoff : double
+     |      x_cutoff : float
      |          The cutoff frequency for the x axis.
      |      
-     |      y_cutoff : double
+     |      y_cutoff : float
      |          The cutoff frequency for the y axis.
      |      
-     |      z_cutoff : double
+     |      z_cutoff : float
      |          The cutoff frequency for the z axis.
      |      
-     |      order : int, optional
+     |      order : int, default: 1
      |          The order of the cutoff curve. Given from the equation
      |          ``1/(1 + (cutoff/freq(i, j))**(2*order))``.
      |      
@@ -4276,25 +4967,25 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The name of the output scalars. By default, this is the same as the
      |          active scalars of the dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
-     |          :class:`pyvista.UniformGrid` with the applied high pass filter.
+     |      pyvista.ImageData
+     |          :class:`pyvista.ImageData` with the applied high pass filter.
      |      
      |      See Also
      |      --------
-     |      fft: Direct fast Fourier transform.
-     |      rfft: Reverse fast Fourier transform.
-     |      low_pass: Low-pass filtering of FFT output.
+     |      fft : Direct fast Fourier transform.
+     |      rfft : Reverse fast Fourier transform.
+     |      low_pass : Low-pass filtering of FFT output.
      |      
      |      Examples
      |      --------
      |      See :ref:`image_fft_perlin_example` for a full example using this filter.
      |  
-     |  image_dilate_erode(self, dilate_value=1, erode_value=0, kernel_size=(3, 3, 3), scalars=None, progress_bar=False)
+     |  image_dilate_erode(self, dilate_value=1.0, erode_value=0.0, kernel_size=(3, 3, 3), scalars=None, progress_bar=False)
      |      Dilates one value and erodes another.
      |      
      |      ``image_dilate_erode`` will dilate one value and erode another. It uses
@@ -4305,33 +4996,32 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      dilate_value : int or float, optional
-     |          Dilate value in the dataset. Default: ``1``.
+     |      dilate_value : float, default: 1.0
+     |          Dilate value in the dataset.
      |      
-     |      erode_value : int or float, optional
-     |          Erode value in the dataset. Default: ``0``.
+     |      erode_value : float, default: 0.0
+     |          Erode value in the dataset.
      |      
-     |      kernel_size : list(int) or tuple(int), optional
-     |          Length 3 iterable of ints: ``(xsize, ysize, zsize)``.
-     |          Determines the size (and center) of the kernel.
-     |          Default: ``(3, 3, 3)``.
+     |      kernel_size : sequence[int], default: (3, 3, 3)
+     |          Determines the size of the kernel along the three axes.
      |      
      |      scalars : str, optional
      |          Name of scalars to process. Defaults to currently active scalars.
      |      
-     |      progress_bar : bool, optional
-     |          Display a progress bar to indicate progress. Default ``False``.
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
+     |      pyvista.ImageData
      |          Dataset that has been dilated/eroded on the boundary of the specified scalars.
      |      
      |      Notes
      |      -----
-     |      This filter only supports point data. Consider converting any cell
-     |      data to point data using the :func:`DataSet.cell_data_to_point_data`
-     |      filter to convert ny cell data to point data.
+     |      This filter only supports point data. Consider converting any cell data
+     |      to point data using the :func:`cell_data_to_point_data()
+     |      <pyvista.DataSetFilters.cell_data_to_point_data>` filter to convert ny
+     |      cell data to point data.
      |      
      |      Examples
      |      --------
@@ -4354,7 +5044,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> idilate = ithresh.image_dilate_erode(kernel_size=[5, 5, 5])
      |      >>> idilate.plot()
      |  
-     |  image_threshold(self, threshold, in_value=1, out_value=0, scalars=None, preference='point', progress_bar=False)
+     |  image_threshold(self, threshold, in_value=1.0, out_value=0.0, scalars=None, preference='point', progress_bar=False)
      |      Apply a threshold to scalar values in a uniform grid.
      |      
      |      If a single value is given for threshold, scalar values above or equal
@@ -4371,33 +5061,31 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      threshold : float or sequence
+     |      threshold : float or sequence[float]
      |          Single value or (min, max) to be used for the data threshold.  If
      |          a sequence, then length must be 2. Threshold(s) for deciding which
      |          cells/points are ``'in'`` or ``'out'`` based on scalar data.
      |      
-     |      in_value : float or int or None, optional
+     |      in_value : float, default: 1.0
      |          Scalars that match the threshold criteria for ``'in'`` will be replaced with this.
-     |          Default is 1.
      |      
-     |      out_value : float or int or None, optional
+     |      out_value : float, default: 0.0
      |          Scalars that match the threshold criteria for ``'out'`` will be replaced with this.
-     |          Default is 0.
      |      
      |      scalars : str, optional
      |          Name of scalars to process. Defaults to currently active scalars.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          When scalars is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
      |          ``'point'`` or ``'cell'``.
      |      
-     |      progress_bar : bool, optional
-     |          Display a progress bar to indicate progress. Default ``False``.
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
+     |      pyvista.ImageData
      |          Dataset with the specified scalars thresholded.
      |      
      |      Examples
@@ -4418,12 +5106,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |  low_pass(self, x_cutoff, y_cutoff, z_cutoff, order=1, output_scalars_name=None, progress_bar=False)
      |      Perform a Butterworth low pass filter in the frequency domain.
      |      
-     |      This filter requires that the :class:`UniformGrid` have a complex point
-     |      scalars, usually generated after the :class:`UniformGrid` has been
-     |      converted to the frequency domain by a :func:`UniformGridFilters.fft`
+     |      This filter requires that the :class:`ImageData` have a complex point
+     |      scalars, usually generated after the :class:`ImageData` has been
+     |      converted to the frequency domain by a :func:`ImageDataFilters.fft`
      |      filter.
      |      
-     |      A :func:`UniformGridFilters.rfft` filter can be used to convert the
+     |      A :func:`ImageDataFilters.rfft` filter can be used to convert the
      |      output back into the spatial domain. This filter attenuates high
      |      frequency components.  Input and output are complex arrays with
      |      datatype :attr:`numpy.complex128`.
@@ -4437,16 +5125,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      x_cutoff : double
+     |      x_cutoff : float
      |          The cutoff frequency for the x axis.
      |      
-     |      y_cutoff : double
+     |      y_cutoff : float
      |          The cutoff frequency for the y axis.
      |      
-     |      z_cutoff : double
+     |      z_cutoff : float
      |          The cutoff frequency for the z axis.
      |      
-     |      order : int, optional
+     |      order : int, default: 1
      |          The order of the cutoff curve. Given from the equation
      |          ``1 + (cutoff/freq(i, j))**(2*order)``.
      |      
@@ -4454,19 +5142,19 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The name of the output scalars. By default, this is the same as the
      |          active scalars of the dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
-     |          :class:`pyvista.UniformGrid` with the applied low pass filter.
+     |      pyvista.ImageData
+     |          :class:`pyvista.ImageData` with the applied low pass filter.
      |      
      |      See Also
      |      --------
-     |      fft: Direct fast Fourier transform.
-     |      rfft: Reverse fast Fourier transform.
-     |      high_pass: High-pass filtering of FFT output.
+     |      fft : Direct fast Fourier transform.
+     |      rfft : Reverse fast Fourier transform.
+     |      high_pass : High-pass filtering of FFT output.
      |      
      |      Examples
      |      --------
@@ -4486,26 +5174,26 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      kernel_size : list(int) or tuple(int), optional
-     |          Length 3 list or tuple of ints : ``(x_size, y_size, z_size)``
-     |          Size of the kernel in each dimension (units of voxels). Default is
-     |          a 3D median filter. If you want to do a 2D median filter, set the
-     |          size to 1 in the dimension you don't want to filter over.
+     |      kernel_size : sequence[int], default: (3, 3, 3)
+     |          Size of the kernel in each dimension (units of voxels), for example
+     |          ``(x_size, y_size, z_size)``. Default is a 3D median filter. If you
+     |          want to do a 2D median filter, set the size to 1 in the dimension
+     |          you don't want to filter over.
      |      
      |      scalars : str, optional
      |          Name of scalars to process. Defaults to currently active scalars.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          When scalars is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
      |          ``'point'`` or ``'cell'``.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
+     |      pyvista.ImageData
      |          Uniform grid with smoothed scalars.
      |      
      |      Warnings
@@ -4517,13 +5205,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      First, create sample data to smooth. Here, we use
-     |      :func:`pyvista.perlin_noise() <pyvista.core.common_data.perlin_noise>`
+     |      :func:`pyvista.perlin_noise() <pyvista.core.utilities.features.perlin_noise>`
      |      to create meaningful data.
      |      
      |      >>> import numpy as np
      |      >>> import pyvista
      |      >>> noise = pyvista.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
-     |      >>> grid = pyvista.sample_function(noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20))
+     |      >>> grid = pyvista.sample_function(
+     |      ...     noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
+     |      ... )
      |      >>> grid.plot(show_scalar_bar=False)
      |      
      |      Next, smooth the sample data.
@@ -4556,19 +5246,19 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The name of the output scalars. By default, this is the same as the
      |          active scalars of the dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UniformGrid
-     |          :class:`pyvista.UniformGrid` with the applied reverse FFT.
+     |      pyvista.ImageData
+     |          :class:`pyvista.ImageData` with the applied reverse FFT.
      |      
      |      See Also
      |      --------
-     |      fft: The direct transform.
-     |      low_pass: Low-pass filtering of FFT output.
-     |      high_pass: High-pass filtering of FFT output.
+     |      fft : The direct transform.
+     |      low_pass : Low-pass filtering of FFT output.
+     |      high_pass : High-pass filtering of FFT output.
      |      
      |      Examples
      |      --------
@@ -4603,6 +5293,88 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Otherwise we have to return a new object, and the attempted in-place
      |      merge will raise.
      |  
+     |  align(self, target, max_landmarks=100, max_mean_distance=1e-05, max_iterations=500, check_mean_distance=True, start_by_matching_centroids=True, return_matrix=False)
+     |      Align a dataset to another.
+     |      
+     |      Uses the iterative closest point algorithm to align the points of the
+     |      two meshes.  See the VTK class `vtkIterativeClosestPointTransform
+     |      <https://vtk.org/doc/nightly/html/classvtkIterativeClosestPointTransform.html>`_
+     |      
+     |      Parameters
+     |      ----------
+     |      target : pyvista.DataSet
+     |          The target dataset to align to.
+     |      
+     |      max_landmarks : int, default: 100
+     |          The maximum number of landmarks.
+     |      
+     |      max_mean_distance : float, default: 1e-5
+     |          The maximum mean distance for convergence.
+     |      
+     |      max_iterations : int, default: 500
+     |          The maximum number of iterations.
+     |      
+     |      check_mean_distance : bool, default: True
+     |          Whether to check the mean distance for convergence.
+     |      
+     |      start_by_matching_centroids : bool, default: True
+     |          Whether to start the alignment by matching centroids. Default is True.
+     |      
+     |      return_matrix : bool, default: False
+     |          Return the transform matrix as well as the aligned mesh.
+     |      
+     |      Returns
+     |      -------
+     |      aligned : pyvista.DataSet
+     |          The dataset aligned to the target mesh.
+     |      
+     |      matrix : numpy.ndarray
+     |          Transform matrix to transform the input dataset to the target dataset.
+     |      
+     |      Examples
+     |      --------
+     |      Create a cylinder, translate it, and use iterative closest point to
+     |      align mesh to its original position.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> import numpy as np
+     |      >>> source = pv.Cylinder(resolution=30).triangulate().subdivide(1)
+     |      >>> transformed = source.rotate_y(20).translate([-0.75, -0.5, 0.5])
+     |      >>> aligned = transformed.align(source)
+     |      >>> _, closest_points = aligned.find_closest_cell(
+     |      ...     source.points, return_closest_point=True
+     |      ... )
+     |      >>> dist = np.linalg.norm(source.points - closest_points, axis=1)
+     |      
+     |      Visualize the source, transformed, and aligned meshes.
+     |      
+     |      >>> pl = pv.Plotter(shape=(1, 2))
+     |      >>> _ = pl.add_text('Before Alignment')
+     |      >>> _ = pl.add_mesh(
+     |      ...     source, style='wireframe', opacity=0.5, line_width=2
+     |      ... )
+     |      >>> _ = pl.add_mesh(transformed)
+     |      >>> pl.subplot(0, 1)
+     |      >>> _ = pl.add_text('After Alignment')
+     |      >>> _ = pl.add_mesh(
+     |      ...     source, style='wireframe', opacity=0.5, line_width=2
+     |      ... )
+     |      >>> _ = pl.add_mesh(
+     |      ...     aligned,
+     |      ...     scalars=dist,
+     |      ...     scalar_bar_args={
+     |      ...         'title': 'Distance to Source',
+     |      ...         'fmt': '%.1E',
+     |      ...     },
+     |      ... )
+     |      >>> pl.show()
+     |      
+     |      Show that the mean distance between the source and the target is
+     |      nearly zero.
+     |      
+     |      >>> np.abs(dist).mean()  # doctest:+SKIP
+     |      9.997635192915073e-05
+     |  
      |  cell_centers(self, vertex=True, progress_bar=False)
      |      Generate points at the center of the cells in this dataset.
      |      
@@ -4610,10 +5382,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      vertex : bool
+     |      vertex : bool, default: True
      |          Enable or disable the generation of vertex cells.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -4630,8 +5402,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> centers = mesh.cell_centers()
      |      >>> pl = pyvista.Plotter()
      |      >>> actor = pl.add_mesh(mesh, show_edges=True)
-     |      >>> actor = pl.add_points(centers, render_points_as_spheres=True,
-     |      ...                       color='red', point_size=20)
+     |      >>> actor = pl.add_points(
+     |      ...     centers,
+     |      ...     render_points_as_spheres=True,
+     |      ...     color='red',
+     |      ...     point_size=20,
+     |      ... )
      |      >>> pl.show()
      |      
      |      See :ref:`cell_centers_example` for more examples using this filter.
@@ -4651,10 +5427,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pass_cell_data : bool, optional
+     |      pass_cell_data : bool, default: False
      |          If enabled, pass the input cell data through to the output.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -4690,32 +5466,31 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      normal : tuple(float) or str
+     |      normal : tuple(float) or str, default: 'x'
      |          Length 3 tuple for the normal vector direction. Can also
      |          be specified as a string conventional direction such as
-     |          ``'x'`` for ``(1,0,0)`` or ``'-x'`` for ``(-1,0,0)``, etc.
+     |          ``'x'`` for ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
      |      
-     |      origin : tuple(float), optional
-     |          The center ``(x,y,z)`` coordinate of the plane on which the clip
+     |      origin : sequence[float], optional
+     |          The center ``(x, y, z)`` coordinate of the plane on which the clip
      |          occurs. The default is the center of the dataset.
      |      
-     |      invert : bool, optional
+     |      invert : bool, default: True
      |          Flag on whether to flip/invert the clip.
      |      
-     |      value : float, optional
+     |      value : float, default: 0.0
      |          Set the clipping value along the normal direction.
-     |          The default value is 0.0.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
-     |      return_clipped : bool, optional
+     |      return_clipped : bool, default: False
      |          Return both unclipped and clipped parts of the dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      crinkle : bool, optional
+     |      crinkle : bool, default: False
      |          Crinkle the clip by extracting the entire cells along the
      |          clip. This adds the ``"cell_ids"`` array to the ``cell_data``
      |          attribute that tracks the original cell IDs of the original
@@ -4755,8 +5530,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      bounds : tuple(float), optional
-     |          Length 6 sequence of floats: (xmin, xmax, ymin, ymax, zmin, zmax).
+     |      bounds : sequence[float], optional
+     |          Length 6 sequence of floats: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
      |          Length 3 sequence of floats: distances from the min coordinate of
      |          of the input mesh. Single float value: uniform distance from the
      |          min coordinate. Length 12 sequence of length 3 sequence of floats:
@@ -4765,21 +5540,21 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          a box with 6 faces that all form a standard box, then planes will
      |          be extracted from the box to define the clipping region.
      |      
-     |      invert : bool, optional
+     |      invert : bool, default: True
      |          Flag on whether to flip/invert the clip.
      |      
-     |      factor : float, optional
+     |      factor : float, default: 0.35
      |          If bounds are not given this is the factor along each axis to
      |          extract the default box.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      merge_points : bool, optional
-     |          If ``True`` (default), coinciding points of independently
-     |          defined mesh elements will be merged.
+     |      merge_points : bool, default: True
+     |          If ``True``, coinciding points of independently defined mesh
+     |          elements will be merged.
      |      
-     |      crinkle : bool, optional
+     |      crinkle : bool, default: False
      |          Crinkle the clip by extracting the entire cells along the
      |          clip. This adds the ``"cell_ids"`` array to the ``cell_data``
      |          attribute that tracks the original cell IDs of the original
@@ -4811,21 +5586,21 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      scalars : str, optional
      |          Name of scalars to clip on.  Defaults to currently active scalars.
      |      
-     |      invert : bool, optional
+     |      invert : bool, default: True
      |          Flag on whether to flip/invert the clip.  When ``True``,
      |          only the mesh below ``value`` will be kept.  When
      |          ``False``, only values above ``value`` will be kept.
      |      
-     |      value : float, optional
-     |          Set the clipping value.  The default value is 0.0.
+     |      value : float, default: 0.0
+     |          Set the clipping value.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Update mesh in-place.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      both : bool, optional
+     |      both : bool, default: False
      |          If ``True``, also returns the complementary clipped mesh.
      |      
      |      Returns
@@ -4841,7 +5616,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> from pyvista import examples
      |      >>> dataset = examples.load_hexbeam()
-     |      >>> clipped = dataset.clip_scalar(scalars="sample_point_scalars", value=100)
+     |      >>> clipped = dataset.clip_scalar(
+     |      ...     scalars="sample_point_scalars", value=100
+     |      ... )
      |      >>> clipped.plot()
      |      
      |      Get clipped meshes corresponding to the portions of the mesh above and below 100.
@@ -4849,14 +5626,18 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> from pyvista import examples
      |      >>> dataset = examples.load_hexbeam()
-     |      >>> _below, _above = dataset.clip_scalar(scalars="sample_point_scalars", value=100, both=True)
+     |      >>> _below, _above = dataset.clip_scalar(
+     |      ...     scalars="sample_point_scalars", value=100, both=True
+     |      ... )
      |      
      |      Remove the part of the mesh with "sample_point_scalars" below 100.
      |      
      |      >>> import pyvista as pv
      |      >>> from pyvista import examples
      |      >>> dataset = examples.load_hexbeam()
-     |      >>> clipped = dataset.clip_scalar(scalars="sample_point_scalars", value=100, invert=False)
+     |      >>> clipped = dataset.clip_scalar(
+     |      ...     scalars="sample_point_scalars", value=100, invert=False
+     |      ... )
      |      >>> clipped.plot()
      |  
      |  clip_surface(self, surface, invert=True, value=0.0, compute_distance=False, progress_bar=False, crinkle=False)
@@ -4873,23 +5654,23 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          function.  If this input mesh is not a :class`pyvista.PolyData`,
      |          the external surface will be extracted.
      |      
-     |      invert : bool, optional
+     |      invert : bool, default: True
      |          Flag on whether to flip/invert the clip.
      |      
-     |      value : float, optional
+     |      value : float, default: 0.0
      |          Set the clipping value of the implicit function (if
      |          clipping with implicit function) or scalar value (if
-     |          clipping with scalars).  The default value is 0.0.
+     |          clipping with scalars).
      |      
-     |      compute_distance : bool, optional
+     |      compute_distance : bool, default: False
      |          Compute the implicit distance from the mesh onto the input
      |          dataset.  A new array called ``'implicit_distance'`` will
      |          be added to the output clipped mesh.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      crinkle : bool, optional
+     |      crinkle : bool, default: False
      |          Crinkle the clip by extracting the entire cells along the
      |          clip. This adds the ``"cell_ids"`` array to the ``cell_data``
      |          attribute that tracks the original cell IDs of the original
@@ -4957,17 +5738,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      quality_measure : str
+     |      quality_measure : str, default: 'scaled_jacobian'
      |          The cell quality measure to use.
      |      
-     |      null_value : float
+     |      null_value : float, default: -1.0
      |          Float value for undefined quality. Undefined quality are qualities
      |          that could be addressed by this filter but is not well defined for
      |          the particular geometry of cell in question, e.g. a volume query
      |          for a triangle. Undefined quality will always be undefined.
      |          The default value is -1.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -4992,16 +5773,16 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      length : bool, optional
+     |      length : bool, default: True
      |          Specify whether or not to compute the length of 1D cells.
      |      
-     |      area : bool, optional
+     |      area : bool, default: True
      |          Specify whether or not to compute the area of 2D cells.
      |      
-     |      volume : bool, optional
+     |      volume : bool, default: True
      |          Specify whether or not to compute the volume of 3D cells.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5039,37 +5820,37 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          derivative quantities.  Defaults to the active scalars in
      |          the dataset.
      |      
-     |      gradient : bool, str, optional
+     |      gradient : bool | str, default: True
      |          Calculate gradient. If a string is passed, the string will be used
      |          for the resulting array name. Otherwise, array name will be
      |          ``'gradient'``. Default ``True``.
      |      
-     |      divergence : bool, str, optional
+     |      divergence : bool | str, optional
      |          Calculate divergence. If a string is passed, the string will be
-     |          used for the resulting array name. Otherwise, array name will be
-     |          ``'divergence'``. Default ``None``.
+     |          used for the resulting array name. Otherwise, default array name
+     |          will be ``'divergence'``.
      |      
-     |      vorticity : bool, str, optional
+     |      vorticity : bool | str, optional
      |          Calculate vorticity. If a string is passed, the string will be used
-     |          for the resulting array name. Otherwise, array name will be
-     |          ``'vorticity'``. Default ``None``.
+     |          for the resulting array name. Otherwise, default array name will be
+     |          ``'vorticity'``.
      |      
-     |      qcriterion : bool, str, optional
+     |      qcriterion : bool | str, optional
      |          Calculate qcriterion. If a string is passed, the string will be
-     |          used for the resulting array name. Otherwise, array name will be
-     |          ``'qcriterion'``. Default ``None``.
+     |          used for the resulting array name. Otherwise, default array name
+     |          will be ``'qcriterion'``.
      |      
-     |      faster : bool, optional
+     |      faster : bool, default: False
      |          Use faster algorithm for computing derivative quantities. Result is
      |          less accurate and performs fewer derivative calculations,
      |          increasing computation speed. The error will feature smoothing of
      |          the output and possibly errors at boundaries. Option has no effect
-     |          if DataSet is not UnstructuredGrid. Default ``False``.
+     |          if DataSet is not :class:`pyvista.UnstructuredGrid`.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          Data type preference. Either ``'point'`` or ``'cell'``.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5108,7 +5889,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      surface : pyvista.DataSet
      |          The surface used to compute the distance.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          If ``True``, a new scalar array will be added to the
      |          ``point_data`` of this mesh and the modified mesh will
      |          be returned. Otherwise a copy of this mesh is returned
@@ -5136,7 +5917,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Plot these distances as a heatmap
      |      
      |      >>> pl = pv.Plotter()
-     |      >>> _ = pl.add_mesh(sphere, scalars='implicit_distance', cmap='bwr')
+     |      >>> _ = pl.add_mesh(
+     |      ...     sphere, scalars='implicit_distance', cmap='bwr'
+     |      ... )
      |      >>> _ = pl.add_mesh(plane, color='w', style='wireframe')
      |      >>> pl.show()
      |      
@@ -5157,10 +5940,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      largest : bool
+     |      largest : bool, default: False
      |          Extract the largest connected part of the mesh.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5189,40 +5972,40 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      isosurfaces : int or sequence, optional
+     |      isosurfaces : int | sequence[float], optional
      |          Number of isosurfaces to compute across valid data range or a
      |          sequence of float values to explicitly use as the isosurfaces.
      |      
-     |      scalars : str, collections.abc.Sequence, numpy.ndarray, optional
+     |      scalars : str | array_like[float], optional
      |          Name or array of scalars to threshold on. If this is an array, the
      |          output of this filter will save them as ``"Contour Data"``.
      |          Defaults to currently active scalars.
      |      
-     |      compute_normals : bool, optional
+     |      compute_normals : bool, default: False
      |          Compute normals for the dataset.
      |      
-     |      compute_gradients : bool, optional
+     |      compute_gradients : bool, default: False
      |          Compute gradients for the dataset.
      |      
-     |      compute_scalars : bool, optional
+     |      compute_scalars : bool, default: True
      |          Preserves the scalar values that are being contoured.
      |      
-     |      rng : tuple(float), optional
+     |      rng : sequence[float], optional
      |          If an integer number of isosurfaces is specified, this is
      |          the range over which to generate contours. Default is the
      |          scalars array's full data range.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          When ``scalars`` is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
      |          ``'point'`` or ``'cell'``.
      |      
-     |      method : str, optional
+     |      method : str, default:  "contour"
      |          Specify to choose which vtk filter is used to create the contour.
      |          Must be one of ``'contour'``, ``'marching_cubes'`` and
-     |          ``'flying_edges'``. Defaults to ``'contour'``.
+     |          ``'flying_edges'``.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5245,37 +6028,46 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> a = 0.4
      |      >>> b = 0.1
      |      >>> def f(x, y, z):
-     |      ...     xx = x*x
-     |      ...     yy = y*y
-     |      ...     zz = z*z
-     |      ...     xyz = x*y*z
+     |      ...     xx = x * x
+     |      ...     yy = y * y
+     |      ...     zz = z * z
+     |      ...     xyz = x * y * z
      |      ...     xx_yy = xx + yy
-     |      ...     a_xx = a*xx
-     |      ...     b_yy = b*yy
+     |      ...     a_xx = a * xx
+     |      ...     b_yy = b * yy
      |      ...     return (
      |      ...         (xx_yy + 1) * (a_xx + b_yy)
-     |      ...         + zz * (b * xx + a * yy) - 2 * (a - b) * xyz
+     |      ...         + zz * (b * xx + a * yy)
+     |      ...         - 2 * (a - b) * xyz
      |      ...         - a * b * xx_yy
-     |      ...     )**2 - 4 * (xx + yy) * (a_xx + b_yy - xyz * (a - b))**2
+     |      ...     ) ** 2 - 4 * (xx + yy) * (a_xx + b_yy - xyz * (a - b)) ** 2
+     |      ...
      |      >>> n = 100
      |      >>> x_min, y_min, z_min = -1.35, -1.7, -0.65
-     |      >>> grid = pv.UniformGrid(
-     |      ...     dims=(n, n, n),
-     |      ...     spacing=(abs(x_min)/n*2, abs(y_min)/n*2, abs(z_min)/n*2),
+     |      >>> grid = pv.ImageData(
+     |      ...     dimensions=(n, n, n),
+     |      ...     spacing=(
+     |      ...         abs(x_min) / n * 2,
+     |      ...         abs(y_min) / n * 2,
+     |      ...         abs(z_min) / n * 2,
+     |      ...     ),
      |      ...     origin=(x_min, y_min, z_min),
      |      ... )
      |      >>> x, y, z = grid.points.T
      |      >>> values = f(x, y, z)
      |      >>> out = grid.contour(
-     |      ...     1, scalars=values, rng=[0, 0], method='flying_edges',
+     |      ...     1,
+     |      ...     scalars=values,
+     |      ...     rng=[0, 0],
+     |      ...     method='flying_edges',
      |      ... )
-     |      >>> out.plot(color='tan', smooth_shading=True)
+     |      >>> out.plot(color='lightblue', smooth_shading=True)
      |      
      |      See :ref:`common_filter_example` or
      |      :ref:`marching_cubes_example` for more examples using this
      |      filter.
      |  
-     |  ctp(self, pass_cell_data=False, progress_bar=False)
+     |  ctp(self, pass_cell_data=False, progress_bar=False, **kwargs)
      |      Transform cell data into point data.
      |      
      |      Point data are specified per node and cell data specified
@@ -5287,11 +6079,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pass_cell_data : bool, optional
+     |      pass_cell_data : bool, default: False
      |          If enabled, pass the input cell data through to the output.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
+     |      
+     |      **kwargs : dict, optional
+     |          Deprecated keyword argument ``pass_cell_arrays``.
      |      
      |      Returns
      |      -------
@@ -5306,13 +6101,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      target_reduction : float
-     |          Fraction of the original mesh to remove. Default is ``0.5``
+     |      target_reduction : float, default: 0.5
+     |          Fraction of the original mesh to remove.
      |          TargetReduction is set to ``0.9``, this filter will try to reduce
      |          the data set to 10% of its original size and will remove 90%
      |          of the input triangles.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5324,7 +6119,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      --------
      |      See the :ref:`linked_views_example` example.
      |  
-     |  delaunay_3d(self, alpha=0, tol=0.001, offset=2.5, progress_bar=False)
+     |  delaunay_3d(self, alpha=0.0, tol=0.001, offset=2.5, progress_bar=False)
      |      Construct a 3D Delaunay triangulation of the mesh.
      |      
      |      This filter can be used to generate a 3D tetrahedral mesh from
@@ -5334,23 +6129,23 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      alpha : float, optional
+     |      alpha : float, default: 0.0
      |          Distance value to control output of this filter. For a
      |          non-zero alpha value, only vertices, edges, faces, or
      |          tetrahedra contained within the circumsphere (of radius
      |          alpha) will be output. Otherwise, only tetrahedra will be
      |          output.
      |      
-     |      tol : float, optional
+     |      tol : float, default: 0.001
      |          Tolerance to control discarding of closely spaced points.
      |          This tolerance is specified as a fraction of the diagonal
      |          length of the bounding box of the points.
      |      
-     |      offset : float, optional
+     |      offset : float, default: 2.5
      |          Multiplier to control the size of the initial, bounding
      |          Delaunay triangulation.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5385,33 +6180,33 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      low_point : tuple(float), optional
+     |      low_point : sequence[float], optional
      |          The low point of the projection line in 3D space. Default is bottom
-     |          center of the dataset. Otherwise pass a length 3 ``tuple(float)``.
+     |          center of the dataset. Otherwise pass a length 3 sequence.
      |      
-     |      high_point : tuple(float), optional
+     |      high_point : sequence[float], optional
      |          The high point of the projection line in 3D space. Default is top
-     |          center of the dataset. Otherwise pass a length 3 ``tuple(float)``.
+     |          center of the dataset. Otherwise pass a length 3 sequence.
      |      
-     |      scalar_range : str or tuple(float), optional
+     |      scalar_range : str | sequence[float], optional
      |          The scalar range to project to the low and high points on the line
      |          that will be mapped to the dataset. If None given, the values will
      |          be computed from the elevation (Z component) range between the
      |          high and low points. Min and max of a range can be given as a length
-     |          2 tuple(float). If ``str`` name of scalara array present in the
+     |          2 sequence. If ``str``, name of scalar array present in the
      |          dataset given, the valid range of that array will be used.
      |      
-     |      preference : str, optional
+     |      preference : str, default: "point"
      |          When an array name is specified for ``scalar_range``, this is the
      |          preferred array type to search for in the dataset.
      |          Must be either ``'point'`` or ``'cell'``.
      |      
-     |      set_active : bool, optional
+     |      set_active : bool, default: True
      |          A boolean flag on whether or not to set the new
      |          ``'Elevation'`` scalar as the active scalars array on the
      |          output dataset.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5438,14 +6233,60 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      See :ref:`common_filter_example` for more examples using this filter.
      |  
-     |  extract_all_edges(self, progress_bar=False)
+     |  explode(self, factor=0.1)
+     |      Push each individual cell away from the center of the dataset.
+     |      
+     |      Parameters
+     |      ----------
+     |      factor : float, default: 0.1
+     |          How much each cell will move from the center of the dataset
+     |          relative to its distance from it. Increase this number to push the
+     |          cells farther away.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.UnstructuredGrid
+     |          UnstructuredGrid containing the exploded cells.
+     |      
+     |      Notes
+     |      -----
+     |      This is similar to :func:`shrink <pyvista.DataSetFilters.shrink>`
+     |      except that it does not change the size of the cells.
+     |      
+     |      Examples
+     |      --------
+     |      >>> import numpy as np
+     |      >>> import pyvista as pv
+     |      >>> xrng = np.linspace(0, 1, 3)
+     |      >>> yrng = np.linspace(0, 2, 4)
+     |      >>> zrng = np.linspace(0, 3, 5)
+     |      >>> grid = pv.RectilinearGrid(xrng, yrng, zrng)
+     |      >>> exploded = grid.explode()
+     |      >>> exploded.plot(show_edges=True)
+     |  
+     |  extract_all_edges(self, use_all_points=False, clear_data=False, progress_bar=False)
      |      Extract all the internal/external edges of the dataset as PolyData.
      |      
      |      This produces a full wireframe representation of the input dataset.
      |      
      |      Parameters
      |      ----------
-     |      progress_bar : bool, optional
+     |      use_all_points : bool, default: False
+     |          Indicates whether all of the points of the input mesh should exist
+     |          in the output. When ``True``, point numbering does not change and
+     |          a threaded approach is used, which avoids the use of a point locator
+     |          and is quicker.
+     |      
+     |          By default this is set to ``False``, and unused points are omitted
+     |          from the output.
+     |      
+     |          This parameter can only be set to ``True`` with ``vtk==9.1.0`` or newer.
+     |      
+     |      clear_data : bool, default: False
+     |          Clear any point, cell, or field data. This is useful
+     |          if wanting to strictly extract the edges.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5466,15 +6307,18 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      See :ref:`cell_centers_example` for more examples using this filter.
      |  
-     |  extract_cells(self, ind, progress_bar=False)
+     |  extract_cells(self, ind, invert=False, progress_bar=False)
      |      Return a subset of the grid.
      |      
      |      Parameters
      |      ----------
-     |      ind : np.ndarray
+     |      ind : sequence[int]
      |          Numpy array of cell indices to be extracted.
      |      
-     |      progress_bar : bool, optional
+     |      invert : bool, default: False
+     |          Invert the selection.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5491,11 +6335,71 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> subset.n_cells
      |      20
      |      >>> pl = pyvista.Plotter()
-     |      >>> actor = pl.add_mesh(grid, style='wireframe', line_width=5, color='black')
+     |      >>> actor = pl.add_mesh(
+     |      ...     grid, style='wireframe', line_width=5, color='black'
+     |      ... )
      |      >>> actor = pl.add_mesh(subset, color='grey')
      |      >>> pl.show()
      |  
-     |  extract_feature_edges(self, feature_angle=30, boundary_edges=True, non_manifold_edges=True, feature_edges=True, manifold_edges=True, progress_bar=False)
+     |  extract_cells_by_type(self, cell_types, progress_bar=False)
+     |      Extract cells of a specified type.
+     |      
+     |      Given an input dataset and a list of cell types, produce an output
+     |      dataset containing only cells of the specified type(s). Note that if
+     |      the input dataset is homogeneous (e.g., all cells are of the same type)
+     |      and the cell type is one of the cells specified, then the input dataset
+     |      is shallow copied to the output.
+     |      
+     |      The type of output dataset is always the same as the input type. Since
+     |      structured types of data (i.e., :class:`pyvista.ImageData`,
+     |      :class:`pyvista.StructuredGrid`, :class`pyvista.RectilnearGrid`)
+     |      are all composed of a cell of the same
+     |      type, the output is either empty, or a shallow copy of the input.
+     |      Unstructured data (:class:`pyvista.UnstructuredGrid`,
+     |      :class:`pyvista.PolyData`) input may produce a subset of the input data
+     |      (depending on the selected cell types).
+     |      
+     |      Parameters
+     |      ----------
+     |      cell_types :  int | sequence[int]
+     |          The cell types to extract. Must be a single or list of integer cell
+     |          types. See :class:`pyvista.CellType`.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.DataSet
+     |          Dataset with the extracted cells. Type is the same as the input.
+     |      
+     |      Notes
+     |      -----
+     |      Unlike :func:`pyvista.DataSetFilters.extract_cells` which always
+     |      produces a :class:`pyvista.UnstructuredGrid` output, this filter
+     |      produces the same output type as input type.
+     |      
+     |      Examples
+     |      --------
+     |      Create an unstructured grid with both hexahedral and tetrahedral
+     |      cells and then extract each individual cell type.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> beam = examples.load_hexbeam()
+     |      >>> beam = beam.translate([1, 0, 0])
+     |      >>> ugrid = beam + examples.load_tetbeam()
+     |      >>> hex_cells = ugrid.extract_cells_by_type(pv.CellType.HEXAHEDRON)
+     |      >>> tet_cells = ugrid.extract_cells_by_type(pv.CellType.TETRA)
+     |      >>> pl = pv.Plotter(shape=(1, 2))
+     |      >>> _ = pl.add_text('Extracted Hexahedron cells')
+     |      >>> _ = pl.add_mesh(hex_cells, show_edges=True)
+     |      >>> pl.subplot(0, 1)
+     |      >>> _ = pl.add_text('Extracted Tetrahedron cells')
+     |      >>> _ = pl.add_mesh(tet_cells, show_edges=True)
+     |      >>> pl.show()
+     |  
+     |  extract_feature_edges(self, feature_angle=30.0, boundary_edges=True, non_manifold_edges=True, feature_edges=True, manifold_edges=True, clear_data=False, progress_bar=False)
      |      Extract edges from the surface of the mesh.
      |      
      |      If the given mesh is not PolyData, the external surface of the given
@@ -5511,25 +6415,27 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      feature_angle : float, optional
+     |      feature_angle : float, default: 30.0
      |          Feature angle (in degrees) used to detect sharp edges on
-     |          the mesh. Used only when ``feature_edges=True``.  Defaults
-     |          to 30 degrees.
+     |          the mesh. Used only when ``feature_edges=True``.
      |      
-     |      boundary_edges : bool, optional
-     |          Extract the boundary edges. Defaults to ``True``.
+     |      boundary_edges : bool, default: True
+     |          Extract the boundary edges.
      |      
-     |      non_manifold_edges : bool, optional
-     |          Extract non-manifold edges. Defaults to ``True``.
+     |      non_manifold_edges : bool, default: True
+     |          Extract non-manifold edges.
      |      
-     |      feature_edges : bool, optional
-     |          Extract edges exceeding ``feature_angle``.  Defaults to
-     |          ``True``.
+     |      feature_edges : bool, default: True
+     |          Extract edges exceeding ``feature_angle``.
      |      
-     |      manifold_edges : bool, optional
-     |          Extract manifold edges. Defaults to ``True``.
+     |      manifold_edges : bool, default: True
+     |          Extract manifold edges.
      |      
-     |      progress_bar : bool, optional
+     |      clear_data : bool, default: False
+     |          Clear any point, cell, or field data. This is useful
+     |          if wanting to strictly extract the edges.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5550,7 +6456,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      See the :ref:`extract_edges_example` for more examples using this filter.
      |  
-     |  extract_geometry(self, progress_bar=False)
+     |  extract_geometry(self, extent: Union[Sequence[float], NoneType] = None, progress_bar=False)
      |      Extract the outer surface of a volume or structured grid dataset.
      |      
      |      This will extract all 0D, 1D, and 2D cells producing the
@@ -5561,7 +6467,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      progress_bar : bool, optional
+     |      extent : sequence[float], optional
+     |          Specify a ``(xmin, xmax, ymin, ymax, zmin, zmax)`` bounding box to
+     |          clip data.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5576,14 +6486,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista
      |      >>> from pyvista import examples
      |      >>> hex_beam = pyvista.read(examples.hexbeamfile)
-     |      >>> hex_beam.extract_geometry()  # doctest:+SKIP
-     |      PolyData (0x7f2f8c132040)
-     |        N Cells:      88
-     |        N Points:     90
-     |        X Bounds:     0.000e+00, 1.000e+00
-     |        Y Bounds:     0.000e+00, 1.000e+00
-     |        Z Bounds:     0.000e+00, 5.000e+00
-     |        N Arrays:     3
+     |      >>> hex_beam.extract_geometry()
+     |      PolyData (...)
+     |        N Cells:    88
+     |        N Points:   90
+     |        N Strips:   0
+     |        X Bounds:   0.000e+00, 1.000e+00
+     |        Y Bounds:   0.000e+00, 1.000e+00
+     |        Z Bounds:   0.000e+00, 5.000e+00
+     |        N Arrays:   3
      |      
      |      See :ref:`surface_smoothing_example` for more examples using this filter.
      |  
@@ -5596,10 +6507,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5625,17 +6536,18 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      ind : np.ndarray, list, or sequence
-     |          Numpy array of point indices to be extracted.
-     |      adjacent_cells : bool, optional
+     |      ind : sequence[int]
+     |          Sequence of point indices to be extracted.
+     |      
+     |      adjacent_cells : bool, default: True
      |          If ``True``, extract the cells that contain at least one of
      |          the extracted points. If ``False``, extract the cells that
      |          contain exclusively points from the extracted points list.
-     |          The default is ``True``.
-     |      include_cells : bool, optional
-     |          Specifies if the cells shall be returned or not. The default
-     |          is ``True``.
-     |      progress_bar : bool, optional
+     |      
+     |      include_cells : bool, default: True
+     |          Specifies if the cells shall be returned or not.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5658,17 +6570,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pass_pointid : bool, optional
+     |      pass_pointid : bool, default: True
      |          Adds a point array ``"vtkOriginalPointIds"`` that
      |          idenfities which original points these surface points
      |          correspond to.
      |      
-     |      pass_cellid : bool, optional
+     |      pass_cellid : bool, default: True
      |          Adds a cell array ``"vtkOriginalPointIds"`` that
      |          idenfities which original cells these surface cells
      |          correspond to.
      |      
-     |      nonlinear_subdivision : int, optional
+     |      nonlinear_subdivision : int, default: 1
      |          If the input is an unstructured grid with nonlinear faces,
      |          this parameter determines how many times the face is
      |          subdivided into linear faces.
@@ -5683,7 +6595,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          be passed even if no nonlinear faces exist. This option
      |          has no effect if the input is not an unstructured grid.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5716,17 +6628,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      orient : bool or str, optional
+     |      orient : bool | str, default: True
      |          If ``True``, use the active vectors array to orient the glyphs.
      |          If string, the vector array to use to orient the glyphs.
      |          If ``False``, the glyphs will not be orientated.
      |      
-     |      scale : bool, str or sequence, optional
+     |      scale : bool | str | sequence[float], default: True
      |          If ``True``, use the active scalars to scale the glyphs.
      |          If string, the scalar array to use to scale the glyphs.
      |          If ``False``, the glyphs will not be scaled.
      |      
-     |      factor : float, optional
+     |      factor : float, default: 1.0
      |          Scale factor applied to scaling array.
      |      
      |      geom : vtk.vtkDataSet or tuple(vtk.vtkDataSet), optional
@@ -5737,7 +6649,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          ``indices``. The values of the range (see ``rng``) affect lookup
      |          in the table.
      |      
-     |      indices : tuple(float), optional
+     |      indices : sequence[float], optional
      |          Specifies the index of each glyph in the table for lookup in case
      |          ``geom`` is a sequence. If given, must be the same length as
      |          ``geom``. If missing, a default value of ``range(len(geom))`` is
@@ -5750,17 +6662,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          is ``True`` then the tolerance can be an absolute distance.
      |          If ``None``, points merging as a preprocessing step is disabled.
      |      
-     |      absolute : bool, optional
+     |      absolute : bool, default: False
      |          Control if ``tolerance`` is an absolute distance or a fraction.
      |      
-     |      clamping : bool, optional
-     |          Turn on/off clamping of "scalar" values to range. Default ``False``.
+     |      clamping : bool, default: False
+     |          Turn on/off clamping of "scalar" values to range.
      |      
-     |      rng : tuple(float), optional
+     |      rng : sequence[float], optional
      |          Set the range of values to be considered by the filter
      |          when scalars values are provided.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5776,11 +6688,17 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista
      |      >>> from pyvista import examples
      |      >>> mesh = examples.load_random_hills()
-     |      >>> arrows = mesh.glyph(scale="Normals", orient="Normals", tolerance=0.05)
+     |      >>> arrows = mesh.glyph(
+     |      ...     scale="Normals", orient="Normals", tolerance=0.05
+     |      ... )
      |      >>> pl = pyvista.Plotter()
      |      >>> actor = pl.add_mesh(arrows, color="black")
-     |      >>> actor = pl.add_mesh(mesh, scalars="Elevation", cmap="terrain",
-     |      ...                     show_scalar_bar=False)
+     |      >>> actor = pl.add_mesh(
+     |      ...     mesh,
+     |      ...     scalars="Elevation",
+     |      ...     cmap="terrain",
+     |      ...     show_scalar_bar=False,
+     |      ... )
      |      >>> pl.show()
      |      
      |      See :ref:`glyph_example` and :ref:`glyph_table_example` for more
@@ -5797,12 +6715,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      pyvista.UnstructuredGird
+     |      pyvista.UnstructuredGrid
      |          Mesh with 1 point and 1 vertex cell with integrated data in point
      |          and cell data.
      |      
@@ -5812,7 +6730,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      >>> import pyvista
      |      >>> import numpy as np
-     |      >>> sphere = pyvista.Sphere(theta_resolution=100, phi_resolution=100)
+     |      >>> sphere = pyvista.Sphere(
+     |      ...     theta_resolution=100, phi_resolution=100
+     |      ... )
      |      >>> sphere.point_data["data"] = 2 * np.ones(sphere.n_points)
      |      >>> integrated = sphere.integrate_data()
      |      
@@ -5825,10 +6745,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      See the :ref:`integrate_example` for more examples using this filter.
      |  
-     |  interpolate(self, target, sharpness=2, radius=1.0, strategy='null_value', null_value=0.0, n_points=None, pass_cell_arrays=True, pass_point_data=True, progress_bar=False)
+     |  interpolate(self, target, sharpness=2.0, radius=1.0, strategy='null_value', null_value=0.0, n_points=None, pass_cell_data=True, pass_point_data=True, progress_bar=False)
      |      Interpolate values onto this mesh from a given dataset.
      |      
-     |      The input dataset is typically a point cloud.
+     |      The input dataset is typically a point cloud. Only point data from
+     |      the source mesh will be interpolated onto points of this mesh. Whether
+     |      preexisting point and cell data of this mesh are preserved in the
+     |      output can be customized with the ``pass_point_data`` and
+     |      ``pass_cell_data`` parameters.
      |      
      |      This uses a Gaussian interpolation kernel. Use the ``sharpness`` and
      |      ``radius`` parameters to adjust this kernel. You can also switch this
@@ -5840,30 +6764,28 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          The vtk data object to sample from. Point and cell arrays from
      |          this object are interpolated onto this mesh.
      |      
-     |      sharpness : float, optional
-     |          Set the sharpness (i.e., falloff) of the Gaussian
-     |          kernel. By default ``sharpness=2``. As the sharpness
-     |          increases the effects of distant points are reduced.
+     |      sharpness : float, default: 2.0
+     |          Set the sharpness (i.e., falloff) of the Gaussian kernel. As the
+     |          sharpness increases the effects of distant points are reduced.
      |      
      |      radius : float, optional
      |          Specify the radius within which the basis points must lie.
      |      
-     |      strategy : str, optional
+     |      strategy : str, default: "null_value"
      |          Specify a strategy to use when encountering a "null" point during
      |          the interpolation process. Null points occur when the local
      |          neighborhood (of nearby points to interpolate from) is empty. If
      |          the strategy is set to ``'mask_points'``, then an output array is
-     |          created that marks points as being valid (=1) or null (invalid
-     |          =0) (and the NullValue is set as well). If the strategy is set to
-     |          ``'null_value'`` (this is the default), then the output data
-     |          value(s) are set to the ``null_value`` (specified in the output
-     |          point data). Finally, the strategy ``'closest_point'`` is to simply
-     |          use the closest point to perform the interpolation.
+     |          created that marks points as being valid (=1) or null (invalid =0)
+     |          (and the NullValue is set as well). If the strategy is set to
+     |          ``'null_value'``, then the output data value(s) are set to the
+     |          ``null_value`` (specified in the output point data). Finally, the
+     |          strategy ``'closest_point'`` is to simply use the closest point to
+     |          perform the interpolation.
      |      
-     |      null_value : float, optional
+     |      null_value : float, default: 0.0
      |          Specify the null point value. When a null point is encountered
-     |          then all components of each null tuple are set to this value. By
-     |          default the null value is set to zero.
+     |          then all components of each null tuple are set to this value.
      |      
      |      n_points : int, optional
      |          If given, specifies the number of the closest points used to form
@@ -5871,13 +6793,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          in favor of an N closest points approach. This typically has poorer
      |          results.
      |      
-     |      pass_cell_arrays : bool, optional
+     |      pass_cell_data : bool, default: True
      |          Preserve input mesh's original cell data arrays.
      |      
-     |      pass_point_data : bool, optional
+     |      pass_point_data : bool, default: True
      |          Preserve input mesh's original point data arrays.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5901,13 +6823,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> plane.clear_data()
      |      >>> plane = plane.interpolate(pdata, sharpness=3)
      |      >>> pl = pyvista.Plotter()
-     |      >>> _ = pl.add_mesh(pdata, render_points_as_spheres=True, point_size=50)
+     |      >>> _ = pl.add_mesh(
+     |      ...     pdata, render_points_as_spheres=True, point_size=50
+     |      ... )
      |      >>> _ = pl.add_mesh(plane, style='wireframe', line_width=5)
      |      >>> pl.show()
      |      
      |      See :ref:`interpolate_example` for more examples using this filter.
      |  
-     |  merge(self, grid=None, merge_points=True, inplace=False, main_has_priority=True, progress_bar=False)
+     |  merge(self, grid=None, merge_points=True, tolerance=0.0, inplace=False, main_has_priority=True, progress_bar=False)
      |      Join one or many other grids to this grid.
      |      
      |      Grid is updated in-place by default.
@@ -5923,23 +6847,27 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      grid : vtk.UnstructuredGrid or list of vtk.UnstructuredGrids
+     |      grid : vtk.UnstructuredGrid or list of vtk.UnstructuredGrids, optional
      |          Grids to merge to this grid.
      |      
-     |      merge_points : bool, optional
+     |      merge_points : bool, default: True
      |          Points in exactly the same location will be merged between
      |          the two meshes. Warning: this can leave degenerate point data.
      |      
-     |      inplace : bool, optional
+     |      tolerance : float, default: 0.0
+     |          The absolute tolerance to use to find coincident points when
+     |          ``merge_points=True``.
+     |      
+     |      inplace : bool, default: False
      |          Updates grid inplace when True if the input type is an
      |          :class:`pyvista.UnstructuredGrid`.
      |      
-     |      main_has_priority : bool, optional
+     |      main_has_priority : bool, default: True
      |          When this parameter is true and merge_points is true,
      |          the arrays of the merging grids will be overwritten
      |          by the original main mesh.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5969,10 +6897,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      generate_faces : bool, optional
+     |      generate_faces : bool, default: False
      |          Generate solid faces for the box. This is disabled by default.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -5997,11 +6925,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      factor : float, optional
+     |      factor : float, default: 0.2
      |          Controls the relative size of the corners to the length of
      |          the corresponding bounds.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6019,6 +6947,60 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> corners = sphere.outline_corners(factor=0.1)
      |      >>> pyvista.plot([sphere, corners], line_width=5)
      |  
+     |  partition(self, n_partitions, generate_global_id=False, as_composite=True)
+     |      Break down input dataset into a requested number of partitions.
+     |      
+     |      Cells on boundaries are uniquely assigned to each partition without duplication.
+     |      
+     |      It uses a kdtree implementation that builds balances the cell
+     |      centers among a requested number of partitions. The current implementation
+     |      only supports power-of-2 target partition. If a non-power of two value
+     |      is specified for ``n_partitions``, then the load balancing simply
+     |      uses the power-of-two greater than the requested value
+     |      
+     |      For more details, see `vtkRedistributeDataSetFilter
+     |      <https://vtk.org/doc/nightly/html/classvtkRedistributeDataSetFilter.html>`_.
+     |      
+     |      Parameters
+     |      ----------
+     |      n_partitions : int
+     |          Specify the number of partitions to split the input dataset
+     |          into. Current implementation results in a number of partitions equal
+     |          to the power of 2 greater than or equal to the chosen value.
+     |      
+     |      generate_global_id : bool, default: False
+     |          Generate global cell ids if ``None`` are present in the input.  If
+     |          global cell ids are present in the input then this flag is
+     |          ignored.
+     |      
+     |          This is stored as ``"vtkGlobalCellIds"`` within the ``cell_data``
+     |          of the output dataset(s).
+     |      
+     |      as_composite : bool, default: False
+     |          Return the partitioned dataset as a :class:`pyvista.MultiBlock`.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.MultiBlock or pyvista.UnstructuredGrid
+     |          UnStructuredGrid if ``as_composite=False`` and MultiBlock when ``True``.
+     |      
+     |      Examples
+     |      --------
+     |      Partition a simple ImageData into a :class:`pyvista.MultiBlock`
+     |      containing each partition.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> grid = pv.ImageData(dimensions=(5, 5, 5))
+     |      >>> out = grid.partition(4, as_composite=True)
+     |      >>> out.plot(multi_colors=True, show_edges=True)
+     |      
+     |      Partition of the Stanford bunny.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.download_bunny()
+     |      >>> out = mesh.partition(4, as_composite=True)
+     |      >>> out.plot(multi_colors=True, cpos='xy')
+     |  
      |  plot_over_circular_arc(self, pointa, pointb, center, resolution=None, scalars=None, title=None, ylabel=None, figsize=None, figure=True, show=True, tolerance=None, fname=None, progress_bar=False)
      |      Sample a dataset along a circular arc and plot it.
      |      
@@ -6028,13 +7010,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pointa : np.ndarray or list
+     |      pointa : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      pointb : np.ndarray or list
+     |      pointb : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      center : np.ndarray or list
+     |      center : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6055,10 +7037,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      figsize : tuple(int), optional
      |          The size of the new figure.
      |      
-     |      figure : bool, optional
+     |      figure : bool, default: True
      |          Flag on whether or not to create a new figure.
      |      
-     |      show : bool, optional
+     |      show : bool, default: True
      |          Shows the ``matplotlib`` figure when ``True``.
      |      
      |      tolerance : float, optional
@@ -6069,7 +7051,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      fname : str, optional
      |          Save the figure this file name when set.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Examples
@@ -6081,7 +7063,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> a = [mesh.bounds[0], mesh.bounds[2], mesh.bounds[5]]
      |      >>> b = [mesh.bounds[1], mesh.bounds[2], mesh.bounds[4]]
      |      >>> center = [mesh.bounds[0], mesh.bounds[2], mesh.bounds[4]]
-     |      >>> mesh.plot_over_circular_arc(a, b, center, resolution=1000, show=False)  # doctest:+SKIP
+     |      >>> mesh.plot_over_circular_arc(
+     |      ...     a, b, center, resolution=1000, show=False
+     |      ... )  # doctest:+SKIP
      |  
      |  plot_over_circular_arc_normal(self, center, resolution=None, normal=None, polar=None, angle=None, scalars=None, title=None, ylabel=None, figsize=None, figure=True, show=True, tolerance=None, fname=None, progress_bar=False)
      |      Sample a dataset along a resolution circular arc defined by a normal and polar vector and plot it.
@@ -6092,7 +7076,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      center : np.ndarray or list
+     |      center : sequence[int]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6100,11 +7084,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          number of cells in the input mesh. Must be a positive
      |          integer.
      |      
-     |      normal : np.ndarray or list, optional
+     |      normal : sequence[float], optional
      |          The normal vector to the plane of the arc.  By default it
      |          points in the positive Z direction.
      |      
-     |      polar : np.ndarray or list, optional
+     |      polar : sequence[float], optional
      |          Starting point of the arc in polar coordinates.  By
      |          default it is the unit vector in the positive x direction.
      |      
@@ -6128,7 +7112,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      figure : bool, optional
      |          Flag on whether or not to create a new figure.
      |      
-     |      show : bool, optional
+     |      show : bool, default: True
      |          Shows the matplotlib figure.
      |      
      |      tolerance : float, optional
@@ -6139,7 +7123,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      fname : str, optional
      |          Save the figure this file name when set.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Examples
@@ -6152,7 +7136,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> polar = [0, 9, 0]
      |      >>> angle = 90
      |      >>> center = [mesh.bounds[0], mesh.bounds[2], mesh.bounds[4]]
-     |      >>> mesh.plot_over_circular_arc_normal(center, polar=polar, angle=angle)  # doctest:+SKIP
+     |      >>> mesh.plot_over_circular_arc_normal(
+     |      ...     center, polar=polar, angle=angle
+     |      ... )  # doctest:+SKIP
      |  
      |  plot_over_line(self, pointa, pointb, resolution=None, scalars=None, title=None, ylabel=None, figsize=None, figure=True, show=True, tolerance=None, fname=None, progress_bar=False)
      |      Sample a dataset along a high resolution line and plot.
@@ -6163,10 +7149,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pointa : sequence
+     |      pointa : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      pointb : sequence
+     |      pointb : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6186,10 +7172,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      figsize : tuple(int), optional
      |          The size of the new figure.
      |      
-     |      figure : bool, optional
+     |      figure : bool, default: True
      |          Flag on whether or not to create a new figure.
      |      
-     |      show : bool, optional
+     |      show : bool, default: True
      |          Shows the matplotlib figure.
      |      
      |      tolerance : float, optional
@@ -6199,7 +7185,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      fname : str, optional
      |          Save the figure this file name when set.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Examples
@@ -6216,10 +7202,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pass_point_data : bool, optional
+     |      pass_point_data : bool, default: False
      |          If enabled, pass the input point data through to the output.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6251,7 +7237,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> sphere = sphere.point_data_to_cell_data()
      |      >>> sphere.plot()
      |  
-     |  probe(self, points, tolerance=None, pass_cell_arrays=True, pass_point_arrays=True, categorical=False, progress_bar=False, locator=None)
+     |  probe(self, points, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False, locator=None)
      |      Sample data values at specified point locations.
      |      
      |      This uses :class:`vtk.vtkProbeFilter`.
@@ -6260,30 +7246,30 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      ----------
      |      points : pyvista.DataSet
      |          The points to probe values on to. This should be a PyVista mesh
-     |          or something :func:`pyvista.wrap` can handle.
+     |          or something :func:`wrap` can handle.
      |      
      |      tolerance : float, optional
      |          Tolerance used to compute whether a point in the source is
      |          in a cell of the input.  If not given, tolerance is
      |          automatically generated.
      |      
-     |      pass_cell_arrays : bool, optional
+     |      pass_cell_data : bool, default: True
      |          Preserve source mesh's original cell data arrays.
      |      
-     |      pass_point_arrays : bool, optional
+     |      pass_point_data : bool, default: True
      |          Preserve source mesh's original point data arrays.
      |      
-     |      categorical : bool, optional
+     |      categorical : bool, default: False
      |          Control whether the source point data is to be treated as
      |          categorical. If the data is categorical, then the resultant data
      |          will be determined by a nearest neighbor interpolation scheme.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      locator : vtkAbstractCellLocator, optional
      |          Prototype cell locator to perform the ``FindCell()``
-     |          operation.  This requires VTK 9.0.0 or newer.
+     |          operation.
      |      
      |      Returns
      |      -------
@@ -6302,7 +7288,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> 'Spatial Point Data' in result.point_data
      |      True
      |  
-     |  ptc(self, pass_point_data=False, progress_bar=False)
+     |  ptc(self, pass_point_data=False, progress_bar=False, **kwargs)
      |      Transform point data into cell data.
      |      
      |      Point data are specified per node and cell data specified
@@ -6314,11 +7300,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pass_point_data : bool, optional
+     |      pass_point_data : bool, default: False
      |          If enabled, pass the input point data through to the output.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
+     |      
+     |      **kwargs : dict, optional
+     |          Deprecated keyword argument ``pass_point_arrays``.
      |      
      |      Returns
      |      -------
@@ -6331,21 +7320,21 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      normal : tuple(float)
+     |      normal : array_like[float]
      |          Normal direction for reflection.
      |      
-     |      point : tuple(float), optional
+     |      point : array_like[float]
      |          Point which, along with ``normal``, defines the reflection
      |          plane. If not specified, this is the origin.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          When ``True``, modifies the dataset inplace.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all input vectors are transformed. Otherwise,
      |          only the points, normals and active vectors are transformed.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6362,7 +7351,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      See the :ref:`ref_reflect_example` for more examples using this filter.
      |  
-     |  sample(self, target, tolerance=None, pass_cell_arrays=True, pass_point_data=True, categorical=False, progress_bar=False)
+     |  sample(self, target, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False)
      |      Resample array data from a passed mesh onto this mesh.
      |      
      |      This uses :class:`vtk.vtkResampleWithDataSet`.
@@ -6378,18 +7367,18 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          in a cell of the input.  If not given, tolerance is
      |          automatically generated.
      |      
-     |      pass_cell_arrays : bool, optional
+     |      pass_cell_data : bool, default: True
      |          Preserve source mesh's original cell data arrays.
      |      
-     |      pass_point_data : bool, optional
+     |      pass_point_data : bool, default: True
      |          Preserve source mesh's original point data arrays.
      |      
-     |      categorical : bool, optional
+     |      categorical : bool, default: False
      |          Control whether the source point data is to be treated as
      |          categorical. If the data is categorical, then the resultant data
      |          will be determined by a nearest neighbor interpolation scheme.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6415,13 +7404,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pointa : np.ndarray or list
+     |      pointa : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      pointb : np.ndarray or list
+     |      pointb : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      center : np.ndarray or list
+     |      center : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6434,7 +7423,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          in a cell of the input.  If not given, tolerance is
      |          automatically generated.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6450,10 +7439,24 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> from pyvista import examples
      |      >>> uniform = examples.load_uniform()
      |      >>> uniform["height"] = uniform.points[:, 2]
-     |      >>> pointa = [uniform.bounds[1], uniform.bounds[2], uniform.bounds[5]]
-     |      >>> pointb = [uniform.bounds[1], uniform.bounds[3], uniform.bounds[4]]
-     |      >>> center = [uniform.bounds[1], uniform.bounds[2], uniform.bounds[4]]
-     |      >>> sampled_arc = uniform.sample_over_circular_arc(pointa, pointb, center)
+     |      >>> pointa = [
+     |      ...     uniform.bounds[1],
+     |      ...     uniform.bounds[2],
+     |      ...     uniform.bounds[5],
+     |      ... ]
+     |      >>> pointb = [
+     |      ...     uniform.bounds[1],
+     |      ...     uniform.bounds[3],
+     |      ...     uniform.bounds[4],
+     |      ... ]
+     |      >>> center = [
+     |      ...     uniform.bounds[1],
+     |      ...     uniform.bounds[2],
+     |      ...     uniform.bounds[4],
+     |      ... ]
+     |      >>> sampled_arc = uniform.sample_over_circular_arc(
+     |      ...     pointa, pointb, center
+     |      ... )
      |      >>> pl = pyvista.Plotter()
      |      >>> _ = pl.add_mesh(uniform, style='wireframe')
      |      >>> _ = pl.add_mesh(sampled_arc, line_width=10)
@@ -6468,7 +7471,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      center : np.ndarray or list
+     |      center : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6476,11 +7479,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          number of cells in the input mesh. Must be a positive
      |          integer.
      |      
-     |      normal : np.ndarray or list, optional
+     |      normal : sequence[float], optional
      |          The normal vector to the plane of the arc.  By default it
      |          points in the positive Z direction.
      |      
-     |      polar : np.ndarray or list, optional
+     |      polar : sequence[float], optional
      |          Starting point of the arc in polar coordinates.  By
      |          default it is the unit vector in the positive x direction.
      |      
@@ -6493,7 +7496,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          in a cell of the input.  If not given, tolerance is
      |          automatically generated.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6511,9 +7514,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> uniform["height"] = uniform.points[:, 2]
      |      >>> normal = [0, 0, 1]
      |      >>> polar = [0, 9, 0]
-     |      >>> center = [uniform.bounds[1], uniform.bounds[2], uniform.bounds[5]]
-     |      >>> arc = uniform.sample_over_circular_arc_normal(center, normal=normal,
-     |      ...                                               polar=polar)
+     |      >>> center = [
+     |      ...     uniform.bounds[1],
+     |      ...     uniform.bounds[2],
+     |      ...     uniform.bounds[5],
+     |      ... ]
+     |      >>> arc = uniform.sample_over_circular_arc_normal(
+     |      ...     center, normal=normal, polar=polar
+     |      ... )
      |      >>> pl = pyvista.Plotter()
      |      >>> _ = pl.add_mesh(uniform, style='wireframe')
      |      >>> _ = pl.add_mesh(arc, line_width=10)
@@ -6525,10 +7533,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      pointa : sequence
+     |      pointa : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
-     |      pointb : sequence
+     |      pointb : sequence[float]
      |          Location in ``[x, y, z]``.
      |      
      |      resolution : int, optional
@@ -6539,7 +7547,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          Tolerance used to compute whether a point in the source is in a
      |          cell of the input.  If not given, tolerance is automatically generated.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6564,7 +7572,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> plane = plane.interpolate(pdata, sharpness=3.5)
      |      >>> sample = plane.sample_over_line((-0.5, -0.5, 0), (0.5, 0.5, 0))
      |      >>> pl = pyvista.Plotter()
-     |      >>> _ = pl.add_mesh(pdata, render_points_as_spheres=True, point_size=50)
+     |      >>> _ = pl.add_mesh(
+     |      ...     pdata, render_points_as_spheres=True, point_size=50
+     |      ... )
      |      >>> _ = pl.add_mesh(sample, scalars='values', line_width=10)
      |      >>> _ = pl.add_mesh(plane, scalars='values', style='wireframe')
      |      >>> pl.show()
@@ -6574,14 +7584,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      points : np.ndarray or list
+     |      points : array_like[float]
      |          List of points defining multiple lines.
      |      
      |      tolerance : float, optional
      |          Tolerance used to compute whether a point in the source is in a
      |          cell of the input.  If not given, tolerance is automatically generated.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6604,9 +7614,13 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> plane = pyvista.Plane()
      |      >>> plane.clear_data()
      |      >>> plane = plane.interpolate(pdata, sharpness=3.5)
-     |      >>> sample = plane.sample_over_multiple_lines([[-0.5, -0.5, 0], [0.5, -0.5, 0], [0.5, 0.5, 0]])
+     |      >>> sample = plane.sample_over_multiple_lines(
+     |      ...     [[-0.5, -0.5, 0], [0.5, -0.5, 0], [0.5, 0.5, 0]]
+     |      ... )
      |      >>> pl = pyvista.Plotter()
-     |      >>> _ = pl.add_mesh(pdata, render_points_as_spheres=True, point_size=50)
+     |      >>> _ = pl.add_mesh(
+     |      ...     pdata, render_points_as_spheres=True, point_size=50
+     |      ... )
      |      >>> _ = pl.add_mesh(sample, scalars='values', line_width=10)
      |      >>> _ = pl.add_mesh(plane, scalars='values', style='wireframe')
      |      >>> pl.show()
@@ -6636,22 +7650,22 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          Set the surface to be used to test for containment. This must be a
      |          :class:`pyvista.PolyData` object.
      |      
-     |      tolerance : float, optional
+     |      tolerance : float, default: 0.001
      |          The tolerance on the intersection. The tolerance is expressed as a
      |          fraction of the bounding box of the enclosing surface.
      |      
-     |      inside_out : bool, optional
+     |      inside_out : bool, default: False
      |          By default, points inside the surface are marked inside or sent
      |          to the output. If ``inside_out`` is ``True``, then the points
      |          outside the surface are marked inside.
      |      
-     |      check_surface : bool, optional
-     |          Specify whether to check the surface for closure. If on, then the
+     |      check_surface : bool, default: True
+     |          Specify whether to check the surface for closure. When ``True``, the
      |          algorithm first checks to see if the surface is closed and
      |          manifold. If the surface is not closed and manifold, a runtime
      |          error is raised.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6669,12 +7683,43 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> sphere = pyvista.Sphere()
      |      >>> plane = pyvista.Plane()
      |      >>> selected = plane.select_enclosed_points(sphere)
-     |      >>> pts = plane.extract_points(selected['SelectedPoints'].view(bool),
-     |      ...                            adjacent_cells=False)
+     |      >>> pts = plane.extract_points(
+     |      ...     selected['SelectedPoints'].view(bool),
+     |      ...     adjacent_cells=False,
+     |      ... )
      |      >>> pl = pyvista.Plotter()
      |      >>> _ = pl.add_mesh(sphere, style='wireframe')
      |      >>> _ = pl.add_points(pts, color='r')
      |      >>> pl.show()
+     |  
+     |  separate_cells(self)
+     |      Return a copy of the dataset with separated cells with no shared points.
+     |      
+     |      This method may be useful when datasets have scalars that need to be
+     |      associated to each point of each cell rather than either each cell or
+     |      just the points of the dataset.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.UnstructuredGrid
+     |          UnstructuredGrid with isolated cells.
+     |      
+     |      Examples
+     |      --------
+     |      Load the example hex beam and separate its cells. This increases the
+     |      total number of points in the dataset since points are no longer
+     |      shared.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> grid = examples.load_hexbeam()
+     |      >>> grid.n_points
+     |      99
+     |      >>> sep_grid = grid.separate_cells()
+     |      >>> sep_grid.n_points
+     |      320
+     |      
+     |      See the :ref:`point_cell_scalars_example` for a more detailed example
+     |      using this filter.
      |  
      |  shrink(self, shrink_factor=1.0, progress_bar=False)
      |      Shrink the individual faces of a mesh.
@@ -6684,11 +7729,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      shrink_factor : float, optional
-     |          Fraction of shrink for each cell.  Defaults to 1.0, which
-     |          does not modify the faces.
+     |      shrink_factor : float, default: 1.0
+     |          Fraction of shrink for each cell. Default does not modify the
+     |          faces.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6717,24 +7762,24 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      normal : tuple(float) or str
+     |      normal : sequence[float] | str, default: 'x'
      |          Length 3 tuple for the normal vector direction. Can also be
      |          specified as a string conventional direction such as ``'x'`` for
      |          ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
      |      
-     |      origin : tuple(float)
+     |      origin : sequence[float], optional
      |          The center ``(x, y, z)`` coordinate of the plane on which
      |          the slice occurs.
      |      
-     |      generate_triangles : bool, optional
+     |      generate_triangles : bool, default: False
      |          If this is enabled (``False`` by default), the output will
      |          be triangles. Otherwise the output will be the intersection
      |          polygons.
      |      
-     |      contour : bool, optional
+     |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6761,10 +7806,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      n : int, optional
+     |      n : int, default: 5
      |          The number of slices to create.
      |      
-     |      axis : str or int
+     |      axis : str | int, default: 'x'
      |          The axis to generate the slices along. Perpendicular to the
      |          slices. Can be string name (``'x'``, ``'y'``, or ``'z'``) or
      |          axis index (``0``, ``1``, or ``2``).
@@ -6776,25 +7821,24 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          ``bounds`` along the specified axis. Defaults to 1% of the
      |          ``bounds`` along the specified axis.
      |      
-     |      generate_triangles : bool, optional
-     |          If this is enabled (``False`` by default), the output will
-     |          be triangles. Otherwise the output will be the intersection
-     |          polygons.
+     |      generate_triangles : bool, default: False
+     |          When ``True``, the output will be triangles. Otherwise the output
+     |          will be the intersection polygons.
      |      
-     |      contour : bool, optional
+     |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
-     |      bounds : sequence, optional
+     |      bounds : sequence[float], optional
      |          A 6-length sequence overriding the bounds of the mesh.
      |          The bounds along the specified axis define the extent
      |          where slices are taken.
      |      
-     |      center : sequence, optional
+     |      center : sequence[float], optional
      |          A 3-length sequence specifying the position of the line
      |          along which slices are taken. Defaults to the center of
      |          the mesh.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6830,15 +7874,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      line : pyvista.PolyData
      |          A PolyData object containing one single PolyLine cell.
      |      
-     |      generate_triangles : bool, optional
-     |          If this is enabled (``False`` by default), the output will
-     |          be triangles. Otherwise the output will be the intersection
-     |          polygons.
+     |      generate_triangles : bool, default: False
+     |          When ``True``, the output will be triangles. Otherwise the output
+     |          will be the intersection polygons.
      |      
-     |      contour : bool, optional
+     |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6857,19 +7900,69 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> center = np.array(hills.center)
      |      >>> point_a = center + np.array([5, 0, 0])
      |      >>> point_b = center + np.array([-5, 0, 0])
-     |      >>> arc = pyvista.CircularArc(point_a, point_b, center, resolution=100)
+     |      >>> arc = pyvista.CircularArc(
+     |      ...     point_a, point_b, center, resolution=100
+     |      ... )
      |      >>> line_slice = hills.slice_along_line(arc)
      |      
      |      Plot the circular arc and the hills mesh.
      |      
      |      >>> pl = pyvista.Plotter()
      |      >>> _ = pl.add_mesh(hills, smooth_shading=True, style='wireframe')
-     |      >>> _ = pl.add_mesh(line_slice, line_width=10, render_lines_as_tubes=True,
-     |      ...                 color='k')
+     |      >>> _ = pl.add_mesh(
+     |      ...     line_slice,
+     |      ...     line_width=10,
+     |      ...     render_lines_as_tubes=True,
+     |      ...     color='k',
+     |      ... )
      |      >>> _ = pl.add_mesh(arc, line_width=10, color='grey')
      |      >>> pl.show()
      |      
      |      See :ref:`slice_example` for more examples using this filter.
+     |  
+     |  slice_implicit(self, implicit_function, generate_triangles=False, contour=False, progress_bar=False)
+     |      Slice a dataset by a VTK implicit function.
+     |      
+     |      Parameters
+     |      ----------
+     |      implicit_function : vtk.vtkImplicitFunction
+     |          Specify the implicit function to perform the cutting.
+     |      
+     |      generate_triangles : bool, default: False
+     |          If this is enabled (``False`` by default), the output will
+     |          be triangles. Otherwise the output will be the intersection
+     |          polygons. If the cutting function is not a plane, the
+     |          output will be 3D polygons, which might be nice to look at
+     |          but hard to compute with downstream.
+     |      
+     |      contour : bool, default: False
+     |          If ``True``, apply a ``contour`` filter after slicing.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.PolyData
+     |          Sliced dataset.
+     |      
+     |      Examples
+     |      --------
+     |      Slice the surface of a sphere.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> import vtk
+     |      >>> sphere = vtk.vtkSphere()
+     |      >>> sphere.SetRadius(10)
+     |      >>> mesh = pv.Wavelet()
+     |      >>> slice = mesh.slice_implicit(sphere)
+     |      >>> slice.plot(show_edges=True, line_width=5)
+     |      
+     |      >>> sphere = vtk.vtkCylinder()
+     |      >>> sphere.SetRadius(10)
+     |      >>> mesh = pv.Wavelet()
+     |      >>> slice = mesh.slice_implicit(sphere)
+     |      >>> slice.plot(show_edges=True, line_width=5)
      |  
      |  slice_orthogonal(self, x=None, y=None, z=None, generate_triangles=False, contour=False, progress_bar=False)
      |      Create three orthogonal slices through the dataset on the three cartesian planes.
@@ -6887,15 +7980,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      z : float, optional
      |          The Z location of the XY slice.
      |      
-     |      generate_triangles : bool, optional
-     |          If this is enabled (``False`` by default), the output will
-     |          be triangles. Otherwise the output will be the intersection
-     |          polygons.
+     |      generate_triangles : bool, default: False
+     |          When ``True``, the output will be triangles. Otherwise the output
+     |          will be the intersection polygons.
      |      
-     |      contour : bool, optional
+     |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6922,11 +8014,11 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      label : bool, optional
+     |      label : bool, default: False
      |          A flag on whether to keep the ID arrays given by the
      |          ``connectivity`` filter.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -6940,7 +8032,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      >>> from pyvista import examples
      |      >>> dataset = examples.load_uniform()
-     |      >>> dataset.set_active_scalars('Spatial Cell Data')
+     |      >>> _ = dataset.set_active_scalars('Spatial Cell Data')
      |      >>> threshed = dataset.threshold_percent([0.15, 0.50], invert=True)
      |      >>> bodies = threshed.split_bodies()
      |      >>> len(bodies)
@@ -6971,7 +8063,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      vectors : str, optional
      |          The string name of the active vector field to integrate across.
      |      
-     |      source_center : tuple(float), optional
+     |      source_center : sequence[float], optional
      |          Length 3 tuple of floats defining the center of the source
      |          particles. Defaults to the center of the dataset.
      |      
@@ -6979,21 +8071,21 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          Float radius of the source particle cloud. Defaults to one-tenth of
      |          the diagonal of the dataset's spatial extent.
      |      
-     |      n_points : int, optional
+     |      n_points : int, default: 100
      |          Number of particles present in source sphere or line.
      |      
-     |      start_position : tuple(float), optional
+     |      start_position : sequence[float], optional
      |          A single point.  This will override the sphere point source.
      |      
-     |      return_source : bool, optional
+     |      return_source : bool, default: False
      |          Return the source particles as :class:`pyvista.PolyData` as well as the
      |          streamlines. This will be the second value returned if ``True``.
      |      
-     |      pointa, pointb : tuple(float), optional
+     |      pointa, pointb : sequence[float], optional
      |          The coordinates of a start and end point for a line source. This
      |          will override the sphere and start_position point source.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      **kwargs : dict, optional
@@ -7023,38 +8115,33 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      that do not result in too much memory being utilized.  The
      |      default unit is cell length.
      |      
-     |      .. warning::
-     |          This filter is unstable for ``vtk<9.0``.
-     |          See `pyvista issue 1508 <https://github.com/pyvista/pyvista/issues/1508>`_.
-     |      
      |      Parameters
      |      ----------
      |      vectors : str, optional
      |          The string name of the active vector field to integrate across.
      |      
-     |      start_position : sequence(float), optional
+     |      start_position : sequence[float], optional
      |          The seed point for generating evenly spaced streamlines.
      |          If not supplied, a random position in the dataset is chosen.
      |      
-     |      integrator_type : {2, 4}, optional
+     |      integrator_type : {2, 4}, default: 2
      |          The integrator type to be used for streamline generation.
      |          The default is Runge-Kutta2. The recognized solvers are:
      |          RUNGE_KUTTA2 (``2``) and RUNGE_KUTTA4 (``4``).
      |      
-     |      step_length : float, optional
+     |      step_length : float, default: 0.5
      |          Constant Step size used for line integration, expressed in length
      |          units or cell length units (see ``step_unit`` parameter).
      |      
-     |      step_unit : {'cl', 'l'}, optional
+     |      step_unit : {'cl', 'l'}, default: "cl"
      |          Uniform integration step unit. The valid unit is now limited to
      |          only LENGTH_UNIT (``'l'``) and CELL_LENGTH_UNIT (``'cl'``).
-     |          Default is CELL_LENGTH_UNIT: ``'cl'``.
+     |          Default is CELL_LENGTH_UNIT.
      |      
-     |      max_steps : int, optional
+     |      max_steps : int, default: 2000
      |          Maximum number of steps for integrating a streamline.
-     |          Defaults to ``2000``.
      |      
-     |      terminal_speed : float, optional
+     |      terminal_speed : float, default: 1e-12
      |          Terminal speed value, below which integration is terminated.
      |      
      |      interpolator_type : str, optional
@@ -7064,29 +8151,29 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          are ``'point'`` or ``'cell'`` (abbreviations of ``'p'`` and ``'c'``
      |          are also supported).
      |      
-     |      separating_distance : float, optional
+     |      separating_distance : float, default: 10
      |          The distance between streamlines expressed in ``step_unit``.
      |      
-     |      separating_distance_ratio : float, optional
+     |      separating_distance_ratio : float, default: 0.5
      |          Streamline integration is stopped if streamlines are closer than
      |          ``SeparatingDistance*SeparatingDistanceRatio`` to other streamlines.
      |      
-     |      closed_loop_maximum_distance : float, optional
+     |      closed_loop_maximum_distance : float, default: 0.5
      |          The distance between points on a streamline to determine a
      |          closed loop.
      |      
-     |      loop_angle : float, optional
+     |      loop_angle : float, default: 20
      |          The maximum angle in degrees between points to determine a closed loop.
      |      
-     |      minimum_number_of_loop_points : int, optional
+     |      minimum_number_of_loop_points : int, default: 4
      |          The minimum number of points before which a closed loop will
      |          be determined.
      |      
-     |      compute_vorticity : bool, optional
+     |      compute_vorticity : bool, default: True
      |          Vorticity computation at streamline points. Necessary for generating
      |          proper stream-ribbons using the ``vtkRibbonFilter``.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7107,11 +8194,15 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> import pyvista
      |      >>> from pyvista import examples
      |      >>> mesh = examples.download_cylinder_crossflow()
-     |      >>> streams = mesh[0].streamlines_evenly_spaced_2D(start_position=(4, 0.1, 0.),
-     |      ...                                                separating_distance=3,
-     |      ...                                                separating_distance_ratio=0.2)
+     |      >>> streams = mesh[0].streamlines_evenly_spaced_2D(
+     |      ...     start_position=(4, 0.1, 0.0),
+     |      ...     separating_distance=3,
+     |      ...     separating_distance_ratio=0.2,
+     |      ... )
      |      >>> plotter = pyvista.Plotter()
-     |      >>> _ = plotter.add_mesh(streams.tube(radius=0.02), scalars="vorticity_mag")
+     |      >>> _ = plotter.add_mesh(
+     |      ...     streams.tube(radius=0.02), scalars="vorticity_mag"
+     |      ... )
      |      >>> plotter.view_xy()
      |      >>> plotter.show()
      |      
@@ -7135,68 +8226,67 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      vectors : str, optional
      |          The string name of the active vector field to integrate across.
      |      
-     |      integrator_type : {45, 2, 4}, optional
+     |      integrator_type : {45, 2, 4}, default: 45
      |          The integrator type to be used for streamline generation.
      |          The default is Runge-Kutta45. The recognized solvers are:
      |          RUNGE_KUTTA2 (``2``),  RUNGE_KUTTA4 (``4``), and RUNGE_KUTTA45
-     |          (``45``). Options are ``2``, ``4``, or ``45``. Default is ``45``.
+     |          (``45``). Options are ``2``, ``4``, or ``45``.
      |      
-     |      integration_direction : str, optional
+     |      integration_direction : str, default: "both"
      |          Specify whether the streamline is integrated in the upstream or
      |          downstream directions (or both). Options are ``'both'``,
      |          ``'backward'``, or ``'forward'``.
      |      
-     |      surface_streamlines : bool, optional
-     |          Compute streamlines on a surface. Default ``False``.
+     |      surface_streamlines : bool, default: False
+     |          Compute streamlines on a surface.
      |      
-     |      initial_step_length : float, optional
+     |      initial_step_length : float, default: 0.5
      |          Initial step size used for line integration, expressed ib length
      |          unitsL or cell length units (see ``step_unit`` parameter).
      |          either the starting size for an adaptive integrator, e.g., RK45, or
      |          the constant / fixed size for non-adaptive ones, i.e., RK2 and RK4).
      |      
-     |      step_unit : {'cl', 'l'}, optional
+     |      step_unit : {'cl', 'l'}, default: "cl"
      |          Uniform integration step unit. The valid unit is now limited to
      |          only LENGTH_UNIT (``'l'``) and CELL_LENGTH_UNIT (``'cl'``).
-     |          Default is CELL_LENGTH_UNIT: ``'cl'``.
+     |          Default is CELL_LENGTH_UNIT.
      |      
-     |      min_step_length : float, optional
+     |      min_step_length : float, default: 0.01
      |          Minimum step size used for line integration, expressed in length or
      |          cell length units. Only valid for an adaptive integrator, e.g., RK45.
      |      
-     |      max_step_length : float, optional
+     |      max_step_length : float, default: 1.0
      |          Maximum step size used for line integration, expressed in length or
      |          cell length units. Only valid for an adaptive integrator, e.g., RK45.
      |      
-     |      max_steps : int, optional
+     |      max_steps : int, default: 2000
      |          Maximum number of steps for integrating a streamline.
-     |          Defaults to ``2000``.
      |      
-     |      terminal_speed : float, optional
+     |      terminal_speed : float, default: 1e-12
      |          Terminal speed value, below which integration is terminated.
      |      
-     |      max_error : float, optional
+     |      max_error : float, 1e-6
      |          Maximum error tolerated throughout streamline integration.
      |      
      |      max_time : float, optional
      |          Specify the maximum length of a streamline expressed in LENGTH_UNIT.
      |      
-     |      compute_vorticity : bool, optional
+     |      compute_vorticity : bool, default: True
      |          Vorticity computation at streamline points. Necessary for generating
      |          proper stream-ribbons using the ``vtkRibbonFilter``.
      |      
-     |      rotation_scale : float, optional
+     |      rotation_scale : float, default: 1.0
      |          This can be used to scale the rate with which the streamribbons
-     |          twist. The default is 1.
+     |          twist.
      |      
-     |      interpolator_type : str, optional
+     |      interpolator_type : str, default: "point"
      |          Set the type of the velocity field interpolator to locate cells
      |          during streamline integration either by points or cells.
      |          The cell locator is more robust then the point locator. Options
      |          are ``'point'`` or ``'cell'`` (abbreviations of ``'p'`` and ``'c'``
      |          are also supported).
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7217,7 +8307,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7247,16 +8337,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      max_n_subdivide : int, optional
+     |      max_n_subdivide : int, default: 3
      |          Maximum number of subdivisions.
-     |          Defaults to ``3``.
      |      
-     |      merge_points : bool, optional
+     |      merge_points : bool, default: True
      |          The adaptive tessellation will output vertices that are not shared among cells,
      |          even where they should be. This can be corrected to some extent.
-     |          Defaults to ``True``.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7300,32 +8388,32 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      origin : tuple(float), optional
+     |      origin : sequence[float], optional
      |          Length 3 iterable of floats defining the XYZ coordinates of the
      |          bottom left corner of the plane.
      |      
-     |      point_u : tuple(float), optional
+     |      point_u : sequence[float], optional
      |          Length 3 iterable of floats defining the XYZ coordinates of the
      |          bottom right corner of the plane.
      |      
-     |      point_v : tuple(float), optional
+     |      point_v : sequence[float], optional
      |          Length 3 iterable of floats defining the XYZ coordinates of the
      |          top left corner of the plane.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          If ``True``, the new texture coordinates will be added to this
-     |          dataset. If ``False`` (default), a new dataset is returned
-     |          with the texture coordinates.
+     |          dataset. If ``False``, a new dataset is returned with the texture
+     |          coordinates.
      |      
-     |      name : str, optional
+     |      name : str, default: "Texture Coordinates"
      |          The string name to give the new texture coordinates if applying
      |          the filter inplace.
      |      
-     |      use_bounds : bool, optional
+     |      use_bounds : bool, default: False
      |          Use the bounds to set the mapping plane by default (bottom plane
      |          of the bounding box).
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7347,29 +8435,28 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      center : tuple(float)
+     |      center : sequence[float], optional
      |          Length 3 iterable of floats defining the XYZ coordinates of the
      |          center of the sphere. If ``None``, this will be automatically
      |          calculated.
      |      
-     |      prevent_seam : bool, optional
+     |      prevent_seam : bool, default: True
      |          Control how the texture coordinates are generated.  If
      |          set, the s-coordinate ranges from 0 to 1 and 1 to 0
      |          corresponding to the theta angle variation between 0 to
      |          180 and 180 to 0 degrees.  Otherwise, the s-coordinate
-     |          ranges from 0 to 1 between 0 to 360 degrees.  Default
-     |          ``True``.
+     |          ranges from 0 to 1 between 0 to 360 degrees.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          If ``True``, the new texture coordinates will be added to
      |          the dataset inplace. If ``False`` (default), a new dataset
      |          is returned with the texture coordinates.
      |      
-     |      name : str, optional
+     |      name : str, default: "Texture Coordinates"
      |          The string name to give the new texture coordinates if applying
      |          the filter inplace.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7382,7 +8469,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      --------
      |      See :ref:`ref_texture_example`.
      |  
-     |  threshold(self, value=None, scalars=None, invert=False, continuous=False, preference='cell', all_scalars=False, progress_bar=False, component_mode='all', component=0)
+     |  threshold(self, value=None, scalars=None, invert=False, continuous=False, preference='cell', all_scalars=False, component_mode='all', component=0, method='upper', progress_bar=False)
      |      Apply a ``vtkThreshold`` filter to the input dataset.
      |      
      |      This filter will apply a ``vtkThreshold`` filter to the input
@@ -7398,42 +8485,50 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |         thresholding depends on whether that point is part of a cell that
      |         is kept after thresholding.
      |      
+     |         Please also note the default ``preference`` choice for CELL data
+     |         over POINT data. This is contrary to most other places in PyVista's
+     |         API where the preference typically defaults to POINT data. We chose
+     |         to prefer CELL data here so that if thresholding by a named array
+     |         that exists for both the POINT and CELL data, this filter will
+     |         default to the CELL data array while performing the CELL-wise
+     |         operation.
+     |      
      |      Parameters
      |      ----------
-     |      value : float or sequence, optional
-     |          Single value or (min, max) to be used for the data threshold.  If
+     |      value : float | sequence[float], optional
+     |          Single value or ``(min, max)`` to be used for the data threshold. If
      |          a sequence, then length must be 2. If no value is specified, the
      |          non-NaN data range will be used to remove any NaN values.
+     |          Please reference the ``method`` parameter for how single values
+     |          are handled.
      |      
      |      scalars : str, optional
      |          Name of scalars to threshold on. Defaults to currently active scalars.
      |      
-     |      invert : bool, optional
-     |          If value is a single value, when invert is ``True`` cells
-     |          are kept when their values are below parameter ``"value"``.
-     |          When invert is ``False`` cells are kept when their value is
-     |          above the threshold ``"value"``.  Default is ``False``:
-     |          yielding above the threshold ``"value"``.
+     |      invert : bool, default: False
+     |          Invert the threshold results. That is, cells that would have been
+     |          in the output with this option off are excluded, while cells that
+     |          would have been excluded from the output are included.
      |      
-     |      continuous : bool, optional
+     |      continuous : bool, default: False
      |          When True, the continuous interval [minimum cell scalar,
      |          maximum cell scalar] will be used to intersect the threshold bound,
      |          rather than the set of discrete scalar values from the vertices.
      |      
-     |      preference : str, optional
+     |      preference : str, default: 'cell'
      |          When ``scalars`` is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
-     |          ``'point'`` or ``'cell'``.
+     |          ``'point'`` or ``'cell'``. Throughout PyVista, the preference
+     |          is typically ``'point'`` but since the threshold filter is a
+     |          cell-wise operation, we prefer cell data for thresholding
+     |          operations.
      |      
-     |      all_scalars : bool, optional
+     |      all_scalars : bool, default: False
      |          If using scalars from point data, all
      |          points in a cell must satisfy the threshold when this
      |          value is ``True``.  When ``False``, any point of the cell
      |          with a scalar value satisfying the threshold criterion
      |          will extract the cell. Has no effect when using cell data.
-     |      
-     |      progress_bar : bool, optional
-     |          Display a progress bar to indicate progress.
      |      
      |      component_mode : {'selected', 'all', 'any'}
      |          The method to satisfy the criteria for the threshold of
@@ -7442,9 +8537,20 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          components to meet criteria.  'any' is when
      |          any component satisfies the criteria.
      |      
-     |      component : int
+     |      component : int, default: 0
      |          When using ``component_mode='selected'``, this sets
-     |          which component to threshold on.  Default is ``0``.
+     |          which component to threshold on.
+     |      
+     |      method : str, default: 'upper'
+     |          Set the threshold method for single-values, defining which
+     |          threshold bounds to use. If the ``value`` is a range, this
+     |          parameter will be ignored, extracting data between the two
+     |          values. For single values, ``'lower'`` will extract data
+     |          lower than the  ``value``. ``'upper'`` will extract data
+     |          larger than the ``value``.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
@@ -7453,42 +8559,52 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Examples
      |      --------
-     |      >>> import pyvista
+     |      >>> import pyvista as pv
      |      >>> import numpy as np
      |      >>> volume = np.zeros([10, 10, 10])
      |      >>> volume[:3] = 1
-     |      >>> vol = pyvista.wrap(volume)
+     |      >>> vol = pv.wrap(volume)
      |      >>> threshed = vol.threshold(0.1)
-     |      >>> threshed  # doctest:+SKIP
-     |      UnstructuredGrid (0x7f00f9983fa0)
-     |        N Cells:      243
-     |        N Points:     400
-     |        X Bounds:     0.000e+00, 3.000e+00
-     |        Y Bounds:     0.000e+00, 9.000e+00
-     |        Z Bounds:     0.000e+00, 9.000e+00
-     |        N Arrays:     1
+     |      >>> threshed
+     |      UnstructuredGrid (...)
+     |        N Cells:    243
+     |        N Points:   400
+     |        X Bounds:   0.000e+00, 3.000e+00
+     |        Y Bounds:   0.000e+00, 9.000e+00
+     |        Z Bounds:   0.000e+00, 9.000e+00
+     |        N Arrays:   1
      |      
      |      Apply the threshold filter to Perlin noise.  First generate
      |      the structured grid.
      |      
-     |      >>> import pyvista
-     |      >>> noise = pyvista.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
-     |      >>> grid = pyvista.sample_function(noise, [0, 1.0, -0, 1.0, 0, 1.0],
-     |      ...                                dim=(20, 20, 20))
-     |      >>> grid.plot(cmap='gist_earth_r', show_scalar_bar=True, show_edges=False)
+     |      >>> import pyvista as pv
+     |      >>> noise = pv.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
+     |      >>> grid = pv.sample_function(
+     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
+     |      ... )
+     |      >>> grid.plot(
+     |      ...     cmap='gist_earth_r',
+     |      ...     show_scalar_bar=True,
+     |      ...     show_edges=False,
+     |      ... )
      |      
      |      Next, apply the threshold.
      |      
-     |      >>> import pyvista
-     |      >>> noise = pyvista.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
-     |      >>> grid = pyvista.sample_function(noise, [0, 1.0, -0, 1.0, 0, 1.0],
-     |      ...                                dim=(20, 20, 20))
+     |      >>> import pyvista as pv
+     |      >>> noise = pv.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
+     |      >>> grid = pv.sample_function(
+     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
+     |      ... )
      |      >>> threshed = grid.threshold(value=0.02)
-     |      >>> threshed.plot(cmap='gist_earth_r', show_scalar_bar=False, show_edges=True)
+     |      >>> threshed.plot(
+     |      ...     cmap='gist_earth_r',
+     |      ...     show_scalar_bar=False,
+     |      ...     show_edges=True,
+     |      ... )
      |      
      |      See :ref:`common_filter_example` for more examples using this filter.
      |  
-     |  threshold_percent(self, percent=0.5, scalars=None, invert=False, continuous=False, preference='cell', progress_bar=False)
+     |  threshold_percent(self, percent=0.5, scalars=None, invert=False, continuous=False, preference='cell', method='upper', progress_bar=False)
      |      Threshold the dataset by a percentage of its range on the active scalars array.
      |      
      |      .. warning::
@@ -7500,32 +8616,41 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      percent : float or tuple(float), optional
-     |          The percentage (0,1) to threshold. If value is out of 0 to 1 range,
-     |          then it will be divided by 100 and checked to be in that range.
+     |      percent : float | sequence[float], optional
+     |          The percentage in the range ``(0, 1)`` to threshold. If value is
+     |          out of 0 to 1 range, then it will be divided by 100 and checked to
+     |          be in that range.
      |      
      |      scalars : str, optional
      |          Name of scalars to threshold on. Defaults to currently active scalars.
      |      
-     |      invert : bool, optional
-     |          When invert is ``True`` cells are kept when their values are
-     |          below the percentage of the range.  When invert is
-     |          ``False``, cells are kept when their value is above the
-     |          percentage of the range. Default is ``False``: yielding
-     |          above the threshold ``"value"``.
+     |      invert : bool, default: False
+     |          Invert the threshold results. That is, cells that would have been
+     |          in the output with this option off are excluded, while cells that
+     |          would have been excluded from the output are included.
      |      
-     |      continuous : bool, optional
-     |          When ``True``, the continuous interval [minimum cell scalar,
-     |          maximum cell scalar] will be used to intersect the threshold
-     |          bound, rather than the set of discrete scalar values from
-     |          the vertices.
+     |      continuous : bool, default: False
+     |          When True, the continuous interval [minimum cell scalar,
+     |          maximum cell scalar] will be used to intersect the threshold bound,
+     |          rather than the set of discrete scalar values from the vertices.
      |      
-     |      preference : str, optional
+     |      preference : str, default: 'cell'
      |          When ``scalars`` is specified, this is the preferred array
      |          type to search for in the dataset.  Must be either
-     |          ``'point'`` or ``'cell'``.
+     |          ``'point'`` or ``'cell'``. Throughout PyVista, the preference
+     |          is typically ``'point'`` but since the threshold filter is a
+     |          cell-wise operation, we prefer cell data for thresholding
+     |          operations.
      |      
-     |      progress_bar : bool, optional
+     |      method : str, default: 'upper'
+     |          Set the threshold method for single-values, defining which
+     |          threshold bounds to use. If the ``value`` is a range, this
+     |          parameter will be ignored, extracting data between the two
+     |          values. For single values, ``'lower'`` will extract data
+     |          lower than the  ``value``. ``'upper'`` will extract data
+     |          larger than the ``value``.
+     |      
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7539,15 +8664,24 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      >>> import pyvista
      |      >>> noise = pyvista.perlin_noise(0.1, (2, 2, 2), (0, 0, 0))
-     |      >>> grid = pyvista.sample_function(noise, [0, 1.0, -0, 1.0, 0, 1.0],
-     |      ...                                dim=(30, 30, 30))
+     |      >>> grid = pyvista.sample_function(
+     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(30, 30, 30)
+     |      ... )
      |      >>> threshed = grid.threshold_percent(0.5)
-     |      >>> threshed.plot(cmap='gist_earth_r', show_scalar_bar=False, show_edges=True)
+     |      >>> threshed.plot(
+     |      ...     cmap='gist_earth_r',
+     |      ...     show_scalar_bar=False,
+     |      ...     show_edges=True,
+     |      ... )
      |      
      |      Apply a 80% threshold filter.
      |      
      |      >>> threshed = grid.threshold_percent(0.8)
-     |      >>> threshed.plot(cmap='gist_earth_r', show_scalar_bar=False, show_edges=True)
+     |      >>> threshed.plot(
+     |      ...     cmap='gist_earth_r',
+     |      ...     show_scalar_bar=False,
+     |      ...     show_edges=True,
+     |      ... )
      |      
      |      See :ref:`common_filter_example` for more examples using a similar filter.
      |  
@@ -7579,22 +8713,22 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          Accepts a vtk transformation object or a 4x4
      |          transformation matrix.
      |      
-     |      transform_all_input_vectors : bool, optional
+     |      transform_all_input_vectors : bool, default: False
      |          When ``True``, all arrays with three components are
      |          transformed. Otherwise, only the normals and vectors are
      |          transformed.  See the warning for more details.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          When ``True``, modifies the dataset inplace.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
      |      pyvista.DataSet
      |          Transformed dataset.  Return type matches input unless
-     |          input dataset is a :class:`pyvista.UniformGrid`, in which
+     |          input dataset is a :class:`pyvista.ImageData`, in which
      |          case the output datatype is a :class:`pyvista.StructuredGrid`.
      |      
      |      Examples
@@ -7609,10 +8743,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      ``vtk.vtkMatrix4x4`` and ``vtk.vtkTransform`` are also
      |      accepted.
      |      
-     |      >>> transform_matrix = np.array([[1, 0, 0, 50],
-     |      ...                              [0, 1, 0, 100],
-     |      ...                              [0, 0, 1, 200],
-     |      ...                              [0, 0, 0, 1]])
+     |      >>> transform_matrix = np.array(
+     |      ...     [
+     |      ...         [1, 0, 0, 50],
+     |      ...         [0, 1, 0, 100],
+     |      ...         [0, 0, 1, 200],
+     |      ...         [0, 0, 0, 1],
+     |      ...     ]
+     |      ... )
      |      >>> transformed = mesh.transform(transform_matrix)
      |      >>> transformed.plot(show_edges=True)
      |  
@@ -7623,10 +8761,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          Updates mesh in-place.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7659,7 +8797,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      scalars : str, optional
      |          Name of scalars to warp by. Defaults to currently active scalars.
      |      
-     |      factor : float, optional
+     |      factor : float, default: 1.0
      |          A scaling factor to increase the scaling effect. Alias
      |          ``scale_factor`` also accepted - if present, overrides ``factor``.
      |      
@@ -7668,10 +8806,10 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          ignored and the given normal will be used to project the
      |          warp.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          If ``True``, the points of the given dataset will be updated.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      **kwargs : dict, optional
@@ -7711,14 +8849,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      vectors : str, optional
      |          Name of vector to warp by. Defaults to currently active vector.
      |      
-     |      factor : float, optional
+     |      factor : float, default: 1.0
      |          A scaling factor that multiplies the vectors to warp by. Can
      |          be used to enhance the warping effect.
      |      
-     |      inplace : bool, optional
+     |      inplace : bool, default: False
      |          If ``True``, the function will update the mesh in-place.
      |      
-     |      progress_bar : bool, optional
+     |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
@@ -7743,7 +8881,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> actor = pl.add_mesh(warped, color='white')
      |      >>> pl.show()
      |      
-     |      See :ref:`warp_by_vectors_example` for more examples using this filter.
+     |      See :ref:`warp_by_vectors_example` and :ref:`eigenmodes_example` for
+     |      more examples using this filter.
      |  
      |  ----------------------------------------------------------------------
      |  Data descriptors inherited from pyvista.core.filters.data_set.DataSetFilters:
@@ -7758,16 +8897,14 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Test equivalency between data objects.
      |  
      |  __getstate__(self)
-     |      Support pickle. Serialize the VTK object to ASCII string.
+     |      Support pickle by serializing the VTK object data to something which can be pickled natively.
+     |      
+     |      The format of the serialized VTK object data depends on `pyvista.PICKLE_FORMAT` (case-insensitive).
+     |      - If `pyvista.PICKLE_FORMAT == 'xml'`, the data is serialized as an XML-formatted string.
+     |      - If `pyvista.PICKLE_FORMAT == 'legacy'`, the data is serialized to bytes in VTK's binary format.
      |  
      |  __setstate__(self, state)
      |      Support unpickle.
-     |  
-     |  add_field_array(self, scalars: numpy.ndarray, name: str, deep=True)
-     |      Add field data.
-     |      
-     |      .. deprecated:: 0.32.0
-     |         Use :func:`DataObject.add_field_data` instead.
      |  
      |  add_field_data(self, array: numpy.ndarray, name: str, deep=True)
      |      Add field data.
@@ -7784,9 +8921,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      name : str
      |          Name to assign the field array.
      |      
-     |      deep : bool, optional
+     |      deep : bool, default: True
      |          Perform a deep copy of the data when adding it to the
-     |          dataset.  Default ``True``.
+     |          dataset.
      |      
      |      Examples
      |      --------
@@ -7799,11 +8936,12 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh['my-field-data']
      |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
      |      
-     |      Add field data to a UniformGrid dataset.
+     |      Add field data to a ImageData dataset.
      |      
-     |      >>> mesh = pyvista.UniformGrid(dims=(2, 2, 1))
-     |      >>> mesh.add_field_data(['I could', 'write', 'notes', 'here'],
-     |      ...                      'my-field-data')
+     |      >>> mesh = pyvista.ImageData(dimensions=(2, 2, 1))
+     |      >>> mesh.add_field_data(
+     |      ...     ['I could', 'write', 'notes', 'here'], 'my-field-data'
+     |      ... )
      |      >>> mesh['my-field-data']
      |      pyvista_ndarray(['I could', 'write', 'notes', 'here'], dtype='<U7')
      |      
@@ -7815,12 +8953,6 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> blocks.add_field_data([1, 2, 3], 'my-field-data')
      |      >>> blocks.field_data['my-field-data']
      |      pyvista_ndarray([1, 2, 3])
-     |  
-     |  clear_field_arrays(self)
-     |      Remove all field data.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :func:`DataObject.clear_field_data` instead.
      |  
      |  clear_field_data(self)
      |      Remove all field data.
@@ -7843,7 +8975,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      deep : bool, optional
+     |      deep : bool, default: True
      |          When ``True`` makes a full copy of the object.  When
      |          ``False``, performs a shallow copy where the points, cell,
      |          and data arrays are references to the original object.
@@ -7875,9 +9007,9 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista as pv
-     |      >>> source = pv.UniformGrid(dims=(10, 10, 5))
+     |      >>> source = pv.ImageData(dimensions=(10, 10, 5))
      |      >>> source = source.compute_cell_sizes()
-     |      >>> target = pv.UniformGrid(dims=(10, 10, 5))
+     |      >>> target = pv.ImageData(dimensions=(10, 10, 5))
      |      >>> target.copy_attributes(source)
      |      >>> target.plot(scalars='Volume', show_edges=True)
      |  
@@ -7892,8 +9024,8 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      Examples
      |      --------
      |      >>> import pyvista as pv
-     |      >>> source = pv.UniformGrid(dims=(10, 10, 5))
-     |      >>> target = pv.UniformGrid()
+     |      >>> source = pv.ImageData(dimensions=(10, 10, 5))
+     |      >>> target = pv.ImageData()
      |      >>> target.copy_structure(source)
      |      >>> target.plot(show_edges=True)
      |  
@@ -7905,7 +9037,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      to_copy : pyvista.DataObject or vtk.vtkDataObject
      |          Data object to perform a deep copy from.
      |  
-     |  head(self, display=True, html: bool = None)
+     |  head(self, display=True, html=None)
      |      Return the header stats of this dataset.
      |      
      |      If in IPython, this will be formatted to HTML. Otherwise
@@ -7913,7 +9045,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      display : bool, optional
+     |      display : bool, default: True
      |          Display this header in iPython.
      |      
      |      html : bool, optional
@@ -7933,7 +9065,7 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |          Filename of output file. Writer type is inferred from
      |          the extension of the filename.
      |      
-     |      binary : bool, optional
+     |      binary : bool, default: True
      |          If ``True``, write as binary.  Otherwise, write as ASCII.
      |      
      |      texture : str, np.ndarray, optional
@@ -7981,12 +9113,6 @@ Now create your own :class:`pyvista.UniformGrid` from a 3D NumPy array!
      |      >>> mesh = examples.load_airplane()
      |      >>> mesh.actual_memory_size  # doctest:+SKIP
      |      93
-     |  
-     |  field_arrays
-     |      Return vtkFieldData as DataSetAttributes.
-     |      
-     |      .. deprecated:: 0.32.0
-     |          Use :attr:`DataObject.field_data` to return field data.
      |  
      |  field_data
      |      Return FieldData as DataSetAttributes.
@@ -8050,8 +9176,6 @@ Here are some example 3D data using random data. Feel free to use your own
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -8061,7 +9185,7 @@ Here are some example 3D data using random data. Feel free to use your own
 
 .. GENERATED FROM PYTHON SOURCE LINES 95-99
 
-Create the :class:`pyvista.UniformGrid`
+Create the :class:`pyvista.ImageData`
 
 Hint, you will likely need to ``ravel`` the array with F-ordering:
 ``arr.ravel(order="F")``
@@ -8071,7 +9195,7 @@ Hint, you will likely need to ``ravel`` the array with F-ordering:
 .. code-block:: default
 
 
-    vol = pv.UniformGrid()
+    vol = pv.ImageData()
     vol.dimensions = arr.shape
     vol['array'] = arr.ravel(order="F")
 
@@ -8155,35 +9279,30 @@ See the PyVista documentation for further details on
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.354 seconds)
+   **Total running time of the script:** ( 0 minutes  7.066 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_soultions_c_create-uniform-grid.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/c_create-uniform-grid.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/c_create-uniform-grid.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: c_create-uniform-grid.py <c_create-uniform-grid.py>`
 
-     :download:`Download Python source code: c_create-uniform-grid.py <c_create-uniform-grid.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: c_create-uniform-grid.ipynb <c_create-uniform-grid.ipynb>`
+      :download:`Download Jupyter notebook: c_create-uniform-grid.ipynb <c_create-uniform-grid.ipynb>`
 
 
 .. only:: html
