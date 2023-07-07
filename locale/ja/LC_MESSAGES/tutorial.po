@@ -810,6 +810,9 @@ msgid ""
 " have the option of enabling volumetric plotting, which plots individual "
 "cells based on the content of the data associated with those cells."
 msgstr ""
+"これは :class:`pyvista.ImageData` "
+"で，一貫した間隔を持つ一様な点の集合を含むデータセットです．このデータセットをプロットするとき，個々のセルを，そのセルに関連するデータの内容に基づいてプロットする，volumetric"
+" plottingを有効にするオプションがあります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:226
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:96
@@ -844,11 +847,11 @@ msgstr ""
 msgid ""
 "This is again a :class:`pyvista.ImageData` and we can plot it volumetrically"
 " with:"
-msgstr ""
+msgstr "これもまた :class:`pyvista.ImageData` で，ボリューム的にプロットすることができます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:304
 msgid "**Total running time of the script:** ( 0 minutes  11.759 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  11.759 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:323
 msgid ""
@@ -1147,7 +1150,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
 msgid "**00:11.759** total execution time for **tutorial_01_basic** files:"
-msgstr ""
+msgstr "**00:11.759** total execution time for **tutorial_01_basic** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid ""
@@ -1157,7 +1160,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid "00:11.759"
-msgstr ""
+msgstr "00:11.759"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -1611,6 +1614,8 @@ msgid ""
 ":class:`pyvista.ImageData` object that will hold the spatial reference for a"
 " 3D grid which a 3D NumPy array of values can be plotted against."
 msgstr ""
+"各軸がXYZデカルト軸に対応する空間データを保持するデータ値の3 D NumPy配列を取ります．この例では，値の3 D NumPy配列をプロットできる3"
+" Dグリッドの空間参照を保持する :class:`pyvista.ImageData` オブジェクトを作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:44
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:50
@@ -1663,6 +1668,8 @@ msgid ""
 "of a :class:`pyvista.ImageData`. Take note of the subtle difference when "
 "setting the grid dimensions upon initialization."
 msgstr ""
+"セルデータが嫌いですか？NumPyの配列を :class:`pyvista.ImageData` "
+"の点データに追加することもできます．初期化時にグリッドの寸法を設定する際に，微妙な違いに注意してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:135
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:225
@@ -1679,7 +1686,7 @@ msgstr "演習"
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:180
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:318
 msgid "Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!"
-msgstr ""
+msgstr "それでは，3D NumPyの配列から，あなた自身の :class:`pyvista.ImageData` を作ってみましょう!"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:191
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9163
@@ -1691,7 +1698,7 @@ msgstr "ランダムデータを使った3Dデータの例を紹介します．�
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:204
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9188
 msgid "Create the :class:`pyvista.ImageData`"
-msgstr ""
+msgstr "クラス :`pyvista.ImageData` を作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:206
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9190
@@ -2254,7 +2261,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9282
 msgid "**Total running time of the script:** ( 0 minutes  7.066 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  7.066 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:13
 msgid ""
@@ -2288,6 +2295,7 @@ msgstr "**Total running time of the script:** ( 0 minutes  3.294 seconds)"
 msgid ""
 "**00:07.066** total execution time for **tutorial_02_mesh_soultions** files:"
 msgstr ""
+"**00:07.066** total execution time for **tutorial_02_mesh_soultions** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
 msgid ""
@@ -2299,7 +2307,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
 msgid "00:07.066"
-msgstr ""
+msgstr "00:07.066"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
 msgid ""
@@ -4513,6 +4521,9 @@ msgid ""
 "images, values in the dataset are evenly spaced apart like pixels in an "
 "image."
 msgstr ""
+":class:`pyvista.ImageData` は `vtk.vtkImageData`_ "
+"をラップしたものです．名前が違うだけで，どちらも等間隔の点のコンテナです．どちらも等間隔の点のコンテナです． `vtk.vtkImageData`_ "
+"で使用するデータは \"画像\" である必要はありません．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:215
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:95
@@ -4675,7 +4686,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:521
 msgid "**Total running time of the script:** ( 0 minutes  1.774 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  1.774 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:540
 msgid ""
@@ -5038,7 +5049,7 @@ msgstr ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:8
 msgid "**00:01.774** total execution time for **tutorial_06_vtk** files:"
-msgstr ""
+msgstr "**00:01.774** total execution time for **tutorial_06_vtk** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
 msgid ""
@@ -5050,7 +5061,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:11
 msgid "00:01.774"
-msgstr ""
+msgstr "00:01.774"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
 msgid ""
