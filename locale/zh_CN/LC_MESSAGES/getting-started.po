@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-14 22:30+0000\n"
+"POT-Creation-Date: 2023-07-08 00:40+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Li Zhou, 2022\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
@@ -110,23 +110,11 @@ msgid ""
 "one of three backends:"
 msgstr "然后，您可以使用Jupyterlab或Jupyter Notebook与三个后端之一交互绘图："
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:84
-msgid "ipyvtklink"
-msgstr "ipyvtklink"
-
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:101
-msgid "panel"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:112
-msgid "pythreejs"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:129
 msgid "Google Colab"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:130
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:102
 msgid ""
 "Google Colab is a moving target and many of the \"cloud ready\" JavaScript "
 "plotting environments that make PyVista so great to work with do not seem to"
@@ -137,7 +125,7 @@ msgstr ""
 "Google Colab是一个移动的目标，许多让PyVista如此好用的“云就绪”JavaScript绘图环境似乎在Google Colab上不可用。然而，我们仍然有一个“Google Colab”的PyVista示例\n"
 "<https://colab.research.google.com/>`_ with static plotting."
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:135
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:107
 msgid ""
 "Visit the `PyVista on Colab  "
 "<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_"
@@ -146,11 +134,11 @@ msgid ""
 msgstr ""
 "参考Colab上的PyVista<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_查看PyVista的笔记本。使PyVista在Colab环境中运行的最低代码是："
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:153
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:125
 msgid "MyBinder"
 msgstr "MyBinder"
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:154
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:126
 msgid ""
 "MyBinder, similar to Google Colab, allows you to run Jupyter notebooks on "
 "the cloud. Click on the link below to open up a MyBinder environment to run "
@@ -158,7 +146,7 @@ msgid ""
 msgstr ""
 "MyBinder类似于Google Colab，允许您在云上运行Jupyter笔记本电脑。单击下面的链接打开MyBinder环境以运行PyVista。"
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:158
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:130
 msgid "|binder|"
 msgstr ""
 

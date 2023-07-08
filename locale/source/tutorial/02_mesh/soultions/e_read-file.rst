@@ -61,11 +61,9 @@ airplane mesh.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Help on function read in module pyvista.utilities.fileio:
+    Help on function read in module pyvista.core.utilities.fileio:
 
     read(filename, attrs=None, force_ext=None, file_format=None, progress_bar=False)
         Read any file type supported by ``vtk`` or ``meshio``.
@@ -107,9 +105,8 @@ airplane mesh.
         file_format : str, optional
             Format of file to read with meshio.
     
-        progress_bar : bool, optional
-            Optionally show a progress bar. Default ``False``. Ignored when using
-            ``meshio``.
+        progress_bar : bool, default: False
+            Optionally show a progress bar. Ignored when using ``meshio``.
     
         Returns
         -------
@@ -146,7 +143,7 @@ extensions are listed in an internal function:
 
 .. code-block:: default
 
-    help(pv.utilities.reader.get_reader)
+    help(pv.core.utilities.reader.get_reader)
 
 
 
@@ -155,11 +152,9 @@ extensions are listed in an internal function:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Help on function get_reader in module pyvista.utilities.reader:
+    Help on function get_reader in module pyvista.core.utilities.reader:
 
     get_reader(filename, force_ext=None)
         Get a reader for fine-grained control of reading data files.
@@ -210,6 +205,10 @@ extensions are listed in an internal function:
         | ``.mha``       | :class:`pyvista.MetaImageReader`            |
         +----------------+---------------------------------------------+
         | ``.mhd``       | :class:`pyvista.MetaImageReader`            |
+        +----------------+---------------------------------------------+
+        | ``.nii``       | :class:`pyvista.NIFTIReader`                |
+        +----------------+---------------------------------------------+
+        | ``.nii.gz``    | :class:`pyvista.NIFTIReader`                |
         +----------------+---------------------------------------------+
         | ``.nhdr``      | :class:`pyvista.NRRDReader`                 |
         +----------------+---------------------------------------------+
@@ -269,6 +268,8 @@ extensions are listed in an internal function:
         +----------------+---------------------------------------------+
         | ``.vtu``       | :class:`pyvista.XMLUnstructuredGridReader`  |
         +----------------+---------------------------------------------+
+        | ``.xdmf``      | :class:`pyvista.XdmfReader`                 |
+        +----------------+---------------------------------------------+
     
         Parameters
         ----------
@@ -291,12 +292,12 @@ extensions are listed in an internal function:
         >>> filename.split("/")[-1]  # omit the path
         'Human.vtp'
         >>> reader = pyvista.get_reader(filename)
-        >>> reader  # doctest: +ELLIPSIS
+        >>> reader
         XMLPolyDataReader('.../Human.vtp')
         >>> mesh = reader.read()
-        >>> mesh # doctest: +ELLIPSIS
+        >>> mesh
         PolyData ...
-        >>> mesh.plot(color='tan')
+        >>> mesh.plot(color='lightblue')
 
 
 
@@ -322,12 +323,10 @@ file, displays an airplane mesh and returns the camera's position:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    '/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/pyvista/examples/airplane.ply'
+    '/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/site-packages/pyvista/examples/airplane.ply'
 
 
 
@@ -376,8 +375,6 @@ The points from the mesh are directly accessible as a NumPy array:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -408,8 +405,6 @@ The faces from the mesh are also directly accessible as a NumPy array:
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -554,35 +549,30 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.294 seconds)
+   **Total running time of the script:** ( 0 minutes  2.604 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_soultions_e_read-file.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/e_read-file.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/soultions/e_read-file.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: e_read-file.py <e_read-file.py>`
 
-     :download:`Download Python source code: e_read-file.py <e_read-file.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: e_read-file.ipynb <e_read-file.ipynb>`
+      :download:`Download Jupyter notebook: e_read-file.ipynb <e_read-file.ipynb>`
 
 
 .. only:: html

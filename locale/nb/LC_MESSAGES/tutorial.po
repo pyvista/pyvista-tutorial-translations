@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-02 00:42+0000\n"
+"POT-Creation-Date: 2023-07-08 00:40+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Norwegian Bokmål (https://app.transifex.com/tkoyama010/teams/112279/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +25,11 @@ msgstr ""
 msgid "PyVista Tutorial"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:22
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:24
 msgid "Welcome to the PyVista Tutorial!"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:24
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:26
 msgid ""
 "Below you'll find the schedule for the tutorial. Each lesson is split up "
 "into a talk and an exercise section where you'll be able to practice what "
@@ -40,15 +40,15 @@ msgid ""
 "local environment."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:31
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:33
 msgid "Download the Tutorial's Jupyter Notebooks"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:39
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:41
 msgid "Questions"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:41
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:43
 msgid ""
 "If you have any questions about PyVista, feel free to post your questions in"
 " |discuss| or |slack|."
@@ -62,110 +62,100 @@ msgstr ""
 msgid "slack"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:46
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:48
 msgid "Tutorial Overview"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:49
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
 msgid "**Lesson**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:49
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
 msgid "**Description**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid ":ref:`intro`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "Introduction - Using PyVista for 3D Visualization within Python."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
+msgid ":ref:`jupyter`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
+msgid "Using PyVista in Jupyter."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid ":ref:`basic`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid ""
 "Reading and plotting 3D data using the `pyvista.examples`_ module and "
 "external files."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 msgid ":ref:`mesh`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:8
 msgid ""
 "Learn the basics of the PyVista data types and how to open common 3D file "
 "formats to visualize the data in 3D."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 msgid ":ref:`figures`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 msgid ""
 "Demonstrate many features of the PyVista plotting API to create compelling "
 "3D visualizations and touch on animations."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ":ref:`filters`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ""
 "Demonstrate the PyVista filters API to perform mesh analysis and alteration."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ":ref:`action`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ""
 "Show how PyVista is already being used within several projects and can be "
 "used for all things visualization."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
+msgid ":ref:`trame`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
+msgid ""
+"Leverage PyVista and Trame to make awesome interactive web applications."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ":ref:`vtk`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ""
 "Show how PyVista uses VTK and how you can combine the best of both worlds!"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
-msgid ":ref:`sphinx`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:8
-msgid "Leverage PyVista to make some awesome interactive web documentation."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
-msgid ":ref:`widgets`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
-msgid "Use PyVista with a variety of helpful widgets."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
-msgid ":ref:`qt`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
-msgid ""
-"Demonstrate how to use PyVista to create standalone applications using "
-"`pyinstaller`_ and the Qt framework."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:13
@@ -203,6 +193,7 @@ msgid "**Total running time of the script:** ( 0 minutes  2.120 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:0
@@ -261,21 +252,23 @@ msgid ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:153
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:329
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:334
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:331
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:175
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:309
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:172
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:241
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:240
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:316
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:442
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:237
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:289
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:194
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:231
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:461
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:459
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:391
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:9312
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:388
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:592
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:582
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:366
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:222
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:213
@@ -286,7 +279,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:168
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:155
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:130
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:578
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:577
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:603
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:223
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:215
@@ -295,7 +288,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:143
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:152
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:167
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:375
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:374
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:618
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:220
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:347
@@ -304,8 +297,8 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:288
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1426
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:481
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:283
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:480
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:279
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:148
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:210
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:137
@@ -316,6 +309,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:130
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:186
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:48
 msgid ""
 "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
 msgstr ""
@@ -393,27 +387,34 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
 msgid ""
-"Now over 100+ contributors and `~1.4k Stars "
-"<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub!"
+"Over 100+ contributors and `~1.9k Stars "
+"<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub in 2022!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
-msgid "Greatly expanded internal presence and continuing support thanks to"
+msgid ""
+"`~1.8k Stars <https://github.com/pyvista/pyvista/stargazers>`_ and `~1.8k "
+"Used by <https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub "
+"now!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:44
-msgid "`@tkoyama010 <https://github.com/tkoyama010>`_"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:45
-msgid "`@adeak <https://github.com/adeak>`_"
+msgid "Greatly expanded internal presence and continuing support thanks to"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:46
-msgid "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
+msgid "`@tkoyama010 <https://github.com/tkoyama010>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:47
+msgid "`@adeak <https://github.com/adeak>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:48
+msgid "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:50
 msgid "|PyPIact| |condaact| |contributors| |stars|"
 msgstr ""
 
@@ -433,39 +434,39 @@ msgstr ""
 msgid "GitHub"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:70
 msgid "Who is PyVista for?"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:70
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:72
 msgid "Anyone who wants to visualize 3D data using Python."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:72
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:74
 msgid "Here's how people are using PyVista:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:76
 msgid ""
 "`PyVista User Stories "
 "<https://github.com/pyvista/pyvista/discussions/2133>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:78
 msgid ""
 "Feel free to write about what you have achieved with PyVista or what you "
 "would like to achieve in the future."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:82
 msgid "Brief Examples"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:83
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:85
 msgid "Read a Surface Mesh and Plot it"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:86
 msgid ""
 "VTK is powerful, really powerful! You can do just about anything within VTK "
 "and PyVista just wants to make it easier to do it using ``numpy``-like and "
@@ -473,23 +474,23 @@ msgid ""
 "simple surface mesh:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:103
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:105
 msgid "**Load and plot a surface dataset**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:106
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:108
 msgid "Using ``vtk``"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:106
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:108
 msgid "Using PyVista"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:134
 msgid "Construct a Simple Point Cloud with Color"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:134
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:136
 msgid ""
 "These examples demonstrate how you can use both PyVista and VTK to construct"
 " and visualize a point cloud using ``numpy``. Here, we demonstrate how easy "
@@ -497,56 +498,56 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:140
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:142
 msgid "VTK"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:142
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:144
 msgid ""
 "This example was taken from this `SO Answer "
 "<https://stackoverflow.com/a/7604478/3369879>`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:214
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:216
 msgid "PyVista"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:227
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:229
 msgid "How other Libraries Compare"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:229
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:231
 msgid ""
 "There are a ton of excellent visualization libraries out there and if you're"
 " interested in data visualization, I'd encourage you for explore them all!"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:232
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
 msgid ""
 "`Python Libraries for Mesh, Point Cloud, and Data Visualization "
 "<https://towardsdatascience.com/python-libraries-for-mesh-and-point-cloud-"
 "visualization-part-1-daa2af36de30?gi=70edd77e5fc>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:233
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:235
 msgid ""
 "`How does PyVista relate to other visualization tools? "
 "<https://github.com/pyvista/pyvista/issues/146>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:236
 msgid "`SciVis Libraries <https://pyviz.org/scivis/index.html>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:236
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:238
 msgid "Here's a few of them:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:240
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
 msgid "vtk"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:244
 msgid ""
 "The Visualization Toolkit (`VTK <https://vtk.org/>`_) is open source "
 "software for manipulating and displaying scientific data. It comes with "
@@ -555,11 +556,11 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:250
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:252
 msgid "ParaView"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:252
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:254
 msgid ""
 "`ParaView <https://www.paraview.org/>`_ is an open-source, multi-platform "
 "data analysis and visualization application. ParaView users can quickly "
@@ -569,43 +570,43 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:261
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:263
 msgid "vedo"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:263
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:265
 msgid ""
 "`vedo <https://vedo.embl.es/>`_ is a python module for scientific analysis "
 "of 3D objects and point clouds based on VTK and numpy."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:269
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:271
 msgid "Mayavi"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:271
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:273
 msgid ""
 "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ is a general purpose, "
 "cross-platform tool for 2-D and 3-D scientific data visualization."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:281
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:283
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:164
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:244
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:276
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:161
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:383
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:226
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:163
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:275
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:160
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:382
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:222
 msgid "Exercises"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:282
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:284
 msgid "Install PyVista by visiting :ref:`getting_started`."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:284
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:286
 msgid ""
 "Once you've installed PyVista, open the example below and see if you can run"
 " the \"Hello World\" of PyVista. You can download the example by scrolling "
@@ -613,11 +614,12 @@ msgid ""
 "``*.ipynb`` (notebook) file format."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:305
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:307
 msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:7
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:7
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:7
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:7
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:7
@@ -645,6 +647,7 @@ msgid "00:02.120"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/sg_execution_times.rst:11
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:11
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:11
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:11
@@ -682,6 +685,210 @@ msgstr ""
 msgid "0.0 MB"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:6
+msgid "Using PyVista in Jupyter"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:8
+msgid ""
+"PyVista is designed to be used in Jupyter notebooks. This section of the "
+"tutorial will walk you through the basics of using PyVista in Jupyter "
+"notebooks and will be a reference guide for you when configuring PyVista to "
+"work in Jupyter."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:15
+msgid "Trame Jupyter Backend for PyVista"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:17
+msgid ""
+"PyVista has the ability to display fully featured plots within a Jupyter "
+"environment using `Trame <https://kitware.github.io/trame/index.html>`_. We "
+"provide mechanisms to pair PyVista and Trame so that PyVista plotters can be"
+" used in a web context with both server and client-side rendering."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:22
+msgid ""
+"The server-side rendering mode of the Trame backend works by streaming the "
+"current render window to a canvas within Jupyter and then passing any user "
+"actions from the canvas back to the VTK render window (this is done under "
+"the hood by the ``vtkRemoteView`` in ``trame-vtk``."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:27
+msgid ""
+"For example, both sections of code will display an interactive canvas within"
+" Jupyter:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:43
+msgid "For convenience, you can enable ``trame`` with (this is the default):"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:52
+msgid "Trame Jupyter Modes"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:54
+msgid ""
+"The PyVista Trame jupyter backend provides three modes of operation "
+"(technically as three separate backend choices):"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:57
+msgid ""
+"``'trame'``: Uses a view that can switch between client- and server-"
+"rendering modes."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:58
+msgid "``'server'``: Uses a view that is purely server-rendering."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:59
+msgid ""
+"``'client'``: Uses a view that is purely client-rendering (generally safe "
+"without a virtual frame buffer)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:61
+msgid ""
+"You can choose your backend either by using :func:`set_jupyter_backend() "
+"<pyvista.set_jupyter_backend>` or passing ``jupyter_backend`` on the "
+":func:`show() <pyvista.Plotter.show>` call."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:83
+msgid "Installation"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:85
+msgid "Using pip, you can set up your jupyter environment with:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:93
+msgid "Jupyter-Server-Proxy"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:95
+msgid ""
+"When using PyVista in Jupyter that is hosted remotely (docker, cloud "
+"JupyterHub, or otherwise), you will need to pair the Trame backend with "
+"``jupyter-server-proxy``."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:98
+msgid ""
+"`Jupyter Server Proxy <https://jupyter-server-"
+"proxy.readthedocs.io/en/latest/>`_ lets you access the Trame server hosting "
+"the views of the PyVista plotters alongside your notebook, and provide "
+"authenticated web access to them directly through Jupyter."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:104
+msgid ""
+"In a future version of `wslink <https://github.com/Kitware/wslink>`_ (the "
+"driving mechanism behind Trame's server), we plan to add support such that "
+"the server can communicate via the `Jupyter Comms <https://jupyter-"
+"notebook.readthedocs.io/en/stable/comms.html>`_ to avoid the need for a "
+"secondary web server and thus ``jupyter-server-proxy``."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:110
+msgid ""
+"To configure PyVista and Trame to work with ``jupyter-server-proxy`` in a "
+"remote environment, you will need to set some options on the global PyVista "
+"theme:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:113
+msgid ""
+":py:attr:`pyvista.global_theme.trame.server_proxy_enabled "
+"<pyvista.themes._TrameConfig.server_proxy_enabled>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:115
+msgid ""
+":py:attr:`pyvista.global_theme.trame.server_proxy_prefix "
+"<pyvista.themes._TrameConfig.server_proxy_prefix>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:118
+msgid ""
+"The default for ``server_proxy_prefix`` is ``'/proxy/'`` and this should be "
+"sufficient for most remote Jupyter environment and use within Docker."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:121
+msgid "This can also be set with an environment variable:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:128
+msgid "The prefix will need to be modified for JupyterHub deployments."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:130
+msgid ""
+"On MyBinder, the ``JUPYTERHUB_SERVICE_PREFIX`` string often needs to prefix "
+"``'/proxy/'``. This makes it so the prefix includes the users ID in the URL."
+" In PyVista, we automatically check for the presence of this variable and "
+"prepend it to the ``server_proxy_prefix``."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst-1
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:22
+msgid "Test out PyVista's Jupyter Backend"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:151
+msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:13
+msgid ""
+"Click :ref:`here <sphx_glr_download_tutorial_00_jupyter_jupyter.py>` to "
+"download the full example code or to run this example in your browser via "
+"Binder"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:24
+msgid "Become familiar with PyVista Jupyter backend."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:77
+msgid "Client-side rendering only (in browser)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:111
+msgid "Server-side rendering only"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:144
+msgid "**Total running time of the script:** ( 0 minutes  5.973 seconds)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:163
+msgid ":download:`Download Python source code: jupyter.py <jupyter.py>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:167
+msgid ":download:`Download Jupyter notebook: jupyter.ipynb <jupyter.ipynb>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:8
+msgid "**00:05.973** total execution time for **tutorial_00_jupyter** files:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:11
+msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py` (``jupyter.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:11
+msgid "00:05.973"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:13
 msgid ""
 "Click :ref:`here <sphx_glr_download_tutorial_01_basic_a_lesson_basic.py>` to"
@@ -702,12 +909,12 @@ msgid ""
 " module and external files."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:52
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:20
 msgid "Using Existing Data"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:54
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:53
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:21
 msgid ""
 "There are two main ways of getting data into PyVista: creating it yourself "
@@ -716,16 +923,16 @@ msgid ""
 "just starting out, let's load a file."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:102
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:54
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:101
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:53
 msgid ""
 "Note how this is a :class:`pyvista.PolyData`, which is effectively a surface"
 " dataset containing points, lines, and/or faces. We can immediately plot "
 "this with:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:137
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:125
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:62
 msgid ""
 "This is a fairly basic plot. You can change how its plotted by adding "
 "parameters as ``show_edges=True`` or changing the color by setting ``color``"
@@ -734,8 +941,8 @@ msgid ""
 "another dataset. This one is a volumetric dataset."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:198
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:173
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:75
 msgid ""
 "This is a :class:`pyvista.ImageData`, which is a dataset containing a "
 "uniform set of points with consistent spacing. When we plot this dataset, we"
@@ -743,13 +950,13 @@ msgid ""
 "cells based on the content of the data associated with those cells."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:226
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:201
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:95
 msgid "Read from a file"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:227
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:97
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:202
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:96
 msgid ""
 "You can read datasets directly from a file if you have access to it locally "
 "on your computer. This can be one of the many file formats that VTK "
@@ -757,32 +964,32 @@ msgid ""
 "like `meshio <https://github.com/nschloe/meshio>`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:232
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:102
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:207
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:101
 msgid ""
 "In the following example, we load VTK's iron protein dataset `ironProt.vtk "
 "<https://github.com/naucoin/VTKData/blob/master/Data/ironProt.vtk>`_ from a "
 "file using :func:`pyvista.read`."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:280
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:114
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:255
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:113
 msgid ""
 "This is again a :class:`pyvista.ImageData` and we can plot it volumetrically"
 " with:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:304
-msgid "**Total running time of the script:** ( 0 minutes  11.759 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:279
+msgid "**Total running time of the script:** ( 0 minutes  8.095 seconds)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:323
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:298
 msgid ""
 ":download:`Download Python source code: a_lesson_basic.py "
 "<a_lesson_basic.py>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:327
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:302
 msgid ""
 ":download:`Download Jupyter notebook: a_lesson_basic.ipynb "
 "<a_lesson_basic.ipynb>`"
@@ -952,7 +1159,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:182
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:181
 msgid ""
 ":ref:`sphx_glr_tutorial_01_basic_exercises_a_load_examples_exercise.py`"
 msgstr ""
@@ -988,7 +1195,7 @@ msgstr ""
 msgid "Here's a very basic dataset you can download."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:86
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:85
 msgid ""
 "One thing you might have noticed by now is that the plots here in the online"
 " tutorial may look slightly different than your plots depending on how "
@@ -999,44 +1206,44 @@ msgid ""
 "for displaying within your notebook (if applicable)."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:124
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:123
 msgid "Lesson Material"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:126
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:125
 msgid ""
 "This is the notebook rendering of this page where you can interactively "
 "follow along with this lesson."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:145
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:144
 msgid ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:195
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:194
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:366
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:364
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:499
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:498
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:280
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:279
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:6
 msgid "Solutions"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:197
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:8
 msgid "These are the solutions to the above examples."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:215
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:214
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:26
 msgid ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
-msgid "**00:11.759** total execution time for **tutorial_01_basic** files:"
+msgid "**00:08.095** total execution time for **tutorial_01_basic** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
@@ -1045,7 +1252,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
-msgid "00:11.759"
+msgid "00:08.095"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
@@ -1136,11 +1343,6 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:286
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:76
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/d_create-tri-surface.rst:133
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:64
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:158
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:325
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:379
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:412
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:58
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:70
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:173
@@ -1171,12 +1373,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:187
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:115
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:113
 msgid "What is a Cell?"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:189
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:116
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:114
 msgid ""
 "A cell is the geometry between points that defines the connectivity or "
 "topology of a mesh. In the examples above, cells are defined by the lines "
@@ -1193,12 +1395,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:233
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:147
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:145
 msgid "What are attributes?"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:235
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:148
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:146
 msgid ""
 "Attributes are data values that live on either the points or cells of a "
 "mesh. In PyVista, we work with both point data and cell data and allow easy "
@@ -1209,7 +1411,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:245
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:160
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:158
 msgid "Point Data"
 msgstr ""
 
@@ -1222,7 +1424,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:274
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:173
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:171
 msgid "Cell Data"
 msgstr ""
 
@@ -1241,7 +1443,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:336
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:206
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:204
 msgid "Field Data"
 msgstr ""
 
@@ -1253,7 +1455,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:369
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:215
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:213
 msgid "Assigning Scalars to a Mesh"
 msgstr ""
 
@@ -1265,7 +1467,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:375
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:221
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:219
 msgid "Note how this varies from assigning scalars to each point"
 msgstr ""
 
@@ -1503,7 +1705,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:185
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:317
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:535
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:530
 msgid "Exercise"
 msgstr ""
 
@@ -1689,77 +1891,77 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:53
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:142
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:139
 msgid ""
 "PyVista supports a wide variety of file formats. The supported file "
 "extensions are listed in an internal function:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:66
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:307
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:308
 msgid ""
 "The following code block uses a built-in example file, displays an airplane "
 "mesh and returns the camera's position:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:81
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:336
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:335
 msgid ""
 "Note the above filename, it's a ``.ply`` file - one of the many supported "
 "formats in PyVista."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:84
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:339
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:338
 msgid "Use ``pv.read`` to load the file as a mesh:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:98
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:364
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:363
 msgid "The points from the mesh are directly accessible as a NumPy array:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:110
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:396
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:393
 msgid "The faces from the mesh are also directly accessible as a NumPy array:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:123
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:429
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:424
 msgid ""
 "Loading other files types is just as easy! Simply pass your file path to the"
 " :func:`pyvista.read` function and that's it!"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:126
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:432
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:427
 msgid ""
 "Here are a few other examples - simply replace ``examples.download_*`` in "
 "the examples below with ``pyvista.read('path/to/you/file.ext')``"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:131
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:437
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:432
 msgid "Example STL file:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:144
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:461
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:456
 msgid "Example OBJ file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:157
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:485
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:480
 msgid "Example BYU file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:170
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:509
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:504
 msgid "Example VTK file"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:186
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:536
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:531
 msgid ""
 "Read a file yourself with :func:`pyvista.read`. If you have a supported file"
 " format, use that! Otherwise, download this file: "
@@ -1768,43 +1970,43 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:220
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:579
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:571
 msgid ""
 ":download:`Download Python source code: e_read-file.py <e_read-file.py>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:224
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:585
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:575
 msgid ""
 ":download:`Download Jupyter notebook: e_read-file.ipynb <e_read-file.ipynb>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:284
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:282
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:434
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:433
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:198
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:197
 msgid "Do it yourself"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:302
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:300
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_b_create-point-cloud.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:319
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:317
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_c_create-uniform-grid.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:336
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:334
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_d_create-tri-surface.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:75
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:353
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:351
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_e_read-file.py`"
 msgstr ""
 
@@ -1873,36 +2075,36 @@ msgid ""
 " You can create one by defining a 2D array of Cartesian coordinates like so:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:76
 msgid ""
 "But it's important to note that most meshes have some sort of connectivity "
 "between points such as this gridded mesh:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:98
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:96
 msgid "Or this triangulated surface:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:141
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:139
 msgid ""
 "Cells aren't limited to voxels, they could be a triangle between three "
 "points, a line between two points, or even a single point could be its own "
 "cell (but that's a special case)."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:155
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:153
 msgid ":attr:`point_data <pyvista.DataSet.point_data>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:156
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:154
 msgid ":attr:`cell_data <pyvista.DataSet.cell_data>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:157
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:155
 msgid ":attr:`field_data <pyvista.DataSet.field_data>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:161
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:159
 msgid ""
 "Point data refers to arrays of values (scalars, vectors, etc.) that live on "
 "each point of the mesh.  Each element in an attribute array corresponds to a"
@@ -1910,21 +2112,21 @@ msgid ""
 "plotting, the values between points are interpolated across the cells."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:174
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:172
 msgid ""
 "Cell data refers to arrays of values (scalars, vectors, etc.) that live "
 "throughout each cell of the mesh.  That is the entire cell (2D face or 3D "
 "volume) is assigned the value of that attribute."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:185
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:183
 msgid ""
 "Here's a comparison of point data versus cell data and how point data is "
 "interpolated across cells when mapping colors. This is unlike cell data "
 "which has a single value across the cell's domain:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:207
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:205
 msgid ""
 "Field data is not directly associated with either the points or cells but "
 "still should be attached to the mesh.  This may be a string array storing "
@@ -1932,47 +2134,47 @@ msgid ""
 "<https://docs.pyvista.org/examples/01-filter/collisions.html>`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:217
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:215
 msgid ""
 "Here's how we assign values to cell attributes and plot it.  Here, we "
 "generate cube containing 6 faces and assign each face an integer from "
 "``range(6)`` and then have it plotted."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:238
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:236
 msgid ""
 "We use :func:`pyvista.PolyDataFilters.clean` to merge the faces of the cube "
 "since, by default, the cube is created with unmerged faces and duplicate "
 "points."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:246
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:244
 msgid ""
 "For more examples, please see the mesh creation section of the `PyVista "
 "Examples Gallery <https://docs.pyvista.org/examples/index.html#mesh-"
 "creation>`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:265
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:263
 msgid ":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:384
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:382
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:24
 msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_b_create-point-cloud.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:401
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:399
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:41
 msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_c_create-uniform-grid.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:418
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:416
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:58
 msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_d_create-tri-surface.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:435
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:433
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:75
 msgid ":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py`"
 msgstr ""
@@ -2030,23 +2232,23 @@ msgid ""
 "browser via Binder"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:557
-msgid "**Total running time of the script:** ( 0 minutes  3.294 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:552
+msgid "**Total running time of the script:** ( 0 minutes  2.604 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:8
 msgid ""
-"**00:07.066** total execution time for **tutorial_02_mesh_soultions** files:"
+"**00:02.604** total execution time for **tutorial_02_mesh_soultions** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
 msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_soultions_c_create-uniform-grid.py` "
-"(``c_create-uniform-grid.py``)"
+":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
+"file.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:11
-msgid "00:07.066"
+msgid "00:02.604"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
@@ -2071,14 +2273,14 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
 msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_soultions_d_create-tri-surface.py` "
-"(``d_create-tri-surface.py``)"
+":ref:`sphx_glr_tutorial_02_mesh_soultions_c_create-uniform-grid.py` "
+"(``c_create-uniform-grid.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
 msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_soultions_e_read-file.py` (``e_read-"
-"file.py``)"
+":ref:`sphx_glr_tutorial_02_mesh_soultions_d_create-tri-surface.py` "
+"(``d_create-tri-surface.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:13
@@ -2103,7 +2305,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:70
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:69
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:68
 msgid ""
 "You can customize how that mesh is displayed through the parameters of the "
 ":func:`pyvista.Plotter.add_mesh` method. For example, we can change the "
@@ -2111,26 +2313,26 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:95
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:79
 msgid "Or show the edges of the mesh with ``show_edges``:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:120
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:89
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:88
 msgid ""
 "Or adjust the opacity to be a scalar value or linear transfer function via "
 "the ``opacity`` argument:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:147
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:103
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:102
 msgid ""
 "Take a look at all of the options for `add_mesh "
 "<https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html>`_."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:149
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:105
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:104
 msgid ""
 "The ``add_mesh`` method can be called over and over to add different data to"
 " the same ``Plotter`` scene. For example, we can create many different mesh "
@@ -2138,12 +2340,12 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:196
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:142
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:141
 msgid "Subplotting"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:198
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:144
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:143
 msgid ""
 "Creating side-by-side comparisons of datasets is easy with PyVista's "
 "subplotting API. Get started by specifying the shape of the "
@@ -2153,36 +2355,36 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:228
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:161
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:160
 msgid ""
 "Below is an example of side-by-side comparisons of the contours and slices "
 "of a single dataset."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:232
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:165
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:164
 msgid ""
 "You can link the cameras of both views with the "
 ":func:`pyvista.Plotter.link_views` method"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:268
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:238
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:237
 msgid "Axes and Bounds"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:270
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:240
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:239
 msgid "Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:299
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:254
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:253
 msgid "And bounds similarly with :func:`pyvista.Plotter.show_bounds`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:303
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:258
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:257
 msgid ""
 "See `Plotting Bounds "
 "<https://docs.pyvista.org/examples/02-plot/bounds.html>`_ for more details."
@@ -2468,22 +2670,22 @@ msgid ":download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:369
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:368
 msgid "Bonus Content"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:387
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:386
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:404
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:403
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:421
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:420
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`"
 msgstr ""
 
@@ -2872,17 +3074,17 @@ msgid ":download:`Download Jupyter notebook: c_edl.ipynb <c_edl.ipynb>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:452
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:451
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_a_display_options.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:469
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:468
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_b_lighting_mesh.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:486
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:485
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_c_edl.py`"
 msgstr ""
 
@@ -2963,69 +3165,69 @@ msgid ""
 "fashion."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:188
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:187
 msgid ""
 "Other custom layouts are supported by the ``shape`` argument as string "
 "descriptors:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:190
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:189
 msgid "``shape=\"3|1\"`` means 3 plots on the left and 1 on the right,"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:191
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:190
 msgid "``shape=\"4/2\"`` means 4 plots on top and 2 at the bottom."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:193
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:192
 msgid "Here is an example of three plots on the right and one on the left:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:226
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:225
 msgid ""
 "There is a comprehensive overview of subplotting in the `Multi-Window "
 "Plotting Example <https://docs.pyvista.org/examples/02-plot/multi-"
 "window.html>`_ This example details how to create more complex layouts."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:231
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:230
 msgid "Controlling the Scene"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:235
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:234
 msgid ""
 "For a full list of methods on the :class:`pyvista.Plotter`, please see the "
 "`API documentation "
 "<https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:296
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:295
 msgid ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:313
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:312
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:330
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:329
 msgid ":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:347
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:346
 msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:517
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:516
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:24
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:534
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:533
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:41
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:551
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:550
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:58
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgstr ""
@@ -3207,7 +3409,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:92
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:69
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:68
 msgid ""
 "And now there is a thresholded version of the input dataset in the new "
 "``threshed`` object. To learn more about what keyword arguments are "
@@ -3217,26 +3419,26 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:98
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:75
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:74
 msgid ""
 "We can now plot this filtered dataset along side an outline of the original "
 "dataset"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:127
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:89
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:88
 msgid ""
 "What about other filters? Let's collect a few filter results and compare "
 "them:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:186
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:130
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:129
 msgid "Filter Pipeline"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:188
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:131
 msgid ""
 "In VTK, filters are often used in a pipeline where each algorithm passes its"
 " output to the next filtering algorithm. In PyVista, we can mimic the "
@@ -3245,36 +3447,36 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:193
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:137
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:136
 msgid "First, and empty ``threshold`` filter to clean out any ``NaN`` values."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:194
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:138
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:137
 msgid ""
 "Use an ``elevation`` filter to generate scalar values corresponding to "
 "height."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:195
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:139
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:138
 msgid "Use the ``clip`` filter to cut the dataset in half."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:196
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:140
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:139
 msgid ""
 "Create three slices along each axial plane using the ``slice_orthogonal`` "
 "filter."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:199
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:142
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:141
 msgid "Apply a filtering chain"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:216
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:148
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:147
 msgid ""
 "And to view this filtered data, simply call the ``plot`` method "
 "(``result.plot()``) or create a rendering scene:"
@@ -3623,22 +3825,22 @@ msgid ":download:`Download Jupyter notebook: e_glyphs.ipynb <e_glyphs.ipynb>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:216
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:215
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_b_clipping.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:233
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:232
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_c_compute-normals.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:250
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:249
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_d_contouring.py`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:75
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:267
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:266
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_e_glyphs.py`"
 msgstr ""
 
@@ -3665,26 +3867,26 @@ msgid ""
 "API <https://docs.pyvista.org/api/core/filters.html>`_ for a complete list):"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:179
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:178
 msgid ":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:298
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:297
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:24
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:315
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:314
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:41
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:332
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:331
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:58
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:349
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:348
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:75
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 msgstr ""
@@ -4114,7 +4316,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:508
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:283
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:282
 msgid ""
 "Under the hood, the collision filter detects mesh collisions using oriented "
 "bounding box (OBB) trees.  For a single collision, this filter is as "
@@ -4153,12 +4355,12 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst-1
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:295
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:294
 msgid "PyVista and VTK Together"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:297
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:296
 msgid ""
 "PyVista is best known for is easy to use plotting API -- being familiar to "
 "most Python users already experienced with libraries like Matplotlib. Many "
@@ -4168,7 +4370,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:28
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:301
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:300
 msgid ""
 "In case it was not made clear in the :ref:`mesh` section, PyVista mesh "
 "classes are subclasses of their VTK counterparts - which means PyVista can "
@@ -4176,7 +4378,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:30
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:303
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:302
 msgid ""
 "Nothing stops you from using VTK classes and then wrapping the output with "
 "PyVista for streamlined plotting. For example:"
@@ -4191,26 +4393,26 @@ msgid "wrap and plot using pyvista"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:101
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:323
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:322
 msgid ""
 "In this manner, you can get the \"best of both worlds\" should you need the "
 "flexibility of PyVista and the raw power of VTK."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:105
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:327
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:326
 msgid ""
 "You can use :func:`pyvista.Polygon` for a one line replacement of the above "
 "VTK code."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:111
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:331
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:330
 msgid "VTK Algorithms"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:113
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:333
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:332
 msgid ""
 "Perhaps there is a VTK algorithm that is not (yet) exposed in PyVista that "
 "you'd like to use. This is easy enough to work with since PyVista objects "
@@ -4243,7 +4445,7 @@ msgid "Use PyVista to plot"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:248
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:373
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:372
 msgid ""
 "The above example was adapted from VTK's `Embed Points Into Volume "
 "<https://kitware.github.io/vtk-"
@@ -4441,19 +4643,19 @@ msgid ""
 " of the PyVista documentation."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:403
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:402
 msgid ":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:420
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:419
 msgid ":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:437
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:436
 msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:454
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:453
 msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ""
 
@@ -4488,6 +4690,10 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:6
 msgid "PyVista and Sphinx"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:8
+msgid "Leverage PyVista to make some awesome interactive web documentation."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:12
@@ -4580,8 +4786,8 @@ msgstr ""
 msgid ""
 "Likewise, output from PyVista that would normally be rendered within a "
 "notebook will be rendered in the output cell from the ``jupyter-execute`` "
-"directive. For example, here's a plot using the `pythreejs "
-"<https://github.com/jupyter-widgets/pythreejs>`_ backend::"
+"directive. For example, here's a plot using the `trame "
+"<https://github.com/Kitware/trame>`_ backend::"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:109
@@ -4589,18 +4795,18 @@ msgid "Which is rendered as:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:119
-msgid "Using the ``Panel`` backend with PyVista"
+msgid "Using the ``Trame`` backend with PyVista"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:120
 msgid ""
-"PyVista supports the usage of the `panel "
-"<https://github.com/holoviz/panel>`_ library as a ``vtk.js`` jupyterlab "
+"PyVista supports the usage of the `trame "
+"<https://github.com/Kitware/trame>`_ library as a ``vtk.js`` jupyterlab "
 "plotting backend that can be utilized as either a standalone VTK viewer, or "
 "as a tightly integrated ``pyvista`` plotting backend.  For example, within a"
-" Jupyter notebook environment, you can pass ``jupyter_backend='panel'`` to "
+" Jupyter notebook environment, you can pass ``jupyter_backend='trame'`` to "
 "``plot``, or ``Plotter.show`` to automatically enable plotting with Juptyer "
-"and ``panel``."
+"and ``trame``."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:127
@@ -4617,72 +4823,72 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:145
 msgid ""
-"There are two ways to use `panel <https://github.com/holoviz/panel>`_ within"
+"There are two ways to use `trame <https://github.com/Kitware/trame>`_ within"
 " Jupyter notebooks.  You can use it on a plot by plot basis by setting the "
 "``jupyter_backend`` in ``mesh.plot()``::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:164
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:163
 msgid "And here's the resulting output in Sphinx:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:183
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:181
 msgid ""
 "Or you can first hide code that sets up the plotting backend and global "
 "theme::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:201
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:197
 msgid "And now just directly execute ``plot`` on any dataset::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:209
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:205
 msgid "Which looks like:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:219
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:215
 msgid ""
-"You have the option of choosing `panel <https://github.com/holoviz/panel>`_ "
-"or `pythreejs <https://github.com/jupyter-widgets/pythreejs>`_ as a backend,"
-" but you might find that `panel <https://github.com/holoviz/panel>`_ has "
-"better support as it's being actively developed."
+"You have the option of choosing `trame <https://github.com/Kitware/trame>`_ "
+"or `trame <https://github.com/Kitware/trame>`_ as a backend, but you might "
+"find that `trame <https://github.com/Kitware/trame>`_ has better support as "
+"it's being actively developed."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:228
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:224
 msgid ""
 "Generate Sphinx documentation on your own using the `pyvista/pyvista-doc-"
 "example <https://github.com/pyvista/pyvista-doc-example>`_ repository. "
 "Either clone the repository with::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:234
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:230
 msgid "Or just download the zip of the repository."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:236
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:232
 msgid "pyvista-doc-example-main.zip"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:244
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:240
 msgid "Build the documentation"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:246
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:242
 msgid ""
 "Once you've downloaded `pyvista/pyvista-doc-example "
 "<https://github.com/pyvista/pyvista-doc-example>`_, cd into the directory "
 "and install the documentation build requirements with::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:253
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:249
 msgid "Finally, build the documentation locally with::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:258
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:254
 msgid "Or, if on Windows::"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:263
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:259
 msgid ""
 "You will then find the generated documentation within the ``doc/_build`` "
 "directory. Open up ``index.html`` using your browser to see the "
@@ -5445,4 +5651,56 @@ msgid ""
 "Display/Article/1503043/afrl-signs-first-of-its-kind-software-license-with-"
 "pratt-whitney/>`_ is a mesh metamorphosis software particularly suited for "
 "updating finite element models to match optical scan data."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:6
+msgid "PyVista and Trame"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:8
+msgid ""
+"Trame is an open-source platform for creating interactive and powerful "
+"visual analytics applications. Based on Python, and leveraging platforms "
+"such as VTK, ParaView, and Vega, it is possible to create web-based "
+"applications in minutes."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:12
+msgid ""
+"Learn more about `Kitware's Trame "
+"<https://kitware.github.io/trame/index.html>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:14
+msgid ""
+"PyVista and Trame work excellently together to provide a cutting-edge "
+"capabilities for 3D visualization in reactive web applications."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:17
+msgid ""
+"Trame provides a high-level framework for building reactive, stateful web "
+"applications"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:18
+msgid ""
+"PyVista provides a high-level framework for 3D visualization, exposing VTK "
+"in a “Pythonic” manner"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:20
+msgid ""
+"High-level framework 1 + high-level framework 2 = a streamlined approach to "
+"making powerful web applications with 3D visualization front and center."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:24
+msgid ""
+"PyVista's Jupyter backend is powered by Trame! Our Jupyter backend is a "
+"micro Trame application."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:29
+msgid "To be continued..."
 msgstr ""
