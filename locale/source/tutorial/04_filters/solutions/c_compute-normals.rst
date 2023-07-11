@@ -75,11 +75,12 @@ exaggerated topographic relief.
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>2333880</td></tr>
     <tr><td>N Points</td><td>2336041</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-1.000e+00, 1.000e+00</td></tr>
     <tr><td>Y Bounds</td><td>-1.000e+00, 1.000e+00</td></tr>
     <tr><td>Z Bounds</td><td>-1.000e+00, 1.000e+00</td></tr>
@@ -87,7 +88,7 @@ exaggerated topographic relief.
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>altitude</b></td><td>Points</td><td>float32</td><td>1</td><td>-1.042e+04</td><td>6.527e+03</td></tr>
     <tr><td>Normals</td><td>Points</td><td>float32</td><td>3</td><td>-1.000e+00</td><td>1.000e+00</td></tr>
@@ -141,7 +142,7 @@ And let's see it!
 
 .. GENERATED FROM PYTHON SOURCE LINES 40-43
 
-We could also use face/cell normals to extract all the faces of a mesh
+We could also use face or cell normals to extract all the faces of a mesh
 facing a general direction. In the following snippet, we take a mesh, compute
 the normals along its cell faces, and extract the faces that face upward.
 
@@ -182,35 +183,30 @@ the normals along its cell faces, and extract the faces that face upward.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.232 seconds)
+   **Total running time of the script:** ( 1 minutes  1.521 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/c_compute-normals.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/c_compute-normals.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: c_compute-normals.py <c_compute-normals.py>`
 
-     :download:`Download Python source code: c_compute-normals.py <c_compute-normals.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: c_compute-normals.ipynb <c_compute-normals.ipynb>`
+      :download:`Download Jupyter notebook: c_compute-normals.ipynb <c_compute-normals.ipynb>`
 
 
 .. only:: html

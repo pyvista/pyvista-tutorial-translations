@@ -62,11 +62,12 @@ Clip any dataset by a user defined plane using the
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>1000</td></tr>
     <tr><td>N Points</td><td>872</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-1.316e-01, 1.802e-01</td></tr>
     <tr><td>Y Bounds</td><td>-1.205e-01, 1.877e-01</td></tr>
     <tr><td>Z Bounds</td><td>-1.430e-01, 9.851e-02</td></tr>
@@ -74,7 +75,7 @@ Clip any dataset by a user defined plane using the
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td>Normals</td><td>Points</td><td>float32</td><td>3</td><td>-9.998e-01</td><td>9.977e-01</td></tr>
     </table>
@@ -96,8 +97,6 @@ Clip any dataset by a user defined plane using the
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Help on method clip in module pyvista.core.filters.data_set:
@@ -110,32 +109,31 @@ Clip any dataset by a user defined plane using the
     
         Parameters
         ----------
-        normal : tuple(float) or str
+        normal : tuple(float) or str, default: 'x'
             Length 3 tuple for the normal vector direction. Can also
             be specified as a string conventional direction such as
-            ``'x'`` for ``(1,0,0)`` or ``'-x'`` for ``(-1,0,0)``, etc.
+            ``'x'`` for ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
     
-        origin : tuple(float), optional
-            The center ``(x,y,z)`` coordinate of the plane on which the clip
+        origin : sequence[float], optional
+            The center ``(x, y, z)`` coordinate of the plane on which the clip
             occurs. The default is the center of the dataset.
     
-        invert : bool, optional
+        invert : bool, default: True
             Flag on whether to flip/invert the clip.
     
-        value : float, optional
+        value : float, default: 0.0
             Set the clipping value along the normal direction.
-            The default value is 0.0.
     
-        inplace : bool, optional
+        inplace : bool, default: False
             Updates mesh in-place.
     
-        return_clipped : bool, optional
+        return_clipped : bool, default: False
             Return both unclipped and clipped parts of the dataset.
     
-        progress_bar : bool, optional
+        progress_bar : bool, default: False
             Display a progress bar to indicate progress.
     
-        crinkle : bool, optional
+        crinkle : bool, default: False
             Crinkle the clip by extracting the entire cells along the
             clip. This adds the ``"cell_ids"`` array to the ``cell_data``
             attribute that tracks the original cell IDs of the original
@@ -191,11 +189,12 @@ Perform a clip with a Y axis normal
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>427</td></tr>
     <tr><td>N Points</td><td>248</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-1.316e-01, 1.326e-01</td></tr>
     <tr><td>Y Bounds</td><td>3.360e-02, 1.877e-01</td></tr>
     <tr><td>Z Bounds</td><td>-1.430e-01, 8.721e-02</td></tr>
@@ -203,7 +202,7 @@ Perform a clip with a Y axis normal
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td>Normals</td><td>Points</td><td>float32</td><td>3</td><td>-9.927e-01</td><td>9.977e-01</td></tr>
     </table>
@@ -213,7 +212,11 @@ Perform a clip with a Y axis normal
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-39
+.. GENERATED FROM PYTHON SOURCE LINES 31-32
+
+Plot the result.
+
+.. GENERATED FROM PYTHON SOURCE LINES 32-40
 
 .. code-block:: default
 
@@ -237,7 +240,7 @@ Perform a clip with a Y axis normal
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-45
+.. GENERATED FROM PYTHON SOURCE LINES 41-48
 
 Clip with Bounds
 ++++++++++++++++
@@ -245,7 +248,9 @@ Clip with Bounds
 Clip any dataset by a set of XYZ bounds using the
 :func:`pyvista.DataSetFilters.clip_box` filter.
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-47
+First, download an example dataset.
+
+.. GENERATED FROM PYTHON SOURCE LINES 48-50
 
 .. code-block:: default
 
@@ -258,7 +263,7 @@ Clip any dataset by a set of XYZ bounds using the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-50
+.. GENERATED FROM PYTHON SOURCE LINES 51-53
 
 .. code-block:: default
 
@@ -269,8 +274,6 @@ Clip any dataset by a set of XYZ bounds using the
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -283,8 +286,8 @@ Clip any dataset by a set of XYZ bounds using the
     
         Parameters
         ----------
-        bounds : tuple(float), optional
-            Length 6 sequence of floats: (xmin, xmax, ymin, ymax, zmin, zmax).
+        bounds : sequence[float], optional
+            Length 6 sequence of floats: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
             Length 3 sequence of floats: distances from the min coordinate of
             of the input mesh. Single float value: uniform distance from the
             min coordinate. Length 12 sequence of length 3 sequence of floats:
@@ -293,21 +296,21 @@ Clip any dataset by a set of XYZ bounds using the
             a box with 6 faces that all form a standard box, then planes will
             be extracted from the box to define the clipping region.
     
-        invert : bool, optional
+        invert : bool, default: True
             Flag on whether to flip/invert the clip.
     
-        factor : float, optional
+        factor : float, default: 0.35
             If bounds are not given this is the factor along each axis to
             extract the default box.
     
-        progress_bar : bool, optional
+        progress_bar : bool, default: False
             Display a progress bar to indicate progress.
     
-        merge_points : bool, optional
-            If ``True`` (default), coinciding points of independently
-            defined mesh elements will be merged.
+        merge_points : bool, default: True
+            If ``True``, coinciding points of independently defined mesh
+            elements will be merged.
     
-        crinkle : bool, optional
+        crinkle : bool, default: False
             Crinkle the clip by extracting the entire cells along the
             clip. This adds the ``"cell_ids"`` array to the ``cell_data``
             attribute that tracks the original cell IDs of the original
@@ -335,12 +338,12 @@ Clip any dataset by a set of XYZ bounds using the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-53
+.. GENERATED FROM PYTHON SOURCE LINES 54-56
 
 Clip the dataset with a bounding box defined by the values in ``bounds``
-(xmin, xmax, ymin, ymax, zmin, zmax)
+``(xmin, xmax, ymin, ymax, zmin, zmax)``
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-57
+.. GENERATED FROM PYTHON SOURCE LINES 56-60
 
 .. code-block:: default
 
@@ -356,8 +359,8 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>UnstructuredGrid</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>38690</td></tr>
     <tr><td>N Points</td><td>9438</td></tr>
@@ -368,7 +371,7 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>scalars</b></td><td>Points</td><td>float32</td><td>1</td><td>-3.870e+00</td><td>7.186e-01</td></tr>
     <tr><td>vectors</td><td>Points</td><td>float32</td><td>3</td><td>-6.729e-01</td><td>4.289e-01</td></tr>
@@ -379,7 +382,11 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-65
+.. GENERATED FROM PYTHON SOURCE LINES 61-62
+
+Plot the original dataset and the clipped one.
+
+.. GENERATED FROM PYTHON SOURCE LINES 62-69
 
 .. code-block:: default
 
@@ -402,7 +409,7 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-75
 
 Clip with Rotated Box
 +++++++++++++++++++++
@@ -410,7 +417,7 @@ Clip with Rotated Box
 Clip any dataset by an arbitrarily rotated solid box using the
 :func:`pyvista.DataSetFilters.clip_box` filter.
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-82
+.. GENERATED FROM PYTHON SOURCE LINES 75-86
 
 .. code-block:: default
 
@@ -437,11 +444,11 @@ Clip any dataset by an arbitrarily rotated solid box using the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-84
+.. GENERATED FROM PYTHON SOURCE LINES 87-88
 
-Run the box clipping algorithm with the defined box geometry
+Run the box clipping algorithm with the defined box geometry.
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-96
+.. GENERATED FROM PYTHON SOURCE LINES 88-100
 
 .. code-block:: default
 
@@ -469,7 +476,7 @@ Run the box clipping algorithm with the defined box geometry
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-107
+.. GENERATED FROM PYTHON SOURCE LINES 101-111
 
 Crinkled Clipping
 +++++++++++++++++
@@ -482,7 +489,7 @@ This option is available for :func:`pyvista.DataSetFilters.clip`,
 :func:`pyvista.DataSetFilters.clip_sruface`, but not available when clipping
 by scalar in :func:`pyvista.DataSetFilters.clip_scalar`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-111
+.. GENERATED FROM PYTHON SOURCE LINES 111-115
 
 .. code-block:: default
 
@@ -497,11 +504,11 @@ by scalar in :func:`pyvista.DataSetFilters.clip_scalar`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-113
+.. GENERATED FROM PYTHON SOURCE LINES 116-117
 
 Define clipping plane
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-116
+.. GENERATED FROM PYTHON SOURCE LINES 117-120
 
 .. code-block:: default
 
@@ -515,11 +522,11 @@ Define clipping plane
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-118
+.. GENERATED FROM PYTHON SOURCE LINES 121-122
 
 Perform a standard clip
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-120
+.. GENERATED FROM PYTHON SOURCE LINES 122-124
 
 .. code-block:: default
 
@@ -532,11 +539,11 @@ Perform a standard clip
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-122
+.. GENERATED FROM PYTHON SOURCE LINES 125-126
 
 Perform a crinkled clip to compare
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-124
+.. GENERATED FROM PYTHON SOURCE LINES 126-128
 
 .. code-block:: default
 
@@ -549,11 +556,11 @@ Perform a crinkled clip to compare
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-126
+.. GENERATED FROM PYTHON SOURCE LINES 129-130
 
 Plot comparison
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-134
+.. GENERATED FROM PYTHON SOURCE LINES 130-138
 
 .. code-block:: default
 
@@ -580,35 +587,30 @@ Plot comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.428 seconds)
+   **Total running time of the script:** ( 0 minutes  2.636 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/b_clipping.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/b_clipping.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: b_clipping.py <b_clipping.py>`
 
-     :download:`Download Python source code: b_clipping.py <b_clipping.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: b_clipping.ipynb <b_clipping.ipynb>`
+      :download:`Download Jupyter notebook: b_clipping.ipynb <b_clipping.ipynb>`
 
 
 .. only:: html

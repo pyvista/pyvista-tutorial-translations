@@ -23,7 +23,7 @@
 Basic Usage Lesson
 ==================
 
-This section demonstrates how to use PyVista to reading and plotting 3D data
+This section demonstrates how to use PyVista to read and plot 3D data
 using the `pyvista.examples.downloads
 <https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_
 module and external files.
@@ -33,10 +33,10 @@ module and external files.
 .. code-block:: default
 
 
-    # Configure for trame
-    import pyvista
+    import pyvista as pv
 
-    pyvista.set_plot_theme('document')
+    # Set the default plot theme to the "document" theme.
+    pv.set_plot_theme('document')
 
 
 
@@ -106,7 +106,7 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
 .. code-block:: default
 
 
-    dataset.plot(color='tan')
+    dataset.plot()
 
 
 
@@ -116,6 +116,17 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
    :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.png
    :class: sphx-glr-single-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    INFO:root:awaiting runner setup
+    INFO:root:awaiting site startup
+    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7fb1a6970130>
+    INFO:root:Print WSLINK_READY_MSG
+    INFO:root:Schedule auto shutdown with timout 0
+    INFO:root:awaiting running future
 
 
 
@@ -139,6 +150,19 @@ one is a volumetric dataset.
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.zraw HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.zraw HTTP/1.1" 200 5173190
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.mhd HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.mhd HTTP/1.1" 200 214
 
 
 .. raw:: html
@@ -199,8 +223,8 @@ the content of the data associated with those cells.
 
 Read from a file
 ~~~~~~~~~~~~~~~~
-You can read datasets directly from a file if you have access to it locally on
-your computer. This can be one of the many file formats that VTK supports, and
+You can read datasets directly from a file if you have access to it on your
+environment. This can be one of the many file formats that VTK supports, and
 many more that it doesn't as PyVista can rely on libraries like `meshio
 <https://github.com/nschloe/meshio>`_.
 
@@ -208,12 +232,10 @@ In the following example, we load VTK's iron protein dataset `ironProt.vtk
 <https://github.com/naucoin/VTKData/blob/master/Data/ironProt.vtk>`_ from a
 file using :func:`pyvista.read`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-80
+.. GENERATED FROM PYTHON SOURCE LINES 74-78
 
 .. code-block:: default
 
-
-    import pyvista as pv
 
     dataset = pv.read('ironProt.vtk')
     dataset
@@ -250,12 +272,12 @@ file using :func:`pyvista.read`.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-83
+.. GENERATED FROM PYTHON SOURCE LINES 79-81
 
 This is again a :class:`pyvista.ImageData` and we can plot it volumetrically
 with:
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-85
+.. GENERATED FROM PYTHON SOURCE LINES 81-83
 
 .. code-block:: default
 
@@ -276,7 +298,7 @@ with:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.095 seconds)
+   **Total running time of the script:** ( 0 minutes  10.482 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_a_lesson_basic.py:
