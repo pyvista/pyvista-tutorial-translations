@@ -31,10 +31,10 @@ Download and plot example datasets.
 
 PyVista contains many downloadable datasets documented at
 `pyvista.examples.downloads
-<https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_. you can download these through Python and then immediately plot them.
+<https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_. You can download these through Python and then immediately plot them.
 
 This is an easy way to immediately get started with example datasets within
-PyVista without having to manually copy and load them.
+PyVista without having to manually download and load them.
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-25
 
@@ -45,7 +45,7 @@ Import PyVista and the examples module
 
 .. code-block:: default
 
-    import pyvista
+    import pyvista as pv
     from pyvista import examples
 
 
@@ -78,11 +78,12 @@ automatically loaded right into Python.
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>351536</td></tr>
     <tr><td>N Points</td><td>178091</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>2.742e+00, 7.847e+01</td></tr>
     <tr><td>Y Bounds</td><td>0.000e+00, 7.969e+01</td></tr>
     <tr><td>Z Bounds</td><td>0.000e+00, 9.961e+01</td></tr>
@@ -90,7 +91,7 @@ automatically loaded right into Python.
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td>Unnamed_0</td><td>Points</td><td>float32</td><td>3</td><td>-1.000e+00</td><td>1.000e+00</td></tr>
     </table>
@@ -149,7 +150,7 @@ Download the bolt dataset. This is an excellent dataset to visualize using
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Information</th><th>Blocks</th></tr><tr><td>
+    <table style='width: 100%;'><tr><th>Information</th><th>Blocks</th></tr><tr><td>
     <table>
     <tr><th>MultiBlock</th><th>Values</th></tr>
     <tr><td>N Blocks</td><td>2</td></tr>
@@ -161,8 +162,8 @@ Download the bolt dataset. This is an excellent dataset to visualize using
     </td><td>
     <table>
     <tr><th>Index</th><th>Name</th><th>Type</th></tr>
-    <tr><th>0</th><th>bolt</th><th>UniformGrid</th></tr>
-    <tr><th>1</th><th>nut</th><th>UniformGrid</th></tr>
+    <tr><th>0</th><th>bolt</th><th>ImageData</th></tr>
+    <tr><th>1</th><th>nut</th><th>ImageData</th></tr>
     </table>
 
     </td></tr> </table>
@@ -170,17 +171,19 @@ Download the bolt dataset. This is an excellent dataset to visualize using
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-58
+.. GENERATED FROM PYTHON SOURCE LINES 55-59
 
 Volume DataSet - Plot
 ~~~~~~~~~~~~~~~~~~~~~
-Here, we plot the dataset using a custom view direction.
+Here, we plot the dataset using a custom view direction using
+:class:`pyvista.Plotter`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-69
+.. GENERATED FROM PYTHON SOURCE LINES 59-71
 
 .. code-block:: default
 
-    pl = pyvista.Plotter()
+
+    pl = pv.Plotter()
     _ = pl.add_volume(
         dataset,
         cmap="coolwarm",
@@ -203,7 +206,7 @@ Here, we plot the dataset using a custom view direction.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-77
+.. GENERATED FROM PYTHON SOURCE LINES 72-79
 
 Exercise #1 - Use PyVista Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -213,7 +216,7 @@ If your IDE supports it, you should be able to type
 ``dataset = examples.download_`` and press tab to see all the available
 examples you can download.
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-88
+.. GENERATED FROM PYTHON SOURCE LINES 79-90
 
 .. code-block:: default
 
@@ -240,7 +243,7 @@ examples you can download.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 89-102
+.. GENERATED FROM PYTHON SOURCE LINES 91-104
 
 Exercise #2 - Download and View a File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -256,12 +259,12 @@ one from the following sources:
 Download the file ``'P_shelf_pin.stl'`` from
 https://www.thingiverse.com/thing:5412753
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-105
+.. GENERATED FROM PYTHON SOURCE LINES 104-107
 
 .. code-block:: default
 
 
-    mesh = pyvista.read('P_shelf_pin.stl')
+    mesh = pv.read('P_shelf_pin.stl')
     mesh.plot()
 
 
@@ -278,35 +281,30 @@ https://www.thingiverse.com/thing:5412753
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.067 seconds)
+   **Total running time of the script:** ( 0 minutes  7.082 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/01_basic/solutions/a_load_examples_solution.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/01_basic/solutions/a_load_examples_solution.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_load_examples_solution.py <a_load_examples_solution.py>`
 
-     :download:`Download Python source code: a_load_examples_solution.py <a_load_examples_solution.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_load_examples_solution.ipynb <a_load_examples_solution.ipynb>`
+      :download:`Download Jupyter notebook: a_load_examples_solution.ipynb <a_load_examples_solution.ipynb>`
 
 
 .. only:: html

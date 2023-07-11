@@ -55,14 +55,14 @@ use directly on the object. These filters include the following
 * `outline_corners()`_: Outlines the corners of the data extent
 * `extract_geometry()`_: Extract surface geometry
 
-.. _slice(): https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.slice.html
-.. _slice_orthogonal(): https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.slice_orthogonal.html
-.. _slice_along_axis(): https://docs.pyvista.org/api/core/_autosummary/pyvista.PolyData.slice_along_axis.html
-.. _threshold(): https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSetFilters.threshold.html
-.. _threshold_percent(): https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSetFilters.threshold_percent.html
-.. _clip(): https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.clip.html
-.. _outline_corners(): https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.outline_corners.html
-.. _extract_geometry(): https://docs.pyvista.org/api/core/_autosummary/pyvista.DataSet.extract_geometry.html
+.. _slice(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.slice.html
+.. _slice_orthogonal(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.slice_orthogonal.html
+.. _slice_along_axis(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.slice_along_axis.html
+.. _threshold(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.threshold.html
+.. _threshold_percent(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.threshold_percent.html
+.. _clip(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.clip.html
+.. _outline_corners(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.outline_corners.html
+.. _extract_geometry(): https://docs.pyvista.org/version/stable/api/core/_autosummary/pyvista.DataSetFilters.extract_geometry.html
 
 To use these filters, call the method of your choice directly on your data
 object:
@@ -133,7 +133,7 @@ What about other filters? Let's collect a few filter results and compare them:
 
     contours = dataset.contour()
     slices = dataset.slice_orthogonal()
-    glyphs = dataset.glyph(factor=1e-3, geom=pv.Sphere())
+    glyphs = dataset.glyph(factor=1e-3, geom=pv.Sphere(), orient=False)
 
     p = pv.Plotter(shape=(2, 2))
     # Show the threshold
@@ -167,15 +167,6 @@ What about other filters? Let's collect a few filter results and compare them:
    :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/pyvista/core/filters/data_set.py:2037: UserWarning: No vector-like data to use for orient. orient will be set to False.
-      warnings.warn("No vector-like data to use for orient. orient will be set to False.")
 
 
 
@@ -241,35 +232,30 @@ And to view this filtered data, simply call the ``plot`` method
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.961 seconds)
+   **Total running time of the script:** ( 0 minutes  10.588 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_a_lesson_filters.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/a_lesson_filters.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/a_lesson_filters.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_lesson_filters.py <a_lesson_filters.py>`
 
-     :download:`Download Python source code: a_lesson_filters.py <a_lesson_filters.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_lesson_filters.ipynb <a_lesson_filters.ipynb>`
+      :download:`Download Jupyter notebook: a_lesson_filters.ipynb <a_lesson_filters.ipynb>`
 
 
 .. only:: html

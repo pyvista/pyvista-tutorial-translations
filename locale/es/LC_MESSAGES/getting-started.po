@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-08 00:40+0000\n"
+"POT-Creation-Date: 2023-07-11 00:38+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Spanish (https://app.transifex.com/tkoyama010/teams/112279/es/)\n"
 "MIME-Version: 1.0\n"
@@ -23,92 +23,65 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:6
 msgid ""
-"The only prerequisite for installing PyVista is Python itself. If you don’t "
+"The only prerequisite for installing PyVista is Python itself. If you don't "
 "have Python yet and want the simplest way to get started, we recommend you "
 "use the `Anaconda Distribution`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:10
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:12
 msgid ""
-"PyVista can be installed locally with :ref:`conda`, with :ref:`pip`. If "
-"you'd prefer it, you can also run PyVista on the cloud using :ref:`colab` or"
-" :ref:`mybinder`. For more detailed instructions, see the installation guide"
-" below."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:17
-msgid "Installation"
+"PyVista can be installed locally with conda or pip. If you'd prefer it, you "
+"can also run PyVista on the cloud using :ref:`colab` or :ref:`mybinder`. For"
+" more detailed instructions, see the installation guide below."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:19
+msgid "Installation"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:21
 msgid ""
 "PyVista can be installed on several environments, including, but not limited"
 " to:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:21
-msgid "**Locally**"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:23
-msgid ":ref:`pip`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:24
-msgid ":ref:`conda`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:26
-msgid "**Cloud**"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:28
-msgid ":ref:`colab`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:29
-msgid ":ref:`mybinder`"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:35
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:67
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:25
 msgid "pip"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:37
-msgid "If you're using ``pip``, then installation is just::"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:47
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:73
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:31
 msgid "conda"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:49
-msgid "Install PyVista using the `Anaconda Distribution`_::"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:60
-msgid "Additional Packages"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:62
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:40
 msgid ""
-"If you prefer working within a Jupyter environment, we recommend you install"
-" the following packages:"
+"You can then plot in Jupyter with either a static or interactive backend:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:80
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:54
+msgid "MyBinder"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:55
 msgid ""
-"You can then plot using Jupyterlab or Jupyter Notebook interactively with "
-"one of three backends:"
+"MyBinder, similar to Google Colab, allows you to run Jupyter notebooks on "
+"the cloud. Click on the link below to open up a MyBinder environment to run "
+"PyVista."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:101
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:59
+msgid "|binder|"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Launch on Binder"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:69
 msgid "Google Colab"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:102
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:70
 msgid ""
 "Google Colab is a moving target and many of the \"cloud ready\" JavaScript "
 "plotting environments that make PyVista so great to work with do not seem to"
@@ -117,29 +90,10 @@ msgid ""
 " plotting."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:107
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:75
 msgid ""
 "Visit the `PyVista on Colab  "
 "<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_"
 " notebook to see PyVista in action. The minimum code to get PyVista running "
 "in a Colab environment is:"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:125
-msgid "MyBinder"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:126
-msgid ""
-"MyBinder, similar to Google Colab, allows you to run Jupyter notebooks on "
-"the cloud. Click on the link below to open up a MyBinder environment to run "
-"PyVista."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:130
-msgid "|binder|"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
-msgid "Launch on Binder"
 msgstr ""
