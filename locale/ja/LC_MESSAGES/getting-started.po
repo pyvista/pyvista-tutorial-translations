@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2022
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 00:38+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2022\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,8 @@ msgid ""
 "have Python yet and want the simplest way to get started, we recommend you "
 "use the `Anaconda Distribution`_."
 msgstr ""
+"PyVistaをインストールするための唯一の前提条件は，Pythonそのものです．Pythonをまだ持っていなくて，最も簡単な方法で始めたい場合は， "
+"`Anaconda Distribution`_ を使うことをお勧めします．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:12
 msgid ""
@@ -38,6 +40,9 @@ msgid ""
 "can also run PyVista on the cloud using :ref:`colab` or :ref:`mybinder`. For"
 " more detailed instructions, see the installation guide below."
 msgstr ""
+"PyVista は conda や pip を使ってローカルにインストールできます．また，クラウド上で :ref:`colab` や "
+":ref:`mybinder` を使って PyVista "
+"を実行することもできます．より詳細な手順については，以下のインストールガイドを参照してください．"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:19
 msgid "Installation"
@@ -60,7 +65,7 @@ msgstr "conda"
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:40
 msgid ""
 "You can then plot in Jupyter with either a static or interactive backend:"
-msgstr ""
+msgstr "その後、Jupyterで静的またはインタラクティブなバックエンドでプロットすることができます:"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:54
 msgid "MyBinder"

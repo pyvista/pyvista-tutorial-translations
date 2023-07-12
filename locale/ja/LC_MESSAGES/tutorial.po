@@ -443,6 +443,8 @@ msgid ""
 "As of July 2023, Over 100+ contributors and `~1.9k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
+"2023年7月現在，GitHubに100人以上のコントリビューターと `~1.9k Stars "
+"<https://github.com/pyvista/pyvista/stargazers>`_ がいます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
@@ -940,7 +942,7 @@ msgstr "これは，環境変数で設定することもできます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:132
 msgid "The prefix will need to be modified for JupyterHub deployments."
-msgstr ""
+msgstr "JupyterHubのデプロイメントではプレフィックスを変更する必要があります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:134
 msgid ""
@@ -7499,15 +7501,15 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:0
 msgid "Code"
-msgstr ""
+msgstr "コード"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:0
 msgid "Web App"
-msgstr ""
+msgstr "ウェブアプリ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:0
 msgid "A simple Trame application with PyVista"
-msgstr ""
+msgstr "PyVistaを使ったシンプルなTrameアプリケーション"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:105
 msgid ""
@@ -7515,34 +7517,36 @@ msgid ""
 "in Jupyter lately, you've been using Trame all along -- our Jupyter backend "
 "is a micro Trame application."
 msgstr ""
+"PyVistaのJupyterバックエンドはTrameで動いています! "
+"最近JupyterでPyVistaを使っているなら，ずっとTrameを使っているはずです．JupyterバックエンドはマイクロTrameアプリケーションです．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:113
 msgid "Do not run these examples in Jupyter but rather as standalone scripts."
-msgstr ""
+msgstr "これらの例をJupyterで実行するのではなく，スタンドアロンのスクリプトとして実行すること．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:131
 msgid ":ref:`sphx_glr_tutorial_09_trame_a_trame_simple.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_a_trame_simple.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:148
 msgid ":ref:`sphx_glr_tutorial_09_trame_b_trame_actor_color.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_b_trame_actor_color.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:165
 msgid ":ref:`sphx_glr_tutorial_09_trame_c_trame_scalars.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_c_trame_scalars.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:182
 msgid ":ref:`sphx_glr_tutorial_09_trame_d_trame_scalar_range.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_d_trame_scalar_range.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:199
 msgid ":ref:`sphx_glr_tutorial_09_trame_e_trame_algorithm.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_e_trame_algorithm.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:216
 msgid ":ref:`sphx_glr_tutorial_09_trame_f_trame_open_file.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_09_trame_f_trame_open_file.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:8
 msgid ""
