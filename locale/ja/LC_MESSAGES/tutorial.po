@@ -451,6 +451,9 @@ msgid ""
 "Used by at least 1.8k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
+"GitHubにある他の `libraries, examples, and repositories "
+"<https://github.com/pyvista/pyvista/network/dependents>`_ "
+"で少なくとも1.8k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
@@ -520,7 +523,7 @@ msgstr "簡単な例"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
 msgid "Read and Plot a Surface Mesh"
-msgstr ""
+msgstr "サーフェスメッシュの読み込みとプロット"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:85
 msgid ""
@@ -649,6 +652,8 @@ msgid ""
 "`vedo <https://vedo.embl.es/>`_ is a Python library for scientific analysis "
 "of 3D objects and point clouds based on VTK and numpy."
 msgstr ""
+"`vedo <https://vedo.embl.es/>`_ "
+"は，VTKとnumpyをベースにした，3Dオブジェクトや点群の科学的解析のためのPythonライブラリです．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:269
@@ -784,7 +789,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst-1
 msgid "PyVista's Jupyter backend"
-msgstr ""
+msgstr "PyVistaのJupyterバックエンド"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:19
 msgid "Trame Jupyter Backend for PyVista"
@@ -951,15 +956,18 @@ msgid ""
 " In PyVista, we automatically check for the presence of this variable and "
 "prepend it to the ``server_proxy_prefix``."
 msgstr ""
+"MyBinderでは、 ``JUPYTERHUB_SERVICE_PREFIX`` の文字列の前に ``'/proxy/'`` "
+"を付ける必要があることが多いです．これにより，接頭辞にユーザIDがURLに含まれるようになります． PyVista "
+"では，この変数があるかどうかを自動的にチェックし， ``server_proxy_prefix`` の前に追加します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst-1
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:22
 msgid "Test out PyVista's Jupyter Backend"
-msgstr ""
+msgstr "PyVistaのJupyterバックエンドを試す"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:155
 msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:13
 msgid ""
@@ -967,18 +975,21 @@ msgid ""
 "download the full example code or to run this example in your browser via "
 "Binder"
 msgstr ""
+"Click :ref:`here <sphx_glr_download_tutorial_00_jupyter_jupyter.py>` to "
+"download the full example code or to run this example in your browser via "
+"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:24
 msgid "Become familiar with PyVista Jupyter backend."
-msgstr ""
+msgstr "PyVista Jupyterバックエンドに慣れる．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:77
 msgid "Client-side rendering only (in browser)"
-msgstr ""
+msgstr "(ブラウザで)クライアント側レンダリングのみ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:111
 msgid "Server-side rendering only"
-msgstr ""
+msgstr "サーバー側レンダリングのみ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:144
 msgid "**Total running time of the script:** ( 0 minutes  5.973 seconds)"
