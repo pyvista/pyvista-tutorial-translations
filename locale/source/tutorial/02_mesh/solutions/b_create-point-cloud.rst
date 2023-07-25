@@ -47,7 +47,7 @@ scalar arrays for those points.
 Point clouds are generally constructed using :class:`pyvista.PolyData` and
 can easily have scalar or vector data arrays associated with the individual
 points. In this example, we'll start by working backwards using a point cloud
-that that is available from our ``examples`` module. This however is no
+that is available from our ``examples`` module. This however is no
 different than creating a PyVista mesh with your own NumPy arrays of vertice
 locations.
 
@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81112075e+05, 4.40014210e+06, 1.75889001e+03],
-                     [4.81090475e+05, 4.40017980e+06, 1.75892004e+03],
-                     [4.81035475e+05, 4.40010050e+06, 1.76231006e+03],
-                     [4.81079775e+05, 4.40013230e+06, 1.75987000e+03],
-                     [4.81081775e+05, 4.40009940e+06, 1.76091003e+03]])
+    pyvista_ndarray([[4.81027275e+05, 4.40013680e+06, 1.76597998e+03],
+                     [4.81020375e+05, 4.40008160e+06, 1.76268994e+03],
+                     [4.81062375e+05, 4.40013540e+06, 1.76450000e+03],
+                     [4.80997675e+05, 4.40012780e+06, 1.76157996e+03],
+                     [4.80942975e+05, 4.40021220e+06, 1.75857996e+03]])
 
 
 
@@ -116,7 +116,7 @@ data or your own project, create a PyVista mesh using those points.
     <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
     <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
-    <tr><td>Z Bounds</td><td>1.754e+03, 1.787e+03</td></tr>
+    <tr><td>Z Bounds</td><td>1.754e+03, 1.785e+03</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -171,6 +171,17 @@ perception with point clouds (learn more about `EDL
    :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
    :class: sphx-glr-single-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    INFO:root:awaiting runner setup
+    INFO:root:awaiting site startup
+    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7f314a5d8dc0>
+    INFO:root:Print WSLINK_READY_MSG
+    INFO:root:Schedule auto shutdown with timout 0
+    INFO:root:awaiting running future
 
 
 
@@ -289,11 +300,11 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[-0.36860508,  0.59088429, -0.71762529],
-                     [-0.95828986, -0.28301647, -0.03977723],
-                     [-0.53974308,  0.6470905 ,  0.53847125],
-                     [-0.69810642,  0.54794191, -0.46087644],
-                     [-0.59241647,  0.78368573, -0.18676028]])
+    pyvista_ndarray([[ 0.37897427,  0.74304629, -0.55159833],
+                     [ 0.53638054, -0.8438915 ,  0.0119603 ],
+                     [-0.52843137, -0.18563476, -0.82843227],
+                     [-0.23040867,  0.61120185, -0.75719492],
+                     [-0.04603609, -0.67725433, -0.73430733]])
 
 
 
@@ -355,7 +366,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.455 seconds)
+   **Total running time of the script:** ( 0 minutes  12.139 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:

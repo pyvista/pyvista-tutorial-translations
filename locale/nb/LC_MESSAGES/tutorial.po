@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-11 00:38+0000\n"
+"POT-Creation-Date: 2023-07-25 00:37+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Norwegian Bokmål (https://app.transifex.com/tkoyama010/teams/112279/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -276,7 +276,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:233
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:459
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:388
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:399
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:9263
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:389
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:582
@@ -1557,9 +1557,9 @@ msgid ""
 "Point clouds are generally constructed using :class:`pyvista.PolyData` and "
 "can easily have scalar or vector data arrays associated with the individual "
 "points. In this example, we'll start by working backwards using a point "
-"cloud that that is available from our ``examples`` module. This however is "
-"no different than creating a PyVista mesh with your own NumPy arrays of "
-"vertice locations."
+"cloud that is available from our ``examples`` module. This however is no "
+"different than creating a PyVista mesh with your own NumPy arrays of vertice"
+" locations."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:70
@@ -1586,7 +1586,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:111
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:180
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:191
 msgid ""
 "Now what if you have data attributes (scalar or vector arrays) that you'd "
 "like to associate with every point of your mesh? You can easily add NumPy "
@@ -1596,7 +1596,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:117
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:186
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:197
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:187
 msgid ""
 "Make an array of scalar values with the same length as the points array. "
@@ -1604,19 +1604,19 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:121
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:190
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:201
 msgid ""
 "You can use a component of the ``points`` array or use the ``n_points`` "
 "property of the mesh to make an array of that length."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:134
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:210
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:221
 msgid "Add that data to the mesh with the name \"elevation\"."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:146
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:228
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:239
 msgid ""
 "And now we can plot the point cloud with that elevation data. PyVista is "
 "smart enough to plot the scalar array you added by default. This time, let's"
@@ -1624,7 +1624,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:159
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:252
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:263
 msgid ""
 "That data is kind of boring, right? You can also add data arrays with more "
 "than one scalar value - perhaps a vector with three elements? Let's make a "
@@ -1633,20 +1633,20 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:164
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:257
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:268
 msgid ""
 "This time, we're going to create a totally new, random point cloud "
 "containing 100 points using :func:`numpy.random.random`."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:193
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:302
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:313
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:301
 msgid "Add the vector array as point data to the new mesh:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:197
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:320
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:331
 msgid ""
 "Now we can make arrows using those vectors using the glyph filter (see the "
 "`Glyph Example <https://docs.pyvista.org/examples/01-filter/glyphs.html>`_ "
@@ -1654,7 +1654,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:243
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:377
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:388
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:378
 msgid ""
 ":download:`Download Python source code: b_create-point-cloud.py <b_create-"
@@ -1662,7 +1662,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:247
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:381
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:392
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:384
 msgid ""
 ":download:`Download Jupyter notebook: b_create-point-cloud.ipynb <b_create-"
@@ -2304,8 +2304,8 @@ msgid ""
 " your browser via Binder"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:358
-msgid "**Total running time of the script:** ( 0 minutes  7.455 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:369
+msgid "**Total running time of the script:** ( 0 minutes  12.139 seconds)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:13
@@ -2354,47 +2354,54 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:8
 msgid ""
-"**00:19.825** total execution time for **tutorial_02_mesh_solutions** files:"
+"**00:12.139** total execution time for **tutorial_02_mesh_solutions** files:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:11
-msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` "
-"(``c_create-uniform-grid.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:11
-msgid "00:08.402"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:13
 msgid ""
 ":ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py` "
 "(``b_create-point-cloud.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:11
+msgid "00:12.139"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:13
-msgid "00:07.455"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:15
 msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py` (``e_read-"
-"file.py``)"
+":ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` "
+"(``c_create-uniform-grid.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
+msgid "00:00.000"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:15
-msgid "00:02.499"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:17
 msgid ""
 ":ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py` "
 "(``d_create-tri-surface.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:17
-msgid "00:01.468"
+msgid ""
+":ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py` (``e_read-"
+"file.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/b_create-point-cloud.rst:13
@@ -2640,22 +2647,6 @@ msgstr ""
 msgid ""
 ":ref:`sphx_glr_tutorial_02_mesh_soultions_b_create-point-cloud.py` "
 "(``b_create-point-cloud.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:17
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:17
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:13
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:15
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:17
-msgid "00:00.000"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
