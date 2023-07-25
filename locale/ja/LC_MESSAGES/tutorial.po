@@ -1752,6 +1752,9 @@ msgid ""
 "different than creating a PyVista mesh with your own NumPy arrays of vertice"
 " locations."
 msgstr ""
+"点群は一般的に :class:`pyvista.PolyData` を使用して構築され， "
+"個々の点に関連付けられたスカラーまたはベクトルデータ配列を簡単に持つことができます．この例では， まず ``examples`` "
+"モジュールから入手可能な点群を使って逆算してみます．ただし，これは独自の頂点位置のNumPy配列を使用してPyVistaメッシュを作成するのと同じです．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:70
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:92
@@ -2595,7 +2598,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:369
 msgid "**Total running time of the script:** ( 0 minutes  12.139 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  12.139 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:13
 msgid ""
@@ -2656,6 +2659,7 @@ msgstr "**Total running time of the script:** ( 0 minutes  2.499 seconds)"
 msgid ""
 "**00:12.139** total execution time for **tutorial_02_mesh_solutions** files:"
 msgstr ""
+"**00:12.139** total execution time for **tutorial_02_mesh_solutions** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:11
 msgid ""
@@ -2667,7 +2671,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:11
 msgid "00:12.139"
-msgstr ""
+msgstr "00:12.139"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:13
 msgid ""
