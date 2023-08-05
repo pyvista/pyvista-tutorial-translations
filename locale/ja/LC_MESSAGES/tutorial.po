@@ -2421,9 +2421,8 @@ msgid ""
 "<https://docs.pyvista.org/user-guide/data_model.html>`_."
 msgstr ""
 "これは，PyVistaのデータ構造に慣れるための，PyVista APIの非常にハイレベルな概要です． "
-"データモデルの詳細，VTKデータモデルとの関係，独自のメッシュを作成する方法については， "
-"`データモデルの詳細ガイド<https://docs.pyvista.org/user-guide/data_model.html>`_ "
-"を参照してください．"
+"データモデルの詳細，VTKデータモデルとの関係，独自のメッシュを作成する方法については， `データモデルの詳細ガイド "
+"<https://docs.pyvista.org/user-guide/data_model.html>`_ を参照してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:41
 msgid "What is a point?"
