@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:31
 msgid "Download the Tutorial's Jupyter Notebooks"
-msgstr "チュートリアルのJupyter Notebooksをダウンロードする"
+msgstr "Download the Tutorial's Jupyter Notebooks"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:39
 msgid "Questions"
