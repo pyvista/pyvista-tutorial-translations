@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-25 00:37+0000\n"
+"POT-Creation-Date: 2023-08-15 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Li Zhou, 2023\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
@@ -2210,7 +2210,7 @@ msgid ":attr:`cell_data <pyvista.DataSet.cell_data>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:155
-msgid ":attr:`field_data <pyvista.DataSet.field_data>`"
+msgid ":attr:`field_data <pyvista.DataObject.field_data>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:159
