@@ -2479,7 +2479,7 @@ msgstr ":attr:`cell_data <pyvista.DataSet.cell_data>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:155
 msgid ":attr:`field_data <pyvista.DataObject.field_data>`"
-msgstr ""
+msgstr ":attr:`field_data <pyvista.DataObject.field_data>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:159
 msgid ""
