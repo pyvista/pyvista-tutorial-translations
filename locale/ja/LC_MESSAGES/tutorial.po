@@ -59,7 +59,7 @@ msgstr "ご質問"
 msgid ""
 "If you have any questions about PyVista, feel free to post your questions in"
 " |discuss|."
-msgstr ""
+msgstr "PyVistaについて何か質問があれば， |discuss| に気軽に投稿してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:0
 msgid "discuss"
