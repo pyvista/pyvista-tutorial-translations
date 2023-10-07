@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 00:32+0000\n"
+"POT-Creation-Date: 2023-10-07 00:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -473,7 +473,7 @@ msgid "`Python Libraries for Mesh, Point Cloud, and Data Visualization <https://
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:233
-msgid "`How does PyVista relate to other visualization tools? <https://github.com/pyvista/pyvista/issues/146>`_"
+msgid "`How does PyVista relate to other visualization tools? <https://github.com/pyvista/pyvista/discussions/1438>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
