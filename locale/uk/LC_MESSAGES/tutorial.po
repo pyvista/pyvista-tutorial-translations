@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-26 00:32+0000\n"
+"POT-Creation-Date: 2023-10-07 00:29+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Ukrainian (https://app.transifex.com/tkoyama010/teams/112279/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -551,7 +551,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:233
 msgid ""
 "`How does PyVista relate to other visualization tools? "
-"<https://github.com/pyvista/pyvista/issues/146>`_"
+"<https://github.com/pyvista/pyvista/discussions/1438>`_"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
