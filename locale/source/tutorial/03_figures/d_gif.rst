@@ -28,18 +28,7 @@ Generate a moving gif from an active plotter.
    Use ``lighting=False`` to reduce the size of the color space to avoid
    "jittery" GIFs, especially for the scalar bar.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-55
-
-
-
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_d_gif_001.png
-   :alt: d gif
-   :srcset: /tutorial/03_figures/images/sphx_glr_d_gif_001.png
-   :class: sphx-glr-single-img
-
-
-
-
+.. GENERATED FROM PYTHON SOURCE LINES 13-56
 
 .. code-block:: default
 
@@ -87,37 +76,54 @@ Generate a moving gif from an active plotter.
     plotter.close()
 
 
+
+
+.. image-sg:: /tutorial/03_figures/images/sphx_glr_d_gif_001.gif
+   :alt: d gif
+   :srcset: /tutorial/03_figures/images/sphx_glr_d_gif_001.gif
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 57-64
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/d_gif.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
+
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.496 seconds)
+   **Total running time of the script:** ( 0 minutes  2.931 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_d_gif.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/d_gif.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/d_gif.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: d_gif.py <d_gif.py>`
 
-     :download:`Download Python source code: d_gif.py <d_gif.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`
+      :download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`
 
 
 .. only:: html

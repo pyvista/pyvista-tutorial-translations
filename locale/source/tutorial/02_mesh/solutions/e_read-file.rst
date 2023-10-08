@@ -326,7 +326,7 @@ file, displays an airplane mesh and returns the camera's position:
  .. code-block:: none
 
 
-    '/opt/hostedtoolcache/Python/3.9.17/x64/lib/python3.9/site-packages/pyvista/examples/airplane.ply'
+    '/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/examples/airplane.ply'
 
 
 
@@ -532,7 +532,7 @@ Read a file yourself with :func:`pyvista.read`. If you have a supported file
 format, use that! Otherwise, download this file:
 https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-101
+.. GENERATED FROM PYTHON SOURCE LINES 98-102
 
 .. code-block:: default
 
@@ -547,9 +547,20 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 103-110
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/e_read-file.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
+
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.499 seconds)
+   **Total running time of the script:** ( 0 minutes  2.501 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py:

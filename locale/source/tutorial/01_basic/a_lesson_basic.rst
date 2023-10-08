@@ -117,17 +117,6 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    INFO:root:awaiting runner setup
-    INFO:root:awaiting site startup
-    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7fb1a6970130>
-    INFO:root:Print WSLINK_READY_MSG
-    INFO:root:Schedule auto shutdown with timout 0
-    INFO:root:awaiting running future
-
 
 
 
@@ -150,19 +139,6 @@ one is a volumetric dataset.
 
 
 
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.zraw HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.zraw HTTP/1.1" 200 5173190
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.mhd HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.mhd HTTP/1.1" 200 214
 
 
 .. raw:: html
@@ -277,12 +253,13 @@ file using :func:`pyvista.read`.
 This is again a :class:`pyvista.ImageData` and we can plot it volumetrically
 with:
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-83
+.. GENERATED FROM PYTHON SOURCE LINES 81-84
 
 .. code-block:: default
 
 
     dataset.plot(volume=True)
+
 
 
 
@@ -295,10 +272,20 @@ with:
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 85-92
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/01_basic/a_lesson_basic.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.482 seconds)
+   **Total running time of the script:** ( 0 minutes  7.938 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_a_lesson_basic.py:

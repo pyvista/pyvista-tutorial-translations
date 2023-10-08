@@ -34,10 +34,16 @@ cartographic capability.
 GeoVista is a very good external example of using PyVista in a more concrete
 use case.
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-22
+.. GENERATED FROM PYTHON SOURCE LINES 17-28
 
 .. code-block:: default
 
+
+    import subprocess
+    import sys
+
+    if "google.colab" in sys.modules:
+        subprocess.run("pip install geovista", shell=True, check=True)
 
     import geovista as gv
     import geovista.theme
@@ -50,7 +56,7 @@ use case.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-43
+.. GENERATED FROM PYTHON SOURCE LINES 29-49
 
 .. note:: **Motivation of GeoVista**
 
@@ -73,7 +79,7 @@ use case.
 
     Simply put, "GeoVista is to PyVista", as "Cartopy is to Matplotlib".
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-52
+.. GENERATED FROM PYTHON SOURCE LINES 51-58
 
 .. note:: **Plotting Theme**
 
@@ -83,7 +89,7 @@ use case.
      <https://docs.pyvista.org/version/stable/examples/02-plot/themes.html>`_
      ).
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-61
+.. GENERATED FROM PYTHON SOURCE LINES 60-67
 
 At the `Met Office <https://www.metoffice.gov.uk/>`_ , they are moving to an
 unstructured cube-sphere mesh which is a cube projected out onto a sphere
@@ -93,7 +99,7 @@ C48 cube-sphere, so there are 6 * 48 * 48 cells.
 
 GeoVista has samples for it.
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-64
+.. GENERATED FROM PYTHON SOURCE LINES 67-70
 
 .. code-block:: default
 
@@ -135,7 +141,7 @@ GeoVista has samples for it.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-67
+.. GENERATED FROM PYTHON SOURCE LINES 71-73
 
 .. code-block:: default
 
@@ -148,19 +154,19 @@ GeoVista has samples for it.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-72
+.. GENERATED FROM PYTHON SOURCE LINES 74-78
 
 .. note:: **LFRic - a modelling system fit for future computers**
 
      If you are interested in LFRic, please refer to
      `LFRic - a modelling system fit for future computers <https://www.metoffice.gov.uk/research/approach/modelling-systems/lfric>`_ .
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-76
+.. GENERATED FROM PYTHON SOURCE LINES 80-82
 
 Since the `c48` is defined as PolyData in PyVista, it can be drawn using
 PyVista's plot method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-79
+.. GENERATED FROM PYTHON SOURCE LINES 82-85
 
 .. code-block:: default
 
@@ -176,27 +182,16 @@ PyVista's plot method.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    INFO:root:awaiting runner setup
-    INFO:root:awaiting site startup
-    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7f8a5b0a3ac0>
-    INFO:root:Print WSLINK_READY_MSG
-    INFO:root:Schedule auto shutdown with timout 0
-    INFO:root:awaiting running future
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 80-83
+.. GENERATED FROM PYTHON SOURCE LINES 86-89
 
 Here's a sample C48 cube-sphere populated with Sea Surface Temperature data.
 In this data, cell data from PyVista's PolyData object is used as temperature
 data:
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-86
+.. GENERATED FROM PYTHON SOURCE LINES 89-92
 
 .. code-block:: default
 
@@ -231,7 +226,7 @@ data:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-90
+.. GENERATED FROM PYTHON SOURCE LINES 93-96
 
 .. code-block:: default
 
@@ -247,29 +242,20 @@ data:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/pantry/qrclim.sst.ugrid.nc.bz2 HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/pantry/qrclim.sst.ugrid.nc.bz2 HTTP/1.1" 200 243327
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 91-92
+.. GENERATED FROM PYTHON SOURCE LINES 97-98
 
 Note that, the land masses are masked.
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-97
+.. GENERATED FROM PYTHON SOURCE LINES 100-103
 
 There is a convenience within `geovista.geodesic` that creates a
 `geovista.geodesic.BBox` instance for any 1 of the 6 cube-sphere panels i.e.,
 `geovista.geodesic.panel`
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-102
+.. GENERATED FROM PYTHON SOURCE LINES 103-108
 
 .. code-block:: default
 
@@ -317,7 +303,7 @@ There is a convenience within `geovista.geodesic` that creates a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-107
+.. GENERATED FROM PYTHON SOURCE LINES 109-113
 
 .. code-block:: default
 
@@ -337,7 +323,7 @@ There is a convenience within `geovista.geodesic` that creates a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 108-114
+.. GENERATED FROM PYTHON SOURCE LINES 114-120
 
 Note that, this bounding box (bbox) is constructed from geodesic lines i.e.,
 great circles, and is a 3D manifold. As such, we can then use it to extract
@@ -346,7 +332,7 @@ the bounding box and the mesh together so that we can see their relationship
 to one another. Note that, our bbox instance is indeed covering the correct
 panel of the cube-sphere.
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-122
+.. GENERATED FROM PYTHON SOURCE LINES 120-128
 
 .. code-block:: default
 
@@ -370,13 +356,13 @@ panel of the cube-sphere.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-126
+.. GENERATED FROM PYTHON SOURCE LINES 129-132
 
 As a fun exercise, you could play with opacity on the bbox.mesh to see
 through the manifold to the underlying cube-sphere surface, or turn on the
 gridlines of the bbox etc
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-134
+.. GENERATED FROM PYTHON SOURCE LINES 132-140
 
 .. code-block:: default
 
@@ -400,11 +386,11 @@ gridlines of the bbox etc
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-136
+.. GENERATED FROM PYTHON SOURCE LINES 141-142
 
 Let's now use the bounding box to extract the mesh that it encloses:
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-139
+.. GENERATED FROM PYTHON SOURCE LINES 142-145
 
 .. code-block:: default
 
@@ -418,11 +404,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-141
+.. GENERATED FROM PYTHON SOURCE LINES 146-147
 
 `region` is defined as PolyData of PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-144
+.. GENERATED FROM PYTHON SOURCE LINES 147-150
 
 .. code-block:: default
 
@@ -524,6 +510,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      non-float.  Default ``True``. Set this to ``False`` to allow
      |      non-float types, though this may lead to truncation of
      |      intermediate floats when transforming datasets.
+     |  
+     |  
+     |  See Also
+     |  --------
+     |  pyvista.PolyData.from_regular_faces
      |  
      |  Examples
      |  --------
@@ -682,6 +673,37 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      
      |      >>> sphere = pyvista.Sphere()
      |      >>> sphere.save('my_mesh.vtk')  # doctest:+SKIP
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  from_regular_faces(points, faces: Union[numpy.ndarray, Sequence[Sequence[int]]], deep=False) from builtins.type
+     |      Alternate `pyvista.PolyData` convenience constructor from point and regular face arrays.
+     |      
+     |      Parameters
+     |      ----------
+     |      points : numpy.ndarray, sequence[sequence[float]]
+     |          A (n_points, 3) array of points.
+     |      
+     |      faces : numpy.ndarray or sequence[sequence[int]]
+     |          A (n_faces, face_size) array of face indices. For a triangle mesh, face_size = 3.
+     |      
+     |      deep : bool, optional, default: False
+     |          Whether to deep copy the faces array into vtkCellArray connectivity data.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.PolyData
+     |          The newly constructed mesh.
+     |      
+     |      Examples
+     |      --------
+     |      Construct a tetrahedron from four triangles
+     |      
+     |      >>> import pyvista as pv
+     |      >>> points = [[1.0, 1, 1], [-1, 1, -1], [1, -1, -1], [-1, -1, 1]]
+     |      >>> faces = [[0, 1, 2], [1, 3, 2], [0, 2, 3], [0, 3, 1]]
+     |      >>> tetra = pv.PolyData.from_regular_faces(points, faces)
      |  
      |  ----------------------------------------------------------------------
      |  Readonly properties defined here:
@@ -939,6 +961,10 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      numpy.ndarray
      |          Array of face connectivity.
      |      
+     |      See Also
+     |      --------
+     |      pyvista.PolyData.regular_faces
+     |      
      |      Notes
      |      -----
      |      The array returned cannot be modified in place and will raise a
@@ -984,6 +1010,36 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> spline = pyvista.Spline(points, 10)
      |      >>> spline.lines
      |      array([10,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9])
+     |  
+     |  regular_faces
+     |      Return a face array of point indices when all faces have the same size.
+     |      
+     |      Returns
+     |      -------
+     |      numpy.ndarray
+     |          Array of face indices with shape (n_faces, face_size).
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.PolyData.faces
+     |      
+     |      Notes
+     |      -----
+     |      This property does not validate that the mesh's faces are all
+     |      actually the same size. If they're not, this property may either
+     |      raise a `ValueError` or silently return an incorrect array.
+     |      
+     |      Examples
+     |      --------
+     |      Get the face array of a tetrahedron as a 4x3 array
+     |      
+     |      >>> import pyvista as pv
+     |      >>> tetra = pv.Tetrahedron()
+     |      >>> tetra.regular_faces
+     |      array([[0, 1, 2],
+     |             [1, 3, 2],
+     |             [0, 2, 3],
+     |             [0, 3, 1]])
      |  
      |  strips
      |      Return a pointer to the strips as a numpy array.
@@ -2933,7 +2989,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  __getitem__(self, index: 'Union[Iterable, str]') -> 'np.ndarray'
      |      Search both point, cell, and field data for an array.
      |  
-     |  __setitem__(self, name: 'str', scalars: 'Union[np.ndarray, collections.abc.Sequence]')
+     |  __setitem__(self, name: 'str', scalars: 'Union[np.ndarray, collections.abc.Sequence, float]')
      |      Add/set an array in the point_data, or cell_data accordingly.
      |      
      |      It depends on the array's length, or specified mode.
@@ -3034,38 +3090,6 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> grid = mesh.cast_to_unstructured_grid()
      |      >>> type(grid)
      |      <class 'pyvista.core.pointset.UnstructuredGrid'>
-     |  
-     |  cell_bounds(self, ind: 'int') -> 'BoundsLike'
-     |      Return the bounding box of a cell.
-     |      
-     |      ..  deprecated:: 0.38.0
-     |          Use :attr:`pyvista.Cell.bounds` instead.
-     |      
-     |      Parameters
-     |      ----------
-     |      ind : int
-     |          Cell ID.
-     |      
-     |      Returns
-     |      -------
-     |      tuple[float, float, float]
-     |          The limits of the cell in the X, Y and Z directions respectively.
-     |  
-     |  cell_n_points(self, ind: 'int') -> 'int'
-     |      Return the number of points in a cell.
-     |      
-     |      .. deprecated:: 0.38.0
-     |          Use :attr:`pyvista.Cell.n_points` instead.
-     |      
-     |      Parameters
-     |      ----------
-     |      ind : int
-     |          Cell ID.
-     |      
-     |      Returns
-     |      -------
-     |      int
-     |          Number of points in the cell.
      |  
      |  cell_neighbors(self, ind: 'int', connections: 'str' = 'points') -> 'List[int]'
      |      Get the cell neighbors of the ind-th cell.
@@ -3268,56 +3292,6 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> pl.camera.zoom(6.0)
      |      >>> pl.show()
      |  
-     |  cell_point_ids(self, ind: 'int') -> 'List[int]'
-     |      Return the point ids in a cell.
-     |      
-     |      .. deprecated:: 0.38.0
-     |          You can use :attr:`pyvista.Cell.point_ids` instead.
-     |      
-     |      Parameters
-     |      ----------
-     |      ind : int
-     |          Cell ID.
-     |      
-     |      Returns
-     |      -------
-     |      list[int]
-     |          Point Ids that are associated with the cell.
-     |  
-     |  cell_points(self, ind: 'int') -> 'np.ndarray'
-     |      Return the points in a cell.
-     |      
-     |      ..  deprecated:: 0.38.0
-     |          Use :attr:`pyvista.Cell.points` instead.
-     |      
-     |      Parameters
-     |      ----------
-     |      ind : int
-     |          Cell ID.
-     |      
-     |      Returns
-     |      -------
-     |      numpy.ndarray
-     |          An array of floats with shape (number of points, 3) containing the coordinates of the
-     |          cell corners.
-     |  
-     |  cell_type(self, ind: 'int') -> 'int'
-     |      Return the type of a cell.
-     |      
-     |      .. deprecated:: 0.38.0
-     |          You can use :attr:`pyvista.Cell.type` instead.
-     |      
-     |      Parameters
-     |      ----------
-     |      ind : int
-     |          Cell type ID.
-     |      
-     |      Returns
-     |      -------
-     |      int
-     |          VTK cell type. See `vtkCellType.h
-     |          <https://vtk.org/doc/nightly/html/vtkCellType_8h_source.html>`_ .
-     |  
      |  clear_cell_data(self)
      |      Remove all cell arrays.
      |  
@@ -3352,12 +3326,6 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> mesh.clear_point_data()
      |      >>> mesh.point_data.keys()
      |      []
-     |  
-     |  clear_textures(self)
-     |      Clear the textures from this mesh.
-     |      
-     |      .. deprecated:: 0.40.0
-     |          Texture tracking on datasets is deprecated and will be removed in a future version of PyVista.
      |  
      |  copy_from(self, mesh: '_vtk.vtkDataSet', deep: 'bool' = True)
      |      Overwrite this dataset inplace with the new dataset's geometries and data.
@@ -3435,7 +3403,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> import pyvista
      |      >>> mesh = pyvista.Sphere()
      |      >>> mesh.find_cells_along_line([0.0, 0, 0], [1.0, 0, 0])
-     |      array([842, 843, 896, 897])
+     |      array([  86,   87, 1652, 1653])
      |  
      |  find_cells_intersecting_line(self, pointa: 'Iterable[float]', pointb: 'Iterable[float]', tolerance=0.0) -> 'np.ndarray'
      |      Find the index of cells that intersect a line.
@@ -3473,7 +3441,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> import pyvista
      |      >>> mesh = pyvista.Sphere()
      |      >>> mesh.find_cells_intersecting_line([0.0, 0, 0], [1.0, 0, 0])
-     |      array([896])
+     |      array([  86, 1653])
      |  
      |  find_cells_within_bounds(self, bounds: 'Iterable[float]') -> 'np.ndarray'
      |      Find the index of cells in this mesh within bounds.
@@ -3559,7 +3527,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> point = [0.1, 0.2, 0.3]
      |      >>> index = mesh.find_closest_cell(point)
      |      >>> index
-     |      591
+     |      338
      |      
      |      Make sure that this cell indeed is the closest to
      |      ``[0.1, 0.2, 0.3]``.
@@ -3569,7 +3537,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> relative_position = cell_centers.points - point
      |      >>> distance = np.linalg.norm(relative_position, axis=1)
      |      >>> np.argmin(distance)
-     |      591
+     |      338
      |      
      |      Find the nearest cells to several random points that
      |      are centered on the origin.
@@ -3639,7 +3607,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> mesh = pyvista.Sphere()
      |      >>> index = mesh.find_closest_point((0, 1, 0))
      |      >>> index
-     |      212
+     |      239
      |      
      |      Get the coordinate of that point.
      |      
@@ -4059,7 +4027,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |          screenshots without a window popping up.  Defaults to the
      |          global setting ``pyvista.OFF_SCREEN``.
      |      
-     |      full_screen : bool, default: :attr:`pyvista.themes.Theme.full_screen`
+     |      full_screen : bool, default: :attr:`pyvista.plotting.themes.Theme.full_screen`
      |          Opens window in full screen.  When enabled, ignores
      |          ``window_size``.
      |      
@@ -4071,26 +4039,26 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |          When ``True``, takes screenshot and returns ``numpy`` array of
      |          image.
      |      
-     |      interactive : bool, default: :attr:`pyvista.themes.Theme.interactive`
+     |      interactive : bool, default: :attr:`pyvista.plotting.themes.Theme.interactive`
      |          Allows user to pan and move figure.
      |      
      |      cpos : list, optional
      |          List of camera position, focal point, and view up.
      |      
-     |      window_size : sequence, default: :attr:`pyvista.themes.Theme.window_size`
+     |      window_size : sequence, default: :attr:`pyvista.plotting.themes.Theme.window_size`
      |          Window size in pixels.
      |      
      |      show_bounds : bool, default: False
      |          Shows mesh bounds when ``True``.
      |      
-     |      show_axes : bool, default: :attr:`pyvista.themes._AxesConfig.show`
+     |      show_axes : bool, default: :attr:`pyvista.plotting.themes._AxesConfig.show`
      |          Shows a vtk axes widget.
      |      
-     |      notebook : bool, default: :attr:`pyvista.themes.Theme.notebook`
+     |      notebook : bool, default: :attr:`pyvista.plotting.themes.Theme.notebook`
      |          When ``True``, the resulting plot is placed inline a jupyter
      |          notebook.  Assumes a jupyter console is active.
      |      
-     |      background : ColorLike, default: :attr:`pyvista.themes.Theme.background`
+     |      background : ColorLike, default: :attr:`pyvista.plotting.themes.Theme.background`
      |          Color of the background.
      |      
      |      text : str, optional
@@ -4109,14 +4077,12 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      parallel_projection : bool, default: False
      |          Enable parallel projection.
      |      
-     |      jupyter_backend : str, default: :attr:`pyvista.themes.Theme.jupyter_backend`
+     |      jupyter_backend : str, default: :attr:`pyvista.plotting.themes.Theme.jupyter_backend`
      |          Jupyter notebook plotting backend to use.  One of the
      |          following:
      |      
      |          * ``'none'`` : Do not display in the notebook.
      |          * ``'static'`` : Display a static figure.
-     |          * ``'ipygany'`` : Show a ``ipygany`` widget
-     |          * ``'panel'`` : Show a ``panel`` widget.
      |          * ``'trame'`` : Display using ``trame``.
      |      
      |          This can also be set globally with
@@ -4133,17 +4099,19 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      jupyter_kwargs : dict, optional
      |          Keyword arguments for the Jupyter notebook plotting backend.
      |      
-     |      theme : pyvista.themes.Theme, optional
+     |      theme : pyvista.plotting.themes.Theme, optional
      |          Plot-specific theme.
      |      
-     |      hidden_line_removal : bool, default: :attr:`pyvista.themes.Theme.hidden_line_removal`
+     |      hidden_line_removal : bool, default: :attr:`pyvista.plotting.themes.Theme.hidden_line_removal`
      |          Wireframe geometry will be drawn using hidden line removal if
      |          the rendering engine supports it.  See
      |          :func:`Plotter.enable_hidden_line_removal
      |          <Plotter.enable_hidden_line_removal>`.
      |      
-     |      anti_aliasing : bool, default: :attr:`pyvista.themes.Theme.anti_aliasing`
-     |          Enable or disable anti-aliasing.
+     |      anti_aliasing : str | bool, default: :attr:`pyvista.plotting.themes.Theme.anti_aliasing`
+     |          Enable or disable anti-aliasing. If ``True``, uses ``"msaa"``. If False,
+     |          disables anti_aliasing. If a string, should be either ``"fxaa"`` or
+     |          ``"ssaa"``.
      |      
      |      zoom : float, str, optional
      |          Camera zoom.  Either ``'tight'`` or a float. A value greater than 1
@@ -4763,6 +4731,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  active_scalars
      |      Return the active scalars as an array.
+     |      
+     |      Returns
+     |      -------
+     |      Optional[pyvista_ndarray]
+     |          Active scalars as an array.
      |  
      |  active_scalars_info
      |      Return the active scalar's association and name.
@@ -4796,12 +4769,27 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  active_tensors
      |      Return the active tensors array.
+     |      
+     |      Returns
+     |      -------
+     |      Optional[np.ndarray]
+     |          Active tensors array.
      |  
      |  active_tensors_info
      |      Return the active tensor's field and name: [field, name].
+     |      
+     |      Returns
+     |      -------
+     |      ActiveArrayInfo
+     |          Active tensor's field and name: [field, name].
      |  
      |  active_vectors
      |      Return the active vectors array.
+     |      
+     |      Returns
+     |      -------
+     |      Optional[pyvista_ndarray]
+     |          Active vectors array.
      |      
      |      Examples
      |      --------
@@ -4891,6 +4879,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      
      |      This makes sure to put the active scalars' name first in the list.
      |      
+     |      Returns
+     |      -------
+     |      List[str]
+     |          List of array names for the dataset.
+     |      
      |      Examples
      |      --------
      |      Return the array names for a mesh.
@@ -4928,7 +4921,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  bounds
      |      Return the bounding box of this dataset.
      |      
-     |      The form is: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
+     |      Returns
+     |      -------
+     |      BoundsLike
+     |          Bounding box of this dataset.
+     |          The form is: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
      |      
      |      Examples
      |      --------
@@ -4968,7 +4965,12 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      ...
      |  
      |  cell_data
-     |      Return vtkCellData as DataSetAttributes.
+     |      Return cell data as DataSetAttributes.
+     |      
+     |      Returns
+     |      -------
+     |      DataSetAttributes
+     |          Cell data as DataSetAttributes.
      |      
      |      Examples
      |      --------
@@ -5004,6 +5006,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  center
      |      Return the center of the bounding box.
      |      
+     |      Returns
+     |      -------
+     |      Vector :
+     |          Center of the bounding box.
+     |      
      |      Examples
      |      --------
      |      Get the center of a mesh.
@@ -5015,6 +5022,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  length
      |      Return the length of the diagonal of the bounding box.
+     |      
+     |      Returns
+     |      -------
+     |      float :
+     |          Length of the diagonal of the bounding box.
      |      
      |      Examples
      |      --------
@@ -5029,9 +5041,19 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  n_arrays
      |      Return the number of arrays present in the dataset.
+     |      
+     |      Returns
+     |      -------
+     |      int
+     |         Number of arrays present in the dataset.
      |  
      |  n_cells
      |      Return the number of cells in the entire dataset.
+     |      
+     |      Returns
+     |      -------
+     |      int :
+     |           Number of cells in the entire dataset.
      |      
      |      Notes
      |      -----
@@ -5051,6 +5073,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  n_points
      |      Return the number of points in the entire dataset.
      |      
+     |      Returns
+     |      -------
+     |      int
+     |          Number of points in the entire dataset.
+     |      
      |      Examples
      |      --------
      |      Create a mesh and return the number of points in the
@@ -5063,12 +5090,27 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  number_of_cells
      |      Return the number of cells.
+     |      
+     |      Returns
+     |      -------
+     |      int :
+     |           Number of cells.
      |  
      |  number_of_points
      |      Return the number of points.
+     |      
+     |      Returns
+     |      -------
+     |      int :
+     |           Number of points.
      |  
      |  point_data
-     |      Return vtkPointData as DataSetAttributes.
+     |      Return point data as DataSetAttributes.
+     |      
+     |      Returns
+     |      -------
+     |      DataSetAttributes
+     |          Point data as DataSetAttributes.
      |      
      |      Examples
      |      --------
@@ -5101,20 +5143,16 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> mesh['my_array'].shape
      |      (8,)
      |  
-     |  textures
-     |      Return a dictionary to hold compatible ``pyvista.Texture`` objects.
-     |      
-     |      .. deprecated:: 0.40.0
-     |          Texture tracking on datasets is deprecated and will be removed in a future version of PyVista.
-     |      
-     |      When casting back to a VTK dataset or filtering this dataset,
-     |      these textures will not be passed.
-     |  
      |  ----------------------------------------------------------------------
      |  Data descriptors inherited from pyvista.core.dataset.DataSet:
      |  
      |  active_scalars_name
      |      Return the name of the active scalars.
+     |      
+     |      Returns
+     |      -------
+     |      str
+     |          Name of the active scalars.
      |      
      |      Examples
      |      --------
@@ -5128,7 +5166,12 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      'Z Height'
      |  
      |  active_t_coords
-     |      Return or set the active texture coordinates on the points.
+     |      Return the active texture coordinates on the points.
+     |      
+     |      Returns
+     |      -------
+     |      Optional[pyvista_ndarray]
+     |          Active texture coordinates on the points.
      |      
      |      Examples
      |      --------
@@ -5147,9 +5190,19 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  active_tensors_name
      |      Return the name of the active tensor array.
+     |      
+     |      Returns
+     |      -------
+     |      str
+     |          Name of the active tensor array.
      |  
      |  active_vectors_name
      |      Return the name of the active vectors array.
+     |      
+     |      Returns
+     |      -------
+     |      str
+     |          Name of the active vectors array.
      |      
      |      Examples
      |      --------
@@ -5165,6 +5218,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  
      |  points
      |      Return a reference to the points as a numpy object.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista_ndarray
+     |          Reference to the points as a numpy object.
      |      
      |      Examples
      |      --------
@@ -5704,7 +5762,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> mesh_b = pyvista.Cube((0.5, 0.5, 0.5)).extract_cells([0, 2, 4])
      |      >>> collision, ncol = mesh_a.collision(mesh_b, cell_tolerance=1)
      |      >>> collision['ContactCells'][:10]
-     |      pyvista_ndarray([471, 471, 468, 468, 469, 469, 466, 466, 467, 467])
+     |      pyvista_ndarray([464,   0,   0,  29,  29,  27,  27,  28,  28,  23])
      |      
      |      Plot the collisions by creating a collision mask with the
      |      ``"ContactCells"`` field data.  Cells with a collision are
@@ -6976,7 +7034,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      
      |      color : ColorLike, optional
      |          Color of the arrows.  Defaults to
-     |          :attr:`pyvista.themes.Theme.edge_color`.
+     |          :attr:`pyvista.plotting.themes.Theme.edge_color`.
      |      
      |      **kwargs : dict, optional
      |          All additional keyword arguments will be passed to
@@ -8301,6 +8359,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      nodes of this mesh to a given surface. This distance will be
      |      added as a point array called ``'implicit_distance'``.
      |      
+     |      Nodes of this mesh which are interior to the input surface
+     |      geometry have a negative distance, and nodes on the exterior
+     |      have a positive distance. Nodes which intersect the input
+     |      surface has a distance of zero.
+     |      
      |      Parameters
      |      ----------
      |      surface : pyvista.DataSet
@@ -8324,20 +8387,40 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      plane.
      |      
      |      >>> import pyvista as pv
-     |      >>> sphere = pv.Sphere()
+     |      >>> sphere = pv.Sphere(radius=0.35)
      |      >>> plane = pv.Plane()
      |      >>> _ = sphere.compute_implicit_distance(plane, inplace=True)
      |      >>> dist = sphere['implicit_distance']
      |      >>> type(dist)
      |      <class 'pyvista.core.pyvista_ndarray.pyvista_ndarray'>
      |      
-     |      Plot these distances as a heatmap
+     |      Plot these distances as a heatmap. Note how distances above the
+     |      plane are positive, and distances below the plane are negative.
      |      
      |      >>> pl = pv.Plotter()
      |      >>> _ = pl.add_mesh(
      |      ...     sphere, scalars='implicit_distance', cmap='bwr'
      |      ... )
      |      >>> _ = pl.add_mesh(plane, color='w', style='wireframe')
+     |      >>> pl.show()
+     |      
+     |      We can also compute the distance from all the points on the
+     |      plane to the sphere.
+     |      
+     |      >>> _ = plane.compute_implicit_distance(sphere, inplace=True)
+     |      
+     |      Again, we can plot these distances as a heatmap. Note how
+     |      distances inside the sphere are negative and distances outside
+     |      the sphere are positive.
+     |      
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(
+     |      ...     plane,
+     |      ...     scalars='implicit_distance',
+     |      ...     cmap='bwr',
+     |      ...     clim=[-0.35, 0.35],
+     |      ... )
+     |      >>> _ = pl.add_mesh(sphere, color='w', style='wireframe')
      |      >>> pl.show()
      |      
      |      See :ref:`clip_with_surface_example` and
@@ -8993,7 +9076,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |          correspond to.
      |      
      |      pass_cellid : bool, default: True
-     |          Adds a cell array ``"vtkOriginalPointIds"`` that
+     |          Adds a cell array ``"vtkOriginalCellIds"`` that
      |          idenfities which original cells these surface cells
      |          correspond to.
      |      
@@ -9030,6 +9113,26 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> surf = grid.extract_surface()
      |      >>> type(surf)
      |      <class 'pyvista.core.pointset.PolyData'>
+     |      >>> surf["vtkOriginalPointIds"]
+     |      pyvista_ndarray([ 0,  2, 36, 27,  7,  8, 81,  1, 18,  4, 54,  3,  6, 45,
+     |                       72,  5, 63,  9, 35, 44, 11, 16, 89, 17, 10, 26, 62, 13,
+     |                       12, 53, 80, 15, 14, 71, 19, 37, 55, 20, 38, 56, 21, 39,
+     |                       57, 22, 40, 58, 23, 41, 59, 24, 42, 60, 25, 43, 61, 28,
+     |                       82, 29, 83, 30, 84, 31, 85, 32, 86, 33, 87, 34, 88, 46,
+     |                       73, 47, 74, 48, 75, 49, 76, 50, 77, 51, 78, 52, 79, 64,
+     |                       65, 66, 67, 68, 69, 70])
+     |      >>> surf["vtkOriginalCellIds"]
+     |      pyvista_ndarray([ 0,  0,  0,  1,  1,  1,  3,  3,  3,  2,  2,  2, 36, 36,
+     |                       36, 37, 37, 37, 39, 39, 39, 38, 38, 38,  5,  5,  9,  9,
+     |                       13, 13, 17, 17, 21, 21, 25, 25, 29, 29, 33, 33,  4,  4,
+     |                        8,  8, 12, 12, 16, 16, 20, 20, 24, 24, 28, 28, 32, 32,
+     |                        7,  7, 11, 11, 15, 15, 19, 19, 23, 23, 27, 27, 31, 31,
+     |                       35, 35,  6,  6, 10, 10, 14, 14, 18, 18, 22, 22, 26, 26,
+     |                       30, 30, 34, 34])
+     |      
+     |      Note that in the "vtkOriginalCellIds" array, the same original cells
+     |      appears multiple times since this array represents the original cell of
+     |      each surface cell extracted.
      |      
      |      See the :ref:`extract_surface_example` for more examples using this filter.
      |  
@@ -9165,8 +9268,8 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  interpolate(self, target, sharpness=2.0, radius=1.0, strategy='null_value', null_value=0.0, n_points=None, pass_cell_data=True, pass_point_data=True, progress_bar=False)
      |      Interpolate values onto this mesh from a given dataset.
      |      
-     |      The input dataset is typically a point cloud. Only point data from
-     |      the source mesh will be interpolated onto points of this mesh. Whether
+     |      The ``target`` dataset is typically a point cloud. Only point data from
+     |      the ``target`` mesh will be interpolated onto points of this mesh. Whether
      |      preexisting point and cell data of this mesh are preserved in the
      |      output can be customized with the ``pass_point_data`` and
      |      ``pass_cell_data`` parameters.
@@ -9174,6 +9277,10 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      This uses a Gaussian interpolation kernel. Use the ``sharpness`` and
      |      ``radius`` parameters to adjust this kernel. You can also switch this
      |      kernel to use an N closest points approach.
+     |      
+     |      If the cell topology is more useful for interpolating, e.g. from a
+     |      discretized FEM or CFD simulation, use
+     |      :func:`pyvista.DataSetFilters.sample` instead.
      |      
      |      Parameters
      |      ----------
@@ -9223,6 +9330,10 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      -------
      |      pyvista.DataSet
      |          Interpolated dataset.  Return type matches input.
+     |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSetFilters.sample
      |      
      |      Examples
      |      --------
@@ -9596,7 +9707,12 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |  probe(self, points, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False, locator=None)
      |      Sample data values at specified point locations.
      |      
-     |      This uses :class:`vtk.vtkProbeFilter`.
+     |      .. deprecated:: 0.41.0
+     |         `probe` will be removed in a future version. Use
+     |         :func:`pyvista.DataSetFilters.sample` instead.
+     |         If using `mesh1.probe(mesh2)`, use `mesh2.sample(mesh1)`.
+     |      
+     |      This uses :class:`vtkProbeFilter`.
      |      
      |      Parameters
      |      ----------
@@ -9640,8 +9756,8 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      >>> from pyvista import examples
      |      >>> mesh = pv.Sphere(center=(4.5, 4.5, 4.5), radius=4.5)
      |      >>> grid = examples.load_uniform()
-     |      >>> result = grid.probe(mesh)
-     |      >>> 'Spatial Point Data' in result.point_data
+     |      >>> result = grid.probe(mesh)  # doctest:+SKIP
+     |      >>> 'Spatial Point Data' in result.point_data  # doctest:+SKIP
      |      True
      |  
      |  ptc(self, pass_point_data=False, progress_bar=False, **kwargs)
@@ -9707,8 +9823,19 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      
      |      See the :ref:`ref_reflect_example` for more examples using this filter.
      |  
-     |  sample(self, target, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False)
+     |  sample(self, target, tolerance=None, pass_cell_data=True, pass_point_data=True, categorical=False, progress_bar=False, locator=None, pass_field_data=True, mark_blank=True)
      |      Resample array data from a passed mesh onto this mesh.
+     |      
+     |      For `mesh1.sample(mesh2)`, the arrays from `mesh2` are sampled onto
+     |      the points of `mesh1`.  This function interpolates within an
+     |      enclosing cell.  This contrasts with
+     |      :function`pyvista.DataSetFilters.interpolate` that uses a distance
+     |      weighting for nearby points.  If there is cell topology, `sample` is
+     |      usually preferred.
+     |      
+     |      The point data 'vtkValidPointMask' stores whether the point could be sampled
+     |      with a value of 1 meaning successful sampling. And a value of 0 means
+     |      unsuccessful.
      |      
      |      This uses :class:`vtk.vtkResampleWithDataSet`.
      |      
@@ -9737,21 +9864,52 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
+     |      locator : vtkAbstractCellLocator or str, optional
+     |          Prototype cell locator to perform the ``FindCell()``
+     |          operation.  Default uses the DataSet ``FindCell`` method.
+     |          Valid strings with mapping to vtk cell locators are
+     |      
+     |              * 'cell' - vtkCellLocator
+     |              * 'cell_tree' - vtkCellTreeLocator
+     |              * 'obb_tree' - vtkOBBTree
+     |              * 'static_cell' - vtkStaticCellLocator
+     |      
+     |      pass_field_data : bool, default: True
+     |          Preserve source mesh's original field data arrays.
+     |      
+     |      mark_blank : bool, default: True
+     |          Whether to mark blank points and cells in "vtkGhostType".
+     |      
      |      Returns
      |      -------
      |      pyvista.DataSet
      |          Dataset containing resampled data.
      |      
+     |      See Also
+     |      --------
+     |      pyvista.DataSetFilters.interpolate
+     |      
      |      Examples
      |      --------
      |      Resample data from another dataset onto a sphere.
      |      
-     |      >>> import pyvista
+     |      >>> import pyvista as pv
      |      >>> from pyvista import examples
-     |      >>> mesh = pyvista.Sphere(center=(4.5, 4.5, 4.5), radius=4.5)
+     |      >>> mesh = pv.Sphere(center=(4.5, 4.5, 4.5), radius=4.5)
      |      >>> data_to_probe = examples.load_uniform()
      |      >>> result = mesh.sample(data_to_probe)
      |      >>> result.plot(scalars="Spatial Point Data")
+     |      
+     |      If sampling from a set of points represented by a ``(n, 3)``
+     |      shaped ``numpy.ndarray``, they need to be converted to a
+     |      PyVista DataSet, e.g. :class:`pyvista.PolyData`, first.
+     |      
+     |      >>> import numpy as np
+     |      >>> points = np.array([[1.5, 5.0, 6.2], [6.7, 4.2, 8.0]])
+     |      >>> mesh = pv.PolyData(points)
+     |      >>> result = mesh.sample(data_to_probe)
+     |      >>> result["Spatial Point Data"]
+     |      pyvista_ndarray([ 46.5 , 225.12])
      |      
      |      See :ref:`resampling_example` for more examples using this filter.
      |  
@@ -11406,6 +11564,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
      |      with the dataset does not match the number of points or cells
      |      of the dataset.
      |      
+     |      Returns
+     |      -------
+     |      DataSetAttributes
+     |          FieldData as DataSetAttributes.
+     |      
      |      Examples
      |      --------
      |      Add field data to a PolyData dataset and then return it.
@@ -11443,7 +11606,7 @@ Let's now use the bounding box to extract the mesh that it encloses:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-152
+.. GENERATED FROM PYTHON SOURCE LINES 151-158
 
 .. code-block:: default
 
@@ -11466,11 +11629,11 @@ Let's now use the bounding box to extract the mesh that it encloses:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 153-154
+.. GENERATED FROM PYTHON SOURCE LINES 159-160
 
 Let's check what kind of array does `region` have.
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-157
+.. GENERATED FROM PYTHON SOURCE LINES 160-163
 
 .. code-block:: default
 
@@ -11490,17 +11653,17 @@ Let's check what kind of array does `region` have.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-160
+.. GENERATED FROM PYTHON SOURCE LINES 164-166
 
 You could perhaps then play with the `preference` kwarg of the
 `bbox.enclosed` method to see the impact on the end result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-164
+.. GENERATED FROM PYTHON SOURCE LINES 168-170
 
 However, let's `geo-locate` the region by also rendering a texture mapped
 base layer in addition to some coastlines:
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-173
+.. GENERATED FROM PYTHON SOURCE LINES 170-179
 
 .. code-block:: default
 
@@ -11522,33 +11685,16 @@ base layer in addition to some coastlines:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/natural_earth/physical/ne_coastlines_10m.vtk.bz2 HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/natural_earth/physical/ne_coastlines_10m.vtk.bz2 HTTP/1.1" 200 5072354
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/raster/HYP_50M_SR_W.jpg HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/raster/HYP_50M_SR_W.jpg HTTP/1.1" 200 2173620
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/mesh/lfric_c96.vtk.bz2 HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/mesh/lfric_c96.vtk.bz2 HTTP/1.1" 200 559302
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 174-177
+.. GENERATED FROM PYTHON SOURCE LINES 180-183
 
 GeoVista has its own `Plotter` class, `GeoPlotter`. It is a customized class
 that inherits from PyVista's `Plotter` class and provides practical methods
 for geoscience such as `add_coastlines` and `add_base_layer`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 177-180
+.. GENERATED FROM PYTHON SOURCE LINES 183-186
 
 .. code-block:: default
 
@@ -12035,21 +12181,21 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      ----------
      |      title : str, optional
      |          Title of plotting window.  Defaults to
-     |          :attr:`pyvista.global_theme.title <pyvista.themes.Theme.title>`.
+     |          :attr:`pyvista.global_theme.title <pyvista.plotting.themes.Theme.title>`.
      |      
      |      window_size : list, optional
      |          Window size in pixels.  Defaults to
-     |          :attr:`pyvista.global_theme.window_size <pyvista.themes.Theme.window_size>`.
+     |          :attr:`pyvista.global_theme.window_size <pyvista.plotting.themes.Theme.window_size>`.
      |      
      |      interactive : bool, optional
      |          Enabled by default.  Allows user to pan and move figure.
      |          Defaults to
-     |          :attr:`pyvista.global_theme.interactive <pyvista.themes.Theme.interactive>`.
+     |          :attr:`pyvista.global_theme.interactive <pyvista.plotting.themes.Theme.interactive>`.
      |      
      |      auto_close : bool, optional
      |          Exits plotting session when user closes the window when
      |          interactive is ``True``.  Defaults to
-     |          :attr:`pyvista.global_theme.auto_close <pyvista.themes.Theme.auto_close>`.
+     |          :attr:`pyvista.global_theme.auto_close <pyvista.plotting.themes.Theme.auto_close>`.
      |      
      |      interactive_update : bool, default: False
      |          Allows user to non-blocking draw, user should call
@@ -12058,7 +12204,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      full_screen : bool, optional
      |          Opens window in full screen.  When enabled, ignores
      |          ``window_size``.  Defaults to
-     |          :attr:`pyvista.global_theme.full_screen <pyvista.themes.Theme.full_screen>`.
+     |          :attr:`pyvista.global_theme.full_screen <pyvista.plotting.themes.Theme.full_screen>`.
      |      
      |      screenshot : str | pathlib.Path | io.BytesIO | bool, default: False
      |          Take a screenshot of the initial state of the plot.  If a string,
@@ -12083,10 +12229,8 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          following:
      |      
      |          * ``'none'`` : Do not display in the notebook.
-     |          * ``'pythreejs'`` : Show a ``pythreejs`` widget
      |          * ``'static'`` : Display a static figure.
-     |          * ``'ipygany'`` : Show a ``ipygany`` widget
-     |          * ``'panel'`` : Show a ``panel`` widget.
+     |          * ``'trame'`` : Display a dynamic figure with Trame.
      |      
      |          This can also be set globally with
      |          :func:`pyvista.set_jupyter_backend`.
@@ -12103,7 +12247,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      return_cpos : bool, optional
      |          Return the last camera position from the render window
      |          when enabled.  Default based on theme setting.  See
-     |          :attr:`pyvista.themes.Theme.return_cpos`.
+     |          :attr:`pyvista.plotting.themes.Theme.return_cpos`.
      |      
      |      before_close_callback : Callable, optional
      |          Callback that is called before the plotter is closed.
@@ -12162,16 +12306,6 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      >>> pl.show(auto_close=False)  # doctest:+SKIP
      |      >>> pl.show(screenshot='my_image.png')  # doctest:+SKIP
      |      
-     |      Display a ``pythreejs`` scene within a jupyter notebook
-     |      
-     |      >>> pl.show(jupyter_backend='pythreejs')  # doctest:+SKIP
-     |      
-     |      Return a ``pythreejs`` scene.
-     |      
-     |      >>> pl.show(
-     |      ...     jupyter_backend='pythreejs', return_viewer=True
-     |      ... )  # doctest:+SKIP
-     |      
      |      Obtain the camera position when using ``show``.
      |      
      |      >>> pl = pv.Plotter()
@@ -12182,9 +12316,20 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      (-0.6839951597283509, -0.47207319712073137, 0.5561452310578585)]
      |  
      |  ----------------------------------------------------------------------
+     |  Readonly properties inherited from pyvista.plotting.plotter.Plotter:
+     |  
+     |  meshes
+     |      Return plotter meshes.
+     |      
+     |      Returns
+     |      -------
+     |      List[Union[pyvista.DataSet, PyVista.MultiBlock]]
+     |          List of mesh objects such as pv.PolyData, pv.UnstructuredGrid, etc.
+     |  
+     |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from pyvista.plotting.plotter.Plotter:
      |  
-     |  last_update_time = 0.0
+     |  last_update_time = 1696740619.784503
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.plotting.plotter.BasePlotter:
@@ -12547,7 +12692,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      dataset : pyvista.MultiBlock
      |          A :class:`pyvista.MultiBlock` dataset.
      |      
-     |      color : ColorLike, default: :attr:`pyvista.themes.Theme.color`
+     |      color : ColorLike, default: :attr:`pyvista.plotting.themes.Theme.color`
      |          Use to make the entire mesh have a single solid color.
      |          Either a string, RGB list, or hex color string.  For example:
      |          ``color='white'``, ``color='w'``, ``color=[1.0, 1.0, 1.0]``, or
@@ -12572,16 +12717,16 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          maximum of scalars array.  Example: ``[-1, 2]``. ``rng`` is
      |          also an accepted alias for this.
      |      
-     |      show_edges : bool, default: :attr:`pyvista.global_theme.show_edges <pyvista.themes.Theme.show_edges>`
+     |      show_edges : bool, default: :attr:`pyvista.global_theme.show_edges <pyvista.plotting.themes.Theme.show_edges>`
      |          Shows the edges of a mesh.  Does not apply to a wireframe
      |          representation.
      |      
-     |      edge_color : ColorLike, default: :attr:`pyvista.global_theme.edge_color <pyvista.themes.Theme.edge_color>`
+     |      edge_color : ColorLike, default: :attr:`pyvista.global_theme.edge_color <pyvista.plotting.themes.Theme.edge_color>`
      |          The solid color to give the edges when ``show_edges=True``.
      |          Either a string, RGB list, or hex color string.
      |      
      |          Defaults to :attr:`pyvista.global_theme.edge_color
-     |          <pyvista.themes.Theme.edge_color>`.
+     |          <pyvista.plotting.themes.Theme.edge_color>`.
      |      
      |      point_size : float, default: 5.0
      |          Point size of any points in the dataset plotted. Also
@@ -12612,7 +12757,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          OpenGL will interpolate the mapped colors which can result in
      |          showing colors that are not present in the color map.
      |      
-     |      cmap : str | list, | pyvista.LookupTable, default: :attr:`pyvista.themes.Theme.cmap`
+     |      cmap : str | list, | pyvista.LookupTable, default: :attr:`pyvista.plotting.themes.Theme.cmap`
      |          If a string, this is the name of the ``matplotlib`` colormap to use
      |          when mapping the ``scalars``.  See available Matplotlib colormaps.
      |          Only applicable for when displaying ``scalars``.
@@ -12663,7 +12808,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          Show lines as thick tubes rather than flat lines.  Control
      |          the width with ``line_width``.
      |      
-     |      smooth_shading : bool, default: :attr`pyvista.themes.Theme.smooth_shading`
+     |      smooth_shading : bool, default: :attr`pyvista.plotting.themes.Theme.smooth_shading`
      |          Enable smooth shading when ``True`` using the Phong shading
      |          algorithm.  When ``False``, uses flat shading.  Automatically
      |          enabled when ``pbr=True``.  See :ref:`shading_example`.
@@ -12691,7 +12836,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      specular_power : float, default: 1.0
      |          The specular power. Between 0.0 and 128.0.
      |      
-     |      nan_color : ColorLike, default: :attr:`pyvista.themes.Theme.nan_color`
+     |      nan_color : ColorLike, default: :attr:`pyvista.plotting.themes.Theme.nan_color`
      |          The color to use for all ``NaN`` values in the plotted
      |          scalar array.
      |      
@@ -12929,7 +13074,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          The key to trigger the event.
      |      
      |      callback : callable
-     |          A callable that takes no arguments.
+     |          A callable that takes no arguments (keyword arguments are allowed).
      |  
      |  add_legend(self, labels=None, bcolor=(0.5, 0.5, 0.5), border=False, size=(0.2, 0.2), name=None, loc='upper right', face='triangle')
      |      Add a legend to render window.
@@ -13254,7 +13399,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          Control if the orientation widget is interactive.  By
      |          default uses the value from
      |          :attr:`pyvista.global_theme.interactive
-     |          <pyvista.themes.Theme.interactive>`.
+     |          <pyvista.plotting.themes.Theme.interactive>`.
      |      
      |      color : ColorLike, optional
      |          The color of the actor.  This only applies if ``actor`` is
@@ -13605,15 +13750,15 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      title_font_size : float, optional
      |          Sets the size of the title font.  Defaults to ``None`` and is sized
-     |          according to :attr:`pyvista.themes.Theme.font`.
+     |          according to :attr:`pyvista.plotting.themes.Theme.font`.
      |      
      |      label_font_size : float, optional
      |          Sets the size of the title font.  Defaults to ``None`` and is sized
-     |          according to :attr:`pyvista.themes.Theme.font`.
+     |          according to :attr:`pyvista.plotting.themes.Theme.font`.
      |      
      |      color : ColorLike, optional
      |          Either a string, rgb list, or hex color string.  Default
-     |          set by :attr:`pyvista.themes.Theme.font`.  Can be
+     |          set by :attr:`pyvista.plotting.themes.Theme.font`.  Can be
      |          in one of the following formats:
      |      
      |          * ``color='white'``
@@ -13623,7 +13768,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      font_family : {'courier', 'times', 'arial'}
      |          Font family.  Default is set by
-     |          :attr:`pyvista.themes.Theme.font`.
+     |          :attr:`pyvista.plotting.themes.Theme.font`.
      |      
      |      shadow : bool, default: False
      |          Adds a black shadow to the text.
@@ -13631,44 +13776,44 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      width : float, optional
      |          The percentage (0 to 1) width of the window for the colorbar.
      |          Default set by
-     |          :attr:`pyvista.themes.Theme.colorbar_vertical` or
-     |          :attr:`pyvista.themes.Theme.colorbar_horizontal`
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_vertical` or
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_horizontal`
      |          depending on the value of ``vertical``.
      |      
      |      height : float, optional
      |          The percentage (0 to 1) height of the window for the
      |          colorbar.  Default set by
-     |          :attr:`pyvista.themes.Theme.colorbar_vertical` or
-     |          :attr:`pyvista.themes.Theme.colorbar_horizontal`
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_vertical` or
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_horizontal`
      |          depending on the value of ``vertical``.
      |      
      |      position_x : float, optional
      |          The percentage (0 to 1) along the windows's horizontal
      |          direction to place the bottom left corner of the colorbar.
      |          Default set by
-     |          :attr:`pyvista.themes.Theme.colorbar_vertical` or
-     |          :attr:`pyvista.themes.Theme.colorbar_horizontal`
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_vertical` or
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_horizontal`
      |          depending on the value of ``vertical``.
      |      
      |      position_y : float, optional
      |          The percentage (0 to 1) along the windows's vertical
      |          direction to place the bottom left corner of the colorbar.
      |          Default set by
-     |          :attr:`pyvista.themes.Theme.colorbar_vertical` or
-     |          :attr:`pyvista.themes.Theme.colorbar_horizontal`
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_vertical` or
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_horizontal`
      |          depending on the value of ``vertical``.
      |      
      |      vertical : bool, optional
      |          Use vertical or horizontal scalar bar.  Default set by
-     |          :attr:`pyvista.themes.Theme.colorbar_orientation`.
+     |          :attr:`pyvista.plotting.themes.Theme.colorbar_orientation`.
      |      
      |      interactive : bool, optional
      |          Use a widget to control the size and location of the scalar bar.
-     |          Default set by :attr:`pyvista.themes.Theme.interactive`.
+     |          Default set by :attr:`pyvista.plotting.themes.Theme.interactive`.
      |      
      |      fmt : str, optional
      |          ``printf`` format for labels.
-     |          Default set by :attr:`pyvista.themes.Theme.font`.
+     |          Default set by :attr:`pyvista.plotting.themes.Theme.font`.
      |      
      |      use_opacity : bool, default: True
      |          Optionally display the opacity mapping on the scalar bar.
@@ -13699,7 +13844,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      render : bool, default: False
      |          Force a render when True.
      |      
-     |      theme : pyvista.themes.Theme, optional
+     |      theme : pyvista.plotting.themes.Theme, optional
      |          Plot-specific theme.  By default, calling from the
      |          ``Plotter``, will use the plotter theme.  Setting to
      |          ``None`` will use the global theme.
@@ -13789,7 +13934,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      >>> plotter.view_xy()
      |      >>> plotter.show()
      |  
-     |  add_text(self, text, position='upper_left', font_size=18, color=None, font=None, shadow=False, name=None, viewport=False, orientation=0.0, *, render=True)
+     |  add_text(self, text, position='upper_left', font_size=18, color=None, font=None, shadow=False, name=None, viewport=False, orientation=0.0, font_file=None, *, render=True)
      |      Add text to plot object in the top left corner by default.
      |      
      |      Parameters
@@ -13821,10 +13966,11 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          * ``color=[1.0, 1.0, 1.0]``
      |          * ``color='#FFFFFF'``
      |      
-     |          Defaults to :attr:`pyvista.global_theme.font.color <pyvista.themes._Font.color>`.
+     |          Defaults to :attr:`pyvista.global_theme.font.color <pyvista.plotting.themes._Font.color>`.
      |      
-     |      font : str, optional
+     |      font : str, default: 'arial'
      |          Font name may be ``'courier'``, ``'times'``, or ``'arial'``.
+     |          This is ignored if the `font_file` is set.
      |      
      |      shadow : bool, default: False
      |          Adds a black shadow to the text.
@@ -13844,8 +13990,12 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          is rotated around an anchor point that may be on the edge or
      |          corner of the text.  The default is horizontal (0.0 degrees).
      |      
-     |      render : bool, optional
-     |          Force a render when ``True`` (default).
+     |      font_file : str, default: None
+     |          The absolute file path to a local file containing a freetype
+     |          readable font.
+     |      
+     |      render : bool, default: True
+     |          Force a render when ``True``.
      |      
      |      Returns
      |      -------
@@ -13854,6 +14004,8 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      Examples
      |      --------
+     |      Add blue text to the upper right of the plotter.
+     |      
      |      >>> import pyvista
      |      >>> pl = pyvista.Plotter()
      |      >>> actor = pl.add_text(
@@ -13864,6 +14016,14 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      ...     font_size=26,
      |      ... )
      |      >>> pl.show()
+     |      
+     |      Add text and use a custom freetype readable font file.
+     |      
+     |      >>> pl = pyvista.Plotter()
+     |      >>> actor = pl.add_text(
+     |      ...     'Text',
+     |      ...     font_file='/home/user/Mplus2-Regular.ttf',
+     |      ... )  # doctest:+SKIP
      |  
      |  add_volume(self, volume, scalars=None, clim=None, resolution=None, opacity='linear', n_colors=256, cmap=None, flip_scalars=False, reset_camera=None, name=None, ambient=None, categories=False, culling=False, multi_colors=False, blending='composite', mapper=None, scalar_bar_args=None, show_scalar_bar=None, annotations=None, pickable=True, preference='point', opacity_unit_distance=None, shade=False, diffuse=0.7, specular=0.2, specular_power=10.0, render=True, log_scale=False, **kwargs)
      |      Add a volume, rendered using a smart mapper by default.
@@ -13900,13 +14060,15 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          shaped ``(N, 4)`` where ``N`` is the number of points, and of
      |          datatype ``np.uint8``.
      |      
-     |      clim : sequence[float], optional
+     |      clim : sequence[float] | float, optional
      |          Color bar range for scalars.  For example: ``[-1, 2]``. Defaults to
      |          minimum and maximum of scalars array if the scalars dtype is not
      |          ``np.uint8``. ``rng`` is also an accepted alias for this parameter.
      |      
      |          If the scalars datatype is ``np.uint8``, this parameter defaults to
      |          ``[0, 256]``.
+     |      
+     |          If a single value is given, the range ``[-clim, clim]`` is used.
      |      
      |      resolution : list, optional
      |          Block resolution. For example ``[1, 1, 1]``. Resolution must be
@@ -13938,6 +14100,9 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          * ``'sigmoid_8'`` - Linear map between -8.0 and 8.0
      |          * ``'sigmoid_9'`` - Linear map between -9.0 and 9.0
      |          * ``'sigmoid_10'`` - Linear map between -10.0 and 10.0
+     |          * ``'foreground'`` - Transparent background and opaque foreground.
+     |              Intended for use with segmentation labels. Assumes the smallest
+     |              scalar value of the array is the background value (e.g. 0).
      |      
      |          If RGBA scalars are provided, this parameter is set to ``'linear'``
      |          to ensure the opacity transfer function has no effect on the input
@@ -13947,7 +14112,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |          Number of colors to use when displaying scalars. Defaults to 256.
      |          The scalar bar will also have this many colors.
      |      
-     |      cmap : str | list | pyvista.LookupTable, default: :attr:`pyvista.themes.Theme.cmap`
+     |      cmap : str | list | pyvista.LookupTable, default: :attr:`pyvista.plotting.themes.Theme.cmap`
      |          If a string, this is the name of the ``matplotlib`` colormap to use
      |          when mapping the ``scalars``.  See available Matplotlib colormaps.
      |          Only applicable for when displaying ``scalars``.
@@ -13998,7 +14163,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      blending : str, optional
      |          Blending mode for visualisation of the input object(s). Can be
      |          one of 'additive', 'maximum', 'minimum', 'composite', or
-     |          'average'. Defaults to 'additive'.
+     |          'average'. Defaults to 'composite'.
      |      
      |      mapper : str, optional
      |          Volume mapper to use given by name. Options include:
@@ -14958,11 +15123,6 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  export_html(self, filename)
      |      Export this plotter as an interactive scene to a HTML file.
-     |      
-     |      You have the option of exposing the scene using either vtk.js (using
-     |      ``panel``) or three.js (using ``pythreejs``), both of which are
-     |      excellent JavaScript libraries to visualize small to moderately complex
-     |      scenes for scientific visualization.
      |      
      |      Parameters
      |      ----------
@@ -15959,7 +16119,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      Parameters
      |      ----------
-     |      texture : vtk.vtkTexture
+     |      texture : pyvista.Texture
      |          Texture.
      |      
      |      is_srgb : bool, default: False
@@ -16185,17 +16345,17 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      font_size : float, optional
      |          Sets the size of the label font. Defaults to
      |          :attr:`pyvista.global_theme.font.size
-     |          <pyvista.themes._Font.size>`.
+     |          <pyvista.plotting.themes._Font.size>`.
      |      
      |      font_family : str, optional
      |          Font family.  Must be either ``'courier'``, ``'times'``,
      |          or ``'arial'``. Defaults to :attr:`pyvista.global_theme.font.family
-     |          <pyvista.themes._Font.family>`.
+     |          <pyvista.plotting.themes._Font.family>`.
      |      
      |      color : ColorLike, optional
      |          Color of all labels and axis titles.  Defaults to
      |          :attr:`pyvista.global_theme.font.color
-     |          <pyvista.themes._Font.color>`.
+     |          <pyvista.plotting.themes._Font.color>`.
      |      
      |          Either a string, RGB list, or hex color string.  For
      |          example:
@@ -16392,14 +16552,6 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      >>> actor = pl.add_mesh(pyvista.Sphere())
      |      >>> pl.set_background('orange', all_renderers=False)
      |      >>> pl.show()
-     |  
-     |  to_pythreejs(self)
-     |      Convert this plotting scene to a pythreejs widget.
-     |      
-     |      Returns
-     |      -------
-     |      ipywidgets.Widget
-     |          Widget containing pythreejs renderer.
      |  
      |  track_click_position(self, callback=None, side='right', double=False, viewport=False)
      |      Keep track of the click position.
@@ -16770,6 +16922,11 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  actors
      |      Return the actors of the active renderer.
+     |      
+     |      Returns
+     |      -------
+     |      dict
+     |          Dictionary of active actors.
      |  
      |  bounds
      |      Return the bounds of the active renderer.
@@ -16803,14 +16960,24 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      There can only be one legend actor per renderer.  If
      |      ``legend`` is ``None``, there is no legend actor.
+     |      
+     |      Returns
+     |      -------
+     |      vtk.vtkLegendBoxActor
+     |          Legend actor.
      |  
      |  length
      |      Return the length of the diagonal of the bounding box of the scene.
      |  
      |  render_window
-     |      Access the vtkRenderWindow.
+     |      Access the vtkRenderWindow attached to this plotter.
      |      
      |      If the plotter is closed, this will return ``None``.
+     |      
+     |      Returns
+     |      -------
+     |      vtk.vtkRenderWindow or None
+     |          Render window if the plotter is not closed.
      |      
      |      Notes
      |      -----
@@ -16818,6 +16985,11 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  renderer
      |      Return the active renderer.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.Renderer
+     |          Active render.
      |      
      |      Examples
      |      --------
@@ -16828,9 +17000,19 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  scalar_bar
      |      First scalar bar (kept for backwards compatibility).
+     |      
+     |      Returns
+     |      -------
+     |      vtk.vtkScalarBarActor
+     |          First scalar bar actor.
      |  
      |  scalar_bars
      |      Scalar bars.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ScalarBars
+     |          Scalar bar object.
      |      
      |      Examples
      |      --------
@@ -16849,7 +17031,12 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      <vtkmodules.vtkRenderingAnnotation.vtkScalarBarActor(...) at ...>
      |  
      |  shape
-     |      Shape of the plotter.
+     |      Return the shape of the plotter.
+     |      
+     |      Returns
+     |      -------
+     |      tuple
+     |          Shape of the plotter.
      |      
      |      Examples
      |      --------
@@ -16880,6 +17067,11 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  camera
      |      Return the active camera of the active renderer.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.Camera
+     |          Camera from the active renderer.
      |  
      |  camera_position
      |      Return camera position of the active render window.
@@ -16921,7 +17113,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      For more examples, see :ref:`cameras_api`.
      |  
      |  camera_set
-     |      Return if the camera of the active renderer has been set.
+     |      Return or set if the camera of the active renderer has been set.
      |  
      |  image_scale
      |      Get or set the scale factor when saving a screenshot.
@@ -16931,6 +17123,11 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      
      |      Image sizes will be the :py:attr:`window_size
      |      <pyvista.Plotter.window_size>` multiplied by this scale factor.
+     |      
+     |      Returns
+     |      -------
+     |      int
+     |          Image scale factor.
      |      
      |      Examples
      |      --------
@@ -16950,10 +17147,10 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      >>> pl.screenshot('screenshot.png')  # doctest:+SKIP
      |  
      |  parallel_projection
-     |      Return parallel projection state of active render window.
+     |      Return or set parallel projection state of active render window.
      |  
      |  parallel_scale
-     |      Return parallel scale of active render window.
+     |      Return or set parallel scale of active render window.
      |  
      |  pickable_actors
      |      Return or set the pickable actors.
@@ -16965,6 +17162,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      Returns
      |      -------
      |      list[pyvista.Actor]
+     |          List of actors.
      |      
      |      Examples
      |      --------
@@ -17004,9 +17202,19 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  
      |  suppress_rendering
      |      Get or set whether to suppress render calls.
+     |      
+     |      Returns
+     |      -------
+     |      bool
+     |          ``True`` when rendering is suppressed.
      |  
      |  theme
      |      Return or set the theme used for this plotter.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.Theme
+     |          Theme of this plotter.
      |      
      |      Examples
      |      --------
@@ -17917,6 +18125,72 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.plotting.widgets.WidgetHelper:
      |  
+     |  add_affine_transform_widget(self, actor, origin=None, start=True, scale=0.15, line_radius=0.02, always_visible=True, axes_colors=None, axes=None, release_callback=None, interact_callback=None)
+     |      Add a 3D affine transform widget.
+     |      
+     |      This widget allows interactive transformations including translation and
+     |      rotation using the left mouse button.
+     |      
+     |      Parameters
+     |      ----------
+     |      actor : pyvista.Actor
+     |          The actor to which the widget is attached to.
+     |      origin : sequence[float], optional
+     |          Origin of the widget. Default is the origin of the main actor.
+     |      start : bool, default: True
+     |          If True, start the widget immediately.
+     |      scale : float, default: 0.15
+     |          Scale factor for the widget relative to the length of the actor.
+     |      line_radius : float, default: 0.02
+     |          Relative radius of the lines composing the widget.
+     |      always_visible : bool, default: True
+     |          Make the widget always visible. Setting this to ``False`` will cause
+     |          the widget geometry to be hidden by other actors in the plotter.
+     |      axes_colors : tuple[ColorLike], optional
+     |          Uses the theme by default. Configure the individual axis colors by
+     |          modifying either the theme with ``pv.global_theme.axes.x_color =
+     |          <COLOR>`` or setting this with a ``tuple`` as in ``('r', 'g', 'b')``.
+     |      axes : numpy.ndarray, optional
+     |          ``(3, 3)`` Numpy array defining the X, Y, and Z axes. By default
+     |          this matches the default coordinate system.
+     |      release_callback : callable, optional
+     |          Call this method when releasing the left mouse button. It is passed
+     |          the ``user_matrix`` of the actor.
+     |      interact_callback : callable, optional
+     |          Call this method when moving the mouse with the left mouse button
+     |          pressed down and a valid movement actor selected. It is passed the
+     |          ``user_matrix`` of the actor.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.widgets.AffineWidget3D
+     |          The affine widget.
+     |      
+     |      Notes
+     |      -----
+     |      After interacting with the actor, the transform will be stored within
+     |      :attr:`pyvista.Actor.user_matrix` but will not be applied to the
+     |      dataset. Use this matrix in conjunction with
+     |      :func:`pyvista.DataSetFilters.transform` to transform the dataset.
+     |      
+     |      Examples
+     |      --------
+     |      Add the 3d affine widget.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> pl = pv.Plotter()
+     |      >>> actor = pl.add_mesh(pv.Sphere())
+     |      >>> widget = pl.add_affine_transform_widget(actor)
+     |      >>> pl.show()
+     |      
+     |      Access the transform from the actor.
+     |      
+     |      >>> actor.user_matrix
+     |      array([[1., 0., 0., 0.],
+     |             [0., 1., 0., 0.],
+     |             [0., 0., 1., 0.],
+     |             [0., 0., 0., 1.]])
+     |  
      |  add_box_widget(self, callback, bounds=None, factor=1.25, rotation_enabled=True, color=None, use_planes=False, outline_translation=True, pass_widget=False, interaction_event='end')
      |      Add a box widget to the scene.
      |      
@@ -17948,7 +18222,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      color : ColorLike, optional
      |          Either a string, rgb sequence, or hex color string.
      |          Defaults to :attr:`pyvista.global_theme.font.color
-     |          <pyvista.themes._Font.color>`.
+     |          <pyvista.plotting.themes._Font.color>`.
      |      
      |      use_planes : bool, optional
      |          Changes the arguments passed to the callback to the planes
@@ -18737,7 +19011,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      color : ColorLike, optional
      |          Either a string, RGB list, or hex color string.  Defaults
      |          to :attr:`pyvista.global_theme.font.color
-     |          <pyvista.themes._Font.color>`.
+     |          <pyvista.plotting.themes._Font.color>`.
      |      
      |      pass_widget : bool, optional
      |          If ``True``, the widget will be passed as the last
@@ -18975,7 +19249,7 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
      |      color : ColorLike, optional
      |          Either a string, RGB list, or hex color string.  Defaults
      |          to :attr:`pyvista.global_theme.font.color
-     |          <pyvista.themes._Font.color>`.
+     |          <pyvista.plotting.themes._Font.color>`.
      |      
      |      interaction_event : vtk.vtkCommand.EventIds, str, optional
      |          The VTK interaction event to use for triggering the
@@ -19102,13 +19376,13 @@ for geoscience such as `add_coastlines` and `add_base_layer`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 181-184
+.. GENERATED FROM PYTHON SOURCE LINES 187-190
 
 Also, as we're not so interested in the land mask, let's threshold that out
 and re-spin the render. To threshold the region and make `sea_region` we can
 use `threshold` method of PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-187
+.. GENERATED FROM PYTHON SOURCE LINES 190-193
 
 .. code-block:: default
 
@@ -19122,7 +19396,7 @@ use `threshold` method of PyVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-191
+.. GENERATED FROM PYTHON SOURCE LINES 194-197
 
 .. code-block:: default
 
@@ -19278,7 +19552,7 @@ use `threshold` method of PyVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 192-201
+.. GENERATED FROM PYTHON SOURCE LINES 198-207
 
 .. code-block:: default
 
@@ -19303,11 +19577,11 @@ use `threshold` method of PyVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-203
+.. GENERATED FROM PYTHON SOURCE LINES 208-209
 
 Since we're here... let's transform the sea_region to a Robinson projection:
 
-.. GENERATED FROM PYTHON SOURCE LINES 203-212
+.. GENERATED FROM PYTHON SOURCE LINES 209-218
 
 .. code-block:: default
 
@@ -19332,12 +19606,12 @@ Since we're here... let's transform the sea_region to a Robinson projection:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 213-215
+.. GENERATED FROM PYTHON SOURCE LINES 219-221
 
 It's also easily possible to get the inverted result i.e., the surface of the
 mesh not enclosed by the bbox manifold:
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-223
+.. GENERATED FROM PYTHON SOURCE LINES 221-229
 
 .. code-block:: default
 
@@ -19361,11 +19635,11 @@ mesh not enclosed by the bbox manifold:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-225
+.. GENERATED FROM PYTHON SOURCE LINES 230-231
 
 Akin to before, let's render this again, but with a base layer underneath:
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-234
+.. GENERATED FROM PYTHON SOURCE LINES 231-240
 
 .. code-block:: default
 
@@ -19387,25 +19661,16 @@ Akin to before, let's render this again, but with a base layer underneath:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/raster/NE1_50M_SR_W.jpg HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/raster/NE1_50M_SR_W.jpg HTTP/1.1" 200 3407761
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 235-238
+.. GENERATED FROM PYTHON SOURCE LINES 241-244
 
 It's not quite clear what's going on here, although playing with the render
 interactively helps, but let's transform the mesh to the Mollweider
 projection to help clarify matters:
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-247
+.. GENERATED FROM PYTHON SOURCE LINES 244-253
 
 .. code-block:: default
 
@@ -19430,12 +19695,12 @@ projection to help clarify matters:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-250
+.. GENERATED FROM PYTHON SOURCE LINES 254-256
 
 And again, let's remove the land mask so that we can see more of the texture
 mapped base layer:
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-261
+.. GENERATED FROM PYTHON SOURCE LINES 256-267
 
 .. code-block:: default
 
@@ -19462,7 +19727,7 @@ mapped base layer:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-274
+.. GENERATED FROM PYTHON SOURCE LINES 268-280
 
 Also, explore the BBox class to create custom bounding box instances, and
 there is also the geovista.geodesic.wedge, a convenience function akin to the
@@ -19477,14 +19742,14 @@ where I'm taking geovista. The other point to make is that thanks to
 other traditional approaches (perhaps I should garner metrics to back that
 up!)
 
-.. GENERATED FROM PYTHON SOURCE LINES 276-280
+.. GENERATED FROM PYTHON SOURCE LINES 282-286
 
 So far we've demonstrated GeoVista's ability to cope with unstructured data.
 Now let's plot a curvilinear mesh using Met Office Unified Model (UM) ORCA2
 Sea Water Potential Temperature data, with 10m Natural Earth coastlines and a
 1:50m Natural Earth I base layer.
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-289
+.. GENERATED FROM PYTHON SOURCE LINES 286-295
 
 .. code-block:: default
 
@@ -19505,10 +19770,6 @@ Sea Water Potential Temperature data, with 10m Natural Earth coastlines and a
 
  .. code-block:: none
 
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /bjlittle/geovista-data/raw/2023.06.2/data/pantry/votemper.nc.bz2 HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /bjlittle/geovista-data/2023.06.2/data/pantry/votemper.nc.bz2 HTTP/1.1" 200 1981356
 
     SampleStructuredXY(lons=masked_array(
       data=[[[79.0000386 , 80.9999614 , 80.9999614 , 79.0000386 ],
@@ -19632,11 +19893,11 @@ Sea Water Potential Temperature data, with 10m Natural Earth coastlines and a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-291
+.. GENERATED FROM PYTHON SOURCE LINES 296-297
 
 Create the mesh from the sample data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 291-294
+.. GENERATED FROM PYTHON SOURCE LINES 297-300
 
 .. code-block:: default
 
@@ -19650,11 +19911,11 @@ Create the mesh from the sample data.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-296
+.. GENERATED FROM PYTHON SOURCE LINES 301-302
 
 Remove cells from the mesh with NaN values.
 
-.. GENERATED FROM PYTHON SOURCE LINES 296-299
+.. GENERATED FROM PYTHON SOURCE LINES 302-305
 
 .. code-block:: default
 
@@ -19668,11 +19929,11 @@ Remove cells from the mesh with NaN values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-301
+.. GENERATED FROM PYTHON SOURCE LINES 306-307
 
 Plot the mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 301-311
+.. GENERATED FROM PYTHON SOURCE LINES 307-317
 
 .. code-block:: default
 
@@ -19698,7 +19959,7 @@ Plot the mesh.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 312-317
+.. GENERATED FROM PYTHON SOURCE LINES 318-323
 
 .. important:: **Experimental**
 
@@ -19706,7 +19967,7 @@ Plot the mesh.
      feedback, but as immature packages their API, documentation, test
      coverage and CI are still 'under construction'.
 
-.. GENERATED FROM PYTHON SOURCE LINES 319-327
+.. GENERATED FROM PYTHON SOURCE LINES 325-333
 
 Whilst you're here, why not hop on over to the
 `pyvista-xarray project <https://github.com/pyvista/pyvista-xarray>`_
@@ -19717,7 +19978,7 @@ xarray DataArray accessors for PyVista to visualize datasets in 3D
 You must import `pvxarray` in order to register the DataArray accessor with
 xarray. After which, a pyvista namespace of accessors will be available.
 
-.. GENERATED FROM PYTHON SOURCE LINES 327-331
+.. GENERATED FROM PYTHON SOURCE LINES 333-337
 
 .. code-block:: default
 
@@ -19732,11 +19993,11 @@ xarray. After which, a pyvista namespace of accessors will be available.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 332-333
+.. GENERATED FROM PYTHON SOURCE LINES 338-339
 
 Load mean sea surface temperature dataset
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-336
+.. GENERATED FROM PYTHON SOURCE LINES 339-342
 
 .. code-block:: default
 
@@ -19750,11 +20011,11 @@ Load mean sea surface temperature dataset
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 337-338
+.. GENERATED FROM PYTHON SOURCE LINES 343-344
 
 Plot in 3D
 
-.. GENERATED FROM PYTHON SOURCE LINES 338-341
+.. GENERATED FROM PYTHON SOURCE LINES 344-347
 
 .. code-block:: default
 
@@ -19773,11 +20034,11 @@ Plot in 3D
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 342-343
+.. GENERATED FROM PYTHON SOURCE LINES 348-349
 
 Or grab the mesh object for use with PyVista and GeoVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-354
+.. GENERATED FROM PYTHON SOURCE LINES 349-360
 
 .. code-block:: default
 
@@ -19804,7 +20065,7 @@ Or grab the mesh object for use with PyVista and GeoVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 355-363
+.. GENERATED FROM PYTHON SOURCE LINES 361-369
 
 .. note::
     This is inspired by
@@ -19815,10 +20076,20 @@ Or grab the mesh object for use with PyVista and GeoVista.
 .. image:: https://zenodo.org/badge/doi/10.5281/zenodo.598201.svg
    :target: https://doi.org/10.5281/zenodo.598201
 
+.. GENERATED FROM PYTHON SOURCE LINES 371-378
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/05_action/a_lesson_geovista.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  23.281 seconds)
+   **Total running time of the script:** ( 1 minutes  20.103 seconds)
 
 
 .. _sphx_glr_download_tutorial_05_action_a_lesson_geovista.py:

@@ -73,19 +73,16 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f43c0a90a00)
-      N Cells:	3538080
-      N Points:	3613484
-      X Bounds:	9.000e+01, 1.800e+02
-      Y Bounds:	0.000e+00, 2.160e+02
-      Z Bounds:	0.000e+00, 1.800e+02
-      N Arrays:	1
-    ]
+    [UnstructuredGrid (0x7fe41ee8fdc0)
+      N Cells:    3538080
+      N Points:   3613484
+      X Bounds:   9.000e+01, 1.800e+02
+      Y Bounds:   0.000e+00, 2.160e+02
+      Z Bounds:   0.000e+00, 1.800e+02
+      N Arrays:   2]
 
 
 
@@ -135,19 +132,17 @@ After interacting with the scene, the slice is available as:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    [PolyData (0x7f43c0a90460)
-      N Cells:	38880
-      N Points:	39277
-      X Bounds:	9.000e+01, 9.000e+01
-      Y Bounds:	0.000e+00, 2.160e+02
-      Z Bounds:	0.000e+00, 1.800e+02
-      N Arrays:	1
-    ]
+    [PolyData (0x7fe4419ad1c0)
+      N Cells:    38880
+      N Points:   39277
+      N Strips:   0
+      X Bounds:   9.000e+01, 9.000e+01
+      Y Bounds:   0.000e+00, 2.160e+02
+      Z Bounds:   0.000e+00, 1.800e+02
+      N Arrays:   1]
 
 
 
@@ -297,38 +292,43 @@ the ``InteractionEvent`` observer:
 
 .. image:: ../../images/gifs/plane-slice-continuous.gif
 
+.. GENERATED FROM PYTHON SOURCE LINES 118-125
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/e_plane-widget.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.196 seconds)
+   **Total running time of the script:** ( 0 minutes  17.413 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_e_plane-widget.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/e_plane-widget.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/e_plane-widget.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: e_plane-widget.py <e_plane-widget.py>`
 
-     :download:`Download Python source code: e_plane-widget.py <e_plane-widget.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: e_plane-widget.ipynb <e_plane-widget.ipynb>`
+      :download:`Download Jupyter notebook: e_plane-widget.ipynb <e_plane-widget.ipynb>`
 
 
 .. only:: html

@@ -263,38 +263,43 @@ And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/sphere-widget-c.gif
 
+.. GENERATED FROM PYTHON SOURCE LINES 172-179
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/g_sphere-widget.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.959 seconds)
+   **Total running time of the script:** ( 0 minutes  1.674 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/g_sphere-widget.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/g_sphere-widget.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: g_sphere-widget.py <g_sphere-widget.py>`
 
-     :download:`Download Python source code: g_sphere-widget.py <g_sphere-widget.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: g_sphere-widget.ipynb <g_sphere-widget.ipynb>`
+      :download:`Download Jupyter notebook: g_sphere-widget.ipynb <g_sphere-widget.ipynb>`
 
 
 .. only:: html

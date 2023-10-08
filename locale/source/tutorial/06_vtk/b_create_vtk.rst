@@ -85,12 +85,10 @@ Add point data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x559bf889b6f0) at 0x7f43c3c4a220>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x56442b7ab520) at 0x7fe4a8060f40>
 
 
 
@@ -152,12 +150,10 @@ Create ``vtkStructuredGrid``
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x559bf843c2e0) at 0x7f43c155aac0>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x564434b03900) at 0x7fe44164f8e0>
 
 
 
@@ -180,8 +176,6 @@ Add point data
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
@@ -193,11 +187,12 @@ Add point data
 
 Plot with PyVista for simplicity
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-72
 
 .. code-block:: default
 
     pv.plot(grid, show_edges=True)
+
 
 
 
@@ -210,38 +205,43 @@ Plot with PyVista for simplicity
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 73-80
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/b_create_vtk.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.655 seconds)
+   **Total running time of the script:** ( 0 minutes  0.930 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_b_create_vtk.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: b_create_vtk.py <b_create_vtk.py>`
 
-     :download:`Download Python source code: b_create_vtk.py <b_create_vtk.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: b_create_vtk.ipynb <b_create_vtk.ipynb>`
+      :download:`Download Jupyter notebook: b_create_vtk.ipynb <b_create_vtk.ipynb>`
 
 
 .. only:: html

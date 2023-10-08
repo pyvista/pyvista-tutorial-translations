@@ -55,35 +55,34 @@ point labels to a scene.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
-    Help on function add_point_labels in module pyvista.plotting.plotting:
+    Help on function add_point_labels in module pyvista.plotting.plotter:
 
-    add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, text_color=None, font_family=None, shadow=False, show_points=True, point_color=None, point_size=5, name=None, shape_color='grey', shape='rounded_rect', fill_shape=True, margin=3, shape_opacity=1.0, pickable=False, render_points_as_spheres=False, tolerance=0.001, reset_camera=None, always_visible=False, render=True)
+    add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, text_color=None, font_family=None, shadow=False, show_points=True, point_color=None, point_size=None, name=None, shape_color='grey', shape='rounded_rect', fill_shape=True, margin=3, shape_opacity=1.0, pickable=False, render_points_as_spheres=False, tolerance=0.001, reset_camera=None, always_visible=False, render=True)
         Create a point actor with one label from list labels assigned to each point.
     
         Parameters
         ----------
-        points : sequence or pyvista.DataSet
-            An ``n x 3`` sequence points or pyvista dataset with points.
+        points : sequence | pyvista.DataSet | vtk.vtkAlgorithm
+            An ``n x 3`` sequence points or :class:`pyvista.DataSet` with
+            points or mesh-producing algorithm.
     
-        labels : list or str
+        labels : list | str
             List of labels.  Must be the same length as points. If a
             string name is given with a :class:`pyvista.DataSet` input for
             points, then these are fetched.
     
-        italic : bool, optional
-            Italicises title and bar labels.  Default ``False``.
+        italic : bool, default: False
+            Italicises title and bar labels.
     
-        bold : bool, optional
-            Bolds title and bar labels.  Default ``True``.
+        bold : bool, default: True
+            Bolds title and bar labels.
     
         font_size : float, optional
-            Sets the size of the title font.  Defaults to 16.
+            Sets the size of the title font.
     
-        text_color : color_like, optional
+        text_color : ColorLike, optional
             Color of text. Either a string, RGB sequence, or hex color string.
     
             * ``text_color='white'``
@@ -95,13 +94,13 @@ point labels to a scene.
             Font family.  Must be either ``'courier'``, ``'times'``,
             or ``'arial``.
     
-        shadow : bool, optional
-            Adds a black shadow to the text.  Defaults to ``False``.
+        shadow : bool, default: False
+            Adds a black shadow to the text.
     
-        show_points : bool, optional
-            Controls if points are visible.  Default ``True``.
+        show_points : bool, default: True
+            Controls if points are visible.
     
-        point_color : color_like, optional
+        point_color : ColorLike, optional
             Either a string, rgb list, or hex color string.  One of
             the following.
     
@@ -118,30 +117,30 @@ point labels to a scene.
             updated.  If an actor of this name already exists in the
             rendering window, it will be replaced by the new actor.
     
-        shape_color : color_like, optional
-            Color of points (if visible).  Either a string, rgb
+        shape_color : ColorLike, default: "grey"
+            Color of shape (if visible).  Either a string, rgb
             sequence, or hex color string.
     
-        shape : str, optional
+        shape : str, default: "rounded_rect"
             The string name of the shape to use. Options are ``'rect'`` or
             ``'rounded_rect'``. If you want no shape, pass ``None``.
     
-        fill_shape : bool, optional
+        fill_shape : bool, default: True
             Fill the shape with the ``shape_color``. Outlines if ``False``.
     
-        margin : int, optional
-            The size of the margin on the label background shape. Default is 3.
+        margin : int, default: 3
+            The size of the margin on the label background shape.
     
-        shape_opacity : float, optional
+        shape_opacity : float, default: 1.0
             The opacity of the shape in the range of ``[0, 1]``.
     
-        pickable : bool, optional
+        pickable : bool, default: False
             Set whether this actor is pickable.
     
-        render_points_as_spheres : bool, optional
+        render_points_as_spheres : bool, default: False
             Render points as spheres rather than dots.
     
-        tolerance : float, optional
+        tolerance : float, default: 0.001
             A tolerance to use to determine whether a point label is
             visible.  A tolerance is usually required because the
             conversion from world space to display space during
@@ -150,11 +149,11 @@ point labels to a scene.
         reset_camera : bool, optional
             Reset the camera after adding the points to the scene.
     
-        always_visible : bool, optional
-            Skip adding the visibility filter. Default False.
+        always_visible : bool, default: False
+            Skip adding the visibility filter.
     
-        render : bool, optional
-            Force a render when ``True`` (default).
+        render : bool, default: True
+            Force a render when ``True``.
     
         Returns
         -------
@@ -166,14 +165,21 @@ point labels to a scene.
         >>> import numpy as np
         >>> import pyvista
         >>> pl = pyvista.Plotter()
-        >>> points = np.array([[0.0, 0.0, 0.0],
-        ...                    [1.0, 1.0, 0.0],
-        ...                    [2.0, 0.0, 0.0]])
+        >>> points = np.array(
+        ...     [[0.0, 0.0, 0.0], [1.0, 1.0, 0.0], [2.0, 0.0, 0.0]]
+        ... )
         >>> labels = ['Point A', 'Point B', 'Point C']
-        >>> actor = pl.add_point_labels(points, labels, italic=True, font_size=20,
-        ...                             point_color='red', point_size=20,
-        ...                             render_points_as_spheres=True,
-        ...                             always_visible=True, shadow=True)
+        >>> actor = pl.add_point_labels(
+        ...     points,
+        ...     labels,
+        ...     italic=True,
+        ...     font_size=20,
+        ...     point_color='red',
+        ...     point_size=20,
+        ...     render_points_as_spheres=True,
+        ...     always_visible=True,
+        ...     shadow=True,
+        ... )
         >>> pl.camera_position = 'xy'
         >>> pl.show()
 
@@ -224,19 +230,20 @@ node:
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>10</td></tr>
     <tr><td>N Points</td><td>10</td></tr>
-    <tr><td>X Bounds</td><td>7.903e-02, 8.747e-01</td></tr>
-    <tr><td>Y Bounds</td><td>8.261e-05, 8.113e-01</td></tr>
-    <tr><td>Z Bounds</td><td>1.929e-01, 9.300e-01</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
+    <tr><td>X Bounds</td><td>5.120e-02, 8.098e-01</td></tr>
+    <tr><td>Y Bounds</td><td>3.297e-02, 9.661e-01</td></tr>
+    <tr><td>Z Bounds</td><td>1.635e-01, 8.621e-01</td></tr>
     <tr><td>N Arrays</td><td>1</td></tr>
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td>My Labels</td><td>Points</td><td><U7</td><td>1</td><td>nan</td><td>nan</td></tr>
     </table>
@@ -363,7 +370,7 @@ This example will label each point with their scalar values
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-90
+.. GENERATED FROM PYTHON SOURCE LINES 79-91
 
 .. code-block:: default
 
@@ -381,6 +388,7 @@ This example will label each point with their scalar values
 
 
 
+
 .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
    :alt: e labels
    :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
@@ -390,38 +398,43 @@ This example will label each point with their scalar values
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 92-99
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/e_labels.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.873 seconds)
+   **Total running time of the script:** ( 0 minutes  1.208 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_e_labels.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/e_labels.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/e_labels.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: e_labels.py <e_labels.py>`
 
-     :download:`Download Python source code: e_labels.py <e_labels.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: e_labels.ipynb <e_labels.ipynb>`
+      :download:`Download Jupyter notebook: e_labels.ipynb <e_labels.ipynb>`
 
 
 .. only:: html

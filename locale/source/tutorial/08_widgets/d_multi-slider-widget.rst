@@ -123,6 +123,13 @@ mesh-generating/altering code.
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/core/dataset.py:2123: PyVistaDeprecationWarning: Use of `DataSet.overwrite` is deprecated. Use `DataSet.copy_from` instead.
+      warnings.warn(
+
 
 
 
@@ -132,38 +139,43 @@ And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/multiple-slider-widget.gif
 
+.. GENERATED FROM PYTHON SOURCE LINES 81-88
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.297 seconds)
+   **Total running time of the script:** ( 0 minutes  0.380 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: d_multi-slider-widget.py <d_multi-slider-widget.py>`
 
-     :download:`Download Python source code: d_multi-slider-widget.py <d_multi-slider-widget.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: d_multi-slider-widget.ipynb <d_multi-slider-widget.ipynb>`
+      :download:`Download Jupyter notebook: d_multi-slider-widget.ipynb <d_multi-slider-widget.ipynb>`
 
 
 .. only:: html

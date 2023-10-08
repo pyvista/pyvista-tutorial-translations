@@ -131,7 +131,7 @@ increasing from bottom to top.
 
 Combine custom lighting and physically based rendering.
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-92
+.. GENERATED FROM PYTHON SOURCE LINES 67-93
 
 .. code-block:: default
 
@@ -163,6 +163,7 @@ Combine custom lighting and physically based rendering.
 
 
 
+
 .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
    :alt: d pbr
    :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
@@ -172,38 +173,43 @@ Combine custom lighting and physically based rendering.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 94-101
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  7.013 seconds)
+   **Total running time of the script:** ( 1 minutes  28.336 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: d_pbr.py <d_pbr.py>`
 
-     :download:`Download Python source code: d_pbr.py <d_pbr.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`
+      :download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`
 
 
 .. only:: html
