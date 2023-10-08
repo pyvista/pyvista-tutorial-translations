@@ -598,6 +598,8 @@ msgid ""
 "`How does PyVista relate to other visualization tools? "
 "<https://github.com/pyvista/pyvista/discussions/1438>`_"
 msgstr ""
+"`PyVistaと他の可視化ツールとの関連は？ "
+"<https://github.com/pyvista/pyvista/discussions/1438>`_"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
 msgid "`SciVis Libraries <https://pyviz.org/scivis/index.html>`_"
