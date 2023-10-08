@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-196.63185586, -202.14159103,    1.87555517],
-           [-180.75793976, -202.14159103,    2.53055186],
-           [-154.06530783, -202.14159103,    3.95627565],
-           [-134.34048106, -202.14159103,    5.25794782],
-           [-116.60590939, -202.14159103,    6.56834659]])
+    array([[-195.13977348, -198.37424407,    2.08251561],
+           [-182.55051854, -198.37424407,    2.64142504],
+           [-160.92418033, -198.37424407,    3.82945908],
+           [-138.17584227, -198.37424407,    5.3812731 ],
+           [-118.47427649, -198.37424407,    6.92920745]])
 
 
 
@@ -278,8 +278,8 @@ Clean Edges & Triangulations
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>3.041e-03, 9.288e+00</td></tr>
-    <tr><td>Y Bounds</td><td>3.050e-02, 9.277e+00</td></tr>
+    <tr><td>X Bounds</td><td>5.608e-02, 9.276e+00</td></tr>
+    <tr><td>Y Bounds</td><td>2.404e-02, 9.291e+00</td></tr>
     <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
@@ -335,12 +335,13 @@ Run the triangulation on these points
 Note that some of the outer edges are unconstrained and the triangulation
 added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-86
+.. GENERATED FROM PYTHON SOURCE LINES 84-87
 
 .. code-block:: default
 
     surf = cloud.delaunay_2d(alpha=1.0)
     surf.plot(cpos="xy", show_edges=True)
+
 
 
 
@@ -353,10 +354,20 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 88-95
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.468 seconds)
+   **Total running time of the script:** ( 0 minutes  1.597 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:

@@ -73,8 +73,6 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Help on method glyph in module pyvista.core.filters.data_set:
@@ -91,17 +89,17 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
     
         Parameters
         ----------
-        orient : bool or str, optional
+        orient : bool | str, default: True
             If ``True``, use the active vectors array to orient the glyphs.
             If string, the vector array to use to orient the glyphs.
             If ``False``, the glyphs will not be orientated.
     
-        scale : bool, str or sequence, optional
+        scale : bool | str | sequence[float], default: True
             If ``True``, use the active scalars to scale the glyphs.
             If string, the scalar array to use to scale the glyphs.
             If ``False``, the glyphs will not be scaled.
     
-        factor : float, optional
+        factor : float, default: 1.0
             Scale factor applied to scaling array.
     
         geom : vtk.vtkDataSet or tuple(vtk.vtkDataSet), optional
@@ -112,7 +110,7 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
             ``indices``. The values of the range (see ``rng``) affect lookup
             in the table.
     
-        indices : tuple(float), optional
+        indices : sequence[float], optional
             Specifies the index of each glyph in the table for lookup in case
             ``geom`` is a sequence. If given, must be the same length as
             ``geom``. If missing, a default value of ``range(len(geom))`` is
@@ -125,17 +123,17 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
             is ``True`` then the tolerance can be an absolute distance.
             If ``None``, points merging as a preprocessing step is disabled.
     
-        absolute : bool, optional
+        absolute : bool, default: False
             Control if ``tolerance`` is an absolute distance or a fraction.
     
-        clamping : bool, optional
-            Turn on/off clamping of "scalar" values to range. Default ``False``.
+        clamping : bool, default: False
+            Turn on/off clamping of "scalar" values to range.
     
-        rng : tuple(float), optional
+        rng : sequence[float], optional
             Set the range of values to be considered by the filter
             when scalars values are provided.
     
-        progress_bar : bool, optional
+        progress_bar : bool, default: False
             Display a progress bar to indicate progress.
     
         Returns
@@ -151,11 +149,17 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
         >>> import pyvista
         >>> from pyvista import examples
         >>> mesh = examples.load_random_hills()
-        >>> arrows = mesh.glyph(scale="Normals", orient="Normals", tolerance=0.05)
+        >>> arrows = mesh.glyph(
+        ...     scale="Normals", orient="Normals", tolerance=0.05
+        ... )
         >>> pl = pyvista.Plotter()
         >>> actor = pl.add_mesh(arrows, color="black")
-        >>> actor = pl.add_mesh(mesh, scalars="Elevation", cmap="terrain",
-        ...                     show_scalar_bar=False)
+        >>> actor = pl.add_mesh(
+        ...     mesh,
+        ...     scalars="Elevation",
+        ...     cmap="terrain",
+        ...     show_scalar_bar=False,
+        ... )
         >>> pl.show()
     
         See :ref:`glyph_example` and :ref:`glyph_table_example` for more
@@ -238,18 +242,16 @@ access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    array([[-3.4861004e-16,  1.0000000e+00, -9.9999875e-01],
-           [ 3.4861004e-16,  1.0000000e+00, -9.9999875e-01],
-           [-3.3300975e-01,  1.0000000e+00, -9.9980003e-01],
+    array([[ 0.        ,  1.        , -0.99999875],
+           [ 0.        ,  1.        , -0.99999875],
+           [ 0.33300975,  1.        , -0.9998    ],
            ...,
-           [-8.3088565e-01,  9.7835207e-01, -9.8625994e-01],
-           [-6.1331964e-01,  9.9016821e-01, -9.9718851e-01],
-           [-3.2600534e-01,  9.9750996e-01, -9.9980003e-01]], dtype=float32)
+           [ 0.83088565,  0.97835207, -0.98625994],
+           [ 0.61331964,  0.9901682 , -0.9971885 ],
+           [ 0.32600534,  0.99750996, -0.9998    ]], dtype=float32)
 
 
 
@@ -281,7 +283,7 @@ access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
 
 Plot the arrows and the sphere.
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-69
+.. GENERATED FROM PYTHON SOURCE LINES 65-70
 
 .. code-block:: default
 
@@ -289,6 +291,7 @@ Plot the arrows and the sphere.
     p.add_mesh(sphere.arrows, lighting=False, scalar_bar_args={'title': "Vector Magnitude"})
     p.add_mesh(sphere, color="grey", ambient=0.6, opacity=0.5, show_edges=False)
     p.show()
+
 
 
 
@@ -301,38 +304,43 @@ Plot the arrows and the sphere.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 71-78
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/04_filters/solutions/e_glyphs.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.207 seconds)
+   **Total running time of the script:** ( 0 minutes  1.871 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_e_glyphs.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/e_glyphs.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/e_glyphs.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: e_glyphs.py <e_glyphs.py>`
 
-     :download:`Download Python source code: e_glyphs.py <e_glyphs.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: e_glyphs.ipynb <e_glyphs.ipynb>`
+      :download:`Download Jupyter notebook: e_glyphs.ipynb <e_glyphs.ipynb>`
 
 
 .. only:: html

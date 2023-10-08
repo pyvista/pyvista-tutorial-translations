@@ -71,7 +71,7 @@ Let's run through creating a few geometric objects!
 
 Now let's plot them all in one window
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-54
+.. GENERATED FROM PYTHON SOURCE LINES 29-57
 
 .. code-block:: default
 
@@ -100,6 +100,9 @@ Now let's plot them all in one window
     p.add_mesh(disc, color="tan", show_edges=True)
     # Render all of them
     p.show()
+    # Export this plotter as an interactive scene to a HTML file.
+    # p.export_html("a_basic.html")
+
 
 
 
@@ -109,41 +112,57 @@ Now let's plot them all in one window
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    INFO:root:awaiting runner setup
+    INFO:root:awaiting site startup
+    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7fe4a86dbdc0>
+    INFO:root:Print WSLINK_READY_MSG
+    INFO:root:Schedule auto shutdown with timout 0
+    INFO:root:awaiting running future
 
 
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 58-65
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/00_intro/a_basic.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.120 seconds)
+   **Total running time of the script:** ( 0 minutes  3.200 seconds)
 
 
 .. _sphx_glr_download_tutorial_00_intro_a_basic.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/00_intro/a_basic.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/00_intro/a_basic.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_basic.py <a_basic.py>`
 
-     :download:`Download Python source code: a_basic.py <a_basic.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`
+      :download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`
 
 
 .. only:: html

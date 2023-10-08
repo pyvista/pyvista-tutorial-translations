@@ -68,11 +68,12 @@ Take this Lidar point cloud for example:
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>3392091</td></tr>
     <tr><td>N Points</td><td>3392091</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>4.809e+05, 4.811e+05</td></tr>
     <tr><td>Y Bounds</td><td>4.400e+06, 4.400e+06</td></tr>
     <tr><td>Z Bounds</td><td>1.754e+03, 1.787e+03</td></tr>
@@ -80,7 +81,7 @@ Take this Lidar point cloud for example:
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>Elevation</b></td><td>Points</td><td>float64</td><td>1</td><td>1.754e+03</td><td>1.787e+03</td></tr>
     </table>
@@ -153,7 +154,7 @@ The eye dome lighting mode can also handle plotting scalar arrays. Try the
 above block but by specifying a ``scalars`` array instead of ``color`` in
 the ``add_mesh`` call.
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-60
+.. GENERATED FROM PYTHON SOURCE LINES 55-61
 
 .. code-block:: default
 
@@ -162,6 +163,7 @@ the ``add_mesh`` call.
     p.add_mesh(point_cloud, scalars="Elevation", point_size=5)
     p.enable_eye_dome_lighting()  # Turn on eye dome lighting here
     p.show()
+
 
 
 
@@ -174,38 +176,43 @@ the ``add_mesh`` call.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 62-69
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/solutions/c_edl.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.968 seconds)
+   **Total running time of the script:** ( 0 minutes  50.804 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_c_edl.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/c_edl.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/c_edl.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: c_edl.py <c_edl.py>`
 
-     :download:`Download Python source code: c_edl.py <c_edl.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: c_edl.ipynb <c_edl.ipynb>`
+      :download:`Download Jupyter notebook: c_edl.ipynb <c_edl.ipynb>`
 
 
 .. only:: html

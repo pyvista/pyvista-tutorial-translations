@@ -68,19 +68,20 @@ Here is a sample mesh
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>19602</td></tr>
     <tr><td>N Points</td><td>10000</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-1.000e+01, 1.000e+01</td></tr>
-    <tr><td>Y Bounds</td><td>-4.486e-07, 2.000e+01</td></tr>
+    <tr><td>Y Bounds</td><td>-2.309e-14, 2.000e+01</td></tr>
     <tr><td>Z Bounds</td><td>1.416e-01, 7.483e+00</td></tr>
     <tr><td>N Arrays</td><td>2</td></tr>
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td>Normals</td><td>Points</td><td>float32</td><td>3</td><td>-8.663e-01</td><td>9.999e-01</td></tr>
     <tr><td><b>Elevation</b></td><td>Points</td><td>float32</td><td>1</td><td>1.416e-01</td><td>7.483e+00</td></tr>
@@ -126,8 +127,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
 
 
 .. rst-class:: sphx-glr-script-out
-
- Out:
 
  .. code-block:: none
 
@@ -332,20 +331,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  Data and other attributes defined here:
      |  
      |  CompositeOutlineStyle = <class 'vtkmodules.vtkFiltersModeling.vtkOutli...
-     |      int([x]) -> integer
-     |      int(x, base=10) -> integer
-     |      
-     |      Convert a number or string to an integer, or return 0 if no arguments
-     |      are given.  If x is a number, return x.__int__().  For floating point
-     |      numbers, this truncates towards zero.
-     |      
-     |      If x is not a number or if base is given, then x must be a string,
-     |      bytes, or bytearray instance representing an integer literal in the
-     |      given base.  The literal can be preceded by '+' or '-' and be surrounded
-     |      by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
-     |      Base 0 means to interpret the base from the string as an integer literal.
-     |      >>> int('0b100', base=0)
-     |      4
      |  
      |  LEAF_DATASETS = 1
      |  
@@ -899,13 +884,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      input data object. The MTime of the vtkAlgorithm will not change
      |      unless the data object changed.
      |  
-     |  SetProgress(...)
-     |      SetProgress(self, __a:float) -> None
-     |      C++: void SetProgress(double)
-     |      
-     |      `SetProgress` is deprecated. Subclasses should use
-     |      `UpdateProgress` to report progress updates.
-     |  
      |  SetProgressObserver(...)
      |      SetProgressObserver(self, __a:vtkProgressObserver) -> None
      |      C++: void SetProgressObserver(vtkProgressObserver *)
@@ -1036,6 +1014,12 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      
      |      Bring this algorithm's outputs up-to-date.
      |  
+     |  UsesGarbageCollector(...)
+     |      UsesGarbageCollector(self) -> bool
+     |      C++: bool UsesGarbageCollector() override;
+     |      
+     |      Participate in garbage collection.
+     |  
      |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from vtkmodules.vtkCommonExecutionModel.vtkAlgorithm:
      |  
@@ -1044,20 +1028,6 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  DOUBLE_PRECISION = 1
      |  
      |  DesiredOutputPrecision = <class 'vtkmodules.vtkCommonExecutionModel.vt...
-     |      int([x]) -> integer
-     |      int(x, base=10) -> integer
-     |      
-     |      Convert a number or string to an integer, or return 0 if no arguments
-     |      are given.  If x is a number, return x.__int__().  For floating point
-     |      numbers, this truncates towards zero.
-     |      
-     |      If x is not a number or if base is given, then x must be a string,
-     |      bytes, or bytearray instance representing an integer literal in the
-     |      given base.  The literal can be preceded by '+' or '-' and be surrounded
-     |      by whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.
-     |      Base 0 means to interpret the base from the string as an integer literal.
-     |      >>> int('0b100', base=0)
-     |      4
      |  
      |  SINGLE_PRECISION = 0
      |  
@@ -1110,6 +1080,17 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      C++: virtual vtkMTimeType GetMTime()
      |      
      |      Return this object's modified time.
+     |  
+     |  GetObjectDescription(...)
+     |      GetObjectDescription(self) -> str
+     |      C++: std::string GetObjectDescription() override;
+     |      
+     |      The object description printed in messages and PrintSelf output.
+     |      To be used only for reporting purposes.
+     |  
+     |  GetObjectName(...)
+     |      GetObjectName(self) -> str
+     |      C++: virtual std::string GetObjectName()
      |  
      |  GlobalWarningDisplayOff(...)
      |      GlobalWarningDisplayOff() -> None
@@ -1184,6 +1165,16 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      
      |      This is a global flag that controls whether any debug, warning or
      |      error messages are displayed.
+     |  
+     |  SetObjectName(...)
+     |      SetObjectName(self, objectName:str) -> None
+     |      C++: virtual void SetObjectName(const std::string &objectName)
+     |      
+     |      Set/get the name of this object for reporting purposes. The name
+     |      appears in warning and debug messages and in the Print output.
+     |      Setting the object name does not change the MTime and does not
+     |      invoke a ModifiedEvent. Derived classes implementing copying
+     |      methods are expected not to copy the ObjectName.
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
@@ -1265,6 +1256,24 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      Decrease the reference count (release by another object). This
      |      has the same effect as invoking Delete() (i.e., it reduces the
      |      reference count by 1).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
+     |  
+     |  override(...) from builtins.type
+     |      This method can be used to override a VTK class with a Python subclass.
+     |      The class type passed to override will afterwards be instantiated
+     |      instead of the type override is called on.
+     |      For example,
+     |      
+     |      class foo(vtk.vtkPoints):
+     |        pass
+     |      vtk.vtkPoints.override(foo)
+     |      
+     |      will lead to foo being instantied everytime vtkPoints() is called.
+     |      The main objective of this functionality is to enable developers to
+     |      extend VTK classes with more pythonic subclasses that contain
+     |      convenience functionality.
 
 
 
@@ -1297,10 +1306,11 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
 
     <div class="output_subarea output_html rendered_html output_result">
 
-    <table>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>0</td></tr>
     <tr><td>N Points</td><td>0</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>1.000e+299, -1.000e+299</td></tr>
     <tr><td>Y Bounds</td><td>1.000e+299, -1.000e+299</td></tr>
     <tr><td>Z Bounds</td><td>1.000e+299, -1.000e+299</td></tr>
@@ -1332,12 +1342,13 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
 
     <div class="output_subarea output_html rendered_html output_result">
 
-    <table>
+    <table style='width: 100%;'>
     <tr><th>PolyData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>12</td></tr>
     <tr><td>N Points</td><td>8</td></tr>
+    <tr><td>N Strips</td><td>0</td></tr>
     <tr><td>X Bounds</td><td>-1.000e+01, 1.000e+01</td></tr>
-    <tr><td>Y Bounds</td><td>-4.486e-07, 2.000e+01</td></tr>
+    <tr><td>Y Bounds</td><td>-2.309e-14, 2.000e+01</td></tr>
     <tr><td>Z Bounds</td><td>1.416e-01, 7.483e+00</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
@@ -1385,38 +1396,43 @@ to apply to your mesh. The instructors will be around to help you implement.
 
 See https://kitware.github.io/vtk-examples/site/Python/
 
+.. GENERATED FROM PYTHON SOURCE LINES 78-85
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/c_vtk_algorithms.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.926 seconds)
+   **Total running time of the script:** ( 0 minutes  1.185 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/c_vtk_algorithms.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/c_vtk_algorithms.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: c_vtk_algorithms.py <c_vtk_algorithms.py>`
 
-     :download:`Download Python source code: c_vtk_algorithms.py <c_vtk_algorithms.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: c_vtk_algorithms.ipynb <c_vtk_algorithms.ipynb>`
+      :download:`Download Jupyter notebook: c_vtk_algorithms.ipynb <c_vtk_algorithms.ipynb>`
 
 
 .. only:: html

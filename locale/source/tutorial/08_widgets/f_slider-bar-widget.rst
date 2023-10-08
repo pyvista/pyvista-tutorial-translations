@@ -89,19 +89,16 @@ After interacting with the scene, the threshold mesh is available as:
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f43c0a741c0)
-      N Cells:	115425
-      N Points:	179772
-      X Bounds:	3.760e+01, 1.171e+02
-      Y Bounds:	1.446e+01, 1.338e+02
-      Z Bounds:	0.000e+00, 2.000e+02
-      N Arrays:	1
-    ]
+    [UnstructuredGrid (0x7fe41bd7ca00)
+      N Cells:    295424
+      N Points:   394455
+      X Bounds:   3.615e+01, 1.178e+02
+      Y Bounds:   1.085e+01, 1.345e+02
+      Z Bounds:   0.000e+00, 2.000e+02
+      N Arrays:   1]
 
 
 
@@ -156,38 +153,43 @@ And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/slider-widget-resolution.gif
 
+.. GENERATED FROM PYTHON SOURCE LINES 65-72
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.351 seconds)
+   **Total running time of the script:** ( 0 minutes  5.104 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_f_slider-bar-widget.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: f_slider-bar-widget.py <f_slider-bar-widget.py>`
 
-     :download:`Download Python source code: f_slider-bar-widget.py <f_slider-bar-widget.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: f_slider-bar-widget.ipynb <f_slider-bar-widget.ipynb>`
+      :download:`Download Jupyter notebook: f_slider-bar-widget.ipynb <f_slider-bar-widget.ipynb>`
 
 
 .. only:: html

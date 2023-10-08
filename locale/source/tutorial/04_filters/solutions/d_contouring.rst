@@ -75,8 +75,6 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
 
 .. rst-class:: sphx-glr-script-out
 
- Out:
-
  .. code-block:: none
 
     Help on method contour in module pyvista.core.filters.data_set:
@@ -90,40 +88,40 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
     
         Parameters
         ----------
-        isosurfaces : int or sequence, optional
+        isosurfaces : int | sequence[float], optional
             Number of isosurfaces to compute across valid data range or a
             sequence of float values to explicitly use as the isosurfaces.
     
-        scalars : str, collections.abc.Sequence, numpy.ndarray, optional
+        scalars : str | array_like[float], optional
             Name or array of scalars to threshold on. If this is an array, the
             output of this filter will save them as ``"Contour Data"``.
             Defaults to currently active scalars.
     
-        compute_normals : bool, optional
+        compute_normals : bool, default: False
             Compute normals for the dataset.
     
-        compute_gradients : bool, optional
+        compute_gradients : bool, default: False
             Compute gradients for the dataset.
     
-        compute_scalars : bool, optional
+        compute_scalars : bool, default: True
             Preserves the scalar values that are being contoured.
     
-        rng : tuple(float), optional
+        rng : sequence[float], optional
             If an integer number of isosurfaces is specified, this is
             the range over which to generate contours. Default is the
             scalars array's full data range.
     
-        preference : str, optional
+        preference : str, default: "point"
             When ``scalars`` is specified, this is the preferred array
             type to search for in the dataset.  Must be either
             ``'point'`` or ``'cell'``.
     
-        method : str, optional
+        method : str, default:  "contour"
             Specify to choose which vtk filter is used to create the contour.
             Must be one of ``'contour'``, ``'marching_cubes'`` and
-            ``'flying_edges'``. Defaults to ``'contour'``.
+            ``'flying_edges'``.
     
-        progress_bar : bool, optional
+        progress_bar : bool, default: False
             Display a progress bar to indicate progress.
     
         Returns
@@ -146,31 +144,40 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
         >>> a = 0.4
         >>> b = 0.1
         >>> def f(x, y, z):
-        ...     xx = x*x
-        ...     yy = y*y
-        ...     zz = z*z
-        ...     xyz = x*y*z
+        ...     xx = x * x
+        ...     yy = y * y
+        ...     zz = z * z
+        ...     xyz = x * y * z
         ...     xx_yy = xx + yy
-        ...     a_xx = a*xx
-        ...     b_yy = b*yy
+        ...     a_xx = a * xx
+        ...     b_yy = b * yy
         ...     return (
         ...         (xx_yy + 1) * (a_xx + b_yy)
-        ...         + zz * (b * xx + a * yy) - 2 * (a - b) * xyz
+        ...         + zz * (b * xx + a * yy)
+        ...         - 2 * (a - b) * xyz
         ...         - a * b * xx_yy
-        ...     )**2 - 4 * (xx + yy) * (a_xx + b_yy - xyz * (a - b))**2
+        ...     ) ** 2 - 4 * (xx + yy) * (a_xx + b_yy - xyz * (a - b)) ** 2
+        ...
         >>> n = 100
         >>> x_min, y_min, z_min = -1.35, -1.7, -0.65
-        >>> grid = pv.UniformGrid(
-        ...     dims=(n, n, n),
-        ...     spacing=(abs(x_min)/n*2, abs(y_min)/n*2, abs(z_min)/n*2),
+        >>> grid = pv.ImageData(
+        ...     dimensions=(n, n, n),
+        ...     spacing=(
+        ...         abs(x_min) / n * 2,
+        ...         abs(y_min) / n * 2,
+        ...         abs(z_min) / n * 2,
+        ...     ),
         ...     origin=(x_min, y_min, z_min),
         ... )
         >>> x, y, z = grid.points.T
         >>> values = f(x, y, z)
         >>> out = grid.contour(
-        ...     1, scalars=values, rng=[0, 0], method='flying_edges',
+        ...     1,
+        ...     scalars=values,
+        ...     rng=[0, 0],
+        ...     method='flying_edges',
         ... )
-        >>> out.plot(color='tan', smooth_shading=True)
+        >>> out.plot(color='lightblue', smooth_shading=True)
     
         See :ref:`common_filter_example` or
         :ref:`marching_cubes_example` for more examples using this
@@ -238,9 +245,9 @@ Let's extract 2D iso-surfaces of a scalar field from a 3D mesh.
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table>
-    <tr><th>UniformGrid</th><th>Information</th></tr>
+    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
+    <table style='width: 100%;'>
+    <tr><th>ImageData</th><th>Information</th></tr>
     <tr><td>N Cells</td><td>16581375</td></tr>
     <tr><td>N Points</td><td>16777216</td></tr>
     <tr><td>X Bounds</td><td>0.000e+00, 2.550e+02</td></tr>
@@ -252,7 +259,7 @@ Let's extract 2D iso-surfaces of a scalar field from a 3D mesh.
     </table>
 
     </td><td>
-    <table>
+    <table style='width: 100%;'>
     <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
     <tr><td><b>SLCImage</b></td><td>Points</td><td>uint8</td><td>1</td><td>0.000e+00</td><td>1.970e+02</td></tr>
     </table>
@@ -281,7 +288,7 @@ of 50 and 200
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-61
+.. GENERATED FROM PYTHON SOURCE LINES 52-62
 
 .. code-block:: default
 
@@ -297,6 +304,7 @@ of 50 and 200
 
 
 
+
 .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
    :alt: d contouring
    :srcset: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
@@ -306,38 +314,43 @@ of 50 and 200
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 63-70
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/04_filters/solutions/d_contouring.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.930 seconds)
+   **Total running time of the script:** ( 0 minutes  12.366 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_d_contouring.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/d_contouring.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/solutions/d_contouring.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: d_contouring.py <d_contouring.py>`
 
-     :download:`Download Python source code: d_contouring.py <d_contouring.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: d_contouring.ipynb <d_contouring.ipynb>`
+      :download:`Download Jupyter notebook: d_contouring.ipynb <d_contouring.ipynb>`
 
 
 .. only:: html

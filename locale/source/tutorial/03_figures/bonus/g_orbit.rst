@@ -77,9 +77,9 @@ Orbit around the Mt. St Helens dataset.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_001.png
+.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_001.gif
    :alt: g orbit
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_001.png
+   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_001.gif
    :class: sphx-glr-single-img
 
 
@@ -105,9 +105,9 @@ Orbit around the Mt. St Helens dataset.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_002.png
+.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_002.gif
    :alt: g orbit
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_002.png
+   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_002.gif
    :class: sphx-glr-single-img
 
 
@@ -129,7 +129,7 @@ Orbit around the Mt. St Helens dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-69
+.. GENERATED FROM PYTHON SOURCE LINES 62-70
 
 .. code-block:: default
 
@@ -143,47 +143,53 @@ Orbit around the Mt. St Helens dataset.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_003.png
+
+.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_003.gif
    :alt: g orbit
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_003.png
+   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_g_orbit_003.gif
    :class: sphx-glr-single-img
 
 
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 71-78
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/g_orbit.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  22.430 seconds)
+   **Total running time of the script:** ( 1 minutes  32.053 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_g_orbit.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/g_orbit.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/g_orbit.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: g_orbit.py <g_orbit.py>`
 
-     :download:`Download Python source code: g_orbit.py <g_orbit.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`
+      :download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`
 
 
 .. only:: html

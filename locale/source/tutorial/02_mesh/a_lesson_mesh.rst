@@ -64,11 +64,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.15365144, 0.32847192, 0.97853641],
-           [0.53350235, 0.54989164, 0.80402187],
-           [0.50297108, 0.59458227, 0.54729397],
-           [0.19872231, 0.5053621 , 0.3525372 ],
-           [0.47356078, 0.84645944, 0.8768684 ]])
+    array([[0.49416667, 0.95090142, 0.62090338],
+           [0.03036382, 0.84865811, 0.01670698],
+           [0.37981812, 0.1749031 , 0.63491917],
+           [0.0750902 , 0.80057571, 0.1959315 ],
+           [0.66950125, 0.51065842, 0.56372184]])
 
 
 
@@ -97,9 +97,9 @@ Pass numpy array of points (n by 3) to PolyData
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>6.628e-03, 9.925e-01</td></tr>
-    <tr><td>Y Bounds</td><td>5.243e-03, 9.956e-01</td></tr>
-    <tr><td>Z Bounds</td><td>8.045e-03, 9.861e-01</td></tr>
+    <tr><td>X Bounds</td><td>1.139e-02, 9.661e-01</td></tr>
+    <tr><td>Y Bounds</td><td>1.195e-02, 9.909e-01</td></tr>
+    <tr><td>Z Bounds</td><td>1.671e-02, 9.904e-01</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -373,7 +373,7 @@ generate cube containing 6 faces and assign each face an integer from
 
 Note how this varies from assigning scalars to each point
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-159
+.. GENERATED FROM PYTHON SOURCE LINES 148-160
 
 .. code-block:: default
 
@@ -391,6 +391,7 @@ Note how this varies from assigning scalars to each point
 
 
 
+
 .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
    :alt: a lesson mesh
    :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
@@ -400,10 +401,20 @@ Note how this varies from assigning scalars to each point
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 161-168
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/a_lesson_mesh.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.594 seconds)
+   **Total running time of the script:** ( 0 minutes  3.830 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:

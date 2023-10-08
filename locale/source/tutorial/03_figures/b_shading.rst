@@ -159,7 +159,7 @@ We can even plot the edges that will be split using
 The ``split_sharp_edges`` keyword argument is compatible with
 physically based rendering as well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-65
+.. GENERATED FROM PYTHON SOURCE LINES 59-66
 
 .. code-block:: default
 
@@ -172,6 +172,7 @@ physically based rendering as well.
 
 
 
+
 .. image-sg:: /tutorial/03_figures/images/sphx_glr_b_shading_005.png
    :alt: b shading
    :srcset: /tutorial/03_figures/images/sphx_glr_b_shading_005.png
@@ -181,38 +182,43 @@ physically based rendering as well.
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 67-74
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/b_shading.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.485 seconds)
+   **Total running time of the script:** ( 0 minutes  1.940 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_b_shading.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/b_shading.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/b_shading.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: b_shading.py <b_shading.py>`
 
-     :download:`Download Python source code: b_shading.py <b_shading.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: b_shading.ipynb <b_shading.ipynb>`
+      :download:`Download Jupyter notebook: b_shading.ipynb <b_shading.ipynb>`
 
 
 .. only:: html

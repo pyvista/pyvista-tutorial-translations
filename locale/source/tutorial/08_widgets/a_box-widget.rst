@@ -80,7 +80,7 @@ scene with a box widget that controls its extent, the
 
 After interacting with the scene, the clipped mesh is available as:
 
-.. GENERATED FROM PYTHON SOURCE LINES 36-37
+.. GENERATED FROM PYTHON SOURCE LINES 36-38
 
 .. code-block:: default
 
@@ -89,56 +89,59 @@ After interacting with the scene, the clipped mesh is available as:
 
 
 
-.. rst-class:: sphx-glr-script-out
 
- Out:
+.. rst-class:: sphx-glr-script-out
 
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f43c155a460)
-      N Cells:	2018232
-      N Points:	1009118
-      X Bounds:	-1.194e+02, 1.194e+02
-      Y Bounds:	-1.813e+02, 1.813e+02
-      Z Bounds:	-2.473e+02, 2.473e+02
-      N Arrays:	0
-    ]
+    [UnstructuredGrid (0x7fe44164f7c0)
+      N Cells:    2018232
+      N Points:   1009118
+      X Bounds:   -1.194e+02, 1.194e+02
+      Y Bounds:   -1.813e+02, 1.813e+02
+      Z Bounds:   -2.473e+02, 2.473e+02
+      N Arrays:   1]
 
 
+
+.. GENERATED FROM PYTHON SOURCE LINES 39-46
+
+.. raw:: html
+
+    <center>
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/a_box-widget.ipynb">
+        <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
+      </a>
+    </center>
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.797 seconds)
+   **Total running time of the script:** ( 0 minutes  20.385 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:
 
+.. only:: html
 
-.. only :: html
-
- .. container:: sphx-glr-footer
-    :class: sphx-glr-footer-example
+  .. container:: sphx-glr-footer sphx-glr-footer-example
 
 
-  .. container:: binder-badge
+    .. container:: binder-badge
 
-    .. image:: images/binder_badge_logo.svg
-      :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/a_box-widget.ipynb
-      :alt: Launch binder
-      :width: 150 px
+      .. image:: images/binder_badge_logo.svg
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/a_box-widget.ipynb
+        :alt: Launch binder
+        :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-python
 
-  .. container:: sphx-glr-download sphx-glr-download-python
+      :download:`Download Python source code: a_box-widget.py <a_box-widget.py>`
 
-     :download:`Download Python source code: a_box-widget.py <a_box-widget.py>`
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
-
-  .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-     :download:`Download Jupyter notebook: a_box-widget.ipynb <a_box-widget.ipynb>`
+      :download:`Download Jupyter notebook: a_box-widget.ipynb <a_box-widget.ipynb>`
 
 
 .. only:: html
