@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-15 00:32+0000\n"
+"POT-Creation-Date: 2023-10-09 00:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,11 +36,11 @@ msgstr ""
 msgid "PyVista can be installed on several environments, including, but not limited to:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:25
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "pip"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:31
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "conda"
 msgstr ""
 
