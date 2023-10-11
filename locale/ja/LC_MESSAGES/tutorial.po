@@ -4419,23 +4419,27 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/index.rst-1
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst-1
 msgid "Sample Function: Perlin Noise in 3D"
-msgstr ""
+msgstr "サンプル関数:3DでのPerlinノイズ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:23
 msgid ""
 "Here we use :func:`pyvista.core.utilities.features.sample_function` to "
 "sample Perlin noise over a region to generate random terrain."
 msgstr ""
+"ここでは， :func:`pyvista.core.utilities.features.sample_function` "
+"を使用して領域上のPerlinノイズをサンプリングし，ランダムな地表を生成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:26
 msgid ""
 "Video games like Minecraft use Perlin noise to create terrain.  Here, we "
 "create a voxelized mesh similar to a Minecraft \"cave\"."
 msgstr ""
+"Minecraftなどのビデオゲームでは，Perlinノイズを使用して地表を作成します．ここでは，Minecraftの \"洞窟\" "
+"に似たボクセル化メッシュを作成します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:46
 msgid "Generate Perlin Noise over a 3D StructuredGrid"
-msgstr ""
+msgstr "3D StructuredGrid上にPerlinノイズを生成する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:47
 msgid ""
@@ -4444,16 +4448,19 @@ msgid ""
 "and more expansive, while a higher frequency in any direction will make the "
 "caves appear more \"vein-like\" and less open."
 msgstr ""
+"\"freq\" の値を自由に変更して， \"洞窟\" "
+"の形を変えることができます．たとえば，周波数を低くすると，洞穴が大きく拡張します．一方，任意の方向の周波数を高くすると，洞穴はより \"静脈のように\""
+" 見え，開きにくくなります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:52
 msgid ""
 "Change the threshold to reduce or increase the percent of the terrain that "
 "is open or closed"
-msgstr ""
+msgstr "しきい値を変更して，開いている地形または閉じている地形の割合を増減します"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:98
 msgid "color limits without blue"
-msgstr ""
+msgstr "青以外の色の制限"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:152
 msgid "**Total running time of the script:** ( 0 minutes  3.305 seconds)"
