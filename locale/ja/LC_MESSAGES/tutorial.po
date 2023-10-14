@@ -91,7 +91,7 @@ msgstr ":ref:`jupyter`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "Using PyVista in Jupyter."
-msgstr "JupyterでPyVistaを使う．"
+msgstr "JupyterでPyVistaを使います．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:55
 msgid ":ref:`basic`"
