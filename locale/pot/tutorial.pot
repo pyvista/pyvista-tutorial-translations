@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 00:30+0000\n"
+"POT-Creation-Date: 2023-10-15 00:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -354,11 +354,11 @@ msgid "Published a paper `Sullivan, B., & Kaszynski, A. (2019). PyVista: 3D plot
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
-msgid "As of July 2023, Over 100+ contributors and `~1.9k Stars <https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
+msgid "As of October 2023, Over 150+ contributors and `~2.0k Stars <https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
-msgid "Used by at least 1.8k other `libraries, examples, and repositories <https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
+msgid "Used by at least 2.0k other `libraries, examples, and repositories <https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43

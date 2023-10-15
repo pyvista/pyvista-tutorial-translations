@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 00:30+0000\n"
+"POT-Creation-Date: 2023-10-15 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Norwegian Bokmål (https://app.transifex.com/tkoyama010/teams/112279/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -409,13 +409,13 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
 msgid ""
-"As of July 2023, Over 100+ contributors and `~1.9k Stars "
+"As of October 2023, Over 150+ contributors and `~2.0k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
-"Used by at least 1.8k other `libraries, examples, and repositories "
+"Used by at least 2.0k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
 

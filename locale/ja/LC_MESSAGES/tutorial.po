@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-09 00:30+0000\n"
+"POT-Creation-Date: 2023-10-15 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -438,20 +438,15 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
 msgid ""
-"As of July 2023, Over 100+ contributors and `~1.9k Stars "
+"As of October 2023, Over 150+ contributors and `~2.0k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
-"2023年7月現在，GitHubに100人以上のコントリビューターと `~1.9k Stars "
-"<https://github.com/pyvista/pyvista/stargazers>`_ がいます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
-"Used by at least 1.8k other `libraries, examples, and repositories "
+"Used by at least 2.0k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
-"GitHubにある他の `libraries, examples, and repositories "
-"<https://github.com/pyvista/pyvista/network/dependents>`_ "
-"で少なくとも1.8k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
