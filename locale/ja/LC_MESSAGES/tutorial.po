@@ -441,12 +441,17 @@ msgid ""
 "As of October 2023, Over 150+ contributors and `~2.0k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
+"2023年10月現在，GitHubに150人以上のコントリビューターと `~2.0k Stars "
+"<https://github.com/pyvista/pyvista/stargazers>`_ がいます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
 "Used by at least 2.0k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
+"GitHubにある他の `libraries, examples, and repositories "
+"<https://github.com/pyvista/pyvista/network/dependents>`_ "
+"で少なくとも2.0k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
