@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-15 00:32+0000\n"
+"POT-Creation-Date: 2023-10-25 00:33+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -270,10 +270,10 @@ msgid ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:172
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:329
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:344
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:318
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:342
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:184
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:240
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:325
@@ -293,7 +293,7 @@ msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/e_read-file.rst:582
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:372
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:228
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:219
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:220
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:444
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:322
@@ -316,7 +316,7 @@ msgstr ":download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:227
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:360
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:350
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20122
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20123
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:48
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:561
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:293
@@ -489,19 +489,37 @@ msgstr "contributors"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:69
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:54
+msgid ""
+"Please take a look at the `contributors page`_ and the active `list of "
+"authors`_ to learn more about the developers of PyVista."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
+msgid "|contrib.rocks|"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
+msgid "contrib.rocks"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:59
+msgid "Made with `contrib rocks`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
 msgid "Who is PyVista for?"
 msgstr "PyVistaは誰のためのものですか？"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:71
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:86
 msgid "Anyone who wants to visualize 3D data using Python."
 msgstr "Pythonを使って3Dデータを可視化したい人．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:73
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:88
 msgid "Here's how people are using PyVista:"
 msgstr "PyVistaの活用事例をご紹介します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:75
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:90
 msgid ""
 "`PyVista User Stories "
 "<https://github.com/pyvista/pyvista/discussions/2133>`_"
@@ -509,21 +527,21 @@ msgstr ""
 "`PyVista User Stories "
 "<https://github.com/pyvista/pyvista/discussions/2133>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:77
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:92
 msgid ""
 "Feel free to write about what you have achieved with PyVista or what you "
 "would like to achieve in the future."
 msgstr "PyVistaで実現したこと，これから実現したいことを自由に書いてください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:81
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:96
 msgid "Brief Examples"
 msgstr "簡単な例"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:99
 msgid "Read and Plot a Surface Mesh"
 msgstr "サーフェスメッシュの読み込みとプロット"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:85
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:100
 msgid ""
 "VTK is powerful, really powerful! You can do just about anything within VTK "
 "and PyVista just wants to make it easier to do it using ``numpy``-like and "
@@ -533,23 +551,23 @@ msgstr ""
 "VTKは強力です，本当に強力です!VTKでは何でもできるのですが，PyVistaはそれをより簡単にするために， ``numpy`` や "
 "``Matplotlib`` 風の構文を使っています．例えば，単純なサーフェスメッシュをプロットすることができればいいのです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:103
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:118
 msgid "**Load and plot a surface dataset**"
 msgstr "**サーフェスデータセットの読み込みとプロット**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:106
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
 msgid "Using ``vtk``"
 msgstr "``vtk`` の使用"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:106
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
 msgid "Using PyVista"
 msgstr "PyVistaの使用"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:147
 msgid "Construct a Simple Point Cloud with Color"
 msgstr "色を使った簡単な点群の構築"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:134
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:149
 msgid ""
 "These examples demonstrate how you can use both PyVista and VTK to construct"
 " and visualize a point cloud using ``numpy``. Here, we demonstrate how easy "
@@ -562,7 +580,7 @@ msgstr ""
 msgid "VTK"
 msgstr "VTK"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:142
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:157
 msgid ""
 "This example was taken from this `SO Answer "
 "<https://stackoverflow.com/a/7604478/3369879>`_."
@@ -574,17 +592,17 @@ msgstr ""
 msgid "PyVista"
 msgstr "PyVista"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:227
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
 msgid "How other Libraries Compare"
 msgstr "他のライブラリとの比較"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:229
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:244
 msgid ""
 "There are a ton of excellent visualization libraries out there and if you're"
 " interested in data visualization, I'd encourage you for explore them all!"
 msgstr "データビジュアライゼーションに興味があるのであれば，ぜひいろいろなライブラリを試してみてください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:232
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:247
 msgid ""
 "`Python Libraries for Mesh, Point Cloud, and Data Visualization "
 "<https://towardsdatascience.com/python-libraries-for-mesh-and-point-cloud-"
@@ -594,7 +612,7 @@ msgstr ""
 "libraries-for-mesh-and-point-cloud-visualization-"
 "part-1-daa2af36de30?gi=70edd77e5fc>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:233
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:248
 msgid ""
 "`How does PyVista relate to other visualization tools? "
 "<https://github.com/pyvista/pyvista/discussions/1438>`_"
@@ -602,11 +620,11 @@ msgstr ""
 "`PyVistaと他の可視化ツールとの関連は？ "
 "<https://github.com/pyvista/pyvista/discussions/1438>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:234
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:249
 msgid "`SciVis Libraries <https://pyviz.org/scivis/index.html>`_"
 msgstr "`SciVis ライブラリ <https://pyviz.org/scivis/index.html>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:236
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:251
 msgid "Here's a few of them:"
 msgstr "そのいくつかをご紹介します．"
 
@@ -614,7 +632,7 @@ msgstr "そのいくつかをご紹介します．"
 msgid "vtk"
 msgstr "vtk"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:257
 msgid ""
 "The Visualization Toolkit (`VTK <https://vtk.org/>`_) is open source "
 "software for manipulating and displaying scientific data. It comes with "
@@ -628,7 +646,7 @@ msgstr ""
 msgid "ParaView"
 msgstr "ParaView"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:252
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:267
 msgid ""
 "`ParaView <https://www.paraview.org/>`_ is an open-source, multi-platform "
 "data analysis and visualization application. ParaView users can quickly "
@@ -643,7 +661,7 @@ msgstr ""
 msgid "vedo"
 msgstr "vedo"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:263
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:278
 msgid ""
 "`vedo <https://vedo.embl.es/>`_ is a Python library for scientific analysis "
 "of 3D objects and point clouds based on VTK and numpy."
@@ -655,7 +673,7 @@ msgstr ""
 msgid "Mayavi"
 msgstr "Mayavi"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:271
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:286
 msgid ""
 "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ is a general purpose, "
 "cross-platform tool for 2-D and 3-D scientific data visualization."
@@ -663,7 +681,7 @@ msgstr ""
 "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ "
 "は，2次元および3次元の科学的データを可視化するための汎用クロスプラットフォームツールです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:281
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:296
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:163
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:242
@@ -676,11 +694,11 @@ msgstr ""
 msgid "Exercises"
 msgstr "演習"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:282
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:297
 msgid "Install PyVista by visiting :ref:`getting_started`."
 msgstr ":ref:`getting_started` にアクセスして，PyVistaをインストールします．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:284
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:299
 msgid ""
 "Once you've installed PyVista, open the example below and see if you can run"
 " the \"Hello World\" of PyVista. You can download the example by scrolling "
@@ -691,7 +709,7 @@ msgstr ""
 "\"を実行できるかどうか試してみてください．ページの一番下までスクロールして， ``*.py`` (スクリプト) または ``*.ipynb`` "
 "(ノートブック) ファイル形式のいずれかをクリックすると，サンプルをダウンロードすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:305
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:320
 msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 msgstr ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 
@@ -1037,12 +1055,12 @@ msgstr ""
 "<https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_"
 " モジュールと外部ファイルを使用して，PyVistaで3Dデータを読み取り，プロットする方法を説明します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:52
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:53
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:20
 msgid "Using Existing Data"
 msgstr "既存データの活用"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:54
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:21
 msgid ""
 "There are two main ways of getting data into PyVista: creating it yourself "
@@ -1064,7 +1082,7 @@ msgstr ""
 "これは :class:`pyvista.PolyData` "
 "であり，事実上，点，線，面を含むサーフェスデータセットであることに注意してください．このデータセットを使って，すぐにプロットすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:125
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:136
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:62
 msgid ""
 "This is a fairly basic plot. You can change how its plotted by adding "
@@ -1077,7 +1095,7 @@ msgstr ""
 "を別の値に設定して色を変更することで，プロット方法を変更することができます．これらのことは，PyVistaのAPIドキュメントである "
 ":func:`pyvista.plot` に記載されていますが，ここでは別のデータセットを見てみましょう．これは体積のデータセットです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:173
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:197
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:75
 msgid ""
 "This is a :class:`pyvista.ImageData`, which is a dataset containing a "
@@ -1089,12 +1107,12 @@ msgstr ""
 "で，一貫した間隔を持つ一様な点の集合を含むデータセットです．このデータセットをプロットするとき，個々のセルを，そのセルに関連するデータの内容に基づいてプロットする，volumetric"
 " plottingを有効にするオプションがあります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:201
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:225
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:95
 msgid "Read from a file"
 msgstr "ファイルから読み込む"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:202
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:226
 msgid ""
 "You can read datasets directly from a file if you have access to it on your "
 "environment. This can be one of the many file formats that VTK supports, and"
@@ -1105,7 +1123,7 @@ msgstr ""
 " `meshio <https://github.com/nschloe/meshio>`_ "
 "のようなライブラリに依存できるように，サポートしていない多くのファイルフォーマットでもあり得ます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:207
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:231
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:101
 msgid ""
 "In the following example, we load VTK's iron protein dataset `ironProt.vtk "
@@ -1116,18 +1134,18 @@ msgstr ""
 "<https://github.com/naucoin/VTKData/blob/master/Data/ironProt.vtk>`_ を "
 ":func:`pyvista.read` を使ってファイルからロードしています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:253
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:277
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:113
 msgid ""
 "This is again a :class:`pyvista.ImageData` and we can plot it volumetrically"
 " with:"
 msgstr "これもまた :class:`pyvista.ImageData` で，ボリューム的にプロットすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:288
-msgid "**Total running time of the script:** ( 0 minutes  7.938 seconds)"
-msgstr "**Total running time of the script:** ( 0 minutes  7.938 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:312
+msgid "**Total running time of the script:** ( 0 minutes  11.948 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:307
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:331
 msgid ""
 ":download:`Download Python source code: a_lesson_basic.py "
 "<a_lesson_basic.py>`"
@@ -1135,7 +1153,7 @@ msgstr ""
 ":download:`Download Python source code: a_lesson_basic.py "
 "<a_lesson_basic.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:311
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:335
 msgid ""
 ":download:`Download Jupyter notebook: a_lesson_basic.ipynb "
 "<a_lesson_basic.ipynb>`"
@@ -1441,8 +1459,8 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
-msgid "**00:07.938** total execution time for **tutorial_01_basic** files:"
-msgstr "**00:07.938** total execution time for **tutorial_01_basic** files:"
+msgid "**00:11.948** total execution time for **tutorial_01_basic** files:"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid ""
@@ -1451,8 +1469,8 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` (``a_lesson_basic.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
-msgid "00:07.938"
-msgstr "00:07.938"
+msgid "00:11.948"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -2983,6 +3001,8 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:13
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:15
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/sg_execution_times.rst:17
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
 msgid "00:00.000"
 msgstr "00:00.000"
 
@@ -3013,7 +3033,6 @@ msgstr ""
 " full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:43
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:41
 msgid "``add_mesh``"
 msgstr "``add_mesh``"
 
@@ -3268,35 +3287,35 @@ msgid ""
 "statue as though it were metallic."
 msgstr "この機能を，彫像の高品質メッシュを金属のようにレンダリングすることで示しましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:62
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:64
 msgid ""
 "Let's render the mesh with a base color of \"linen\" to give it a metal "
 "looking finish."
 msgstr "ベースカラーが \"linen\" のメッシュをレンダリングして，メタルのような仕上がりにしてみましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:94
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:96
 msgid "Show the variation of the metallic and roughness parameters."
 msgstr "メタリックパラメータと粗さパラメータの変化を表示します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:98
 msgid ""
 "Plot with metallic increasing from left to right and roughness increasing "
 "from bottom to top."
 msgstr "左から右にメタリックが増加し，下から上に粗さが増加するようにプロットします．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:133
 msgid "Combine custom lighting and physically based rendering."
 msgstr "カスタム照明と物理ベースレンダリングを組み合わせます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:189
-msgid "**Total running time of the script:** ( 1 minutes  28.336 seconds)"
-msgstr "**Total running time of the script:** ( 1 minutes  28.336 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:190
+msgid "**Total running time of the script:** ( 1 minutes  30.984 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:208
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:209
 msgid ":download:`Download Python source code: d_pbr.py <d_pbr.py>`"
 msgstr ":download:`Download Python source code: d_pbr.py <d_pbr.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:212
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:213
 msgid ":download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`"
 msgstr ":download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`"
 
@@ -3467,35 +3486,26 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:8
 msgid ""
-"**03:01.597** total execution time for **tutorial_03_figures_bonus** files:"
+"**01:30.984** total execution time for **tutorial_03_figures_bonus** files:"
 msgstr ""
-"**03:01.597** total execution time for **tutorial_03_figures_bonus** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
-msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
-msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
-msgid "01:32.053"
-msgstr "01:32.053"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
-msgid "01:28.336"
-msgstr "01:28.336"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
+msgid "01:30.984"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
 msgid ""
 ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``)"
 msgstr ""
 ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` (``e_labels.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:15
-msgid "00:01.208"
-msgstr "00:01.208"
+msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
+msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:13
 msgid ""
@@ -4001,6 +4011,10 @@ msgid ""
 "fashion."
 msgstr ""
 "PyVistaのプロットAPIはデータセントリックで，3DデータはMatplotlibライクな方法で表示パラメータを変えて個別にシーンに追加されます．"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:41
+msgid "Add Mesh to Plotter Object"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:187
 msgid ""
@@ -5136,17 +5150,17 @@ msgid ""
 " use case."
 msgstr "GeoVistaは，より具体的なユースケースでPyVistaを使用する非常に良い外部例です．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:61
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:62
 msgid "**Motivation of GeoVista**"
 msgstr "**GeoVistaのモチベーション**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:64
 msgid ""
 "The goal of GeoVista is simple; to complement PyVista with a convenient "
 "cartographic capability."
-msgstr "GeoVistaの目標はシンプルで，便利な地図作成機能でPyVistaを補完することだ．"
+msgstr "GeoVistaの目標はシンプルで，便利な地図作成機能でPyVistaを補完することです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:66
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:67
 msgid ""
 "In this regard, from a design perspective we aim to keep GeoVista as pure to"
 " PyVista as possible i.e., minimise specialisation as far as practically "
@@ -5155,14 +5169,14 @@ msgid ""
 msgstr ""
 "この点に関して，設計の観点から，我々はGeoVistaをPyVistaに対して可能な限り純粋な状態に保つこと、つまり，PyVistaとVTKのエコシステム内でのネイティブな互換性を最大化するために，現実的に可能な限り特殊化を最小限に抑えることを目指しています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:71
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:72
 msgid ""
 "We intend GeoVista to be a cartographic gateway into the powerful world of "
 "PyVista, and all that it offers."
 msgstr ""
 "私たちはGeoVistaを，PyVistaのパワフルな世界，そしてPyVistaが提供するすべてのものへの地図上のゲートウェイにするつもりです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:75
 msgid ""
 "GeoVista is intentionally agnostic to packages such as geopandas, iris, "
 "xarray et al, which specialise in preparing your spatial data for "
@@ -5174,15 +5188,15 @@ msgstr ""
 "など，空間データを可視化するための準備に特化したパッケージには意図的にいぞんしません．むしろ、私たちはGeoVistaがScientific "
 "Pythonコミュニティ全体に対して可能な限り柔軟でオープンエンドであることを望んでいるため，その責任とツールの選択をユーザーに委ねます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:81
 msgid "Simply put, \"GeoVista is to PyVista\", as \"Cartopy is to Matplotlib\"."
 msgstr "簡単に言えば， \"GeoVistaはPyVistaに似ている\"， \"CartopyはMatplotlibに似ている\" です．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:85
 msgid "**Plotting Theme**"
 msgstr "**プロットテーマ**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:86
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:87
 msgid ""
 "GeoVista defines its own plotting theme in `geovista.theme`. PyVista allows "
 "you to set global and local plotting themes to easily set (learn more in "
@@ -5195,7 +5209,7 @@ msgstr ""
 "<https://docs.pyvista.org/version/stable/examples/02-plot/themes.html>`_ "
 "を見てください)．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:94
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:95
 msgid ""
 "At the `Met Office <https://www.metoffice.gov.uk/>`_ , they are moving to an"
 " unstructured cube-sphere mesh which is a cube projected out onto a sphere "
@@ -5207,15 +5221,15 @@ msgstr ""
 "では，立方体を球体に投影した非構造化キューブ球メッシュに移行している．各キューブ球は，各パネル内の \"セルの2乗\" "
 "の数で定義されます．例えば，次の例はC48キューブ球なので，6 * 48 * 48個のセルがあります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:100
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:101
 msgid "GeoVista has samples for it."
 msgstr "GeoVistaにはサンプルがあります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:159
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:160
 msgid "**LFRic - a modelling system fit for future computers**"
 msgstr "**LFRic - 未来のコンピューターにふさわしいモデリングシステム**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:161
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:162
 msgid ""
 "If you are interested in LFRic, please refer to `LFRic - a modelling system "
 "fit for future computers "
@@ -5225,13 +5239,13 @@ msgstr ""
 "<https://www.metoffice.gov.uk/research/approach/modelling-systems/lfric>`_ ."
 " を参照してください。"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:166
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:167
 msgid ""
 "Since the `c48` is defined as PolyData in PyVista, it can be drawn using "
 "PyVista's plot method."
 msgstr "`c48` はPyVistaでPolyDataとして定義されているので，PyVistaのplotメソッドを使って描画することができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:190
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:191
 msgid ""
 "Here's a sample C48 cube-sphere populated with Sea Surface Temperature data."
 " In this data, cell data from PyVista's PolyData object is used as "
@@ -5240,11 +5254,11 @@ msgstr ""
 "海面水温データを入力した C48 "
 "キューブ球のサンプルです．このデータでは，PyVistaのPolyDataオブジェクトのセルデータが温度データとして使用されています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:250
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:251
 msgid "Note that, the land masses are masked."
 msgstr "陸地はマスクされていることに注意してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:254
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:255
 msgid ""
 "There is a convenience within `geovista.geodesic` that creates a "
 "`geovista.geodesic.BBox` instance for any 1 of the 6 cube-sphere panels "
@@ -5253,7 +5267,7 @@ msgstr ""
 "`geovista.geodesic` には，6つの立方体-球体パネルのいずれか1つ，つまり  `geovista.geodesic.panel` "
 "に対して `geovista.geodesic.BBox` インスタンスを作成する便利な機能がある．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:328
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:329
 msgid ""
 "Note that, this bounding box (bbox) is constructed from geodesic lines i.e.,"
 " great circles, and is a 3D manifold. As such, we can then use it to extract"
@@ -5264,7 +5278,7 @@ msgid ""
 msgstr ""
 "このバウンディングボックス(bbox)は測地線，つまり大円から構成され、3次元多様体であることに注意してください．そのため，このバウンディングボックスを使って，下にあるメッシュから点/セルを抽出することができます．その前に，まずバウンディングボックスとメッシュを一緒にレンダリングして，お互いの関係を確認しましょう．bboxインスタンスが確かにキューブ球の正しいパネルをカバーしていることに注意してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:361
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:362
 msgid ""
 "As a fun exercise, you could play with opacity on the bbox.mesh to see "
 "through the manifold to the underlying cube-sphere surface, or turn on the "
@@ -5272,33 +5286,33 @@ msgid ""
 msgstr ""
 "楽しい練習として，bbox.meshの不透明度を操作して，多様体を通してその下の立方体球面を見たり，bboxのグリッドラインをオンにしたりすることもできます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:391
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:392
 msgid "Let's now use the bounding box to extract the mesh that it encloses:"
 msgstr "それでは，バウンディングボックスを使って，それが囲むメッシュを抽出してみよう:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:409
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:410
 msgid "`region` is defined as PolyData of PyVista."
 msgstr "`region` はPyVistaのPolyDataとして定義されている．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11634
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11635
 msgid "Let's check what kind of array does `region` have."
 msgstr "では， `region` がどのような配列を持っているのか見てみましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11658
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11659
 msgid ""
 "You could perhaps then play with the `preference` kwarg of the "
 "`bbox.enclosed` method to see the impact on the end result."
 msgstr ""
 "そして， `box.enclosed` メソッドの `preference` kwargを使って，最終的な結果への影響を見ることができるでしょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11663
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11664
 msgid ""
 "However, let's `geo-locate` the region by also rendering a texture mapped "
 "base layer in addition to some coastlines:"
 msgstr ""
 "しかし，いくつかの海岸線に加えて，テクスチャマッピングされたベースレイヤーもレンダリングすることで，その地域を `地理的に位置づけ` てみましょう:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11693
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:11694
 msgid ""
 "GeoVista has its own `Plotter` class, `GeoPlotter`. It is a customized class"
 " that inherits from PyVista's `Plotter` class and provides practical methods"
@@ -5308,7 +5322,7 @@ msgstr ""
 "クラスを継承してカスタマイズされたクラスで， `add_coastlines` や `add_base_layer` "
 "といった地球科学のための実用的なメソッドを提供しています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19381
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19382
 msgid ""
 "Also, as we're not so interested in the land mask, let's threshold that out "
 "and re-spin the render. To threshold the region and make `sea_region` we can"
@@ -5317,36 +5331,36 @@ msgstr ""
 "また，陸地のマスクにはあまり興味がないので，閾値を設定してレンダリングをやり直します．領域をしきい値化して `sea_region` "
 "を作成するには，PyVistaの `threshold` メソッドを使用します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19582
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19583
 msgid ""
 "Since we're here... let's transform the sea_region to a Robinson projection:"
 msgstr "せっかくなので... sea_region をRobinson投影に変換してみましょう:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19611
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19612
 msgid ""
 "It's also easily possible to get the inverted result i.e., the surface of "
 "the mesh not enclosed by the bbox manifold:"
 msgstr "反転した結果，つまりbbox多様体に囲まれていないメッシュの表面を得ることも簡単にできる: "
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19640
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19641
 msgid ""
 "Akin to before, let's render this again, but with a base layer underneath:"
 msgstr "先ほどと同じように，ベースレイヤーを下にして、もう一度レンダリングしてみましょう:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19669
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19670
 msgid ""
 "It's not quite clear what's going on here, although playing with the render "
 "interactively helps, but let's transform the mesh to the Mollweider "
 "projection to help clarify matters:"
 msgstr "レンダーをインタラクティブに操作することは助けになりますが，ここで何が起こっているのかはっきりしません．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19700
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19701
 msgid ""
 "And again, let's remove the land mask so that we can see more of the texture"
 " mapped base layer:"
 msgstr "もう一度，テクスチャマッピングされたベースレイヤーがもっと見えるように，陸地のマスクを外してみましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19732
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19733
 msgid ""
 "Also, explore the BBox class to create custom bounding box instances, and "
 "there is also the geovista.geodesic.wedge, a convenience function akin to "
@@ -5356,7 +5370,7 @@ msgstr ""
 "`geovista.geodesic.panel` に似た便利な機能である geovista.geodesic.wedge もあります。さらに、 "
 "geovista.geodesic.line を使えば，測地線，つまり大円を簡単にレンダリングできます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19737
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19738
 msgid ""
 "The point here is that this is just the first step. GeoVista is aiming to "
 "provide a richer suite of such primitives to extract regions in similar "
@@ -5372,7 +5386,7 @@ msgstr ""
 "`vtk` のおかげで，他の伝統的なアプローチとは対照的に、抽出操作がかなり速いということです "
 "(それを裏付けるメトリクスを集めるべきかもしれません!)．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19747
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19748
 msgid ""
 "So far we've demonstrated GeoVista's ability to cope with unstructured data."
 " Now let's plot a curvilinear mesh using Met Office Unified Model (UM) ORCA2"
@@ -5383,23 +5397,23 @@ msgstr ""
 "(UM) のORCA2海水温位データを使って、10mのNatural Earth海岸線と1:50mのNatural Earth I "
 "ベースレイヤーを使って曲線メッシュをプロットしてみましょう．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19898
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19899
 msgid "Create the mesh from the sample data."
 msgstr "サンプルデータからメッシュを作成します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19916
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19917
 msgid "Remove cells from the mesh with NaN values."
 msgstr "メッシュからNaN値のセルを削除します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19934
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19935
 msgid "Plot the mesh."
 msgstr "メッシュをプロットします．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19964
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19965
 msgid "**Experimental**"
 msgstr "**実験的**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19966
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19967
 msgid ""
 "GeoVista is still in the experimental stages. They would love your feedback,"
 " but as immature packages their API, documentation, test coverage and CI are"
@@ -5408,7 +5422,7 @@ msgstr ""
 "GeoVistaはまだ実験段階です．あなたのフィードバックをお待ちしていますが，未熟なパッケージのため，API，ドキュメント，テストカバレッジ，CIはまだ"
 " '建設中' です．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19972
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19973
 msgid ""
 "Whilst you're here, why not hop on over to the `pyvista-xarray project "
 "<https://github.com/pyvista/pyvista-xarray>`_ and check it out!"
@@ -5416,11 +5430,11 @@ msgstr ""
 "ここにいる間に， `pyvista-xarray project <https://github.com/pyvista/pyvista-"
 "xarray>`_ に飛び込んでチェックしてみてはいかがでしょう！"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19976
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19977
 msgid "xarray DataArray accessors for PyVista to visualize datasets in 3D"
 msgstr "xarray データセットを3Dで可視化するためのPyVista用DataArrayアクセサ"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19978
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19979
 msgid ""
 "You must import `pvxarray` in order to register the DataArray accessor with "
 "xarray. After which, a pyvista namespace of accessors will be available."
@@ -5428,19 +5442,19 @@ msgstr ""
 "DataArrayアクセサをxarrayに登録するには `pvxarray` "
 "をインポートする必要があります．その後，アクセサのpyvista名前空間が利用可能になります．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19998
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:19999
 msgid "Load mean sea surface temperature dataset"
 msgstr "平均海面水温データセットをロードします"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20016
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20017
 msgid "Plot in 3D"
 msgstr "3Dでプロットします"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20039
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20040
 msgid "Or grab the mesh object for use with PyVista and GeoVista."
 msgstr "または，PyVistaやGeoVistaで使用するためのメッシュオブジェクトを取得します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20071
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20072
 msgid ""
 "This is inspired by `Xarray Fundamentals "
 "<https://tutorial.xarray.dev/workshops/online-tutorial-"
@@ -5450,11 +5464,11 @@ msgstr ""
 "<https://tutorial.xarray.dev/workshops/online-tutorial-"
 "series/01_xarray_fundamentals.html>`_  にインスパイアされたものです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20092
-msgid "**Total running time of the script:** ( 1 minutes  20.103 seconds)"
-msgstr "**Total running time of the script:** ( 1 minutes  20.103 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20093
+msgid "**Total running time of the script:** ( 1 minutes  24.252 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20111
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20112
 msgid ""
 ":download:`Download Python source code: a_lesson_geovista.py "
 "<a_lesson_geovista.py>`"
@@ -5462,7 +5476,7 @@ msgstr ""
 ":download:`Download Python source code: a_lesson_geovista.py "
 "<a_lesson_geovista.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20115
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20116
 msgid ""
 ":download:`Download Jupyter notebook: a_lesson_geovista.ipynb "
 "<a_lesson_geovista.ipynb>`"
@@ -5651,8 +5665,8 @@ msgid ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
 msgstr ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:8
-msgid "**01:20.103** total execution time for **tutorial_05_action** files:"
-msgstr "**01:20.103** total execution time for **tutorial_05_action** files:"
+msgid "**01:24.252** total execution time for **tutorial_05_action** files:"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:11
 msgid ""
@@ -5663,8 +5677,8 @@ msgstr ""
 "(``a_lesson_geovista.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:11
-msgid "01:20.103"
-msgstr "01:20.103"
+msgid "01:24.252"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:13
 msgid ""
