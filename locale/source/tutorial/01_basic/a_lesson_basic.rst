@@ -28,15 +28,16 @@ using the `pyvista.examples.downloads
 <https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_
 module and external files.
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-19
+.. GENERATED FROM PYTHON SOURCE LINES 12-20
 
 .. code-block:: default
 
 
     import pyvista as pv
+    from pyvista import examples
 
     # Set the default plot theme to the "document" theme.
-    pv.set_plot_theme('document')
+    # pv.set_plot_theme('document')
 
 
 
@@ -46,7 +47,7 @@ module and external files.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-26
+.. GENERATED FROM PYTHON SOURCE LINES 21-27
 
 Using Existing Data
 ~~~~~~~~~~~~~~~~~~~
@@ -55,7 +56,7 @@ scratch or loading the dataset from any one of the `compatible file formats
 <https://docs.pyvista.org/api/readers/index.html>`_. Since we're just starting
 out, let's load a file.
 
-.. GENERATED FROM PYTHON SOURCE LINES 26-38
+.. GENERATED FROM PYTHON SOURCE LINES 27-38
 
 .. code-block:: default
 
@@ -66,7 +67,6 @@ out, let's load a file.
     # <https://docs.pyvista.org/api/examples/_autosummary/pyvista.examples.downloads.html>`_
     #
 
-    from pyvista import examples
 
     dataset = examples.download_saddle_surface()
     dataset
@@ -117,6 +117,17 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    INFO:root:awaiting runner setup
+    INFO:root:awaiting site startup
+    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7f3684525f10>
+    INFO:root:Print WSLINK_READY_MSG
+    INFO:root:Schedule auto shutdown with timout 0
+    INFO:root:awaiting running future
+
 
 
 
@@ -139,6 +150,19 @@ one is a volumetric dataset.
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.zraw HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.zraw HTTP/1.1" 200 5173190
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.mhd HTTP/1.1" 302 0
+    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.mhd HTTP/1.1" 200 214
 
 
 .. raw:: html
@@ -285,7 +309,7 @@ with:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.938 seconds)
+   **Total running time of the script:** ( 0 minutes  11.948 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_a_lesson_basic.py:
