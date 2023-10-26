@@ -494,18 +494,20 @@ msgid ""
 "Please take a look at the `contributors page`_ and the active `list of "
 "authors`_ to learn more about the developers of PyVista."
 msgstr ""
+"PyVistaの開発者についてもっと知るには， `contributors page`_ とアクティブな `list of authors`_ "
+"ご覧ください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
 msgid "|contrib.rocks|"
-msgstr ""
+msgstr "|contrib.rocks|"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
 msgid "contrib.rocks"
-msgstr ""
+msgstr "contrib.rocks"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:59
 msgid "Made with `contrib rocks`_."
-msgstr ""
+msgstr "`Contrib rocks`_ で作られました．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
 msgid "Who is PyVista for?"
@@ -1143,7 +1145,7 @@ msgstr "これもまた :class:`pyvista.ImageData` で，ボリューム的に�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:312
 msgid "**Total running time of the script:** ( 0 minutes  11.948 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 0 minutes  11.948 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:331
 msgid ""
@@ -1444,7 +1446,7 @@ msgstr ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py`"
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:310
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:6
 msgid "Solutions"
-msgstr "ソリューション"
+msgstr "解答"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:8
@@ -1460,7 +1462,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:8
 msgid "**00:11.948** total execution time for **tutorial_01_basic** files:"
-msgstr ""
+msgstr "**00:11.948** total execution time for **tutorial_01_basic** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid ""
@@ -1470,7 +1472,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:11
 msgid "00:11.948"
-msgstr ""
+msgstr "00:11.948"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -1911,7 +1913,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/c_create-uniform-grid.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst-1
 msgid "Creating a Uniform Grid"
-msgstr "統合グリッドを作成"
+msgstr "均一グリッドを作成"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:26
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:26
@@ -3309,7 +3311,7 @@ msgstr "カスタム照明と物理ベースレンダリングを組み合わせ
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:190
 msgid "**Total running time of the script:** ( 1 minutes  30.984 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 1 minutes  30.984 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:209
 msgid ":download:`Download Python source code: d_pbr.py <d_pbr.py>`"
@@ -3488,6 +3490,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`"
 msgid ""
 "**01:30.984** total execution time for **tutorial_03_figures_bonus** files:"
 msgstr ""
+"**01:30.984** total execution time for **tutorial_03_figures_bonus** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
@@ -3495,7 +3498,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:11
 msgid "01:30.984"
-msgstr ""
+msgstr "01:30.984"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:13
 msgid ""
@@ -4014,7 +4017,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:41
 msgid "Add Mesh to Plotter Object"
-msgstr ""
+msgstr "Plotterオブジェクトにメッシュを追加する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:187
 msgid ""
@@ -5466,7 +5469,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20093
 msgid "**Total running time of the script:** ( 1 minutes  24.252 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** ( 1 minutes  24.252 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20112
 msgid ""
@@ -5666,7 +5669,7 @@ msgstr ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:8
 msgid "**01:24.252** total execution time for **tutorial_05_action** files:"
-msgstr ""
+msgstr "**01:24.252** total execution time for **tutorial_05_action** files:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:11
 msgid ""
@@ -5678,7 +5681,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:11
 msgid "01:24.252"
-msgstr ""
+msgstr "01:24.252"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:13
 msgid ""
