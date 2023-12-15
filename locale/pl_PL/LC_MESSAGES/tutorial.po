@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-06 00:31+0000\n"
+"POT-Creation-Date: 2023-12-15 00:31+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Polish (Poland) (https://app.transifex.com/tkoyama010/teams/112279/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -2288,6 +2288,20 @@ msgid ""
 "Here's a comparison of point data versus cell data and how point data is "
 "interpolated across cells when mapping colors. This is unlike cell data "
 "which has a single value across the cell's domain:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Static Scene"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Interactive Scene"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:205
@@ -5711,7 +5725,7 @@ msgstr ""
 msgid "Which will be rendered as:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:14
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:25
 msgid "This is a default sphere"
 msgstr ""
 
