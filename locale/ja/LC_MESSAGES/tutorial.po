@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-06 00:31+0000\n"
+"POT-Creation-Date: 2023-12-15 00:31+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -2569,6 +2569,20 @@ msgid ""
 "which has a single value across the cell's domain:"
 msgstr ""
 "ここでは，点データとセルデータを比較し，色をマッピングするときに点データがセル間でどのように補間されるかを示します．これは，セルのドメイン全体で単一の値を持つセルデータとは異なります．"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Static Scene"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Interactive Scene"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:205
 msgid ""
@@ -6498,7 +6512,7 @@ msgstr "そうすれば，sphinxのドキュメントファイルの中で，plo
 msgid "Which will be rendered as:"
 msgstr "以下のように表示されます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:14
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:25
 msgid "This is a default sphere"
 msgstr "これはデフォルトの球体"
 
