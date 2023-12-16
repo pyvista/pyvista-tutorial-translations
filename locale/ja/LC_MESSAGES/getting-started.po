@@ -69,11 +69,11 @@ msgstr "その後、Jupyterで静的またはインタラクティブなバッ�
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Static Scene"
-msgstr ""
+msgstr "スタティックなシーン"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Interactive Scene"
-msgstr ""
+msgstr "インタラクティブなシーン"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:54
 msgid "MyBinder"
