@@ -2575,14 +2575,14 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
 msgid "Static Scene"
-msgstr ""
+msgstr "スタティックなシーン"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
 msgid "Interactive Scene"
-msgstr ""
+msgstr "インタラクティブなシーン"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:205
 msgid ""
