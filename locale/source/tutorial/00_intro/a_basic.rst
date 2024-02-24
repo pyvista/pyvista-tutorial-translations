@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_00_intro_a_basic.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_00_intro_a_basic.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -25,9 +25,10 @@ Create Basic Geometric Objects
 
 This is the "Hello, world!" of PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 9-11
+.. GENERATED FROM PYTHON SOURCE LINES 9-12
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
 
@@ -38,16 +39,16 @@ This is the "Hello, world!" of PyVista.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 12-16
+.. GENERATED FROM PYTHON SOURCE LINES 13-17
 
 This runs through several of the available geometric objects available in
 VTK which PyVista provides simple convenience methods for generating.
 
 Let's run through creating a few geometric objects!
 
-.. GENERATED FROM PYTHON SOURCE LINES 16-27
+.. GENERATED FROM PYTHON SOURCE LINES 17-28
 
-.. code-block:: default
+.. code-block:: Python
 
 
     cyl = pv.Cylinder()
@@ -67,13 +68,13 @@ Let's run through creating a few geometric objects!
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-29
+.. GENERATED FROM PYTHON SOURCE LINES 29-30
 
 Now let's plot them all in one window
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-57
+.. GENERATED FROM PYTHON SOURCE LINES 30-58
 
-.. code-block:: default
+.. code-block:: Python
 
 
     p = pv.Plotter(shape=(3, 3))
@@ -112,21 +113,10 @@ Now let's plot them all in one window
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    INFO:root:awaiting runner setup
-    INFO:root:awaiting site startup
-    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7fe4a86dbdc0>
-    INFO:root:Print WSLINK_READY_MSG
-    INFO:root:Schedule auto shutdown with timout 0
-    INFO:root:awaiting running future
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 58-65
+.. GENERATED FROM PYTHON SOURCE LINES 59-66
 
 .. raw:: html
 
@@ -139,7 +129,7 @@ Now let's plot them all in one window
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.200 seconds)
+   **Total running time of the script:** (0 minutes 2.309 seconds)
 
 
 .. _sphx_glr_download_tutorial_00_intro_a_basic.py:
@@ -148,7 +138,6 @@ Now let's plot them all in one window
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -156,13 +145,13 @@ Now let's plot them all in one window
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: a_basic.py <a_basic.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: a_basic.ipynb <a_basic.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: a_basic.py <a_basic.py>`
 
 
 .. only:: html

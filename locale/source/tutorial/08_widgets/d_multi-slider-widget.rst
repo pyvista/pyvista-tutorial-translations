@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -28,9 +28,10 @@ In this example we simply change a few parameters for the
 :func:`pyvista.Sphere` method, but this could easily be applied to any
 mesh-generating/altering code.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-37
+.. GENERATED FROM PYTHON SOURCE LINES 13-38
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
 
@@ -63,9 +64,9 @@ mesh-generating/altering code.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-42
+.. GENERATED FROM PYTHON SOURCE LINES 39-43
 
-.. code-block:: default
+.. code-block:: Python
 
 
     starting_mesh = pv.Sphere()
@@ -78,9 +79,9 @@ mesh-generating/altering code.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-75
+.. GENERATED FROM PYTHON SOURCE LINES 44-76
 
-.. code-block:: default
+.. code-block:: Python
 
 
     p = pv.Plotter()
@@ -133,13 +134,13 @@ mesh-generating/altering code.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-79
+.. GENERATED FROM PYTHON SOURCE LINES 77-80
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/multiple-slider-widget.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-88
+.. GENERATED FROM PYTHON SOURCE LINES 82-89
 
 .. raw:: html
 
@@ -152,7 +153,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.380 seconds)
+   **Total running time of the script:** (0 minutes 0.244 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py:
@@ -161,7 +162,6 @@ And here is a screen capture of a user interacting with this
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -169,13 +169,13 @@ And here is a screen capture of a user interacting with this
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: d_multi-slider-widget.py <d_multi-slider-widget.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: d_multi-slider-widget.ipynb <d_multi-slider-widget.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: d_multi-slider-widget.py <d_multi-slider-widget.py>`
 
 
 .. only:: html
