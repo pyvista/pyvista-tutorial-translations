@@ -10,7 +10,7 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py>`
+        :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py>`
         to download the full example code or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
@@ -23,9 +23,10 @@ Display Options
 
 Take a look at the different display options offered by the ``add_mesh`` method.
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-16
+.. GENERATED FROM PYTHON SOURCE LINES 7-17
 
-.. code-block:: default
+.. code-block:: Python
+
 
     import pyvista as pv
     from pyvista import examples
@@ -48,16 +49,16 @@ Take a look at the different display options offered by the ``add_mesh`` method.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-21
+.. GENERATED FROM PYTHON SOURCE LINES 18-22
 
 Let's take a look at some different options for the ``add_mesh`` method to
 alter how the above data are displayed.
 
 See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-23
+.. GENERATED FROM PYTHON SOURCE LINES 22-24
 
-.. code-block:: default
+.. code-block:: Python
 
     help(p.add_mesh)
 
@@ -491,13 +492,13 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-25
+.. GENERATED FROM PYTHON SOURCE LINES 25-26
 
 Plot that mesh with the edges of cells displayed
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-29
+.. GENERATED FROM PYTHON SOURCE LINES 26-30
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, show_edges=True)
@@ -515,14 +516,14 @@ Plot that mesh with the edges of cells displayed
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-32
+.. GENERATED FROM PYTHON SOURCE LINES 31-33
 
 Plot that mesh with the colored edges and as a show the surface as a solid
 color (use a named color!)
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-36
+.. GENERATED FROM PYTHON SOURCE LINES 33-37
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, color="magenta", show_edges=True, edge_color="blue")
@@ -540,13 +541,13 @@ color (use a named color!)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+.. GENERATED FROM PYTHON SOURCE LINES 38-39
 
 Display with a points representation style
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-42
+.. GENERATED FROM PYTHON SOURCE LINES 39-43
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, style="points")
@@ -564,13 +565,13 @@ Display with a points representation style
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-44
+.. GENERATED FROM PYTHON SOURCE LINES 44-45
 
 And adjust the points display size
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-48
+.. GENERATED FROM PYTHON SOURCE LINES 45-49
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, style="points", point_size=10, render_points_as_spheres=True)
@@ -588,13 +589,13 @@ And adjust the points display size
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-50
+.. GENERATED FROM PYTHON SOURCE LINES 50-51
 
 Change the color map and the color limits
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-54
+.. GENERATED FROM PYTHON SOURCE LINES 51-55
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, cmap="terrain", clim=[2, 5])
@@ -612,13 +613,13 @@ Change the color map and the color limits
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-56
+.. GENERATED FROM PYTHON SOURCE LINES 56-57
 
 Add some opacity
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-60
+.. GENERATED FROM PYTHON SOURCE LINES 57-61
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh, cmap="terrain", clim=[2, 5], opacity="linear")
@@ -636,11 +637,11 @@ Add some opacity
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-62
+.. GENERATED FROM PYTHON SOURCE LINES 62-63
 
 There you go! Those are a few of the most commonly used display options!
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-71
+.. GENERATED FROM PYTHON SOURCE LINES 65-72
 
 .. raw:: html
 
@@ -653,7 +654,7 @@ There you go! Those are a few of the most commonly used display options!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.405 seconds)
+   **Total running time of the script:** (0 minutes 3.045 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py:
@@ -662,7 +663,6 @@ There you go! Those are a few of the most commonly used display options!
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -670,13 +670,13 @@ There you go! Those are a few of the most commonly used display options!
         :alt: Launch binder
         :width: 150 px
 
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: a_display_options.py <a_display_options.py>`
-
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: a_display_options.ipynb <a_display_options.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: a_display_options.py <a_display_options.py>`
 
 
 .. only:: html

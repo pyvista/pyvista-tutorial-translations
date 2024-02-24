@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2023
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 00:31+0000\n"
+"POT-Creation-Date: 2024-02-24 00:30+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,17 +63,17 @@ msgstr ""
 msgid "Quick Links"
 msgstr "クイックリンク"
 
+#: ../../pyvista-tutorial/doc/source/index.rst:49
+msgid "Tutorial"
+msgstr "チュートリアル"
+
 #: ../../pyvista-tutorial/doc/source/index.rst:54
 msgid "Jump right to the tutorial content."
 msgstr "チュートリアルの内容へジャンプします．"
 
-#: ../../pyvista-tutorial/doc/source/index.rst:0
-msgid "Static Scene"
-msgstr "スタティックなシーン"
-
-#: ../../pyvista-tutorial/doc/source/index.rst:0
-msgid "Interactive Scene"
-msgstr "インタラクティブなシーン"
+#: ../../pyvista-tutorial/doc/source/index.rst:62
+msgid "Installation and Getting Started"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:67
 msgid "Get PyVista setup on your environment."
