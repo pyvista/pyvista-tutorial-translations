@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 00:30+0000\n"
+"POT-Creation-Date: 2024-02-27 00:29+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2023\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -313,7 +313,7 @@ msgid ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 msgstr ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:161
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:344
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:347
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:342
@@ -512,7 +512,17 @@ msgstr "`@adeak <https://github.com/adeak>`_"
 msgid "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
 msgstr "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:49
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:48
+msgid "Greatly expanded PyVista ecosystem thanks to"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:50
+msgid ""
+"`@bjlittle <https://github.com/bjlittle>`_ creator of `GeoVista "
+"<https://github.com/bjlittle/geovista>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:52
 msgid "|PyPIact| |condaact| |contributors| |stars|"
 msgstr "|PyPIact| |condaact| |contributors| |stars|"
 
@@ -532,7 +542,7 @@ msgstr "contributors"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:54
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
 msgid ""
 "Please take a look at the `contributors page`_ and the active `list of "
 "authors`_ to learn more about the developers of PyVista."
@@ -540,7 +550,7 @@ msgstr ""
 "PyVistaの開発者についてもっと知るには， `contributors page`_ とアクティブな `list of authors`_ "
 "ご覧ください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:60
 msgid "|contrib.rocks|"
 msgstr "|contrib.rocks|"
 
@@ -548,23 +558,23 @@ msgstr "|contrib.rocks|"
 msgid "contrib.rocks"
 msgstr "contrib.rocks"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:62
 msgid "Made with `contrib rocks`_."
 msgstr "`Contrib rocks`_ で作られました．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:87
 msgid "Who is PyVista for?"
 msgstr "PyVistaは誰のためのものですか？"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:86
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:89
 msgid "Anyone who wants to visualize 3D data using Python."
 msgstr "Pythonを使って3Dデータを可視化したい人．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:88
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:91
 msgid "Here's how people are using PyVista:"
 msgstr "PyVistaの活用事例をご紹介します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:90
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:93
 msgid ""
 "`PyVista User Stories "
 "<https://github.com/pyvista/pyvista/discussions/2133>`_"
@@ -572,21 +582,21 @@ msgstr ""
 "`PyVista User Stories "
 "<https://github.com/pyvista/pyvista/discussions/2133>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:92
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:95
 msgid ""
 "Feel free to write about what you have achieved with PyVista or what you "
 "would like to achieve in the future."
 msgstr "PyVistaで実現したこと，これから実現したいことを自由に書いてください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:99
 msgid "Brief Examples"
 msgstr "簡単な例"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:99
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:102
 msgid "Read and Plot a Surface Mesh"
 msgstr "サーフェスメッシュの読み込みとプロット"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:100
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:103
 msgid ""
 "VTK is powerful, really powerful! You can do just about anything within VTK "
 "and PyVista just wants to make it easier to do it using ``numpy``-like and "
@@ -596,23 +606,23 @@ msgstr ""
 "VTKは強力です，本当に強力です!VTKでは何でもできるのですが，PyVistaはそれをより簡単にするために， ``numpy`` や "
 "``Matplotlib`` 風の構文を使っています．例えば，単純なサーフェスメッシュをプロットすることができればいいのです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:118
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
 msgid "**Load and plot a surface dataset**"
 msgstr "**サーフェスデータセットの読み込みとプロット**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:124
 msgid "Using ``vtk``"
 msgstr "``vtk`` の使用"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:124
 msgid "Using PyVista"
 msgstr "PyVistaの使用"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:147
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:150
 msgid "Construct a Simple Point Cloud with Color"
 msgstr "色を使った簡単な点群の構築"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:149
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:152
 msgid ""
 "These examples demonstrate how you can use both PyVista and VTK to construct"
 " and visualize a point cloud using ``numpy``. Here, we demonstrate how easy "
@@ -625,7 +635,7 @@ msgstr ""
 msgid "VTK"
 msgstr "VTK"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:157
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:160
 msgid ""
 "This example was taken from this `SO Answer "
 "<https://stackoverflow.com/a/7604478/3369879>`_."
@@ -637,17 +647,17 @@ msgstr ""
 msgid "PyVista"
 msgstr "PyVista"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:245
 msgid "How other Libraries Compare"
 msgstr "他のライブラリとの比較"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:244
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:247
 msgid ""
 "There are a ton of excellent visualization libraries out there and if you're"
 " interested in data visualization, I'd encourage you for explore them all!"
 msgstr "データビジュアライゼーションに興味があるのであれば，ぜひいろいろなライブラリを試してみてください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:247
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:250
 msgid ""
 "`Python Libraries for Mesh, Point Cloud, and Data Visualization "
 "<https://towardsdatascience.com/python-libraries-for-mesh-and-point-cloud-"
@@ -657,7 +667,7 @@ msgstr ""
 "libraries-for-mesh-and-point-cloud-visualization-"
 "part-1-daa2af36de30?gi=70edd77e5fc>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:248
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:251
 msgid ""
 "`How does PyVista relate to other visualization tools? "
 "<https://github.com/pyvista/pyvista/discussions/1438>`_"
@@ -665,11 +675,11 @@ msgstr ""
 "`PyVistaと他の可視化ツールとの関連は？ "
 "<https://github.com/pyvista/pyvista/discussions/1438>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:249
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:252
 msgid "`SciVis Libraries <https://pyviz.org/scivis/index.html>`_"
 msgstr "`SciVis ライブラリ <https://pyviz.org/scivis/index.html>`_"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:251
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:254
 msgid "Here's a few of them:"
 msgstr "そのいくつかをご紹介します．"
 
@@ -677,7 +687,7 @@ msgstr "そのいくつかをご紹介します．"
 msgid "vtk"
 msgstr "vtk"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:257
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:260
 msgid ""
 "The Visualization Toolkit (`VTK <https://vtk.org/>`_) is open source "
 "software for manipulating and displaying scientific data. It comes with "
@@ -691,7 +701,7 @@ msgstr ""
 msgid "ParaView"
 msgstr "ParaView"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:267
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:270
 msgid ""
 "`ParaView <https://www.paraview.org/>`_ is an open-source, multi-platform "
 "data analysis and visualization application. ParaView users can quickly "
@@ -706,7 +716,7 @@ msgstr ""
 msgid "vedo"
 msgstr "vedo"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:278
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:281
 msgid ""
 "`vedo <https://vedo.embl.es/>`_ is a Python library for scientific analysis "
 "of 3D objects and point clouds based on VTK and numpy."
@@ -718,7 +728,7 @@ msgstr ""
 msgid "Mayavi"
 msgstr "Mayavi"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:286
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:289
 msgid ""
 "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ is a general purpose, "
 "cross-platform tool for 2-D and 3-D scientific data visualization."
@@ -726,7 +736,7 @@ msgstr ""
 "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ "
 "は，2次元および3次元の科学的データを可視化するための汎用クロスプラットフォームツールです．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:296
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:299
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:163
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:242
@@ -739,11 +749,11 @@ msgstr ""
 msgid "Exercises"
 msgstr "演習"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:297
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:300
 msgid "Install PyVista by visiting :ref:`getting_started`."
 msgstr ":ref:`getting_started` にアクセスして，PyVistaをインストールします．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:299
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:302
 msgid ""
 "Once you've installed PyVista, open the example below and see if you can run"
 " the \"Hello World\" of PyVista. You can download the example by scrolling "
@@ -754,7 +764,7 @@ msgstr ""
 "\"を実行できるかどうか試してみてください．ページの一番下までスクロールして， ``*.py`` (スクリプト) または ``*.ipynb`` "
 "(ノートブック) ファイル形式のいずれかをクリックすると，サンプルをダウンロードすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:320
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:323
 msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 msgstr ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 
