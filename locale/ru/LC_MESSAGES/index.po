@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 00:30+0000\n"
+"POT-Creation-Date: 2024-02-27 00:29+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Russian (https://app.transifex.com/tkoyama010/teams/112279/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -145,14 +145,14 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:104
-#: ../../pyvista-tutorial/doc/source/index.rst:156
+#: ../../pyvista-tutorial/doc/source/index.rst:161
 msgid ""
 "Basic knowledge of Python to get started. Be able to install Jupyter Lab on "
 "your machine and be up and running."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:106
-#: ../../pyvista-tutorial/doc/source/index.rst:158
+#: ../../pyvista-tutorial/doc/source/index.rst:163
 msgid ""
 "Intermediate users will want to be familiar with `NumPy "
 "<https://numpy.org/>`_ and other libraries that are compatible with PyVista,"
@@ -245,10 +245,24 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:149
-msgid "Tutorial Prerequisites"
+msgid "Bill Little"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:151
+msgid ""
+"`Bill Little <https://github.com/bjlittle>`_, creator of `GeoVista "
+"<https://github.com/bjlittle/geovista>`_, is a software engineer working at "
+"the `UK Met Office <https://www.metoffice.gov.uk>`_ and a core developer on "
+"`SciTools <https://github.com/orgs/SciTools/repositories>`_, which includes "
+"`Cartopy <https://github.com/SciTools/cartopy>`_ and `Iris "
+"<https://github.com/SciTools/iris>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:154
+msgid "Tutorial Prerequisites"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/index.rst:156
 msgid ""
 "We see this tutorial catering to anyone who wants to visualize data in any "
 "domain, and this ranges from basic Python users to advanced power users.  In"
@@ -256,7 +270,7 @@ msgid ""
 "domain."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/index.rst:162
+#: ../../pyvista-tutorial/doc/source/index.rst:167
 msgid ""
 "Advanced users will be familiar with GUI frameworks like Qt, VTK, and "
 "advanced data science."

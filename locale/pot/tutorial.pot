@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 00:30+0000\n"
+"POT-Creation-Date: 2024-02-27 00:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -273,7 +273,7 @@ msgid ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:161
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:344
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:347
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:179
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:342
@@ -416,7 +416,15 @@ msgstr ""
 msgid "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:49
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:48
+msgid "Greatly expanded PyVista ecosystem thanks to"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:50
+msgid "`@bjlittle <https://github.com/bjlittle>`_ creator of `GeoVista <https://github.com/bjlittle/geovista>`_"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:52
 msgid "|PyPIact| |condaact| |contributors| |stars|"
 msgstr ""
 
@@ -436,11 +444,11 @@ msgstr ""
 msgid "GitHub"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:54
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
 msgid "Please take a look at the `contributors page`_ and the active `list of authors`_ to learn more about the developers of PyVista."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:57
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:60
 msgid "|contrib.rocks|"
 msgstr ""
 
@@ -448,59 +456,59 @@ msgstr ""
 msgid "contrib.rocks"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:62
 msgid "Made with `contrib rocks`_."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:87
 msgid "Who is PyVista for?"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:86
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:89
 msgid "Anyone who wants to visualize 3D data using Python."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:88
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:91
 msgid "Here's how people are using PyVista:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:90
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:93
 msgid "`PyVista User Stories <https://github.com/pyvista/pyvista/discussions/2133>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:92
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:95
 msgid "Feel free to write about what you have achieved with PyVista or what you would like to achieve in the future."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:96
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:99
 msgid "Brief Examples"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:99
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:102
 msgid "Read and Plot a Surface Mesh"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:100
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:103
 msgid "VTK is powerful, really powerful! You can do just about anything within VTK and PyVista just wants to make it easier to do it using ``numpy``-like and ``Matplotlib``-like syntax. For example, if you wanted to be able to plot a simple surface mesh:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:118
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
 msgid "**Load and plot a surface dataset**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:124
 msgid "Using ``vtk``"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:121
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:124
 msgid "Using PyVista"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:147
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:150
 msgid "Construct a Simple Point Cloud with Color"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:149
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:152
 msgid "These examples demonstrate how you can use both PyVista and VTK to construct and visualize a point cloud using ``numpy``. Here, we demonstrate how easy it is to work directly with NumPy arrays."
 msgstr ""
 
@@ -508,7 +516,7 @@ msgstr ""
 msgid "VTK"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:157
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:160
 msgid "This example was taken from this `SO Answer <https://stackoverflow.com/a/7604478/3369879>`_."
 msgstr ""
 
@@ -516,27 +524,27 @@ msgstr ""
 msgid "PyVista"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:245
 msgid "How other Libraries Compare"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:244
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:247
 msgid "There are a ton of excellent visualization libraries out there and if you're interested in data visualization, I'd encourage you for explore them all!"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:247
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:250
 msgid "`Python Libraries for Mesh, Point Cloud, and Data Visualization <https://towardsdatascience.com/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30?gi=70edd77e5fc>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:248
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:251
 msgid "`How does PyVista relate to other visualization tools? <https://github.com/pyvista/pyvista/discussions/1438>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:249
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:252
 msgid "`SciVis Libraries <https://pyviz.org/scivis/index.html>`_"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:251
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:254
 msgid "Here's a few of them:"
 msgstr ""
 
@@ -544,7 +552,7 @@ msgstr ""
 msgid "vtk"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:257
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:260
 msgid "The Visualization Toolkit (`VTK <https://vtk.org/>`_) is open source software for manipulating and displaying scientific data. It comes with state-of-the-art tools for 3D rendering, a suite of widgets for 3D interaction, and extensive 2D plotting capability."
 msgstr ""
 
@@ -552,7 +560,7 @@ msgstr ""
 msgid "ParaView"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:267
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:270
 msgid "`ParaView <https://www.paraview.org/>`_ is an open-source, multi-platform data analysis and visualization application. ParaView users can quickly build visualizations to analyze their data using qualitative and quantitative techniques. The data exploration can be done interactively in 3D or programmatically using ParaView’s batch processing capabilities."
 msgstr ""
 
@@ -560,7 +568,7 @@ msgstr ""
 msgid "vedo"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:278
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:281
 msgid "`vedo <https://vedo.embl.es/>`_ is a Python library for scientific analysis of 3D objects and point clouds based on VTK and numpy."
 msgstr ""
 
@@ -568,11 +576,11 @@ msgstr ""
 msgid "Mayavi"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:286
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:289
 msgid "`Mayavi <https://docs.enthought.com/mayavi/mayavi/>`_ is a general purpose, cross-platform tool for 2-D and 3-D scientific data visualization."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:296
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:299
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:163
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:242
@@ -585,15 +593,15 @@ msgstr ""
 msgid "Exercises"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:297
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:300
 msgid "Install PyVista by visiting :ref:`getting_started`."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:299
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:302
 msgid "Once you've installed PyVista, open the example below and see if you can run the \"Hello World\" of PyVista. You can download the example by scrolling to the bottom of the page and clicking on either the ``*.py`` (script) or ``*.ipynb`` (notebook) file format."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:320
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:323
 msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 msgstr ""
 
