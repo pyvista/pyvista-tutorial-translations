@@ -73,7 +73,7 @@ msgstr "チュートリアルの内容へジャンプします．"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:62
 msgid "Installation and Getting Started"
-msgstr ""
+msgstr "インストールとはじめに"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:67
 msgid "Get PyVista setup on your environment."
@@ -288,7 +288,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/index.rst:149
 msgid "Bill Little"
-msgstr ""
+msgstr "Bill Little"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:151
 msgid ""
@@ -299,6 +299,12 @@ msgid ""
 "`Cartopy <https://github.com/SciTools/cartopy>`_ and `Iris "
 "<https://github.com/SciTools/iris>`_."
 msgstr ""
+"`Bill Little <https://github.com/bjlittle>`_, `GeoVista "
+"<https://github.com/bjlittle/geovista>`_ の創設者であり、`UK Met Office "
+"<https://www.metoffice.gov.uk>`_ で働くソフトウェアエンジニアであり、`Cartopy "
+"<https://github.com/SciTools/cartopy>`_ と `Iris "
+"<https://github.com/SciTools/iris>`_ を含む `SciTools "
+"<https://github.com/orgs/SciTools/repositories>`_ のコア開発者です。"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:154
 msgid "Tutorial Prerequisites"
