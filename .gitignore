@@ -1,5 +1,8 @@
 *.doctree
 *.pickle
+*.vtksz
 locale/jupyter_execute/*
 locale/pot/_panels_static/*
+locale/pot/_sphinx_design_static/*
+locale/pot/_static/*
 tx

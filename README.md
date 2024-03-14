@@ -8,10 +8,9 @@ This is a project to provide pyvista official tutorial with multiple versions an
 
 ## URLs
 
-* Tutorial pages for each languages:
+- Tutorial pages for each languages:
 
-  * https://pyvista.github.io/pyvista-tutorial-ja/
-
+  - https://pyvista.github.io/pyvista-tutorial-ja/
 
 ## How to update po files
 
@@ -20,7 +19,6 @@ sh ./locale/update.sh
 ```
 
 After that, you should commit updated po files.
-
 
 ## How to add a language
 
