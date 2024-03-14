@@ -69,7 +69,8 @@ pre.ap-terminal {
   border-style: solid;
   cursor: text;
   border-width: 0.75em;
-  font-family: Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace, 'Powerline Symbols';
+  font-family: Consolas, Menlo, "Bitstream Vera Sans Mono", monospace,
+    "Powerline Symbols";
   font-variant-ligatures: none;
 }
 pre.ap-terminal .ap-line {
@@ -125,7 +126,12 @@ div.ap-player div.ap-control-bar {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, #000000 25%, #000000 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    #000000 25%,
+    #000000 100%
+  );
   color: #bbb;
   box-sizing: content-box;
   line-height: 1;
@@ -258,7 +264,12 @@ span.ap-marker-container span.ap-marker {
   right: 7px;
   background-color: #555;
   position: absolute;
-  transition: top 0.1s, bottom 0.1s, left 0.1s, right 0.1s, background-color 0.1s;
+  transition:
+    top 0.1s,
+    bottom 0.1s,
+    left 0.1s,
+    right 0.1s,
+    background-color 0.1s;
   border-radius: 50%;
 }
 span.ap-marker-container span.ap-marker.ap-marker-past {
@@ -338,12 +349,14 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   display: inline-block;
   position: relative;
   border: 10px solid;
-  border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25)
+    rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
   animation: ap-loader-rotation 1s linear infinite;
 }
 .ap-player .ap-overlay-offline span {
-  font-family: Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace, 'Powerline Symbols';
+  font-family: Consolas, Menlo, "Bitstream Vera Sans Mono", monospace,
+    "Powerline Symbols";
   font-variant-ligatures: none;
   font-size: 2em;
 }
@@ -1811,12 +1824,12 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #121314;
 }
 .asciinema-theme-asciinema pre.ap-terminal {
-  color: #CCCCCC;
+  color: #cccccc;
   background-color: #121314;
   border-color: #121314;
 }
 .asciinema-theme-asciinema .fg-default {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 .asciinema-theme-asciinema .fg-bg {
   color: #121314;
@@ -1825,7 +1838,7 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #121314;
 }
 .asciinema-theme-asciinema .bg-fg {
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 .asciinema-theme-asciinema .fg-0 {
   color: hsl(0, 0%, 0%);
@@ -1924,7 +1937,8 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: hsl(0, 0%, 100%);
 }
 .asciinema-theme-asciinema .ap-overlay-loading .ap-loader {
-  border-color: rgba(204, 204, 204, 0.3) rgba(204, 204, 204, 0.5) rgba(204, 204, 204, 0.7) #cccccc;
+  border-color: rgba(204, 204, 204, 0.3) rgba(204, 204, 204, 0.5)
+    rgba(204, 204, 204, 0.7) #cccccc;
 }
 .asciinema-theme-asciinema .fg-8,
 .asciinema-theme-asciinema .fg-9,
@@ -2056,7 +2070,8 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #ffffff;
 }
 .asciinema-theme-dracula .ap-overlay-loading .ap-loader {
-  border-color: rgba(248, 248, 242, 0.3) rgba(248, 248, 242, 0.5) rgba(248, 248, 242, 0.7) #f8f8f2;
+  border-color: rgba(248, 248, 242, 0.3) rgba(248, 248, 242, 0.5)
+    rgba(248, 248, 242, 0.7) #f8f8f2;
 }
 .asciinema-theme-dracula .fg-8,
 .asciinema-theme-dracula .fg-9,
@@ -2186,7 +2201,8 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #f9f8f5;
 }
 .asciinema-theme-monokai .ap-overlay-loading .ap-loader {
-  border-color: rgba(248, 248, 242, 0.3) rgba(248, 248, 242, 0.5) rgba(248, 248, 242, 0.7) #f8f8f2;
+  border-color: rgba(248, 248, 242, 0.3) rgba(248, 248, 242, 0.5)
+    rgba(248, 248, 242, 0.7) #f8f8f2;
 }
 .asciinema-theme-monokai .fg-8,
 .asciinema-theme-monokai .fg-9,
@@ -2203,123 +2219,124 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   Via: https://github.com/neilotoole/asciinema-theme-nord
  */
 .asciinema-theme-nord {
-  background-color: #2E3440;
+  background-color: #2e3440;
 }
 .asciinema-theme-nord pre.ap-terminal {
-  color: #ECEFF4;
-  background-color: #2E3440;
-  border-color: #2E3440;
+  color: #eceff4;
+  background-color: #2e3440;
+  border-color: #2e3440;
 }
 .asciinema-theme-nord .fg-default {
-  color: #ECEFF4;
+  color: #eceff4;
 }
 .asciinema-theme-nord .fg-bg {
-  color: #2E3440;
+  color: #2e3440;
 }
 .asciinema-theme-nord .bg-default {
-  background-color: #2E3440;
+  background-color: #2e3440;
 }
 .asciinema-theme-nord .bg-fg {
-  background-color: #ECEFF4;
+  background-color: #eceff4;
 }
 .asciinema-theme-nord .fg-0 {
-  color: #3B4252;
+  color: #3b4252;
 }
 .asciinema-theme-nord .bg-0 {
-  background-color: #3B4252;
+  background-color: #3b4252;
 }
 .asciinema-theme-nord .fg-1 {
-  color: #BF616A;
+  color: #bf616a;
 }
 .asciinema-theme-nord .bg-1 {
-  background-color: #BF616A;
+  background-color: #bf616a;
 }
 .asciinema-theme-nord .fg-2 {
-  color: #A3BE8C;
+  color: #a3be8c;
 }
 .asciinema-theme-nord .bg-2 {
-  background-color: #A3BE8C;
+  background-color: #a3be8c;
 }
 .asciinema-theme-nord .fg-3 {
-  color: #EBCB8B;
+  color: #ebcb8b;
 }
 .asciinema-theme-nord .bg-3 {
-  background-color: #EBCB8B;
+  background-color: #ebcb8b;
 }
 .asciinema-theme-nord .fg-4 {
-  color: #81A1C1;
+  color: #81a1c1;
 }
 .asciinema-theme-nord .bg-4 {
-  background-color: #81A1C1;
+  background-color: #81a1c1;
 }
 .asciinema-theme-nord .fg-5 {
-  color: #B48EAD;
+  color: #b48ead;
 }
 .asciinema-theme-nord .bg-5 {
-  background-color: #B48EAD;
+  background-color: #b48ead;
 }
 .asciinema-theme-nord .fg-6 {
-  color: #88C0D0;
+  color: #88c0d0;
 }
 .asciinema-theme-nord .bg-6 {
-  background-color: #88C0D0;
+  background-color: #88c0d0;
 }
 .asciinema-theme-nord .fg-7 {
-  color: #ECEFF4;
+  color: #eceff4;
 }
 .asciinema-theme-nord .bg-7 {
-  background-color: #ECEFF4;
+  background-color: #eceff4;
 }
 .asciinema-theme-nord .fg-8 {
-  color: #3B4252;
+  color: #3b4252;
 }
 .asciinema-theme-nord .bg-8 {
-  background-color: #3B4252;
+  background-color: #3b4252;
 }
 .asciinema-theme-nord .fg-9 {
-  color: #BF616A;
+  color: #bf616a;
 }
 .asciinema-theme-nord .bg-9 {
-  background-color: #BF616A;
+  background-color: #bf616a;
 }
 .asciinema-theme-nord .fg-10 {
-  color: #A3BE8C;
+  color: #a3be8c;
 }
 .asciinema-theme-nord .bg-10 {
-  background-color: #A3BE8C;
+  background-color: #a3be8c;
 }
 .asciinema-theme-nord .fg-11 {
-  color: #EBCB8B;
+  color: #ebcb8b;
 }
 .asciinema-theme-nord .bg-11 {
-  background-color: #EBCB8B;
+  background-color: #ebcb8b;
 }
 .asciinema-theme-nord .fg-12 {
-  color: #81A1C1;
+  color: #81a1c1;
 }
 .asciinema-theme-nord .bg-12 {
-  background-color: #81A1C1;
+  background-color: #81a1c1;
 }
 .asciinema-theme-nord .fg-13 {
-  color: #B48EAD;
+  color: #b48ead;
 }
 .asciinema-theme-nord .bg-13 {
-  background-color: #B48EAD;
+  background-color: #b48ead;
 }
 .asciinema-theme-nord .fg-14 {
-  color: #88C0D0;
+  color: #88c0d0;
 }
 .asciinema-theme-nord .bg-14 {
-  background-color: #88C0D0;
+  background-color: #88c0d0;
 }
 .asciinema-theme-nord .fg-15 {
-  color: #ECEFF4;
+  color: #eceff4;
 }
 .asciinema-theme-nord .bg-15 {
-  background-color: #ECEFF4;
+  background-color: #eceff4;
 }
 .asciinema-theme-nord .ap-overlay-loading .ap-loader {
-  border-color: rgba(236, 239, 244, 0.3) rgba(236, 239, 244, 0.5) rgba(236, 239, 244, 0.7) #eceff4;
+  border-color: rgba(236, 239, 244, 0.3) rgba(236, 239, 244, 0.5)
+    rgba(236, 239, 244, 0.7) #eceff4;
 }
 .asciinema-theme-nord .fg-8,
 .asciinema-theme-nord .fg-9,
@@ -2448,7 +2465,8 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #ffffff;
 }
 .asciinema-theme-seti .ap-overlay-loading .ap-loader {
-  border-color: rgba(202, 206, 205, 0.3) rgba(202, 206, 205, 0.5) rgba(202, 206, 205, 0.7) #cacecd;
+  border-color: rgba(202, 206, 205, 0.3) rgba(202, 206, 205, 0.5)
+    rgba(202, 206, 205, 0.7) #cacecd;
 }
 .asciinema-theme-seti .fg-8,
 .asciinema-theme-seti .fg-9,
@@ -2577,7 +2595,8 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #fdf6e3;
 }
 .asciinema-theme-solarized-dark .ap-overlay-loading .ap-loader {
-  border-color: rgba(131, 148, 150, 0.3) rgba(131, 148, 150, 0.5) rgba(131, 148, 150, 0.7) #839496;
+  border-color: rgba(131, 148, 150, 0.3) rgba(131, 148, 150, 0.5)
+    rgba(131, 148, 150, 0.7) #839496;
 }
 .asciinema-theme-solarized-light {
   background-color: #fdf6e3;
@@ -2696,24 +2715,33 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #fdf6e3;
 }
 .asciinema-theme-solarized-light .ap-overlay-loading .ap-loader {
-  border-color: rgba(101, 123, 131, 0.3) rgba(101, 123, 131, 0.5) rgba(101, 123, 131, 0.7) #657b83;
+  border-color: rgba(101, 123, 131, 0.3) rgba(101, 123, 131, 0.5)
+    rgba(101, 123, 131, 0.7) #657b83;
 }
-.asciinema-theme-solarized-light .ap-overlay-start .ap-play-button svg .ap-play-btn-fill {
+.asciinema-theme-solarized-light
+  .ap-overlay-start
+  .ap-play-button
+  svg
+  .ap-play-btn-fill {
   fill: #dc322f;
 }
-.asciinema-theme-solarized-light .ap-overlay-start .ap-play-button svg .ap-play-btn-stroke {
+.asciinema-theme-solarized-light
+  .ap-overlay-start
+  .ap-play-button
+  svg
+  .ap-play-btn-stroke {
   stroke: #dc322f;
 }
 .asciinema-theme-tango {
   background-color: #121314;
 }
 .asciinema-theme-tango pre.ap-terminal {
-  color: #CCCCCC;
+  color: #cccccc;
   background-color: #121314;
   border-color: #121314;
 }
 .asciinema-theme-tango .fg-default {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 .asciinema-theme-tango .fg-bg {
   color: #121314;
@@ -2722,7 +2750,7 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #121314;
 }
 .asciinema-theme-tango .bg-fg {
-  background-color: #CCCCCC;
+  background-color: #cccccc;
 }
 .asciinema-theme-tango .fg-0 {
   color: #000000;
@@ -2731,46 +2759,46 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #000000;
 }
 .asciinema-theme-tango .fg-1 {
-  color: #CC0000;
+  color: #cc0000;
 }
 .asciinema-theme-tango .bg-1 {
-  background-color: #CC0000;
+  background-color: #cc0000;
 }
 .asciinema-theme-tango .fg-2 {
-  color: #4E9A06;
+  color: #4e9a06;
 }
 .asciinema-theme-tango .bg-2 {
-  background-color: #4E9A06;
+  background-color: #4e9a06;
 }
 .asciinema-theme-tango .fg-3 {
-  color: #C4A000;
+  color: #c4a000;
 }
 .asciinema-theme-tango .bg-3 {
-  background-color: #C4A000;
+  background-color: #c4a000;
 }
 .asciinema-theme-tango .fg-4 {
-  color: #3465A4;
+  color: #3465a4;
 }
 .asciinema-theme-tango .bg-4 {
-  background-color: #3465A4;
+  background-color: #3465a4;
 }
 .asciinema-theme-tango .fg-5 {
-  color: #75507B;
+  color: #75507b;
 }
 .asciinema-theme-tango .bg-5 {
-  background-color: #75507B;
+  background-color: #75507b;
 }
 .asciinema-theme-tango .fg-6 {
-  color: #06989A;
+  color: #06989a;
 }
 .asciinema-theme-tango .bg-6 {
-  background-color: #06989A;
+  background-color: #06989a;
 }
 .asciinema-theme-tango .fg-7 {
-  color: #D3D7CF;
+  color: #d3d7cf;
 }
 .asciinema-theme-tango .bg-7 {
-  background-color: #D3D7CF;
+  background-color: #d3d7cf;
 }
 .asciinema-theme-tango .fg-8 {
   color: #555753;
@@ -2779,49 +2807,50 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
   background-color: #555753;
 }
 .asciinema-theme-tango .fg-9 {
-  color: #EF2929;
+  color: #ef2929;
 }
 .asciinema-theme-tango .bg-9 {
-  background-color: #EF2929;
+  background-color: #ef2929;
 }
 .asciinema-theme-tango .fg-10 {
-  color: #8AE234;
+  color: #8ae234;
 }
 .asciinema-theme-tango .bg-10 {
-  background-color: #8AE234;
+  background-color: #8ae234;
 }
 .asciinema-theme-tango .fg-11 {
-  color: #FCE94F;
+  color: #fce94f;
 }
 .asciinema-theme-tango .bg-11 {
-  background-color: #FCE94F;
+  background-color: #fce94f;
 }
 .asciinema-theme-tango .fg-12 {
-  color: #729FCF;
+  color: #729fcf;
 }
 .asciinema-theme-tango .bg-12 {
-  background-color: #729FCF;
+  background-color: #729fcf;
 }
 .asciinema-theme-tango .fg-13 {
-  color: #AD7FA8;
+  color: #ad7fa8;
 }
 .asciinema-theme-tango .bg-13 {
-  background-color: #AD7FA8;
+  background-color: #ad7fa8;
 }
 .asciinema-theme-tango .fg-14 {
-  color: #34E2E2;
+  color: #34e2e2;
 }
 .asciinema-theme-tango .bg-14 {
-  background-color: #34E2E2;
+  background-color: #34e2e2;
 }
 .asciinema-theme-tango .fg-15 {
-  color: #EEEEEC;
+  color: #eeeeec;
 }
 .asciinema-theme-tango .bg-15 {
-  background-color: #EEEEEC;
+  background-color: #eeeeec;
 }
 .asciinema-theme-tango .ap-overlay-loading .ap-loader {
-  border-color: rgba(204, 204, 204, 0.3) rgba(204, 204, 204, 0.5) rgba(204, 204, 204, 0.7) #cccccc;
+  border-color: rgba(204, 204, 204, 0.3) rgba(204, 204, 204, 0.5)
+    rgba(204, 204, 204, 0.7) #cccccc;
 }
 .asciinema-theme-tango .fg-8,
 .asciinema-theme-tango .fg-9,
