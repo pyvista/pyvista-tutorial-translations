@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Li Zhou, 2022
+# qian zhang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-24 00:30+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
-"Last-Translator: Li Zhou, 2022\n"
+"Last-Translator: qian zhang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +32,7 @@ msgid ""
 "have Python yet and want the simplest way to get started, we recommend you "
 "use the `Anaconda Distribution`_."
 msgstr ""
+"在安装PyVista之前，必须首先安装Python。如果您还没有安装Python，并且希望以最简单的方式开始，我们建议您使用“Anaconda发行版”。"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:12
 msgid ""
@@ -38,6 +40,9 @@ msgid ""
 "can also run PyVista on the cloud using :ref:`colab` or :ref:`mybinder`. For"
 " more detailed instructions, see the installation guide below."
 msgstr ""
+"PyVista可以使用conda，或者pip在本地安装。\n"
+"您也可以使用colab或mybinder'在云端运行PyVista。\n"
+"有关更多详细说明，请参阅下方的安装指南。"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:19
 msgid "Installation"
@@ -60,7 +65,7 @@ msgstr "conda"
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:40
 msgid ""
 "You can then plot in Jupyter with either a static or interactive backend:"
-msgstr ""
+msgstr "然后，您可以在 Jupyter 中，静态或交互式地绘制："
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:54
 msgid "MyBinder"
@@ -77,14 +82,16 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:59
 msgid "|binder|"
 msgstr ""
+"https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-"
+"pages?urlpath=lab/tree/notebooks"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:0
 msgid "Launch on Binder"
-msgstr ""
+msgstr "打开Binder"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:69
 msgid "Google Colab"
-msgstr ""
+msgstr "谷歌colab"
 
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:70
 msgid ""
@@ -104,3 +111,4 @@ msgid ""
 " notebook to see PyVista in action. The minimum code to get PyVista running "
 "in a Colab environment is:"
 msgstr ""
+"参考Colab上的PyVista<https://colab.research.google.com/drive/15REd98bznqMGYVWxffpayfOOIwZ1s4Or?usp=sharing>`_查看PyVista的笔记本。使PyVista在Colab环境中运行的最低代码是："
