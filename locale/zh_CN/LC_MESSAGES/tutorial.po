@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 00:29+0000\n"
+"POT-Creation-Date: 2024-04-06 00:29+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: qian zhang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
@@ -366,7 +366,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:151
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:215
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:142
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:185
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:178
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:338
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:200
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:310
@@ -1366,6 +1366,11 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:42
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:45
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:39
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:45
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:48
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:51
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:54
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:57
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/sg_execution_times.rst:36
@@ -6035,7 +6040,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:81
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:169
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:95
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:139
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:132
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:92
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:152
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:202
@@ -6141,17 +6146,17 @@ msgid ""
 "generating/altering code."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:156
-msgid "**Total running time of the script:** (0 minutes 0.244 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:149
+msgid "**Total running time of the script:** (0 minutes 2.064 seconds)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:174
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:167
 msgid ""
 ":download:`Download Jupyter notebook: d_multi-slider-widget.ipynb <d_multi-"
 "slider-widget.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:178
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:171
 msgid ""
 ":download:`Download Python source code: d_multi-slider-widget.py <d_multi-"
 "slider-widget.py>`"
@@ -6482,77 +6487,57 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:9
 msgid ""
-"**00:19.156** total execution time for 8 files **from tutorial/08_widgets**:"
+"**00:02.064** total execution time for 8 files **from tutorial/08_widgets**:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:35
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``e_plane-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
-msgid "00:12.799"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``f_slider-bar-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:39
-msgid "00:03.871"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:41
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``g_sphere-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:42
-msgid "00:01.141"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:44
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` (``b_checkbox-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:45
-msgid "00:00.733"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:47
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``h_spline-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:48
-msgid "00:00.369"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:50
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py` (``d_multi-"
 "slider-widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:51
-msgid "00:00.244"
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
+msgid "00:02.064"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``a_box-widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:56
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:41
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` (``b_checkbox-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:44
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``c_line-widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:47
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``e_plane-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:50
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``f_slider-bar-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:53
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``g_sphere-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:56
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``h_spline-"
+"widget.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:6
