@@ -7031,7 +7031,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:149
 msgid "**Total running time of the script:** (0 minutes 2.064 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 2.064 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:167
 msgid ""
@@ -7439,6 +7439,7 @@ msgstr ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgid ""
 "**00:02.064** total execution time for 8 files **from tutorial/08_widgets**:"
 msgstr ""
+"**00:02.064** total execution time for 8 files **from tutorial/08_widgets**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:35
 msgid ""
@@ -7450,7 +7451,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
 msgid "00:02.064"
-msgstr ""
+msgstr "00:02.064"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
 msgid ""
