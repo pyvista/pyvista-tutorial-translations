@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 00:30+0000\n"
+"POT-Creation-Date: 2024-07-06 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Ukrainian (https://app.transifex.com/tkoyama010/teams/112279/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -58,6 +58,14 @@ msgid ""
 "You can then plot in Jupyter with either a static or interactive backend:"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Static Scene"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Interactive Scene"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:54
 msgid "MyBinder"
 msgstr ""
@@ -73,7 +81,7 @@ msgstr ""
 msgid "|binder|"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:61
 msgid "Launch on Binder"
 msgstr ""
 
