@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-27 00:29+0000\n"
+"POT-Creation-Date: 2024-07-06 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -70,6 +70,14 @@ msgstr "チュートリアル"
 #: ../../pyvista-tutorial/doc/source/index.rst:54
 msgid "Jump right to the tutorial content."
 msgstr "チュートリアルの内容へジャンプします．"
+
+#: ../../pyvista-tutorial/doc/source/index.rst:0
+msgid "Static Scene"
+msgstr "スタティックなシーン"
+
+#: ../../pyvista-tutorial/doc/source/index.rst:0
+msgid "Interactive Scene"
+msgstr "インタラクティブなシーン"
 
 #: ../../pyvista-tutorial/doc/source/index.rst:62
 msgid "Installation and Getting Started"

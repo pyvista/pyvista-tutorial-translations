@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 00:30+0000\n"
+"POT-Creation-Date: 2024-07-06 00:32+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: qian zhang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/tkoyama010/teams/112279/zh_CN/)\n"
@@ -67,6 +67,14 @@ msgid ""
 "You can then plot in Jupyter with either a static or interactive backend:"
 msgstr "然后，您可以在 Jupyter 中，静态或交互式地绘制："
 
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Static Scene"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+msgid "Interactive Scene"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/getting-started.rst:54
 msgid "MyBinder"
 msgstr "MyBinder"
@@ -85,7 +93,7 @@ msgstr ""
 "https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-"
 "pages?urlpath=lab/tree/notebooks"
 
-#: ../../pyvista-tutorial/doc/source/getting-started.rst:0
+#: ../../pyvista-tutorial/doc/source/getting-started.rst:61
 msgid "Launch on Binder"
 msgstr "打开Binder"
 
