@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 00:36+0000\n"
+"POT-Creation-Date: 2024-07-09 00:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -324,7 +324,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:360
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:350
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20123
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:48
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:27
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:597
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:293
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
@@ -520,27 +520,6 @@ msgstr ""
 msgid "Using PyVista"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:152
-msgid "Construct a Simple Point Cloud with Color"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:154
-msgid "These examples demonstrate how you can use both PyVista and VTK to construct and visualize a point cloud using ``numpy``. Here, we demonstrate how easy it is to work directly with NumPy arrays."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:268
-msgid "VTK"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:162
-msgid "This example was taken from this `SO Answer <https://stackoverflow.com/a/7604478/3369879>`_."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-msgid "PyVista"
-msgstr ""
-
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
@@ -561,6 +540,27 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:0
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
 msgid "Interactive Scene"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:152
+msgid "Construct a Simple Point Cloud with Color"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:154
+msgid "These examples demonstrate how you can use both PyVista and VTK to construct and visualize a point cloud using ``numpy``. Here, we demonstrate how easy it is to work directly with NumPy arrays."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:268
+msgid "VTK"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:162
+msgid "This example was taken from this `SO Answer <https://stackoverflow.com/a/7604478/3369879>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
+msgid "PyVista"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:248
@@ -4118,8 +4118,8 @@ msgstr ""
 msgid "Please note that these examples link to external websites. If any of these links are broken, please raise an issue on the repository."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:24
-msgid ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:8
+msgid "See `GeoVista tutorial <https://geovista.readthedocs.io/en/latest/tutorials/region-manifold-extraction.html>`_ ."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:8

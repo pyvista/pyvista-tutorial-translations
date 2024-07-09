@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-08 00:36+0000\n"
+"POT-Creation-Date: 2024-07-09 00:34+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -366,7 +366,7 @@ msgstr ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:360
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:350
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20123
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:48
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:27
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:597
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:293
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
@@ -635,6 +635,28 @@ msgstr "``vtk`` の使用"
 msgid "Using PyVista"
 msgstr "PyVistaの使用"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Static Scene"
+msgstr "スタティックなシーン"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:0
+#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
+msgid "Interactive Scene"
+msgstr "インタラクティブなシーン"
+
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:152
 msgid "Construct a Simple Point Cloud with Color"
 msgstr "色を使った簡単な点群の構築"
@@ -664,28 +686,6 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
 msgid "PyVista"
 msgstr "PyVista"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
-msgid "Static Scene"
-msgstr "スタティックなシーン"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:0
-#: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:0
-msgid "Interactive Scene"
-msgstr "インタラクティブなシーン"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:248
 msgid "How other Libraries Compare"
@@ -5916,9 +5916,12 @@ msgid ""
 "links are broken, please raise an issue on the repository."
 msgstr "これらの例は外部のWebサイトにリンクしています．これらのリンクのいずれかが壊れている場合は，リポジトリでissueを提起してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:24
-msgid ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
-msgstr ":ref:`sphx_glr_tutorial_05_action_a_lesson_geovista.py`"
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:8
+msgid ""
+"See `GeoVista tutorial "
+"<https://geovista.readthedocs.io/en/latest/tutorials/region-manifold-"
+"extraction.html>`_ ."
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:8
 msgid "**01:24.252** total execution time for **tutorial_05_action** files:"
