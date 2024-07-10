@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 00:34+0000\n"
+"POT-Creation-Date: 2024-07-10 00:35+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Norwegian Bokmål (https://app.transifex.com/tkoyama010/teams/112279/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -279,7 +279,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:233
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1424
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:259
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:235
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:278
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:133
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:197
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:124
@@ -289,13 +289,13 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:292
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:117
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:114
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:76
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:101
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:77
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:102
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:102
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:116
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:100
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:106
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:111
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:117
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:101
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:107
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:112
 msgid "Launch binder"
 msgstr ""
 
@@ -309,7 +309,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:161
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:350
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:179
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:217
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:342
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:178
@@ -361,7 +361,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1442
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:277
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:253
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:296
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:524
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:279
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:151
@@ -375,13 +375,13 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:196
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:186
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:132
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:94
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:119
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:95
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:120
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:120
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:134
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:118
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:124
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:129
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:135
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:119
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:125
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:130
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:310
 #: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:48
 msgid ""
@@ -993,17 +993,29 @@ msgid "Using pip, you can set up your jupyter environment with:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:97
-msgid "Jupyter-Server-Proxy"
+msgid "Remote JupyterHubs"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:99
 msgid ""
 "When using PyVista in Jupyter that is hosted remotely (docker, cloud "
 "JupyterHub, or otherwise), you will need to pair the Trame backend with "
-"``jupyter-server-proxy``."
+"either ``jupyter-server-proxy`` or ``trame-jupyter-extension``."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:102
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:103
+msgid ""
+"These tools allow us to connect to the Trame web application that embeds "
+"PyVista's render window directly in Jupyter. Without one of these "
+"mechanisms, you may see server connection issues or 404 pages where you "
+"expect to see a PyVista Plotter."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:108
+msgid "Jupyter-Server-Proxy"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:110
 msgid ""
 "`Jupyter Server Proxy <https://jupyter-server-"
 "proxy.readthedocs.io/en/latest/>`_ lets you access the Trame server hosting "
@@ -1011,7 +1023,7 @@ msgid ""
 "authenticated web access to them directly through Jupyter."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:108
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:116
 msgid ""
 "In a future version of `wslink <https://github.com/Kitware/wslink>`_ (the "
 "driving mechanism behind Trame's server), we plan to add support such that "
@@ -1020,40 +1032,40 @@ msgid ""
 "secondary web server and thus ``jupyter-server-proxy``."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:114
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:122
 msgid ""
 "To configure PyVista and Trame to work with ``jupyter-server-proxy`` in a "
 "remote environment, you will need to set some options on the global PyVista "
 "theme:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:117
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:125
 msgid ""
 ":py:attr:`pyvista.global_theme.trame.server_proxy_enabled "
 "<pyvista.themes._TrameConfig.server_proxy_enabled>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:119
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:127
 msgid ""
 ":py:attr:`pyvista.global_theme.trame.server_proxy_prefix "
 "<pyvista.themes._TrameConfig.server_proxy_prefix>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:122
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:130
 msgid ""
 "The default for ``server_proxy_prefix`` is ``'/proxy/'`` and this should be "
 "sufficient for most remote Jupyter environment and use within Docker."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:125
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:133
 msgid "This can also be set with an environment variable:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:132
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:140
 msgid "The prefix will need to be modified for JupyterHub deployments."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:134
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:142
 msgid ""
 "On MyBinder, the ``JUPYTERHUB_SERVICE_PREFIX`` string often needs to prefix "
 "``'/proxy/'``. This makes it so the prefix includes the users ID in the URL."
@@ -1061,7 +1073,48 @@ msgid ""
 "prepend it to the ``server_proxy_prefix``."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:155
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:149
+msgid "Trame-Jupyter-Extension"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:151
+msgid ""
+"`Trame Jupyter Extension <https://github.com/Kitware/trame-jupyter-"
+"extension/>`_ enables the trame server and client to communicate over the "
+"existing `Jupyter Comms <https://jupyter-"
+"notebook.readthedocs.io/en/stable/comms.html>`_ infrastructure, instead of "
+"creating a separate WebSocket connection."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:156
+msgid ""
+"Using this extension removes the need for a secondary web server and thus "
+"``jupyter-server-proxy``."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:159
+msgid "Using pip, you can install the extension:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:165
+msgid ""
+"If using Jupyter Lab 3.x, make sure to install the version 1.x of the "
+"extension:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:171
+msgid ""
+"Once the extension is installed, you can select whether PyVista will use it "
+"by setting the following flag to ``True`` or ``False``:"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:174
+msgid ""
+":py:attr:`pyvista.global_theme.trame.jupyter_extension_enabled "
+"<pyvista.plotting.themes._TrameConfig.jupyter_extension_enabled>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:193
 msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
 msgstr ""
 
@@ -5029,151 +5082,6 @@ msgid ""
 "<a_lesson_geovista.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:40
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:50
-msgid "sunkit-pyvista"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:68
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:78
-msgid "PyHyperbolic3D"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:96
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:106
-msgid "topoGenesis"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:124
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:134
-msgid "pyFBS: Frequency Based Substructuring in Python"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:152
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:162
-msgid "Coil Field Lines example in Magpylib"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:180
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:190
-msgid "Ivan Nikolov on Neighbourhood Analysis"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:208
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:218
-msgid "Ivan Nikolov on Voxelization"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:236
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:246
-msgid "Ivan Nikolov on Visualization Libraries"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:264
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:274
-msgid "Gradient Descent Visualizer"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:292
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:302
-msgid "GmshModel"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:320
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:330
-msgid "GeoVista"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:348
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:358
-msgid "geemap"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:376
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:386
-msgid "PteraSoftware"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:404
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:414
-msgid "Stﾃｩphane Laurent's artwork"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:432
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:442
-msgid "VesselVio"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:460
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:470
-msgid "Atmospheric Convection"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:488
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:498
-msgid "Damavand Volcano"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:516
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:526
-msgid "Anvil Cirrus Plumes"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:544
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:554
-msgid "Optimization visualization with PyVista"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:572
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:582
-msgid "FLEM: A diffusive landscape evolution model"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:600
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:610
-msgid "Orvisu Demo Application"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:628
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:638
-msgid "PyMeshFix's example gallery"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:656
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:666
-msgid "TetGen's example gallery"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:684
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:694
-msgid "PVGeo's example gallery"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:712
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:722
-msgid "FORGE Geothermal Project"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:740
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:750
-msgid "AeroSandbox"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:768
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:778
-msgid "OpenFOAM Rendering"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:796
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:806
-msgid "3D Rendering with Discretize"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:824
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:834
-msgid "3D visualization for the Open Mining Format (omf)"
-msgstr ""
-
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:5
 msgid "PyVista in Action"
 msgstr ""
@@ -5199,7 +5107,164 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:21
 msgid ""
 "Please note that these examples link to external websites. If any of these "
-"links are broken, please raise an issue on the repository."
+"links are broken, please raise an `issue "
+"<https://github.com/pyvista/pyvista/issues>`_."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:26
+msgid ""
+"Do you have a technical processing workflow or visualization routine you "
+"would like to share? If so, please consider sharing your work here "
+"submitting a PR at `pyvista/pyvista <https://github.com/pyvista/pyvista/>`_ "
+"and we would be glad to add it."
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:36
+msgid "Numerical Tours of Computational Mechanics with FEniCSx"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:43
+msgid "PyElastica"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:50
+msgid "VisualPIC"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:57
+msgid "stpyvista"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:64
+msgid "DrillDown"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:71
+msgid "FElupe"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:78
+msgid "Air Racing Trajectory Optimization"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:85
+msgid "GemGIS"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:92
+msgid "sunkit-pyvista"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:99
+msgid "PyHyperbolic3D"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:106
+msgid "topoGenesis"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:113
+msgid "pyFBS: Frequency Based Substructuring in Python"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:120
+msgid "Coil Field Lines example in Magpylib"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:127
+msgid "Ivan Nikolov on Neighbourhood Analysis"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:134
+msgid "Ivan Nikolov on Voxelization"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:141
+msgid "Ivan Nikolov on Visualization Libraries"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:148
+msgid "Gradient Descent Visualizer"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:155
+msgid "GmshModel"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:162
+msgid "GeoVista"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:169
+msgid "geemap"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:176
+msgid "PteraSoftware"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:183
+msgid "Stﾃｩphane Laurent's artwork"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:190
+msgid "VesselVio"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:197
+msgid "Atmospheric Convection"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:204
+msgid "Damavand Volcano"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:211
+msgid "Anvil Cirrus Plumes"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:218
+msgid "Optimization visualization with PyVista"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:225
+msgid "FLEM: A diffusive landscape evolution model"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:232
+msgid "Orvisu Demo Application"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:239
+msgid "PyMeshFix's example gallery"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:246
+msgid "TetGen's example gallery"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:253
+msgid "PVGeo's example gallery"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:260
+msgid "FORGE Geothermal Project"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:267
+msgid "AeroSandbox"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:274
+msgid "OpenFOAM Rendering"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:281
+msgid "3D Rendering with Discretize"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:288
+msgid "3D visualization for the Open Mining Format (omf)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:8
@@ -5784,45 +5849,45 @@ msgstr ""
 msgid "This requires a pre-release version of VTK:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:124
 msgid "Load input mesh from a vtkPartitionedDataSetCollection file"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:90
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:148
 msgid "Construct magpy coil objects for each coil in the reactor mesh."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:105
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:159
 msgid "Compute B, H in a 32x32x32 grid"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:123
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:176
 msgid "Show coils"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:141
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:188
 msgid "Compute streamlines of B field induced by toroidal coils."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:165
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:210
 msgid "Visualize streamlines"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:182
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:227
 msgid ""
 "Animate the disk position such that it oscillates between y=-1 and y=1."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:210
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:253
 msgid "Sign up to receive TimerEvent"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:285
 msgid ""
 ":download:`Download Jupyter notebook: e_vtk_next.ipynb <e_vtk_next.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:246
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:289
 msgid ":download:`Download Python source code: e_vtk_next.py <e_vtk_next.py>`"
 msgstr ""
 
@@ -6877,13 +6942,13 @@ msgid ""
 " new Trame application with PyVista."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:83
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:84
 msgid ""
 ":download:`Download Jupyter notebook: a_trame_simple.ipynb "
 "<a_trame_simple.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:87
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:88
 msgid ""
 ":download:`Download Python source code: a_trame_simple.py "
 "<a_trame_simple.py>`"
@@ -6906,13 +6971,13 @@ msgid ""
 " the actor."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:108
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:109
 msgid ""
 ":download:`Download Jupyter notebook: b_trame_actor_color.ipynb "
 "<b_trame_actor_color.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:112
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:113
 msgid ""
 ":download:`Download Python source code: b_trame_actor_color.py "
 "<b_trame_actor_color.py>`"
@@ -6966,13 +7031,13 @@ msgid ""
 " array is used to color the mesh."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:123
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:124
 msgid ""
 ":download:`Download Jupyter notebook: c_trame_scalars.ipynb "
 "<c_trame_scalars.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:127
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:128
 msgid ""
 ":download:`Download Python source code: c_trame_scalars.py "
 "<c_trame_scalars.py>`"
@@ -6995,13 +7060,13 @@ msgid ""
 "scalars."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:107
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:108
 msgid ""
 ":download:`Download Jupyter notebook: d_trame_scalar_range.ipynb "
 "<d_trame_scalar_range.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:111
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:112
 msgid ""
 ":download:`Download Python source code: d_trame_scalar_range.py "
 "<d_trame_scalar_range.py>`"
@@ -7024,13 +7089,13 @@ msgid ""
 "show how the three libraries complement each other."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:113
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:114
 msgid ""
 ":download:`Download Jupyter notebook: e_trame_algorithm.ipynb "
 "<e_trame_algorithm.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:117
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:118
 msgid ""
 ":download:`Download Python source code: e_trame_algorithm.py "
 "<e_trame_algorithm.py>`"
@@ -7053,13 +7118,13 @@ msgid ""
 "PyVista."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:118
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:119
 msgid ""
 ":download:`Download Jupyter notebook: f_trame_open_file.ipynb "
 "<f_trame_open_file.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:122
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:123
 msgid ""
 ":download:`Download Python source code: f_trame_open_file.py "
 "<f_trame_open_file.py>`"
