@@ -18,826 +18,279 @@ Here are a list of longer, more technical examples of what PyVista can do!
 
 .. caution::
 
-    Please note that these examples link to external websites.
-    If any of these links are broken, please raise an issue on the repository.
+    Please note that these examples link to external websites. If any of these
+    links are broken, please raise an `issue
+    <https://github.com/pyvista/pyvista/issues>`_.
 
 
+Do you have a technical processing workflow or visualization routine you would
+like to share? If so, please consider sharing your work here submitting a PR
+at `pyvista/pyvista <https://github.com/pyvista/pyvista/>`_ and we would be
+glad to add it.
 
 
+.. grid:: 3
+   :gutter: 1
 
 
+   .. grid-item-card:: Numerical Tours of Computational Mechanics with FEniCSx
+      :link: https://bleyerj.github.io/comet-fenicsx
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/comet_fenicsx.png
 
-.. raw:: html
+   .. grid-item-card:: PyElastica
+      :link: https://github.com/GazzolaLab/PyElastica
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    <div class="sphx-glr-thumbcontainer" tooltip="sunkit-pyvista is a python package for visualizing solar physics data in 3D.">
+      .. image:: ../../images/action/pyelastica.gif
 
-.. only:: html
+   .. grid-item-card:: VisualPIC
+      :link: https://github.com/AngelFP/VisualPIC
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    .. figure:: ../../images/action/sunkit-pyvista.png
-       :target: https://docs.sunpy.org/projects/sunkit-pyvista/en/latest/
+      .. image:: ../../images/action/visualpic.png
 
-       sunkit-pyvista
+   .. grid-item-card:: stpyvista
+      :link: https://github.com/edsaac/stpyvista
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/stpyvista_intro_crop.gif
 
+   .. grid-item-card:: DrillDown
+      :link: https://github.com/cardinalgeo/drilldown
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/drilldown.jpg
 
-.. raw:: html
+   .. grid-item-card:: FElupe
+      :link: https://felupe.readthedocs.io/en/latest/
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    </div>
+      .. image:: ../../images/action/felupe.png
 
+   .. grid-item-card:: Air Racing Trajectory Optimization
+      :link: https://github.com/peterdsharpe/air-racing-optimization
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. toctree::
-   :hidden:
+      .. image:: ../../images/action/air_racing_optimization.png
 
-   sunkit-pyvista <https://docs.sunpy.org/projects/sunkit-pyvista/en/latest/>
+   .. grid-item-card:: GemGIS
+      :link: https://gemgis.readthedocs.io/en/latest
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/gemgis.png
 
+   .. grid-item-card:: sunkit-pyvista
+      :link: https://docs.sunpy.org/projects/sunkit-pyvista/en/latest/
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/sunkit-pyvista.png
 
+   .. grid-item-card:: PyHyperbolic3D
+      :link: https://github.com/stla/PyHyperbolic3D/tree/main
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. raw:: html
+      .. image:: ../../images/action/griddip.gif
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Python stuff for drawing 3D hyperbolic polyhedra with 'PyVista'.">
+   .. grid-item-card:: topoGenesis
+      :link: https://topogenesis.readthedocs.io/notebooks/boolean_marching_cubes/
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. only:: html
+      .. image:: ../../images/action/boolean_marching_cubes.png
 
-    .. figure:: ../../images/action/griddip.gif
-       :target: https://github.com/stla/PyHyperbolic3D/tree/main
+   .. grid-item-card:: pyFBS: Frequency Based Substructuring in Python
+      :link: https://pyfbs.readthedocs.io/en/latest/examples/examples.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
-       PyHyperbolic3D
+      .. image:: ../../images/action/pyfbs.webp
 
+   .. grid-item-card:: Coil Field Lines example in Magpylib
+      :link: https://magpylib.readthedocs.io/en/latest/examples/examples_30_coil_field_lines.html#pyvista-streamlines
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/coil_field_lines.png
 
+   .. grid-item-card:: Ivan Nikolov on Neighbourhood Analysis
+      :link: https://medium.com/towards-data-science/neighborhood-analysis-kd-trees-and-octrees-for-meshes-and-point-clouds-in-python-19fa96527b77
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. raw:: html
+      .. image:: ../../images/action/nikolov3.gif
 
-    </div>
+   .. grid-item-card:: Ivan Nikolov on Voxelization
+      :link: https://medium.com/towards-data-science/how-to-voxelize-meshes-and-point-clouds-in-python-ca94d403f81d
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/nikolov2.gif
 
-.. toctree::
-   :hidden:
+   .. grid-item-card:: Ivan Nikolov on Visualization Libraries
+      :link: https://medium.com/towards-data-science/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30
+      :text-align: center
+      :class-title: pyvista-card-title
 
-   PyHyperbolic3D <https://github.com/stla/PyHyperbolic3D/tree/main>
+      .. image:: ../../images/action/nikolov1.gif
 
+   .. grid-item-card:: Gradient Descent Visualizer
+      :link: https://github.com/JacobBumgarner/grad-descent-visualizer
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/grad_descent_visualizer.gif
 
+   .. grid-item-card:: GmshModel
+      :link: https://gmshmodel.readthedocs.io/en/latest/
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/gmsh_model.png
 
-.. raw:: html
+   .. grid-item-card:: GeoVista
+      :link: https://github.com/bjlittle/geovista
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    <div class="sphx-glr-thumbcontainer" tooltip="topoGenesis is an open-source python package that provides topological structures and functions for Generative Systems and Sciences for various application areas.">
+      .. image:: ../../images/action/geovista_earth.png
 
-.. only:: html
+   .. grid-item-card:: geemap
+      :link: https://geemap.org/
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    .. figure:: ../../images/action/boolean_marching_cubes.png
-       :target: https://topogenesis.readthedocs.io/notebooks/boolean_marching_cubes/
+      .. image:: ../../images/action/geemap.gif
 
-       topoGenesis
+   .. grid-item-card:: PteraSoftware
+      :link: https://github.com/camurban/pterasoftware
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/ptera_software.gif
 
+   .. grid-item-card:: Stﾃｩphane Laurent's artwork
+      :link: https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/Duoprism_3-30.gif
 
-.. raw:: html
+   .. grid-item-card:: VesselVio
+      :link: https://jacobbumgarner.github.io/VesselVio/
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    </div>
+      .. image:: ../../images/action/vessel_vio.png
 
+   .. grid-item-card:: Atmospheric Convection
+      :link: https://dennissergeev.github.io/exoconvection-apj-2020/
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. toctree::
-   :hidden:
+      .. image:: ../../images/action/atmospheric_convection.jpeg
 
-   topoGenesis <https://topogenesis.readthedocs.io/notebooks/boolean_marching_cubes/>
+   .. grid-item-card:: Damavand Volcano
+      :link: https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/damavand_volcano.gif
 
+   .. grid-item-card:: Anvil Cirrus Plumes
+      :link: https://www.youtube.com/watch?v=cCPjnF_vHxw&feature=youtu.be
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/anvil_cirrus_plumes.png
 
+   .. grid-item-card:: Optimization visualization with PyVista
+      :link: https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. raw:: html
+      .. image:: ../../images/action/optimization.gif
 
-    <div class="sphx-glr-thumbcontainer" tooltip="pyFBS is a Python package for Frequency Based Substructuring, Transfer Path Analysis, and multi-reference modal identification.">
+   .. grid-item-card:: FLEM: A diffusive landscape evolution model
+      :link: https://github.com/johnjarmitage/flem
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. only:: html
+      .. image:: ../../images/action/flem.png
 
-    .. figure:: ../../images/action/pyfbs.webp
-       :target: https://pyfbs.readthedocs.io/en/latest/examples/examples.html
+   .. grid-item-card:: Orvisu Demo Application
+      :link: https://github.com/BartheG/Orvisu
+      :text-align: center
+      :class-title: pyvista-card-title
 
-       pyFBS: Frequency Based Substructuring in Python
+      .. image:: ../../images/action/orvisu.gif
 
+   .. grid-item-card:: PyMeshFix's example gallery
+      :link: http://pymeshfix.pyvista.org/examples/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/pymeshfix.png
 
+   .. grid-item-card:: TetGen's example gallery
+      :link: http://tetgen.pyvista.org/examples/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
-.. raw:: html
+      .. image:: ../../images/action/tetgen.png
 
-    </div>
+   .. grid-item-card:: PVGeo's example gallery
+      :link: https://pvgeo.org/examples/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/pvgeo.png
 
-.. toctree::
-   :hidden:
+   .. grid-item-card:: FORGE Geothermal Project
+      :link: https://forge.pvgeo.org/project/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
-   pyFBS: Frequency Based Substructuring in Python <https://pyfbs.readthedocs.io/en/latest/examples/examples.html>
+      .. image:: ../../images/action/forge.png
 
+   .. grid-item-card:: AeroSandbox
+      :link: https://peterdsharpe.github.io/AeroSandbox/
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/AeroSandbox.png
 
+   .. grid-item-card:: OpenFOAM Rendering
+      :link: https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/
+      :text-align: center
+      :class-title: pyvista-card-title
 
+      .. image:: ../../images/action/open-foam.png
 
-.. raw:: html
+   .. grid-item-card:: 3D Rendering with Discretize
+      :link: http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Pyvista streamlines of Coil Field Lines">
+      .. image:: ../../images/action/discretize.png
 
-.. only:: html
+   .. grid-item-card:: 3D visualization for the Open Mining Format (omf)
+      :link: https://opengeovis.github.io/omfvista/examples/index.html
+      :text-align: center
+      :class-title: pyvista-card-title
 
-    .. figure:: ../../images/action/coil_field_lines.png
-       :target: https://magpylib.readthedocs.io/en/latest/examples/examples_30_coil_field_lines.html#pyvista-streamlines
-
-       Coil Field Lines example in Magpylib
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Coil Field Lines example in Magpylib <https://magpylib.readthedocs.io/en/latest/examples/examples_30_coil_field_lines.html#pyvista-streamlines>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Neighborhood Analysis, KD-Trees, and Octrees for Meshes and Point Clouds in Python">
-
-.. only:: html
-
-    .. figure:: ../../images/action/nikolov3.gif
-       :target: https://medium.com/towards-data-science/neighborhood-analysis-kd-trees-and-octrees-for-meshes-and-point-clouds-in-python-19fa96527b77
-
-       Ivan Nikolov on Neighbourhood Analysis
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Ivan Nikolov on Neighbourhood Analysis <https://medium.com/towards-data-science/neighborhood-analysis-kd-trees-and-octrees-for-meshes-and-point-clouds-in-python-19fa96527b77>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="How to Voxelize Meshes and Point Clouds in Python">
-
-.. only:: html
-
-    .. figure:: ../../images/action/nikolov2.gif
-       :target: https://medium.com/towards-data-science/how-to-voxelize-meshes-and-point-clouds-in-python-ca94d403f81d
-
-       Ivan Nikolov on Voxelization
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Ivan Nikolov on Voxelization <https://medium.com/towards-data-science/how-to-voxelize-meshes-and-point-clouds-in-python-ca94d403f81d>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Python Libraries for Mesh, Point Cloud, and Data Visualization (Part 1)">
-
-.. only:: html
-
-    .. figure:: ../../images/action/nikolov1.gif
-       :target: https://medium.com/towards-data-science/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30
-
-       Ivan Nikolov on Visualization Libraries
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Ivan Nikolov on Visualization Libraries <https://medium.com/towards-data-science/python-libraries-for-mesh-and-point-cloud-visualization-part-1-daa2af36de30>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="A Python package used to visualize the gradient descent of function landscapes.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/grad_descent_visualizer.gif
-       :target: https://github.com/JacobBumgarner/grad-descent-visualizer
-
-       Gradient Descent Visualizer
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Gradient Descent Visualizer <https://github.com/JacobBumgarner/grad-descent-visualizer>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="A mesh modeling interface to the Gmsh-Python-API">
-
-.. only:: html
-
-    .. figure:: ../../images/action/gmsh_model.png
-       :target: https://gmshmodel.readthedocs.io/en/latest/
-
-       GmshModel
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   GmshModel <https://gmshmodel.readthedocs.io/en/latest/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Cartographic rendering and mesh analytics powered by PyVista">
-
-.. only:: html
-
-    .. figure:: ../../images/action/geovista_earth.png
-       :target: https://github.com/bjlittle/geovista
-
-       GeoVista
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   GeoVista <https://github.com/bjlittle/geovista>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="A Python package for interactive mapping with Google Earth Engine, ipyleaflet, and ipywidgets.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/geemap.gif
-       :target: https://geemap.org/
-
-       geemap
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   geemap <https://geemap.org/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Ptera Software is a fast, easy-to-use, and open-source software package for analyzing flapping-wing flight.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/ptera_software.gif
-       :target: https://github.com/camurban/pterasoftware
-
-       PteraSoftware
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   PteraSoftware <https://github.com/camurban/pterasoftware>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Stﾃｩphane Laurent's blog showing a sample of the animations they realized with PyVista.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/Duoprism_3-30.gif
-       :target: https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html
-
-       Stﾃｩphane Laurent's artwork
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Stﾃｩphane Laurent's artwork <https://laustep.github.io/stlahblog/posts/MyPyVistaArtworks.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="An open-source application for vasculature dataset analysis and visualization">
-
-.. only:: html
-
-    .. figure:: ../../images/action/vessel_vio.png
-       :target: https://jacobbumgarner.github.io/VesselVio/
-
-       VesselVio
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   VesselVio <https://jacobbumgarner.github.io/VesselVio/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Atmospheric convection plays a key role in the climate of tidally-locked terrestrial exoplanets: insights from high-resolution simulations">
-
-.. only:: html
-
-    .. figure:: ../../images/action/atmospheric_convection.jpeg
-       :target: https://dennissergeev.github.io/exoconvection-apj-2020/
-
-       Atmospheric Convection
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Atmospheric Convection <https://dennissergeev.github.io/exoconvection-apj-2020/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Visualize 3D models of Damavand Volcano, Alborz, Iran.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/damavand_volcano.gif
-       :target: https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb
-
-       Damavand Volcano
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Damavand Volcano <https://nbviewer.jupyter.org/github/banesullivan/damavand-volcano/blob/master/Damavand_Volcano.ipynb>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Dr. Morgan O'Neill at Stanford University is researching Above Anvil Cirrus Plumes and its dynamics as a hydraulic jump.">
-
-.. only:: html
-
-    .. figure:: ../../images/action/anvil_cirrus_plumes.png
-       :target: https://www.youtube.com/watch?v=cCPjnF_vHxw&feature=youtu.be
-
-       Anvil Cirrus Plumes
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Anvil Cirrus Plumes <https://www.youtube.com/watch?v=cCPjnF_vHxw&feature=youtu.be>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Optimization visualization with PyVista">
-
-.. only:: html
-
-    .. figure:: ../../images/action/optimization.gif
-       :target: https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582
-
-       Optimization visualization with PyVista
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Optimization visualization with PyVista <https://gist.github.com/hichamjanati/6668d91848283c31ac18d801552fb582>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="FLEM: A diffusive landscape evolution model">
-
-.. only:: html
-
-    .. figure:: ../../images/action/flem.png
-       :target: https://github.com/johnjarmitage/flem
-
-       FLEM: A diffusive landscape evolution model
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   FLEM: A diffusive landscape evolution model <https://github.com/johnjarmitage/flem>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Orvisu Demo Application">
-
-.. only:: html
-
-    .. figure:: ../../images/action/orvisu.gif
-       :target: https://github.com/BartheG/Orvisu
-
-       Orvisu Demo Application
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   Orvisu Demo Application <https://github.com/BartheG/Orvisu>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="PyMeshFix's example gallery">
-
-.. only:: html
-
-    .. figure:: ../../images/action/pymeshfix.png
-       :target: http://pymeshfix.pyvista.org/examples/index.html
-
-       PyMeshFix's example gallery
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   PyMeshFix's example gallery <http://pymeshfix.pyvista.org/examples/index.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="TetGen's example gallery">
-
-.. only:: html
-
-    .. figure:: ../../images/action/tetgen.png
-       :target: http://tetgen.pyvista.org/examples/index.html
-
-       TetGen's example gallery
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   TetGen's example gallery <http://tetgen.pyvista.org/examples/index.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="PVGeo's example gallery">
-
-.. only:: html
-
-    .. figure:: ../../images/action/pvgeo.png
-       :target: https://pvgeo.org/examples/index.html
-
-       PVGeo's example gallery
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   PVGeo's example gallery <https://pvgeo.org/examples/index.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="FORGE Geothermal Project">
-
-.. only:: html
-
-    .. figure:: ../../images/action/forge.png
-       :target: https://forge.pvgeo.org/project/index.html
-
-       FORGE Geothermal Project
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   FORGE Geothermal Project <https://forge.pvgeo.org/project/index.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="AeroSandbox">
-
-.. only:: html
-
-    .. figure:: ../../images/action/AeroSandbox.png
-       :target: https://peterdsharpe.github.io/AeroSandbox/
-
-       AeroSandbox
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   AeroSandbox <https://peterdsharpe.github.io/AeroSandbox/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="OpenFOAM Rendering">
-
-.. only:: html
-
-    .. figure:: ../../images/action/open-foam.png
-       :target: https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/
-
-       OpenFOAM Rendering
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   OpenFOAM Rendering <https://pswpswpsw.github.io/posts/2018/09/blog-post-modify-vtk-openfoam/>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="3D Rendering with Discretize">
-
-.. only:: html
-
-    .. figure:: ../../images/action/discretize.png
-       :target: http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html
-
-       3D Rendering with Discretize
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   3D Rendering with Discretize <http://discretize.simpeg.xyz/en/main/examples/plot_pyvista_laguna.html>
-
-
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="3D visualization for the Open Mining Format (omf)">
-
-.. only:: html
-
-    .. figure:: ../../images/action/omfvista.png
-       :target: https://opengeovis.github.io/omfvista/examples/index.html
-
-       3D visualization for the Open Mining Format (omf)
-
-
-
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   3D visualization for the Open Mining Format (omf) <https://opengeovis.github.io/omfvista/examples/index.html>
-
-
-
+      .. image:: ../../images/action/omfvista.png
 
 
 .. raw:: html

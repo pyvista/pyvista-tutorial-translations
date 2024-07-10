@@ -29,6 +29,7 @@ msgstr "計算時間"
 msgid ""
 "**00:00.000** total execution time for 59 files **from all galleries**:"
 msgstr ""
+"**00:00.000** total execution time for 59 files **from all galleries**:"
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:32
 msgid "Example"
@@ -499,12 +500,16 @@ msgid ""
 ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py` "
 "(``../../tutorial/06_vtk/d_wasm.py``)"
 msgstr ""
+":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py` "
+"(``../../tutorial/06_vtk/d_wasm.py``)"
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:161
 msgid ""
 ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py` "
 "(``../../tutorial/06_vtk/e_vtk_next.py``)"
 msgstr ""
+":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py` "
+"(``../../tutorial/06_vtk/e_vtk_next.py``)"
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:164
 msgid ""
@@ -575,6 +580,8 @@ msgid ""
 ":ref:`sphx_glr_tutorial_09_trame_a_getting_started.py` "
 "(``../../tutorial/09_trame/a_getting_started.py``)"
 msgstr ""
+":ref:`sphx_glr_tutorial_09_trame_a_getting_started.py` "
+"(``../../tutorial/09_trame/a_getting_started.py``)"
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:191
 msgid ""
@@ -597,6 +604,8 @@ msgid ""
 ":ref:`sphx_glr_tutorial_09_trame_b_trame_vtk.py` "
 "(``../../tutorial/09_trame/b_trame_vtk.py``)"
 msgstr ""
+":ref:`sphx_glr_tutorial_09_trame_b_trame_vtk.py` "
+"(``../../tutorial/09_trame/b_trame_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:200
 msgid ""
