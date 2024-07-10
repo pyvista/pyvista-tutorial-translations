@@ -37,17 +37,19 @@ layer that "wraps" the lower level functionality of VTK.
   plotting and mesh analysis through a streamlined interface for the
   Visualization Toolkit (VTK). Journal of Open Source Software, 4(37), 1450.
   https://doi.org/10.21105/joss.01450 <https://joss.theoj.org/papers/10.21105/joss.01450>`_
-- As of October 2023, Over 150+ contributors and `~2.0k Stars
+- As of October 2024, Over 150+ contributors and `~2.4k Stars
   <https://github.com/pyvista/pyvista/stargazers>`_ on GitHub.
-- Used by at least 2.0k other `libraries, examples, and repositories <https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub.
+- Used by at least 2.8k other `libraries, examples, and repositories <https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub.
 - Greatly expanded internal presence and continuing support thanks to
 
   - `@tkoyama010 <https://github.com/tkoyama010>`_
   - `@adeak <https://github.com/adeak>`_
   - `@MatthewFlamm <https://github.com/MatthewFlamm>`_
+  - `@user27182 <https://github.com/user27182>`_
 - Greatly expanded PyVista ecosystem thanks to
 
   - `@bjlittle <https://github.com/bjlittle>`_ creator of `GeoVista <https://github.com/bjlittle/geovista>`_
+  - `@adtzlr <https://github.com/adtzlr>`_ creator of `FElupe <https://github.com/adtzlr/felupe>`_
 
 |PyPIact|
 |condaact|
@@ -112,7 +114,7 @@ simple surface mesh:
    # Configure for trame
    import pyvista
    pyvista.set_plot_theme('document')
-   pyvista.set_jupyter_backend('static')
+   pyvista.set_jupyter_backend('trame')
    pyvista.global_theme.window_size = [600, 400]
    pyvista.global_theme.axes.show = False
    pyvista.global_theme.smooth_shading = True
@@ -123,7 +125,7 @@ simple surface mesh:
 +-------------------------------------------+-------------------------------------+
 | Using ``vtk``                             | Using PyVista                       |
 +===========================================+=====================================+
-| .. code:: python                          | .. jupyter-execute::                |
+| .. code:: python                          | .. pyvista-plot::                   |
 |                                           |                                     |
 |    import vtk                             |    from pyvista import examples     |
 |    reader = vtk.vtkSTLReader()            |    mesh = examples.download_bunny() |
@@ -231,7 +233,8 @@ is to work directly with NumPy arrays.
 
    .. tab-item:: PyVista
 
-      .. jupyter-execute::
+      .. pyvista-plot::
+         :context:
 
          import pyvista as pv
          import numpy as np
