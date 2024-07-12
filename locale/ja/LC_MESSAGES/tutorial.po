@@ -494,12 +494,17 @@ msgid ""
 "As of October 2024, Over 150+ contributors and `~2.4k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
+"2024年10月現在，GitHubに150人以上のコントリビューターと `~2.4k Stars "
+"<https://github.com/pyvista/pyvista/stargazers>`_ がいます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
 "Used by at least 2.8k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
+"GitHubにある他の `libraries, examples, and repositories "
+"<https://github.com/pyvista/pyvista/network/dependents>`_ "
+"で少なくとも2.8k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
@@ -519,7 +524,7 @@ msgstr "`@MatthewFlamm <https://github.com/MatthewFlamm>`_"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:48
 msgid "`@user27182 <https://github.com/user27182>`_"
-msgstr ""
+msgstr "`@user27182 <https://github.com/user27182>`_"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:49
 msgid "Greatly expanded PyVista ecosystem thanks to"
@@ -538,6 +543,8 @@ msgid ""
 "`@adtzlr <https://github.com/adtzlr>`_ creator of `FElupe "
 "<https://github.com/adtzlr/felupe>`_"
 msgstr ""
+"`FElupe <https://github.com/adtzlr/felupe>`_ の作成者 `@adtzlr "
+"<https://github.com/adtzlr>`_ "
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:54
 msgid "|PyPIact| |condaact| |contributors| |stars|"
@@ -1062,7 +1069,7 @@ msgstr "pipを使って，次のようにjupyter環境をセットアップす�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:97
 msgid "Remote JupyterHubs"
-msgstr ""
+msgstr "リモートJupyterHubs"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:99
 msgid ""
@@ -1070,6 +1077,8 @@ msgid ""
 "JupyterHub, or otherwise), you will need to pair the Trame backend with "
 "either ``jupyter-server-proxy`` or ``trame-jupyter-extension``."
 msgstr ""
+"リモートでホストされているJupyter（docker，クラウドJupyterHubなど）でPyVistaを使用する場合は，Trameバックエンドと "
+"``jupyter-server-proxy`` または ``trame-jupyter-extension`` とペアリングする必要があります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:103
 msgid ""
@@ -1078,6 +1087,8 @@ msgid ""
 "mechanisms, you may see server connection issues or 404 pages where you "
 "expect to see a PyVista Plotter."
 msgstr ""
+"これらのツールを使うと、PyVistaのレンダーウィンドウをJupyterに直接埋め込むTrame Webアプリケーションに接続することができます。 "
+"これらの仕組みがないと、サーバ接続の問題が発生したり、PyVistaプロッタが表示されるはずの404ページが表示されたりすることがあります。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:108
 msgid "Jupyter-Server-Proxy"
@@ -1162,7 +1173,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:149
 msgid "Trame-Jupyter-Extension"
-msgstr ""
+msgstr "Trame-Jupyter-Extension"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:151
 msgid ""
@@ -1172,34 +1183,42 @@ msgid ""
 "notebook.readthedocs.io/en/stable/comms.html>`_ infrastructure, instead of "
 "creating a separate WebSocket connection."
 msgstr ""
+"`Trame Jupyter Extension <https://github.com/Kitware/trame-jupyter-"
+"extension/>`_ は、WebSocket接続を個別に作成する代わりに、既存の `Jupyter Comms <https://jupyter-"
+"notebook.readthedocs.io/en/stable/comms.html>`_ "
+"インフラストラクチャ上でtrameサーバーとクライアントの通信を可能にします。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:156
 msgid ""
 "Using this extension removes the need for a secondary web server and thus "
 "``jupyter-server-proxy``."
-msgstr ""
+msgstr "この拡張機能を使うことで、セカンダリウェブサーバーが不要になり、 ``jupyter-server-proxy`` が不要になります。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:159
 msgid "Using pip, you can install the extension:"
-msgstr ""
+msgstr "pipを使って、拡張機能をインストールすることができます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:165
 msgid ""
 "If using Jupyter Lab 3.x, make sure to install the version 1.x of the "
 "extension:"
-msgstr ""
+msgstr "Jupyter Lab 3.xを使用している場合は、拡張機能のバージョン1.xをインストールしてください:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:171
 msgid ""
 "Once the extension is installed, you can select whether PyVista will use it "
 "by setting the following flag to ``True`` or ``False``:"
 msgstr ""
+"拡張機能がインストールされたら、次のフラグを ``True`` または ``False`` に設定することで、PyVista "
+"がその拡張機能を使用するかどうかを選択できます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:174
 msgid ""
 ":py:attr:`pyvista.global_theme.trame.jupyter_extension_enabled "
 "<pyvista.plotting.themes._TrameConfig.jupyter_extension_enabled>`"
 msgstr ""
+":py:attr:`pyvista.global_theme.trame.jupyter_extension_enabled "
+"<pyvista.plotting.themes._TrameConfig.jupyter_extension_enabled>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:193
 msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
@@ -5822,6 +5841,8 @@ msgid ""
 "links are broken, please raise an `issue "
 "<https://github.com/pyvista/pyvista/issues>`_."
 msgstr ""
+"これらの例は外部のウェブサイトにリンクしていることに注意してください。これらのリンクが壊れている場合は、 `イシュー "
+"<https://github.com/pyvista/pyvista/issues>`_ を提起してください。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:26
 msgid ""
@@ -5830,26 +5851,28 @@ msgid ""
 "submitting a PR at `pyvista/pyvista <https://github.com/pyvista/pyvista/>`_ "
 "and we would be glad to add it."
 msgstr ""
+"共有したい技術的な処理ワークフローや可視化ルーチンをお持ちですか？ その場合は、 `pyvista/pyvista "
+"<https://github.com/pyvista/pyvista/>`_ にPRを投稿してください。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:36
 msgid "Numerical Tours of Computational Mechanics with FEniCSx"
-msgstr ""
+msgstr "FEniCSxによる計算力学の数値ツアー"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:43
 msgid "PyElastica"
-msgstr ""
+msgstr "PyElastica"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:50
 msgid "VisualPIC"
-msgstr ""
+msgstr "VisualPIC"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:57
 msgid "stpyvista"
-msgstr ""
+msgstr "stpyvista"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:64
 msgid "DrillDown"
-msgstr ""
+msgstr "DrillDown"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:71
 msgid "FElupe"
