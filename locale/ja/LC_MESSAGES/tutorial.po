@@ -5876,15 +5876,15 @@ msgstr "DrillDown"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:71
 msgid "FElupe"
-msgstr ""
+msgstr "FElupe"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:78
 msgid "Air Racing Trajectory Optimization"
-msgstr ""
+msgstr "エアレースの軌道最適化"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:85
 msgid "GemGIS"
-msgstr ""
+msgstr "GemGIS"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/external_gallery.txt:92
 msgid "sunkit-pyvista"
@@ -6008,6 +6008,9 @@ msgid ""
 "<https://geovista.readthedocs.io/en/latest/tutorials/region-manifold-"
 "extraction.html>`_ ."
 msgstr ""
+"`GeoVistaチュートリアル "
+"<https://geovista.readthedocs.io/en/latest/tutorials/region-manifold-"
+"extraction.html>`_ を参照。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/sg_execution_times.rst:8
 msgid "**01:24.252** total execution time for **tutorial_05_action** files:"
@@ -6628,28 +6631,30 @@ msgid ""
 "download the full example code or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_d_wasm.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:22
 msgid "VTK + WASM"
-msgstr ""
+msgstr "VTK + WASM"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:24
 msgid "Use WASM local rendering. This requires a pre-release version of VTK:"
-msgstr ""
+msgstr "WASMローカルレンダリングを使用する。 これにはVTKのプレリリースバージョンが必要です:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:232
 msgid ""
 "Make sure to give room for the download of WASM bundle Only needed at first "
 "execution"
-msgstr ""
+msgstr "WASMバンドルのダウンロードのためのスペースを確保してください。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:266
 msgid ":download:`Download Jupyter notebook: d_wasm.ipynb <d_wasm.ipynb>`"
-msgstr ""
+msgstr ":download:`Download Jupyter notebook: d_wasm.ipynb <d_wasm.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:270
 msgid ":download:`Download Python source code: d_wasm.py <d_wasm.py>`"
-msgstr ""
+msgstr ":download:`Download Python source code: d_wasm.py <d_wasm.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:13
 msgid ""
@@ -6657,18 +6662,20 @@ msgid ""
 "download the full example code or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_e_vtk_next.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:22
 msgid "VTK's Next Generation API"
-msgstr ""
+msgstr "VTKの次世代API"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:24
 msgid "This requires a pre-release version of VTK:"
-msgstr ""
+msgstr " これにはVTKのプレリリースバージョンが必要です:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:124
 msgid "Load input mesh from a vtkPartitionedDataSetCollection file"
-msgstr ""
+msgstr "vtkPartitionedDataSetCollection ファイルから入力メッシュをロードする"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:148
 msgid "Construct magpy coil objects for each coil in the reactor mesh."
