@@ -6679,7 +6679,7 @@ msgstr "vtkPartitionedDataSetCollection ファイルから入力メッシュを�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:148
 msgid "Construct magpy coil objects for each coil in the reactor mesh."
-msgstr ""
+msgstr "リアクターメッシュの各コイルに対してmagpyコイルオブジェクトを構築します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:159
 msgid "Compute B, H in a 32x32x32 grid"
