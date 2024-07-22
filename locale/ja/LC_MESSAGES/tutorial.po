@@ -6683,37 +6683,39 @@ msgstr "リアクターメッシュの各コイルに対してmagpyコイルオ�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:159
 msgid "Compute B, H in a 32x32x32 grid"
-msgstr ""
+msgstr "32x32x32グリッドでB, Hを計算する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:176
 msgid "Show coils"
-msgstr ""
+msgstr "コイルを表示"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:188
 msgid "Compute streamlines of B field induced by toroidal coils."
-msgstr ""
+msgstr "トロイダルコイルによって誘導されるB磁場のストリームラインを計算する。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:210
 msgid "Visualize streamlines"
-msgstr ""
+msgstr "ストリームラインの可視化"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:227
 msgid ""
 "Animate the disk position such that it oscillates between y=-1 and y=1."
-msgstr ""
+msgstr "ディスクの位置がy=-1とy=1の間で振動するようにアニメートする。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:253
 msgid "Sign up to receive TimerEvent"
-msgstr ""
+msgstr "TimerEventの受信登録"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:285
 msgid ""
 ":download:`Download Jupyter notebook: e_vtk_next.ipynb <e_vtk_next.ipynb>`"
 msgstr ""
+":download:`Download Jupyter notebook: e_vtk_next.ipynb <e_vtk_next.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:289
 msgid ":download:`Download Python source code: e_vtk_next.py <e_vtk_next.py>`"
 msgstr ""
+":download:`Download Python source code: e_vtk_next.py <e_vtk_next.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:6
 msgid "PyVista & VTK"
@@ -6753,7 +6755,7 @@ msgstr ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:478
 msgid ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py`"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:495
 msgid ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py`"
@@ -7881,20 +7883,25 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` to download the "
 "full example code or to run this example in your browser via Binder"
 msgstr ""
+":ref:`Go to the end "
+"<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` to download the "
+"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:22
 msgid "Getting started"
-msgstr ""
+msgstr "スタート"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:24
 msgid "Getting started with PyVista and Trame"
-msgstr ""
+msgstr "PyVistaとTrameを使い始める"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:36
 msgid ""
 "PyVista's Jupyter backend is powered by **Trame**. So by default you are "
 "using trame without knowing it."
 msgstr ""
+"PyVistaのJupyterバックエンドは **Trame** で動いています。 "
+"そのため、デフォルトでは知らないうちにtrameを使っていることになります。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:39
 msgid ""
@@ -7902,39 +7909,45 @@ msgid ""
 "toggle between **Remote** and **Local** rendering along with some various "
 "options to configure your visualization."
 msgstr ""
+"PyVistaのデフォルトでは、 **リモート** と **ローカル** のレンダリングを切り替えることができるmicro "
+"trameアプリケーションが提供されます。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:43
 msgid ""
 "**First try the Remote/Local rendering toggle and notice the differences**"
-msgstr ""
+msgstr "**まず、リモート/ローカルレンダリングのトグルを試してみて、その違いに気づくだろう**"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:51
 msgid ""
 "One sends images generated on the server side while the other is sending "
 "geometry to vtk.js."
-msgstr ""
+msgstr "一方はサーバーサイドで生成された画像を送信し、もう一方は vtk.js にジオメトリを送信している。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:63
 msgid "Building applications with PyVista and Trame"
-msgstr ""
+msgstr "PyVistaとTrameを使ったアプリケーションの構築"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:65
 msgid ""
 "Now, let's build a simple application that updates the mesh color with the "
 "click of a button."
-msgstr ""
+msgstr "では、ボタンをクリックしてメッシュの色を更新する簡単なアプリケーションを作ってみましょう。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:121
 msgid ""
 ":download:`Download Jupyter notebook: a_getting_started.ipynb "
 "<a_getting_started.ipynb>`"
 msgstr ""
+":download:`Download Jupyter notebook: a_getting_started.ipynb "
+"<a_getting_started.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:125
 msgid ""
 ":download:`Download Python source code: a_getting_started.py "
 "<a_getting_started.py>`"
 msgstr ""
+":download:`Download Python source code: a_getting_started.py "
+"<a_getting_started.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:13
 msgid ""
@@ -8018,6 +8031,9 @@ msgid ""
 " download the full example code or to run this example in your browser via "
 "Binder"
 msgstr ""
+":ref:`Go to the end <sphx_glr_download_tutorial_09_trame_b_trame_vtk.py>` to"
+" download the full example code or to run this example in your browser via "
+"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:22
 msgid "Using VTK/PyVista and Trame"
