@@ -8037,11 +8037,11 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:22
 msgid "Using VTK/PyVista and Trame"
-msgstr ""
+msgstr "VTK/PyVistaとTrameの使用"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:24
 msgid "In this application, we will connect a VTK filter with PyVista."
-msgstr ""
+msgstr "このアプリケーションでは、VTKフィルタとPyVistaを接続します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:26
 msgid ""
@@ -8206,7 +8206,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:6
 msgid "Trame"
-msgstr ""
+msgstr "Trame"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:8
 msgid ""
@@ -8329,11 +8329,11 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:111
 msgid "Trame applications"
-msgstr ""
+msgstr "Trame アプリケーション"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:113
 msgid "Using an existing app"
-msgstr ""
+msgstr "既存のアプリを使用する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:124
 msgid "Try Pan3D: ``pip install pan3d``"
