@@ -8047,12 +8047,13 @@ msgstr "このアプリケーションでは、VTKフィルタとPyVistaを接�
 msgid ""
 "It will use Trame to visualize the results and interactively control "
 "parameters of the VTK filter."
-msgstr ""
+msgstr "Trameを使用して、結果を視覚化し、VTKフィルターのパラメーターをインタラクティブに制御します。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:109
 msgid ""
 ":download:`Download Jupyter notebook: b_trame_vtk.ipynb <b_trame_vtk.ipynb>`"
 msgstr ""
+":download:`Download Jupyter notebook: b_trame_vtk.ipynb <b_trame_vtk.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:113
 msgid ""
@@ -8337,7 +8338,7 @@ msgstr "既存のアプリを使用する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:124
 msgid "Try Pan3D: ``pip install pan3d``"
-msgstr ""
+msgstr "Pan3Dを試す: ``pip install pan3d``"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:142
 msgid "Do not run these examples in Jupyter but rather as standalone scripts."
