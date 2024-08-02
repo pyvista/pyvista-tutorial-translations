@@ -1,0 +1,92 @@
+{
+ "SinglePageLayout": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.ui.vuetify3",
+   "module_short": "trame.ui.vuetify3",
+   "name": "SinglePageLayout"
+  }
+ ],
+ "get_server": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.app",
+   "module_short": "trame.app",
+   "name": "get_server"
+  }
+ ],
+ "plotter_ui": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.trame.ui",
+   "module_short": "pyvista.trame.ui",
+   "name": "plotter_ui"
+  }
+ ],
+ "pv.OFF_SCREEN": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "OFF_SCREEN"
+  }
+ ],
+ "pv.Plotter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "Plotter"
+  }
+ ],
+ "vtkConeSource": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersSources",
+   "module_short": "vtkmodules.vtkFiltersSources",
+   "name": "vtkConeSource"
+  }
+ ],
+ "vuetify3.VContainer": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VContainer"
+  }
+ ],
+ "vuetify3.VProgressLinear": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VProgressLinear"
+  }
+ ],
+ "vuetify3.VSlider": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VSlider"
+  }
+ ],
+ "vuetify3.VSpacer": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VSpacer"
+  }
+ ]
+}

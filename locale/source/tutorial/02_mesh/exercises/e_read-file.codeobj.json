@@ -1,0 +1,88 @@
+{
+ "examples.download_bunny_coarse": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_bunny_coarse"
+  }
+ ],
+ "examples.download_cad_model": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_cad_model"
+  }
+ ],
+ "examples.download_doorman": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_doorman"
+  }
+ ],
+ "examples.download_teapot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_teapot"
+  }
+ ],
+ "examples.planefile": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "planefile"
+  }
+ ],
+ "pv.core.utilities.reader.get_reader": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.utilities.reader",
+   "module_short": "pyvista",
+   "name": "get_reader"
+  }
+ ],
+ "pv.read": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  }
+ ],
+ "pyvista.read": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  },
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  },
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  }
+ ]
+}

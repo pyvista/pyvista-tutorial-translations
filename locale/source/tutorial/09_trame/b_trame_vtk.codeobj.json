@@ -1,0 +1,83 @@
+{
+ "VAppLayout": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.ui.vuetify3",
+   "module_short": "trame.ui.vuetify3",
+   "name": "VAppLayout"
+  }
+ ],
+ "examples.load_random_hills": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "load_random_hills"
+  }
+ ],
+ "get_server": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.app",
+   "module_short": "trame.app",
+   "name": "get_server"
+  }
+ ],
+ "pv.Plotter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "Plotter"
+  }
+ ],
+ "v3.VBtn": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VBtn"
+  }
+ ],
+ "v3.VContainer": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VContainer"
+  }
+ ],
+ "v3.VSlider": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vuetify3",
+   "module_short": "trame.widgets.vuetify3",
+   "name": "VSlider"
+  }
+ ],
+ "vtkWarpScalar": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersGeneral",
+   "module_short": "vtkmodules.vtkFiltersGeneral",
+   "name": "vtkWarpScalar"
+  }
+ ],
+ "vtk_widgets.VtkRemoteView": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "trame.widgets.vtk",
+   "module_short": "trame.widgets.vtk",
+   "name": "VtkRemoteView"
+  }
+ ]
+}

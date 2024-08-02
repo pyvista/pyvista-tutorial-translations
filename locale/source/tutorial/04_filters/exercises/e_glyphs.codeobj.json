@@ -1,0 +1,74 @@
+{
+ "examples.load_random_hills": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "load_random_hills"
+  }
+ ],
+ "np.cos": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "cos"
+  }
+ ],
+ "np.sin": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "sin"
+  }
+ ],
+ "np.vstack": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "vstack"
+  }
+ ],
+ "pv.Plotter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "Plotter"
+  }
+ ],
+ "pv.Sphere": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "Sphere"
+  }
+ ],
+ "pyvista.DataSet.arrows": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista.DataSet",
+   "module_short": "pyvista.DataSet",
+   "name": "arrows"
+  }
+ ],
+ "pyvista.DataSetFilters.glyph": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista.DataSetFilters",
+   "module_short": "pyvista.DataSetFilters",
+   "name": "glyph"
+  }
+ ]
+}

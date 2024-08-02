@@ -1,0 +1,272 @@
+{
+ "_download_archive_file_or_folder": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples.downloads",
+   "module_short": "pyvista.examples.downloads",
+   "name": "_download_archive_file_or_folder"
+  }
+ ],
+ "cycle": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "itertools",
+   "module_short": "itertools",
+   "name": "cycle"
+  }
+ ],
+ "magpy.Collection": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "magpylib",
+   "module_short": "magpylib",
+   "name": "Collection"
+  }
+ ],
+ "magpy.current.Polyline": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "magpylib.current",
+   "module_short": "magpylib.current",
+   "name": "Polyline"
+  }
+ ],
+ "magpy.show": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "magpylib",
+   "module_short": "magpylib",
+   "name": "show"
+  }
+ ],
+ "np.append": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "append"
+  }
+ ],
+ "np.linspace": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "linspace"
+  }
+ ],
+ "pathlib.Path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pathlib",
+   "module_short": "pathlib",
+   "name": "Path"
+  }
+ ],
+ "select_ports": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.util.execution_model",
+   "module_short": "vtkmodules.util.execution_model",
+   "name": "select_ports"
+  }
+ ],
+ "vtkActor": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkActor"
+  }
+ ],
+ "vtkCompositePolyDataMapper": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkCompositePolyDataMapper"
+  }
+ ],
+ "vtkDataObjectTreeIterator": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonDataModel",
+   "module_short": "vtkmodules.vtkCommonDataModel",
+   "name": "vtkDataObjectTreeIterator"
+  }
+ ],
+ "vtkExtractBlockUsingDataAssembly": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersExtraction",
+   "module_short": "vtkmodules.vtkFiltersExtraction",
+   "name": "vtkExtractBlockUsingDataAssembly"
+  }
+ ],
+ "vtkIdList": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonCore",
+   "module_short": "vtkmodules.vtkCommonCore",
+   "name": "vtkIdList"
+  }
+ ],
+ "vtkImageData": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonDataModel",
+   "module_short": "vtkmodules.vtkCommonDataModel",
+   "name": "vtkImageData"
+  }
+ ],
+ "vtkLightKit": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkLightKit"
+  }
+ ],
+ "vtkPolyDataMapper": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkPolyDataMapper"
+  }
+ ],
+ "vtkRenderWindow": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkRenderWindow"
+  }
+ ],
+ "vtkRenderWindowInteractor": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkRenderWindowInteractor"
+  }
+ ],
+ "vtkRenderer": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkRenderingCore",
+   "module_short": "vtkmodules.vtkRenderingCore",
+   "name": "vtkRenderer"
+  }
+ ],
+ "vtkSphereSource": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersSources",
+   "module_short": "vtkmodules.vtkFiltersSources",
+   "name": "vtkSphereSource"
+  }
+ ],
+ "vtkStreamTracer": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersFlowPaths",
+   "module_short": "vtkmodules.vtkFiltersFlowPaths",
+   "name": "vtkStreamTracer"
+  }
+ ],
+ "vtkStreamTracer.BOTH": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersFlowPaths.vtkStreamTracer",
+   "module_short": "vtkmodules.vtkFiltersFlowPaths.vtkStreamTracer",
+   "name": "BOTH"
+  }
+ ],
+ "vtkStreamTracer.RUNGE_KUTTA45": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersFlowPaths.vtkStreamTracer",
+   "module_short": "vtkmodules.vtkFiltersFlowPaths.vtkStreamTracer",
+   "name": "RUNGE_KUTTA45"
+  }
+ ],
+ "vtkTubeFilter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkFiltersCore",
+   "module_short": "vtkmodules.vtkFiltersCore",
+   "name": "vtkTubeFilter"
+  }
+ ],
+ "vtkXMLImageDataWriter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkIOXML",
+   "module_short": "vtkmodules.vtkIOXML",
+   "name": "vtkXMLImageDataWriter"
+  }
+ ],
+ "vtkXMLPartitionedDataSetCollectionReader": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkIOXML",
+   "module_short": "vtkmodules.vtkIOXML",
+   "name": "vtkXMLPartitionedDataSetCollectionReader"
+  }
+ ],
+ "vtkXMLPartitionedDataSetCollectionWriter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkIOParallelXML",
+   "module_short": "vtkmodules.vtkIOParallelXML",
+   "name": "vtkXMLPartitionedDataSetCollectionWriter"
+  }
+ ],
+ "vtkXMLPolyDataWriter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkIOXML",
+   "module_short": "vtkmodules.vtkIOXML",
+   "name": "vtkXMLPolyDataWriter"
+  }
+ ],
+ "vtk_to_numpy": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.util.numpy_support",
+   "module_short": "vtkmodules.util.numpy_support",
+   "name": "vtk_to_numpy"
+  }
+ ]
+}
