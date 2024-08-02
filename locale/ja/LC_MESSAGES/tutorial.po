@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-10 00:35+0000\n"
+"POT-Creation-Date: 2024-08-02 00:35+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -319,19 +319,19 @@ msgid ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 msgstr ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/a_basic.rst:161
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:350
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:217
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:353
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:220
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:174
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:342
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:178
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:248
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:182
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:257
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:325
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:447
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:259
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:301
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:201
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:238
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:468
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:263
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:305
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:205
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:242
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:477
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:399
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:9383
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:400
@@ -347,33 +347,33 @@ msgstr ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:322
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:133
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:173
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:160
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:134
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:582
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:177
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:164
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:138
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:594
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:686
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:228
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:221
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/a_lesson_filters.rst:276
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:182
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:297
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:148
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:158
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:173
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:412
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:301
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:152
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:162
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:177
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:424
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:631
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:227
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:360
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:350
 #: ../../pyvista-tutorial/doc/source/tutorial/05_action/a_lesson_geovista.rst:20123
-#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:27
+#: ../../pyvista-tutorial/doc/source/tutorial/05_action/index.rst:30
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:597
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:293
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:251
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1442
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:277
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:296
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:524
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:281
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:300
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:527
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:279
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:151
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:215
@@ -383,17 +383,17 @@ msgstr ":download:`Download Python source code: a_basic.py <a_basic.py>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:200
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:310
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:135
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:196
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:186
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:132
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:95
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:120
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:120
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:135
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:119
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:125
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:130
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:310
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:136
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:99
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:124
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:124
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:139
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:123
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:129
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:134
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:313
 #: ../../pyvista-tutorial/doc/source/tutorial/10_trame/index.rst:48
 msgid ""
 "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
@@ -788,7 +788,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:302
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:170
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:173
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:250
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:279
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:165
@@ -814,7 +814,7 @@ msgstr ""
 "\"を実行できるかどうか試してみてください．ページの一番下までスクロールして， ``*.py`` (スクリプト) または ``*.ipynb`` "
 "(ノートブック) ファイル形式のいずれかをクリックすると，サンプルをダウンロードすることができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:326
+#: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:327
 msgid ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 msgstr ":ref:`sphx_glr_tutorial_00_intro_a_basic.py`"
 
@@ -1220,7 +1220,7 @@ msgstr ""
 ":py:attr:`pyvista.global_theme.trame.jupyter_extension_enabled "
 "<pyvista.plotting.themes._TrameConfig.jupyter_extension_enabled>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:193
+#: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/index.rst:194
 msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
 msgstr ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`"
 
@@ -1409,13 +1409,9 @@ msgstr ""
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_01_basic_exercises_a_load_examples_exercise.py>`"
-" to download the full example code or to run this example in your browser "
+" to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_01_basic_exercises_a_load_examples_exercise.py>`"
-" to download the full example code or to run this example in your browser "
-"via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:24
@@ -1568,8 +1564,14 @@ msgstr ""
 ":download:`Download Python source code: a_load_examples_exercise.py "
 "<a_load_examples_exercise.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:188
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:175
+msgid ""
+":download:`Download zipped: a_load_examples_exercise.zip "
+"<a_load_examples_exercise.zip>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:192
 msgid ""
 ":ref:`sphx_glr_tutorial_01_basic_exercises_a_load_examples_exercise.py`"
 msgstr ""
@@ -1707,29 +1709,29 @@ msgid ""
 "follow along with this lesson."
 msgstr "このページでは，このレッスンにインタラクティブについていけるノートブックのレンダリングを行っています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:151
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:152
 msgid ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py`"
 msgstr ":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:201
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:207
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:372
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:378
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/soultions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:502
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:511
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:315
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:324
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:6
 msgid "Solutions"
 msgstr "解答"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:203
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:209
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:8
 msgid "These are the solutions to the above examples."
 msgstr "以上が，上記の例に対する解答です．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:221
-#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:26
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:228
+#: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/index.rst:27
 msgid ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`"
 msgstr ""
@@ -2018,12 +2020,9 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_b_create-"
-"point-cloud.py>` to download the full example code or to run this example in"
-" your browser via Binder"
+"point-cloud.py>` to download the full example code. or to run this example "
+"in your browser via Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_b_create-"
-"point-cloud.py>` to download the full example code or to run this example in"
-" your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:24
@@ -2176,15 +2175,18 @@ msgstr ""
 ":download:`Download Python source code: b_create-point-cloud.py <b_create-"
 "point-cloud.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:256
+msgid ""
+":download:`Download zipped: b_create-point-cloud.zip <b_create-point-"
+"cloud.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_c_create-"
-"uniform-grid.py>` to download the full example code or to run this example "
+"uniform-grid.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_c_create-"
-"uniform-grid.py>` to download the full example code or to run this example "
-"in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:24
@@ -2355,15 +2357,18 @@ msgstr ""
 ":download:`Download Python source code: c_create-uniform-grid.py <c_create-"
 "uniform-grid.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:298
+msgid ""
+":download:`Download zipped: c_create-uniform-grid.zip <c_create-uniform-"
+"grid.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_d_create-"
-"tri-surface.py>` to download the full example code or to run this example in"
-" your browser via Binder"
+"tri-surface.py>` to download the full example code. or to run this example "
+"in your browser via Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_d_create-"
-"tri-surface.py>` to download the full example code or to run this example in"
-" your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:24
@@ -2469,15 +2474,18 @@ msgstr ""
 ":download:`Download Python source code: d_create-tri-surface.py <d_create-"
 "tri-surface.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:198
+msgid ""
+":download:`Download zipped: d_create-tri-surface.zip <d_create-tri-"
+"surface.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_e_read-"
-"file.py>` to download the full example code or to run this example in your "
+"file.py>` to download the full example code. or to run this example in your "
 "browser via Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_exercises_e_read-"
-"file.py>` to download the full example code or to run this example in your "
-"browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:24
@@ -2625,32 +2633,36 @@ msgid ""
 msgstr ""
 ":download:`Download Python source code: e_read-file.py <e_read-file.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:235
+msgid ":download:`Download zipped: e_read-file.zip <e_read-file.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:290
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:293
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:437
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:443
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:233
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:239
 msgid "Do it yourself"
 msgstr "やってみよう"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:308
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:312
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_b_create-point-cloud.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_exercises_b_create-point-cloud.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:325
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:329
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_c_create-uniform-grid.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_exercises_c_create-uniform-grid.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:342
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:346
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_d_create-tri-surface.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_exercises_d_create-tri-surface.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:75
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:359
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:363
 msgid ":ref:`sphx_glr_tutorial_02_mesh_exercises_e_read-file.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_exercises_e_read-file.py`"
 
@@ -2870,27 +2882,27 @@ msgstr ""
 "<https://docs.pyvista.org/examples/index.html#mesh-creation>`_ "
 "のメッシュ作成セクションを参照してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:271
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:272
 msgid ":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:390
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:24
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:397
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:25
 msgid ":ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:407
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:41
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:414
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:42
 msgid ":ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:424
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:58
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:431
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:59
 msgid ":ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:441
-#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:75
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:448
+#: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/index.rst:76
 msgid ":ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py`"
 msgstr ":ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py`"
 
@@ -3748,24 +3760,24 @@ msgid ":download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`"
 msgstr ":download:`Download Jupyter notebook: g_orbit.ipynb <g_orbit.ipynb>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:372
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:375
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/index.rst:6
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:202
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:205
 msgid "Bonus Content"
 msgstr "ボーナスコンテンツ"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:390
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:394
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:407
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:411
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:424
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:428
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`"
 
@@ -3929,13 +3941,9 @@ msgstr ":download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`"
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_03_figures_exercises_a_display_options.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_03_figures_exercises_a_display_options.py>` to "
-"download the full example code or to run this example in your browser via "
-"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:22
@@ -4012,17 +4020,18 @@ msgstr ""
 ":download:`Download Python source code: a_display_options.py "
 "<a_display_options.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:170
+msgid ""
+":download:`Download zipped: a_display_options.zip <a_display_options.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py>` to "
-"download the full example code or to run this example in your browser via "
-"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:24
@@ -4113,15 +4122,16 @@ msgstr ""
 ":download:`Download Python source code: b_lighting_mesh.py "
 "<b_lighting_mesh.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:157
+msgid ":download:`Download zipped: b_lighting_mesh.zip <b_lighting_mesh.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>` to download the "
-"full example code or to run this example in your browser via Binder"
+"full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>` to download the "
-"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:24
@@ -4190,18 +4200,22 @@ msgstr ":download:`Download Jupyter notebook: c_edl.ipynb <c_edl.ipynb>`"
 msgid ":download:`Download Python source code: c_edl.py <c_edl.py>`"
 msgstr ":download:`Download Python source code: c_edl.py <c_edl.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:455
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:131
+msgid ":download:`Download zipped: c_edl.zip <c_edl.zip>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:462
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_a_display_options.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_exercises_a_display_options.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:472
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:479
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_b_lighting_mesh.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_exercises_b_lighting_mesh.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:489
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:496
 msgid ":ref:`sphx_glr_tutorial_03_figures_exercises_c_edl.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_exercises_c_edl.py`"
 
@@ -4363,34 +4377,34 @@ msgstr ""
 "<https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.html>`_ "
 "を参照してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:299
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:300
 msgid ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:316
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:317
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_b_shading.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:333
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:334
 msgid ":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:350
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:351
 msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_d_gif.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:520
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:24
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:530
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:25
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:537
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:41
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:547
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:42
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:554
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:58
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:564
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/index.rst:59
 msgid ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 
@@ -4797,8 +4811,8 @@ msgstr ""
 ":download:`Download Jupyter notebook: f_sampling_functions_3d.ipynb "
 "<f_sampling_functions_3d.ipynb>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:220
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:224
 msgid ":ref:`sphx_glr_tutorial_04_filters_bonus_f_sampling_functions_3d.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_bonus_f_sampling_functions_3d.py`"
 
@@ -4824,11 +4838,8 @@ msgstr "00:03.305"
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_04_filters_exercises_b_clipping.py>` to download"
-" the full example code or to run this example in your browser via Binder"
+" the full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_04_filters_exercises_b_clipping.py>` to download"
-" the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:24
@@ -4974,17 +4985,17 @@ msgid ":download:`Download Python source code: b_clipping.py <b_clipping.py>`"
 msgstr ""
 ":download:`Download Python source code: b_clipping.py <b_clipping.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:294
+msgid ":download:`Download zipped: b_clipping.zip <b_clipping.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_04_filters_exercises_c_compute-normals.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_04_filters_exercises_c_compute-normals.py>` to "
-"download the full example code or to run this example in your browser via "
-"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:24
@@ -5048,17 +5059,18 @@ msgstr ""
 ":download:`Download Python source code: c_compute-normals.py <c_compute-"
 "normals.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:145
+msgid ""
+":download:`Download zipped: c_compute-normals.zip <c_compute-normals.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_04_filters_exercises_d_contouring.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_04_filters_exercises_d_contouring.py>` to "
-"download the full example code or to run this example in your browser via "
-"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:24
@@ -5123,15 +5135,16 @@ msgid ""
 msgstr ""
 ":download:`Download Python source code: d_contouring.py <d_contouring.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:155
+msgid ":download:`Download zipped: d_contouring.zip <d_contouring.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>` to download "
-"the full example code or to run this example in your browser via Binder"
+"the full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>` to download "
-"the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:24
@@ -5194,23 +5207,27 @@ msgstr ""
 msgid ":download:`Download Python source code: e_glyphs.py <e_glyphs.py>`"
 msgstr ":download:`Download Python source code: e_glyphs.py <e_glyphs.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:24
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:251
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:170
+msgid ":download:`Download zipped: e_glyphs.zip <e_glyphs.zip>`"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:25
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:258
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_b_clipping.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_exercises_b_clipping.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:41
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:268
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:275
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_c_compute-normals.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_exercises_c_compute-normals.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:58
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:285
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:59
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:292
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_d_contouring.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_exercises_d_contouring.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:75
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:302
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:309
 msgid ":ref:`sphx_glr_tutorial_04_filters_exercises_e_glyphs.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_exercises_e_glyphs.py`"
 
@@ -5289,27 +5306,27 @@ msgid ""
 "dataset:"
 msgstr "このフィルタ処理されたデータセットを，元のデータセットのアウトラインに沿ってプロットできるようになりました:"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:183
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:184
 msgid ":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:333
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:24
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:343
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:25
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:350
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:41
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:360
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:42
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:367
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:58
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:377
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:59
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:384
-#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:75
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:394
+#: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/index.rst:76
 msgid ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 msgstr ":ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`"
 
@@ -6628,11 +6645,9 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_06_vtk_d_wasm.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
-"<sphx_glr_download_tutorial_06_vtk_d_wasm.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:22
 msgid "VTK + WASM"
@@ -6656,14 +6671,16 @@ msgstr ":download:`Download Jupyter notebook: d_wasm.ipynb <d_wasm.ipynb>`"
 msgid ":download:`Download Python source code: d_wasm.py <d_wasm.py>`"
 msgstr ":download:`Download Python source code: d_wasm.py <d_wasm.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:274
+msgid ":download:`Download zipped: d_wasm.zip <d_wasm.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_06_vtk_e_vtk_next.py>` to "
-"download the full example code or to run this example in your browser via "
+"download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
-"<sphx_glr_download_tutorial_06_vtk_e_vtk_next.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:22
 msgid "VTK's Next Generation API"
@@ -6717,6 +6734,10 @@ msgid ":download:`Download Python source code: e_vtk_next.py <e_vtk_next.py>`"
 msgstr ""
 ":download:`Download Python source code: e_vtk_next.py <e_vtk_next.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:293
+msgid ":download:`Download zipped: e_vtk_next.zip <e_vtk_next.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:6
 msgid "PyVista & VTK"
 msgstr "PyVistaとVTK"
@@ -6737,27 +6758,27 @@ msgstr ""
 "このチュートリアルのセクションは，PyVista ドキュメントの `Transitioning from VTK to PyVista "
 "<https://docs.pyvista.org/user-guide/vtk_to_pyvista.html>`_ の章から採用されています．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:410
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:411
 msgid ":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:427
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:428
 msgid ":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:444
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:445
 msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:461
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:462
 msgid ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:478
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:479
 msgid ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:495
+#: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:496
 msgid ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py`"
 msgstr ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py`"
 
@@ -7638,35 +7659,35 @@ msgstr ""
 msgid "Widget Examples"
 msgstr "ウィジェットの例"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:46
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:47
 msgid ":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:64
 msgid ":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:81
 msgid ":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:97
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:98
 msgid ":ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:114
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:115
 msgid ":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:131
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:132
 msgid ":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:148
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:149
 msgid ":ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:165
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:166
 msgid ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgstr ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 
@@ -7881,11 +7902,8 @@ msgstr "事例紹介"
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` to download the "
-"full example code or to run this example in your browser via Binder"
+"full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` to download the "
-"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:22
 msgid "Getting started"
@@ -7949,15 +7967,17 @@ msgstr ""
 ":download:`Download Python source code: a_getting_started.py "
 "<a_getting_started.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:129
+msgid ""
+":download:`Download zipped: a_getting_started.zip <a_getting_started.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_09_trame_a_trame_simple.py>`"
-" to download the full example code or to run this example in your browser "
+" to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_09_trame_a_trame_simple.py>`"
-" to download the full example code or to run this example in your browser "
-"via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:22
 msgid "Simple Trame App"
@@ -7989,15 +8009,16 @@ msgstr ""
 ":download:`Download Python source code: a_trame_simple.py "
 "<a_trame_simple.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:92
+msgid ":download:`Download zipped: a_trame_simple.zip <a_trame_simple.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>` to download "
-"the full example code or to run this example in your browser via Binder"
+"the full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>` to download "
-"the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:22
 msgid "Control the Color of an Actor"
@@ -8025,15 +8046,18 @@ msgstr ""
 ":download:`Download Python source code: b_trame_actor_color.py "
 "<b_trame_actor_color.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:117
+msgid ""
+":download:`Download zipped: b_trame_actor_color.zip "
+"<b_trame_actor_color.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:13
 msgid ""
 ":ref:`Go to the end <sphx_glr_download_tutorial_09_trame_b_trame_vtk.py>` to"
-" download the full example code or to run this example in your browser via "
+" download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
-":ref:`Go to the end <sphx_glr_download_tutorial_09_trame_b_trame_vtk.py>` to"
-" download the full example code or to run this example in your browser via "
-"Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:22
 msgid "Using VTK/PyVista and Trame"
@@ -8061,15 +8085,16 @@ msgid ""
 msgstr ""
 ":download:`Download Python source code: b_trame_vtk.py <b_trame_vtk.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:117
+msgid ":download:`Download zipped: b_trame_vtk.zip <b_trame_vtk.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_c_trame_scalars.py>` to download the "
-"full example code or to run this example in your browser via Binder"
+"full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_c_trame_scalars.py>` to download the "
-"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:22
 msgid "Control Scalar Array"
@@ -8097,15 +8122,16 @@ msgstr ""
 ":download:`Download Python source code: c_trame_scalars.py "
 "<c_trame_scalars.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:132
+msgid ":download:`Download zipped: c_trame_scalars.zip <c_trame_scalars.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_d_trame_scalar_range.py>` to download "
-"the full example code or to run this example in your browser via Binder"
+"the full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_d_trame_scalar_range.py>` to download "
-"the full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:22
 msgid "Control Scalar Range"
@@ -8133,15 +8159,18 @@ msgstr ""
 ":download:`Download Python source code: d_trame_scalar_range.py "
 "<d_trame_scalar_range.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:116
+msgid ""
+":download:`Download zipped: d_trame_scalar_range.zip "
+"<d_trame_scalar_range.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_e_trame_algorithm.py>` to download the "
-"full example code or to run this example in your browser via Binder"
+"full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_e_trame_algorithm.py>` to download the "
-"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:22
 msgid "Using VTK, PyVista, and Trame"
@@ -8169,15 +8198,17 @@ msgstr ""
 ":download:`Download Python source code: e_trame_algorithm.py "
 "<e_trame_algorithm.py>`"
 
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:122
+msgid ""
+":download:`Download zipped: e_trame_algorithm.zip <e_trame_algorithm.zip>`"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:13
 msgid ""
 ":ref:`Go to the end "
 "<sphx_glr_download_tutorial_09_trame_f_trame_open_file.py>` to download the "
-"full example code or to run this example in your browser via Binder"
+"full example code. or to run this example in your browser via Binder"
 msgstr ""
-":ref:`Go to the end "
-"<sphx_glr_download_tutorial_09_trame_f_trame_open_file.py>` to download the "
-"full example code or to run this example in your browser via Binder"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:22
 msgid "Open Mesh File"
@@ -8204,6 +8235,11 @@ msgid ""
 msgstr ""
 ":download:`Download Python source code: f_trame_open_file.py "
 "<f_trame_open_file.py>`"
+
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:127
+msgid ""
+":download:`Download zipped: f_trame_open_file.zip <f_trame_open_file.zip>`"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:6
 msgid "Trame"
@@ -8344,35 +8380,35 @@ msgstr "Pan3Dを試す: ``pip install pan3d``"
 msgid "Do not run these examples in Jupyter but rather as standalone scripts."
 msgstr "これらの例をJupyterで実行するのではなく，スタンドアロンのスクリプトとして実行すること．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:160
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:161
 msgid ":ref:`sphx_glr_tutorial_09_trame_a_getting_started.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_a_getting_started.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:177
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:178
 msgid ":ref:`sphx_glr_tutorial_09_trame_a_trame_simple.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_a_trame_simple.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:194
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:195
 msgid ":ref:`sphx_glr_tutorial_09_trame_b_trame_actor_color.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_b_trame_actor_color.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:211
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:212
 msgid ":ref:`sphx_glr_tutorial_09_trame_b_trame_vtk.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_b_trame_vtk.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:228
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:229
 msgid ":ref:`sphx_glr_tutorial_09_trame_c_trame_scalars.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_c_trame_scalars.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:245
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:246
 msgid ":ref:`sphx_glr_tutorial_09_trame_d_trame_scalar_range.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_d_trame_scalar_range.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:262
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:263
 msgid ":ref:`sphx_glr_tutorial_09_trame_e_trame_algorithm.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_e_trame_algorithm.py`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:279
+#: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:280
 msgid ":ref:`sphx_glr_tutorial_09_trame_f_trame_open_file.py`"
 msgstr ":ref:`sphx_glr_tutorial_09_trame_f_trame_open_file.py`"
 
