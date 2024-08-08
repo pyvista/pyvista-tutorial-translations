@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_a_lesson_figures.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -21,7 +21,7 @@
 Lesson Overview
 ~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 6-12
+.. GENERATED FROM PYTHON SOURCE LINES 5-11
 
 .. code-block:: Python
 
@@ -38,14 +38,14 @@ Lesson Overview
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-17
+.. GENERATED FROM PYTHON SOURCE LINES 12-16
 
 ``add_mesh``
 ++++++++++++++
 
 When plotting, users must first create a :class:`pyvista.Plotter` instance (much like a Matplotlib figure). Then data are added to the plotter instance through the :func:`pyvista.Plotter.add_mesh` method. This workflow typically looks like:
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-22
+.. GENERATED FROM PYTHON SOURCE LINES 16-21
 
 .. code-block:: Python
 
@@ -57,20 +57,42 @@ When plotting, users must first create a :class:`pyvista.Plotter` instance (much
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_001.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_001.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_001.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-24
+
+.. GENERATED FROM PYTHON SOURCE LINES 22-23
 
 You can customize how that mesh is displayed through the parameters of the :func:`pyvista.Plotter.add_mesh` method. For example, we can change the colormap via the ``cmap`` argument:
 
-.. GENERATED FROM PYTHON SOURCE LINES 24-29
+.. GENERATED FROM PYTHON SOURCE LINES 23-28
 
 .. code-block:: Python
 
@@ -82,20 +104,42 @@ You can customize how that mesh is displayed through the parameters of the :func
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_002.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_002.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_002.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-31
+
+.. GENERATED FROM PYTHON SOURCE LINES 29-30
 
 Or show the edges of the mesh with ``show_edges``:
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-36
+.. GENERATED FROM PYTHON SOURCE LINES 30-35
 
 .. code-block:: Python
 
@@ -107,20 +151,42 @@ Or show the edges of the mesh with ``show_edges``:
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_003.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_003.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_003.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-38
+
+.. GENERATED FROM PYTHON SOURCE LINES 36-37
 
 Or adjust the opacity to be a scalar value or linear transfer function via the ``opacity`` argument:
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-45
+.. GENERATED FROM PYTHON SOURCE LINES 37-44
 
 .. code-block:: Python
 
@@ -134,22 +200,44 @@ Or adjust the opacity to be a scalar value or linear transfer function via the `
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_004.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_004.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_004.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-49
+
+.. GENERATED FROM PYTHON SOURCE LINES 45-48
 
 Take a look at all of the options for `add_mesh <https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_mesh.html>`_.
 
 The ``add_mesh`` method can be called over and over to add different data to the same ``Plotter`` scene. For example, we can create many different mesh objects and plot them together:
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-75
+.. GENERATED FROM PYTHON SOURCE LINES 48-74
 
 .. code-block:: Python
 
@@ -182,23 +270,45 @@ The ``add_mesh`` method can be called over and over to add different data to the
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_005.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_005.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_005.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-80
+
+.. GENERATED FROM PYTHON SOURCE LINES 75-79
 
 Subplotting
 +++++++++++
 
 Creating side-by-side comparisons of datasets is easy with PyVista's subplotting API. Get started by specifying the shape of the :class:`pyvista.Plotter` object then registering the active subplot by the :func:`pyvista.Plotter.subplot` method much like how you subplot with Matplotlib's API.
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-90
+.. GENERATED FROM PYTHON SOURCE LINES 79-89
 
 .. code-block:: Python
 
@@ -215,16 +325,38 @@ Creating side-by-side comparisons of datasets is easy with PyVista's subplotting
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_006.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_006.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_006.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_006.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_006.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-96
+
+.. GENERATED FROM PYTHON SOURCE LINES 90-95
 
 Below is an example of side-by-side comparisons of the contours and slices of a single dataset.
 
@@ -232,7 +364,7 @@ Below is an example of side-by-side comparisons of the contours and slices of a 
 
    You can link the cameras of both views with the :func:`pyvista.Plotter.link_views` method
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-111
+.. GENERATED FROM PYTHON SOURCE LINES 95-110
 
 .. code-block:: Python
 
@@ -254,23 +386,45 @@ Below is an example of side-by-side comparisons of the contours and slices of a 
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_007.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_007.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_007.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_007.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_007.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-116
+
+.. GENERATED FROM PYTHON SOURCE LINES 111-115
 
 Axes and Bounds
 +++++++++++++++
 
 Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-125
+.. GENERATED FROM PYTHON SOURCE LINES 115-124
 
 .. code-block:: Python
 
@@ -286,16 +440,38 @@ Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_008.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_008.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_008.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_008.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_008.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-131
+
+.. GENERATED FROM PYTHON SOURCE LINES 125-130
 
 And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
@@ -303,7 +479,7 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
     See `Plotting Bounds <https://docs.pyvista.org/examples/02-plot/bounds.html>`_ for more details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-139
+.. GENERATED FROM PYTHON SOURCE LINES 130-138
 
 .. code-block:: Python
 
@@ -318,16 +494,38 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
 
 
-.. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_009.png
-   :alt: a lesson figures
-   :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_009.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_009.png
+        :alt: a lesson figures
+        :srcset: /tutorial/03_figures/images/sphx_glr_a_lesson_figures_009.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/images/sphx_glr_a_lesson_figures_009.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-147
+
+.. GENERATED FROM PYTHON SOURCE LINES 139-146
 
 .. raw:: html
 
@@ -340,7 +538,7 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.838 seconds)
+   **Total running time of the script:** (0 minutes 8.363 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_a_lesson_figures.py:
@@ -363,6 +561,10 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_lesson_figures.py <a_lesson_figures.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: a_lesson_figures.zip <a_lesson_figures.zip>`
 
 
 .. only:: html
