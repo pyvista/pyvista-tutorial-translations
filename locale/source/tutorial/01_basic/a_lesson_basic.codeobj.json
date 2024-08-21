@@ -1,0 +1,328 @@
+{
+ "dataset": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.grid",
+   "module_short": "pyvista",
+   "name": "ImageData"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista",
+   "name": "ImageData"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "ImageData"
+  }
+ ],
+ "dataset.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.grid",
+   "module_short": "pyvista",
+   "name": "ImageData.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista",
+   "name": "ImageData.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "ImageData.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.grid",
+   "module_short": "pyvista",
+   "name": "Grid.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista",
+   "name": "Grid.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "Grid.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.filters.image_data",
+   "module_short": "pyvista.core.filters.image_data",
+   "name": "ImageDataFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.filters",
+   "module_short": "pyvista.core.filters",
+   "name": "ImageDataFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista.core",
+   "name": "ImageDataFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "ImageDataFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonDataModel",
+   "module_short": "vtkmodules.vtkCommonDataModel",
+   "name": "vtkImageData.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules",
+   "module_short": "vtkmodules",
+   "name": "vtkImageData.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.dataset",
+   "module_short": "pyvista",
+   "name": "DataSet.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista",
+   "name": "DataSet.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "DataSet.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.filters.data_set",
+   "module_short": "pyvista.core.filters.data_set",
+   "name": "DataSetFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.filters",
+   "module_short": "pyvista.core.filters",
+   "name": "DataSetFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista.core",
+   "name": "DataSetFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "DataSetFilters.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonDataModel",
+   "module_short": "vtkmodules.vtkCommonDataModel",
+   "name": "vtkDataSet.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules",
+   "module_short": "vtkmodules",
+   "name": "vtkDataSet.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core.dataobject",
+   "module_short": "pyvista.core.dataobject",
+   "name": "DataObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.core",
+   "module_short": "pyvista.core",
+   "name": "DataObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "DataObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonDataModel",
+   "module_short": "vtkmodules.vtkCommonDataModel",
+   "name": "vtkDataObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules",
+   "module_short": "vtkmodules",
+   "name": "vtkDataObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonCore",
+   "module_short": "vtkmodules.vtkCommonCore",
+   "name": "vtkObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules",
+   "module_short": "vtkmodules",
+   "name": "vtkObject.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules.vtkCommonCore",
+   "module_short": "vtkmodules.vtkCommonCore",
+   "name": "vtkObjectBase.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "vtkmodules",
+   "module_short": "vtkmodules",
+   "name": "vtkObjectBase.plot"
+  }
+ ],
+ "examples.download_frog": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_frog"
+  }
+ ],
+ "examples.download_saddle_surface": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista.examples",
+   "module_short": "pyvista.examples",
+   "name": "download_saddle_surface"
+  }
+ ],
+ "pv.read": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  }
+ ],
+ "pyvista.ImageData": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "ImageData"
+  },
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "ImageData"
+  }
+ ],
+ "pyvista.PolyData": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "PolyData"
+  }
+ ],
+ "pyvista.plot": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "plot"
+  }
+ ],
+ "pyvista.read": [
+  {
+   "is_class": false,
+   "is_explicit": true,
+   "module": "pyvista",
+   "module_short": "pyvista",
+   "name": "read"
+  }
+ ]
+}

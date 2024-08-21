@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_08_widgets_c_line-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_c_line-widget.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -35,19 +35,19 @@ the ``name`` argument in ``add_mesh``.
 
 .. GENERATED FROM PYTHON SOURCE LINES 17-30
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
     import pyvista as pv
     from pyvista import examples
 
-    pv.set_plot_theme('document')
+    pv.set_plot_theme("document")
 
     mesh = examples.download_kitchen()
     furniture = examples.download_kitchen(split=True)
 
-    arr = np.linalg.norm(mesh['velocity'], axis=1)
+    arr = np.linalg.norm(mesh["velocity"], axis=1)
     clim = [arr.min(), arr.max()]
 
 
@@ -59,20 +59,20 @@ the ``name`` argument in ``add_mesh``.
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-48
 
-.. code-block:: default
+.. code-block:: Python
 
 
     p = pv.Plotter()
-    p.add_mesh(furniture, name='furniture', color=True)
-    p.add_mesh(mesh.outline(), color='black')
+    p.add_mesh(furniture, name="furniture", color=True)
+    p.add_mesh(mesh.outline(), color="black")
     p.add_axes()
 
 
-    def simulate(pointa, pointb):
+    def simulate(pointa, pointb) -> None:
         streamlines = mesh.streamlines(
-            n_points=10, max_steps=100, pointa=pointa, pointb=pointb, integration_direction='forward'
+            n_points=10, max_steps=100, pointa=pointa, pointb=pointb, integration_direction="forward"
         )
-        p.add_mesh(streamlines, name='streamlines', line_width=5, render_lines_as_tubes=True, clim=clim)
+        p.add_mesh(streamlines, name="streamlines", line_width=5, render_lines_as_tubes=True, clim=clim)
 
 
     p.add_line_widget(callback=simulate, use_vertices=True)
@@ -81,10 +81,32 @@ the ``name`` argument in ``add_mesh``.
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_c_line-widget_001.png
-   :alt: c line widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_c_line-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_c_line-widget_001.png
+        :alt: c line widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_c_line-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_c_line-widget_001.vtksz
+
 
 
 
@@ -109,7 +131,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.528 seconds)
+   **Total running time of the script:** (0 minutes 0.740 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_c_line-widget.py:
@@ -118,7 +140,6 @@ And here is a screen capture of a user interacting with this
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -126,13 +147,17 @@ And here is a screen capture of a user interacting with this
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: c_line-widget.ipynb <c_line-widget.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: c_line-widget.py <c_line-widget.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: c_line-widget.ipynb <c_line-widget.ipynb>`
+      :download:`Download zipped: c_line-widget.zip <c_line-widget.zip>`
 
 
 .. only:: html

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_h_spline-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -67,7 +67,7 @@ path. To do this, we have added a convenient helper method which leverages the
     )
 
     p = pv.Plotter()
-    p.add_mesh(mesh.outline(), color='black')
+    p.add_mesh(mesh.outline(), color="black")
     p.add_mesh_slice_spline(mesh, initial_points=points, n_handles=5)
     p.camera_position = [(30, -42, 30), (0.0, 0.0, 0.0), (-0.09, 0.53, 0.84)]
     p.show()
@@ -75,10 +75,32 @@ path. To do this, we have added a convenient helper method which leverages the
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_h_spline-widget_001.png
-   :alt: h spline widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_h_spline-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_h_spline-widget_001.png
+        :alt: h spline widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_h_spline-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_h_spline-widget_001.vtksz
+
 
 
 
@@ -103,7 +125,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.369 seconds)
+   **Total running time of the script:** (0 minutes 0.444 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_h_spline-widget.py:
@@ -126,6 +148,10 @@ And here is a screen capture of a user interacting with this
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: h_spline-widget.py <h_spline-widget.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: h_spline-widget.zip <h_spline-widget.zip>`
 
 
 .. only:: html

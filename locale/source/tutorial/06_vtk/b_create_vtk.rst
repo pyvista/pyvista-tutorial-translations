@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_06_vtk_b_create_vtk.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -34,7 +34,7 @@ This exercise walks through the creation of a few different types of VTK dataset
 
     try:
         from vtkmodules.util.numpy_support import numpy_to_vtk
-    except:
+    except:  # noqa: E722
         from vtk.util.numpy_support import numpy_to_vtk
 
 
@@ -73,7 +73,7 @@ Add point data
 
 .. code-block:: Python
 
-    values = np.arange(np.product(image.GetDimensions()))
+    values = np.arange(np.prod(image.GetDimensions()))
     # Convert numpy array to VTK array
     arr = numpy_to_vtk(values)
     arr.SetName("values")  # CRITICAL
@@ -89,7 +89,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x563acce34990) at 0x7f38edd0bd60>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x55d75edf7f90) at 0x7f8cec83e440>
 
 
 
@@ -106,10 +106,32 @@ Plot with PyVista for simplicity
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.png
-   :alt: b create vtk
-   :srcset: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.png
+        :alt: b create vtk
+        :srcset: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_b_create_vtk_001.vtksz
+
 
 
 
@@ -154,7 +176,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x563ace187890) at 0x7f38bc590340>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x55d76a2689f0) at 0x7f8cda8f0ee0>
 
 
 
@@ -197,10 +219,32 @@ Plot with PyVista for simplicity
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.png
-   :alt: b create vtk
-   :srcset: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.png
+        :alt: b create vtk
+        :srcset: /tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_b_create_vtk_002.vtksz
+
 
 
 
@@ -219,7 +263,7 @@ Plot with PyVista for simplicity
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.681 seconds)
+   **Total running time of the script:** (0 minutes 0.577 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_b_create_vtk.py:
@@ -242,6 +286,10 @@ Plot with PyVista for simplicity
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: b_create_vtk.py <b_create_vtk.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: b_create_vtk.zip <b_create_vtk.zip>`
 
 
 .. only:: html

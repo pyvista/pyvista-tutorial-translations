@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -36,7 +36,7 @@ a statue as though it were metallic.
 
 .. GENERATED FROM PYTHON SOURCE LINES 19-33
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from itertools import product
@@ -66,12 +66,12 @@ finish.
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-47
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_actor(cubemap.to_skybox())
     p.set_environment_texture(cubemap)  # For reflecting the environment off the mesh
-    p.add_mesh(mesh, color='linen', pbr=True, metallic=0.8, roughness=0.1, diffuse=1)
+    p.add_mesh(mesh, color="linen", pbr=True, metallic=0.8, roughness=0.1, diffuse=1)
 
     # Define a nice camera perspective
     cpos = [(-313.40, 66.09, 1000.61), (0.0, 0.0, 0.0), (0.018, 0.99, -0.06)]
@@ -82,10 +82,32 @@ finish.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_001.png
-   :alt: d pbr
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_001.png
+        :alt: d pbr
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_d_pbr_001.vtksz
+
 
 
 
@@ -100,10 +122,10 @@ increasing from bottom to top.
 
 .. GENERATED FROM PYTHON SOURCE LINES 52-66
 
-.. code-block:: default
+.. code-block:: Python
 
 
-    colors = ['red', 'teal', 'black', 'orange', 'silver']
+    colors = ["red", "teal", "black", "orange", "silver"]
 
     p = pv.Plotter()
     p.set_environment_texture(cubemap)
@@ -119,10 +141,32 @@ increasing from bottom to top.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_002.png
-   :alt: d pbr
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_002.png
+        :alt: d pbr
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_d_pbr_002.vtksz
+
 
 
 
@@ -134,7 +178,7 @@ Combine custom lighting and physically based rendering.
 
 .. GENERATED FROM PYTHON SOURCE LINES 68-94
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # download louis model
@@ -143,18 +187,18 @@ Combine custom lighting and physically based rendering.
 
 
     plotter = pv.Plotter(lighting=None)
-    plotter.set_background('black')
-    plotter.add_mesh(mesh, color='linen', pbr=True, metallic=0.5, roughness=0.5, diffuse=1)
+    plotter.set_background("black")
+    plotter.add_mesh(mesh, color="linen", pbr=True, metallic=0.5, roughness=0.5, diffuse=1)
 
 
     # set up lighting
-    light = pv.Light((-2, 2, 0), (0, 0, 0), 'white')
+    light = pv.Light((-2, 2, 0), (0, 0, 0), "white")
     plotter.add_light(light)
 
     light = pv.Light((2, 0, 0), (0, 0, 0), (0.7, 0.0862, 0.0549))
     plotter.add_light(light)
 
-    light = pv.Light((0, 0, 10), (0, 0, 0), 'white')
+    light = pv.Light((0, 0, 10), (0, 0, 0), "white")
     plotter.add_light(light)
 
 
@@ -165,10 +209,32 @@ Combine custom lighting and physically based rendering.
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
-   :alt: d pbr
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
+        :alt: d pbr
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_d_pbr_003.vtksz
+
 
 
 
@@ -187,7 +253,7 @@ Combine custom lighting and physically based rendering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  30.984 seconds)
+   **Total running time of the script:** (0 minutes 48.207 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py:
@@ -196,7 +262,6 @@ Combine custom lighting and physically based rendering.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -204,13 +269,17 @@ Combine custom lighting and physically based rendering.
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: d_pbr.py <d_pbr.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`
+      :download:`Download zipped: d_pbr.zip <d_pbr.zip>`
 
 
 .. only:: html

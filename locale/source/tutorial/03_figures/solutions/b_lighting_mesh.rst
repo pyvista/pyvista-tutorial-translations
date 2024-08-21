@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_solutions_b_lighting_mesh.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -65,10 +65,32 @@ First, lets take a look at the mesh with default lighting conditions
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_001.png
-   :alt: b lighting mesh
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_001.png
+        :alt: b lighting mesh
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_001.vtksz
+
 
 
 
@@ -87,10 +109,32 @@ What about with no lighting?
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_002.png
-   :alt: b lighting mesh
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_002.png
+        :alt: b lighting mesh
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_002.vtksz
+
 
 
 
@@ -110,12 +154,12 @@ Feel free to adjust the specular value in the ``s`` variable.
 
     p.subplot(0, 0)
     p.add_mesh(mesh, show_scalar_bar=False)
-    p.add_text('No Specular')
+    p.add_text("No Specular")
 
     p.subplot(0, 1)
     specular = 1.0
     p.add_mesh(mesh, specular=specular, show_scalar_bar=False)
-    p.add_text(f'Specular of {specular}')
+    p.add_text(f"Specular of {specular}")
 
     p.link_views()
     p.view_isometric()
@@ -124,10 +168,32 @@ Feel free to adjust the specular value in the ``s`` variable.
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_003.png
-   :alt: b lighting mesh
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_003.png
+        :alt: b lighting mesh
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_003.vtksz
+
 
 
 
@@ -146,10 +212,32 @@ Specular power (feel free to adjust)
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_004.png
-   :alt: b lighting mesh
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_004.png
+        :alt: b lighting mesh
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_004.vtksz
+
 
 
 
@@ -169,10 +257,32 @@ Demonstration of all diffuse, specular, and ambient in use together
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_005.png
-   :alt: b lighting mesh
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_005.png
+        :alt: b lighting mesh
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_b_lighting_mesh_005.vtksz
+
 
 
 
@@ -196,7 +306,7 @@ For detailed control over lighting conditions in general see the
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.826 seconds)
+   **Total running time of the script:** (0 minutes 9.057 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_b_lighting_mesh.py:
@@ -219,6 +329,10 @@ For detailed control over lighting conditions in general see the
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: b_lighting_mesh.py <b_lighting_mesh.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: b_lighting_mesh.zip <b_lighting_mesh.zip>`
 
 
 .. only:: html

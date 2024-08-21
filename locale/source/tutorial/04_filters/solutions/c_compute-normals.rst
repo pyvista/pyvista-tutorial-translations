@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -28,7 +28,7 @@ Compute normals on a surface.
 
 .. GENERATED FROM PYTHON SOURCE LINES 10-18
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -41,10 +41,32 @@ Compute normals on a surface.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_001.png
-   :alt: c compute normals
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_001.png
+        :alt: c compute normals
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_001.vtksz
+
 
 
 
@@ -61,7 +83,7 @@ exaggerated topographic relief.
 
 .. GENERATED FROM PYTHON SOURCE LINES 26-30
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Compute the normals in-place and use them to warp the globe
@@ -106,7 +128,7 @@ Now use those normals to warp the surface
 
 .. GENERATED FROM PYTHON SOURCE LINES 32-34
 
-.. code-block:: default
+.. code-block:: Python
 
     warp = mesh.warp_by_scalar(factor=0.5e-5)
 
@@ -123,7 +145,7 @@ And let's see it!
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-39
 
-.. code-block:: default
+.. code-block:: Python
 
     warp.plot(cmap="gist_earth", show_scalar_bar=False)
 
@@ -131,10 +153,32 @@ And let's see it!
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_002.png
-   :alt: c compute normals
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_002.png
+        :alt: c compute normals
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_002.vtksz
+
 
 
 
@@ -148,7 +192,7 @@ the normals along its cell faces, and extract the faces that face upward.
 
 .. GENERATED FROM PYTHON SOURCE LINES 43-62
 
-.. code-block:: default
+.. code-block:: Python
 
 
     mesh = examples.download_nefertiti()
@@ -156,7 +200,7 @@ the normals along its cell faces, and extract the faces that face upward.
     mesh.compute_normals(cell_normals=True, point_normals=False, inplace=True)
 
     # Get list of cell IDs that meet condition
-    ids = np.arange(mesh.n_cells)[mesh['Normals'][:, 2] > 0.0]
+    ids = np.arange(mesh.n_cells)[mesh["Normals"][:, 2] > 0.0]
 
     # Extract those cells
     top = mesh.extract_cells(ids)
@@ -172,10 +216,32 @@ the normals along its cell faces, and extract the faces that face upward.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_003.png
-   :alt: c compute normals
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_003.png
+        :alt: c compute normals
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_c_compute-normals_003.vtksz
+
 
 
 
@@ -194,7 +260,7 @@ the normals along its cell faces, and extract the faces that face upward.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  57.259 seconds)
+   **Total running time of the script:** (0 minutes 40.861 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py:
@@ -203,7 +269,6 @@ the normals along its cell faces, and extract the faces that face upward.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -211,13 +276,17 @@ the normals along its cell faces, and extract the faces that face upward.
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: c_compute-normals.ipynb <c_compute-normals.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: c_compute-normals.py <c_compute-normals.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: c_compute-normals.ipynb <c_compute-normals.ipynb>`
+      :download:`Download zipped: c_compute-normals.zip <c_compute-normals.zip>`
 
 
 .. only:: html

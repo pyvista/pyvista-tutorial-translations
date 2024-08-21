@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -28,7 +28,7 @@ scalar arrays for those points.
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-16
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -53,7 +53,7 @@ locations.
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-38
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.80948875e+05, 4.40011290e+06, 1.77539001e+03],
-                     [4.80981675e+05, 4.40024490e+06, 1.76104004e+03],
-                     [4.80990475e+05, 4.40021610e+06, 1.75845996e+03],
-                     [4.81106275e+05, 4.40011080e+06, 1.76030005e+03],
-                     [4.80991275e+05, 4.40016280e+06, 1.76053003e+03]])
+    pyvista_ndarray([[4.81118675e+05, 4.40009620e+06, 1.76343005e+03],
+                     [4.81017475e+05, 4.40017790e+06, 1.75991003e+03],
+                     [4.81113575e+05, 4.40022200e+06, 1.76939001e+03],
+                     [4.80971275e+05, 4.40019530e+06, 1.75930005e+03],
+                     [4.80950375e+05, 4.40018490e+06, 1.75953003e+03]])
 
 
 
@@ -94,7 +94,7 @@ data or your own project, create a PyVista mesh using those points.
 
 .. GENERATED FROM PYTHON SOURCE LINES 41-45
 
-.. code-block:: default
+.. code-block:: Python
 
 
     point_cloud = pv.PolyData(points)
@@ -132,7 +132,7 @@ correctly.
 
 .. GENERATED FROM PYTHON SOURCE LINES 48-51
 
-.. code-block:: default
+.. code-block:: Python
 
 
     np.allclose(points, point_cloud.points)
@@ -159,17 +159,39 @@ perception with point clouds (learn more about `EDL
 
 .. GENERATED FROM PYTHON SOURCE LINES 56-58
 
-.. code-block:: default
+.. code-block:: Python
 
     point_cloud.plot(eye_dome_lighting=True)
 
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_001.vtksz
+
 
 
 
@@ -192,7 +214,7 @@ Each element in this array will correspond to points at the same index:
 
 .. GENERATED FROM PYTHON SOURCE LINES 71-75
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Make data array using z-component of points array
@@ -211,7 +233,7 @@ Add that data to the mesh with the name "elevation".
 
 .. GENERATED FROM PYTHON SOURCE LINES 77-80
 
-.. code-block:: default
+.. code-block:: Python
 
 
     point_cloud["elevation"] = data
@@ -231,17 +253,39 @@ render every point as its own sphere using ``render_points_as_spheres``.
 
 .. GENERATED FROM PYTHON SOURCE LINES 84-86
 
-.. code-block:: default
+.. code-block:: Python
 
     point_cloud.plot(render_points_as_spheres=True)
 
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_002.vtksz
+
 
 
 
@@ -257,9 +301,9 @@ and add those vectors to the mesh.
 This time, we're going to create a totally new, random point cloud containing
 100 points using :func:`numpy.random.random`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-113
+.. GENERATED FROM PYTHON SOURCE LINES 94-112
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Create a random point cloud with Cartesian coordinates
@@ -272,8 +316,7 @@ This time, we're going to create a totally new, random point cloud containing
         """Create normalized vectors pointing outward from the center of the cloud."""
         origin = mesh.center
         vectors = mesh.points - origin
-        vectors = vectors / np.linalg.norm(vectors, axis=1)[:, None]
-        return vectors
+        return vectors / np.linalg.norm(vectors, axis=1)[:, None]
 
 
     vectors = compute_vectors(point_cloud)
@@ -289,53 +332,53 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[-0.61038521,  0.757952  ,  0.23008404],
-                     [ 0.83248851,  0.48913482, -0.26021146],
-                     [ 0.7273477 , -0.57148103, -0.37996679],
-                     [-0.54663334,  0.80958495,  0.21392571],
-                     [-0.78187755, -0.27020822, -0.56183184]])
+    pyvista_ndarray([[ 0.77050904, -0.63008972,  0.09645087],
+                     [-0.44018985, -0.84815222,  0.29473836],
+                     [-0.66195981,  0.12595773,  0.73888014],
+                     [ 0.52979631, -0.45804746,  0.71379857],
+                     [ 0.45454341, -0.83160736, -0.31909165]])
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-115
+.. GENERATED FROM PYTHON SOURCE LINES 113-114
 
 Add the vector array as point data to the new mesh:
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-118
+.. GENERATED FROM PYTHON SOURCE LINES 114-117
 
-.. code-block:: default
-
-
-    point_cloud['vectors'] = vectors
+.. code-block:: Python
 
 
+    point_cloud["vectors"] = vectors
 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-122
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 118-121
 
 Now we can make arrows using those vectors using the glyph filter (see the
 `Glyph Example <https://docs.pyvista.org/examples/01-filter/glyphs.html>`_
 for more details).
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-138
+.. GENERATED FROM PYTHON SOURCE LINES 121-137
 
-.. code-block:: default
+.. code-block:: Python
 
 
     arrows = point_cloud.glyph(
-        orient='vectors',
+        orient="vectors",
         scale=False,
         factor=0.15,
     )
 
     # Display the arrows
     plotter = pv.Plotter()
-    plotter.add_mesh(point_cloud, color='maroon', point_size=10.0, render_points_as_spheres=True)
-    plotter.add_mesh(arrows, color='lightblue')
+    plotter.add_mesh(point_cloud, color="maroon", point_size=10.0, render_points_as_spheres=True)
+    plotter.add_mesh(arrows, color="lightblue")
     # plotter.add_point_labels([point_cloud.center,], ['Center',],
     #                          point_color='yellow', point_size=20)
     plotter.show_grid()
@@ -344,16 +387,38 @@ for more details).
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
-   :alt: b create point cloud
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
+        :alt: b create point cloud
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_b_create-point-cloud_003.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-146
+
+.. GENERATED FROM PYTHON SOURCE LINES 138-145
 
 .. raw:: html
 
@@ -366,7 +431,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.825 seconds)
+   **Total running time of the script:** (0 minutes 3.428 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
@@ -375,7 +440,6 @@ for more details).
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -383,13 +447,17 @@ for more details).
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: b_create-point-cloud.ipynb <b_create-point-cloud.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: b_create-point-cloud.py <b_create-point-cloud.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: b_create-point-cloud.ipynb <b_create-point-cloud.ipynb>`
+      :download:`Download zipped: b_create-point-cloud.zip <b_create-point-cloud.zip>`
 
 
 .. only:: html

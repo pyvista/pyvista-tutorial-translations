@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_04_filters_bonus_f_sampling_functions_3d.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_bonus_f_sampling_functions_3d.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -28,7 +28,7 @@ we create a voxelized mesh similar to a Minecraft "cave".
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
@@ -54,7 +54,7 @@ terrain that is open or closed
 
 .. GENERATED FROM PYTHON SOURCE LINES 24-31
 
-.. code-block:: default
+.. code-block:: Python
 
 
     freq = (1, 1, 1)
@@ -99,14 +99,14 @@ color limits without blue
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-45
 
-.. code-block:: default
+.. code-block:: Python
 
-    mn, mx = [out['scalars'].min(), out['scalars'].max()]
+    mn, mx = [out["scalars"].min(), out["scalars"].max()]
     clim = (mn, mx * 1.8)
 
     out.plot(
-        cmap='gist_earth_r',
-        background='white',
+        cmap="gist_earth_r",
+        background="white",
         show_scalar_bar=False,
         lighting=True,
         clim=clim,
@@ -116,22 +116,33 @@ color limits without blue
 
 
 
-.. image-sg:: /tutorial/04_filters/bonus/images/sphx_glr_f_sampling_functions_3d_001.png
-   :alt: f sampling functions 3d
-   :srcset: /tutorial/04_filters/bonus/images/sphx_glr_f_sampling_functions_3d_001.png
-   :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
 
- .. code-block:: none
 
-    INFO:root:awaiting runner setup
-    INFO:root:awaiting site startup
-    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7f447158e9d0>
-    INFO:root:Print WSLINK_READY_MSG
-    INFO:root:Schedule auto shutdown with timout 0
-    INFO:root:awaiting running future
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/bonus/images/sphx_glr_f_sampling_functions_3d_001.png
+        :alt: f sampling functions 3d
+        :srcset: /tutorial/04_filters/bonus/images/sphx_glr_f_sampling_functions_3d_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/bonus/images/sphx_glr_f_sampling_functions_3d_001.vtksz
+
+
 
 
 
@@ -149,7 +160,7 @@ color limits without blue
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.305 seconds)
+   **Total running time of the script:** (0 minutes 0.619 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_bonus_f_sampling_functions_3d.py:
@@ -158,7 +169,6 @@ color limits without blue
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -166,13 +176,17 @@ color limits without blue
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: f_sampling_functions_3d.ipynb <f_sampling_functions_3d.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: f_sampling_functions_3d.py <f_sampling_functions_3d.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: f_sampling_functions_3d.ipynb <f_sampling_functions_3d.ipynb>`
+      :download:`Download zipped: f_sampling_functions_3d.zip <f_sampling_functions_3d.zip>`
 
 
 .. only:: html

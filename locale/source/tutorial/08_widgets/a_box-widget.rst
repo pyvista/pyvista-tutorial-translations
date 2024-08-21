@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_08_widgets_a_box-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_a_box-widget.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -39,7 +39,7 @@ scene with a box widget that controls its extent, the
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-27
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
@@ -56,21 +56,43 @@ scene with a box widget that controls its extent, the
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-34
 
-.. code-block:: default
+.. code-block:: Python
 
 
     p = pv.Plotter()
-    p.add_mesh_clip_box(mesh, color='white')
+    p.add_mesh_clip_box(mesh, color="white")
     p.show(cpos=[-1, -1, 0.2])
 
 
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_a_box-widget_001.png
-   :alt: a box widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_a_box-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_a_box-widget_001.png
+        :alt: a box widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_a_box-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_a_box-widget_001.vtksz
+
 
 
 
@@ -82,7 +104,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-38
 
-.. code-block:: default
+.. code-block:: Python
 
     p.box_clipped_meshes
 
@@ -95,7 +117,7 @@ After interacting with the scene, the clipped mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7fe44164f7c0)
+    [UnstructuredGrid (0x7f8cda8f20e0)
       N Cells:    2018232
       N Points:   1009118
       X Bounds:   -1.194e+02, 1.194e+02
@@ -118,7 +140,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  20.385 seconds)
+   **Total running time of the script:** (0 minutes 14.806 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:
@@ -127,7 +149,6 @@ After interacting with the scene, the clipped mesh is available as:
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -135,13 +156,17 @@ After interacting with the scene, the clipped mesh is available as:
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: a_box-widget.ipynb <a_box-widget.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_box-widget.py <a_box-widget.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: a_box-widget.ipynb <a_box-widget.ipynb>`
+      :download:`Download zipped: a_box-widget.zip <a_box-widget.zip>`
 
 
 .. only:: html

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_f_slider-bar-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -66,10 +66,32 @@ slider widget to control a thresholding value.
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_001.png
-   :alt: f slider bar widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_001.png
+        :alt: f slider bar widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_001.vtksz
+
 
 
 
@@ -94,7 +116,7 @@ After interacting with the scene, the threshold mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f38bcccde20)
+    [UnstructuredGrid (0x7f8cda9657e0)
       N Cells:    295424
       N Points:   394455
       X Bounds:   3.615e+01, 1.178e+02
@@ -119,7 +141,7 @@ Or you could leverage a custom callback function that takes a single value
 from the slider as its argument to do something like control the resolution
 of a mesh. Again note the use of the ``name`` argument in ``add_mesh``:
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-60
+.. GENERATED FROM PYTHON SOURCE LINES 46-59
 
 .. code-block:: Python
 
@@ -127,35 +149,56 @@ of a mesh. Again note the use of the ``name`` argument in ``add_mesh``:
     p = pv.Plotter()
 
 
-    def create_mesh(value):
+    def create_mesh(value) -> None:
         res = int(value)
         sphere = pv.Sphere(phi_resolution=res, theta_resolution=res)
-        p.add_mesh(sphere, name='sphere', show_edges=True)
-        return
+        p.add_mesh(sphere, name="sphere", show_edges=True)
 
 
-    p.add_slider_widget(create_mesh, [5, 100], title='Resolution')
+    p.add_slider_widget(create_mesh, [5, 100], title="Resolution")
     p.show()
 
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_002.png
-   :alt: f slider bar widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_002.png
+        :alt: f slider bar widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_f_slider-bar-widget_002.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-64
+
+.. GENERATED FROM PYTHON SOURCE LINES 60-63
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/slider-widget-resolution.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-73
+.. GENERATED FROM PYTHON SOURCE LINES 65-72
 
 .. raw:: html
 
@@ -168,7 +211,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.871 seconds)
+   **Total running time of the script:** (0 minutes 3.085 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_f_slider-bar-widget.py:
@@ -191,6 +234,10 @@ And here is a screen capture of a user interacting with this
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: f_slider-bar-widget.py <f_slider-bar-widget.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: f_slider-bar-widget.zip <f_slider-bar-widget.zip>`
 
 
 .. only:: html

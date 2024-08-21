@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -45,7 +45,7 @@ to try out!
 What is a Point?
 ^^^^^^^^^^^^^^^^
 
-Let’s start with a point cloud – this is a mesh type that only has vertices.
+Let's start with a point cloud - this is a mesh type that only has vertices.
 You can create one by defining a 2D array of Cartesian coordinates like so:
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-25
@@ -65,11 +65,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.33350923, 0.18552267, 0.04520746],
-           [0.63974697, 0.57892566, 0.06921625],
-           [0.84463573, 0.1423836 , 0.08292412],
-           [0.79805521, 0.72688105, 0.25025183],
-           [0.79512415, 0.83009254, 0.61267946]])
+    array([[0.57198611, 0.26679564, 0.7817264 ],
+           [0.6068542 , 0.69431974, 0.99818969],
+           [0.87065001, 0.1354757 , 0.73686118],
+           [0.45176994, 0.47614351, 0.01557924],
+           [0.61704641, 0.71926522, 0.55523172]])
 
 
 
@@ -98,9 +98,9 @@ Pass numpy array of points (n by 3) to PolyData
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>3.594e-02, 9.984e-01</td></tr>
-    <tr><td>Y Bounds</td><td>1.173e-03, 9.935e-01</td></tr>
-    <tr><td>Z Bounds</td><td>1.891e-03, 9.754e-01</td></tr>
+    <tr><td>X Bounds</td><td>5.100e-03, 9.871e-01</td></tr>
+    <tr><td>Y Bounds</td><td>2.060e-02, 9.798e-01</td></tr>
+    <tr><td>Z Bounds</td><td>1.030e-02, 9.982e-01</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -118,10 +118,32 @@ Pass numpy array of points (n by 3) to PolyData
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_001.vtksz
+
 
 
 
@@ -129,7 +151,7 @@ Pass numpy array of points (n by 3) to PolyData
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-36
 
-But it’s important to note that most meshes have some sort of connectivity
+But it's important to note that most meshes have some sort of connectivity
 between points such as this gridded mesh:
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-46
@@ -149,10 +171,32 @@ between points such as this gridded mesh:
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_002.vtksz
+
 
 
 
@@ -173,10 +217,32 @@ between points such as this gridded mesh:
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_003.vtksz
+
 
 
 
@@ -213,10 +279,32 @@ points in that mesh:
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_004.vtksz
+
 
 
 
@@ -224,9 +312,9 @@ points in that mesh:
 
 .. GENERATED FROM PYTHON SOURCE LINES 78-81
 
-Cells aren’t limited to voxels, they could be a triangle between three
+Cells aren't limited to voxels, they could be a triangle between three
 points, a line between two points, or even a single point could be its own
-cell (but that’s a special case).
+cell (but that's a special case).
 
 .. GENERATED FROM PYTHON SOURCE LINES 83-92
 
@@ -246,7 +334,7 @@ Point Data
 ~~~~~~~~~~
 Point data refers to arrays of values (scalars, vectors, etc.) that live on
 each point of the mesh. Each element in an attribute array corresponds to a
-point in the mesh. Let’s create some point data for the beam mesh. When
+point in the mesh. Let's create some point data for the beam mesh. When
 plotting, the values between points are interpolated across the cells.
 
 .. GENERATED FROM PYTHON SOURCE LINES 100-104
@@ -260,10 +348,32 @@ plotting, the values between points are interpolated across the cells.
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_005.vtksz
+
 
 
 
@@ -288,10 +398,32 @@ volume) is assigned the value of that attribute.
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_006.vtksz
+
 
 
 
@@ -299,9 +431,9 @@ volume) is assigned the value of that attribute.
 
 .. GENERATED FROM PYTHON SOURCE LINES 115-118
 
-Here’s a comparison of point data versus cell data and how point data is
+Here's a comparison of point data versus cell data and how point data is
 interpolated across cells when mapping colors. This is unlike cell data
-which has a single value across the cell’s domain:
+which has a single value across the cell's domain:
 
 .. GENERATED FROM PYTHON SOURCE LINES 118-131
 
@@ -323,10 +455,32 @@ which has a single value across the cell’s domain:
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_007.vtksz
+
 
 
 
@@ -344,7 +498,7 @@ still should be attached to the mesh. This may be a string array storing notes.
 .. code-block:: Python
 
     mesh = pv.Cube()
-    mesh.field_data['metadata'] = ['Foo', 'bar']
+    mesh.field_data["metadata"] = ["Foo", "bar"]
     mesh.field_data
 
 
@@ -368,7 +522,7 @@ still should be attached to the mesh. This may be a string array storing notes.
 Assigning Scalars to a Mesh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here’s how we assign values to cell attributes and plot it. Here, we
+Here's how we assign values to cell attributes and plot it. Here, we
 generate cube containing 6 faces and assign each face an integer from
 ``range(6)`` and then have it plotted.
 
@@ -393,10 +547,32 @@ Note how this varies from assigning scalars to each point
 
 
 
-.. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
-   :alt: a lesson mesh
-   :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
+        :alt: a lesson mesh
+        :srcset: /tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/images/sphx_glr_a_lesson_mesh_008.vtksz
+
 
 
 
@@ -415,7 +591,7 @@ Note how this varies from assigning scalars to each point
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.879 seconds)
+   **Total running time of the script:** (0 minutes 2.800 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:
@@ -438,6 +614,10 @@ Note how this varies from assigning scalars to each point
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_lesson_mesh.py <a_lesson_mesh.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: a_lesson_mesh.zip <a_lesson_mesh.zip>`
 
 
 .. only:: html
