@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -35,12 +35,12 @@ Let's see if we can try a few VTK algorithms with that standard workflow.
 
 .. GENERATED FROM PYTHON SOURCE LINES 17-22
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
-    from pyvista import examples
     import vtk
+    from pyvista import examples
 
 
 
@@ -55,7 +55,7 @@ Here is a sample mesh
 
 .. GENERATED FROM PYTHON SOURCE LINES 24-27
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh = examples.load_random_hills()
     mesh
@@ -94,17 +94,39 @@ Here is a sample mesh
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-30
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh.plot()
 
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_001.png
-   :alt: c vtk algorithms
-   :srcset: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_001.png
+        :alt: c vtk algorithms
+        :srcset: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_001.vtksz
+
 
 
 
@@ -118,7 +140,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-36
 
-.. code-block:: default
+.. code-block:: Python
 
     help(vtk.vtkOutlineFilter)
 
@@ -390,6 +412,12 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  ----------------------------------------------------------------------
      |  Methods inherited from vtkmodules.vtkCommonExecutionModel.vtkAlgorithm:
      |  
+     |  ABORTED(...)
+     |      ABORTED() -> vtkInformationIntegerKey
+     |      C++: static vtkInformationIntegerKey *ABORTED()
+     |      
+     |      \ingroup InformationKeys
+     |  
      |  AbortExecuteOff(...)
      |      AbortExecuteOff(self) -> None
      |      C++: virtual void AbortExecuteOff()
@@ -449,6 +477,12 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      such as the legacy structured data readers cannot support this
      |      feature.\ingroup InformationKeys
      |  
+     |  CheckAbort(...)
+     |      CheckAbort(self) -> bool
+     |      C++: bool CheckAbort()
+     |      
+     |      Checks to see if this filter should abort.
+     |  
      |  ConvertTotalInputToPortConnection(...)
      |      ConvertTotalInputToPortConnection(self, ind:int, port:int,
      |          conn:int) -> None
@@ -461,6 +495,14 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  GetAbortExecute(...)
      |      GetAbortExecute(self) -> int
      |      C++: virtual vtkTypeBool GetAbortExecute()
+     |  
+     |  GetAbortOutput(...)
+     |      GetAbortOutput(self) -> bool
+     |      C++: virtual bool GetAbortOutput()
+     |  
+     |  GetContainerAlgorithm(...)
+     |      GetContainerAlgorithm(self) -> vtkAlgorithm
+     |      C++: vtkAlgorithm *GetContainerAlgorithm()
      |  
      |  GetErrorCode(...)
      |      GetErrorCode(self) -> int
@@ -627,7 +669,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  
      |  GetReleaseDataFlag(...)
      |      GetReleaseDataFlag(self) -> int
-     |      C++: virtual int GetReleaseDataFlag()
+     |      C++: virtual vtkTypeBool GetReleaseDataFlag()
      |  
      |  GetTotalNumberOfInputConnections(...)
      |      GetTotalNumberOfInputConnections(self) -> int
@@ -683,7 +725,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  
      |  HasExecutive(...)
      |      HasExecutive(self) -> int
-     |      C++: int HasExecutive()
+     |      C++: vtkTypeBool HasExecutive()
      |      
      |      Check whether this algorithm has an assigned executive.  This
      |      will NOT create a default executive.
@@ -802,6 +844,31 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |      Set/Get the AbortExecute flag for the process object. Process
      |      objects may handle premature termination of execution in
      |      different ways.
+     |  
+     |  SetAbortExecuteAndUpdateTime(...)
+     |      SetAbortExecuteAndUpdateTime(self) -> None
+     |      C++: void SetAbortExecuteAndUpdateTime()
+     |      
+     |      Set AbortExecute Flag and update LastAbortTime.
+     |  
+     |  SetAbortOutput(...)
+     |      SetAbortOutput(self, _arg:bool) -> None
+     |      C++: virtual void SetAbortOutput(bool _arg)
+     |      
+     |      Set/Get an internal variable used to communicate between the
+     |      algorithm and executive. If the executive sees this value is set,
+     |      it will initialize the output data and pass the ABORTED flag
+     |      downstream.
+     |      
+     |      CheckAbort sets this value to true if the function returns true.
+     |  
+     |  SetContainerAlgorithm(...)
+     |      SetContainerAlgorithm(self, containerAlg:vtkAlgorithm) -> None
+     |      C++: void SetContainerAlgorithm(vtkAlgorithm *containerAlg)
+     |      
+     |      Set/get a Container algorithm for this algorithm. Allows this
+     |      algorithm to check to abort status of its Container algorithm as
+     |      well as have access to its Container's information.
      |  
      |  SetDefaultExecutivePrototype(...)
      |      SetDefaultExecutivePrototype(proto:vtkExecutive) -> None
@@ -925,7 +992,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  
      |  SetReleaseDataFlag(...)
      |      SetReleaseDataFlag(self, __a:int) -> None
-     |      C++: virtual void SetReleaseDataFlag(int)
+     |      C++: virtual void SetReleaseDataFlag(vtkTypeBool)
      |      
      |      Turn release data flag on or off for all output ports.
      |  
@@ -1073,7 +1140,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  
      |  GetGlobalWarningDisplay(...)
      |      GetGlobalWarningDisplay() -> int
-     |      C++: static int GetGlobalWarningDisplay()
+     |      C++: static vtkTypeBool GetGlobalWarningDisplay()
      |  
      |  GetMTime(...)
      |      GetMTime(self) -> int
@@ -1161,7 +1228,7 @@ Let's start out with a simple VTK filter: ``vtkOutlineFilter``
      |  
      |  SetGlobalWarningDisplay(...)
      |      SetGlobalWarningDisplay(val:int) -> None
-     |      C++: static void SetGlobalWarningDisplay(int val)
+     |      C++: static void SetGlobalWarningDisplay(vtkTypeBool val)
      |      
      |      This is a global flag that controls whether any debug, warning or
      |      error messages are displayed.
@@ -1285,14 +1352,13 @@ Try using this VTK filter yourself here:
 
 Remember that you will have to wrap the output of the algorithm with :func:`pyvista.wrap`
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-48
+.. GENERATED FROM PYTHON SOURCE LINES 40-47
 
-.. code-block:: default
+.. code-block:: Python
 
     alg = vtk.vtkOutlineFilter()
 
     # (your code here, answer below)
-    ...
 
     outline = pv.wrap(alg.GetOutput())
     outline
@@ -1322,12 +1388,12 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-56
+.. GENERATED FROM PYTHON SOURCE LINES 48-55
 
-.. code-block:: default
+.. code-block:: Python
 
     alg.SetInputDataObject(mesh)
-    alg.SetGenerateFaces(False)
+    alg.SetGenerateFaces(False)  # noqa: FBT003
     alg.Update()
 
     outline = pv.wrap(alg.GetOutput())
@@ -1358,35 +1424,57 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-60
+.. GENERATED FROM PYTHON SOURCE LINES 56-59
 
 .. note::
 
   Note that the about filter can be replaced with a ``.outline()`` filter in PyVista
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-68
+.. GENERATED FROM PYTHON SOURCE LINES 61-67
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
     p.add_mesh(mesh)
-    p.add_mesh(outline, color='k')
+    p.add_mesh(outline, color="k")
     p.show()
 
 
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_002.png
-   :alt: c vtk algorithms
-   :srcset: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_002.png
+        :alt: c vtk algorithms
+        :srcset: /tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_c_vtk_algorithms_002.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-76
+
+.. GENERATED FROM PYTHON SOURCE LINES 68-75
 
 Find your own filter
 ^^^^^^^^^^^^^^^^^^^^
@@ -1396,7 +1484,7 @@ to apply to your mesh. The instructors will be around to help you implement.
 
 See https://kitware.github.io/vtk-examples/site/Python/
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-85
+.. GENERATED FROM PYTHON SOURCE LINES 77-84
 
 .. raw:: html
 
@@ -1409,7 +1497,7 @@ See https://kitware.github.io/vtk-examples/site/Python/
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.185 seconds)
+   **Total running time of the script:** (0 minutes 0.804 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py:
@@ -1418,7 +1506,6 @@ See https://kitware.github.io/vtk-examples/site/Python/
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -1426,13 +1513,17 @@ See https://kitware.github.io/vtk-examples/site/Python/
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: c_vtk_algorithms.ipynb <c_vtk_algorithms.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: c_vtk_algorithms.py <c_vtk_algorithms.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: c_vtk_algorithms.ipynb <c_vtk_algorithms.ipynb>`
+      :download:`Download zipped: c_vtk_algorithms.zip <c_vtk_algorithms.zip>`
 
 
 .. only:: html

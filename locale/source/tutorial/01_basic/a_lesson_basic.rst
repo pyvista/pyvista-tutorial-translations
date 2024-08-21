@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_01_basic_a_lesson_basic.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_01_basic_a_lesson_basic.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -30,7 +30,7 @@ module and external files.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-20
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
@@ -58,7 +58,7 @@ out, let's load a file.
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-38
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # If you have a dataset handy, like a surface model, point cloud, or VTK file,
@@ -103,7 +103,7 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
 
 .. GENERATED FROM PYTHON SOURCE LINES 41-44
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset.plot()
@@ -111,22 +111,33 @@ dataset containing points, lines, and/or faces. We can immediately plot this wit
 
 
 
-.. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.png
-   :alt: a lesson basic
-   :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.png
-   :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
 
- .. code-block:: none
 
-    INFO:root:awaiting runner setup
-    INFO:root:awaiting site startup
-    DEBUG:pyvista.trame.jupyter:Server ready: <trame_server.core.Server object at 0x7f3684525f10>
-    INFO:root:Print WSLINK_READY_MSG
-    INFO:root:Schedule auto shutdown with timout 0
-    INFO:root:awaiting running future
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.png
+        :alt: a lesson basic
+        :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/images/sphx_glr_a_lesson_basic_001.vtksz
+
+
 
 
 
@@ -141,7 +152,7 @@ one is a volumetric dataset.
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-54
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset = examples.download_frog()
@@ -150,19 +161,6 @@ one is a volumetric dataset.
 
 
 
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.zraw HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.zraw HTTP/1.1" 200 5173190
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
-    DEBUG:urllib3.connectionpool:https://github.com:443 "GET /pyvista/vtk-data/raw/master/Data/froggy/frog.mhd HTTP/1.1" 302 0
-    DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
-    DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /pyvista/vtk-data/master/Data/froggy/frog.mhd HTTP/1.1" 200 214
 
 
 .. raw:: html
@@ -201,7 +199,7 @@ the content of the data associated with those cells.
 
 .. GENERATED FROM PYTHON SOURCE LINES 59-63
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset.plot(volume=True)
@@ -210,10 +208,32 @@ the content of the data associated with those cells.
 
 
 
-.. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_002.png
-   :alt: a lesson basic
-   :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_002.png
+        :alt: a lesson basic
+        :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/images/sphx_glr_a_lesson_basic_002.vtksz
+
 
 
 
@@ -234,10 +254,10 @@ file using :func:`pyvista.read`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 74-78
 
-.. code-block:: default
+.. code-block:: Python
 
 
-    dataset = pv.read('ironProt.vtk')
+    dataset = pv.read("ironProt.vtk")
     dataset
 
 
@@ -279,7 +299,7 @@ with:
 
 .. GENERATED FROM PYTHON SOURCE LINES 81-84
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset.plot(volume=True)
@@ -287,10 +307,32 @@ with:
 
 
 
-.. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_003.png
-   :alt: a lesson basic
-   :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_003.png
+        :alt: a lesson basic
+        :srcset: /tutorial/01_basic/images/sphx_glr_a_lesson_basic_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/images/sphx_glr_a_lesson_basic_003.vtksz
+
 
 
 
@@ -309,7 +351,7 @@ with:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.948 seconds)
+   **Total running time of the script:** (0 minutes 4.738 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_a_lesson_basic.py:
@@ -318,7 +360,6 @@ with:
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -326,13 +367,17 @@ with:
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: a_lesson_basic.ipynb <a_lesson_basic.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_lesson_basic.py <a_lesson_basic.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: a_lesson_basic.ipynb <a_lesson_basic.ipynb>`
+      :download:`Download zipped: a_lesson_basic.zip <a_lesson_basic.zip>`
 
 
 .. only:: html

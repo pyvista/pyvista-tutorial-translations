@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -43,7 +43,7 @@ Import PyVista and the examples module
 
 .. GENERATED FROM PYTHON SOURCE LINES 25-28
 
-.. code-block:: default
+.. code-block:: Python
 
     import pyvista as pv
     from pyvista import examples
@@ -64,7 +64,7 @@ automatically loaded right into Python.
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-37
 
-.. code-block:: default
+.. code-block:: Python
 
     dataset = examples.download_pine_roots()
     dataset
@@ -109,7 +109,7 @@ Plot the pine roots using PyVista's default plotting settings.
 
 .. GENERATED FROM PYTHON SOURCE LINES 41-44
 
-.. code-block:: default
+.. code-block:: Python
 
     dataset.plot()
 
@@ -117,10 +117,32 @@ Plot the pine roots using PyVista's default plotting settings.
 
 
 
-.. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_001.png
-   :alt: a load examples solution
-   :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_001.png
+        :alt: a load examples solution
+        :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_001.vtksz
+
 
 
 
@@ -135,7 +157,7 @@ Download the bolt dataset. This is an excellent dataset to visualize using
 
 .. GENERATED FROM PYTHON SOURCE LINES 49-54
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset = examples.download_bolt_nut()
@@ -180,7 +202,7 @@ Here, we plot the dataset using a custom view direction using
 
 .. GENERATED FROM PYTHON SOURCE LINES 59-71
 
-.. code-block:: default
+.. code-block:: Python
 
 
     pl = pv.Plotter()
@@ -197,10 +219,32 @@ Here, we plot the dataset using a custom view direction using
 
 
 
-.. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_002.png
-   :alt: a load examples solution
-   :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_002.png
+        :alt: a load examples solution
+        :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_002.vtksz
+
 
 
 
@@ -218,13 +262,13 @@ examples you can download.
 
 .. GENERATED FROM PYTHON SOURCE LINES 79-90
 
-.. code-block:: default
+.. code-block:: Python
 
 
     dataset = examples.download_gears()
     bodies = dataset.split_bodies()
     bodies.plot(
-        cmap='jet',
+        cmap="jet",
         multi_colors=True,
         smooth_shading=True,
         split_sharp_edges=True,
@@ -234,10 +278,32 @@ examples you can download.
 
 
 
-.. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_003.png
-   :alt: a load examples solution
-   :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_003.png
+        :alt: a load examples solution
+        :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_003.vtksz
+
 
 
 
@@ -261,19 +327,41 @@ https://www.thingiverse.com/thing:5412753
 
 .. GENERATED FROM PYTHON SOURCE LINES 104-108
 
-.. code-block:: default
+.. code-block:: Python
 
 
-    mesh = pv.read('P_shelf_pin.stl')
+    mesh = pv.read("P_shelf_pin.stl")
     mesh.plot()
 
 
 
 
-.. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_004.png
-   :alt: a load examples solution
-   :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_004.png
+        :alt: a load examples solution
+        :srcset: /tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/01_basic/solutions/images/sphx_glr_a_load_examples_solution_004.vtksz
+
 
 
 
@@ -292,7 +380,7 @@ https://www.thingiverse.com/thing:5412753
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.542 seconds)
+   **Total running time of the script:** (0 minutes 4.327 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py:
@@ -301,7 +389,6 @@ https://www.thingiverse.com/thing:5412753
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -309,13 +396,17 @@ https://www.thingiverse.com/thing:5412753
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: a_load_examples_solution.ipynb <a_load_examples_solution.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_load_examples_solution.py <a_load_examples_solution.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: a_load_examples_solution.ipynb <a_load_examples_solution.ipynb>`
+      :download:`Download zipped: a_load_examples_solution.zip <a_load_examples_solution.zip>`
 
 
 .. only:: html

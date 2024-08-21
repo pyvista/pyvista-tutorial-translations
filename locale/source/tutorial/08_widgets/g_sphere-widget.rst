@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -76,7 +76,7 @@ Use a single sphere widget
     p = pv.Plotter()
 
 
-    def callback(point):
+    def callback(point) -> None:
         surf.points[0] = point
 
 
@@ -89,10 +89,32 @@ Use a single sphere widget
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_001.png
-   :alt: g sphere widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_001.png
+        :alt: g sphere widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_g_sphere-widget_001.vtksz
+
 
 
 
@@ -134,7 +156,7 @@ Use several sphere widgets at once
     p = pv.Plotter()
 
 
-    def callback(point, i):
+    def callback(point, i) -> None:
         surf.points[i] = point
 
 
@@ -147,10 +169,32 @@ Use several sphere widgets at once
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_002.png
-   :alt: g sphere widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_002.png
+        :alt: g sphere widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_g_sphere-widget_002.vtksz
+
 
 
 
@@ -170,7 +214,7 @@ Example C
 This one is the coolest - use four sphere widgets to update perturbations on
 a surface and interpolate between them with some boundary conditions
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-151
+.. GENERATED FROM PYTHON SOURCE LINES 104-149
 
 .. code-block:: Python
 
@@ -181,15 +225,14 @@ a surface and interpolate between them with some boundary conditions
 
 
     def get_colors(n):
-        """A helper function to get n colors"""
+        """A helper function to get n colors."""
         from itertools import cycle
 
-        import matplotlib
+        import matplotlib as mpl
 
-        cycler = matplotlib.rcParams['axes.prop_cycle']
+        cycler = mpl.rcParams["axes.prop_cycle"]
         colors = cycle(cycler)
-        colors = [next(colors)['color'] for i in range(n)]
-        return colors
+        return [next(colors)["color"] for i in range(n)]
 
 
     # Create a grid to interpolate to
@@ -210,12 +253,11 @@ a surface and interpolate between them with some boundary conditions
 
 
     # Create an interpolation function to update that surface mesh
-    def update_surface(point, i):
+    def update_surface(point, i) -> None:
         points[i] = point
         tp = np.vstack((points, boundaries))
-        zz = griddata(tp[:, 0:2], tp[:, 2], (xx[:, :, 0], yy[:, :, 0]), method='cubic')
-        surf.points[:, -1] = zz.ravel(order='F')
-        return
+        zz = griddata(tp[:, 0:2], tp[:, 2], (xx[:, :, 0], yy[:, :, 0]), method="cubic")
+        surf.points[:, -1] = zz.ravel(order="F")
 
 
     # Get a list of unique colors for each widget
@@ -228,7 +270,7 @@ a surface and interpolate between them with some boundary conditions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-167
+.. GENERATED FROM PYTHON SOURCE LINES 150-165
 
 .. code-block:: Python
 
@@ -250,22 +292,44 @@ a surface and interpolate between them with some boundary conditions
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_003.png
-   :alt: g sphere widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_003.png
+        :alt: g sphere widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_g_sphere-widget_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_g_sphere-widget_003.vtksz
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-171
+
+.. GENERATED FROM PYTHON SOURCE LINES 166-169
 
 And here is a screen capture of a user interacting with this
 
 .. image:: ../../images/gifs/sphere-widget-c.gif
 
-.. GENERATED FROM PYTHON SOURCE LINES 173-180
+.. GENERATED FROM PYTHON SOURCE LINES 171-178
 
 .. raw:: html
 
@@ -278,7 +342,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.141 seconds)
+   **Total running time of the script:** (0 minutes 1.362 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py:
@@ -301,6 +365,10 @@ And here is a screen capture of a user interacting with this
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: g_sphere-widget.py <g_sphere-widget.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: g_sphere-widget.zip <g_sphere-widget.zip>`
 
 
 .. only:: html

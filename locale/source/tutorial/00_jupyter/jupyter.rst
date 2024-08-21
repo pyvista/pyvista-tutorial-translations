@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_00_jupyter_jupyter.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -31,7 +31,7 @@ Become familiar with PyVista Jupyter backend.
     import pyvista as pv
 
     # Set/enable the backed
-    pv.set_jupyter_backend('trame')
+    pv.set_jupyter_backend("trame")
 
 
 
@@ -53,10 +53,32 @@ Become familiar with PyVista Jupyter backend.
 
 
 
-.. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_001.png
-   :alt: jupyter
-   :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_001.png
+        :alt: jupyter
+        :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/00_jupyter/images/sphx_glr_jupyter_001.vtksz
+
 
 
 
@@ -73,23 +95,45 @@ Client-side rendering only (in browser)
 
     pl = pv.Plotter()
     pl.add_mesh(pv.ParametricRandomHills().elevation())
-    pl.show(jupyter_backend='client')
+    pl.show(jupyter_backend="client")
 
 
 
 
 
-.. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_002.png
-   :alt: jupyter
-   :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_002.png
+        :alt: jupyter
+        :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/00_jupyter/images/sphx_glr_jupyter_002.vtksz
+
 
 
 .. rst-class:: sphx-glr-script-out
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/plotting/plotter.py:6665: UserWarning: Not within a jupyter notebook environment.
+    /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pyvista/plotting/plotter.py:6925: UserWarning: Not within a jupyter notebook environment.
     Ignoring ``jupyter_backend``.
       warnings.warn(
 
@@ -107,22 +151,44 @@ Server-side rendering only
 
     pl = pv.Plotter()
     pl.add_volume(pv.Wavelet())
-    pl.show(jupyter_backend='server')
+    pl.show(jupyter_backend="server")
 
 
 
 
-.. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_003.png
-   :alt: jupyter
-   :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/00_jupyter/images/sphx_glr_jupyter_003.png
+        :alt: jupyter
+        :srcset: /tutorial/00_jupyter/images/sphx_glr_jupyter_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/00_jupyter/images/sphx_glr_jupyter_003.vtksz
+
 
 
 .. rst-class:: sphx-glr-script-out
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/plotting/plotter.py:6665: UserWarning: Not within a jupyter notebook environment.
+    /opt/hostedtoolcache/Python/3.10.14/x64/lib/python3.10/site-packages/pyvista/plotting/plotter.py:6925: UserWarning: Not within a jupyter notebook environment.
     Ignoring ``jupyter_backend``.
       warnings.warn(
 
@@ -142,7 +208,7 @@ Server-side rendering only
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.704 seconds)
+   **Total running time of the script:** (0 minutes 4.447 seconds)
 
 
 .. _sphx_glr_download_tutorial_00_jupyter_jupyter.py:
@@ -165,6 +231,10 @@ Server-side rendering only
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: jupyter.py <jupyter.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: jupyter.zip <jupyter.zip>`
 
 
 .. only:: html

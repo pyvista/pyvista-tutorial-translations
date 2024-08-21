@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_e_plane-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -49,10 +49,32 @@ Let's use a plane to clip a mesh:
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_001.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_001.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_001.vtksz
+
 
 
 
@@ -77,7 +99,7 @@ After interacting with the scene, the clipped mesh is available as:
  .. code-block:: none
 
 
-    [UnstructuredGrid (0x7f38be213a60)
+    [UnstructuredGrid (0x7f8cda8f2320)
       N Cells:    3538080
       N Points:   3613484
       X Bounds:   9.000e+01, 1.800e+02
@@ -108,10 +130,32 @@ Or you could slice a mesh using the plane widget:
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_002.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_002.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_002.vtksz
+
 
 
 
@@ -136,7 +180,7 @@ After interacting with the scene, the slice is available as:
  .. code-block:: none
 
 
-    [PolyData (0x7f38e759aa00)
+    [PolyData (0x7f8cda9660e0)
       N Cells:    38880
       N Points:   39277
       N Strips:   0
@@ -174,10 +218,10 @@ at a time.
     p.add_mesh(mesh.contour(8).extract_largest(), opacity=0.5)
 
 
-    def my_plane_func(normal, origin):
+    def my_plane_func(normal, origin) -> None:
         slc = mesh.slice(normal=normal, origin=origin)
-        arrows = slc.glyph(orient='vectors', scale="scalars", factor=0.01)
-        p.add_mesh(arrows, name='arrows')
+        arrows = slc.glyph(orient="vectors", scale="scalars", factor=0.01)
+        p.add_mesh(arrows, name="arrows")
 
 
     p.add_plane_widget(my_plane_func)
@@ -188,10 +232,32 @@ at a time.
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_003.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_003.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_003.vtksz
+
 
 
 
@@ -222,10 +288,32 @@ plane and we disable the arrow to prevent its rotation.
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_004.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_004.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_004.vtksz
+
 
 
 
@@ -241,17 +329,39 @@ is set.
 .. code-block:: Python
 
     p = pv.Plotter()
-    p.add_mesh_slice(vol, assign_to_axis='z')
+    p.add_mesh_slice(vol, assign_to_axis="z")
     p.show()
 
 
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_005.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_005.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_005.vtksz
+
 
 
 
@@ -271,16 +381,38 @@ we can have continuous slicing by using the ``InteractionEvent`` observer.
     import vtk
 
     p = pv.Plotter()
-    p.add_mesh_slice(vol, assign_to_axis='z', interaction_event=vtk.vtkCommand.InteractionEvent)
+    p.add_mesh_slice(vol, assign_to_axis="z", interaction_event=vtk.vtkCommand.InteractionEvent)
     p.show()
 
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_006.png
-   :alt: e plane widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_006.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_006.png
+        :alt: e plane widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_e_plane-widget_006.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_e_plane-widget_006.vtksz
+
 
 
 
@@ -306,7 +438,7 @@ the ``InteractionEvent`` observer:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.799 seconds)
+   **Total running time of the script:** (0 minutes 11.239 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_e_plane-widget.py:
@@ -329,6 +461,10 @@ the ``InteractionEvent`` observer:
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: e_plane-widget.py <e_plane-widget.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: e_plane-widget.zip <e_plane-widget.zip>`
 
 
 .. only:: html

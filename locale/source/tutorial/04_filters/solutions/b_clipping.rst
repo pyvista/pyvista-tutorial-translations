@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -142,7 +142,7 @@ Clip any dataset by a user defined plane using the
     
         Returns
         -------
-        pyvista.PolyData or tuple(pyvista.PolyData)
+        pyvista.PolyData or tuple[pyvista.PolyData]
             Clipped mesh when ``return_clipped=False``,
             otherwise a tuple containing the unclipped and clipped datasets.
     
@@ -179,7 +179,7 @@ Perform a clip with a Y axis normal
 
 .. code-block:: Python
 
-    clipped = dataset.clip('y', invert=False)
+    clipped = dataset.clip("y", invert=False)
     clipped
 
 
@@ -222,8 +222,8 @@ Plot the result.
 .. code-block:: Python
 
     p = pv.Plotter()
-    p.add_mesh(dataset, style='wireframe', color='blue', label='Input')
-    p.add_mesh(clipped, label='Clipped')
+    p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
+    p.add_mesh(clipped, label="Clipped")
     p.add_legend()
     p.camera_position = [(0.24, 0.32, 0.7), (0.02, 0.03, -0.02), (-0.12, 0.93, -0.34)]
     p.show()
@@ -232,10 +232,32 @@ Plot the result.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_001.png
-   :alt: b clipping
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_001.png
+        :alt: b clipping
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_b_clipping_001.vtksz
+
 
 
 
@@ -392,8 +414,8 @@ Plot the original dataset and the clipped one.
 .. code-block:: Python
 
     p = pv.Plotter()
-    p.add_mesh(dataset, style='wireframe', color='blue', label='Input')
-    p.add_mesh(clipped, label='Clipped')
+    p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
+    p.add_mesh(clipped, label="Clipped")
     p.add_legend()
     p.show()
 
@@ -401,10 +423,32 @@ Plot the original dataset and the clipped one.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_002.png
-   :alt: b clipping
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_002.png
+        :alt: b clipping
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_b_clipping_002.vtksz
+
 
 
 
@@ -436,10 +480,32 @@ Clip any dataset by an arbitrarily rotated solid box using the
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_003.png
-   :alt: b clipping
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_003.png
+        :alt: b clipping
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_b_clipping_003.vtksz
+
 
 
 
@@ -468,10 +534,32 @@ Run the box clipping algorithm with the defined box geometry.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_004.png
-   :alt: b clipping
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_004.png
+        :alt: b clipping
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_b_clipping_004.vtksz
+
 
 
 
@@ -481,7 +569,7 @@ Run the box clipping algorithm with the defined box geometry.
 
 Crinkled Clipping
 +++++++++++++++++
-Crinkled clipping is useful if you don’t want the clip filter to truly clip
+Crinkled clipping is useful if you don't want the clip filter to truly clip
 cells on the boundary, but want to preserve the input cell structure and to
 pass the entire cell on through the boundary.
 
@@ -567,20 +655,42 @@ Plot comparison
 
     p = pv.Plotter(shape=(1, 2))
     p.add_mesh(clipped, show_edges=True)
-    p.add_mesh(plane.extract_feature_edges(), color='r')
+    p.add_mesh(plane.extract_feature_edges(), color="r")
     p.subplot(0, 1)
     p.add_mesh(crinkled, show_edges=True)
-    p.add_mesh(plane.extract_feature_edges(), color='r')
+    p.add_mesh(plane.extract_feature_edges(), color="r")
     p.link_views()
     p.show()
 
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_005.png
-   :alt: b clipping
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_005.png
+        :alt: b clipping
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_b_clipping_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_b_clipping_005.vtksz
+
 
 
 
@@ -599,7 +709,7 @@ Plot comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.002 seconds)
+   **Total running time of the script:** (0 minutes 1.886 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py:
@@ -622,6 +732,10 @@ Plot comparison
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: b_clipping.py <b_clipping.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: b_clipping.zip <b_clipping.zip>`
 
 
 .. only:: html

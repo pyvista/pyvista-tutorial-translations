@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_b_checkbox-widget.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -57,7 +57,7 @@ Single Checkbox
     actor = p.add_mesh(mesh)
 
 
-    def toggle_vis(flag):
+    def toggle_vis(flag) -> None:
         actor.SetVisibility(flag)
 
 
@@ -67,10 +67,32 @@ Single Checkbox
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_001.png
-   :alt: b checkbox widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_001.png
+        :alt: b checkbox widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_001.vtksz
+
 
 
 
@@ -108,7 +130,7 @@ their visibility in the scene.
     class SetVisibilityCallback:
         """Helper callback to keep a reference to the actor being modified."""
 
-        def __init__(self, actor):
+        def __init__(self, actor) -> None:
             self.actor = actor
 
         def __call__(self, state):
@@ -145,8 +167,8 @@ their visibility in the scene.
                 size=size,
                 border_size=1,
                 color_on=color,
-                color_off='grey',
-                background_color='grey',
+                color_off="grey",
+                background_color="grey",
             )
             Startpos = Startpos + size + (size // 10)
 
@@ -155,10 +177,32 @@ their visibility in the scene.
 
 
 
-.. image-sg:: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_002.png
-   :alt: b checkbox widget
-   :srcset: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_002.png
+        :alt: b checkbox widget
+        :srcset: /tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/08_widgets/images/sphx_glr_b_checkbox-widget_002.vtksz
+
 
 
 
@@ -183,7 +227,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.733 seconds)
+   **Total running time of the script:** (0 minutes 0.732 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_b_checkbox-widget.py:
@@ -206,6 +250,10 @@ And here is a screen capture of a user interacting with this
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: b_checkbox-widget.py <b_checkbox-widget.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: b_checkbox-widget.zip <b_checkbox-widget.zip>`
 
 
 .. only:: html

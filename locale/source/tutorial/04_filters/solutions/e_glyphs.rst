@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_e_glyphs.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -78,7 +78,7 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
 
     Help on method glyph in module pyvista.core.filters.data_set:
 
-    glyph(orient=True, scale=True, factor=1.0, geom=None, indices=None, tolerance=None, absolute=False, clamping=False, rng=None, progress_bar=False) method of pyvista.core.pointset.PolyData instance
+    glyph(orient=True, scale=True, factor=1.0, geom=None, indices=None, tolerance=None, absolute=False, clamping=False, rng=None, color_mode='scale', progress_bar=False) method of pyvista.core.pointset.PolyData instance
         Copy a geometric representation (called a glyph) to the input dataset.
     
         The glyph may be oriented along the input vectors, and it may
@@ -134,6 +134,13 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
             Set the range of values to be considered by the filter
             when scalars values are provided.
     
+        color_mode : str, optional, default: ``'scale'``
+            If ``'scale'`` , color the glyphs by scale.
+            If ``'scalar'`` , color the glyphs by scalar.
+            If ``'vector'`` , color the glyphs by vector.
+    
+            .. versionadded:: 0.44
+    
         progress_bar : bool, default: False
             Display a progress bar to indicate progress.
     
@@ -147,13 +154,13 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
         Create arrow glyphs oriented by vectors and scaled by scalars.
         Factor parameter is used to reduce the size of the arrows.
     
-        >>> import pyvista
+        >>> import pyvista as pv
         >>> from pyvista import examples
         >>> mesh = examples.load_random_hills()
         >>> arrows = mesh.glyph(
         ...     scale="Normals", orient="Normals", tolerance=0.05
         ... )
-        >>> pl = pyvista.Plotter()
+        >>> pl = pv.Plotter()
         >>> actor = pl.add_mesh(arrows, color="black")
         >>> actor = pl.add_mesh(
         ...     mesh,
@@ -205,10 +212,32 @@ create a subset of arrows using the glyph filter
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_001.png
-   :alt: e glyphs
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_001.png
+        :alt: e glyphs
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_001.vtksz
+
 
 
 
@@ -271,10 +300,32 @@ access the :attr:`pyvista.DataSet.arrows` property to produce glyphs.
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_002.png
-   :alt: e glyphs
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_002.png
+        :alt: e glyphs
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_002.vtksz
+
 
 
 
@@ -289,17 +340,39 @@ Plot the arrows and the sphere.
 .. code-block:: Python
 
     p = pv.Plotter()
-    p.add_mesh(sphere.arrows, lighting=False, scalar_bar_args={'title': "Vector Magnitude"})
+    p.add_mesh(sphere.arrows, lighting=False, scalar_bar_args={"title": "Vector Magnitude"})
     p.add_mesh(sphere, color="grey", ambient=0.6, opacity=0.5, show_edges=False)
     p.show()
 
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_003.png
-   :alt: e glyphs
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_003.png
+        :alt: e glyphs
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_e_glyphs_003.vtksz
+
 
 
 
@@ -318,7 +391,7 @@ Plot the arrows and the sphere.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.254 seconds)
+   **Total running time of the script:** (0 minutes 1.248 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_e_glyphs.py:
@@ -341,6 +414,10 @@ Plot the arrows and the sphere.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: e_glyphs.py <e_glyphs.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: e_glyphs.zip <e_glyphs.zip>`
 
 
 .. only:: html

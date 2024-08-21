@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_06_vtk_a_2_pyvista_vtk.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_06_vtk_a_2_pyvista_vtk.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -37,12 +37,12 @@ the output with PyVista for streamlined plotting. For example:
 
 .. GENERATED FROM PYTHON SOURCE LINES 20-25
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import pyvista as pv
-    from pyvista import examples
     import vtk
+    from pyvista import examples
 
 
 
@@ -57,9 +57,9 @@ Create a circle using vtk
 
 .. GENERATED FROM PYTHON SOURCE LINES 27-34
 
-.. code-block:: default
+.. code-block:: Python
 
-    polygonSource = vtk.vtkRegularPolygonSource()
+    polygonSource = vtk.vtkRegularPolygonSource()  # noqa: N816
     polygonSource.GeneratePolygonOff()
     polygonSource.SetNumberOfSides(50)
     polygonSource.SetRadius(5.0)
@@ -79,18 +79,40 @@ wrap and plot using pyvista
 
 .. GENERATED FROM PYTHON SOURCE LINES 36-39
 
-.. code-block:: default
+.. code-block:: Python
 
     mesh = pv.wrap(polygonSource.GetOutput())
-    mesh.plot(line_width=3, cpos='xy', color='k')
+    mesh.plot(line_width=3, cpos="xy", color="k")
 
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_001.png
-   :alt: a 2 pyvista vtk
-   :srcset: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_001.png
+        :alt: a 2 pyvista vtk
+        :srcset: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_001.vtksz
+
 
 
 
@@ -114,7 +136,7 @@ Perhaps there is a VTK algorithm that is not (yet) exposed in PyVista that you'd
 
 .. GENERATED FROM PYTHON SOURCE LINES 52-55
 
-.. code-block:: default
+.. code-block:: Python
 
 
     mesh = examples.download_bunny_coarse()
@@ -132,7 +154,7 @@ Initialize VTK algorithm
 
 .. GENERATED FROM PYTHON SOURCE LINES 57-59
 
-.. code-block:: default
+.. code-block:: Python
 
     splatter = vtk.vtkGaussianSplatter()
 
@@ -149,7 +171,7 @@ Pass PyVista object as input to VTK
 
 .. GENERATED FROM PYTHON SOURCE LINES 61-63
 
-.. code-block:: default
+.. code-block:: Python
 
     splatter.SetInputData(mesh)
 
@@ -166,7 +188,7 @@ Set parameters
 
 .. GENERATED FROM PYTHON SOURCE LINES 65-72
 
-.. code-block:: default
+.. code-block:: Python
 
     n = 200
     splatter.SetSampleDimensions(n, n, n)
@@ -188,7 +210,7 @@ Retrieve output and wrap with PyVista
 
 .. GENERATED FROM PYTHON SOURCE LINES 74-76
 
-.. code-block:: default
+.. code-block:: Python
 
     vol = pv.wrap(splatter.GetOutput())
 
@@ -205,7 +227,7 @@ Use PyVista to produce contours
 
 .. GENERATED FROM PYTHON SOURCE LINES 78-80
 
-.. code-block:: default
+.. code-block:: Python
 
     cntrs = vol.contour([0.95 * splatter.GetRadius()])
 
@@ -222,20 +244,42 @@ Use PyVista to plot
 
 .. GENERATED FROM PYTHON SOURCE LINES 82-87
 
-.. code-block:: default
+.. code-block:: Python
 
     p = pv.Plotter()
-    p.add_mesh(mesh, style='wireframe')
+    p.add_mesh(mesh, style="wireframe")
     p.add_mesh(cntrs, color=True)
     p.show()
 
 
 
 
-.. image-sg:: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_002.png
-   :alt: a 2 pyvista vtk
-   :srcset: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_002.png
+        :alt: a 2 pyvista vtk
+        :srcset: /tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/06_vtk/images/sphx_glr_a_2_pyvista_vtk_002.vtksz
+
 
 
 
@@ -260,7 +304,7 @@ Use PyVista to plot
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.302 seconds)
+   **Total running time of the script:** (0 minutes 2.312 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_a_2_pyvista_vtk.py:
@@ -269,7 +313,6 @@ Use PyVista to plot
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -277,13 +320,17 @@ Use PyVista to plot
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: a_2_pyvista_vtk.ipynb <a_2_pyvista_vtk.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_2_pyvista_vtk.py <a_2_pyvista_vtk.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: a_2_pyvista_vtk.ipynb <a_2_pyvista_vtk.ipynb>`
+      :download:`Download zipped: a_2_pyvista_vtk.zip <a_2_pyvista_vtk.zip>`
 
 
 .. only:: html
