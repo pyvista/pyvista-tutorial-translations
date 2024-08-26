@@ -1,104 +1,104 @@
 {
- "examples.download_knee_full": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.examples",
-   "module_short": "pyvista.examples",
-   "name": "download_knee_full"
-  }
- ],
- "np.array": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "array"
-  }
- ],
- "np.linspace": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "linspace"
-  }
- ],
- "np.random.random": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy.random",
-   "module_short": "numpy.random",
-   "name": "random"
-  }
- ],
- "numpy.random.random": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "numpy.random",
-   "module_short": "numpy.random",
-   "name": "random"
-  }
- ],
- "pv.ImageData": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "ImageData"
-  }
- ],
- "pv.Plotter": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  }
- ],
- "pv.Wavelet": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Wavelet"
-  }
- ],
- "pyvista.ImageData": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "ImageData"
-  },
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "ImageData"
-  },
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "ImageData"
-  },
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "ImageData"
-  }
- ]
+  "examples.download_knee_full": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.examples",
+      "module_short": "pyvista.examples",
+      "name": "download_knee_full"
+    }
+  ],
+  "np.array": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "array"
+    }
+  ],
+  "np.linspace": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "linspace"
+    }
+  ],
+  "np.random.random": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy.random",
+      "module_short": "numpy.random",
+      "name": "random"
+    }
+  ],
+  "numpy.random.random": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "numpy.random",
+      "module_short": "numpy.random",
+      "name": "random"
+    }
+  ],
+  "pv.ImageData": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "ImageData"
+    }
+  ],
+  "pv.Plotter": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    }
+  ],
+  "pv.Wavelet": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Wavelet"
+    }
+  ],
+  "pyvista.ImageData": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "ImageData"
+    },
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "ImageData"
+    },
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "ImageData"
+    },
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "ImageData"
+    }
+  ]
 }
