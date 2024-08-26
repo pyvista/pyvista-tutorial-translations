@@ -1,38 +1,38 @@
 {
- "examples.download_nefertiti": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.examples",
-   "module_short": "pyvista.examples",
-   "name": "download_nefertiti"
-  }
- ],
- "examples.download_topo_global": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.examples",
-   "module_short": "pyvista.examples",
-   "name": "download_topo_global"
-  }
- ],
- "np.arange": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "arange"
-  }
- ],
- "pyvista.PolyData.compute_normals": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista.PolyData",
-   "module_short": "pyvista.PolyData",
-   "name": "compute_normals"
-  }
- ]
+  "examples.download_nefertiti": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.examples",
+      "module_short": "pyvista.examples",
+      "name": "download_nefertiti"
+    }
+  ],
+  "examples.download_topo_global": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.examples",
+      "module_short": "pyvista.examples",
+      "name": "download_topo_global"
+    }
+  ],
+  "np.arange": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "arange"
+    }
+  ],
+  "pyvista.PolyData.compute_normals": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista.PolyData",
+      "module_short": "pyvista.PolyData",
+      "name": "compute_normals"
+    }
+  ]
 }

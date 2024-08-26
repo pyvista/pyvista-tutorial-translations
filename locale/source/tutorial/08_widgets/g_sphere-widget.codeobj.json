@@ -1,1712 +1,1712 @@
 {
- "boundaries": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "callback": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "function"
-  }
- ],
- "colors": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "list"
-  }
- ],
- "cycle": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "itertools",
-   "module_short": "itertools",
-   "name": "cycle"
-  }
- ],
- "get_colors": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "function"
-  }
- ],
- "griddata": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "function"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "scipy.interpolate",
-   "module_short": "scipy.interpolate",
-   "name": "griddata"
-  }
- ],
- "mpl.rcParams": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "matplotlib",
-   "module_short": "matplotlib",
-   "name": "rcParams"
-  }
- ],
- "np.array": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "builtin_function_or_method"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "array"
-  }
- ],
- "np.linspace": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "_ArrayFunctionDispatcher"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "linspace"
-  }
- ],
- "np.meshgrid": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "_ArrayFunctionDispatcher"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "meshgrid"
-  }
- ],
- "np.vstack": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "_ArrayFunctionDispatcher"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "vstack"
-  }
- ],
- "p": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  }
- ],
- "p.add_mesh": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.widgets",
-   "module_short": "pyvista.plotting.widgets",
-   "name": "WidgetHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "WidgetHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingMethods.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingMethods.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingMethods.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingInterface.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingInterface.add_mesh"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingInterface.add_mesh"
-  }
- ],
- "p.add_sphere_widget": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "BasePlotter.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.widgets",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingMethods.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingMethods.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingMethods.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingInterface.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingInterface.add_sphere_widget"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingInterface.add_sphere_widget"
-  }
- ],
- "p.show": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista.plotting.plotter",
-   "name": "BasePlotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "BasePlotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "BasePlotter.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.widgets",
-   "module_short": "pyvista.plotting.widgets",
-   "name": "WidgetHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "WidgetHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingMethods.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingMethods.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingMethods.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingInterface.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingInterface.show"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingInterface.show"
-  }
- ],
- "p.show_grid": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "BasePlotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "BasePlotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "BasePlotter.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.widgets",
-   "module_short": "pyvista.plotting.widgets",
-   "name": "WidgetHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "WidgetHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "WidgetHelper.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingMethods.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingMethods.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingMethods.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingInterface.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingInterface.show_grid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingInterface.show_grid"
-  }
- ],
- "points": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "pv.Plotter": [
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.plotter",
-   "module_short": "pyvista",
-   "name": "BasePlotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "BasePlotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "BasePlotter"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista",
-   "name": "PickingHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "PickingHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.widgets",
-   "module_short": "pyvista",
-   "name": "WidgetHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista",
-   "name": "WidgetHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "WidgetHelper"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingMethods"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingMethods"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingMethods"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting.picking",
-   "module_short": "pyvista.plotting.picking",
-   "name": "PickingInterface"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.plotting",
-   "module_short": "pyvista.plotting",
-   "name": "PickingInterface"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PickingInterface"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  }
- ],
- "pv.PolyData": [
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "PolyData"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "PolyData"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PolyData"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista.core.pointset",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.poly_data",
-   "module_short": "pyvista",
-   "name": "PolyDataFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista",
-   "name": "PolyDataFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "PolyDataFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PolyDataFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkPolyData"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkPolyData"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.dataset",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.data_set",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkPointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkPointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.dataobject",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObjectBase"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObjectBase"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PolyData"
-  }
- ],
- "pv.StructuredGrid": [
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "PointGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "PointGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PointGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.structured_grid",
-   "module_short": "pyvista.core.filters",
-   "name": "StructuredGridFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista.core.filters",
-   "name": "StructuredGridFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "StructuredGridFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGridFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkStructuredGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkStructuredGrid"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista.core.pointset",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "_PointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.data_set",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSetFilters"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkPointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkPointSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.dataset",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataSet"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core.dataobject",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObject"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObjectBase"
-  },
-  {
-   "is_class": true,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObjectBase"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  }
- ],
- "pyvista.Plotter.add_sphere_widget": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista.Plotter",
-   "module_short": "pyvista.Plotter",
-   "name": "add_sphere_widget"
-  }
- ],
- "pyvista.Plotter.clear_sphere_widgets": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista.Plotter",
-   "module_short": "pyvista.Plotter",
-   "name": "clear_sphere_widgets"
-  }
- ],
- "surf": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  }
- ],
- "surf.faces": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGrid"
-  }
- ],
- "surf.points": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "StructuredGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "StructuredGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista",
-   "name": "PointGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "PointGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "PointGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.structured_grid",
-   "module_short": "pyvista.core.filters.structured_grid",
-   "name": "StructuredGridFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista.core.filters",
-   "name": "StructuredGridFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "StructuredGridFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "StructuredGridFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkStructuredGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkStructuredGrid.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.pointset",
-   "module_short": "pyvista.core.pointset",
-   "name": "_PointSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "_PointSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "_PointSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.filters.data_set",
-   "module_short": "pyvista.core.filters.data_set",
-   "name": "DataSetFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.filters",
-   "module_short": "pyvista.core.filters",
-   "name": "DataSetFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "DataSetFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSetFilters.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkPointSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkPointSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.dataset",
-   "module_short": "pyvista",
-   "name": "DataSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista",
-   "name": "DataSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataSet.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core.dataobject",
-   "module_short": "pyvista.core.dataobject",
-   "name": "DataObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.core",
-   "module_short": "pyvista.core",
-   "name": "DataObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "DataObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonDataModel",
-   "module_short": "vtkmodules.vtkCommonDataModel",
-   "name": "vtkDataObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkDataObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObject.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules.vtkCommonCore",
-   "module_short": "vtkmodules.vtkCommonCore",
-   "name": "vtkObjectBase.points"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "vtkmodules",
-   "module_short": "vtkmodules",
-   "name": "vtkObjectBase.points"
-  }
- ],
- "update_surface": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "function"
-  }
- ],
- "x": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "xmax": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "int"
-  }
- ],
- "xmin": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "int"
-  }
- ],
- "xx": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "y": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "ymax": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "int"
-  }
- ],
- "ymin": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "int"
-  }
- ],
- "yy": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "zz": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "zz.ravel": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "builtin_function_or_method"
-  }
- ]
+  "boundaries": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "callback": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "function"
+    }
+  ],
+  "colors": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "list"
+    }
+  ],
+  "cycle": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "itertools",
+      "module_short": "itertools",
+      "name": "cycle"
+    }
+  ],
+  "get_colors": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "function"
+    }
+  ],
+  "griddata": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "function"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "scipy.interpolate",
+      "module_short": "scipy.interpolate",
+      "name": "griddata"
+    }
+  ],
+  "mpl.rcParams": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "matplotlib",
+      "module_short": "matplotlib",
+      "name": "rcParams"
+    }
+  ],
+  "np.array": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "builtin_function_or_method"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "array"
+    }
+  ],
+  "np.linspace": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "_ArrayFunctionDispatcher"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "linspace"
+    }
+  ],
+  "np.meshgrid": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "_ArrayFunctionDispatcher"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "meshgrid"
+    }
+  ],
+  "np.vstack": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "_ArrayFunctionDispatcher"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "vstack"
+    }
+  ],
+  "p": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    }
+  ],
+  "p.add_mesh": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.widgets",
+      "module_short": "pyvista.plotting.widgets",
+      "name": "WidgetHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "WidgetHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingMethods.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingMethods.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingMethods.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingInterface.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingInterface.add_mesh"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingInterface.add_mesh"
+    }
+  ],
+  "p.add_sphere_widget": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "BasePlotter.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.widgets",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingMethods.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingMethods.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingMethods.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingInterface.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingInterface.add_sphere_widget"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingInterface.add_sphere_widget"
+    }
+  ],
+  "p.show": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista.plotting.plotter",
+      "name": "BasePlotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "BasePlotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "BasePlotter.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.widgets",
+      "module_short": "pyvista.plotting.widgets",
+      "name": "WidgetHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "WidgetHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingMethods.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingMethods.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingMethods.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingInterface.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingInterface.show"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingInterface.show"
+    }
+  ],
+  "p.show_grid": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "BasePlotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "BasePlotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "BasePlotter.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.widgets",
+      "module_short": "pyvista.plotting.widgets",
+      "name": "WidgetHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "WidgetHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "WidgetHelper.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingMethods.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingMethods.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingMethods.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingInterface.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingInterface.show_grid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingInterface.show_grid"
+    }
+  ],
+  "points": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "pv.Plotter": [
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.plotter",
+      "module_short": "pyvista",
+      "name": "BasePlotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "BasePlotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "BasePlotter"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista",
+      "name": "PickingHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "PickingHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.widgets",
+      "module_short": "pyvista",
+      "name": "WidgetHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista",
+      "name": "WidgetHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "WidgetHelper"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingMethods"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingMethods"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingMethods"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting.picking",
+      "module_short": "pyvista.plotting.picking",
+      "name": "PickingInterface"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.plotting",
+      "module_short": "pyvista.plotting",
+      "name": "PickingInterface"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PickingInterface"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    }
+  ],
+  "pv.PolyData": [
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "PolyData"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "PolyData"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PolyData"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista.core.pointset",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.poly_data",
+      "module_short": "pyvista",
+      "name": "PolyDataFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista",
+      "name": "PolyDataFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "PolyDataFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PolyDataFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkPolyData"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkPolyData"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.dataset",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.data_set",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkPointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkPointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.dataobject",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObjectBase"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObjectBase"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PolyData"
+    }
+  ],
+  "pv.StructuredGrid": [
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "PointGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "PointGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PointGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.structured_grid",
+      "module_short": "pyvista.core.filters",
+      "name": "StructuredGridFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista.core.filters",
+      "name": "StructuredGridFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "StructuredGridFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGridFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkStructuredGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkStructuredGrid"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista.core.pointset",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "_PointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.data_set",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSetFilters"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkPointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkPointSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.dataset",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataSet"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core.dataobject",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObject"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObjectBase"
+    },
+    {
+      "is_class": true,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObjectBase"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    }
+  ],
+  "pyvista.Plotter.add_sphere_widget": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista.Plotter",
+      "module_short": "pyvista.Plotter",
+      "name": "add_sphere_widget"
+    }
+  ],
+  "pyvista.Plotter.clear_sphere_widgets": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista.Plotter",
+      "module_short": "pyvista.Plotter",
+      "name": "clear_sphere_widgets"
+    }
+  ],
+  "surf": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    }
+  ],
+  "surf.faces": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGrid"
+    }
+  ],
+  "surf.points": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "StructuredGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "StructuredGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista",
+      "name": "PointGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "PointGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "PointGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.structured_grid",
+      "module_short": "pyvista.core.filters.structured_grid",
+      "name": "StructuredGridFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista.core.filters",
+      "name": "StructuredGridFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "StructuredGridFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "StructuredGridFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkStructuredGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkStructuredGrid.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.pointset",
+      "module_short": "pyvista.core.pointset",
+      "name": "_PointSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "_PointSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "_PointSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.filters.data_set",
+      "module_short": "pyvista.core.filters.data_set",
+      "name": "DataSetFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.filters",
+      "module_short": "pyvista.core.filters",
+      "name": "DataSetFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "DataSetFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSetFilters.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkPointSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkPointSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.dataset",
+      "module_short": "pyvista",
+      "name": "DataSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista",
+      "name": "DataSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataSet.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core.dataobject",
+      "module_short": "pyvista.core.dataobject",
+      "name": "DataObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.core",
+      "module_short": "pyvista.core",
+      "name": "DataObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "DataObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonDataModel",
+      "module_short": "vtkmodules.vtkCommonDataModel",
+      "name": "vtkDataObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkDataObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObject.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules.vtkCommonCore",
+      "module_short": "vtkmodules.vtkCommonCore",
+      "name": "vtkObjectBase.points"
+    },
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "vtkmodules",
+      "module_short": "vtkmodules",
+      "name": "vtkObjectBase.points"
+    }
+  ],
+  "update_surface": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "function"
+    }
+  ],
+  "x": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "xmax": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "int"
+    }
+  ],
+  "xmin": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "int"
+    }
+  ],
+  "xx": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "y": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "ymax": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "int"
+    }
+  ],
+  "ymin": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "int"
+    }
+  ],
+  "yy": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "zz": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "numpy",
+      "module_short": "numpy",
+      "name": "ndarray"
+    }
+  ],
+  "zz.ravel": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "builtins",
+      "module_short": "builtins",
+      "name": "builtin_function_or_method"
+    }
+  ]
 }

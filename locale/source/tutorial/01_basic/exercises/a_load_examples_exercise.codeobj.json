@@ -1,47 +1,47 @@
 {
- "examples.download_bolt_nut": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.examples",
-   "module_short": "pyvista.examples",
-   "name": "download_bolt_nut"
-  }
- ],
- "examples.download_pine_roots": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista.examples",
-   "module_short": "pyvista.examples",
-   "name": "download_pine_roots"
-  }
- ],
- "pv.Plotter": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  }
- ],
- "pyvista.Plotter": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "Plotter"
-  }
- ],
- "pyvista.read": [
-  {
-   "is_class": false,
-   "is_explicit": true,
-   "module": "pyvista",
-   "module_short": "pyvista",
-   "name": "read"
-  }
- ]
+  "examples.download_bolt_nut": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.examples",
+      "module_short": "pyvista.examples",
+      "name": "download_bolt_nut"
+    }
+  ],
+  "examples.download_pine_roots": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista.examples",
+      "module_short": "pyvista.examples",
+      "name": "download_pine_roots"
+    }
+  ],
+  "pv.Plotter": [
+    {
+      "is_class": false,
+      "is_explicit": false,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    }
+  ],
+  "pyvista.Plotter": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "Plotter"
+    }
+  ],
+  "pyvista.read": [
+    {
+      "is_class": false,
+      "is_explicit": true,
+      "module": "pyvista",
+      "module_short": "pyvista",
+      "name": "read"
+    }
+  ]
 }
