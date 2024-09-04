@@ -1296,6 +1296,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_00_jupyter_jupyter.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:22
 msgid "Test out PyVista's Jupyter Backend"
@@ -1315,7 +1317,7 @@ msgstr "サーバー側レンダリングのみ"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:211
 msgid "**Total running time of the script:** (0 minutes 4.447 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 4.447 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:229
 msgid ":download:`Download Jupyter notebook: jupyter.ipynb <jupyter.ipynb>`"
@@ -1327,12 +1329,13 @@ msgstr ":download:`Download Python source code: jupyter.py <jupyter.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/jupyter.rst:237
 msgid ":download:`Download zipped: jupyter.zip <jupyter.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: jupyter.zip <jupyter.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:9
 msgid ""
 "**00:04.447** total execution time for 1 file **from tutorial/00_jupyter**:"
 msgstr ""
+"**00:04.447** total execution time for 1 file **from tutorial/00_jupyter**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_jupyter/sg_execution_times.rst:35
 msgid ":ref:`sphx_glr_tutorial_00_jupyter_jupyter.py` (``jupyter.py``)"
@@ -1348,6 +1351,8 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_01_basic_a_lesson_basic.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:24
 msgid "Basic Usage Lesson"
@@ -1452,7 +1457,7 @@ msgstr "これもまた :class:`pyvista.ImageData` で，ボリューム的に�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:354
 msgid "**Total running time of the script:** (0 minutes 4.738 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 4.738 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:372
 msgid ""
@@ -1472,7 +1477,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/a_lesson_basic.rst:380
 msgid ":download:`Download zipped: a_lesson_basic.zip <a_lesson_basic.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: a_lesson_basic.zip <a_lesson_basic.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:13
 msgid ""
@@ -1481,6 +1486,9 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_01_basic_exercises_a_load_examples_exercise.py>`"
+" 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/a_load_examples_exercise.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:24
@@ -1638,6 +1646,8 @@ msgid ""
 ":download:`Download zipped: a_load_examples_exercise.zip "
 "<a_load_examples_exercise.zip>`"
 msgstr ""
+":download:`Download zipped: a_load_examples_exercise.zip "
+"<a_load_examples_exercise.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/exercises/index.rst:25
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:192
@@ -1803,6 +1813,7 @@ msgstr ""
 msgid ""
 "**00:04.738** total execution time for 1 file **from tutorial/01_basic**:"
 msgstr ""
+"**00:04.738** total execution time for 1 file **from tutorial/01_basic**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:35
 msgid ""
@@ -1812,7 +1823,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/sg_execution_times.rst:36
 msgid "00:04.738"
-msgstr ""
+msgstr "00:04.738"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:13
 msgid ""
@@ -1821,6 +1832,9 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py>`"
+"  。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:27
 msgid ""
@@ -1860,7 +1874,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:383
 msgid "**Total running time of the script:** (0 minutes 4.327 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 4.327 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/a_load_examples_solution.rst:401
 msgid ""
@@ -1883,12 +1897,16 @@ msgid ""
 ":download:`Download zipped: a_load_examples_solution.zip "
 "<a_load_examples_solution.zip>`"
 msgstr ""
+":download:`Download zipped: a_load_examples_solution.zip "
+"<a_load_examples_solution.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:9
 msgid ""
 "**00:04.327** total execution time for 1 file **from "
 "tutorial/01_basic/solutions**:"
 msgstr ""
+"**00:04.327** total execution time for 1 file **from "
+"tutorial/01_basic/solutions**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:35
 msgid ""
@@ -1900,7 +1918,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/solutions/sg_execution_times.rst:36
 msgid "00:04.327"
-msgstr ""
+msgstr "00:04.327"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:13
 msgid ""
@@ -1908,6 +1926,8 @@ msgid ""
 "to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:22
@@ -1928,7 +1948,7 @@ msgstr "ポイントとは？"
 msgid ""
 "Let's start with a point cloud - this is a mesh type that only has vertices."
 " You can create one by defining a 2D array of Cartesian coordinates like so:"
-msgstr ""
+msgstr "ポイントクラウドから始めましょう - これは頂点のみを持つメッシュタイプです．作成するには，2 D配列の直交座標を次のように定義します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:78
 msgid "Pass numpy array of points (n by 3) to PolyData"
@@ -1994,6 +2014,7 @@ msgid ""
 "point in the mesh. Let's create some point data for the beam mesh. When "
 "plotting, the values between points are interpolated across the cells."
 msgstr ""
+"点データとは，メッシュの各点に存在する値（スカラー，ベクトルなど）の配列のことです．属性配列の各要素は，メッシュの各点に対応します．梁のメッシュの点データを作ってみましょう．プロットする場合，点間の値はセルをまたいで補間されます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:385
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:177
@@ -2042,6 +2063,8 @@ msgid ""
 "generate cube containing 6 faces and assign each face an integer from "
 "``range(6)`` and then have it plotted."
 msgstr ""
+"ここでは，セルの属性に値を割り当て，それをプロットする方法を紹介します． ここでは，6つの面を含む立方体を生成し，それぞれの面に "
+"``range(6)`` から整数を割り当てて，それをプロットしています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:529
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:226
@@ -2050,7 +2073,7 @@ msgstr "これは，各点にスカラーを割り当てるのとは異なるこ
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:594
 msgid "**Total running time of the script:** (0 minutes 2.800 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 2.800 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:612
 msgid ""
@@ -2068,7 +2091,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:620
 msgid ":download:`Download zipped: a_lesson_mesh.zip <a_lesson_mesh.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: a_lesson_mesh.zip <a_lesson_mesh.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:13
 msgid ""
@@ -2076,6 +2099,8 @@ msgid ""
 "point-cloud.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_exercises_b_create.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/b_create-point-cloud.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:24
@@ -2234,6 +2259,8 @@ msgid ""
 ":download:`Download zipped: b_create-point-cloud.zip <b_create-point-"
 "cloud.zip>`"
 msgstr ""
+":download:`Download zipped: b_create-point-cloud.zip <b_create-point-"
+"cloud.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:13
 msgid ""
@@ -2241,6 +2268,8 @@ msgid ""
 "uniform-grid.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_exercises_c_create-uniform-grid.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/c_create-uniform-grid.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:24
@@ -2417,6 +2446,8 @@ msgid ""
 ":download:`Download zipped: c_create-uniform-grid.zip <c_create-uniform-"
 "grid.zip>`"
 msgstr ""
+":download:`Download zipped: c_create-uniform-grid.zip <c_create-uniform-"
+"grid.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:13
 msgid ""
@@ -2424,6 +2455,8 @@ msgid ""
 "tri-surface.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_exercises_d_create-tri-surface.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/d_create-tri-surface.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:24
@@ -2534,6 +2567,8 @@ msgid ""
 ":download:`Download zipped: d_create-tri-surface.zip <d_create-tri-"
 "surface.zip>`"
 msgstr ""
+":download:`Download zipped: d_create-tri-surface.zip <d_create-tri-"
+"surface.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:13
 msgid ""
@@ -2541,6 +2576,8 @@ msgid ""
 "file.py>` to download the full example code. or to run this example in your "
 "browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_exercises_e_read-file.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:24
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:24
@@ -2690,7 +2727,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:235
 msgid ":download:`Download zipped: e_read-file.zip <e_read-file.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: e_read-file.zip <e_read-file.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:293
@@ -2944,6 +2981,7 @@ msgstr ":ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py`"
 msgid ""
 "**00:02.800** total execution time for 1 file **from tutorial/02_mesh**:"
 msgstr ""
+"**00:02.800** total execution time for 1 file **from tutorial/02_mesh**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:35
 msgid ""
@@ -2953,7 +2991,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/sg_execution_times.rst:36
 msgid "00:02.800"
-msgstr ""
+msgstr "00:02.800"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:13
 msgid ""
@@ -2961,10 +2999,12 @@ msgid ""
 "point-cloud.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/b_create-point-cloud.rst:434
 msgid "**Total running time of the script:** (0 minutes 3.428 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 3.428 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:13
 msgid ""
@@ -2972,6 +3012,8 @@ msgid ""
 "uniform-grid.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_solutions_c_create-uniform-grid.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:52
 msgid ""
@@ -2988,7 +3030,7 @@ msgstr "空間リファレンスを編集する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/c_create-uniform-grid.rst:10732
 msgid "**Total running time of the script:** (0 minutes 5.189 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 5.189 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:13
 msgid ""
@@ -3023,6 +3065,8 @@ msgid ""
 "**00:08.617** total execution time for 4 files **from "
 "tutorial/02_mesh/solutions**:"
 msgstr ""
+"**00:08.617** total execution time for 4 files **from "
+"tutorial/02_mesh/solutions**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:35
 msgid ""
@@ -3034,7 +3078,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:36
 msgid "00:05.189"
-msgstr ""
+msgstr "00:05.189"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:38
 msgid ""
@@ -3046,7 +3090,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:39
 msgid "00:03.428"
-msgstr ""
+msgstr "00:03.428"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/sg_execution_times.rst:41
 msgid ""
@@ -3369,6 +3413,8 @@ msgid ""
 "<sphx_glr_download_tutorial_03_figures_a_lesson_figures.py>` to download the"
 " full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_a_lesson_figures.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:44
 msgid "``add_mesh``"
@@ -3487,7 +3533,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:541
 msgid "**Total running time of the script:** (0 minutes 4.679 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 4.679 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/a_lesson_figures.rst:559
 msgid ""
@@ -3509,6 +3555,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: a_lesson_figures.zip <a_lesson_figures.zip>`"
 msgstr ""
+":download:`Download zipped: a_lesson_figures.zip <a_lesson_figures.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:13
 msgid ""
@@ -3516,6 +3563,8 @@ msgid ""
 " download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_b_shading.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:24
 msgid "Types of Shading"
@@ -3574,7 +3623,7 @@ msgstr "キーワード引数の ``split_sharp_edges`` は，物理ベースの�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:309
 msgid "**Total running time of the script:** (0 minutes 1.283 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.283 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:327
 msgid ""
@@ -3588,7 +3637,7 @@ msgstr ":download:`Download Python source code: b_shading.py <b_shading.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/b_shading.rst:335
 msgid ":download:`Download zipped: b_shading.zip <b_shading.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: b_shading.zip <b_shading.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:13
 msgid ""
@@ -3596,6 +3645,8 @@ msgid ""
 "to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:24
 msgid "Physically Based Rendering"
@@ -3647,7 +3698,7 @@ msgstr "カスタム照明と物理ベースレンダリングを組み合わせ
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:256
 msgid "**Total running time of the script:** (0 minutes 48.207 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 48.207 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:274
 msgid ":download:`Download Jupyter notebook: d_pbr.ipynb <d_pbr.ipynb>`"
@@ -3659,7 +3710,7 @@ msgstr ":download:`Download Python source code: d_pbr.py <d_pbr.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:282
 msgid ":download:`Download zipped: d_pbr.zip <d_pbr.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: d_pbr.zip <d_pbr.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:13
 msgid ""
@@ -3827,6 +3878,8 @@ msgid ""
 "**00:48.207** total execution time for 3 files **from "
 "tutorial/03_figures/bonus**:"
 msgstr ""
+"**00:48.207** total execution time for 3 files **from "
+"tutorial/03_figures/bonus**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:35
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
@@ -3834,7 +3887,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:36
 msgid "00:48.207"
-msgstr ""
+msgstr "00:48.207"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:38
 msgid ""
@@ -3852,6 +3905,8 @@ msgid ""
 "map.py>` to download the full example code. or to run this example in your "
 "browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_c_geological-map.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:22
 msgid "Geological Map on Topography"
@@ -3917,7 +3972,7 @@ msgstr "GeoTIFFをPyVistaで ``Texture`` として読み込みます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:341
 msgid "**Total running time of the script:** (0 minutes 14.728 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 14.728 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:359
 msgid ""
@@ -3939,6 +3994,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: c_geological-map.zip <c_geological-map.zip>`"
 msgstr ""
+":download:`Download zipped: c_geological-map.zip <c_geological-map.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:13
 msgid ""
@@ -3985,6 +4041,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_exercises_a_display_options.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:22
@@ -4065,6 +4123,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: a_display_options.zip <a_display_options.zip>`"
 msgstr ""
+":download:`Download zipped: a_display_options.zip <a_display_options.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:13
 msgid ""
@@ -4073,6 +4132,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_exercises_b_lighting_mesh.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:24
@@ -4167,6 +4228,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:335
 msgid ":download:`Download zipped: b_lighting_mesh.zip <b_lighting_mesh.zip>`"
 msgstr ""
+":download:`Download zipped: b_lighting_mesh.zip <b_lighting_mesh.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:13
 msgid ""
@@ -4174,6 +4236,8 @@ msgid ""
 "<sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_exercises_c_edl.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:24
@@ -4244,7 +4308,7 @@ msgstr ":download:`Download Python source code: c_edl.py <c_edl.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:131
 msgid ":download:`Download zipped: c_edl.zip <c_edl.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: c_edl.zip <c_edl.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/index.rst:25
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:462
@@ -4454,6 +4518,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgid ""
 "**00:20.690** total execution time for 4 files **from tutorial/03_figures**:"
 msgstr ""
+"**00:20.690** total execution time for 4 files **from tutorial/03_figures**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:35
 msgid ""
@@ -4465,7 +4530,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:36
 msgid "00:14.728"
-msgstr ""
+msgstr "00:14.728"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:38
 msgid ""
@@ -4477,7 +4542,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:39
 msgid "00:04.679"
-msgstr ""
+msgstr "00:04.679"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:41
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
@@ -4485,7 +4550,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:42
 msgid "00:01.283"
-msgstr ""
+msgstr "00:01.283"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:44
 msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
@@ -4522,6 +4587,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_solutions_b_lighting_mesh.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:57
 msgid "First, lets take a look at the mesh with default lighting conditions"
@@ -4529,7 +4596,7 @@ msgstr "まず，デフォルトの照明条件でのメッシュを見てみま
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:309
 msgid "**Total running time of the script:** (0 minutes 9.057 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 9.057 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/c_edl.rst:13
 msgid ""
@@ -4550,6 +4617,8 @@ msgid ""
 "**00:09.057** total execution time for 3 files **from "
 "tutorial/03_figures/solutions**:"
 msgstr ""
+"**00:09.057** total execution time for 3 files **from "
+"tutorial/03_figures/solutions**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:35
 msgid ""
@@ -4561,7 +4630,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:36
 msgid "00:09.057"
-msgstr ""
+msgstr "00:09.057"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:38
 msgid ""
@@ -4768,6 +4837,8 @@ msgid ""
 " download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_bonus_f_sampling_functions_3d.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:22
 msgid "Sample Function: Perlin Noise in 3D"
@@ -4816,7 +4887,7 @@ msgstr "青以外の色の制限"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:163
 msgid "**Total running time of the script:** (0 minutes 0.619 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.619 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:181
 msgid ""
@@ -4839,6 +4910,8 @@ msgid ""
 ":download:`Download zipped: f_sampling_functions_3d.zip "
 "<f_sampling_functions_3d.zip>`"
 msgstr ""
+":download:`Download zipped: f_sampling_functions_3d.zip "
+"<f_sampling_functions_3d.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/index.rst:25
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:224
@@ -4850,6 +4923,8 @@ msgid ""
 "**00:00.619** total execution time for 1 file **from "
 "tutorial/04_filters/bonus**:"
 msgstr ""
+"**00:00.619** total execution time for 1 file **from "
+"tutorial/04_filters/bonus**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/sg_execution_times.rst:35
 msgid ""
@@ -4861,7 +4936,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/sg_execution_times.rst:36
 msgid "00:00.619"
-msgstr ""
+msgstr "00:00.619"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:13
 msgid ""
@@ -4869,6 +4944,8 @@ msgid ""
 "<sphx_glr_download_tutorial_04_filters_exercises_b_clipping.py>` to download"
 " the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_exercises_b_clipping.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:24
@@ -4966,6 +5043,7 @@ msgid ""
 "cells on the boundary, but want to preserve the input cell structure and to "
 "pass the entire cell on through the boundary."
 msgstr ""
+"クリンプクリッピングは，クリップフィルタが境界上のセルを本当にクリップするのではなく，入力セルの構造を保持し，セル全体を境界から通過させたい場合に有効です．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:194
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:576
@@ -5016,7 +5094,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/b_clipping.rst:294
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:738
 msgid ":download:`Download zipped: b_clipping.zip <b_clipping.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: b_clipping.zip <b_clipping.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:13
 msgid ""
@@ -5025,6 +5103,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_exercises_c_compute-normals.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/c_compute-normals.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:24
@@ -5093,6 +5173,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: c_compute-normals.zip <c_compute-normals.zip>`"
 msgstr ""
+":download:`Download zipped: c_compute-normals.zip <c_compute-normals.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:13
 msgid ""
@@ -5101,6 +5182,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_exercises_d_contouring.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:24
@@ -5167,7 +5250,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/d_contouring.rst:155
 msgid ":download:`Download zipped: d_contouring.zip <d_contouring.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: d_contouring.zip <d_contouring.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:13
 msgid ""
@@ -5175,6 +5258,8 @@ msgid ""
 "<sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>` to download "
 "the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_exercises_e_glyphs.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:24
@@ -5240,7 +5325,7 @@ msgstr ":download:`Download Python source code: e_glyphs.py <e_glyphs.py>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/e_glyphs.rst:170
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:420
 msgid ":download:`Download zipped: e_glyphs.zip <e_glyphs.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: e_glyphs.zip <e_glyphs.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/index.rst:25
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/index.rst:258
@@ -5385,10 +5470,12 @@ msgid ""
 "<sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py>` to download"
 " the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/b_clipping.rst:712
 msgid "**Total running time of the script:** (0 minutes 1.886 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.886 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:13
 msgid ""
@@ -5397,10 +5484,12 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/c_compute-normals.rst:263
 msgid "**Total running time of the script:** (0 minutes 40.861 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 40.861 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:13
 msgid ""
@@ -5424,16 +5513,20 @@ msgid ""
 "<sphx_glr_download_tutorial_04_filters_solutions_e_glyphs.py>` to download "
 "the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_solutions_e_glyphs.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/e_glyphs.rst:394
 msgid "**Total running time of the script:** (0 minutes 1.248 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.248 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:9
 msgid ""
 "**00:43.994** total execution time for 4 files **from "
 "tutorial/04_filters/solutions**:"
 msgstr ""
+"**00:43.994** total execution time for 4 files **from "
+"tutorial/04_filters/solutions**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:35
 msgid ""
@@ -5445,7 +5538,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:36
 msgid "00:40.861"
-msgstr ""
+msgstr "00:40.861"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:38
 msgid ""
@@ -5457,7 +5550,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:39
 msgid "00:01.886"
-msgstr ""
+msgstr "00:01.886"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:41
 msgid ""
@@ -5467,7 +5560,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:42
 msgid "00:01.248"
-msgstr ""
+msgstr "00:01.248"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/sg_execution_times.rst:44
 msgid ""
@@ -6072,6 +6165,8 @@ msgid ""
 "<sphx_glr_download_tutorial_06_vtk_a_1_transition_vtk.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_a_1_transition_vtk.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:17
@@ -6339,7 +6434,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:548
 msgid "**Total running time of the script:** (0 minutes 1.665 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.665 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_1_transition_vtk.rst:566
 msgid ""
@@ -6361,6 +6456,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: a_1_transition_vtk.zip <a_1_transition_vtk.zip>`"
 msgstr ""
+":download:`Download zipped: a_1_transition_vtk.zip <a_1_transition_vtk.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:13
 msgid ""
@@ -6368,6 +6464,8 @@ msgid ""
 "to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_a_2_pyvista_vtk.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:22
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:300
@@ -6476,7 +6574,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:307
 msgid "**Total running time of the script:** (0 minutes 2.312 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 2.312 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:325
 msgid ""
@@ -6497,6 +6595,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/a_2_pyvista_vtk.rst:333
 msgid ":download:`Download zipped: a_2_pyvista_vtk.zip <a_2_pyvista_vtk.zip>`"
 msgstr ""
+":download:`Download zipped: a_2_pyvista_vtk.zip <a_2_pyvista_vtk.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:13
 msgid ""
@@ -6504,6 +6603,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_b_create_vtk.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:22
 msgid "Create VTK Objects"
@@ -6535,7 +6636,7 @@ msgstr "``vtkStructuredGrid`` を作成する"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:266
 msgid "**Total running time of the script:** (0 minutes 0.577 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.577 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:284
 msgid ""
@@ -6553,7 +6654,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/b_create_vtk.rst:292
 msgid ":download:`Download zipped: b_create_vtk.zip <b_create_vtk.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: b_create_vtk.zip <b_create_vtk.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:13
 msgid ""
@@ -6561,6 +6662,8 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:22
 msgid "Using VTK Algorithms"
@@ -6647,7 +6750,7 @@ msgstr "https://kitware.github.io/vtk-examples/site/Python/ をご覧くださ�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1500
 msgid "**Total running time of the script:** (0 minutes 0.804 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.804 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/c_vtk_algorithms.rst:1518
 msgid ""
@@ -6669,6 +6772,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: c_vtk_algorithms.zip <c_vtk_algorithms.zip>`"
 msgstr ""
+":download:`Download zipped: c_vtk_algorithms.zip <c_vtk_algorithms.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:13
 msgid ""
@@ -6676,6 +6780,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_d_wasm.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:22
 msgid "VTK + WASM"
@@ -6701,7 +6807,7 @@ msgstr ":download:`Download Python source code: d_wasm.py <d_wasm.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:273
 msgid ":download:`Download zipped: d_wasm.zip <d_wasm.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: d_wasm.zip <d_wasm.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:13
 msgid ""
@@ -6709,6 +6815,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_06_vtk_e_vtk_next.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:22
 msgid "VTK's Next Generation API"
@@ -6764,7 +6872,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/e_vtk_next.rst:289
 msgid ":download:`Download zipped: e_vtk_next.zip <e_vtk_next.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: e_vtk_next.zip <e_vtk_next.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/index.rst:6
 msgid "PyVista & VTK"
@@ -6814,6 +6922,7 @@ msgstr ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py`"
 msgid ""
 "**00:05.357** total execution time for 6 files **from tutorial/06_vtk**:"
 msgstr ""
+"**00:05.357** total execution time for 6 files **from tutorial/06_vtk**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:35
 msgid ""
@@ -6823,7 +6932,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:36
 msgid "00:02.312"
-msgstr ""
+msgstr "00:02.312"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:38
 msgid ""
@@ -6835,7 +6944,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:39
 msgid "00:01.665"
-msgstr ""
+msgstr "00:01.665"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:41
 msgid ""
@@ -6847,7 +6956,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:42
 msgid "00:00.804"
-msgstr ""
+msgstr "00:00.804"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:44
 msgid ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
@@ -6855,15 +6964,15 @@ msgstr ":ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py` (``b_create_vtk.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:45
 msgid "00:00.577"
-msgstr ""
+msgstr "00:00.577"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:47
 msgid ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py` (``d_wasm.py``)"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_06_vtk_d_wasm.py` (``d_wasm.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:50
 msgid ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py` (``e_vtk_next.py``)"
-msgstr ""
+msgstr ":ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py` (``e_vtk_next.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/07_sphinx/index.rst:6
 msgid "PyVista and Sphinx"
@@ -7119,6 +7228,8 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_a_box-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:24
 msgid "Box Widget"
@@ -7155,7 +7266,7 @@ msgstr "シーンを操作すると，クリップされたメッシュは次の
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:143
 msgid "**Total running time of the script:** (0 minutes 14.806 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 14.806 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:161
 msgid ""
@@ -7173,7 +7284,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/a_box-widget.rst:169
 msgid ":download:`Download zipped: a_box-widget.zip <a_box-widget.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: a_box-widget.zip <a_box-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:13
 msgid ""
@@ -7181,6 +7292,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_b_checkbox.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:24
 msgid "Checkbox Widget"
@@ -7230,7 +7343,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:230
 msgid "**Total running time of the script:** (0 minutes 0.732 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.732 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/b_checkbox-widget.rst:248
 msgid ""
@@ -7252,6 +7365,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: b_checkbox-widget.zip <b_checkbox-widget.zip>`"
 msgstr ""
+":download:`Download zipped: b_checkbox-widget.zip <b_checkbox-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:13
 msgid ""
@@ -7259,6 +7373,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_c_line-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:24
 msgid "Line Widget"
@@ -7287,7 +7403,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:134
 msgid "**Total running time of the script:** (0 minutes 0.740 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.740 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:152
 msgid ""
@@ -7305,7 +7421,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/c_line-widget.rst:160
 msgid ":download:`Download zipped: c_line-widget.zip <c_line-widget.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: c_line-widget.zip <c_line-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:13
 msgid ""
@@ -7313,6 +7429,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:22
 msgid "Multiple Slider Widgets"
@@ -7358,6 +7476,8 @@ msgid ""
 ":download:`Download zipped: d_multi-slider-widget.zip <d_multi-slider-"
 "widget.zip>`"
 msgstr ""
+":download:`Download zipped: d_multi-slider-widget.zip <d_multi-slider-"
+"widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:13
 msgid ""
@@ -7365,6 +7485,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_e_plane-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:24
 msgid "Plane Widget"
@@ -7442,7 +7564,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:441
 msgid "**Total running time of the script:** (0 minutes 11.239 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 11.239 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:459
 msgid ""
@@ -7462,7 +7584,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:467
 msgid ":download:`Download zipped: e_plane-widget.zip <e_plane-widget.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: e_plane-widget.zip <e_plane-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:13
 msgid ""
@@ -7470,6 +7592,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_f_slider-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:24
 msgid "Slider Bar Widget"
@@ -7515,7 +7639,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:214
 msgid "**Total running time of the script:** (0 minutes 3.085 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 3.085 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:232
 msgid ""
@@ -7538,6 +7662,8 @@ msgid ""
 ":download:`Download zipped: f_slider-bar-widget.zip <f_slider-bar-"
 "widget.zip>`"
 msgstr ""
+":download:`Download zipped: f_slider-bar-widget.zip <f_slider-bar-"
+"widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:13
 msgid ""
@@ -7545,6 +7671,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_g_sphere-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:22
 msgid "Sphere Widget"
@@ -7602,7 +7730,7 @@ msgstr "これは，4つの球体ウィジェットを使用してサーフェ�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:345
 msgid "**Total running time of the script:** (0 minutes 1.362 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.362 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:363
 msgid ""
@@ -7623,6 +7751,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:371
 msgid ":download:`Download zipped: g_sphere-widget.zip <g_sphere-widget.zip>`"
 msgstr ""
+":download:`Download zipped: g_sphere-widget.zip <g_sphere-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:13
 msgid ""
@@ -7630,6 +7759,8 @@ msgid ""
 "widget.py>` to download the full example code. or to run this example in "
 "your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_08_widgets_h_spline-widget.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:22
 msgid "Spline Widget"
@@ -7661,7 +7792,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:128
 msgid "**Total running time of the script:** (0 minutes 0.444 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 0.444 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:146
 msgid ""
@@ -7682,6 +7813,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:154
 msgid ":download:`Download zipped: h_spline-widget.zip <h_spline-widget.zip>`"
 msgstr ""
+":download:`Download zipped: h_spline-widget.zip <h_spline-widget.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:6
 msgid "Widgets in PyVista"
@@ -7755,6 +7887,7 @@ msgstr ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgid ""
 "**00:32.652** total execution time for 8 files **from tutorial/08_widgets**:"
 msgstr ""
+"**00:32.652** total execution time for 8 files **from tutorial/08_widgets**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:35
 msgid ""
@@ -7764,7 +7897,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
 msgid "00:14.806"
-msgstr ""
+msgstr "00:14.806"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
 msgid ""
@@ -7776,7 +7909,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:39
 msgid "00:11.239"
-msgstr ""
+msgstr "00:11.239"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:41
 msgid ""
@@ -7788,7 +7921,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:42
 msgid "00:03.085"
-msgstr ""
+msgstr "00:03.085"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:44
 msgid ""
@@ -7800,7 +7933,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:45
 msgid "00:01.362"
-msgstr ""
+msgstr "00:01.362"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:47
 msgid ""
@@ -7810,7 +7943,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:48
 msgid "00:00.740"
-msgstr ""
+msgstr "00:00.740"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:50
 msgid ""
@@ -7822,7 +7955,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:51
 msgid "00:00.732"
-msgstr ""
+msgstr "00:00.732"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:53
 msgid ""
@@ -7834,7 +7967,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:54
 msgid "00:00.444"
-msgstr ""
+msgstr "00:00.444"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:56
 msgid ""
@@ -7991,6 +8124,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_a_getting_started.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:22
 msgid "Getting started"
@@ -8058,6 +8193,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: a_getting_started.zip <a_getting_started.zip>`"
 msgstr ""
+":download:`Download zipped: a_getting_started.zip <a_getting_started.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:13
 msgid ""
@@ -8065,6 +8201,8 @@ msgid ""
 " to download the full example code. or to run this example in your browser "
 "via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_a_trame_simple.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:22
 msgid "Simple Trame App"
@@ -8098,7 +8236,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:91
 msgid ":download:`Download zipped: a_trame_simple.zip <a_trame_simple.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: a_trame_simple.zip <a_trame_simple.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:13
 msgid ""
@@ -8106,6 +8244,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>` to download "
 "the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_b_trame_actor_color.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_actor_color.rst:22
 msgid "Control the Color of an Actor"
@@ -8138,6 +8278,8 @@ msgid ""
 ":download:`Download zipped: b_trame_actor_color.zip "
 "<b_trame_actor_color.zip>`"
 msgstr ""
+":download:`Download zipped: b_trame_actor_color.zip "
+"<b_trame_actor_color.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:13
 msgid ""
@@ -8145,6 +8287,8 @@ msgid ""
 " download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_b_trame_vtk.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:22
 msgid "Using VTK/PyVista and Trame"
@@ -8174,7 +8318,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/b_trame_vtk.rst:117
 msgid ":download:`Download zipped: b_trame_vtk.zip <b_trame_vtk.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: b_trame_vtk.zip <b_trame_vtk.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:13
 msgid ""
@@ -8182,6 +8326,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_c_trame_scalars.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_c_trame_scalars.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:22
 msgid "Control Scalar Array"
@@ -8212,6 +8358,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/c_trame_scalars.rst:134
 msgid ":download:`Download zipped: c_trame_scalars.zip <c_trame_scalars.zip>`"
 msgstr ""
+":download:`Download zipped: c_trame_scalars.zip <c_trame_scalars.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:13
 msgid ""
@@ -8219,6 +8366,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_d_trame_scalar_range.py>` to download "
 "the full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_d_trame_scalar_range.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/d_trame_scalar_range.rst:22
 msgid "Control Scalar Range"
@@ -8251,6 +8400,8 @@ msgid ""
 ":download:`Download zipped: d_trame_scalar_range.zip "
 "<d_trame_scalar_range.zip>`"
 msgstr ""
+":download:`Download zipped: d_trame_scalar_range.zip "
+"<d_trame_scalar_range.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:13
 msgid ""
@@ -8258,6 +8409,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_e_trame_algorithm.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_e_trame_algorithm.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/e_trame_algorithm.rst:22
 msgid "Using VTK, PyVista, and Trame"
@@ -8289,6 +8442,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: e_trame_algorithm.zip <e_trame_algorithm.zip>`"
 msgstr ""
+":download:`Download zipped: e_trame_algorithm.zip <e_trame_algorithm.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:13
 msgid ""
@@ -8296,6 +8450,8 @@ msgid ""
 "<sphx_glr_download_tutorial_09_trame_f_trame_open_file.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_09_trame_f_trame_open_file.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/f_trame_open_file.rst:22
 msgid "Open Mesh File"
@@ -8327,6 +8483,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: f_trame_open_file.zip <f_trame_open_file.zip>`"
 msgstr ""
+":download:`Download zipped: f_trame_open_file.zip <f_trame_open_file.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/index.rst:6
 msgid "Trame"
