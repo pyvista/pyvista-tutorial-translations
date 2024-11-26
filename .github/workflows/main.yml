@@ -44,7 +44,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends libgeos-dev
           pip install -U pip setuptools wheel
           pip install -r ./requirements.txt
-          pip install -r pyvista-tutorial/requirements_docs.txt
+          pip install -e pyvista-tutorial[docs]
           curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
           mv tx /usr/local/bin/tx
       - name: update
