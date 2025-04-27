@@ -1,5 +1,6 @@
 *.doctree
 *.pickle
+*.png
 *.vtksz
 locale/jupyter_execute/*
 locale/pot/_panels_static/*
