@@ -1,1 +1,0 @@
-grid.plot(cpos='xy', show_scalar_bar=False, cmap='coolwarm')
