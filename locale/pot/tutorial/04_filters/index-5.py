@@ -1,1 +1,0 @@
-result = dataset.threshold().elevation().clip(normal="z").slice_orthogonal()
