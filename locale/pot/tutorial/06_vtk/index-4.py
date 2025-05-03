@@ -1,1 +1,0 @@
-image_data.GetPointData().SetScalars(values)
