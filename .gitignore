@@ -1,6 +1,7 @@
 *.doctree
 *.pickle
 *.vtksz
+*.zip
 locale/jupyter_execute/*
 locale/pot/*
 tx
