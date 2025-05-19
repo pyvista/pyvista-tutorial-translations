@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Tetsuo Koyama <tkoyama010@gmail.com>, 2024
+# Tetsuo Koyama <tkoyama010@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 00:48+0000\n"
+"POT-Creation-Date: 2025-05-19 00:50+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
-"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2024\n"
+"Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4203,8 +4203,8 @@ msgid ""
 "For detailed control over lighting conditions in general see the `lighting "
 "examples <https://docs.pyvista.org/examples/index.html#lighting>`_"
 msgstr ""
-"一般的な照明条件の詳細な制御については， "
-"`照明の例<https://docs.pyvista.org/examples/index.html#lighting>`_ を参照してください．"
+"一般的な照明条件の詳細な制御については， `照明の例 "
+"<https://docs.pyvista.org/examples/index.html#lighting>`_ を参照してください．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:149
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/b_lighting_mesh.rst:327
