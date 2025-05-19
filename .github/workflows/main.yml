@@ -17,23 +17,23 @@ jobs:
       repository-projects: write
     steps:
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: "3.11"
       - name: Get Job URL
-        uses: Tiryoh/gha-jobid-action@v1
+        uses: Tiryoh/gha-jobid-action@be260d8673c9211a84cdcf37794ebd654ba81eef
         id: jobs
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: script
       - name: checkout with submodule
-        uses: actions/checkout@v4
+        uses: actions/checkout@85e6279cec87321a52edac9c87bce653a07cf6c2
         with:
           fetch-depth: 0
           persist-credentials: false
           submodules: true
       - name: Setup SSH
-        uses: MrSquaare/ssh-setup-action@v3
+        uses: MrSquaare/ssh-setup-action@017f4d9537e3aa1ea64e34700b645ac0bb76b7ec
         with:
           host: github.com
           private-key: ${{ secrets.SSH_PRIVATE_KEY }}
