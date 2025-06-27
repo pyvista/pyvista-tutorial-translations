@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-16 00:50+0000\n"
+"POT-Creation-Date: 2025-06-27 00:50+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Russian (https://app.transifex.com/tkoyama010/teams/112279/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -255,7 +255,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:267
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:426
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:181
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:352
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:359
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:115
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:155
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:142
@@ -286,7 +286,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:181
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:452
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:225
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:356
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:355
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:139
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_getting_started.rst:115
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/a_trame_simple.rst:76
@@ -334,7 +334,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/d_pbr.rst:289
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:444
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:199
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:374
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:381
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:133
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:177
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:164
@@ -370,7 +370,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/d_multi-slider-widget.rst:203
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/e_plane-widget.rst:474
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:247
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:378
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:377
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:161
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/index.rst:199
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:186
@@ -1528,6 +1528,8 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:36
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:39
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:42
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:45
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/sg_execution_times.rst:42
@@ -1540,6 +1542,13 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:45
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:48
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/sg_execution_times.rst:51
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:39
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:45
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:48
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:51
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:54
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:57
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/sg_execution_times.rst:36
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/09_trame/sg_execution_times.rst:42
@@ -3489,13 +3498,13 @@ msgid ""
 "Originally posted here: https://github.com/pyvista/pyvista-support/issues/14"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:86
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:91
 msgid ""
 "Load the GeoTIFF/texture (this could take a minute to download) "
 "https://dl.dropbox.com/s/bp9j3fl3wbi0fld/downsampled_Geologic_map_on_air_photo.tif?dl=0"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:115
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:120
 msgid ""
 "In the block below, we can use the ``get_gcps`` function to get the Ground "
 "Control Points of the raster, however this depends on GDAL. For this "
@@ -3503,32 +3512,32 @@ msgid ""
 "GDAL."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:216
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:223
 msgid ""
 "Show GCPs in relation to topo surface with texture coordinates displayed"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:275
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:282
 msgid "Read the GeoTIFF as a ``Texture`` in PyVista:"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:341
-msgid "**Total running time of the script:** (0 minutes 14.728 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:348
+msgid "**Total running time of the script:** (0 minutes 18.411 seconds)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:359
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:366
 msgid ""
 ":download:`Download Jupyter notebook: c_geological-map.ipynb <c_geological-"
 "map.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:363
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:370
 msgid ""
 ":download:`Download Python source code: c_geological-map.py <c_geological-"
 "map.py>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:367
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:374
 msgid ""
 ":download:`Download zipped: c_geological-map.zip <c_geological-map.zip>`"
 msgstr ""
@@ -4000,7 +4009,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:9
 msgid ""
-"**00:20.690** total execution time for 4 files **from tutorial/03_figures**:"
+"**00:18.411** total execution time for 4 files **from tutorial/03_figures**:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:35
@@ -4010,7 +4019,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:36
-msgid "00:14.728"
+msgid "00:18.411"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:38
@@ -4019,16 +4028,8 @@ msgid ""
 "(``a_lesson_figures.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:39
-msgid "00:04.679"
-msgstr ""
-
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:41
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:42
-msgid "00:01.283"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:44
@@ -6454,7 +6455,7 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/f_slider-bar-widget.rst:197
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:125
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:205
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:328
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:327
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/h_spline-widget.rst:111
 msgid "And here is a screen capture of a user interacting with this"
 msgstr ""
@@ -6793,23 +6794,23 @@ msgid ""
 " a surface and interpolate between them with some boundary conditions"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:345
-msgid "**Total running time of the script:** (0 minutes 1.362 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:344
+msgid "**Total running time of the script:** (0 minutes 1.649 seconds)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:363
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:362
 msgid ""
 ":download:`Download Jupyter notebook: g_sphere-widget.ipynb <g_sphere-"
 "widget.ipynb>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:367
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:366
 msgid ""
 ":download:`Download Python source code: g_sphere-widget.py <g_sphere-"
 "widget.py>`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:371
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:370
 msgid ":download:`Download zipped: g_sphere-widget.zip <g_sphere-widget.zip>`"
 msgstr ""
 
@@ -6926,85 +6927,57 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:9
 msgid ""
-"**00:32.652** total execution time for 8 files **from tutorial/08_widgets**:"
+"**00:01.649** total execution time for 8 files **from tutorial/08_widgets**:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:35
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``a_box-widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
-msgid "00:14.806"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``e_plane-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:39
-msgid "00:11.239"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:41
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``f_slider-bar-"
-"widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:42
-msgid "00:03.085"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:44
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py` (``g_sphere-"
 "widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:45
-msgid "00:01.362"
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:36
+msgid "00:01.649"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:47
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:38
 msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``c_line-widget.py``)"
+":ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py` (``a_box-widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:48
-msgid "00:00.740"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:50
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:41
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` (``b_checkbox-"
 "widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:51
-msgid "00:00.732"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:53
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:44
 msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``h_spline-"
-"widget.py``)"
+":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` (``c_line-widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:54
-msgid "00:00.444"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:56
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:47
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py` (``d_multi-"
 "slider-widget.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:57
-msgid "00:00.244"
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:50
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py` (``e_plane-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:53
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` (``f_slider-bar-"
+"widget.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:56
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py` (``h_spline-"
+"widget.py``)"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/09_qt/index.rst:6
