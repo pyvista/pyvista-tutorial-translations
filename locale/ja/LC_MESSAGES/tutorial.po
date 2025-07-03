@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 00:50+0000\n"
+"POT-Creation-Date: 2025-07-03 01:01+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -3983,7 +3983,7 @@ msgstr "GeoTIFFをPyVistaで ``Texture`` として読み込みます:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:348
 msgid "**Total running time of the script:** (0 minutes 18.411 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 18.411 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:366
 msgid ""
@@ -4529,6 +4529,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 msgid ""
 "**00:18.411** total execution time for 4 files **from tutorial/03_figures**:"
 msgstr ""
+"**00:18.411** total execution time for 4 files **from tutorial/03_figures**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:35
 msgid ""
@@ -4540,7 +4541,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:36
 msgid "00:18.411"
-msgstr ""
+msgstr "00:18.411"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:38
 msgid ""
@@ -7742,7 +7743,7 @@ msgstr "これは，4つの球体ウィジェットを使用してサーフェ�
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:344
 msgid "**Total running time of the script:** (0 minutes 1.649 seconds)"
-msgstr ""
+msgstr "**Total running time of the script:** (0 minutes 1.649 seconds)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/g_sphere-widget.rst:362
 msgid ""
@@ -7899,6 +7900,7 @@ msgstr ":ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`"
 msgid ""
 "**00:01.649** total execution time for 8 files **from tutorial/08_widgets**:"
 msgstr ""
+"**00:01.649** total execution time for 8 files **from tutorial/08_widgets**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/08_widgets/sg_execution_times.rst:35
 msgid ""
