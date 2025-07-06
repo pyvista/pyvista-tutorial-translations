@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-27 00:50+0000\n"
+"POT-Creation-Date: 2025-07-06 00:56+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Language-Team: Polish (Poland) (https://app.transifex.com/tkoyama010/teams/112279/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgid ""
 " |discuss|."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:88
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:75
 msgid "discuss"
 msgstr ""
 
@@ -65,136 +65,102 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:47
 msgid ""
 "While PyVista is an Open Source project with a big community, you might be "
-"looking for professional support. This section aims to list companies with "
-"VTK/PyVista expertise who can help you with your software project."
+"looking for professional support. Reach out to info@pyvista.org and we can "
+"help connect you with the right community experts to tackle your challenges."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
-msgid "Company Name"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
-msgid "Kitware Inc."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
-msgid "Description"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
-msgid ""
-"Kitware is dedicated to build solutions for our customers based on our well-"
-"established open source platforms."
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
-msgid "Expertise"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
-msgid "CMake, VTK, PyVista, ParaView, Trame"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
-msgid "Contact"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
-msgid "https://www.kitware.com/contact/"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:50
 msgid "Tutorial Overview"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:66
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "**Lesson**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:66
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "**Description**"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
 msgid ":ref:`intro`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
 msgid "Introduction - Using PyVista for 3D Visualization within Python."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:70
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid ":ref:`jupyter`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:70
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid "Using PyVista in Jupyter."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:72
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 msgid ":ref:`basic`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:72
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 msgid ""
 "Reading and plotting 3D data using the `pyvista.examples`_ module and "
 "external files."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 msgid ":ref:`mesh`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:8
 msgid ""
 "Learn the basics of the PyVista data types and how to open common 3D file "
 "formats to visualize the data in 3D."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ":ref:`figures`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ""
 "Demonstrate many features of the PyVista plotting API to create compelling "
 "3D visualizations and touch on animations."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ":ref:`filters`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ""
 "Demonstrate the PyVista filters API to perform mesh analysis and alteration."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
 msgid ":ref:`action`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
 msgid ""
 "Show how PyVista is already being used within several projects and can be "
 "used for all things visualization."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:82
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ":ref:`trame`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:82
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ""
 "Leverage PyVista and Trame to make awesome interactive web applications."
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:71
 msgid ":ref:`vtk`"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:71
 msgid ""
 "Show how PyVista uses VTK and how you can combine the best of both worlds!"
 msgstr ""
@@ -461,13 +427,13 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
 msgid ""
-"As of October 2024, Over 150+ contributors and `~2.4k Stars "
+"As of July 2025, Over 190+ contributors and `~3.2k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
-"Used by at least 2.8k other `libraries, examples, and repositories "
+"Used by at least 4.6k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
 
@@ -1564,8 +1530,8 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:8
 msgid ""
-"This section demonstrates how to use PyVista to reading and plotting 3D data"
-" using the `pyvista.examples`_ module and external files."
+"This section demonstrates how to use PyVista for reading and plotting 3D "
+"data using the `pyvista.examples`_ module and external files."
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:13
