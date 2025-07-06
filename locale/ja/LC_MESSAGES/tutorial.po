@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-03 01:01+0000\n"
+"POT-Creation-Date: 2025-07-06 00:56+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -61,7 +61,7 @@ msgid ""
 " |discuss|."
 msgstr "PyVistaについて何か質問があれば， |discuss| に気軽に投稿してください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:88
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:75
 msgid "discuss"
 msgstr "discuss"
 
@@ -72,137 +72,102 @@ msgstr "プロフェッショナルサポート"
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:47
 msgid ""
 "While PyVista is an Open Source project with a big community, you might be "
-"looking for professional support. This section aims to list companies with "
-"VTK/PyVista expertise who can help you with your software project."
+"looking for professional support. Reach out to info@pyvista.org and we can "
+"help connect you with the right community experts to tackle your challenges."
 msgstr ""
-"PyVistaは大きなコミュニティを持つオープンソースプロジェクトですが，専門的なサポートを求めているかもしれません．このセクションでは，VTK/PyVistaの専門知識を持ち，あなたのソフトウェアプロジェクトを手助けしてくれる企業を紹介します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
-msgid "Company Name"
-msgstr "会社名"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:51
-msgid "Kitware Inc."
-msgstr "Kitware Inc."
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
-msgid "Description"
-msgstr "説明"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
-msgid ""
-"Kitware is dedicated to build solutions for our customers based on our well-"
-"established open source platforms."
-msgstr "Kitware は，定評あるオープンソースプラットフォームをベースに，お客様のためのソリューションを構築することに専念しています．"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
-msgid "Expertise"
-msgstr "専門知識"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
-msgid "CMake, VTK, PyVista, ParaView, Trame"
-msgstr "CMake, VTK, PyVista, ParaView, Trame"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
-msgid "Contact"
-msgstr "お問い合わせ"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
-msgid "https://www.kitware.com/contact/"
-msgstr "https://www.kitware.com/contact/"
-
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:50
 msgid "Tutorial Overview"
 msgstr "チュートリアルの概要"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:66
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "**Lesson**"
 msgstr "**レッスン**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:66
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:53
 msgid "**Description**"
 msgstr "**説明**"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
 msgid ":ref:`intro`"
 msgstr ":ref:`intro`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:68
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:55
 msgid "Introduction - Using PyVista for 3D Visualization within Python."
 msgstr "はじめに - PyVistaを使ってPythonで3Dビジュアライゼーションを行います．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:70
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid ":ref:`jupyter`"
 msgstr ":ref:`jupyter`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:70
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:57
 msgid "Using PyVista in Jupyter."
 msgstr "JupyterでPyVistaを使います．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:72
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 msgid ":ref:`basic`"
 msgstr ":ref:`basic`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:72
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:59
 msgid ""
 "Reading and plotting 3D data using the `pyvista.examples`_ module and "
 "external files."
 msgstr "`pyvista.examples`_ モジュールと外部ファイルを使って，3Dデータを読み込んでプロットします．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 msgid ":ref:`mesh`"
 msgstr ":ref:`mesh`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:74
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:61
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:8
 msgid ""
 "Learn the basics of the PyVista data types and how to open common 3D file "
 "formats to visualize the data in 3D."
 msgstr "PyVistaのデータ型の基本を学び，一般的な3Dファイル形式を開いてデータを3Dで可視化する方法を紹介します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ":ref:`figures`"
 msgstr ":ref:`figures`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:76
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:63
 msgid ""
 "Demonstrate many features of the PyVista plotting API to create compelling "
 "3D visualizations and touch on animations."
 msgstr "PyVistaプロッティングAPIの多くの機能を実演し，魅力的な3Dビジュアリゼーションとタッチオンアニメーションを作成します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ":ref:`filters`"
 msgstr ":ref:`filters`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:78
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:65
 msgid ""
 "Demonstrate the PyVista filters API to perform mesh analysis and alteration."
 msgstr "メッシュの解析と変更を行うためのPyVistaフィルタAPIのデモを行います．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
 msgid ":ref:`action`"
 msgstr ":ref:`action`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:80
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:67
 msgid ""
 "Show how PyVista is already being used within several projects and can be "
 "used for all things visualization."
 msgstr "PyVistaがすでにいくつかのプロジェクトで使用されており，あらゆる可視化に使用できることを紹介します．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:82
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ":ref:`trame`"
 msgstr ":ref:`trame`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:82
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:69
 msgid ""
 "Leverage PyVista and Trame to make awesome interactive web applications."
 msgstr "PyVistaとTrameを活用して，素晴らしいインタラクティブなWebアプリケーションを作成することができます．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:71
 msgid ":ref:`vtk`"
 msgstr ":ref:`vtk`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial.rst:84
+#: ../../pyvista-tutorial/doc/source/tutorial.rst:71
 msgid ""
 "Show how PyVista uses VTK and how you can combine the best of both worlds!"
 msgstr "PyVistaがVTKをどのように使っているか，そして両者の長所をどのように組み合わせられるかを紹介します!"
@@ -491,20 +456,15 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:40
 msgid ""
-"As of October 2024, Over 150+ contributors and `~2.4k Stars "
+"As of July 2025, Over 190+ contributors and `~3.2k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
-"2024年10月現在，GitHubに150人以上のコントリビューターと `~2.4k Stars "
-"<https://github.com/pyvista/pyvista/stargazers>`_ がいます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
-"Used by at least 2.8k other `libraries, examples, and repositories "
+"Used by at least 4.6k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
-"GitHubにある他の `libraries, examples, and repositories "
-"<https://github.com/pyvista/pyvista/network/dependents>`_ "
-"で少なくとも2.8k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
@@ -1723,11 +1683,9 @@ msgstr "基本的な使い方"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:8
 msgid ""
-"This section demonstrates how to use PyVista to reading and plotting 3D data"
-" using the `pyvista.examples`_ module and external files."
+"This section demonstrates how to use PyVista for reading and plotting 3D "
+"data using the `pyvista.examples`_ module and external files."
 msgstr ""
-"このセクションでは， `pyvista.examples`_ "
-"モジュールと外部ファイルを使って，PyVistaで3Dデータを読み込んでプロットする方法を説明します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:13
 msgid ""
