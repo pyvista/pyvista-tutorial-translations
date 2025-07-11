@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_bonus_e_labels.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -60,7 +60,7 @@ point labels to a scene.
 
     Help on function add_point_labels in module pyvista.plotting.plotter:
 
-    add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, text_color=None, font_family=None, shadow=False, show_points=True, point_color=None, point_size=None, name=None, shape_color='grey', shape='rounded_rect', fill_shape=True, margin=3, shape_opacity=1.0, pickable=False, render_points_as_spheres=False, tolerance=0.001, reset_camera=None, always_visible=False, render=True)
+    add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, text_color=None, font_family=None, font_file=None, shadow=False, show_points=True, point_color=None, point_size=None, name=None, shape_color='grey', shape='rounded_rect', fill_shape=True, margin=3, shape_opacity=1.0, pickable=False, render_points_as_spheres=False, tolerance=0.001, reset_camera=None, always_visible=False, render=True, justification_horizontal=None, justification_vertical=None, background_color=None, background_opacity=None)
         Create a point actor with one label from list labels assigned to each point.
     
         Parameters
@@ -93,7 +93,11 @@ point labels to a scene.
     
         font_family : str, optional
             Font family.  Must be either ``'courier'``, ``'times'``,
-            or ``'arial``.
+            or ``'arial``. This is ignored if the `font_file` is set.
+    
+        font_file : str, default: None
+            The absolute file path to a local file containing a freetype
+            readable font.
     
         shadow : bool, default: False
             Adds a black shadow to the text.
@@ -156,6 +160,34 @@ point labels to a scene.
         render : bool, default: True
             Force a render when ``True``.
     
+        justification_horizontal : str, optional
+            Text's horizontal justification.
+            Should be either "left", "center" or "right".
+    
+            .. warning::
+                If the justification is not default,
+                the shape will be out of alignment with the label.
+                If you use other than default,
+                Please use the background color.
+                See: https://github.com/pyvista/pyvista/pull/5407
+    
+        justification_vertical : str, optional
+            Text's vertical justification.
+            Should be either "bottom", "center" or "top".
+    
+            .. warning::
+                If the justification is not default,
+                the shape will be out of alignment with the label.
+                If you use other than default,
+                Please use the background color.
+                See: https://github.com/pyvista/pyvista/pull/5407
+    
+        background_color : pyvista.Color, optional
+            Background color of text's property.
+    
+        background_opacity : pyvista.Color, optional
+            Background opacity of text's property.
+    
         Returns
         -------
         vtk.vtkActor2D
@@ -164,11 +196,9 @@ point labels to a scene.
         Examples
         --------
         >>> import numpy as np
-        >>> import pyvista
-        >>> pl = pyvista.Plotter()
-        >>> points = np.array(
-        ...     [[0.0, 0.0, 0.0], [1.0, 1.0, 0.0], [2.0, 0.0, 0.0]]
-        ... )
+        >>> import pyvista as pv
+        >>> pl = pv.Plotter()
+        >>> points = np.array([[0.0, 0.0, 0.0], [1.0, 1.0, 0.0], [2.0, 0.0, 0.0]])
         >>> labels = ['Point A', 'Point B', 'Point C']
         >>> actor = pl.add_point_labels(
         ...     points,
@@ -237,9 +267,9 @@ node:
     <tr><td>N Cells</td><td>10</td></tr>
     <tr><td>N Points</td><td>10</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>7.103e-04, 9.636e-01</td></tr>
-    <tr><td>Y Bounds</td><td>3.017e-01, 8.466e-01</td></tr>
-    <tr><td>Z Bounds</td><td>1.423e-02, 8.745e-01</td></tr>
+    <tr><td>X Bounds</td><td>1.068e-01, 8.813e-01</td></tr>
+    <tr><td>Y Bounds</td><td>4.452e-02, 8.546e-01</td></tr>
+    <tr><td>Z Bounds</td><td>3.052e-04, 7.851e-01</td></tr>
     <tr><td>N Arrays</td><td>1</td></tr>
     </table>
 
@@ -285,10 +315,32 @@ Now plot the points with labels using :func:`pyvista.Plotter.add_point_labels`
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_001.png
-   :alt: e labels
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_001.png
+        :alt: e labels
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_e_labels_001.vtksz
+
 
 
 
@@ -341,10 +393,32 @@ Create plotting class and add the unstructured grid
 
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_002.png
-   :alt: e labels
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_002.png
+        :alt: e labels
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_e_labels_002.vtksz
+
 
 
 
@@ -375,25 +449,47 @@ This example will label each point with their scalar values
 
 .. code-block:: Python
 
-    p = pv.Plotter()
+    pl = pv.Plotter()
 
     # Add the mesh:
-    p.add_mesh(mesh, scalars="Spatial Point Data", show_edges=True)
+    pl.add_mesh(mesh, scalars="Spatial Point Data", show_edges=True)
     # Add the points with scalar labels:
-    p.add_point_scalar_labels(mesh, "Spatial Point Data", point_size=20, font_size=36)
+    pl.add_point_scalar_labels(mesh, "Spatial Point Data", point_size=20, font_size=36)
 
     # Use a nice camera position:
-    p.camera_position = [(7, 4, 5), (4.4, 7.0, 7.2), (0.8, 0.5, 0.25)]
+    pl.camera_position = [(7, 4, 5), (4.4, 7.0, 7.2), (0.8, 0.5, 0.25)]
 
-    p.show()
-
-
+    pl.show()
 
 
-.. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
-   :alt: e labels
-   :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
+        :alt: e labels
+        :srcset: /tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/bonus/images/sphx_glr_e_labels_003.vtksz
+
 
 
 
@@ -412,7 +508,7 @@ This example will label each point with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.781 seconds)
+   **Total running time of the script:** (0 minutes 0.787 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_e_labels.py:
@@ -435,6 +531,10 @@ This example will label each point with their scalar values
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: e_labels.py <e_labels.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: e_labels.zip <e_labels.zip>`
 
 
 .. only:: html

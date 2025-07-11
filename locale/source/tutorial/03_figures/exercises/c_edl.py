@@ -10,13 +10,13 @@ To learn more, please see `this blog post`_.
 
 """
 
-###############################################################################
+# %%
 
 # sphinx_gallery_thumbnail_number = 1
 import pyvista as pv
 from pyvista import examples
 
-###############################################################################
+# %%
 # Point Cloud
 # +++++++++++
 #
@@ -26,33 +26,33 @@ from pyvista import examples
 point_cloud = examples.download_lidar()
 point_cloud
 
-###############################################################################
+# %%
 # And now plot this point cloud as-is:
 
 # Plot a typical point cloud with no EDL
-p = pv.Plotter()
-p.add_mesh(point_cloud, color="tan", point_size=5)
-p.show()
+pl = pv.Plotter()
+pl.add_mesh(point_cloud, color="tan", point_size=5)
+pl.show()
 
 
-###############################################################################
+# %%
 # We can improve the depth mapping by enabling eye dome lighting on the
 # renderer with :func:`pyvista.Renderer.enable_eye_dome_lighting`.
 #
 # Try plotting that point cloud with Eye-Dome-Lighting yourself below:
 
-p = pv.Plotter()
-p.add_mesh(point_cloud, color="tan", point_size=5)
+pl = pv.Plotter()
+pl.add_mesh(point_cloud, color="tan", point_size=5)
 # Turn on eye dome lighting here
-p.show()
+pl.show()
 
 
-###############################################################################
+# %%
 # The eye dome lighting mode can also handle plotting scalar arrays. Try the
 # above block but by specifying a ``scalars`` array instead of ``color`` in
 # the ``add_mesh`` call.
 
-###############################################################################
+# %%
 # .. raw:: html
 #
 #     <center>

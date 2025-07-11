@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -65,37 +65,42 @@ airplane mesh.
 
     Help on function read in module pyvista.core.utilities.fileio:
 
-    read(filename, attrs=None, force_ext=None, file_format=None, progress_bar=False)
+    read(filename: 'PathStrSeq', force_ext: 'str | None' = None, file_format: 'str | None' = None, progress_bar: 'bool' = False) -> 'DataObject'
         Read any file type supported by ``vtk`` or ``meshio``.
-    
-        .. deprecated:: 0.35.0
-            Use of `attrs` is deprecated.
-            Use a reader class using :func:`pyvista.get_reader`
     
         Automatically determines the correct reader to use then wraps the
         corresponding mesh as a pyvista object.  Attempts native ``vtk``
-        readers first then tries to use ``meshio``.
+        readers first then tries to use ``meshio``. :py:mod:`Pickled<pickle>`
+        meshes (``'.pkl'`` or ``'.pickle'``) are also supported.
     
-        See :func:`pyvista.get_reader` for list of formats supported.
+        See :func:`pyvista.get_reader` for list of vtk formats supported.
     
         .. note::
            See https://github.com/nschloe/meshio for formats supported by
            ``meshio``. Be sure to install ``meshio`` with ``pip install
            meshio`` if you wish to use it.
     
+        .. versionadded:: 0.45
+    
+            Support reading pickled meshes.
+    
+        .. warning::
+    
+            The pickle module is not secure. Only read pickled mesh files
+            (``'.pkl'`` or ``'.pickle'``) you trust. See :py:mod:`pickle`
+            for details.
+    
+        See Also
+        --------
+        pyvista.DataObject.save
+            Save a mesh to file.
+    
         Parameters
         ----------
-        filename : str
+        filename : str, Path, Sequence[str | Path]
             The string path to the file to read. If a list of files is
             given, a :class:`pyvista.MultiBlock` dataset is returned with
             each file being a separate block in the dataset.
-    
-        attrs : dict, optional
-            Deprecated. Use a Reader class using :func:`pyvista.get_reader`.
-            A dictionary of attributes to call on the reader. Keys of
-            dictionary are the attribute/method names and values are the
-            arguments passed to those calls. If you do not have any
-            attributes to call, pass ``None`` as the value.
     
         force_ext : str, optional
             If specified, the reader will be chosen by an extension which
@@ -117,18 +122,22 @@ airplane mesh.
         --------
         Load an example mesh.
     
-        >>> import pyvista
+        >>> import pyvista as pv
         >>> from pyvista import examples
-        >>> mesh = pyvista.read(examples.antfile)
+        >>> mesh = pv.read(examples.antfile)
         >>> mesh.plot(cpos='xz')
     
         Load a vtk file.
     
-        >>> mesh = pyvista.read('my_mesh.vtk')  # doctest:+SKIP
+        >>> mesh = pv.read('my_mesh.vtk')  # doctest:+SKIP
     
         Load a meshio file.
     
-        >>> mesh = pyvista.read("mesh.obj")  # doctest:+SKIP
+        >>> mesh = pv.read('mesh.obj')  # doctest:+SKIP
+    
+        Load a pickled mesh file.
+    
+        >>> mesh = pv.read('mesh.pkl')  # doctest:+SKIP
 
 
 
@@ -172,11 +181,21 @@ extensions are listed in an internal function:
         +----------------+---------------------------------------------+
         | ``.cgns``      | :class:`pyvista.CGNSReader`                 |
         +----------------+---------------------------------------------+
+        | ``.cube``      | :class:`pyvista.GaussianCubeReader`         |
+        +----------------+---------------------------------------------+
         | ``.dat``       | :class:`pyvista.TecplotReader`              |
         +----------------+---------------------------------------------+
         | ``.dcm``       | :class:`pyvista.DICOMReader`                |
         +----------------+---------------------------------------------+
         | ``.dem``       | :class:`pyvista.DEMReader`                  |
+        +----------------+---------------------------------------------+
+        | ``.e``         | :class:`pyvista.ExodusIIReader`             |
+        +----------------+---------------------------------------------+
+        | ``.exo``       | :class:`pyvista.ExodusIIReader`             |
+        +----------------+---------------------------------------------+
+        | ``.exii``      | :class:`pyvista.ExodusIIReader`             |
+        +----------------+---------------------------------------------+
+        | ``.ex2``       | :class:`pyvista.ExodusIIReader`             |
         +----------------+---------------------------------------------+
         | ``.facet``     | :class:`pyvista.FacetReader`                |
         +----------------+---------------------------------------------+
@@ -205,6 +224,8 @@ extensions are listed in an internal function:
         | ``.mha``       | :class:`pyvista.MetaImageReader`            |
         +----------------+---------------------------------------------+
         | ``.mhd``       | :class:`pyvista.MetaImageReader`            |
+        +----------------+---------------------------------------------+
+        | ``.nek5000``   | :class:`pyvista.Nek5000Reader`              |
         +----------------+---------------------------------------------+
         | ``.nii``       | :class:`pyvista.NIFTIReader`                |
         +----------------+---------------------------------------------+
@@ -252,9 +273,13 @@ extensions are listed in an internal function:
         +----------------+---------------------------------------------+
         | ``.tri``       | :class:`pyvista.BinaryMarchingCubesReader`  |
         +----------------+---------------------------------------------+
+        | ``.vrt``       | :class:`pyvista.ProStarReader`              |
+        +----------------+---------------------------------------------+
         | ``.vti``       | :class:`pyvista.XMLImageDataReader`         |
         +----------------+---------------------------------------------+
         | ``.vtk``       | :class:`pyvista.VTKDataSetReader`           |
+        +----------------+---------------------------------------------+
+        | ``.vtkhdf``    | :class:`pyvista.HDFReader`                  |
         +----------------+---------------------------------------------+
         | ``.vtm``       | :class:`pyvista.XMLMultiBlockDataReader`    |
         +----------------+---------------------------------------------+
@@ -270,10 +295,12 @@ extensions are listed in an internal function:
         +----------------+---------------------------------------------+
         | ``.xdmf``      | :class:`pyvista.XdmfReader`                 |
         +----------------+---------------------------------------------+
+        | ``.vtpd``      | :class:`pyvista.XMLPartitionedDataSetReader`|
+        +----------------+---------------------------------------------+
     
         Parameters
         ----------
-        filename : str
+        filename : str, Path
             The string path to the file to read.
     
         force_ext : str, optional
@@ -286,14 +313,15 @@ extensions are listed in an internal function:
     
         Examples
         --------
-        >>> import pyvista
+        >>> import pyvista as pv
         >>> from pyvista import examples
+        >>> from pathlib import Path
         >>> filename = examples.download_human(load=False)
-        >>> filename.split("/")[-1]  # omit the path
+        >>> Path(filename).name
         'Human.vtp'
-        >>> reader = pyvista.get_reader(filename)
+        >>> reader = pv.get_reader(filename)
         >>> reader
-        XMLPolyDataReader('.../Human.vtp')
+        XMLPolyDataReader('...Human.vtp')
         >>> mesh = reader.read()
         >>> mesh
         PolyData ...
@@ -326,7 +354,7 @@ file, displays an airplane mesh and returns the camera's position:
  .. code-block:: none
 
 
-    '/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pyvista/examples/airplane.ply'
+    '/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/examples/airplane.ply'
 
 
 
@@ -349,10 +377,32 @@ Use ``pv.read`` to load the file as a mesh:
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_001.png
-   :alt: e read file
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_001.png
+        :alt: e read file
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_001.vtksz
+
 
 
 
@@ -384,7 +434,8 @@ The points from the mesh are directly accessible as a NumPy array:
                      ...,
                      [806.665  , 627.363  ,   5.11482],
                      [806.665  , 654.432  ,   7.51998],
-                     [806.665  , 681.537  ,   9.48744]], dtype=float32)
+                     [806.665  , 681.537  ,   9.48744]],
+                    shape=(1335, 3), dtype=float32)
 
 
 
@@ -415,7 +466,7 @@ The faces from the mesh are also directly accessible as a NumPy array:
            ...,
            [1324, 1333, 1323],
            [1325, 1216, 1334],
-           [1325, 1334, 1324]])
+           [1325, 1334, 1324]], shape=(2452, 3))
 
 
 
@@ -442,10 +493,32 @@ Example STL file:
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_002.png
-   :alt: e read file
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_002.png
+        :alt: e read file
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_002.vtksz
+
 
 
 
@@ -466,10 +539,32 @@ Example OBJ file
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_003.png
-   :alt: e read file
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_003.png
+        :alt: e read file
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_003.vtksz
+
 
 
 
@@ -490,10 +585,32 @@ Example BYU file
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_004.png
-   :alt: e read file
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_004.png
+        :alt: e read file
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_004.vtksz
+
 
 
 
@@ -515,10 +632,32 @@ Example VTK file
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_005.png
-   :alt: e read file
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_005.png
+        :alt: e read file
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_e_read-file_005.vtksz
+
 
 
 
@@ -560,7 +699,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.113 seconds)
+   **Total running time of the script:** (0 minutes 2.354 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py:
@@ -583,6 +722,10 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: e_read-file.py <e_read-file.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: e_read-file.zip <e_read-file.zip>`
 
 
 .. only:: html
