@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -30,7 +30,7 @@ Create a surface from a set of points through a Delaunay triangulation.
 
 .. GENERATED FROM PYTHON SOURCE LINES 12-16
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -52,7 +52,7 @@ First, create some points for the surface.
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-34
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Define a simple Gaussian surface
@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-195.13977348, -198.37424407,    2.08251561],
-           [-182.55051854, -198.37424407,    2.64142504],
-           [-160.92418033, -198.37424407,    3.82945908],
-           [-138.17584227, -198.37424407,    5.3812731 ],
-           [-118.47427649, -198.37424407,    6.92920745]])
+    array([[-200.75980562, -198.96322193,    1.84158576],
+           [-179.09066119, -198.96322193,    2.77924346],
+           [-155.94340544, -198.96322193,    4.09568802],
+           [-134.51407358, -198.96322193,    5.5909555 ],
+           [-116.82506829, -198.96322193,    6.98278038]])
 
 
 
@@ -91,7 +91,7 @@ be encompassed in a :class:`pyvista.PolyData` object.
 
 .. GENERATED FROM PYTHON SOURCE LINES 37-42
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # simply pass the numpy points to the PolyData constructor
@@ -101,10 +101,32 @@ be encompassed in a :class:`pyvista.PolyData` object.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_001.vtksz
+
 
 
 
@@ -118,7 +140,7 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 46-48
 
-.. code-block:: default
+.. code-block:: Python
 
     help(cloud.delaunay_2d)
 
@@ -132,7 +154,7 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
 
     Help on method delaunay_2d in module pyvista.core.filters.poly_data:
 
-    delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound=False, inplace=False, edge_source=None, progress_bar=False) method of pyvista.core.pointset.PolyData instance
+    delaunay_2d(tol=1e-05, alpha=0.0, offset=1.0, bound: 'bool' = False, inplace: 'bool' = False, edge_source=None, progress_bar: 'bool' = False) method of pyvista.core.pointset.PolyData instance
         Apply a 2D Delaunay filter along the best fitting plane.
     
         This filter can be used to generate a 2d surface from a set of
@@ -221,7 +243,7 @@ Apply the ``delaunay_2d`` filter.
 
 .. GENERATED FROM PYTHON SOURCE LINES 50-57
 
-.. code-block:: default
+.. code-block:: Python
 
 
     surf = cloud.delaunay_2d()
@@ -233,10 +255,32 @@ Apply the ``delaunay_2d`` filter.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_002.vtksz
+
 
 
 
@@ -249,7 +293,7 @@ Clean Edges & Triangulations
 
 .. GENERATED FROM PYTHON SOURCE LINES 60-73
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Create the points to triangulate
@@ -278,8 +322,8 @@ Clean Edges & Triangulations
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>5.608e-02, 9.276e+00</td></tr>
-    <tr><td>Y Bounds</td><td>2.404e-02, 9.291e+00</td></tr>
+    <tr><td>X Bounds</td><td>4.113e-02, 9.239e+00</td></tr>
+    <tr><td>Y Bounds</td><td>5.016e-03, 9.300e+00</td></tr>
     <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
@@ -291,17 +335,39 @@ Clean Edges & Triangulations
 
 .. GENERATED FROM PYTHON SOURCE LINES 74-76
 
-.. code-block:: default
+.. code-block:: Python
 
     cloud.plot(cpos="xy")
 
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_003.vtksz
+
 
 
 
@@ -313,7 +379,7 @@ Run the triangulation on these points
 
 .. GENERATED FROM PYTHON SOURCE LINES 78-81
 
-.. code-block:: default
+.. code-block:: Python
 
     surf = cloud.delaunay_2d()
     surf.plot(cpos="xy", show_edges=True)
@@ -321,10 +387,32 @@ Run the triangulation on these points
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_004.vtksz
+
 
 
 
@@ -337,7 +425,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. GENERATED FROM PYTHON SOURCE LINES 84-87
 
-.. code-block:: default
+.. code-block:: Python
 
     surf = cloud.delaunay_2d(alpha=1.0)
     surf.plot(cpos="xy", show_edges=True)
@@ -345,10 +433,32 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 
 
-.. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
-   :alt: d create tri surface
-   :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
+        :alt: d create tri surface
+        :srcset: /tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/images/sphx_glr_d_create-tri-surface_005.vtksz
+
 
 
 
@@ -367,7 +477,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.597 seconds)
+   **Total running time of the script:** (0 minutes 0.979 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:
@@ -376,7 +486,6 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -384,13 +493,17 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: d_create-tri-surface.ipynb <d_create-tri-surface.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: d_create-tri-surface.py <d_create-tri-surface.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: d_create-tri-surface.ipynb <d_create-tri-surface.ipynb>`
+      :download:`Download zipped: d_create-tri-surface.zip <d_create-tri-surface.zip>`
 
 
 .. only:: html

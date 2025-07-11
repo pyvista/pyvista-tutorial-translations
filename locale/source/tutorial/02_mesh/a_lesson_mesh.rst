@@ -65,11 +65,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.57198611, 0.26679564, 0.7817264 ],
-           [0.6068542 , 0.69431974, 0.99818969],
-           [0.87065001, 0.1354757 , 0.73686118],
-           [0.45176994, 0.47614351, 0.01557924],
-           [0.61704641, 0.71926522, 0.55523172]])
+    array([[0.14851515, 0.11809392, 0.84301708],
+           [0.01001029, 0.16640518, 0.69229536],
+           [0.94816521, 0.18465836, 0.34444237],
+           [0.12028965, 0.27211056, 0.80233419],
+           [0.45916937, 0.94729207, 0.41238201]])
 
 
 
@@ -98,9 +98,9 @@ Pass numpy array of points (n by 3) to PolyData
     <tr><td>N Cells</td><td>100</td></tr>
     <tr><td>N Points</td><td>100</td></tr>
     <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>5.100e-03, 9.871e-01</td></tr>
-    <tr><td>Y Bounds</td><td>2.060e-02, 9.798e-01</td></tr>
-    <tr><td>Z Bounds</td><td>1.030e-02, 9.982e-01</td></tr>
+    <tr><td>X Bounds</td><td>1.001e-02, 9.976e-01</td></tr>
+    <tr><td>Y Bounds</td><td>1.604e-03, 9.875e-01</td></tr>
+    <tr><td>Z Bounds</td><td>8.045e-03, 9.868e-01</td></tr>
     <tr><td>N Arrays</td><td>0</td></tr>
     </table>
 
@@ -248,7 +248,7 @@ between points such as this gridded mesh:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-64
+.. GENERATED FROM PYTHON SOURCE LINES 56-65
 
 What is a Cell?
 ^^^^^^^^^^^^^^^
@@ -257,22 +257,56 @@ A cell is the geometry between points that defines the connectivity or
 topology of a mesh. In the examples above, cells are defined by the lines
 (edges colored in black) connecting points (colored in red). For example, a
 cell in the beam example is a voxel defined by the region between eight
-points in that mesh:
+points in that mesh. Here we can extract one of the cells from the mesh,
+show some information about it, and plot its location among the mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-77
+.. GENERATED FROM PYTHON SOURCE LINES 65-71
 
 .. code-block:: Python
 
 
     mesh = examples.load_hexbeam()
 
+    single_cell = mesh.get_cell(mesh.n_cells - 1)
+    single_cell
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    Cell (0x7feef4aa53c0)
+      Type:        <CellType.HEXAHEDRON: 12>
+      Linear:      True
+      Dimension:   3
+      N Points:    8
+      N Faces:     6
+      N Edges:     12
+      X Bounds:    5.000e-01, 1.000e+00
+      Y Bounds:    5.000e-01, 1.000e+00
+      Z Bounds:    4.500e+00, 5.000e+00
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 72-86
+
+.. code-block:: Python
+
+
     pl = pv.Plotter()
     pl.add_mesh(mesh, show_edges=True, color="white")
     pl.add_points(mesh.points, color="red", point_size=20)
-
-    single_cell = mesh.extract_cells(mesh.n_cells - 1)
-    pl.add_mesh(single_cell, color="pink", edge_color="blue", line_width=5, show_edges=True)
-
+    pl.add_mesh(
+        single_cell.cast_to_unstructured_grid(),
+        color="pink",
+        edge_color="blue",
+        line_width=5,
+        show_edges=True,
+    )
     pl.camera_position = [(6.20, 3.00, 7.50), (0.16, 0.13, 2.65), (-0.28, 0.94, -0.21)]
     pl.show()
 
@@ -310,13 +344,13 @@ points in that mesh:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-81
+.. GENERATED FROM PYTHON SOURCE LINES 87-90
 
 Cells aren't limited to voxels, they could be a triangle between three
 points, a line between two points, or even a single point could be its own
 cell (but that's a special case).
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-92
+.. GENERATED FROM PYTHON SOURCE LINES 92-101
 
 What are attributes?
 ^^^^^^^^^^^^^^^^^^^^
@@ -328,7 +362,7 @@ points or on all cells of a mesh. These attributes can be accessed in a
 dictionary-like attribute attached to any PyVista mesh accessible as one
 of the following:
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-100
+.. GENERATED FROM PYTHON SOURCE LINES 103-109
 
 Point Data
 ~~~~~~~~~~
@@ -337,7 +371,7 @@ each point of the mesh. Each element in an attribute array corresponds to a
 point in the mesh. Let's create some point data for the beam mesh. When
 plotting, the values between points are interpolated across the cells.
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-104
+.. GENERATED FROM PYTHON SOURCE LINES 109-113
 
 .. code-block:: Python
 
@@ -379,7 +413,7 @@ plotting, the values between points are interpolated across the cells.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-110
+.. GENERATED FROM PYTHON SOURCE LINES 114-119
 
 Cell Data
 ~~~~~~~~~~
@@ -387,7 +421,7 @@ Cell data refers to arrays of values (scalars, vectors, etc.) that live
 throughout each cell of the mesh. That is the entire cell (2D face or 3D
 volume) is assigned the value of that attribute.
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-114
+.. GENERATED FROM PYTHON SOURCE LINES 119-123
 
 .. code-block:: Python
 
@@ -429,13 +463,13 @@ volume) is assigned the value of that attribute.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-118
+.. GENERATED FROM PYTHON SOURCE LINES 124-127
 
 Here's a comparison of point data versus cell data and how point data is
 interpolated across cells when mapping colors. This is unlike cell data
 which has a single value across the cell's domain:
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-131
+.. GENERATED FROM PYTHON SOURCE LINES 127-140
 
 .. code-block:: Python
 
@@ -486,14 +520,14 @@ which has a single value across the cell's domain:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-136
+.. GENERATED FROM PYTHON SOURCE LINES 141-145
 
 Field Data
 ~~~~~~~~~~
 Field data is not directly associated with either the points or cells but
 still should be attached to the mesh. This may be a string array storing notes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-140
+.. GENERATED FROM PYTHON SOURCE LINES 145-149
 
 .. code-block:: Python
 
@@ -517,7 +551,7 @@ still should be attached to the mesh. This may be a string array storing notes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-149
+.. GENERATED FROM PYTHON SOURCE LINES 150-158
 
 Assigning Scalars to a Mesh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -528,7 +562,7 @@ generate cube containing 6 faces and assign each face an integer from
 
 Note how this varies from assigning scalars to each point
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-161
+.. GENERATED FROM PYTHON SOURCE LINES 158-170
 
 .. code-block:: Python
 
@@ -578,7 +612,7 @@ Note how this varies from assigning scalars to each point
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-169
+.. GENERATED FROM PYTHON SOURCE LINES 171-178
 
 .. raw:: html
 
@@ -591,7 +625,7 @@ Note how this varies from assigning scalars to each point
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.800 seconds)
+   **Total running time of the script:** (0 minutes 2.844 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:

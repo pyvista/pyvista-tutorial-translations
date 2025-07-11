@@ -25,12 +25,12 @@ try:
 except ImportError:
     rasterio = None
 
-###############################################################################
+# %%
 path = examples.download_file("topo_clean.vtk")
 topo = pv.read(path)
 topo
 
-###############################################################################
+# %%
 # Load the GeoTIFF/texture (this could take a minute to download)
 # https://dl.dropbox.com/s/bp9j3fl3wbi0fld/downsampled_Geologic_map_on_air_photo.tif?dl=0
 url = "https://dl.dropbox.com/s/bp9j3fl3wbi0fld/downsampled_Geologic_map_on_air_photo.tif?dl=0"
@@ -40,7 +40,7 @@ filename = os.path.join(tempfile.gettempdir(), "downsampled_Geologic_map_on_air_
 open(filename, "wb").write(response.content)  # noqa: SIM115, PTH123
 
 
-###############################################################################
+# %%
 # In the block below, we can use the ``get_gcps`` function to get the
 # Ground Control Points of the raster, however this depends on GDAL. For this
 # tutorial, we are going to hard code the GCPs to avoid having users install
@@ -72,7 +72,7 @@ def get_gcps(filename):
     return origin, point_u, point_v
 
 
-###############################################################################
+# %%
 
 # Fetch the GCPs
 # origin, point_u, point_v = get_gcps(filename)
@@ -82,15 +82,15 @@ origin = [310967.75148705335, 4238841.045453942, 0.0]
 point_u = [358682.9364281533, 4238841.045453942, 0.0]
 point_v = [310967.75148705335, 4276281.98755258, 0.0]
 
-###############################################################################
+# %%
 
 # Use the GCPs to map the texture coordinates onto the topography surface
 topo.texture_map_to_plane(origin, point_u, point_v, inplace=True)
 
-###############################################################################
+# %%
 # Show GCPs in relation to topo surface with texture coordinates displayed
-p = pv.Plotter()
-p.add_point_labels(
+pl = pv.Plotter()
+pl.add_point_labels(
     np.array(
         [
             origin,
@@ -102,26 +102,26 @@ p.add_point_labels(
     point_size=5,
 )
 
-p.add_mesh(topo)
-p.show(cpos="xy")
+pl.add_mesh(topo)
+pl.show(cpos="xy")
 
 
-###############################################################################
+# %%
 # Read the GeoTIFF as a ``Texture`` in PyVista:
 texture = pv.read_texture(filename)
 
 # Now plot the topo surface with the texture draped over it
 # And make window size large for a high-res screenshot
-p = pv.Plotter(window_size=np.array([1024, 768]) * 3)
-p.add_mesh(topo, texture=texture)
-p.camera_position = [
+pl = pv.Plotter(window_size=np.array([1024, 768]) * 3)
+pl.add_mesh(topo, texture=texture)
+pl.camera_position = [
     (337461.4124956896, 4257141.430658634, 2738.4956020899253),
     (339000.40935731295, 4260394.940646875, 1724.0720826501868),
     (0.10526647627366331, 0.2502863297360612, 0.962432190920575),
 ]
-p.show()
+pl.show()
 
-###############################################################################
+# %%
 # .. raw:: html
 #
 #     <center>

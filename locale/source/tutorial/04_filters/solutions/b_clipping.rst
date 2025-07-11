@@ -100,9 +100,9 @@ Clip any dataset by a user defined plane using the
 
  .. code-block:: none
 
-    Help on method clip in module pyvista.core.filters.data_set:
+    Help on method clip in module pyvista.core.filters.data_object:
 
-    clip(normal='x', origin=None, invert=True, value=0.0, inplace=False, return_clipped=False, progress_bar=False, crinkle=False) method of pyvista.core.pointset.PolyData instance
+    clip(normal: 'VectorLike[float] | NormalsLiteral' = 'x', origin: 'VectorLike[float] | None' = None, invert: 'bool' = True, value: 'float' = 0.0, inplace: 'bool' = False, return_clipped: 'bool' = False, progress_bar: 'bool' = False, crinkle: 'bool' = False) method of pyvista.core.pointset.PolyData instance
         Clip a dataset by a plane by specifying the origin and normal.
     
         If no parameters are given the clip will occur in the center
@@ -110,7 +110,7 @@ Clip any dataset by a user defined plane using the
     
         Parameters
         ----------
-        normal : tuple(float) or str, default: 'x'
+        normal : tuple(float) | str, default: 'x'
             Length 3 tuple for the normal vector direction. Can also
             be specified as a string conventional direction such as
             ``'x'`` for ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
@@ -142,7 +142,7 @@ Clip any dataset by a user defined plane using the
     
         Returns
         -------
-        pyvista.PolyData or tuple[pyvista.PolyData]
+        pyvista.PolyData | tuple[pyvista.PolyData]
             Clipped mesh when ``return_clipped=False``,
             otherwise a tuple containing the unclipped and clipped datasets.
     
@@ -221,12 +221,12 @@ Plot the result.
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
-    p.add_mesh(clipped, label="Clipped")
-    p.add_legend()
-    p.camera_position = [(0.24, 0.32, 0.7), (0.02, 0.03, -0.02), (-0.12, 0.93, -0.34)]
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(dataset, style="wireframe", color="blue", label="Input")
+    pl.add_mesh(clipped, label="Clipped")
+    pl.add_legend()
+    pl.camera_position = [(0.24, 0.32, 0.7), (0.02, 0.03, -0.02), (-0.12, 0.93, -0.34)]
+    pl.show()
 
 
 
@@ -300,9 +300,9 @@ First, download an example dataset.
 
  .. code-block:: none
 
-    Help on method clip_box in module pyvista.core.filters.data_set:
+    Help on method clip_box in module pyvista.core.filters.data_object:
 
-    clip_box(bounds=None, invert=True, factor=0.35, progress_bar=False, merge_points=True, crinkle=False) method of pyvista.core.pointset.StructuredGrid instance
+    clip_box(bounds: 'float | VectorLike[float] | pyvista.PolyData | None' = None, invert: 'bool' = True, factor: 'float' = 0.35, progress_bar: 'bool' = False, merge_points: 'bool' = True, crinkle: 'bool' = False) method of pyvista.core.pointset.StructuredGrid instance
         Clip a dataset by a bounding box defined by the bounds.
     
         If no bounds are given, a corner of the dataset bounds will be removed.
@@ -310,7 +310,7 @@ First, download an example dataset.
         Parameters
         ----------
         bounds : sequence[float], optional
-            Length 6 sequence of floats: ``(xmin, xmax, ymin, ymax, zmin, zmax)``.
+            Length 6 sequence of floats: ``(x_min, x_max, y_min, y_max, z_min, z_max)``.
             Length 3 sequence of floats: distances from the min coordinate of
             of the input mesh. Single float value: uniform distance from the
             min coordinate. Length 12 sequence of length 3 sequence of floats:
@@ -413,11 +413,11 @@ Plot the original dataset and the clipped one.
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(dataset, style="wireframe", color="blue", label="Input")
-    p.add_mesh(clipped, label="Clipped")
-    p.add_legend()
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(dataset, style="wireframe", color="blue", label="Input")
+    pl.add_mesh(clipped, label="Clipped")
+    pl.add_legend()
+    pl.show()
 
 
 
@@ -472,10 +472,10 @@ Clip any dataset by an arbitrarily rotated solid box using the
     roi = pv.Cube(center=(0.9e3, 0.2e3, mesh.center[2]), x_length=500, y_length=500, z_length=500)
     roi.rotate_z(33, inplace=True)
 
-    p = pv.Plotter()
-    p.add_mesh(roi, opacity=0.75, color="red")
-    p.add_mesh(mesh, opacity=0.5)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(roi, opacity=0.75, color="red")
+    pl.add_mesh(mesh, opacity=0.5)
+    pl.show()
 
 
 
@@ -521,15 +521,15 @@ Run the box clipping algorithm with the defined box geometry.
 
     extracted = mesh.clip_box(roi, invert=False)
 
-    p = pv.Plotter(shape=(1, 2))
-    p.add_mesh(roi, opacity=0.75, color="red")
-    p.add_mesh(mesh)
-    p.subplot(0, 1)
-    p.add_mesh(extracted)
-    p.add_mesh(roi, opacity=0.75, color="red")
-    p.link_views()
-    p.view_isometric()
-    p.show()
+    pl = pv.Plotter(shape=(1, 2))
+    pl.add_mesh(roi, opacity=0.75, color="red")
+    pl.add_mesh(mesh)
+    pl.subplot(0, 1)
+    pl.add_mesh(extracted)
+    pl.add_mesh(roi, opacity=0.75, color="red")
+    pl.link_views()
+    pl.view_isometric()
+    pl.show()
 
 
 
@@ -653,14 +653,14 @@ Plot comparison
 
 .. code-block:: Python
 
-    p = pv.Plotter(shape=(1, 2))
-    p.add_mesh(clipped, show_edges=True)
-    p.add_mesh(plane.extract_feature_edges(), color="r")
-    p.subplot(0, 1)
-    p.add_mesh(crinkled, show_edges=True)
-    p.add_mesh(plane.extract_feature_edges(), color="r")
-    p.link_views()
-    p.show()
+    pl = pv.Plotter(shape=(1, 2))
+    pl.add_mesh(clipped, show_edges=True)
+    pl.add_mesh(plane.extract_feature_edges(), color="r")
+    pl.subplot(0, 1)
+    pl.add_mesh(crinkled, show_edges=True)
+    pl.add_mesh(plane.extract_feature_edges(), color="r")
+    pl.link_views()
+    pl.show()
 
 
 
@@ -709,7 +709,7 @@ Plot comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.886 seconds)
+   **Total running time of the script:** (0 minutes 1.986 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py:

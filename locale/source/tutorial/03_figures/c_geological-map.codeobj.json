@@ -65,7 +65,16 @@
    "name": "join"
   }
  ],
- "p": [
+ "path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "str"
+  }
+ ],
+ "pl": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -88,7 +97,7 @@
    "name": "Plotter"
   }
  ],
- "p.add_mesh": [
+ "pl.add_mesh": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -216,7 +225,7 @@
    "name": "PickingInterface.add_mesh"
   }
  ],
- "p.add_point_labels": [
+ "pl.add_point_labels": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -344,7 +353,7 @@
    "name": "PickingInterface.add_point_labels"
   }
  ],
- "p.camera_position": [
+ "pl.camera_position": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -472,7 +481,7 @@
    "name": "PickingInterface.camera_position"
   }
  ],
- "p.show": [
+ "pl.show": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -598,15 +607,6 @@
    "module": "pyvista",
    "module_short": "pyvista",
    "name": "PickingInterface.show"
-  }
- ],
- "path": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "builtins",
-   "module_short": "builtins",
-   "name": "str"
   }
  ],
  "point_u": [

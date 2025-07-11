@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -33,17 +33,39 @@ Take a look at the different display options offered by the ``add_mesh`` method.
 
     mesh = examples.load_random_hills()
 
-    p = pv.Plotter()
-    p.add_mesh(mesh)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh)
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_001.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_001.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_001.vtksz
+
 
 
 
@@ -60,7 +82,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
 
 .. code-block:: Python
 
-    help(p.add_mesh)
+    help(pl.add_mesh)
 
 
 
@@ -72,7 +94,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
 
     Help on method add_mesh in module pyvista.plotting.plotter:
 
-    add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None, edge_color=None, point_size=None, line_width=None, opacity=None, flip_scalars=False, lighting=None, n_colors=256, interpolate_before_map=None, cmap=None, label=None, reset_camera=None, scalar_bar_args=None, show_scalar_bar=None, multi_colors=False, name=None, texture=None, render_points_as_spheres=None, render_lines_as_tubes=None, smooth_shading=None, split_sharp_edges=None, ambient=None, diffuse=None, specular=None, specular_power=None, nan_color=None, nan_opacity=1.0, culling=None, rgb=None, categories=False, silhouette=None, use_transparency=False, below_color=None, above_color=None, annotations=None, pickable=True, preference='point', log_scale=False, pbr=None, metallic=None, roughness=None, render=True, component=None, emissive=None, copy_mesh=False, backface_params=None, show_vertices=None, **kwargs) method of pyvista.plotting.plotter.Plotter instance
+    add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None, edge_color=None, point_size=None, line_width=None, opacity=None, flip_scalars=False, lighting=None, n_colors=256, interpolate_before_map=None, cmap=None, label=None, reset_camera=None, scalar_bar_args=None, show_scalar_bar=None, multi_colors=False, name=None, texture=None, render_points_as_spheres=None, render_lines_as_tubes=None, smooth_shading=None, split_sharp_edges=None, ambient=None, diffuse=None, specular=None, specular_power=None, nan_color=None, nan_opacity=1.0, culling=None, rgb=None, categories=False, silhouette=None, use_transparency=False, below_color=None, above_color=None, annotations=None, pickable=True, preference='point', log_scale=False, pbr=None, metallic=None, roughness=None, render=True, user_matrix=None, component=None, emissive=None, copy_mesh=False, backface_params=None, show_vertices=None, edge_opacity=None, **kwargs) -> 'Actor' method of pyvista.plotting.plotter.Plotter instance
         Add any PyVista/VTK mesh or dataset that PyVista can wrap to the scene.
     
         This method is using a mesh representation to view the surfaces
@@ -209,9 +231,14 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             If ``False``, a scalar bar will not be added to the
             scene.
     
-        multi_colors : bool, default: False
+        multi_colors : bool | str | cycler.Cycler | sequence[ColorLike], default: False
             If a :class:`pyvista.MultiBlock` dataset is given this will color
-            each block by a solid color using matplotlib's color cycler.
+            each block by a solid color using a custom cycler.
+    
+            If ``True``, the default 'matplotlib' color cycler is used.
+    
+            See :func:`set_color_cycler<Plotter.set_color_cycler>` for usage of
+            custom color cycles.
     
         name : str, optional
             The name for the added mesh/actor so that it can be easily
@@ -353,6 +380,12 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         render : bool, default: True
             Force a render when ``True``.
     
+        user_matrix : np.ndarray | vtk.vtkMatrix4x4, default: np.eye(4)
+            Matrix passed to the Actor class before rendering. This affects the
+            actor/rendering only, not the input volume itself. The user matrix is the
+            last transformation applied to the actor before rendering. Defaults to the
+            identity matrix.
+    
         component : int, optional
             Set component of vector valued scalars to plot.  Must be
             nonnegative, if supplied. If ``None``, the magnitude of
@@ -393,12 +426,22 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             * ``vertex_style`` - Change style to ``'points_gaussian'``
             * ``vertex_opacity`` - Control the opacity of the vertices
     
+        edge_opacity : float, optional
+            Edge opacity of the mesh. A single float value that will be applied globally
+            edge opacity of the mesh and uniformly applied everywhere - should be
+            between 0 and 1.
+    
+            .. note::
+                `edge_opacity` uses ``SetEdgeOpacity`` as the underlying method which
+                requires VTK version 9.3 or higher. If ``SetEdgeOpacity`` is not
+                available, `edge_opacity` is set to 1.
+    
         **kwargs : dict, optional
             Optional keyword arguments.
     
         Returns
         -------
-        pyvista.plotting.actor.Actor
+        pyvista.Actor
             Actor of the mesh.
     
         Examples
@@ -410,9 +453,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         >>> sphere = pv.Sphere()
         >>> sphere['Data'] = sphere.points[:, 2]
         >>> plotter = pv.Plotter()
-        >>> _ = plotter.add_mesh(
-        ...     sphere, scalar_bar_args={'title': 'Z Position'}
-        ... )
+        >>> _ = plotter.add_mesh(sphere, scalar_bar_args={'title': 'Z Position'})
         >>> plotter.show()
     
         Plot using RGB on a single cell.  Note that since the number of
@@ -429,9 +470,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         ...         [0.5, 0.33, 0.667],
         ...     ]
         ... )
-        >>> faces = np.hstack(
-        ...     [[3, 0, 1, 2], [3, 0, 3, 2], [3, 0, 1, 3], [3, 1, 2, 3]]
-        ... )
+        >>> faces = np.hstack([[3, 0, 1, 2], [3, 0, 3, 2], [3, 0, 1, 3], [3, 1, 2, 3]])
         >>> mesh = pv.PolyData(vertices, faces)
         >>> mesh.cell_data['colors'] = [
         ...     [255, 255, 255],
@@ -487,6 +526,20 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         ...     render_points_as_spheres=False,
         ...     show_scalar_bar=False,
         ... )
+    
+        Plot spheres using `points_gaussian` style and scale them by radius.
+    
+        >>> N_SPHERES = 1_000_000
+        >>> rng = np.random.default_rng(seed=0)
+        >>> pos = rng.random((N_SPHERES, 3))
+        >>> rad = rng.random(N_SPHERES) * 0.01
+        >>> pdata = pv.PolyData(pos)
+        >>> pdata['radius'] = rad
+        >>> pdata.plot(
+        ...     style='points_gaussian',
+        ...     emissive=False,
+        ...     render_points_as_spheres=True,
+        ... )
 
 
 
@@ -500,17 +553,39 @@ Plot that mesh with the edges of cells displayed
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, show_edges=True)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, show_edges=True)
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_002.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_002.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_002.vtksz
+
 
 
 
@@ -525,17 +600,39 @@ color (use a named color!)
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, color="magenta", show_edges=True, edge_color="blue")
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, color="magenta", show_edges=True, edge_color="blue")
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_003.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_003.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_003.vtksz
+
 
 
 
@@ -549,17 +646,39 @@ Display with a points representation style
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, style="points")
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, style="points")
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_004.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_004.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_004.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_004.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_004.vtksz
+
 
 
 
@@ -573,17 +692,39 @@ And adjust the points display size
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, style="points", point_size=10, render_points_as_spheres=True)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, style="points", point_size=10, render_points_as_spheres=True)
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_005.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_005.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_005.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_005.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_005.vtksz
+
 
 
 
@@ -597,17 +738,39 @@ Change the color map and the color limits
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, cmap="terrain", clim=[2, 5])
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, cmap="terrain", clim=[2, 5])
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_006.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_006.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_006.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_006.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_006.vtksz
+
 
 
 
@@ -621,17 +784,39 @@ Add some opacity
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, cmap="terrain", clim=[2, 5], opacity="linear")
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, cmap="terrain", clim=[2, 5], opacity="linear")
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_007.png
-   :alt: a display options
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_007.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_007.png
+        :alt: a display options
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_a_display_options_007.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_a_display_options_007.vtksz
+
 
 
 
@@ -654,7 +839,7 @@ There you go! Those are a few of the most commonly used display options!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.045 seconds)
+   **Total running time of the script:** (0 minutes 3.177 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py:
@@ -677,6 +862,10 @@ There you go! Those are a few of the most commonly used display options!
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_display_options.py <a_display_options.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: a_display_options.zip <a_display_options.zip>`
 
 
 .. only:: html

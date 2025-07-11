@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_tutorial_03_figures_d_gif.py>`
-        to download the full example code or to run this example in your browser via Binder
+        :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_d_gif.py>`
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -30,7 +30,7 @@ Generate a moving gif from an active plotter.
 
 .. GENERATED FROM PYTHON SOURCE LINES 13-56
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -78,11 +78,23 @@ Generate a moving gif from an active plotter.
 
 
 
+
 .. image-sg:: /tutorial/03_figures/images/sphx_glr_d_gif_001.gif
    :alt: d gif
    :srcset: /tutorial/03_figures/images/sphx_glr_d_gif_001.gif
    :class: sphx-glr-single-img
 
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:4892: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the points of a mesh in-place instead.
+      warnings.warn(
+    /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:4814: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the scalars of a mesh in-place instead.
+      warnings.warn(
 
 
 
@@ -100,7 +112,7 @@ Generate a moving gif from an active plotter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.931 seconds)
+   **Total running time of the script:** (0 minutes 2.046 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_d_gif.py:
@@ -109,7 +121,6 @@ Generate a moving gif from an active plotter.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
@@ -117,13 +128,17 @@ Generate a moving gif from an active plotter.
         :alt: Launch binder
         :width: 150 px
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`
+
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: d_gif.py <d_gif.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`
+      :download:`Download zipped: d_gif.zip <d_gif.zip>`
 
 
 .. only:: html

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_solutions_c_edl.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -101,18 +101,40 @@ And now plot this point cloud as-is:
 
 
     # Plot a typical point cloud with no EDL
-    p = pv.Plotter()
-    p.add_mesh(point_cloud, color="tan", point_size=5)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(point_cloud, color="tan", point_size=5)
+    pl.show()
 
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_001.png
-   :alt: c edl
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_001.png
+        :alt: c edl
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_c_edl_001.vtksz
+
 
 
 
@@ -130,19 +152,41 @@ Try plotting that point cloud with Eye-Dome-Lighting yourself below:
 .. code-block:: Python
 
 
-    p = pv.Plotter()
-    p.add_mesh(point_cloud, color="tan", point_size=5)
-    p.enable_eye_dome_lighting()  # Turn on eye dome lighting here
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(point_cloud, color="tan", point_size=5)
+    pl.enable_eye_dome_lighting()  # Turn on eye dome lighting here
+    pl.show()
 
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_002.png
-   :alt: c edl
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_002.png
+        :alt: c edl
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_c_edl_002.vtksz
+
 
 
 
@@ -159,18 +203,40 @@ the ``add_mesh`` call.
 .. code-block:: Python
 
 
-    p = pv.Plotter()
-    p.add_mesh(point_cloud, scalars="Elevation", point_size=5)
-    p.enable_eye_dome_lighting()  # Turn on eye dome lighting here
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(point_cloud, scalars="Elevation", point_size=5)
+    pl.enable_eye_dome_lighting()  # Turn on eye dome lighting here
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_003.png
-   :alt: c edl
-   :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_003.png
+        :alt: c edl
+        :srcset: /tutorial/03_figures/solutions/images/sphx_glr_c_edl_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/03_figures/solutions/images/sphx_glr_c_edl_003.vtksz
+
 
 
 
@@ -189,7 +255,7 @@ the ``add_mesh`` call.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 37.071 seconds)
+   **Total running time of the script:** (0 minutes 32.891 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_c_edl.py:
@@ -212,6 +278,10 @@ the ``add_mesh`` call.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: c_edl.py <c_edl.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: c_edl.zip <c_edl.zip>`
 
 
 .. only:: html

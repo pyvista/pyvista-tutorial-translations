@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_d_contouring.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -80,7 +80,7 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
 
     Help on method contour in module pyvista.core.filters.data_set:
 
-    contour(isosurfaces=10, scalars=None, compute_normals=False, compute_gradients=False, compute_scalars=True, rng=None, preference='point', method='contour', progress_bar=False) method of pyvista.core.pointset.PolyData instance
+    contour(isosurfaces: 'int | Sequence[float]' = 10, scalars: 'str | NumpyArray[float] | None' = None, compute_normals: 'bool' = False, compute_gradients: 'bool' = False, compute_scalars: 'bool' = True, rng: 'VectorLike[float] | None' = None, preference: "Literal['point', 'cell']" = 'point', method: "Literal['contour', 'marching_cubes', 'flying_edges']" = 'contour', progress_bar: 'bool' = False) method of pyvista.core.pointset.PolyData instance
         Contour an input self by an array.
     
         ``isosurfaces`` can be an integer specifying the number of
@@ -158,7 +158,6 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
         ...         - 2 * (a - b) * xyz
         ...         - a * b * xx_yy
         ...     ) ** 2 - 4 * (xx + yy) * (a_xx + b_yy - xyz * (a - b)) ** 2
-        ...
         >>> n = 100
         >>> x_min, y_min, z_min = -1.35, -1.7, -0.65
         >>> grid = pv.ImageData(
@@ -205,19 +204,41 @@ Let's extract 1D iso-lines of a scalar field from a 2D surface mesh.
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh, opacity=0.85)
-    p.add_mesh(contours, color="white", line_width=5)
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(mesh, opacity=0.85)
+    pl.add_mesh(contours, color="white", line_width=5)
+    pl.show()
 
 
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_001.png
-   :alt: d contouring
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_001.png
+        :alt: d contouring
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_d_contouring_001.vtksz
+
 
 
 
@@ -293,23 +314,45 @@ of 50 and 200
 
 .. code-block:: Python
 
-    p = pv.Plotter()
-    p.add_mesh(mesh.outline(), color="k")
-    p.add_mesh(contours, opacity=0.25, clim=[0, 200])
-    p.camera_position = [
+    pl = pv.Plotter()
+    pl.add_mesh(mesh.outline(), color="k")
+    pl.add_mesh(contours, opacity=0.25, clim=[0, 200])
+    pl.camera_position = [
         (-130.99381142132086, 644.4868354828589, 163.80447435848686),
         (125.21748748157661, 123.94368717158413, 108.83283586619626),
         (0.2780372840777734, 0.03547871361794171, 0.9599148553609699),
     ]
-    p.show()
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
-   :alt: d contouring
-   :srcset: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
+        :alt: d contouring
+        :srcset: /tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/solutions/images/sphx_glr_d_contouring_002.vtksz
+
 
 
 
@@ -328,7 +371,7 @@ of 50 and 200
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 9.271 seconds)
+   **Total running time of the script:** (0 minutes 8.691 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_d_contouring.py:
@@ -351,6 +394,10 @@ of 50 and 200
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: d_contouring.py <d_contouring.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: d_contouring.zip <d_contouring.zip>`
 
 
 .. only:: html
