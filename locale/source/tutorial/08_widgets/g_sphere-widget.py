@@ -17,7 +17,7 @@ Let's look at a few use cases that all update a surface mesh.
 
 # sphinx_gallery_thumbnail_number = 3
 
-##############################################################################
+# %%
 # Example A
 # +++++++++
 #
@@ -37,26 +37,26 @@ surf.points = np.array(
 )
 surf.faces = np.array([3, 0, 1, 2])
 
-p = pv.Plotter()
+pl = pv.Plotter()
 
 
 def callback(point) -> None:
     surf.points[0] = point
 
 
-p.add_sphere_widget(callback)
-p.add_mesh(surf, color=True)
+pl.add_sphere_widget(callback)
+pl.add_mesh(surf, color=True)
 
-p.show_grid()
-p.show()
+pl.show_grid()
+pl.show()
 
-##############################################################################
+# %%
 # And here is a screen capture of a user interacting with this
 #
 # .. image:: ../../images/gifs/sphere-widget-a.gif
 
 
-###############################################################################
+# %%
 # Example B
 # +++++++++
 #
@@ -77,25 +77,25 @@ surf.points = np.array(
 surf.faces = np.array([3, 0, 1, 2])
 
 
-p = pv.Plotter()
+pl = pv.Plotter()
 
 
 def callback(point, i) -> None:
     surf.points[i] = point
 
 
-p.add_sphere_widget(callback, center=surf.points)
-p.add_mesh(surf, color=True)
+pl.add_sphere_widget(callback, center=surf.points)
+pl.add_mesh(surf, color=True)
 
-p.show_grid()
-p.show()
+pl.show_grid()
+pl.show()
 
-##############################################################################
+# %%
 # And here is a screen capture of a user interacting with this
 #
 # .. image:: ../../images/gifs/sphere-widget-b.gif
 
-###############################################################################
+# %%
 # Example C
 # +++++++++
 #
@@ -145,28 +145,28 @@ def update_surface(point, i) -> None:
 # Get a list of unique colors for each widget
 colors = get_colors(len(points))
 
-##############################################################################
+# %%
 
 # Begin the plotting routine
-p = pv.Plotter()
+pl = pv.Plotter()
 
 # Add the surface to the scene
-p.add_mesh(surf, color=True)
+pl.add_mesh(surf, color=True)
 
 # Add the widgets which will update the surface
-p.add_sphere_widget(update_surface, center=points, color=colors, radius=3)
+pl.add_sphere_widget(update_surface, center=points, color=colors, radius=3)
 # Add axes grid
-p.show_grid()
+pl.show_grid()
 
 # Show it!
-p.show()
+pl.show()
 
-##############################################################################
+# %%
 # And here is a screen capture of a user interacting with this
 #
 # .. image:: ../../images/gifs/sphere-widget-c.gif
 
-###############################################################################
+# %%
 # .. raw:: html
 #
 #     <center>

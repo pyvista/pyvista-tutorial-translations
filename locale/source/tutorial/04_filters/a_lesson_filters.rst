@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_a_lesson_filters.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -104,20 +104,42 @@ dataset
 .. code-block:: Python
 
 
-    p = pv.Plotter()
-    p.add_mesh(outline, color="k")
-    p.add_mesh(threshed)
-    p.camera_position = [-2, 5, 3]
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(threshed)
+    pl.camera_position = [-2, 5, 3]
+    pl.show()
 
 
 
 
 
-.. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_001.png
-   :alt: a lesson filters
-   :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_001.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_001.png
+        :alt: a lesson filters
+        :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_001.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/images/sphx_glr_a_lesson_filters_001.vtksz
+
 
 
 
@@ -136,37 +158,59 @@ What about other filters? Let's collect a few filter results and compare them:
     slices = dataset.slice_orthogonal()
     glyphs = dataset.glyph(factor=1e-3, geom=pv.Sphere(), orient=False)
 
-    p = pv.Plotter(shape=(2, 2))
+    pl = pv.Plotter(shape=(2, 2))
     # Show the threshold
-    p.add_mesh(outline, color="k")
-    p.add_mesh(threshed, show_scalar_bar=False)
-    p.camera_position = [-2, 5, 3]
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(threshed, show_scalar_bar=False)
+    pl.camera_position = [-2, 5, 3]
     # Show the contour
-    p.subplot(0, 1)
-    p.add_mesh(outline, color="k")
-    p.add_mesh(contours, show_scalar_bar=False)
-    p.camera_position = [-2, 5, 3]
+    pl.subplot(0, 1)
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(contours, show_scalar_bar=False)
+    pl.camera_position = [-2, 5, 3]
     # Show the slices
-    p.subplot(1, 0)
-    p.add_mesh(outline, color="k")
-    p.add_mesh(slices, show_scalar_bar=False)
-    p.camera_position = [-2, 5, 3]
+    pl.subplot(1, 0)
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(slices, show_scalar_bar=False)
+    pl.camera_position = [-2, 5, 3]
     # Show the glyphs
-    p.subplot(1, 1)
-    p.add_mesh(outline, color="k")
-    p.add_mesh(glyphs, show_scalar_bar=False)
-    p.camera_position = [-2, 5, 3]
+    pl.subplot(1, 1)
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(glyphs, show_scalar_bar=False)
+    pl.camera_position = [-2, 5, 3]
 
-    p.link_views()
-    p.show()
-
-
+    pl.link_views()
+    pl.show()
 
 
-.. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.png
-   :alt: a lesson filters
-   :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.png
-   :class: sphx-glr-single-img
+
+
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.png
+        :alt: a lesson filters
+        :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/images/sphx_glr_a_lesson_filters_002.vtksz
+
 
 
 
@@ -213,19 +257,41 @@ And to view this filtered data, simply call the ``plot`` method
 .. code-block:: Python
 
 
-    p = pv.Plotter()
-    p.add_mesh(outline, color="k")
-    p.add_mesh(result, scalars="Elevation")
-    p.view_isometric()
-    p.show()
+    pl = pv.Plotter()
+    pl.add_mesh(outline, color="k")
+    pl.add_mesh(result, scalars="Elevation")
+    pl.view_isometric()
+    pl.show()
 
 
 
 
-.. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_003.png
-   :alt: a lesson filters
-   :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_003.png
-   :class: sphx-glr-single-img
+
+
+
+
+.. tab-set::
+
+
+
+   .. tab-item:: Static Scene
+
+
+
+            
+     .. image-sg:: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_003.png
+        :alt: a lesson filters
+        :srcset: /tutorial/04_filters/images/sphx_glr_a_lesson_filters_003.png
+        :class: sphx-glr-single-img
+     
+
+
+   .. tab-item:: Interactive Scene
+
+
+
+       .. offlineviewer:: /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/doc/source/tutorial/04_filters/images/sphx_glr_a_lesson_filters_003.vtksz
+
 
 
 
@@ -244,7 +310,7 @@ And to view this filtered data, simply call the ``plot`` method
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.095 seconds)
+   **Total running time of the script:** (0 minutes 6.754 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_a_lesson_filters.py:
@@ -267,6 +333,10 @@ And to view this filtered data, simply call the ``plot`` method
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: a_lesson_filters.py <a_lesson_filters.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: a_lesson_filters.zip <a_lesson_filters.zip>`
 
 
 .. only:: html
