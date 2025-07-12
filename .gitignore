@@ -2,6 +2,7 @@
 *.pickle
 *.vtksz
 *.zip
+*.json
 locale/jupyter_execute/*
 locale/pot/*
 tx
