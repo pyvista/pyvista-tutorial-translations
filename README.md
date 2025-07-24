@@ -9,7 +9,6 @@ This is a project to provide pyvista official tutorial with multiple versions an
 ## URLs
 
 - Tutorial pages for each languages:
-
   - https://pyvista.github.io/pyvista-tutorial-ja/
 
 ## How to update po files
