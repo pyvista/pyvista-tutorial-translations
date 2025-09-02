@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-22 00:47+0000\n"
+"POT-Creation-Date: 2025-09-02 00:46+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -3882,7 +3882,7 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py` (``d_pbr.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:36
 msgid "12:38.740"
-msgstr ""
+msgstr "12:38.740"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/sg_execution_times.rst:38
 msgid ":ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py` (``g_orbit.py``)"
@@ -4005,6 +4005,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_d_gif.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:24
 msgid "Create a GIF Movie"
@@ -4036,7 +4038,7 @@ msgstr ":download:`Download Python source code: d_gif.py <d_gif.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:141
 msgid ":download:`Download zipped: d_gif.zip <d_gif.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: d_gif.zip <d_gif.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:13
 msgid ""
