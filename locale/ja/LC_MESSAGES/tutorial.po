@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-02 00:46+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2022-07-24 15:42+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/112279/ja/)\n"
@@ -75,6 +75,8 @@ msgid ""
 "looking for professional support. Reach out to info@pyvista.org and we can "
 "help connect you with the right community experts to tackle your challenges."
 msgstr ""
+"PyVistaは大きなコミュニティを持つオープンソースプロジェクトですが，専門的なサポートを求めているかもしれません． info@pyvista.org"
+" までご連絡ください。課題解決のため、適切なコミュニティの専門家をご紹介いたします。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial.rst:50
 msgid "Tutorial Overview"
@@ -322,7 +324,7 @@ msgstr "**Total running time of the script:** (0 minutes 3.007 seconds)"
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:522
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:189
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:359
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:126
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:124
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:155
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:142
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:116
@@ -405,7 +407,7 @@ msgstr ":download:`Download zipped: a_basic.zip <a_basic.zip>`"
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:544
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:211
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/c_geological-map.rst:381
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:148
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:146
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/a_display_options.rst:177
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/b_lighting_mesh.rst:164
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/c_edl.rst:138
@@ -553,12 +555,17 @@ msgid ""
 "As of July 2025, Over 190+ contributors and `~3.2k Stars "
 "<https://github.com/pyvista/pyvista/stargazers>`_ on GitHub."
 msgstr ""
+"2025年7月現在，GitHubに190人以上のコントリビューターと `~3.2k Stars "
+"<https://github.com/pyvista/pyvista/stargazers>`_ があります．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:42
 msgid ""
 "Used by at least 4.6k other `libraries, examples, and repositories "
 "<https://github.com/pyvista/pyvista/network/dependents>`_ on GitHub."
 msgstr ""
+"GitHubにある他の `libraries, examples, and repositories "
+"<https://github.com/pyvista/pyvista/network/dependents>`_ "
+"で少なくとも4.6k以上使用されています．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/00_intro/index.rst:43
 msgid "Greatly expanded internal presence and continuing support thanks to"
@@ -1663,6 +1670,9 @@ msgstr ""
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:36
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/exercises/sg_execution_times.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:39
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:42
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:45
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/sg_execution_times.rst:36
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/sg_execution_times.rst:39
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/exercises/sg_execution_times.rst:42
@@ -1687,6 +1697,8 @@ msgid ""
 "This section demonstrates how to use PyVista for reading and plotting 3D "
 "data using the `pyvista.examples`_ module and external files."
 msgstr ""
+"このセクションでは， `pyvista.examples`_ "
+"モジュールと外部ファイルを使って，PyVistaで3Dデータを読み込んでプロットする方法を説明します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/01_basic/index.rst:13
 msgid ""
@@ -1945,6 +1957,7 @@ msgid ""
 "points in that mesh. Here we can extract one of the cells from the mesh, "
 "show some information about it, and plot its location among the mesh."
 msgstr ""
+"セルとは，メッシュの接続性またはトポロジーを定義する点間のジオメトリです．上記の例では，セルは線（黒で着色されたエッジ）と接続点（赤で着色された）によって定義されています．例えば，ビームの例におけるセルは，そのメッシュの8つの点の間の領域によって定義されるボクセルである．ここでは，メッシュから1つのセルを取り出し，その情報を表示し，メッシュの中での位置をプロットすることができます．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/a_lesson_mesh.rst:349
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/index.rst:144
@@ -2594,6 +2607,8 @@ msgid ""
 "See "
 "https://docs.pyvista.org/api/readers/_autosummary/pyvista.get_reader#pyvista.get_reader"
 msgstr ""
+"関連項目: "
+"https://docs.pyvista.org/api/readers/_autosummary/pyvista.get_reader#pyvista.get_reader"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:70
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:336
@@ -2652,6 +2667,8 @@ msgid ""
 "We have a gallery of the example datasets available here: "
 "https://docs.pyvista.org/api/examples/dataset_gallery"
 msgstr ""
+"サンプルデータセットのギャラリーはこちらでご覧いただけます: "
+"https://docs.pyvista.org/api/examples/dataset_gallery"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/exercises/e_read-file.rst:138
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:483
@@ -3031,6 +3048,8 @@ msgid ""
 "tri-surface.py>` to download the full example code. or to run this example "
 "in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/d_create-tri-surface.rst:480
 msgid "**Total running time of the script:** (0 minutes 0.979 seconds)"
@@ -3042,6 +3061,8 @@ msgid ""
 "file.py>` to download the full example code. or to run this example in your "
 "browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/02_mesh/solutions/e_read-file.rst:702
 msgid "**Total running time of the script:** (0 minutes 2.354 seconds)"
@@ -3713,6 +3734,8 @@ msgid ""
 "<sphx_glr_download_tutorial_03_figures_bonus_e_labels.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_bonus_e_labels.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:22
 msgid "Label Points"
@@ -3786,7 +3809,7 @@ msgstr ":download:`Download Python source code: e_labels.py <e_labels.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/e_labels.rst:537
 msgid ":download:`Download zipped: e_labels.zip <e_labels.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: e_labels.zip <e_labels.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:13
 msgid ""
@@ -3794,6 +3817,8 @@ msgid ""
 "<sphx_glr_download_tutorial_03_figures_bonus_g_orbit.py>` to download the "
 "full example code. or to run this example in your browser via Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_bonus_g_orbit.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:24
 msgid "Orbiting"
@@ -3808,6 +3833,8 @@ msgid ""
 "The quality of the movie will be better when using "
 "``pl.open_movie('orbit.mp4')`` instead of ``pl.open_gif('orbit.gif')``"
 msgstr ""
+"``pl.open_gif('orbit.gif')`` ではなく， ``pl.open_movie('orbit.mp4')`` "
+"を使うと，ムービーの品質が向上します．"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:33
 msgid ""
@@ -3844,7 +3871,7 @@ msgstr ":download:`Download Python source code: g_orbit.py <g_orbit.py>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/g_orbit.rst:204
 msgid ":download:`Download zipped: g_orbit.zip <g_orbit.zip>`"
-msgstr ""
+msgstr ":download:`Download zipped: g_orbit.zip <g_orbit.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/bonus/index.rst:6
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/index.rst:375
@@ -4024,19 +4051,19 @@ msgstr ""
 "特にスカラーバーでは，\"jittery\" な GIF を避けるために，``lighting=False`` "
 "を使って色空間のサイズを小さくしてください．"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:115
-msgid "**Total running time of the script:** (0 minutes 2.046 seconds)"
-msgstr "**Total running time of the script:** (0 minutes 2.046 seconds)"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:113
+msgid "**Total running time of the script:** (0 minutes 5.112 seconds)"
+msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:133
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:131
 msgid ":download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`"
 msgstr ":download:`Download Jupyter notebook: d_gif.ipynb <d_gif.ipynb>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:137
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:135
 msgid ":download:`Download Python source code: d_gif.py <d_gif.py>`"
 msgstr ":download:`Download Python source code: d_gif.py <d_gif.py>`"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:141
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/d_gif.rst:139
 msgid ":download:`Download zipped: d_gif.zip <d_gif.zip>`"
 msgstr ":download:`Download zipped: d_gif.zip <d_gif.zip>`"
 
@@ -4524,21 +4551,16 @@ msgstr ":ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:9
 msgid ""
-"**00:21.646** total execution time for 4 files **from tutorial/03_figures**:"
+"**00:05.112** total execution time for 4 files **from tutorial/03_figures**:"
 msgstr ""
-"**00:21.646** total execution time for 4 files **from tutorial/03_figures**:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:35
-msgid ""
-":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
-"map.py``)"
-msgstr ""
-":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
-"map.py``)"
+msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
+msgstr ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:36
-msgid "00:13.562"
-msgstr "00:13.562"
+msgid "00:05.112"
+msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:38
 msgid ""
@@ -4548,25 +4570,17 @@ msgstr ""
 ":ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py` "
 "(``a_lesson_figures.py``)"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:39
-msgid "00:04.690"
-msgstr "00:04.690"
-
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:41
-msgid ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
-msgstr ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` (``d_gif.py``)"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:42
-msgid "00:02.046"
-msgstr "00:02.046"
-
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:44
 msgid ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 msgstr ":ref:`sphx_glr_tutorial_03_figures_b_shading.py` (``b_shading.py``)"
 
-#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:45
-msgid "00:01.348"
-msgstr "00:01.348"
+#: ../../pyvista-tutorial/doc/source/tutorial/03_figures/sg_execution_times.rst:44
+msgid ""
+":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
+"map.py``)"
+msgstr ""
+":ref:`sphx_glr_tutorial_03_figures_c_geological-map.py` (``c_geological-"
+"map.py``)"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:13
 msgid ""
@@ -4575,6 +4589,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/03_figures/solutions/a_display_options.rst:79
 msgid ""
@@ -4848,6 +4864,7 @@ msgstr ""
 msgid ""
 ":download:`Download zipped: a_lesson_filters.zip <a_lesson_filters.zip>`"
 msgstr ""
+":download:`Download zipped: a_lesson_filters.zip <a_lesson_filters.zip>`"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/bonus/f_sampling_functions_3d.rst:13
 msgid ""
@@ -5518,6 +5535,8 @@ msgid ""
 "download the full example code. or to run this example in your browser via "
 "Binder"
 msgstr ""
+"完全なサンプルコードをダウンロードしたり、Binderを使ってブラウザでこのサンプルを実行するには、 :ref:`最後に進んでください "
+"<sphx_glr_download_tutorial_04_filters_solutions_d_contouring.py>` 。"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/04_filters/solutions/d_contouring.rst:374
 msgid "**Total running time of the script:** (0 minutes 8.691 seconds)"
@@ -6808,7 +6827,7 @@ msgstr "VTK + WASM"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:24
 msgid "Use WASM local rendering. This requires VTK version greater than 9.3:"
-msgstr ""
+msgstr "WASMローカルレンダリングを使用します。これにはVTKバージョン9.3以上が必要です:"
 
 #: ../../pyvista-tutorial/doc/source/tutorial/06_vtk/d_wasm.rst:231
 msgid ""
