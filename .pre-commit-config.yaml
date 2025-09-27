@@ -11,7 +11,7 @@ repos:
       - id: trailing-whitespace
         exclude: ^(|locale)
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.3
+    rev: 0.34.0
     hooks:
       - id: check-github-workflows
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -20,6 +20,6 @@ repos:
       - id: prettier
         types_or: [yaml, markdown, html, css, scss, javascript]
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.12.1
+    rev: v1.13.0
     hooks:
       - id: zizmor
