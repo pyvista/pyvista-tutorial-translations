@@ -7,12 +7,15 @@ version: 2
 updates:
   - package-ecosystem: "pip" # See documentation for possible values
     directory: "/" # Location of package manifests
-    insecure-external-code-execution: allow
     schedule:
       interval: "daily"
     labels:
       - "dependencies"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
