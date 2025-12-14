@@ -1,5 +1,4 @@
-"""
-Control Scalar Range
+"""Control Scalar Range
 ~~~~~~~~~~~~~~~~~~~~
 
 Extending our simple example to control the color limits of the mapped scalars.

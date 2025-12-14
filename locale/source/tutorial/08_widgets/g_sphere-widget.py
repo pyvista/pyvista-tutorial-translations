@@ -1,5 +1,4 @@
-"""
-Sphere Widget
+"""Sphere Widget
 ~~~~~~~~~~~~~
 
 The sphere widget can be enabled and disabled by the
@@ -33,7 +32,7 @@ surf.points = np.array(
         [-10, -10, -10],
         [10, 10, -10],
         [-10, 10, 0],
-    ]
+    ],
 )
 surf.faces = np.array([3, 0, 1, 2])
 
@@ -72,7 +71,7 @@ surf.points = np.array(
         [-10, -10, -10],
         [10, 10, -10],
         [-10, 10, 0],
-    ]
+    ],
 )
 surf.faces = np.array([3, 0, 1, 2])
 

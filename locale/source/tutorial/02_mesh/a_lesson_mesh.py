@@ -1,5 +1,4 @@
-"""
-Lesson Overview
+"""Lesson Overview
 ~~~~~~~~~~~~~~~
 
 This exercise provides an overview of the example in the initial lesson for you

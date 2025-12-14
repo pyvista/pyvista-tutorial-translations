@@ -1,5 +1,4 @@
-"""
-.. _create_uniform_grid_solution:
+""".. _create_uniform_grid_solution:
 
 Creating a Uniform Grid
 ~~~~~~~~~~~~~~~~~~~~~~~

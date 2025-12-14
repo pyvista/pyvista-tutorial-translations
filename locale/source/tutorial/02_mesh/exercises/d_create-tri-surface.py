@@ -1,5 +1,4 @@
-"""
-.. _triangulated_surface_exercises:
+""".. _triangulated_surface_exercises:
 
 Create Triangulated Surface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

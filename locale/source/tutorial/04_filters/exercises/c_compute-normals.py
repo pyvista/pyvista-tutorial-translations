@@ -1,5 +1,4 @@
-"""
-Computing Surface Normals
+"""Computing Surface Normals
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

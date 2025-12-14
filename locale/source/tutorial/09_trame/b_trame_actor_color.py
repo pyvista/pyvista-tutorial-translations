@@ -1,5 +1,4 @@
-"""
-Control the Color of an Actor
+"""Control the Color of an Actor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Extending our simple example to have a dropdown menu to control the color of

@@ -1,5 +1,4 @@
-"""
-.. _ref_geometric_example:
+""".. _ref_geometric_example:
 
 Create Basic Geometric Objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

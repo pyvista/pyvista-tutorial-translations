@@ -1,5 +1,4 @@
-"""
-Simple Trame App
+"""Simple Trame App
 ~~~~~~~~~~~~~~~~
 
 A simple example of how to create a Trame app with a PyVista Plotter.

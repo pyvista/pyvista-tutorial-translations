@@ -1,6 +1,5 @@
 # Getting started with PyVista and Trame
-"""
-Getting started
+"""Getting started
 ~~~~~~~~~~~~~~~
 
 Getting started with PyVista and Trame

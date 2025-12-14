@@ -1,5 +1,4 @@
-"""
-Geological Map on Topography
+"""Geological Map on Topography
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Texture mapping for a GeoTIFF on a topography surface.
@@ -48,8 +47,7 @@ open(filename, "wb").write(response.content)  # noqa: SIM115, PTH123
 
 
 def get_gcps(filename):
-    """
-    Helper function retrieves the Ground Control
+    """Helper function retrieves the Ground Control
     Points of a GeoTIFF. Note that this requires gdal.
     """
     if rasterio is None:
@@ -96,7 +94,7 @@ pl.add_point_labels(
             origin,
             point_u,
             point_v,
-        ]
+        ],
     ),
     ["Origin", "Point U", "Point V"],
     point_size=5,

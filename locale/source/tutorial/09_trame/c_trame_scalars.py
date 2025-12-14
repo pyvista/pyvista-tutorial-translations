@@ -1,5 +1,4 @@
-"""
-Control Scalar Array
+"""Control Scalar Array
 ~~~~~~~~~~~~~~~~~~~~
 
 Extending our simple example to have a dropdown menu to control which

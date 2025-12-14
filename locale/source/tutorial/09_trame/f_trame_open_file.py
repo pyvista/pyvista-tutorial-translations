@@ -1,5 +1,4 @@
-"""
-Open Mesh File
+"""Open Mesh File
 ~~~~~~~~~~~~~~
 
 An example of opening a mesh file from the browser and viewing it with PyVista.
@@ -55,12 +54,17 @@ with SinglePageLayout(server) as layout:
             style="max-width: 300px;",
         )
         vuetify3.VProgressLinear(
-            indeterminate=True, absolute=True, bottom=True, active=("trame__busy",)
+            indeterminate=True,
+            absolute=True,
+            bottom=True,
+            active=("trame__busy",),
         )
 
     with layout.content:  # noqa: SIM117
         with vuetify3.VContainer(
-            fluid=True, classes="pa-0 fill-height", style="position: relative;"
+            fluid=True,
+            classes="pa-0 fill-height",
+            style="position: relative;",
         ):
             view = plotter_ui(pl)
             ctrl.view_update = view.update

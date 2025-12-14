@@ -1,5 +1,4 @@
-"""
-.. _basic_lesson:
+""".. _basic_lesson:
 
 Basic Usage Lesson
 ==================

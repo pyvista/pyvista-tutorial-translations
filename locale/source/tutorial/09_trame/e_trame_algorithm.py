@@ -1,5 +1,4 @@
-"""
-Using VTK, PyVista, and Trame
+"""Using VTK, PyVista, and Trame
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This example demonstrates how to use VTK, PyVista, and Trame together
