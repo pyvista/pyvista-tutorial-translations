@@ -1,0 +1,63 @@
+# Ruff configuration file
+# https://docs.astral.sh/ruff/
+
+# Exclude common directories
+exclude = [
+    ".git",
+    ".github",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+    "locale/source/tutorial",
+]
+
+# Set the line length to 100 characters
+line-length = 100
+
+# Assume Python 3.11
+target-version = "py311"
+
+[lint]
+# Enable all rules for comprehensive code quality checks
+select = ["ALL"]
+
+# Allow fix for all enabled rules (when `--fix` is provided)
+# Note: Security rules (S) are excluded from auto-fix for safety
+fixable = ["ALL"]
+unfixable = ["S"]
+
+# Allow unused variables when underscore-prefixed
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[format]
+# Use double quotes for strings
+quote-style = "double"
+
+# Indent with spaces, rather than tabs
+indent-style = "space"
+
+# Respect magic trailing commas
+skip-magic-trailing-comma = false
+
+# Automatically detect the appropriate line ending
+line-ending = "auto"
+
+[lint.isort]
+# Allow multiple imports on a single line (e.g., from foo import bar, baz)
+force-single-line = false
+
+# Combine multiple `from foo import ...` statements for the same module
+combine-as-imports = true
+
+[lint.pydocstyle]
+# Use Google-style docstrings
+convention = "google"
+
+[lint.mccabe]
+# Maximum allowed complexity
+max-complexity = 10
