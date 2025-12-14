@@ -1,4 +1,5 @@
-"""Clipping with Planes & Boxes
+"""
+Clipping with Planes & Boxes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Clip/cut any dataset using using planes or boxes.

@@ -1,4 +1,5 @@
-"""Creating a Uniform Grid
+"""
+Creating a Uniform Grid
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a simple uniform grid from a 3D NumPy array of values.
@@ -98,7 +99,7 @@ arr.shape
 
 vol = pv.ImageData()
 vol.dimensions = arr.shape
-vol["array"] = arr.ravel(order="F")
+vol['array'] = arr.ravel(order="F")
 
 ###############################################################################
 vol.plot()

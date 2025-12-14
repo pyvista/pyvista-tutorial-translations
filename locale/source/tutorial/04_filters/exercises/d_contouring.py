@@ -1,4 +1,5 @@
-"""Contouring
+"""
+Contouring
 ~~~~~~~~~~
 
 Generate iso-lines or -surfaces for the scalars of a surface or volume.

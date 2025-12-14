@@ -1,4 +1,5 @@
-"""VTK + WASM
+"""
+VTK + WASM
 ~~~~~~~~~~
 
 Use WASM local rendering. This requires VTK version greater than 9.3:
@@ -168,9 +169,7 @@ class App:
                 ),
             ):
                 with vuetify.VContainer(
-                    fluid=True,
-                    classes="pa-0 fill-height",
-                    style="width: 50%;",
+                    fluid=True, classes="pa-0 fill-height", style="width: 50%;"
                 ):
                     self.view_local = vtklocal.LocalView(
                         self.render_window,
@@ -178,9 +177,7 @@ class App:
                     )
                     self.ctrl.view_update = self.view_local.update
                 with vuetify.VContainer(
-                    fluid=True,
-                    classes="pa-0 fill-height",
-                    style="width: 50%;",
+                    fluid=True, classes="pa-0 fill-height", style="width: 50%;"
                 ):
                     self.view_remote = VtkRemoteView(self.render_window, interactive_ratio=1)
 

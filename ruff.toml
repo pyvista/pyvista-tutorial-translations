@@ -13,6 +13,7 @@ exclude = [
     "build",
     "dist",
     "venv",
+    "locale/source/tutorial",
 ]
 
 # Set the line length to 100 characters

@@ -1,4 +1,5 @@
-"""Using VTK Algorithms
+"""
+Using VTK Algorithms
 ~~~~~~~~~~~~~~~~~~~~
 
 In this exercise, you will use a VTK Algorithm directly to filter a PyVista mesh.

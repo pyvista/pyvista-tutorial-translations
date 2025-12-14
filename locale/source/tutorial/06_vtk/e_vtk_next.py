@@ -1,4 +1,5 @@
-"""VTK's Next Generation API
+"""
+VTK's Next Generation API
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This requires a pre-release version of VTK:
@@ -42,9 +43,7 @@ def build_magnetic_coils(mesh, current=1000):
 
     # Extract blocks under the "coils" node.
     coil_extractor = vtkExtractBlockUsingDataAssembly(
-        assembly_name="Assembly",
-        selector="//coils",
-        input_data=mesh,
+        assembly_name="Assembly", selector="//coils", input_data=mesh
     )
     coil_extractor.Update()
 
@@ -163,7 +162,7 @@ class vtkTimerCallback:  # noqa: N801
     def __init__(self, sphere, window, nsteps=10) -> None:
         half_nsteps = int(nsteps / 2)
         self.radii = cycle(
-            np.append(np.linspace(0, 0.8, half_nsteps), np.linspace(0.8, 0, half_nsteps)),
+            np.append(np.linspace(0, 0.8, half_nsteps), np.linspace(0.8, 0, half_nsteps))
         )
         self.sphere = sphere
         self.window = window

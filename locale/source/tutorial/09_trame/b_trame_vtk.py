@@ -1,4 +1,5 @@
-"""Using VTK/PyVista and Trame
+"""
+Using VTK/PyVista and Trame
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this application, we will connect a VTK filter with PyVista.
@@ -12,7 +13,8 @@ import pyvista as pv
 from pyvista import examples
 from trame.app import get_server
 from trame.ui.vuetify3 import VAppLayout
-from trame.widgets import vtk as vtk_widgets, vuetify3 as v3
+from trame.widgets import vtk as vtk_widgets
+from trame.widgets import vuetify3 as v3
 from vtkmodules.vtkFiltersGeneral import vtkWarpScalar
 
 mesh = examples.load_random_hills()

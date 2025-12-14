@@ -1,4 +1,5 @@
-""".. _create_uniform_grid_exercise:
+"""
+.. _create_uniform_grid_exercise:
 
 Creating a Uniform Grid
 ~~~~~~~~~~~~~~~~~~~~~~~

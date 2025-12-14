@@ -1,4 +1,5 @@
-""".. _load_examples_solution:
+"""
+.. _load_examples_solution:
 
 Download and Plot Examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
