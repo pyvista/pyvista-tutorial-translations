@@ -87,8 +87,9 @@ select = [
 ]
 
 # Allow fix for all enabled rules (when `--fix` is provided)
+# Note: Security rules (S) are excluded from auto-fix for safety
 fixable = ["ALL"]
-unfixable = []
+unfixable = ["S"]
 
 # Allow unused variables when underscore-prefixed
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
@@ -107,7 +108,7 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [lint.isort]
-# Use a single line for each import
+# Allow multiple imports on a single line (e.g., from foo import bar, baz)
 force-single-line = false
 
 # Combine multiple `from foo import ...` statements for the same module
