@@ -1,7 +1,10 @@
 name: pyvista-tutorial-auto-update
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Monthly: the only meaningful input is the upstream English tutorial,
+    # which changes slowly. A daily full gallery rebuild was pure waste.
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -84,8 +87,13 @@ jobs:
           git config --global user.email $GITHUB_REPOSITORY
           git config --global user.name $GITHUB_REPOSITORY
           git add .
-          git commit --allow-empty -m "[ci skip] $JOB_ID
+          # Only commit/push when the translation memory actually changed.
+          # No more daily empty/binary-churn commits.
+          if git diff --cached --quiet; then
+            echo "No translation changes; nothing to commit."
+            exit 0
+          fi
+          git commit -m "[ci skip] $JOB_ID
           $HTML_URL"
-          git remote -v
           git remote add github git@github.com:$GITHUB_REPOSITORY.git
           git push github main
