@@ -511,7 +511,7 @@ automatically loaded right into Python.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f5bfc3bd000)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f2f722e1360)
       N Cells:    351536
       N Points:   178091
       N Strips:   0
@@ -556,7 +556,7 @@ automatically loaded right into Python.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(2.7415754795074463, 78.46798706054688, 0.0, 79.6875, 0.0, 99.609375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [2.742e+00, 7.847e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 7.969e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 9.961e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 351,536</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-c8a178e3-06c6-4893-a13b-fc96581ad4f7' class='pv-section-summary-in' type='checkbox' checked /><label for='section-c8a178e3-06c6-4893-a13b-fc96581ad4f7' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Unnamed_0</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Unnamed_0' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(2.7415754795074463, 78.46798706054688, 0.0, 79.6875, 0.0, 99.609375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [2.742e+00, 7.847e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 7.969e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 9.961e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 351,536</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-cb470381-4ae2-46b2-bab0-dc56b6d64f31' class='pv-section-summary-in' type='checkbox' checked /><label for='section-cb470381-4ae2-46b2-bab0-dc56b6d64f31' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Unnamed_0</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Unnamed_0' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1065,7 +1065,7 @@ Download the bolt dataset. This is an excellent dataset to visualize using
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>MultiBlock (0x7f5c194a26e0)
+    </style><pre class='pv-text-repr-fallback'>MultiBlock (0x7f2f80a167a0)
       N Blocks:   2
       X Bounds:   0.000e+00, 6.900e+01
       Y Bounds:   0.000e+00, 1.220e+02
@@ -1119,7 +1119,7 @@ Download the bolt dataset. This is an excellent dataset to visualize using
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 69.0, 0.0, 122.0, 0.0, 65.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 6.900e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 1.220e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 6.500e+01]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-2b3d2579-3586-4f38-b18a-fb8ee87eade5' class='pv-section-summary-in' type='checkbox' checked /><label for='section-2b3d2579-3586-4f38-b18a-fb8ee87eade5' class='pv-section-summary' title='Expand/collapse section'>Blocks: <span>(2)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-children-list'><li><span class='pv-child-name'>bolt</span><span class='pv-child-type'>ImageData</span><span class='pv-child-detail'>568,260 pts · 547,170 cells · 555 KiB</span></li><li><span class='pv-child-name'>nut</span><span class='pv-child-type'>ImageData</span><span class='pv-child-detail'>164,492 pts · 155,440 cells · 161 KiB</span></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 69.0, 0.0, 122.0, 0.0, 65.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 6.900e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 1.220e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 6.500e+01]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-b9a14865-1c4a-44ac-9304-9af28f12f4ad' class='pv-section-summary-in' type='checkbox' checked /><label for='section-b9a14865-1c4a-44ac-9304-9af28f12f4ad' class='pv-section-summary' title='Expand/collapse section'>Blocks: <span>(2)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-children-list'><li><span class='pv-child-name'>bolt</span><span class='pv-child-type'>ImageData</span><span class='pv-child-detail'>568,260 pts · 547,170 cells · 555 KiB</span></li><li><span class='pv-child-name'>nut</span><span class='pv-child-type'>ImageData</span><span class='pv-child-detail'>164,492 pts · 155,440 cells · 161 KiB</span></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1311,7 +1311,7 @@ https://www.thingiverse.com/thing:5412753
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.314 seconds)
+   **Total running time of the script:** (0 minutes 4.014 seconds)
 
 
 .. _sphx_glr_download_tutorial_01_basic_solutions_a_load_examples_solution.py:
