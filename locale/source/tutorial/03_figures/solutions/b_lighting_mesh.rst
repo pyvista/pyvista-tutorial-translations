@@ -298,7 +298,7 @@ For detailed control over lighting conditions in general see the
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/solutions/b_lighting_mesh.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/solutions/b_lighting_mesh.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -306,7 +306,7 @@ For detailed control over lighting conditions in general see the
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 9.039 seconds)
+   **Total running time of the script:** (0 minutes 7.013 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_b_lighting_mesh.py:
@@ -318,7 +318,7 @@ For detailed control over lighting conditions in general see the
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/b_lighting_mesh.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/b_lighting_mesh.ipynb
         :alt: Launch binder
         :width: 150 px
 

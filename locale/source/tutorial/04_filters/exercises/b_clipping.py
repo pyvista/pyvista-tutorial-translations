@@ -105,7 +105,7 @@ pl.show()
 #
 # This option is available for :func:`pyvista.DataSetFilters.clip`,
 # :func:`pyvista.DataSetFilters.clip_box`, and
-# :func:`pyvista.DataSetFilters.clip_sruface`, but not available when clipping
+# :func:`pyvista.DataSetFilters.clip_surface`, but not available when clipping
 # by scalar in :func:`pyvista.DataSetFilters.clip_scalar`.
 
 # Input mesh
@@ -139,7 +139,7 @@ pl.show()
 # .. raw:: html
 #
 #     <center>
-#       <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/04_filters/exercises/b_clipping.ipynb">
+#       <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/04_filters/exercises/b_clipping.ipynb">
 #         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
 #       </a>
 #     </center>

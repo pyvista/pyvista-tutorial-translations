@@ -256,7 +256,7 @@ Only needed at first execution
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/d_wasm.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/06_vtk/d_wasm.ipynb
         :alt: Launch binder
         :width: 150 px
 

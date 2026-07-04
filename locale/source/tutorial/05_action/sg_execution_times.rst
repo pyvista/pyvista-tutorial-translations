@@ -1,12 +1,12 @@
 
 :orphan:
 
-.. _sphx_glr_tutorial_04_filters_solutions_sg_execution_times:
+.. _sphx_glr_tutorial_05_action_sg_execution_times:
 
 
 Computation times
 =================
-**00:45.442** total execution time for 4 files **from tutorial/04_filters/solutions**:
+**00:00.000** total execution time for 0 files **from tutorial/05_action**:
 
 .. container::
 
@@ -32,15 +32,6 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py` (``c_compute-normals.py``)
-     - 00:35.125
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py` (``d_contouring.py``)
-     - 00:07.802
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py` (``b_clipping.py``)
-     - 00:01.552
-     - 0.0
-   * - :ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py` (``e_glyphs.py``)
-     - 00:00.963
-     - 0.0
+   * - N/A
+     - N/A
+     - N/A

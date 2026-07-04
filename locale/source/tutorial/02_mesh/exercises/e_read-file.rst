@@ -61,7 +61,7 @@ See https://docs.pyvista.org/api/readers/_autosummary/pyvista.get_reader#pyvista
 
 .. code-block:: Python
 
-    help(pv.core.utilities.reader.get_reader)
+    help(pv.get_reader)
 
 
 
@@ -208,7 +208,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/exercises/e_read-file.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/02_mesh/exercises/e_read-file.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -223,7 +223,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/exercises/e_read-file.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/02_mesh/exercises/e_read-file.ipynb
         :alt: Launch binder
         :width: 150 px
 

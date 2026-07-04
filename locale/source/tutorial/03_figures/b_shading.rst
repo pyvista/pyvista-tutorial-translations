@@ -298,7 +298,7 @@ physically based rendering as well.
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/b_shading.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/b_shading.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -306,7 +306,7 @@ physically based rendering as well.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.348 seconds)
+   **Total running time of the script:** (0 minutes 1.009 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_b_shading.py:
@@ -318,7 +318,7 @@ physically based rendering as well.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/b_shading.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/b_shading.ipynb
         :alt: Launch binder
         :width: 150 px
 

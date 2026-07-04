@@ -145,26 +145,492 @@ Assign the data to the cell data. Be sure to flatten the data for
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table style='width: 100%;'>
-    <tr><th>ImageData</th><th>Information</th></tr>
-    <tr><td>N Cells</td><td>1000</td></tr>
-    <tr><td>N Points</td><td>1386</td></tr>
-    <tr><td>X Bounds</td><td>1.000e+02, 1.200e+02</td></tr>
-    <tr><td>Y Bounds</td><td>3.300e+01, 5.800e+01</td></tr>
-    <tr><td>Z Bounds</td><td>5.560e+01, 7.560e+01</td></tr>
-    <tr><td>Dimensions</td><td>21, 6, 11</td></tr>
-    <tr><td>Spacing</td><td>1.000e+00, 5.000e+00, 2.000e+00</td></tr>
-    <tr><td>N Arrays</td><td>1</td></tr>
-    </table>
+    <div><style>/* PyVista HTML repr stylesheet.
+     * Uses pv- prefix to avoid conflicts with other libraries.
+     */
 
-    </td><td>
-    <table style='width: 100%;'>
-    <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
-    <tr><td><b>values</b></td><td>Cells</td><td>float64</td><td>1</td><td>0.000e+00</td><td>1.000e+01</td></tr>
-    </table>
+    :root {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-border-color: var(--jp-border-color2, #e0e0e0);
+      --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --pv-badge-active: #1b5e20;
+      --pv-badge-normals: #0d47a1;
+      --pv-badge-vectors: #00695c;
+      --pv-badge-tcoords: #4527a0;
+    }
 
-    </td></tr> </table>
+    body[data-jp-theme-light="false"] {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-border-color: var(--jp-border-color2, #424242);
+      --pv-disabled-color: var(--jp-layout-color3, #616161);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    html[theme="dark"],
+    html[data-theme="dark"],
+    body[data-theme="dark"],
+    body.vscode-dark {
+      --pv-font-color0: rgba(255, 255, 255, 1);
+      --pv-font-color2: rgba(255, 255, 255, 0.54);
+      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-border-color: #424242;
+      --pv-disabled-color: #616161;
+      --pv-background-color-row-even: #1a1a1a;
+      --pv-background-color-row-odd: #252525;
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) {
+        --pv-font-color0: rgba(255, 255, 255, 1);
+        --pv-font-color2: rgba(255, 255, 255, 0.54);
+        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-border-color: #424242;
+        --pv-disabled-color: #616161;
+        --pv-background-color-row-even: #1a1a1a;
+        --pv-background-color-row-odd: #252525;
+        --pv-badge-active: #66bb6a;
+        --pv-badge-normals: #64b5f6;
+        --pv-badge-vectors: #4db6ac;
+        --pv-badge-tcoords: #b39ddb;
+      }
+    }
+
+    .pv-wrap {
+      display: block !important;
+      min-width: 300px;
+      max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
+      font-family: var(--jp-ui-font-family, sans-serif);
+      font-size: var(--jp-ui-font-size1, 13px);
+      color: var(--pv-font-color0);
+    }
+
+    .pv-text-repr-fallback {
+      display: none;
+    }
+
+    /* Header */
+    .pv-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: solid 1px var(--pv-border-color);
+      margin-bottom: 4px;
+    }
+
+    .pv-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .pv-obj-type {
+      font-weight: 600;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-header-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: var(--pv-font-color2);
+      border: 1px solid var(--pv-border-color);
+      white-space: nowrap;
+    }
+
+    /* Metadata (always-visible key-value rows) */
+    .pv-metadata {
+      margin: 4px 0 6px 0;
+      font-size: 0.92em;
+      line-height: 1.5;
+    }
+
+    .pv-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px 14px;
+      padding: 1px 0;
+    }
+
+    .pv-meta-row-label {
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .pv-meta-entry {
+      white-space: nowrap;
+    }
+
+    /* Copy-to-clipboard button */
+    .pv-copy-btn {
+      display: inline-block;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size: 0.85em;
+      padding: 0 3px;
+      vertical-align: middle;
+      transition: opacity 0.15s;
+      user-select: none;
+      border: none;
+      background: none;
+      color: var(--pv-font-color3);
+    }
+
+    .pv-copy-btn:hover {
+      opacity: 1;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-meta-label {
+      color: var(--pv-font-color3);
+      font-weight: 400;
+      padding-right: 2px;
+    }
+
+    /* Sections grid */
+    .pv-sections {
+      padding-left: 0 !important;
+      display: grid;
+      grid-template-columns: 150px auto auto auto 1fr 20px 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      list-style: none;
+    }
+
+    .pv-section-item {
+      display: contents;
+    }
+
+    /* Hidden checkbox for expand/collapse */
+    .pv-section-item > input {
+      display: block;
+      opacity: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .pv-section-item > input + label {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-item > input:enabled + label {
+      cursor: pointer;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-section-item > input:enabled + label:hover {
+      color: var(--pv-font-color0);
+    }
+
+    /* Section summary (left column label) */
+    .pv-section-summary {
+      grid-column: 1;
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pv-section-summary > span {
+      display: inline-block;
+      padding-left: 0.3em;
+    }
+
+    .pv-section-summary-in:disabled + label {
+      color: var(--pv-font-color2);
+    }
+
+    /* Expand/collapse arrows */
+    .pv-section-summary-in + label:before {
+      display: inline-block;
+      content: "\25b6";
+      font-size: 11px;
+      width: 15px;
+      text-align: center;
+    }
+
+    .pv-section-summary-in:disabled + label:before {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-summary-in:checked + label:before {
+      content: "\25bc";
+    }
+
+    .pv-section-summary-in:checked + label > span {
+      display: none;
+    }
+
+    .pv-section-summary,
+    .pv-section-inline-details {
+      padding-top: 4px;
+    }
+
+    .pv-section-inline-details {
+      grid-column: 2 / -1;
+    }
+
+    .pv-section-details {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      margin-bottom: 5px;
+    }
+
+    .pv-section-summary-in ~ .pv-section-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-inline-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details {
+      display: block;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details:has(.pv-var-list) {
+      display: contents;
+    }
+
+    /* Variable (array) list */
+    .pv-var-list,
+    .pv-var-item {
+      display: contents;
+    }
+
+    .pv-var-item > div,
+    .pv-var-item label,
+    .pv-var-item > .pv-var-name span {
+      background-color: var(--pv-background-color-row-even);
+      border-color: var(--pv-background-color-row-odd);
+      margin-bottom: 0;
+      padding-top: 2px;
+    }
+
+    .pv-var-list > li:nth-child(odd) > div,
+    .pv-var-list > li:nth-child(odd) > label,
+    .pv-var-list > li:nth-child(odd) > .pv-var-name span {
+      background-color: var(--pv-background-color-row-odd);
+      border-color: var(--pv-background-color-row-even);
+    }
+
+    .pv-var-name {
+      grid-column: 1;
+    }
+
+    .pv-var-dims {
+      grid-column: 2;
+    }
+
+    .pv-var-dtype {
+      grid-column: 3;
+      text-align: right;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-var-range {
+      grid-column: 4;
+      color: var(--pv-font-color3);
+      font-size: 0.92em;
+    }
+
+    .pv-var-badges {
+      grid-column: 5;
+      padding-left: 8px;
+    }
+
+    .pv-var-name,
+    .pv-var-dims,
+    .pv-var-dtype,
+    .pv-var-range {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+    }
+
+    .pv-var-name:hover,
+    .pv-var-dims:hover,
+    .pv-var-dtype:hover,
+    .pv-var-range:hover {
+      overflow: visible;
+      width: auto;
+      z-index: 1;
+    }
+
+    .pv-var-name span {
+      padding-left: 25px !important;
+    }
+
+    .pv-var-name-active span {
+      font-weight: 600;
+    }
+
+    /* Badges */
+    .pv-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .pv-badge-active {
+      color: var(--pv-badge-active);
+      border: 1px solid var(--pv-badge-active);
+    }
+
+    .pv-badge-normals {
+      color: var(--pv-badge-normals);
+      border: 1px solid var(--pv-badge-normals);
+    }
+
+    .pv-badge-vectors {
+      color: var(--pv-badge-vectors);
+      border: 1px solid var(--pv-badge-vectors);
+    }
+
+    .pv-badge-tcoords {
+      color: var(--pv-badge-tcoords);
+      border: 1px solid var(--pv-badge-tcoords);
+    }
+
+    /* Logo and Icons */
+    .pv-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pv-brand-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-brand-logo svg {
+      height: 20px;
+      width: auto;
+    }
+
+    /* Children list (MultiBlock / PartitionedDataSet) */
+    .pv-children-list {
+      padding-left: 25px !important;
+      list-style: none;
+    }
+
+    .pv-children-list li {
+      padding: 1px 0;
+    }
+
+    .pv-child-name {
+      font-weight: 500;
+    }
+
+    .pv-child-type {
+      color: var(--pv-font-color2);
+      font-style: italic;
+    }
+
+    .pv-child-type:before {
+      content: "\00b7";
+      padding: 0 6px;
+      font-style: normal;
+    }
+
+    .pv-child-detail {
+      color: var(--pv-font-color3);
+      font-size: 0.9em;
+    }
+
+    .pv-child-detail:not(:empty):before {
+      content: "\00b7";
+      padding: 0 6px;
+    }
+    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f5c08ff1de0)
+      N Cells:      1000
+      N Points:     1386
+      X Bounds:     1.000e+02, 1.200e+02
+      Y Bounds:     3.300e+01, 5.800e+01
+      Z Bounds:     5.560e+01, 7.560e+01
+      Dimensions:   21, 6, 11
+      Spacing:      1.000e+00, 5.000e+00, 2.000e+00
+      N Arrays:     1</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <linearGradient id="pv-id-top" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#376fa0"/>
+        </linearGradient>
+        <linearGradient id="pv-id-left" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#376fa0"/>
+          <stop offset="100%" stop-color="#1a4a70"/>
+        </linearGradient>
+        <linearGradient id="pv-id-right" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#d4442a"/>
+        </linearGradient>
+      </defs>
+      <polygon points="16,2 28,8 16,14 4,8" fill="url(#pv-id-top)"/>
+      <polygon points="4,8 16,14 16,28 4,22" fill="url(#pv-id-left)"/>
+      <polygon points="28,8 16,14 16,28 28,22" fill="url(#pv-id-right)"/>
+      <g stroke="rgba(255,255,255,0.45)" stroke-width="0.4" fill="none">
+        <polygon points="16,2 28,8 16,14 4,8"/>
+        <line x1="16" y1="14" x2="16" y2="28"/>
+        <line x1="4" y1="8" x2="4" y2="22"/>
+        <line x1="28" y1="8" x2="28" y2="22"/>
+        <line x1="4" y1="22" x2="16" y2="28"/>
+        <line x1="28" y1="22" x2="16" y2="28"/>
+        <line x1="12" y1="4" x2="24" y2="10"/>
+        <line x1="8" y1="6" x2="20" y2="12"/>
+        <line x1="20" y1="4" x2="8" y2="10"/>
+        <line x1="24" y1="6" x2="12" y2="12"/>
+        <line x1="4" y1="12.67" x2="16" y2="18.67"/>
+        <line x1="4" y1="17.33" x2="16" y2="23.33"/>
+        <line x1="8" y1="10" x2="8" y2="24"/>
+        <line x1="12" y1="12" x2="12" y2="26"/>
+        <line x1="28" y1="12.67" x2="16" y2="18.67"/>
+        <line x1="28" y1="17.33" x2="16" y2="23.33"/>
+        <line x1="24" y1="10" x2="24" y2="24"/>
+        <line x1="20" y1="12" x2="20" y2="26"/>
+      </g>
+    </svg>
+    </span><div class='pv-header-text'><div class='pv-obj-type'>ImageData <span class='pv-header-badge'>1,386 points</span> <span class='pv-header-badge'>1,000 cells</span> <span class='pv-header-badge'>8 KiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
+      <text x="0" y="18" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" font-style="italic" letter-spacing="-0.5">
+        <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
+      </text>
+    </svg>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 120.0, 33.0, 58.0, 55.6, 75.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.200e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.800e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.560e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 21 x 6 x 11</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-7379766d-adce-4008-b1ac-2a7cf74c4688' class='pv-section-summary-in' type='checkbox' checked /><label for='section-7379766d-adce-4008-b1ac-2a7cf74c4688' class='pv-section-summary' title='Expand/collapse section'>Cell Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -286,26 +752,492 @@ Add the data values to the cell data
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table style='width: 100%;'>
-    <tr><th>ImageData</th><th>Information</th></tr>
-    <tr><td>N Cells</td><td>684</td></tr>
-    <tr><td>N Points</td><td>1000</td></tr>
-    <tr><td>X Bounds</td><td>1.000e+02, 1.190e+02</td></tr>
-    <tr><td>Y Bounds</td><td>3.300e+01, 5.300e+01</td></tr>
-    <tr><td>Z Bounds</td><td>5.560e+01, 7.360e+01</td></tr>
-    <tr><td>Dimensions</td><td>20, 5, 10</td></tr>
-    <tr><td>Spacing</td><td>1.000e+00, 5.000e+00, 2.000e+00</td></tr>
-    <tr><td>N Arrays</td><td>1</td></tr>
-    </table>
+    <div><style>/* PyVista HTML repr stylesheet.
+     * Uses pv- prefix to avoid conflicts with other libraries.
+     */
 
-    </td><td>
-    <table style='width: 100%;'>
-    <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
-    <tr><td><b>values</b></td><td>Points</td><td>float64</td><td>1</td><td>0.000e+00</td><td>1.000e+01</td></tr>
-    </table>
+    :root {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-border-color: var(--jp-border-color2, #e0e0e0);
+      --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --pv-badge-active: #1b5e20;
+      --pv-badge-normals: #0d47a1;
+      --pv-badge-vectors: #00695c;
+      --pv-badge-tcoords: #4527a0;
+    }
 
-    </td></tr> </table>
+    body[data-jp-theme-light="false"] {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-border-color: var(--jp-border-color2, #424242);
+      --pv-disabled-color: var(--jp-layout-color3, #616161);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    html[theme="dark"],
+    html[data-theme="dark"],
+    body[data-theme="dark"],
+    body.vscode-dark {
+      --pv-font-color0: rgba(255, 255, 255, 1);
+      --pv-font-color2: rgba(255, 255, 255, 0.54);
+      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-border-color: #424242;
+      --pv-disabled-color: #616161;
+      --pv-background-color-row-even: #1a1a1a;
+      --pv-background-color-row-odd: #252525;
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) {
+        --pv-font-color0: rgba(255, 255, 255, 1);
+        --pv-font-color2: rgba(255, 255, 255, 0.54);
+        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-border-color: #424242;
+        --pv-disabled-color: #616161;
+        --pv-background-color-row-even: #1a1a1a;
+        --pv-background-color-row-odd: #252525;
+        --pv-badge-active: #66bb6a;
+        --pv-badge-normals: #64b5f6;
+        --pv-badge-vectors: #4db6ac;
+        --pv-badge-tcoords: #b39ddb;
+      }
+    }
+
+    .pv-wrap {
+      display: block !important;
+      min-width: 300px;
+      max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
+      font-family: var(--jp-ui-font-family, sans-serif);
+      font-size: var(--jp-ui-font-size1, 13px);
+      color: var(--pv-font-color0);
+    }
+
+    .pv-text-repr-fallback {
+      display: none;
+    }
+
+    /* Header */
+    .pv-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: solid 1px var(--pv-border-color);
+      margin-bottom: 4px;
+    }
+
+    .pv-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .pv-obj-type {
+      font-weight: 600;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-header-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: var(--pv-font-color2);
+      border: 1px solid var(--pv-border-color);
+      white-space: nowrap;
+    }
+
+    /* Metadata (always-visible key-value rows) */
+    .pv-metadata {
+      margin: 4px 0 6px 0;
+      font-size: 0.92em;
+      line-height: 1.5;
+    }
+
+    .pv-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px 14px;
+      padding: 1px 0;
+    }
+
+    .pv-meta-row-label {
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .pv-meta-entry {
+      white-space: nowrap;
+    }
+
+    /* Copy-to-clipboard button */
+    .pv-copy-btn {
+      display: inline-block;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size: 0.85em;
+      padding: 0 3px;
+      vertical-align: middle;
+      transition: opacity 0.15s;
+      user-select: none;
+      border: none;
+      background: none;
+      color: var(--pv-font-color3);
+    }
+
+    .pv-copy-btn:hover {
+      opacity: 1;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-meta-label {
+      color: var(--pv-font-color3);
+      font-weight: 400;
+      padding-right: 2px;
+    }
+
+    /* Sections grid */
+    .pv-sections {
+      padding-left: 0 !important;
+      display: grid;
+      grid-template-columns: 150px auto auto auto 1fr 20px 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      list-style: none;
+    }
+
+    .pv-section-item {
+      display: contents;
+    }
+
+    /* Hidden checkbox for expand/collapse */
+    .pv-section-item > input {
+      display: block;
+      opacity: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .pv-section-item > input + label {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-item > input:enabled + label {
+      cursor: pointer;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-section-item > input:enabled + label:hover {
+      color: var(--pv-font-color0);
+    }
+
+    /* Section summary (left column label) */
+    .pv-section-summary {
+      grid-column: 1;
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pv-section-summary > span {
+      display: inline-block;
+      padding-left: 0.3em;
+    }
+
+    .pv-section-summary-in:disabled + label {
+      color: var(--pv-font-color2);
+    }
+
+    /* Expand/collapse arrows */
+    .pv-section-summary-in + label:before {
+      display: inline-block;
+      content: "\25b6";
+      font-size: 11px;
+      width: 15px;
+      text-align: center;
+    }
+
+    .pv-section-summary-in:disabled + label:before {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-summary-in:checked + label:before {
+      content: "\25bc";
+    }
+
+    .pv-section-summary-in:checked + label > span {
+      display: none;
+    }
+
+    .pv-section-summary,
+    .pv-section-inline-details {
+      padding-top: 4px;
+    }
+
+    .pv-section-inline-details {
+      grid-column: 2 / -1;
+    }
+
+    .pv-section-details {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      margin-bottom: 5px;
+    }
+
+    .pv-section-summary-in ~ .pv-section-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-inline-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details {
+      display: block;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details:has(.pv-var-list) {
+      display: contents;
+    }
+
+    /* Variable (array) list */
+    .pv-var-list,
+    .pv-var-item {
+      display: contents;
+    }
+
+    .pv-var-item > div,
+    .pv-var-item label,
+    .pv-var-item > .pv-var-name span {
+      background-color: var(--pv-background-color-row-even);
+      border-color: var(--pv-background-color-row-odd);
+      margin-bottom: 0;
+      padding-top: 2px;
+    }
+
+    .pv-var-list > li:nth-child(odd) > div,
+    .pv-var-list > li:nth-child(odd) > label,
+    .pv-var-list > li:nth-child(odd) > .pv-var-name span {
+      background-color: var(--pv-background-color-row-odd);
+      border-color: var(--pv-background-color-row-even);
+    }
+
+    .pv-var-name {
+      grid-column: 1;
+    }
+
+    .pv-var-dims {
+      grid-column: 2;
+    }
+
+    .pv-var-dtype {
+      grid-column: 3;
+      text-align: right;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-var-range {
+      grid-column: 4;
+      color: var(--pv-font-color3);
+      font-size: 0.92em;
+    }
+
+    .pv-var-badges {
+      grid-column: 5;
+      padding-left: 8px;
+    }
+
+    .pv-var-name,
+    .pv-var-dims,
+    .pv-var-dtype,
+    .pv-var-range {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+    }
+
+    .pv-var-name:hover,
+    .pv-var-dims:hover,
+    .pv-var-dtype:hover,
+    .pv-var-range:hover {
+      overflow: visible;
+      width: auto;
+      z-index: 1;
+    }
+
+    .pv-var-name span {
+      padding-left: 25px !important;
+    }
+
+    .pv-var-name-active span {
+      font-weight: 600;
+    }
+
+    /* Badges */
+    .pv-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .pv-badge-active {
+      color: var(--pv-badge-active);
+      border: 1px solid var(--pv-badge-active);
+    }
+
+    .pv-badge-normals {
+      color: var(--pv-badge-normals);
+      border: 1px solid var(--pv-badge-normals);
+    }
+
+    .pv-badge-vectors {
+      color: var(--pv-badge-vectors);
+      border: 1px solid var(--pv-badge-vectors);
+    }
+
+    .pv-badge-tcoords {
+      color: var(--pv-badge-tcoords);
+      border: 1px solid var(--pv-badge-tcoords);
+    }
+
+    /* Logo and Icons */
+    .pv-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pv-brand-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-brand-logo svg {
+      height: 20px;
+      width: auto;
+    }
+
+    /* Children list (MultiBlock / PartitionedDataSet) */
+    .pv-children-list {
+      padding-left: 25px !important;
+      list-style: none;
+    }
+
+    .pv-children-list li {
+      padding: 1px 0;
+    }
+
+    .pv-child-name {
+      font-weight: 500;
+    }
+
+    .pv-child-type {
+      color: var(--pv-font-color2);
+      font-style: italic;
+    }
+
+    .pv-child-type:before {
+      content: "\00b7";
+      padding: 0 6px;
+      font-style: normal;
+    }
+
+    .pv-child-detail {
+      color: var(--pv-font-color3);
+      font-size: 0.9em;
+    }
+
+    .pv-child-detail:not(:empty):before {
+      content: "\00b7";
+      padding: 0 6px;
+    }
+    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f5c08a2f940)
+      N Cells:      684
+      N Points:     1000
+      X Bounds:     1.000e+02, 1.190e+02
+      Y Bounds:     3.300e+01, 5.300e+01
+      Z Bounds:     5.560e+01, 7.360e+01
+      Dimensions:   20, 5, 10
+      Spacing:      1.000e+00, 5.000e+00, 2.000e+00
+      N Arrays:     1</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <linearGradient id="pv-id-top" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#376fa0"/>
+        </linearGradient>
+        <linearGradient id="pv-id-left" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#376fa0"/>
+          <stop offset="100%" stop-color="#1a4a70"/>
+        </linearGradient>
+        <linearGradient id="pv-id-right" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#d4442a"/>
+        </linearGradient>
+      </defs>
+      <polygon points="16,2 28,8 16,14 4,8" fill="url(#pv-id-top)"/>
+      <polygon points="4,8 16,14 16,28 4,22" fill="url(#pv-id-left)"/>
+      <polygon points="28,8 16,14 16,28 28,22" fill="url(#pv-id-right)"/>
+      <g stroke="rgba(255,255,255,0.45)" stroke-width="0.4" fill="none">
+        <polygon points="16,2 28,8 16,14 4,8"/>
+        <line x1="16" y1="14" x2="16" y2="28"/>
+        <line x1="4" y1="8" x2="4" y2="22"/>
+        <line x1="28" y1="8" x2="28" y2="22"/>
+        <line x1="4" y1="22" x2="16" y2="28"/>
+        <line x1="28" y1="22" x2="16" y2="28"/>
+        <line x1="12" y1="4" x2="24" y2="10"/>
+        <line x1="8" y1="6" x2="20" y2="12"/>
+        <line x1="20" y1="4" x2="8" y2="10"/>
+        <line x1="24" y1="6" x2="12" y2="12"/>
+        <line x1="4" y1="12.67" x2="16" y2="18.67"/>
+        <line x1="4" y1="17.33" x2="16" y2="23.33"/>
+        <line x1="8" y1="10" x2="8" y2="24"/>
+        <line x1="12" y1="12" x2="12" y2="26"/>
+        <line x1="28" y1="12.67" x2="16" y2="18.67"/>
+        <line x1="28" y1="17.33" x2="16" y2="23.33"/>
+        <line x1="24" y1="10" x2="24" y2="24"/>
+        <line x1="20" y1="12" x2="20" y2="26"/>
+      </g>
+    </svg>
+    </span><div class='pv-header-text'><div class='pv-obj-type'>ImageData <span class='pv-header-badge'>1,000 points</span> <span class='pv-header-badge'>684 cells</span> <span class='pv-header-badge'>8 KiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
+      <text x="0" y="18" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" font-style="italic" letter-spacing="-0.5">
+        <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
+      </text>
+    </svg>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 119.0, 33.0, 53.0, 55.6, 73.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.190e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.300e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.360e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 20 x 5 x 10</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-b6d56f47-a892-40ed-92f5-43e370691c49' class='pv-section-summary-in' type='checkbox' checked /><label for='section-b6d56f47-a892-40ed-92f5-43e370691c49' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -378,19 +1310,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
     Help on class ImageData in module pyvista.core.grid:
 
     class ImageData(Grid, pyvista.core.filters.image_data.ImageDataFilters, vtkmodules.vtkCommonDataModel.vtkImageData)
-     |  ImageData(uinput: 'ImageData | str | Path | None' = None, dimensions: 'VectorLike[float] | None' = None, spacing: 'VectorLike[float]' = (1.0, 1.0, 1.0), origin: 'VectorLike[float]' = (0.0, 0.0, 0.0), deep: 'bool' = False, direction_matrix: 'RotationLike | None' = None, offset: 'int | VectorLike[int] | None' = None) -> 'None'
+     |  ImageData(*args, **kwargs) -> '_T'
      |  
      |  Models datasets with uniform spacing in the three coordinate directions.
      |  
      |  Can be initialized in one of several ways:
      |  
      |  - Create empty grid
-     |  - Initialize from a vtk.vtkImageData object
+     |  - Initialize from a :vtk:`vtkImageData` object
      |  - Initialize based on dimensions, cell spacing, and origin.
      |  
      |  .. versionchanged:: 0.33.0
      |      First argument must now be either a path or
-     |      ``vtk.vtkImageData``. Use keyword arguments to specify the
+     |      :vtk:`vtkImageData`. Use keyword arguments to specify the
      |      dimensions, spacing, and origin of the uniform grid.
      |  
      |  .. versionchanged:: 0.37.0
@@ -398,7 +1330,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  
      |  Parameters
      |  ----------
-     |  uinput : str, vtk.vtkImageData, pyvista.ImageData, optional
+     |  uinput : str | :vtk:`vtkImageData` | ImageData, optional
      |      Filename or dataset to initialize the uniform grid from.  If
      |      set, remainder of arguments are ignored.
      |  
@@ -412,7 +1344,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      :attr:`origin` of the uniform grid.
      |  
      |  deep : bool, default: False
-     |      Whether to deep copy a ``vtk.vtkImageData`` object.  Keyword only.
+     |      Whether to deep copy a :vtk:`vtkImageData` object. Keyword only.
      |  
      |  direction_matrix : RotationLike, optional
      |      The :attr:`direction_matrix` is a 3x3 matrix which controls the orientation of
@@ -427,6 +1359,17 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  
      |      .. versionadded:: 0.45
      |  
+     |  validate : bool | MeshValidationFields | sequence[MeshValidationFields], default: False
+     |      Validate the mesh using :meth:`~pyvista.DataObjectFilters.validate_mesh` after
+     |      initialization. Set this to ``True`` to validate all fields, or specify any
+     |      combination of fields allowed by ``validate_mesh``.
+     |  
+     |      .. versionadded:: 0.47
+     |  
+     |  See Also
+     |  --------
+     |  :ref:`create_uniform_grid_example`
+     |  
      |  Examples
      |  --------
      |  Create an empty ImageData.
@@ -434,7 +1377,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  >>> import pyvista as pv
      |  >>> grid = pv.ImageData()
      |  
-     |  Initialize from a ``vtk.vtkImageData`` object.
+     |  Initialize from a :vtk:`vtkImageData` object.
      |  
      |  >>> import vtk
      |  >>> vtkgrid = vtk.vtkImageData()
@@ -477,11 +1420,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      pyvista.core.dataset.DataSet
      |      pyvista.core.filters.image_data.ImageDataFilters
      |      pyvista.core.filters.data_set.DataSetFilters
+     |      pyvista.core.utilities.misc._BoundsSizeMixin
      |      pyvista.core.filters.data_object.DataObjectFilters
      |      pyvista.core.dataobject.DataObject
-     |      pyvista.core._vtk_core.DisableVtkSnakeCase
-     |      pyvista.core._vtk_core.vtkPyVistaOverride
+     |      pyvista.core.utilities.misc._NoNewAttrMixin
+     |      pyvista.core._vtk_utilities.DisableVtkSnakeCase
+     |      pyvista.core._vtk_utilities.vtkPyVistaOverride
      |      vtkmodules.vtkCommonDataModel.vtkImageData
+     |      vtkmodules.vtkCommonDataModel.vtkCartesianGrid
      |      vtkmodules.vtkCommonDataModel.vtkDataSet
      |      vtkmodules.vtkCommonDataModel.vtkDataObject
      |      vtkmodules.vtkCommonCore.vtkObject
@@ -490,7 +1436,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  
      |  Methods defined here:
      |  
-     |  __init__(self: 'Self', uinput: 'ImageData | str | Path | None' = None, dimensions: 'VectorLike[float] | None' = None, spacing: 'VectorLike[float]' = (1.0, 1.0, 1.0), origin: 'VectorLike[float]' = (0.0, 0.0, 0.0), deep: 'bool' = False, direction_matrix: 'RotationLike | None' = None, offset: 'int | VectorLike[int] | None' = None) -> 'None'
+     |  __getitem__(self, key: "tuple[str, Literal['cell', 'point', 'field']] | str | tuple[int, int, int]") -> 'ImageData | pyvista_ndarray'
+     |      Search for a data array or slice with IJK indexing.
+     |  
+     |  __init__(self: 'Self', uinput: 'ImageData | str | Path | None' = None, dimensions: 'VectorLike[int] | None' = None, spacing: 'VectorLike[float]' = (1.0, 1.0, 1.0), origin: 'VectorLike[float]' = (0.0, 0.0, 0.0), deep: 'bool' = False, direction_matrix: 'RotationLike | None' = None, offset: 'int | VectorLike[int] | None' = None, *, validate: 'bool | _NestedMeshValidationFields' = False) -> 'None'
      |      Initialize the uniform grid.
      |  
      |  __repr__(self: 'Self') -> 'str'
@@ -508,7 +1457,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          This uniform grid as a rectilinear grid.
      |  
      |  cast_to_structured_grid(self: 'Self') -> 'StructuredGrid'
-     |      Cast this uniform grid to a structured grid.
+     |      Cast this image data to a :class:`~pyvista.StructuredGrid`.
+     |      
+     |      .. note::
+     |      
+     |          Casting converts :class:`~pyvista.CellType.PIXEL` cells to
+     |          :class:`~pyvista.CellType.QUAD` cells for 2D inputs, and
+     |          :class:`~pyvista.CellType.VOXEL` cells to :class:`~pyvista.CellType.HEXAHEDRON` cells
+     |          for 3D inputs. To preserve cell type, use
+     |          :meth:`~pyvista.DataSet.cast_to_unstructured_grid` instead.
      |      
      |      Returns
      |      -------
@@ -660,10 +1617,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      (4, 4, 4)
      |      
      |      >>> grid.bounds
-     |      BoundsTuple(x_min=2.0, x_max=5.0, y_min=2.0, y_max=5.0, z_min=2.0, z_max=5.0)
+     |      BoundsTuple(x_min = 2.0,
+     |                  x_max = 5.0,
+     |                  y_min = 2.0,
+     |                  y_max = 5.0,
+     |                  z_min = 2.0,
+     |                  z_max = 5.0)
      |  
      |  index_to_physical_matrix
-     |      Return or set 4x4 matrix to convert coordinates from index space (ijk) to physical space (xyz).
+     |      Return or set 4x4 matrix to transform index space (ijk) to physical space (xyz).
      |      
      |      .. note::
      |          Setting this property modifies the object's :class:`~pyvista.ImageData.origin`,
@@ -748,7 +1710,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> pl.show()
      |  
      |  physical_to_index_matrix
-     |      Return or set 4x4 matrix to convert coordinates from physical space (xyz) to index space (ijk).
+     |      Return or set 4x4 matrix to transform from physical space (xyz) to index space (ijk).
      |      
      |      .. note::
      |          Setting this property modifies the object's :class:`~pyvista.ImageData.origin`,
@@ -815,38 +1777,84 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  ----------------------------------------------------------------------
      |  Data and other attributes defined here:
      |  
-     |  __annotations__ = {'_WRITERS': 'ClassVar[dict[str, type[_vtk.vtkDataSe...
+     |  __abstractmethods__ = frozenset()
+     |  
+     |  __annotations__ = {'_WRITERS': 'ClassVar[dict[str, type[BaseWriter]]]'...
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from Grid:
      |  
      |  __new__(cls, *args, **kwargs) from pyvista.core.utilities.misc.abstract_class.<locals>
      |  
-     |  ----------------------------------------------------------------------
-     |  Readonly properties inherited from Grid:
-     |  
-     |  dimensionality
-     |      Return the dimensionality of the grid.
+     |  to_hexahedra(self: 'Self') -> 'UnstructuredGrid'
+     |      Convert voxels to hexahedra.
+     |      
+     |      Convert this mesh to :class:`~pyvista.UnstructuredGrid` with
+     |      :attr:`~pyvista.CellType.HEXAHEDRON` cells. Equivalent to
+     |      :meth:`~pyvista.DataSet.cast_to_unstructured_grid` except the output has
+     |      hexahedra instead of :attr:`~pyvista.CellType.VOXEL` cells.
+     |      
+     |      .. versionadded:: 0.48
      |      
      |      Returns
      |      -------
-     |      int
-     |          The grid dimensionality.
+     |      pyvista.UnstructuredGrid
+     |          Mesh with :attr:`~pyvista.CellType.HEXAHEDRON` cells.
+     |      
+     |      Raises
+     |      ------
+     |      ValueError
+     |          If the input is not 3-dimensional.
+     |      
+     |      See Also
+     |      --------
+     |      to_quads, to_tetrahedra
+     |      pyvista.DataSet.cast_to_unstructured_grid
      |      
      |      Examples
      |      --------
-     |      Get the dimensionality of a 2D uniform grid.
+     |      Convert a 3D :class:`~pyvista.ImageData` to hexahedra.
      |      
      |      >>> import pyvista as pv
-     |      >>> grid = pv.ImageData(dimensions=(1, 2, 3))
-     |      >>> grid.dimensionality
-     |      2
+     |      >>> image = pv.ImageData(dimensions=(2, 2, 2))
+     |      >>> hexes = image.to_hexahedra()
+     |      >>> hexes.distinct_cell_types == {pv.CellType.HEXAHEDRON}
+     |      True
+     |  
+     |  to_quads(self: 'Self') -> 'UnstructuredGrid'
+     |      Convert pixels to quads.
      |      
-     |      Get the dimensionality of a 3D uniform grid.
+     |      Convert this mesh to :class:`~pyvista.UnstructuredGrid` with
+     |      :attr:`~pyvista.CellType.QUAD` cells. Equivalent to
+     |      :meth:`~pyvista.DataSet.cast_to_unstructured_grid` except the output has
+     |      quads instead of :attr:`~pyvista.CellType.PIXEL` cells.
      |      
-     |      >>> grid = pv.ImageData(dimensions=(2, 3, 4))
-     |      >>> grid.dimensionality
-     |      3
+     |      .. versionadded:: 0.48
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.UnstructuredGrid
+     |          Mesh with :attr:`~pyvista.CellType.QUAD` cells.
+     |      
+     |      Raises
+     |      ------
+     |      ValueError
+     |          If the input is not 2-dimensional.
+     |      
+     |      See Also
+     |      --------
+     |      to_hexahedra, to_tetrahedra
+     |      pyvista.DataSet.cast_to_unstructured_grid
+     |      
+     |      Examples
+     |      --------
+     |      Convert a 2D :class:`~pyvista.ImageData` to quads.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> image = pv.ImageData(dimensions=(3, 2, 1))
+     |      >>> quads = image.to_quads()
+     |      >>> quads.distinct_cell_types == {pv.CellType.QUAD}
+     |      True
      |  
      |  ----------------------------------------------------------------------
      |  Data descriptors inherited from Grid:
@@ -880,18 +1888,30 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.dataset.DataSet:
      |  
+     |  __arrow_c_stream__(self: 'Self', requested_schema: 'object | None' = None) -> 'object'
+     |      Export :attr:`point_data` via the Arrow PyCapsule interface.
+     |      
+     |      Delegates to :meth:`DataSetAttributes.__arrow_c_stream__` on
+     |      :attr:`point_data`. Callers wanting :attr:`cell_data` should use
+     |      ``mesh.cell_data`` directly or ``mesh.to_arrow('cell')``.
+     |      
+     |      Requires :mod:`pyarrow`.
+     |  
      |  __getattr__(self: 'Self', item: 'str') -> 'Any'
      |      Get attribute from base class if not found.
+     |      
+     |      Before falling through to the VTK base class, check whether
+     |      ``item`` matches a pending ``pyvista.accessors`` entry point.
+     |      A match triggers a one-shot plugin import, after which normal
+     |      attribute resolution finds the newly-attached accessor
+     |      descriptor.
      |  
-     |  __getitem__(self: 'Self', index: "tuple[str, Literal['cell', 'point', 'field']] | str") -> 'NumpyArray[float]'
-     |      Search both point, cell, and field data for an array.
-     |  
-     |  __setitem__(self: 'Self', name: 'str', scalars: 'NumpyArray[float] | Sequence[float] | float') -> 'None'
+     |  __setitem__(self: 'Self', name: 'str', scalars: '_ArrayLikeOrScalar[NumberType]') -> 'None'
      |      Add/set an array in the point_data, or cell_data accordingly.
      |      
      |      It depends on the array's length, or specified mode.
      |  
-     |  cast_to_pointset(self: 'Self', pass_cell_data: 'bool' = False) -> 'pyvista.PointSet'
+     |  cast_to_pointset(self: 'Self', pass_cell_data: 'bool' = False) -> 'PointSet'
      |      Extract the points of this dataset and return a :class:`pyvista.PointSet`.
      |      
      |      Parameters
@@ -911,6 +1931,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      This will produce a deep copy of the points and point/cell data of
      |      the original mesh.
      |      
+     |      See Also
+     |      --------
+     |      :ref:`create_pointset_example`
+     |      
      |      Examples
      |      --------
      |      >>> import pyvista as pv
@@ -919,7 +1943,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> type(pointset)
      |      <class 'pyvista.core.pointset.PointSet'>
      |  
-     |  cast_to_poly_points(self: 'Self', pass_cell_data: 'bool' = False) -> 'pyvista.PolyData'
+     |  cast_to_poly_points(self: 'Self', pass_cell_data: 'bool' = False) -> 'pv.PolyData'
      |      Extract the points of this dataset and return a :class:`pyvista.PolyData`.
      |      
      |      Parameters
@@ -967,8 +1991,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Contains arrays :
      |          Spatial Cell Data       float64    (1000,)
      |  
-     |  cast_to_unstructured_grid(self: 'Self') -> 'pyvista.UnstructuredGrid'
-     |      Get a new representation of this object as a :class:`pyvista.UnstructuredGrid`.
+     |  cast_to_unstructured_grid(self: 'Self') -> 'pv.UnstructuredGrid'
+     |      Get a new representation of this object as a :class:`~pyvista.UnstructuredGrid`.
+     |      
+     |      .. note::
+     |      
+     |          Casting preserves the cell type(s) of the input. This means that any
+     |          :class:`~pyvista.CellType.PIXEL` and :class:`~pyvista.CellType.VOXEL` cells from
+     |          :class:`~pyvista.ImageData` or :class:`~pyvista.RectilinearGrid` are preserved.
+     |          Use ``to_quads`` or ``to_hexahedra`` instead to convert the cell
+     |          type for these cases.
      |      
      |      Returns
      |      -------
@@ -991,8 +2023,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  cell_neighbors(self: 'Self', ind: 'int', connections: 'str' = 'points') -> 'list[int]'
      |      Get the cell neighbors of the ind-th cell.
      |      
-     |      Concrete implementation of vtkDataSet's `GetCellNeighbors
-     |      <https://vtk.org/doc/nightly/html/classvtkDataSet.html#ae1ba413c15802ef50d9b1955a66521e4>`_.
+     |      Concrete implementation of :vtk:`vtkDataSet.GetCellNeighbors`.
      |      
      |      Parameters
      |      ----------
@@ -1011,7 +2042,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Warnings
      |      --------
-     |      For a :class:`pyvista.ExplicitStructuredGrid`, use :func:`pyvista.ExplicitStructuredGrid.neighbors`.
+     |      For a :class:`pyvista.ExplicitStructuredGrid`, use
+     |      :func:`pyvista.ExplicitStructuredGrid.neighbors`.
      |      
      |      See Also
      |      --------
@@ -1115,7 +2147,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Warnings
      |      --------
-     |      For a :class:`pyvista.ExplicitStructuredGrid`, use :func:`pyvista.ExplicitStructuredGrid.neighbors`.
+     |      For a :class:`pyvista.ExplicitStructuredGrid`, use
+     |      :func:`pyvista.ExplicitStructuredGrid.neighbors`.
      |      
      |      See Also
      |      --------
@@ -1221,7 +2254,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      mesh : vtk.vtkDataSet
+     |      mesh : :vtk:`vtkDataSet`
      |          The overwriting mesh.
      |      
      |      deep : bool, default: True
@@ -1403,6 +2436,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      DataSet.find_containing_cell
      |      DataSet.find_cells_along_line
      |      DataSet.find_cells_within_bounds
+     |      :ref:`distance_between_surfaces_example`
      |      
      |      Examples
      |      --------
@@ -1485,6 +2519,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      DataSet.find_containing_cell
      |      DataSet.find_cells_along_line
      |      DataSet.find_cells_within_bounds
+     |      :ref:`point_cloud_distance_example`
+     |      :ref:`point_cloud_neighbors_example`
      |      
      |      Examples
      |      --------
@@ -1512,7 +2548,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      int or numpy.ndarray
+     |      output : int | numpy.ndarray
      |          Index or indices of the cell in this mesh that contains
      |          the given point.
      |      
@@ -1552,7 +2588,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> indices.shape
      |      (1000,)
      |  
-     |  get_array(self: 'Self', name: 'str', preference: "Literal['cell', 'point', 'field']" = 'cell') -> 'pyvista.pyvista_ndarray'
+     |  get_array(self: 'Self', name: 'str', preference: 'CellLiteral | PointLiteral | FieldLiteral' = 'cell') -> 'pyvista_ndarray'
      |      Search both point, cell and field data for an array.
      |      
      |      Parameters
@@ -1644,7 +2680,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh.get_array_association('field-data')
      |      <FieldAssociation.NONE: 2>
      |  
-     |  get_cell(self: 'Self', index: 'int') -> 'pyvista.Cell'
+     |  get_cell(self: 'Self', index: 'int') -> 'Cell'
      |      Return a :class:`pyvista.Cell` object.
      |      
      |      Parameters
@@ -1716,14 +2752,28 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      tuple
      |          ``(min, max)`` of the named array.
      |  
-     |  plot(var_item, off_screen=None, full_screen=None, screenshot=None, interactive=True, cpos=None, window_size=None, show_bounds=False, show_axes=None, notebook=None, background=None, text='', return_img=False, eye_dome_lighting=False, volume=False, parallel_projection=False, jupyter_backend=None, return_viewer=False, return_cpos=False, jupyter_kwargs=None, theme=None, anti_aliasing=None, zoom=None, border=False, border_color='k', border_width=2.0, ssao=False, **kwargs) from pyvista._plot
+     |  plot(var_item: 'list[PlottableType] | PlottableType', off_screen: 'bool | None' = None, full_screen: 'bool | None' = None, screenshot: 'str | bool | None' = None, interactive: 'bool' = True, cpos: 'CameraPositionOptions | None' = None, window_size: 'list[int] | None' = None, show_bounds: 'bool' = False, show_axes: 'bool | None' = None, notebook: 'bool | None' = None, background: 'ColorLike | None' = None, text: 'str' = '', return_img: 'bool' = False, eye_dome_lighting: 'bool' = False, volume: 'bool' = False, parallel_projection: 'bool' = False, jupyter_backend: 'JupyterBackendOptions | None' = None, return_viewer: 'bool' = False, return_cpos: 'bool' = False, jupyter_kwargs: 'dict | None' = None, theme: 'Theme | None' = None, anti_aliasing: "Literal['ssaa', 'msaa', 'fxaa'] | bool | None" = None, zoom: 'str | float | None' = None, border: 'bool' = False, border_color: 'ColorLike' = 'k', border_width: 'float' = 2.0, ssao: 'bool' = False, **kwargs) from pyvista._plot
      |      Plot a PyVista, numpy, or vtk object.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |          ``plot`` can be invoked with the shell command:
+     |      
+     |          .. code-block:: shell
+     |      
+     |              pyvista plot <files> --screenshot output.png --off-screen
+     |      
+     |          Run ``pyvista plot --help`` for more details on available parameters.
+     |      
+     |          .. note::
+     |              Providing multiple files renders them inside the same window.
      |      
      |      Parameters
      |      ----------
      |      var_item : pyvista.DataSet
      |          See :func:`Plotter.add_mesh <pyvista.Plotter.add_mesh>` for all
      |          supported types.
+     |      
      |      
      |      off_screen : bool, optional
      |          Plots off screen when ``True``.  Helpful for saving
@@ -1734,7 +2784,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Opens window in full screen.  When enabled, ignores
      |          ``window_size``.
      |      
-     |      screenshot : str or bool, optional
+     |      screenshot : str | bool, optional
      |          Saves screenshot to file when enabled.  See:
      |          :func:`Plotter.screenshot() <pyvista.Plotter.screenshot>`.
      |          Default ``False``.
@@ -1745,10 +2795,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      interactive : bool, default: :attr:`pyvista.plotting.themes.Theme.interactive`
      |          Allows user to pan and move figure.
      |      
-     |      cpos : list, optional
+     |      cpos : CameraPositionOptions, optional
      |          List of camera position, focal point, and view up.
+     |          See the :attr:`pyvista.Plotter.camera_position` for concrete examples
+     |          on how to use this parameter and :ref:`cameras_api` for a detailed
+     |          documentation on :class:`pyvista.Camera`.
      |      
-     |      window_size : sequence, default: :attr:`pyvista.plotting.themes.Theme.window_size`
+     |      window_size : list[int], default: :attr:`pyvista.plotting.themes.Theme.window_size`
      |          Window size in pixels.
      |      
      |      show_bounds : bool, default: False
@@ -1780,16 +2833,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      parallel_projection : bool, default: False
      |          Enable parallel projection.
      |      
-     |      jupyter_backend : str, default: :attr:`pyvista.plotting.themes.Theme.jupyter_backend`
-     |          Jupyter notebook plotting backend to use.  One of the
-     |          following:
+     |      jupyter_backend : JupyterBackendOptions, optional
+     |          Jupyter notebook plotting backend to use.
+     |          See available documentation at :func:`pyvista.set_jupyter_backend`
+     |          to see all valid values for this parameter along with a detailed documentation.
      |      
-     |          * ``'none'`` : Do not display in the notebook.
-     |          * ``'static'`` : Display a static figure.
-     |          * ``'trame'`` : Display using ``trame``.
-     |      
-     |          This can also be set globally with
-     |          :func:`pyvista.set_jupyter_backend`.
+     |          Defaults to :attr:`pyvista.plotting.themes.Theme.jupyter_backend`
      |      
      |      return_viewer : bool, default: False
      |          Return the jupyterlab viewer, scene, or display object
@@ -1801,16 +2850,23 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      jupyter_kwargs : dict, optional
      |          Keyword arguments for the Jupyter notebook plotting backend.
+     |          See :ref:`customize_trame_toolbar_example` for an example
+     |          using this keyword.
      |      
      |      theme : pyvista.plotting.themes.Theme, optional
      |          Plot-specific theme.
      |      
-     |      anti_aliasing : str | bool, default: :attr:`pyvista.plotting.themes.Theme.anti_aliasing`
+     |      anti_aliasing : Literal['ssaa', 'msaa', 'fxaa'] | bool, optional
      |          Enable or disable anti-aliasing. If ``True``, uses ``"msaa"``. If False,
-     |          disables anti_aliasing. If a string, should be either ``"fxaa"`` or
-     |          ``"ssaa"``.
+     |          disables anti_aliasing. If a string, should be one of the following:
      |      
-     |      zoom : float, str, optional
+     |          * ``"ssaa"`` - Super-Sample Anti-Aliasing
+     |          * ``"msaa"`` - Multi-Sample Anti-Aliasing
+     |          * ``"fxaa"`` - Fast Approximate Anti-Aliasing
+     |      
+     |          Defaults to :attr:`pyvista.plotting.themes.Theme.anti_aliasing`
+     |      
+     |      zoom : float | str, optional
      |          Camera zoom.  Either ``'tight'`` or a float. A value greater than 1
      |          is a zoom-in, a value less than 1 is a zoom-out.  Must be greater
      |          than 0.
@@ -1821,10 +2877,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      border_color : ColorLike, default: "k"
      |          Either a string, rgb list, or hex color string.  For example:
      |      
-     |              * ``color='white'``
-     |              * ``color='w'``
-     |              * ``color=[1.0, 1.0, 1.0]``
-     |              * ``color='#FFFFFF'``
+     |          * ``color='white'``
+     |          * ``color='w'``
+     |          * ``color=[1.0, 1.0, 1.0]``
+     |          * ``color='#FFFFFF'``
      |      
      |      border_width : float, default: 2.0
      |          Width of the border in pixels when enabled.
@@ -1878,7 +2934,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  point_cell_ids(self: 'Self', ind: 'int') -> 'list[int]'
      |      Get the cell IDs that use the ind-th point.
      |      
-     |      Implements vtkDataSet's `GetPointCells <https://vtk.org/doc/nightly/html/classvtkDataSet.html#a36d1d8f67ad67adf4d1a9cfb30dade49>`_.
+     |      Implements :vtk:`vtkDataSet.GetPointCells`.
      |      
      |      Parameters
      |      ----------
@@ -1948,7 +3004,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      bool or numpy.ndarray
+     |      output : bool | numpy.ndarray
      |          Whether point(s) is/are inside cell. A single bool is only returned if
      |          the input point has shape ``(3,)``.
      |      
@@ -1957,7 +3013,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> from pyvista import examples
      |      >>> mesh = examples.load_hexbeam()
      |      >>> mesh.get_cell(0).bounds
-     |      BoundsTuple(x_min=0.0, x_max=0.5, y_min=0.0, y_max=0.5, z_min=0.0, z_max=0.5)
+     |      BoundsTuple(x_min = 0.0,
+     |                  x_max = 0.5,
+     |                  y_min = 0.0,
+     |                  y_max = 0.5,
+     |                  z_min = 0.0,
+     |                  z_max = 0.5)
      |      >>> mesh.point_is_inside_cell(0, [0.2, 0.2, 0.2])
      |      True
      |  
@@ -2058,6 +3119,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     text_color='white',
      |      ...     font_size=40,
      |      ...     point_size=10,
+     |      ...     always_visible=True,
      |      ... )
      |      >>>
      |      >>> # Add the first point label
@@ -2162,6 +3224,69 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          points, cells, or field data, it will prioritize an array
      |          matching this type.  Can be either ``'cell'``,
      |          ``'field'``, or ``'point'``.
+     |  
+     |  to_arrow(self: 'Self', association: 'PointLiteral | CellLiteral' = 'point') -> 'pyarrow.Table'
+     |      Return this dataset's point or cell arrays as a :class:`pyarrow.Table`.
+     |      
+     |      Thin wrapper around :meth:`DataSetAttributes.to_arrow`.
+     |      
+     |      Requires :mod:`pyarrow`.
+     |      
+     |      Parameters
+     |      ----------
+     |      association : str | pyvista.core.utilities.arrays.FieldAssociation, default: 'point'
+     |          Which attribute set to convert. Accepts ``'point'`` /
+     |          ``FieldAssociation.POINT`` or ``'cell'`` / ``FieldAssociation.CELL``.
+     |      
+     |      Returns
+     |      -------
+     |      pyarrow.Table
+     |          Table with one column per (expanded) array.
+     |      
+     |      Examples
+     |      --------
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Cube()
+     |      >>> mesh.clear_data()
+     |      >>> mesh.point_data['scalars'] = range(mesh.n_points)
+     |      >>> mesh.to_arrow().num_rows
+     |      8
+     |  
+     |  to_pandas(self: 'Self', association: 'PointLiteral | CellLiteral' = 'point') -> 'pandas.DataFrame'
+     |      Return this dataset's point or cell arrays as a :class:`pandas.DataFrame`.
+     |      
+     |      Thin wrapper around :meth:`DataSetAttributes.to_pandas`. See that
+     |      method for column-expansion rules and dtype handling.
+     |      
+     |      Requires :mod:`pandas`.
+     |      
+     |      Parameters
+     |      ----------
+     |      association : str | pyvista.core.utilities.arrays.FieldAssociation, default: 'point'
+     |          Which attribute set to convert. Accepts ``'point'`` or
+     |          ``FieldAssociation.POINT``, which maps to :attr:`point_data`
+     |          (``n_points`` rows); or ``'cell'`` or ``FieldAssociation.CELL``,
+     |          which maps to :attr:`cell_data` (``n_cells`` rows). Field data is
+     |          not supported because its arrays may have differing lengths.
+     |      
+     |      Returns
+     |      -------
+     |      pandas.DataFrame
+     |          DataFrame with one column per (expanded) array.
+     |      
+     |      See Also
+     |      --------
+     |      :ref:`dataframe_export_example`
+     |      
+     |      Examples
+     |      --------
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Cube()
+     |      >>> mesh.clear_data()
+     |      >>> mesh.point_data['scalars'] = range(mesh.n_points)
+     |      >>> df = mesh.to_pandas()
+     |      >>> list(df.columns)
+     |      ['scalars']
      |  
      |  ----------------------------------------------------------------------
      |  Readonly properties inherited from pyvista.core.dataset.DataSet:
@@ -2327,7 +3452,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      A mesh with 3D cells does not have an area.  To get
      |      the outer surface area, first extract the surface using
-     |      :func:`pyvista.DataSetFilters.extract_surface`.
+     |      :func:`~pyvista.DataObjectFilters.extract_surface`.
      |      
      |      >>> mesh = pv.ImageData(dimensions=(5, 5, 5))
      |      >>> mesh.area
@@ -2393,6 +3518,40 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(arrows, color='red')
      |      >>> pl.show()
      |  
+     |  bounding_sphere
+     |      Compute the radius and center of a bounding sphere.
+     |      
+     |      The sphere is exact for meshes with 4 points or less, and is otherwise approximated
+     |      using Ritter's algorithm. Returns NaN values if there are no points.
+     |      
+     |      Uses :vtk:`vtkCell.ComputeBoundingSphere` internally for the computation.
+     |      
+     |      .. versionadded:: 0.48
+     |      
+     |      Returns
+     |      -------
+     |      float, tuple
+     |          Sphere radius as a float and center as a tuple of floats.
+     |      
+     |      Examples
+     |      --------
+     |      Get the bounding sphere geometry of a mesh.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.load_airplane()
+     |      >>> radius, center = mesh.bounding_sphere
+     |      
+     |      Create a sphere and plot it along with the original mesh.
+     |      
+     |      >>> sphere = pv.Icosphere(radius=radius, center=center)
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(mesh)
+     |      >>> _ = pl.add_mesh(sphere, style='wireframe', color='black')
+     |      >>> pl.view_xy()
+     |      >>> pl.camera.zoom(1.5)
+     |      >>> pl.show()
+     |  
      |  bounds
      |      Return the bounding box of this dataset.
      |      
@@ -2409,7 +3568,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> cube = pv.Cube()
      |      >>> cube.bounds
-     |      BoundsTuple(x_min=-0.5, x_max=0.5, y_min=-0.5, y_max=0.5, z_min=-0.5, z_max=0.5)
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  0.5,
+     |                  y_min = -0.5,
+     |                  y_max =  0.5,
+     |                  z_min = -0.5,
+     |                  z_max =  0.5)
      |  
      |  cell
      |      A generator that provides an easy way to loop over all cells.
@@ -2477,22 +3641,135 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh['my_array'].shape
      |      (6,)
      |  
-     |  center
-     |      Return the center of the bounding box.
+     |  dimensionality
+     |      Return the number of spatial dimensions spanned by this dataset's points.
+     |      
+     |      This is equivalent to computing the matrix rank of the points.
+     |      
+     |      .. versionchanged:: 0.47
+     |      
+     |          This property is now generalized for all datasets. Previously, it was only available
+     |          for datasets with a ``dimensions`` property.
+     |      
+     |      Notes
+     |      -----
+     |      :attr:`dimensionality`:
+     |      
+     |      - ranges from ``0`` to ``3`` for all mesh types.
+     |      - is equivalent to :attr:`max_cell_dimensionality` and :attr:`min_cell_dimensionality`
+     |        for gridded data types :class:`~pyvista.ImageData` and :class:`~pyvista.RectilinearGrid`.
      |      
      |      Returns
      |      -------
-     |      tuple[float, float, float]
-     |          Center of the bounding box.
+     |      int
+     |          The dimensionality of the dataset.
+     |      
+     |      See Also
+     |      --------
+     |      max_cell_dimensionality, min_cell_dimensionality
      |      
      |      Examples
      |      --------
-     |      Get the center of a mesh.
+     |      A single point has ``0`` dimensionality.
      |      
      |      >>> import pyvista as pv
-     |      >>> mesh = pv.Sphere(center=(1, 2, 0))
-     |      >>> mesh.center
-     |      (1.0, 2.0, 0.0)
+     |      >>> mesh = pv.PointSet([[0.0, 0.0, 0.0]])
+     |      >>> mesh.dimensionality
+     |      0
+     |      
+     |      With two points, the dimensionality is ``1``.
+     |      
+     |      >>> mesh = pv.PointSet([[0.0, 0.0, 0.0], [1.0, 1.0, 1.0]])
+     |      >>> mesh.dimensionality
+     |      1
+     |      
+     |      Two-dimensional :class:`~pyvista.ImageData` (i.e. where one of its dimensions is one) has
+     |      a dimensionality of ``2``.
+     |      
+     |      >>> mesh = pv.ImageData(dimensions=(100, 100, 1))
+     |      >>> mesh.dimensionality
+     |      2
+     |      
+     |      A :func:`~pyvista.Plane` also has dimensionality of ``2``, even if it's arbitrarily
+     |      rotated in space.
+     |      
+     |      >>> mesh = pv.Plane().rotate_vector((1, 2, 3), 30)
+     |      >>> mesh.dimensionality
+     |      2
+     |      
+     |      A :func:`~pyvista.Cube` has a dimensionality of 3.
+     |      
+     |      >>> mesh = pv.Cube()
+     |      >>> mesh.dimensionality
+     |      3
+     |  
+     |  distinct_cell_types
+     |      Return the set of distinct cell types in this dataset.
+     |      
+     |      The set contains :class:`~pyvista.CellType` values corresponding to the
+     |      :attr:`pyvista.Cell.type` of each distinct cell in the dataset.
+     |      
+     |      .. warning::
+     |          Computing distinct cell types can be very slow for complex meshes with VTK version
+     |          less than 9.6.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Returns
+     |      -------
+     |      set[CellType]
+     |          Set of :class:`~pyvista.CellType` values.
+     |      
+     |      See Also
+     |      --------
+     |      min_cell_dimensionality
+     |      max_cell_dimensionality
+     |      pyvista.UnstructuredGrid.celltypes
+     |      
+     |      Examples
+     |      --------
+     |      Load a mesh with linear :attr:`pyvista.CellType.HEXAHEDRON` cells.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> hex_beam = examples.load_hexbeam()
+     |      >>> hex_beam.distinct_cell_types
+     |      {<CellType.HEXAHEDRON: 12>}
+     |      
+     |      Load a mesh with mixed cells.
+     |      
+     |      >>> mesh = examples.download_cow()
+     |      >>> sorted(mesh.distinct_cell_types)
+     |      [<CellType.TRIANGLE: 5>, <CellType.POLYGON: 7>, <CellType.QUAD: 9>]
+     |      
+     |      Load 2D image.
+     |      
+     |      >>> mesh = examples.load_logo()
+     |      >>> mesh.distinct_cell_types
+     |      {<CellType.PIXEL: 8>}
+     |  
+     |  has_nonlinear_cells
+     |      Return True if the mesh contains any non-linear cells.
+     |      
+     |      .. note::
+     |          Only :class:`~pyvista.UnstructuredGrid` can have non-linear cells. This property is
+     |          therefore always False for all other dataset types.
+     |      
+     |      .. warning::
+     |          Checking for non-linear cells can be very slow for complex meshes with VTK version
+     |          less than 9.6.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Examples
+     |      --------
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.cells.Hexahedron()
+     |      >>> mesh.has_nonlinear_cells
+     |      False
+     |      
+     |      >>> mesh = examples.cells.QuadraticHexahedron()
+     |      >>> mesh.has_nonlinear_cells
+     |      True
      |  
      |  is_empty
      |      Return ``True`` if there are no points.
@@ -2528,6 +3805,158 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh = pv.Cube()
      |      >>> mesh.length
      |      1.7320508075688772
+     |  
+     |  max_cell_dimensionality
+     |      Return the maximum spatial dimensionality of all cells in this mesh.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Notes
+     |      -----
+     |      :attr:`max_cell_dimensionality`:
+     |      
+     |      - is always ``0`` for :class:`~pyvista.PointSet`
+     |      - ranges from ``0`` to ``2`` for :class:`~pyvista.PolyData`.
+     |      - ranges from ``0`` to ``3`` for all other mesh types.
+     |      - is equivalent to :attr:`dimensionality` for gridded data types
+     |        :class:`~pyvista.ImageData` and :class:`~pyvista.RectilinearGrid`.
+     |      
+     |      See Also
+     |      --------
+     |      min_cell_dimensionality, dimensionality, distinct_cell_types
+     |      
+     |      Returns
+     |      -------
+     |      int
+     |          The maximum dimensionality of the dataset's cells.
+     |      
+     |      Examples
+     |      --------
+     |      :class:`~pyvista.PointSet` has no cells, so its :attr:`max_cell_dimensionality` is always
+     |      ``0``.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> mesh = pv.Sphere().cast_to_pointset()
+     |      >>> mesh.max_cell_dimensionality
+     |      0
+     |      
+     |      A :class:`~pyvista.PolyData` surface mesh with 2D polygonal cells such as
+     |      :func:`~pyvista.Sphere` has max cell dimensionality of ``2``.
+     |      
+     |      >>> mesh = pv.Sphere()
+     |      >>> mesh.max_cell_dimensionality
+     |      2
+     |      
+     |      Since there are no 1D :attr:`~pyvista.CellType.LINE` or 0D
+     |      :attr:`~pyvista.CellType.VERTEX` cells, the :attr:`min_cell_dimensionality` is also ``2``
+     |      in this case.
+     |      
+     |      >>> mesh.min_cell_dimensionality
+     |      2
+     |      
+     |      A :class:`~pyvista.UnstructuredGrid` with 3D cells such as :func:`~pyvista.SolidSphere`
+     |      has max and min cell dimensionality of ``3``.
+     |      
+     |      >>> mesh = pv.SolidSphere()
+     |      >>> mesh.max_cell_dimensionality
+     |      3
+     |      >>> mesh.min_cell_dimensionality
+     |      3
+     |      
+     |      A :func:`~pyvista.Line` or :func:`~pyvista.Spline` with 1D cells has a max and min
+     |      cell dimensionality of ``1``.
+     |      
+     |      >>> mesh = pv.Line([0.0, 0.0, 0.0], [1.0, 1.0, 1.0])
+     |      >>> mesh.max_cell_dimensionality
+     |      1
+     |      >>> mesh.min_cell_dimensionality
+     |      1
+     |      
+     |      A curvilinear :class:`~pyvista.StructuredGrid` such as the one from
+     |      :func:`~pyvista.examples.downloads.download_wavy` has 2D cells.
+     |      
+     |      >>> mesh = examples.download_wavy()[0]
+     |      >>> mesh.max_cell_dimensionality
+     |      2
+     |      >>> mesh.min_cell_dimensionality
+     |      2
+     |      
+     |      But it has a spatial :attr:`dimensionality` of ``3`` since its points span three
+     |      dimensions.
+     |      
+     |      >>> mesh.dimensionality
+     |      3
+     |      
+     |      The dimensionality can vary if there are mixed cell types. E.g. load
+     |      :func:`~pyvista.examples.downloads.download_prostar`.
+     |      
+     |      >>> mesh = examples.download_prostar()
+     |      >>> sorted(mesh.distinct_cell_types)  # doctest:+NORMALIZE_WHITESPACE
+     |      [<CellType.VERTEX: 1>, <CellType.LINE: 3>, <CellType.TRIANGLE: 5>, <CellType.POLYGON: 7>,
+     |       <CellType.QUAD: 9>, <CellType.TETRA: 10>, <CellType.HEXAHEDRON: 12>, <CellType.WEDGE: 13>,
+     |       <CellType.PYRAMID: 14>, <CellType.POLYHEDRON: 42>]
+     |      
+     |      There are 3D volumetric cells, so the max dimensionality is ``3``.
+     |      
+     |      >>> mesh.max_cell_dimensionality
+     |      3
+     |      
+     |      And since there are :attr:`~pyvista.CellType.VERTEX` cells its
+     |      :attr:`min_cell_dimensionality` is ``0``.
+     |      
+     |      >>> mesh.min_cell_dimensionality
+     |      0
+     |  
+     |  min_cell_dimensionality
+     |      Get the minimum spatial dimensionality of all cells in this mesh.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Notes
+     |      -----
+     |      :attr:`min_cell_dimensionality`:
+     |      
+     |      - is always ``0`` for :class:`~pyvista.PointSet`
+     |      - ranges from ``0`` to ``2`` for :class:`~pyvista.PolyData`.
+     |      - ranges from ``0`` to ``3`` for all other mesh types.
+     |      - is equivalent to :attr:`dimensionality` for gridded data types
+     |        :class:`~pyvista.ImageData` and :class:`~pyvista.RectilinearGrid`.
+     |      
+     |      See Also
+     |      --------
+     |      max_cell_dimensionality, dimensionality, distinct_cell_types
+     |      
+     |      Returns
+     |      -------
+     |      int
+     |          The minimum dimensionality of the dataset's cells.
+     |      
+     |      Examples
+     |      --------
+     |      Show the max and min cell dimensionality of a :attr:`~pyvista.CellType.LINE` cell and
+     |      :attr:`~pyvista.CellType.TRIANGLE` cell.
+     |      
+     |      >>> from pyvista.examples import cells
+     |      >>> line = cells.Line()
+     |      >>> line.max_cell_dimensionality
+     |      1
+     |      >>> line.min_cell_dimensionality
+     |      1
+     |      
+     |      >>> tri = cells.Triangle()
+     |      >>> tri.max_cell_dimensionality
+     |      2
+     |      >>> tri.min_cell_dimensionality
+     |      2
+     |      
+     |      Merge the two cells and show the max and min cell dimensionality.
+     |      
+     |      >>> merged = line + tri
+     |      >>> merged.max_cell_dimensionality
+     |      2
+     |      >>> merged.min_cell_dimensionality
+     |      1
      |  
      |  n_arrays
      |      Return the number of arrays present in the dataset.
@@ -2689,14 +4118,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh.active_scalars_name
      |      'Z Height'
      |  
-     |  active_t_coords
-     |      Return the active texture coordinates on the points.
-     |      
-     |      Returns
-     |      -------
-     |      Optional[pyvista_ndarray]
-     |          Active texture coordinates on the points.
-     |  
      |  active_tensors_name
      |      Return the name of the active tensor array.
      |      
@@ -2726,7 +4147,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |                       ...,
      |                       [1.        , 0.85714286],
      |                       [1.        , 0.92857143],
-     |                       [1.        , 1.        ]])
+     |                       [1.        , 1.        ]], shape=(540, 2))
      |  
      |  active_vectors_name
      |      Return the name of the active vectors array.
@@ -2747,6 +4168,26 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh_w_normals.active_vectors_name = 'Normals'
      |      >>> mesh_w_normals.active_vectors_name
      |      'Normals'
+     |  
+     |  center
+     |      Set or return the center of the bounding box.
+     |      
+     |      .. versionchanged:: 0.47
+     |          Center can now be set.
+     |      
+     |      Returns
+     |      -------
+     |      tuple[float, float, float]
+     |          Center of the bounding box.
+     |      
+     |      Examples
+     |      --------
+     |      Get the center of a mesh.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Sphere(center=(1, 2, 0))
+     |      >>> mesh.center
+     |      (1.0, 2.0, 0.0)
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.filters.image_data.ImageDataFilters:
@@ -2801,8 +4242,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          By default, all cell data arrays at the input are passed through as point
      |          data at the output.
      |      
-     |      dimensionality : VectorLike[bool], Literal[0, 1, 2, 3, "0D", "1D", "2D", "3D", "preserve"], default: 'preserve'
+     |      dimensionality : VectorLike[bool], Literal[0, 1, 2, 3, "0D", "1D", "2D", "3D", "preserve"]
      |          Control which dimensions will be modified by the filter.
+     |          ``'preserve'`` is used by default.
      |      
      |          - Can be specified as a sequence of 3 boolean to allow modification on a per
      |              dimension basis.
@@ -2886,7 +4328,350 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`image_representations_example` for more examples using this filter.
      |  
-     |  contour_labeled(self, n_labels: 'int | None' = None, smoothing: 'bool' = False, smoothing_num_iterations: 'int' = 50, smoothing_relaxation_factor: 'float' = 0.5, smoothing_constraint_distance: 'float' = 1, output_mesh_type: "Literal['quads', 'triangles']" = 'quads', output_style: "Literal['default', 'boundary']" = 'default', scalars: 'str | None' = None, progress_bar: 'bool' = False) -> 'pyvista.PolyData'
+     |  close(self: 'ImageData', kernel_size: 'int | VectorLike[int]' = (3, 3, 3), scalars: 'str | None' = None, *, binary: 'bool | VectorLike[float] | None' = None, progress_bar: 'bool' = False)
+     |      Perform morphological closing on continuous or binary data.
+     |      
+     |      Closing is a :meth:`dilation <dilate>` followed by an :meth:`erosion <erode>`.
+     |      It is used to fill small holes/gaps while preserving the shape and size of larger objects.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      kernel_size : int | VectorLike[int], default: (3, 3, 3)
+     |          Determines the size of the kernel along the xyz-axes. Only non-singleton dimensions
+     |          are closed, e.g. a kernel size of ``(3, 3, 1)`` and ``(3, 3, 3)`` produce the same
+     |          result for 2D images.
+     |      
+     |      scalars : str, optional
+     |          Name of scalars to process. Defaults to currently active scalars.
+     |      
+     |      binary : bool | VectorLike[float], optional
+     |          Control if binary closing or continuous closing is used. Refer to
+     |          :meth:`dilate` and/or :meth:`erode` for details about using this keyword.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ImageData
+     |          Dataset that has been closed.
+     |      
+     |      See Also
+     |      --------
+     |      open, erode, dilate
+     |      
+     |      Notes
+     |      -----
+     |      This filter only supports point data. For inputs with cell data, consider
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      
+     |      Examples
+     |      --------
+     |      Load a binary image: :func:`~pyvista.examples.downloads.download_yinyang()`.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> im = examples.download_yinyang()
+     |      
+     |      Use ``close`` with a relatively small kernel to fill the top black edge of the yinyang.
+     |      
+     |      >>> closed = im.close(kernel_size=5)
+     |      >>> kwargs = dict(
+     |      ...     cmap='grey',
+     |      ...     lighting=False,
+     |      ...     cpos='xy',
+     |      ...     zoom='tight',
+     |      ...     show_axes=False,
+     |      ...     show_scalar_bar=False,
+     |      ... )
+     |      >>> closed.plot(**kwargs)
+     |      
+     |      Use a much larger kernel to also fill the small black circle.
+     |      
+     |      >>> closed = im.close(kernel_size=25)
+     |      >>> closed.plot(**kwargs)
+     |      
+     |      Since closing is the inverse of opening, we can alternatively use :meth:`open` to
+     |      fill the white foreground values instead of the black background.
+     |      
+     |      >>> opened = im.open(kernel_size=25)
+     |      >>> opened.plot(**kwargs)
+     |  
+     |  concatenate(self: 'ImageData', images: 'ImageData | Sequence[ImageData]', axis: '_AxisOptions | None' = None, *, mode: '_ConcatenateModeOptions | None' = None, dtype_policy: '_ConcatenateDTypePolicyOptions | None' = None, component_policy: '_ConcatenateComponentPolicyOptions | None' = None, background_value: 'float | VectorLike[float]' = 0.0, resample_kwargs: 'dict[str, Any] | None' = None)
+     |      Combine multiple images into one.
+     |      
+     |      This filter uses :vtk:`vtkImageAppend` to combine multiple images. By default, images are
+     |      concatenated along the specified ``axis``, and all images must have:
+     |      
+     |      #. identical dimensions except along the specified ``axis``,
+     |      #. the same scalar dtype, and
+     |      #. the same number of scalar components.
+     |      
+     |      Use ``mode`` for cases with mismatched dimensions, ``dtype_policy`` for cases with
+     |      mismatched dtypes, and/or ``component_policy`` for cases with mismatched scalar components.
+     |      
+     |      The output has the same :attr:`~pyvista.ImageData.origin` and
+     |      :attr:`~pyvista.ImageData.spacing` as the first input. The origin and spacing of all other
+     |      inputs are ignored.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      images : ImageData | Sequence[ImageData]
+     |          The input image(s) to concatenate. The default active scalars are used for all images.
+     |      
+     |      axis : int | str, default: 'x'
+     |          Axis along which the images are concatenated:
+     |      
+     |          - ``0`` or ``'x'``: x-axis
+     |          - ``1`` or ``'y'``: y-axis
+     |          - ``2`` or ``'z'``: z-axis
+     |      
+     |      mode : str, default: 'strict'
+     |          Concatenation mode to use. This determines how images are placed in the output. All
+     |          modes operate along the specified ``axis`` except for ``'preserve-extents'``.
+     |          Specify one of:
+     |      
+     |          - ``'strict'``: all images must have identical dimensions except along the specified
+     |            ``axis``.
+     |          - ``'resample-off-axis'``: :meth:`resample` off-axis dimensions of concatenated images
+     |            to match the input. The on-axis dimension is `not` resampled.
+     |          - ``'resample-match'``: :meth:`resample` all dimensions of concatenated images
+     |            to match the input dimensions exactly. This is similar to ``'resample-off-axis'``,
+     |            except the on-axis dimension is `also` resampled.
+     |          - ``'resample-proportional'``: :meth:`resample` concatenated images proportionally to
+     |            preserve their aspect ratio(s).
+     |          - ``'crop-off-axis'``: :meth:`crop` off-axis dimensions of concatenated images
+     |            to match the input. The on-axis dimension is `not` cropped.
+     |          - ``'crop-match'``: Use :meth:`crop` to center-crop concatenated images such that
+     |            their dimensions match the input dimensions exactly. This is similar to
+     |            ``'crop-off-axis'``, except the on-axis dimension is `also` cropped.
+     |          - ``'preserve-extents'``: the extents of all images are preserved and used to place the
+     |            images in the output. The whole extent of the output is the union of the input whole
+     |            extents. The origin and spacing is taken from the first input. ``axis`` is not used
+     |            by this mode.
+     |      
+     |          .. note::
+     |              Images may be padded with ``background_value`` in some cases when there are
+     |              mismatched dimensions.
+     |      
+     |      dtype_policy : 'strict' | 'promote' | 'match', default: 'strict'
+     |          - ``'strict'``: Do not cast any scalar array dtypes. All images being concatenated must
+     |            have the same dtype, else a ``TypeError`` is raised.
+     |          - ``'promote'``: Use :func:`numpy.result_type` to compute the dtype of the output
+     |            image scalars. This option safely casts all input arrays to a common dtype before
+     |            concatenating.
+     |          - ``'match'``: Cast all array dtypes to match the input's dtype. This casting is
+     |            unsafe as it may downcast values and lose precision.
+     |      
+     |      component_policy : 'strict' | 'promote_rgba', default: 'strict'
+     |          - ``'strict'``: Do not modify the number of components of any scalars. All images being
+     |            concatenated must have the same number of components, else a ``ValueError`` is
+     |            raised.
+     |          - ``'promote_rgba'``: Increase the number of components if necessary. Grayscale scalars
+     |            with one component may be promoted to RGB scalars by duplicating values,
+     |            and RGB scalars may be promoted to RGBA scalars by including an opacity component.
+     |            For integer dtypes, the opacity is set to the max int representable by the dtype;
+     |            for floats it is set to ``1.0``.
+     |      
+     |      background_value : float | VectorLike[float], default: 0
+     |          Value or multi-component vector to use as background. The output may be padded with
+     |          this value for some ``modes`` when there are mismatched dimensions.
+     |      
+     |      resample_kwargs : dict, optional
+     |          Keyword arguments passed to :meth:`resample` when using ``'resample-off-axis'`` or
+     |          ``'resample-proportional'`` modes. Specify ``interpolation``, ``border_mode`` or
+     |          ``anti_aliasing`` options.
+     |      
+     |      Returns
+     |      -------
+     |      ImageData
+     |          The concatenated image.
+     |      
+     |      Examples
+     |      --------
+     |      .. pyvista-plot::
+     |          :force_static:
+     |      
+     |          Load a 2D image: :func:`~pyvista.examples.downloads.download_beach`.
+     |      
+     |          >>> import pyvista as pv
+     |          >>> from pyvista import examples
+     |          >>> beach = examples.download_beach()
+     |      
+     |          Use :meth:`select_values` to make a second version with white values converted to black
+     |          to distinguish it from the original.
+     |      
+     |          >>> white = [255, 255, 255]
+     |          >>> black = [0, 0, 0]
+     |          >>> beach_black = beach.select_values(white, fill_value=black, invert=True)
+     |      
+     |          Concatenate them along the x-axis.
+     |      
+     |          >>> concatenated = beach.concatenate(beach_black, axis='x')
+     |          >>> plot_kwargs = dict(
+     |          ...     rgb=True,
+     |          ...     lighting=False,
+     |          ...     cpos='xy',
+     |          ...     zoom='tight',
+     |          ...     show_axes=False,
+     |          ...     show_scalar_bar=False,
+     |          ... )
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Concatenate them along the y-axis.
+     |      
+     |          >>> concatenated = beach.concatenate(beach_black, axis='y')
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          By default, concatenation requires that all off-axis dimensions match the input. Use
+     |          the ``mode`` keyword to enable concatenation with mismatched dimensions.
+     |      
+     |          Load a second 2D image with different dimensions:
+     |          :func:`~pyvista.examples.downloads.download_bird`.
+     |      
+     |          >>> bird = examples.download_bird()
+     |          >>> bird.dimensions
+     |          (458, 342, 1)
+     |          >>> beach.dimensions
+     |          (100, 100, 1)
+     |      
+     |          Concatenate using ``'resample-proportional'`` mode to preserve the aspect ratio of the
+     |          concatenated image. Linear interpolation with antialiasing is used to avoid sampling
+     |          artifacts.
+     |      
+     |          >>> resample_kwargs = {'interpolation': 'linear', 'anti_aliasing': True}
+     |          >>> concatenated = beach.concatenate(
+     |          ...     bird, mode='resample-proportional', resample_kwargs=resample_kwargs
+     |          ... )
+     |          >>> concatenated.dimensions
+     |          (233, 100, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use ``'resample-proportional'`` again but concontenate along the z-axis instead. The
+     |          ``bird``'s aspect ratio is preserved and padded with zeros so that it can be stacked
+     |          on top of ``beach``.
+     |      
+     |          >>> concatenated = beach.concatenate(
+     |          ...     bird,
+     |          ...     axis='z',
+     |          ...     mode='resample-proportional',
+     |          ...     resample_kwargs=resample_kwargs,
+     |          ... )
+     |          >>> concatenated.dimensions
+     |          (100, 100, 2)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use ``'resample-off-axis'`` to only resample off-axis dimensions. This option may
+     |          distort the image.
+     |      
+     |          >>> concatenated = beach.concatenate(
+     |          ...     bird, mode='resample-off-axis', resample_kwargs=resample_kwargs
+     |          ... )
+     |          >>> concatenated.dimensions
+     |          (558, 100, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use ``'resample-match'`` to resample all dimensions to match the input exactly. This
+     |          option may also distort the image.
+     |      
+     |          >>> concatenated = beach.concatenate(
+     |          ...     bird, mode='resample-match', resample_kwargs=resample_kwargs
+     |          ... )
+     |          >>> concatenated.dimensions
+     |          (200, 100, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use the ``'preserve-extents'`` mode. Using this mode naively may not produce the
+     |          desired result, e.g. if we concatenate ``beach`` with ``bird``, the ``beach`` image is
+     |          completely overwritten since their :attr:`~pyvista.ImageData.extent` fully overlap.
+     |      
+     |          >>> beach.extent
+     |          (0, 99, 0, 99, 0, 0)
+     |          >>> bird.extent
+     |          (0, 457, 0, 341, 0, 0)
+     |      
+     |          >>> concatenated = beach.concatenate(bird, mode='preserve-extents')
+     |          >>> concatenated.extent
+     |          (0, 457, 0, 341, 0, 0)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Set the ``beach`` :attr:`~pyvista.ImageData.offset` so that there is only partial
+     |          overlap instead.
+     |      
+     |          >>> beach.offset = (-50, -50, 0)
+     |          >>> beach.extent
+     |          (-50, 49, -50, 49, 0, 0)
+     |      
+     |          >>> concatenated = beach.concatenate(bird, mode='preserve-extents')
+     |          >>> concatenated.extent
+     |          (-50, 457, -50, 341, 0, 0)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Reverse the concatenation order, and use a green background value.
+     |      
+     |          >>> green = pv.Color('green').int_rgb
+     |          >>> concatenated = bird.concatenate(
+     |          ...     beach, mode='preserve-extents', background_value=green
+     |          ... )
+     |          >>> concatenated.extent
+     |          (-50, 457, -50, 341, 0, 0)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use ``'crop-off-axis'`` to only crop off-axis dimensions.
+     |      
+     |          >>> concatenated = beach.concatenate(bird, mode='crop-off-axis')
+     |          >>> concatenated.dimensions
+     |          (558, 100, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Reverse the concatenation order.
+     |      
+     |          >>> concatenated = bird.concatenate(beach, mode='crop-off-axis')
+     |          >>> concatenated.dimensions
+     |          (558, 342, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Use ``'crop-match'`` to center-crop the images to match the input's
+     |          dimensions.
+     |      
+     |          >>> concatenated = beach.concatenate(bird, mode='crop-match')
+     |          >>> concatenated.dimensions
+     |          (200, 100, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Reverse the concatenation order, and use a grey background value.
+     |      
+     |          >>> concatenated = bird.concatenate(
+     |          ...     beach, mode='crop-match', background_value=128
+     |          ... )
+     |          >>> concatenated.dimensions
+     |          (558, 342, 1)
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          Load a binary image: :func:`~pyvista.examples.downloads.download_yinyang()`.
+     |      
+     |          >>> yinyang = examples.download_yinyang()
+     |      
+     |          Use ``component_policy`` to concatenate grayscale images with RGB(A) images.
+     |      
+     |          >>> concatenated = yinyang.concatenate(
+     |          ...     beach, mode='resample-proportional', component_policy='promote_rgba'
+     |          ... )
+     |          >>> concatenated.plot(**plot_kwargs)
+     |      
+     |          The grayscale portion of the image is promoted to RGB in this case and the entire
+     |          image has 3 components:
+     |      
+     |          >>> concatenated.active_scalars.shape
+     |          (292068, 3)
+     |  
+     |  contour_labeled(self, n_labels: 'int | None' = None, smoothing: 'bool' = False, smoothing_num_iterations: 'int' = 50, smoothing_relaxation_factor: 'float' = 0.5, smoothing_constraint_distance: 'float' = 1, output_mesh_type: "Literal['quads', 'triangles']" = 'quads', output_style: "Literal['default', 'boundary']" = 'default', scalars: 'str | None' = None, progress_bar: 'bool' = False) -> 'pv.PolyData'
      |      Generate labeled contours from 3D label maps.
      |      
      |      SurfaceNets algorithm is used to extract contours preserving sharp
@@ -2911,7 +4696,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          .. code-block:: python
      |      
      |              image.contour_labels(
-     |                  boundary_style='strict_external',  # old filter strictly computes external polygons
+     |                  boundary_style='strict_external',  # old filter strictly uses external polygons
      |                  smoothing=False,  # old filter does not apply smoothing
      |                  output_mesh_type='quads',  # old filter generates quads
      |                  pad_background=False,  # old filter generates open surfaces at input edges
@@ -2977,10 +4762,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      pyvista.DataSetFilters.pack_labels
      |          Function used internally by SurfaceNets to generate contiguous label data.
      |  
-     |  contour_labels(self: 'ImageData', boundary_style: "Literal['external', 'internal', 'all', 'strict_external']" = 'external', *, background_value: 'int' = 0, select_inputs: 'int | VectorLike[int] | None' = None, select_outputs: 'int | VectorLike[int] | None' = None, pad_background: 'bool' = True, output_mesh_type: "Literal['quads', 'triangles'] | None" = None, scalars: 'str | None' = None, orient_faces: 'bool' = True, simplify_output: 'bool | None' = None, smoothing: 'bool' = True, smoothing_iterations: 'int' = 16, smoothing_relaxation: 'float' = 0.5, smoothing_distance: 'float | None' = None, smoothing_scale: 'float' = 1.0, progress_bar: 'bool' = False) -> 'PolyData'
+     |  contour_labels(self: 'ImageData', boundary_style: "Literal['external', 'internal', 'all', 'strict_external']" = 'external', *, background_value: 'int' = 0, select_inputs: 'int | VectorLike[int] | None' = None, select_outputs: 'int | VectorLike[int] | None' = None, pad_background: 'bool' = True, output_mesh_type: "Literal['quads', 'triangles'] | None" = None, scalars: 'str | None' = None, orient_faces: 'bool | None' = None, simplify_output: 'bool | None' = None, smoothing: 'bool' = True, smoothing_iterations: 'int' = 16, smoothing_relaxation: 'float' = 0.5, smoothing_distance: 'float | None' = None, smoothing_scale: 'float' = 1.0, progress_bar: 'bool' = False) -> 'PolyData'
      |      Generate surface contours from 3D image label maps.
      |      
-     |      This filter uses `vtkSurfaceNets <https://vtk.org/doc/nightly/html/classvtkSurfaceNets3D.html#details>`__
+     |      This filter uses :vtk:`vtkSurfaceNets3D`
      |      to extract polygonal surface contours from non-continuous label maps, which
      |      corresponds to discrete regions in an input 3D image (i.e., volume). It is
      |      designed to generate surfaces from image point data, e.g. voxel point
@@ -3101,7 +4886,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          :meth:`~pyvista.ImageDataFilters.cells_to_points` to transform the cell
      |          data into point data.
      |      
-     |      orient_faces : bool, default: True
+     |      orient_faces : bool, optional
+     |          .. deprecated:: 0.47
+     |      
+     |              This keyword should not be used and will be removed in a future version. It was
+     |              meant to address a vtk bug where the faces generated by :vtk:`vtkSurfaceNets3D`
+     |              have incorrect orientation. This bug is fixed in VTK 9.6, and therefore the faces
+     |              now always have correct orientation by default.
+     |      
      |          Orient the faces of the generated contours so that they have consistent
      |          ordering and face outward. If ``False``, the generated polygons may have
      |          inconsistent ordering and orientation, which can negatively impact
@@ -3209,8 +5001,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      References
      |      ----------
-     |      S. Frisken, “SurfaceNets for Multi-Label Segmentations with Preservation of
-     |      Sharp Boundaries”, J. Computer Graphics Techniques, 2022. Available online:
+     |      S. Frisken, SurfaceNets for Multi-Label Segmentations with Preservation of
+     |      Sharp Boundaries, J. Computer Graphics Techniques, 2022. Available online:
      |      http://jcgt.org/published/0011/01/03/
      |      
      |      W. Schroeder, S. Tsalikis, M. Halle, S. Frisken. A High-Performance SurfaceNets
@@ -3244,11 +5036,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> def labels_plotter(mesh, zoom=None):
      |      ...     colored_mesh = mesh.color_labels(negative_indexing=True)
-     |      ...     plotter = pv.Plotter()
-     |      ...     plotter.add_mesh(colored_mesh, show_edges=True)
+     |      ...     pl = pv.Plotter()
+     |      ...     pl.add_mesh(colored_mesh, show_edges=True)
      |      ...     if zoom:
-     |      ...         plotter.camera.zoom(zoom)
-     |      ...     return plotter
+     |      ...         pl.camera.zoom(zoom)
+     |      ...     return pl
      |      >>>
      |      >>> labels_plotter(image).show()
      |      
@@ -3365,7 +5157,507 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> surf = image.contour_labels('strict_external')
      |      >>> labels_plotter(surf, zoom=1.5).show()
      |  
-     |  extract_subset(self, voi, rate=(1, 1, 1), boundary: 'bool' = False, progress_bar: 'bool' = False)
+     |  crop(self: 'ImageData', *, factor: 'float | VectorLike[float] | None' = None, margin: 'int | VectorLike[int] | None' = None, offset: 'VectorLike[int] | None' = None, dimensions: 'VectorLike[int] | None' = None, extent: 'VectorLike[int] | None' = None, normalized_bounds: 'VectorLike[float] | None' = None, mask: 'str | ImageData | NumpyArray[float] | Literal[True] | None' = None, padding: 'int | VectorLike[int] | None' = None, background_value: 'float | None' = None, keep_dimensions: 'bool' = False, fill_value: 'float | VectorLike[float] | None' = None, rebase_coordinates: 'bool' = False, progress_bar: 'bool' = False) -> 'ImageData'
+     |      Crop this image to remove points at its boundaries.
+     |      
+     |      This filter is useful for extracting a volume or region of interest. There are several ways
+     |      to crop:
+     |      
+     |      #. Use ``factor`` to crop a portion of the image symmetrically.
+     |      #. Use ``margin`` to remove points from the image border.
+     |      #. Use ``dimensions`` (and optionally, ``offset``) to explicitly crop to the specified
+     |         :attr:`~pyvista.ImageData.dimensions` and :attr:`~pyvista.ImageData.offset`.
+     |      #. Use ``extent`` to explicitly crop to a specified :attr:`~pyvista.ImageData.extent`.
+     |      #. Use ``normalized_bounds`` to crop a bounding box relative to the input size.
+     |      #. Use ``mask``, ``padding``, and ``background_value`` to crop to this mesh using scalar
+     |         values to define the cropping region.
+     |      
+     |      These methods are all independent, e.g. it is not possible to specify both ``factor`` and
+     |      ``margin``.
+     |      
+     |      By default, the cropped output's :attr:`~pyvista.ImageData.dimensions` are typically less
+     |      than the input's dimensions. Optionally, use ``keep_dimensions`` and ``fill_value`` to
+     |      ensure the output dimensions always match the input.
+     |      
+     |      .. note::
+     |      
+     |          All cropping is performed using the image's ijk-indices, not physical xyz-bounds.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      Parameters
+     |      ----------
+     |      factor : float, optional
+     |          Cropping factor in range ``[0.0, 1.0]`` which specifies the proportion of the image to
+     |          keep along each axis. Use a single float for uniform cropping or a vector of three
+     |          floats for cropping each xyz-axis independently. The crop is centered in the image.
+     |      
+     |      margin : int | VectorLike[int], optional
+     |          Margin to remove from each side of each axis. Specify:
+     |      
+     |          - A single value to remove from all boundaries equally.
+     |          - Two values, one for each ``(X, Y)`` axis, to remove margin from
+     |            each axis independently.
+     |          - Three values, one for each ``(X, Y, Z)`` axis, to remove margin from
+     |            each axis independently.
+     |          - Four values, one for each ``(-X, +X, -Y, +Y)`` boundary, to remove
+     |            margin from each boundary independently.
+     |          - Six values, one for each ``(-X, +X, -Y, +Y, -Z, +Z)`` boundary, to remove
+     |            margin from each boundary independently.
+     |      
+     |      offset : VectorLike[int], optional
+     |          Length-3 vector of integers specifying the :attr:`~pyvista.ImageData.offset` indices
+     |          where the cropping region originates. If specified, then ``dimensions`` must also be
+     |          provided.
+     |      
+     |      dimensions : VectorLike[int], optional
+     |          Length-3 vector of integers specifying the :attr:`~pyvista.ImageData.dimensions` of
+     |          the cropping region. ``offset`` may also be provided, but if it is not, the crop is
+     |          centered in the image.
+     |      
+     |      extent : VectorLike[int], optional
+     |          Length-6 vector of integers specifying the full :attr:`~pyvista.ImageData.extent` of
+     |          the cropping region.
+     |      
+     |      normalized_bounds : VectorLike[float], optional
+     |          Normalized bounds relative to the input. These are floats between ``0.0`` and ``1.0``
+     |          that define a box relative to the input size. The input is cropped such that it fully
+     |          fits within these bounds. Has the form ``(x_min, x_max, y_min, y_max, z_min, z_max)``.
+     |      
+     |      mask : str | ImageData | NumpyArray[float] | bool, optional
+     |          Scalar values that define the cropping region. Set this option to:
+     |      
+     |          - a string denoting the name of scalars belonging to this mesh
+     |          - ``True`` to use this mesh's default scalars
+     |          - a separate image, in which case the other image's active scalars are used
+     |          - a 1D or 2D (multi-component) array
+     |      
+     |          The length of the scalar array must equal the number of points.
+     |      
+     |          This mesh will be cropped to the bounds of the foreground values of the array, i.e.
+     |          values that are not equal to the specified ``background_value``.
+     |      
+     |      padding : int | VectorLike[int], optional
+     |          Padding to add to foreground region `before` cropping. Only valid when using a mask to
+     |          crop the image. Specify:
+     |      
+     |          - A single value to pad all boundaries equally.
+     |          - Two values, one for each ``(X, Y)`` axis, to apply symmetric padding to
+     |            each axis independently.
+     |          - Three values, one for each ``(X, Y, Z)`` axis, to apply symmetric padding
+     |            to each axis independently.
+     |          - Four values, one for each ``(-X, +X, -Y, +Y)`` boundary, to apply
+     |            padding to each boundary independently.
+     |          - Six values, one for each ``(-X, +X, -Y, +Y, -Z, +Z)`` boundary, to apply
+     |            padding to each boundary independently.
+     |      
+     |          The specified value is the `maximum` padding that may be applied. If the padding
+     |          extends beyond the actual extents of this mesh, it is clipped and does not extend
+     |          outside the bounds of the image.
+     |      
+     |      background_value : float | VectorLike[float], optional
+     |          Value or multi-component vector considered to be the background. Only valid when using
+     |          a mask to crop the image.
+     |      
+     |      keep_dimensions : bool, default: False
+     |          If ``True``, the cropped output is :meth:`padded <pad_image>` with ``fill_value`` to
+     |          ensure the output dimensions match the input.
+     |      
+     |      fill_value : float | VectorLike[float], optional
+     |          Value used when padding the cropped output if ``keep_dimensions`` is ``True``. May be
+     |          a single float or a multi-component vector (e.g. RGB vector).
+     |      
+     |      rebase_coordinates : bool, default: False
+     |          Rebase the coordinate reference of the cropped output:
+     |      
+     |          - the :attr:`~pyvista.ImageData.origin` is set to the minimum bounds of the subset
+     |          - the :attr:`~pyvista.ImageData.offset` is reset to ``(0, 0, 0)``
+     |      
+     |          The rebasing effectively applies a positive translation in world (XYZ) coordinates and
+     |          a similar (i.e. inverse) negative translation in voxel (IJK) coordinates. As a result,
+     |          the :attr:`~pyvista.DataSet.bounds` of the output are unchanged, but the coordinate
+     |          reference frame is modified.
+     |      
+     |          Set this to ``False`` to leave the origin unmodified and keep the offset used by the
+     |          crop.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      ImageData
+     |          Cropped image.
+     |      
+     |      See Also
+     |      --------
+     |      pad_image
+     |          Add points to image boundaries. This is the inverse operation of the ``margin`` crop.
+     |      
+     |      resample
+     |          Modify an image's dimensions and spacing.
+     |      
+     |      select_values
+     |          Threshold-like filter which may be used to generate a mask for cropping.
+     |      
+     |      extract_subset
+     |          Equivalent filter to ``crop(extent=voi, rebase_coordinates=True)``.
+     |      
+     |      :ref:`crop_labeled_example`
+     |          Example cropping :class:`~pyvista.ImageData` using a segmentation mask.
+     |      
+     |      Examples
+     |      --------
+     |      Load a grayscale image.
+     |      
+     |      >>> import numpy as np
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> gray_image = examples.download_yinyang()
+     |      >>> gray_image.dimensions
+     |      (512, 342, 1)
+     |      
+     |      Define a custom plotting helper to show the image as pixel cells.
+     |      
+     |      >>> def image_plotter(image):
+     |      ...     pixel_cells = image.points_to_cells()
+     |      ...
+     |      ...     pl = pv.Plotter()
+     |      ...     pl.add_mesh(
+     |      ...         pixel_cells,
+     |      ...         cmap='gray',
+     |      ...         clim=[0, 255],
+     |      ...         lighting=False,
+     |      ...         show_scalar_bar=False,
+     |      ...     )
+     |      ...     pl.view_xy()
+     |      ...     pl.camera.tight()
+     |      ...     return pl
+     |      
+     |      Plot the image for context.
+     |      
+     |      >>> image_plotter(gray_image).show()
+     |      
+     |      Crop the white border around the image using active scalars as a mask. Here we specify a
+     |      background value of ``255`` to correspond to white pixels. If this was an RGB image, we
+     |      could also specify ``(255, 255, 255)`` as the background value.
+     |      
+     |      >>> cropped = gray_image.crop(mask=True, background_value=255)
+     |      >>> cropped.dimensions
+     |      (237, 238, 1)
+     |      >>> image_plotter(cropped).show()
+     |      
+     |      Use ``margin`` instead to remove 100 and 20 pixels from each side of the x- and y-axis,
+     |      respectively.
+     |      
+     |      >>> cropped = gray_image.crop(margin=(100, 20))
+     |      >>> cropped.dimensions
+     |      (312, 302, 1)
+     |      >>> image_plotter(cropped).show()
+     |      
+     |      Use ``offset`` to select a starting location for the crop (from the origin at the
+     |      bottom-left corner) along with ``dimensions`` to define the crop size.
+     |      
+     |      >>> cropped = gray_image.crop(offset=(50, 20, 0), dimensions=(300, 200, 1))
+     |      >>> cropped.dimensions
+     |      (300, 200, 1)
+     |      >>> image_plotter(cropped).show()
+     |      
+     |      Use ``extent`` directly instead of using ``dimensions`` and ``offset`` to yield the same
+     |      result as above.
+     |      
+     |      >>> cropped = gray_image.crop(extent=(50, 349, 20, 219, 0, 0))
+     |      >>> cropped.extent
+     |      (50, 349, 20, 219, 0, 0)
+     |      >>> image_plotter(cropped).show()
+     |      
+     |      Use ``factor`` to crop 40% of the image. This `keeps` 40% of the pixels along each axis,
+     |      and `removes` 60% (i.e. 30% from each side).
+     |      
+     |      >>> cropped = gray_image.crop(factor=0.4)
+     |      >>> cropped.dimensions
+     |      (204, 136, 1)
+     |      >>> image_plotter(cropped).show()
+     |      
+     |      Use ``normalized_bounds`` to crop from 40% to 80% of the image along the x-axis, and
+     |      from 30% to 90% of the image along the y-axis.
+     |      
+     |      >>> cropped = gray_image.crop(normalized_bounds=[0.4, 0.8, 0.3, 0.9, 0.0, 1.0])
+     |      >>> cropped.extent
+     |      (205, 408, 103, 306, 0, 0)
+     |      >>> image_plotter(cropped).show()
+     |  
+     |  dilate(self: 'ImageData', kernel_size: 'int | VectorLike[int]' = (3, 3, 3), scalars: 'str | None' = None, *, binary: 'bool | VectorLike[float] | None' = None, progress_bar: 'bool' = False)
+     |      Morphologically dilate grayscale or binary data.
+     |      
+     |      This filter may be used to dilate grayscale images with continuous data, binary images
+     |      with a single background and foreground value, or multi-label images.
+     |      
+     |      For binary inputs with two unique values, this filter uses :vtk:`vtkImageDilateErode3D`
+     |      by default to perform fast binary dilation over an ellipsoidal neighborhood. Otherwise,
+     |      the slower class :vtk:`vtkImageContinuousDilate3D` is used to perform generalized grayscale
+     |      dilation by replacing each pixel with the maximum over an ellipsoidal neighborhood.
+     |      
+     |      Optionally, the ``binary`` keyword may be used to explicitly control the behavior of the
+     |      filter.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      kernel_size : int | VectorLike[int], default: (3, 3, 3)
+     |          Determines the size of the kernel along the xyz-axes. Only non-singleton dimensions
+     |          are dilated, e.g. a kernel size of ``(3, 3, 1)`` and ``(3, 3, 3)`` produce the same
+     |          result for 2D images.
+     |      
+     |      scalars : str, optional
+     |          Name of scalars to process. Defaults to currently active scalars.
+     |      
+     |      binary : bool | VectorLike[float], optional
+     |          Control if binary dilation or continuous dilation is used.
+     |      
+     |          If set, :vtk:`vtkImageDilateErode3D` is used to strictly dilate with two values.
+     |          Set this to ``True`` to dilate the maximum value in ``scalars`` with its minimum value,
+     |          or set it to two values ``[background_value, foreground_value]`` to dilate
+     |          ``foreground_value`` with ``background_value`` explicitly.
+     |      
+     |          Set this to ``False`` to use :vtk:`vtkImageContinuousDilate3D` to perform continuous
+     |          dilation.
+     |      
+     |          By default, ``binary`` is ``True`` if the input has two unique values, and ``False``
+     |          otherwise.
+     |      
+     |          .. note::
+     |              - If the input is a binary mask, setting ``binary=True`` produces the same output
+     |                as ``binary=False``, but the filter is much more performant.
+     |              - Setting ``binary=[background_value, foreground_value]`` is useful to `isolate`
+     |                the dilation to two values, e.g. for multi-label segmentation masks.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ImageData
+     |          Dataset that has been dilated.
+     |      
+     |      See Also
+     |      --------
+     |      erode, open, close
+     |      
+     |      Notes
+     |      -----
+     |      This filter only supports point data. For inputs with cell data, consider
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      
+     |      Examples
+     |      --------
+     |      .. pyvista-plot::
+     |          :force_static:
+     |      
+     |          Create a toy example with two non-zero grayscale foreground values
+     |          :meth:`padded <pad_image>` with a background of zeros.
+     |      
+     |          >>> import pyvista as pv
+     |          >>> im = pv.ImageData(dimensions=(2, 1, 1))
+     |          >>> im['data'] = [128, 255]
+     |          >>> im = im.pad_image(pad_value=0, pad_size=2, dimensionality=2)
+     |      
+     |          Define a custom plotter to plot pixels as cells.
+     |      
+     |          >>> def image_plotter(image):
+     |          ...     pl = pv.Plotter()
+     |          ...     pl.add_mesh(
+     |          ...         image.points_to_cells(),
+     |          ...         cmap='grey',
+     |          ...         clim=[0, 255],
+     |          ...         show_scalar_bar=False,
+     |          ...         show_edges=True,
+     |          ...         lighting=False,
+     |          ...         line_width=3,
+     |          ...     )
+     |          ...     pl.camera_position = 'xy'
+     |          ...     pl.camera.tight()
+     |          ...     pl.enable_anti_aliasing()
+     |          ...     return pl
+     |      
+     |          Show the image.
+     |      
+     |          >>> image_plotter(im).show()
+     |      
+     |          Dilate it with default settings. Observe that `both` foreground values are dilated.
+     |      
+     |          >>> dilated = im.dilate()
+     |          >>> image_plotter(dilated).show()
+     |      
+     |          Use a larger kernel size.
+     |      
+     |          >>> dilated = im.dilate(kernel_size=5)
+     |          >>> image_plotter(dilated).show()
+     |      
+     |          Use an asymmetric kernel.
+     |      
+     |          >>> dilated = im.dilate(kernel_size=(2, 4, 1))
+     |          >>> image_plotter(dilated).show()
+     |      
+     |          Use binary dilation. By default, the max value (``255`` in this example) is dilated
+     |          with the min value (``0`` in this example). All other values are unaffected.
+     |      
+     |          >>> dilated = im.dilate(binary=True)
+     |          >>> image_plotter(dilated).show()
+     |      
+     |          Equivalently, set the binary values for the dilation explicitly.
+     |      
+     |          >>> dilated = im.dilate(binary=[0, 255])
+     |          >>> image_plotter(dilated).show()
+     |      
+     |          Use binary dilation with the other foreground value instead.
+     |      
+     |          >>> dilated = im.dilate(binary=[0, 128])
+     |          >>> image_plotter(dilated).show()
+     |  
+     |  erode(self: 'ImageData', kernel_size: 'int | VectorLike[int]' = (3, 3, 3), scalars: 'str | None' = None, *, binary: 'bool | VectorLike[float] | None' = None, progress_bar: 'bool' = False)
+     |      Morphologically erode grayscale or binary data.
+     |      
+     |      This filter may be used to erode grayscale images with continuous data, binary images
+     |      with a single background and foreground value, or multi-label images.
+     |      
+     |      For binary inputs with two unique values, this filter uses :vtk:`vtkImageDilateErode3D`
+     |      by default to perform fast binary erosion over an ellipsoidal neighborhood. Otherwise,
+     |      the slower class :vtk:`vtkImageContinuousErode3D` is used to perform generalized grayscale
+     |      erosion by replacing each pixel with the minimum over an ellipsoidal neighborhood.
+     |      
+     |      Optionally, the ``binary`` keyword may be used to explicitly control the behavior of the
+     |      filter.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      kernel_size : int | VectorLike[int], default: (3, 3, 3)
+     |          Determines the size of the kernel along the xyz-axes. Only non-singleton dimensions
+     |          are eroded, e.g. a kernel size of ``(3, 3, 1)`` and ``(3, 3, 3)`` produce the same
+     |          result for 2D images.
+     |      
+     |      scalars : str, optional
+     |          Name of scalars to process. Defaults to currently active scalars.
+     |      
+     |      binary : bool | VectorLike[float], optional
+     |          Control if binary erosion or continuous erosion is used.
+     |      
+     |          If set, :vtk:`vtkImageDilateErode3D` is used to strictly erode with two values.
+     |          Set this to ``True`` to erode the maximum value in ``scalars`` with its minimum value,
+     |          or set it to two values ``[background_value, foreground_value]`` to erode
+     |          ``foreground_value`` with ``background_value`` explicitly.
+     |      
+     |          Set this to ``False`` to use :vtk:`vtkImageContinuousErode3D` to perform continuous
+     |          erosion.
+     |      
+     |          By default, ``binary`` is ``True`` if the input has two unique values, and ``False``
+     |          otherwise.
+     |      
+     |          .. note::
+     |              - If the input is a binary mask, setting ``binary=True`` produces the same output
+     |                as ``binary=False``, but the filter is much more performant.
+     |              - Setting ``binary=[background_value, foreground_value]`` is useful to `isolate`
+     |                the erosion to two values, e.g. for multi-label segmentation masks.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ImageData
+     |          Dataset that has been eroded.
+     |      
+     |      See Also
+     |      --------
+     |      dilate, open, close
+     |      
+     |      Notes
+     |      -----
+     |      This filter only supports point data. For inputs with cell data, consider
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      
+     |      Examples
+     |      --------
+     |      .. pyvista-plot::
+     |          :force_static:
+     |      
+     |          Create a toy example with two non-zero grayscale foreground regions
+     |          using :meth:`pad_image`.
+     |      
+     |          >>> import pyvista as pv
+     |          >>> # Create an initial background point
+     |          >>> im = pv.ImageData(dimensions=(1, 1, 1))
+     |          >>> im['data'] = [0]
+     |          >>> # Add a foreground region
+     |          >>> im = im.pad_image(pad_value=255, pad_size=(4, 3), dimensionality=2)
+     |          >>> # Add a second foreground region
+     |          >>> im = im.pad_image(pad_value=128, pad_size=(2, 0, 1, 0))
+     |          >>> # Add background values to two sides
+     |          >>> im = im.pad_image(pad_value=0, pad_size=(1, 0))
+     |      
+     |          Define a custom plotter to plot pixels as cells.
+     |      
+     |          >>> def image_plotter(image):
+     |          ...     pl = pv.Plotter()
+     |          ...     pl.add_mesh(
+     |          ...         image.points_to_cells(),
+     |          ...         cmap='grey',
+     |          ...         clim=[0, 255],
+     |          ...         show_scalar_bar=False,
+     |          ...         show_edges=True,
+     |          ...         lighting=False,
+     |          ...         line_width=3,
+     |          ...     )
+     |          ...     pl.camera_position = 'xy'
+     |          ...     pl.camera.tight()
+     |          ...     pl.enable_anti_aliasing()
+     |          ...     return pl
+     |      
+     |          Show the image.
+     |      
+     |          >>> image_plotter(im).show()
+     |      
+     |          Erode it with default settings. Observe that `both` foreground values are eroded.
+     |      
+     |          >>> eroded = im.erode()
+     |          >>> image_plotter(eroded).show()
+     |      
+     |          Use a larger kernel size.
+     |      
+     |          >>> eroded = im.erode(kernel_size=5)
+     |          >>> image_plotter(eroded).show()
+     |      
+     |          Use an asymmetric kernel.
+     |      
+     |          >>> eroded = im.erode(kernel_size=(2, 4, 1))
+     |          >>> image_plotter(eroded).show()
+     |      
+     |          Use binary erosion. By default, the max value (``255`` in this example) is eroded
+     |          with the min value (``0`` in this example). All other values are unaffected.
+     |      
+     |          >>> eroded = im.erode(binary=True)
+     |          >>> image_plotter(eroded).show()
+     |      
+     |          Equivalently, set the binary values for the erosion explicitly.
+     |      
+     |          >>> eroded = im.erode(binary=[0, 255])
+     |          >>> image_plotter(eroded).show()
+     |      
+     |          Use binary erosion with the other foreground value instead.
+     |      
+     |          >>> eroded = im.erode(binary=[0, 128])
+     |          >>> image_plotter(eroded).show()
+     |  
+     |  extract_subset(self, voi, rate=(1, 1, 1), boundary: 'bool' = False, rebase_coordinates: 'bool' = True, progress_bar: 'bool' = False)
      |      Select piece (e.g., volume of interest).
      |      
      |      To use this filter set the VOI ivar which are i-j-k min/max indices
@@ -3396,6 +5688,22 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          even multiple of the grid dimensions. By default this is
      |          disabled.
      |      
+     |      rebase_coordinates : bool, default: True
+     |          If ``True`` (default), reset the coordinate reference of the extracted subset:
+     |      
+     |          - the :attr:`~pyvista.ImageData.origin` is set to the minimum bounds of the subset
+     |          - the :attr:`~pyvista.ImageData.offset` is reset to ``(0, 0, 0)``
+     |      
+     |          The rebasing effectively applies a positive translation in world (XYZ) coordinates and
+     |          a similar (i.e. inverse) negative translation in voxel (IJK) coordinates. As a result,
+     |          the :attr:`~pyvista.DataSet.bounds` of the output are unchanged, but the coordinate
+     |          reference frame is modified.
+     |      
+     |          Set this to ``False`` to leave the origin unmodified and keep the offset specified by
+     |          the ``voi`` parameter.
+     |      
+     |          .. versionadded:: 0.46
+     |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
@@ -3403,6 +5711,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      -------
      |      pyvista.ImageData
      |          ImageData subset.
+     |      
+     |      See Also
+     |      --------
+     |      slice_index
+     |      crop
      |  
      |  fft(self, output_scalars_name=None, progress_bar: 'bool' = False)
      |      Apply a fast Fourier transform (FFT) to the active scalars.
@@ -3487,8 +5800,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Notes
      |      -----
      |      This filter only supports point data. For inputs with cell data, consider
-     |      re-meshing the cell data as point data with :meth:`~pyvista.ImageDataFilters.cells_to_points`
-     |      or resampling the cell data to point data with :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
      |      
      |      Examples
      |      --------
@@ -3499,7 +5814,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import numpy as np
      |      >>> import pyvista as pv
      |      >>> noise = pv.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
-     |      >>> grid = pv.sample_function(noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20))
+     |      >>> grid = pv.sample_function(
+     |      ...     noise, bounds=[0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
+     |      ... )
      |      >>> grid.plot(show_scalar_bar=False)
      |      
      |      Next, smooth the sample data.
@@ -3564,10 +5881,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Examples
      |      --------
-     |      See :ref:`image_fft_perlin_example` for a full example using this filter.
+     |      See :ref:`image_fft_perlin_noise_example` for a full example using this filter.
      |  
      |  image_dilate_erode(self, dilate_value=1.0, erode_value=0.0, kernel_size=(3, 3, 3), scalars=None, progress_bar: 'bool' = False)
      |      Dilates one value and erodes another.
+     |      
+     |      .. deprecated:: 0.47.0
+     |          :meth:`image_dilate_erode` is deprecated. Use :meth:`dilate`, :meth:`erode`,
+     |          :meth:`open`, or :meth:`close` instead.
      |      
      |      ``image_dilate_erode`` will dilate one value and erode another. It uses
      |      an elliptical footprint, and only erodes/dilates on the boundary of the
@@ -3600,8 +5921,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Notes
      |      -----
      |      This filter only supports point data. For inputs with cell data, consider
-     |      re-meshing the cell data as point data with :meth:`~pyvista.ImageDataFilters.cells_to_points`
-     |      or resampling the cell data to point data with :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
      |      
      |      Examples
      |      --------
@@ -3618,13 +5941,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> ithresh = uni.image_threshold([400, 600])
      |      >>> ithresh.plot()
      |      
-     |      Note how there is a hole in the thresholded image. Apply a dilation/
-     |      erosion filter with a large kernel to fill that hole in.
+     |      Note how there is a hole in the thresholded image. Apply a closing
+     |      filter with a large kernel to fill that hole in.
      |      
-     |      >>> idilate = ithresh.image_dilate_erode(kernel_size=[5, 5, 5])
-     |      >>> idilate.plot()
+     |      >>> iclosed = ithresh.close(kernel_size=[5, 5, 5])
+     |      >>> iclosed.plot()
      |  
-     |  image_threshold(self, threshold, in_value=1.0, out_value=0.0, scalars=None, preference='point', progress_bar: 'bool' = False)
+     |  image_threshold(self: 'ImageData', threshold, in_value=1.0, out_value=0.0, scalars=None, preference='point', progress_bar: 'bool' = False)
      |      Apply a threshold to scalar values in a uniform grid.
      |      
      |      If a single value is given for threshold, scalar values above or equal
@@ -3692,7 +6015,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`image_representations_example` for more examples using this filter.
      |  
-     |  label_connectivity(self, *, scalars: 'str | None' = None, scalar_range: "Literal['auto', 'foreground', 'vtk_default'] | VectorLike[float]" = 'auto', extraction_mode: "Literal['all', 'largest', 'seeded']" = 'all', point_seeds: 'MatrixLike[float] | VectorLike[float] | _vtk.vtkDataSet | None' = None, label_mode: "Literal['size', 'constant', 'seeds']" = 'size', constant_value: 'int | None' = None, inplace: 'bool' = False, progress_bar: 'bool' = False) -> 'tuple[pyvista.ImageData, NDArray[int], NDArray[int]]'
+     |  label_connectivity(self, *, scalars: 'str | None' = None, scalar_range: "Literal['auto', 'foreground', 'vtk_default'] | VectorLike[float]" = 'auto', extraction_mode: "Literal['all', 'largest', 'seeded']" = 'all', point_seeds: 'MatrixLike[float] | VectorLike[float] | _vtk.vtkDataSet | None' = None, label_mode: "Literal['size', 'constant', 'seeds']" = 'size', constant_value: 'int | None' = None, inplace: 'bool' = False, progress_bar: 'bool' = False) -> 'tuple[ImageData, NDArray[int], NDArray[int]]'
      |      Find and label connected regions in a :class:`~pyvista.ImageData`.
      |      
      |      Only points whose `scalar` value is within the `scalar_range` are considered for
@@ -3709,8 +6032,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Notes
      |      -----
-     |      This filter implements `vtkImageConnectivityFilter
-     |      <https://vtk.org/doc/nightly/html/classvtkImageConnectivityFilter.html>`_.
+     |      This filter implements :vtk:`vtkImageConnectivityFilter`.
      |      
      |      Parameters
      |      ----------
@@ -3718,11 +6040,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Scalars to use to filter points. If ``None`` is provided, the scalars is
      |          automatically set, if possible.
      |      
-     |      scalar_range : str, Literal['auto', 'foreground', 'vtk_default'], VectorLike[float], default: 'auto'
+     |      scalar_range : str, Literal['auto', 'foreground', 'vtk_default'], VectorLike[float]
      |          Points whose scalars value is within ``'scalar_range'`` are considered for
      |          connectivity. The bounds are inclusive.
      |      
-     |          - ``'auto'``: includes the full data range, similarly to :meth:`~pyvista.DataSetFilters.connectivity`.
+     |          - ``'auto'``: (default) includes the full data range, similarly to
+     |            :meth:`~pyvista.DataSetFilters.connectivity`.
      |          - ``'foreground'``: includes the full data range except the smallest value.
      |          - ``'vtk_default'``: default to [``0.5``, :const:`~vtk.VTK_DOUBLE_MAX`].
      |          - ``VectorLike[float]``: explicitly set the range.
@@ -3739,9 +6062,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          If ``'seeded'``, only the regions that include the points defined with
      |          ``point_seeds`` are extracted.
      |      
-     |      point_seeds : MatrixLike[float], VectorLike[float], _vtk.vtkDataSet, optional
+     |      point_seeds : MatrixLike[float], VectorLike[float], :vtk:`vtkDataSet`, optional
      |          The point coordinates to use as seeds, specified as a (N, 3) array like or
-     |          as a :class:`~vtk.vtkDataSet`. Has no effect if ``extraction_mode`` is not
+     |          as a :vtk:`vtkDataSet`. Has no effect if ``extraction_mode`` is not
      |          ``'seeded'``.
      |      
      |      label_mode : Literal['size', 'constant', 'seeds'], default: 'size'
@@ -3917,7 +6240,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Examples
      |      --------
-     |      See :ref:`image_fft_perlin_example` for a full example using this filter.
+     |      See :ref:`image_fft_perlin_noise_example` for a full example using this filter.
      |  
      |  median_smooth(self, kernel_size=(3, 3, 3), scalars=None, preference='point', progress_bar: 'bool' = False)
      |      Smooth data using a median filter.
@@ -3927,9 +6250,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      more than 3 dimensional. Setting one axis of the neighborhood
      |      kernelSize to 1 changes the filter into a 2D median.
      |      
-     |      See `vtkImageMedian3D
-     |      <https://vtk.org/doc/nightly/html/classvtkImageMedian3D.html#details>`_
-     |      for more details.
+     |      See :vtk:`vtkImageMedian3D` for more details.
      |      
      |      Parameters
      |      ----------
@@ -3970,7 +6291,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import numpy as np
      |      >>> import pyvista as pv
      |      >>> noise = pv.perlin_noise(0.1, (2, 5, 8), (0, 0, 0))
-     |      >>> grid = pv.sample_function(noise, [0, 1, 0, 1, 0, 1], dim=(20, 20, 20))
+     |      >>> grid = pv.sample_function(
+     |      ...     noise, bounds=[0, 1, 0, 1, 0, 1], dim=(20, 20, 20)
+     |      ... )
      |      >>> grid.plot(show_scalar_bar=False)
      |      
      |      Next, smooth the sample data.
@@ -3978,7 +6301,74 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> smoothed = grid.median_smooth(kernel_size=(10, 10, 10))
      |      >>> smoothed.plot(show_scalar_bar=False)
      |  
-     |  pad_image(self, pad_value: "float | VectorLike[float] | Literal['wrap', 'mirror']" = 0.0, *, pad_size: 'int | VectorLike[int]' = 1, dimensionality: "VectorLike[bool] | Literal[0, 1, 2, 3, '0D', '1D', '2D', '3D', 'preserve']" = 'preserve', scalars: 'str | None' = None, pad_all_scalars: 'bool' = False, progress_bar: 'bool' = False, pad_singleton_dims: 'bool | None' = None) -> 'pyvista.ImageData'
+     |  open(self: 'ImageData', kernel_size: 'int | VectorLike[int]' = (3, 3, 3), scalars: 'str | None' = None, *, binary: 'bool | VectorLike[float] | None' = None, progress_bar: 'bool' = False)
+     |      Perform morphological opening on continuous or binary data.
+     |      
+     |      Opening is an :meth:`erosion <erode>` followed by a :meth:`dilation <dilate>`.
+     |      It is used to remove small objects/noise while preserving the shape and size of larger
+     |      objects.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      kernel_size : int | VectorLike[int], default: (3, 3, 3)
+     |          Determines the size of the kernel along the xyz-axes. Only non-singleton dimensions
+     |          are opened, e.g. a kernel size of ``(3, 3, 1)`` and ``(3, 3, 3)`` produce the same
+     |          result for 2D images.
+     |      
+     |      scalars : str, optional
+     |          Name of scalars to process. Defaults to currently active scalars.
+     |      
+     |      binary : bool | VectorLike[float], optional
+     |          Control if binary opening or continuous opening is used. Refer to
+     |          :meth:`erode` and/or :meth:`dilate` for details about using this keyword.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ImageData
+     |          Dataset that has been opened.
+     |      
+     |      See Also
+     |      --------
+     |      close, erode, dilate
+     |      
+     |      Notes
+     |      -----
+     |      This filter only supports point data. For inputs with cell data, consider
+     |      re-meshing the cell data as point data with
+     |      :meth:`~pyvista.ImageDataFilters.cells_to_points`
+     |      or resampling the cell data to point data with
+     |      :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`.
+     |      
+     |      Examples
+     |      --------
+     |      Load a grayscale image :func:`~pyvista.examples.downloads.download_chest()` and show it
+     |      for context.
+     |      
+     |      >>> from pyvista import examples
+     |      >>> im = examples.download_chest()
+     |      >>> clim = im.get_data_range()
+     |      >>> kwargs = dict(
+     |      ...     cmap='grey',
+     |      ...     clim=clim,
+     |      ...     lighting=False,
+     |      ...     cpos='xy',
+     |      ...     zoom='tight',
+     |      ...     show_axes=False,
+     |      ...     show_scalar_bar=False,
+     |      ... )
+     |      >>> im.plot(**kwargs)
+     |      
+     |      Use ``open`` to remove small objects in the lungs.
+     |      
+     |      >>> opened = im.open(kernel_size=15)
+     |      >>> opened.plot(**kwargs)
+     |  
+     |  pad_image(self, pad_value: "float | VectorLike[float] | Literal['wrap', 'mirror']" = 0.0, *, pad_size: 'int | VectorLike[int]' = 1, dimensionality: "VectorLike[bool] | Literal[0, 1, 2, 3, '0D', '1D', '2D', '3D', 'preserve']" = 'preserve', scalars: 'str | None' = None, pad_all_scalars: 'bool' = False, progress_bar: 'bool' = False) -> 'ImageData'
      |      Enlarge an image by padding its boundaries with new points.
      |      
      |      .. versionadded:: 0.44.0
@@ -4013,8 +6403,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          - Six values, one for each ``(-X, +X, -Y, +Y, -Z, +Z)`` boundary, to apply
      |            padding to each boundary independently.
      |      
-     |      dimensionality : VectorLike[bool], Literal[1, 2, 3, "1D", "2D", "3D", "preserve"], default: 'preserve'
+     |      dimensionality : VectorLike[bool], Literal[1, 2, 3, "1D", "2D", "3D", "preserve"]
      |          Control which dimensions will be padded by the filter.
+     |          ``'preserve'`` is used by default.
      |      
      |          - Can be specified as a sequence of 3 boolean to apply padding on a per
      |              dimension basis.
@@ -4049,20 +6440,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      pad_singleton_dims : bool, optional
-     |          Control whether to pad singleton dimensions.
-     |      
-     |          .. deprecated:: 0.45.0
-     |              Deprecated, use ``dimensionality='preserve'`` instead of
-     |              ``pad_singleton_dims=True`` and ``dimensionality='3D'`` instead of
-     |              ``pad_singleton_dims=False``.
-     |      
-     |              Estimated removal on v0.48.0.
-     |      
      |      Returns
      |      -------
      |      pyvista.ImageData
      |          Padded image.
+     |      
+     |      See Also
+     |      --------
+     |      crop, resample, contour_labels
      |      
      |      Examples
      |      --------
@@ -4088,20 +6473,20 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     actor = vtk.vtkImageActor()
      |      ...     actor.GetMapper().SetInputData(image)
      |      ...     actor.GetProperty().SetInterpolationTypeToNearest()
-     |      ...     plot = pv.Plotter()
-     |      ...     plot.add_actor(actor)
-     |      ...     plot.view_xy()
-     |      ...     plot.camera.tight()
-     |      ...     return plot
+     |      ...     pl = pv.Plotter()
+     |      ...     pl.add_actor(actor)
+     |      ...     pl.view_xy()
+     |      ...     pl.camera.tight()
+     |      ...     return pl
      |      >>>
-     |      >>> plot = grayscale_image_plotter(padded)
-     |      >>> plot.show()
+     |      >>> pl = grayscale_image_plotter(padded)
+     |      >>> pl.show()
      |      
      |      Pad only the x-axis with a white border.
      |      
      |      >>> padded = gray_image.pad_image(pad_value=255, pad_size=(200, 0))
-     |      >>> plot = grayscale_image_plotter(padded)
-     |      >>> plot.show()
+     |      >>> pl = grayscale_image_plotter(padded)
+     |      >>> pl.show()
      |      
      |      Pad with wrapping.
      |      
@@ -4191,8 +6576,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          By default, all point data arrays at the input are passed through as cell
      |          data at the output.
      |      
-     |      dimensionality : VectorLike[bool], Literal[0, 1, 2, 3, "0D", "1D", "2D", "3D", "preserve"], default: 'preserve'
+     |      dimensionality : VectorLike[bool], Literal[0, 1, 2, 3, "0D", "1D", "2D", "3D", "preserve"]
      |          Control which dimensions will be modified by the filter.
+     |          ``'preserve'`` is used by default.
      |      
      |          - Can be specified as a sequence of 3 boolean to allow modification on a per
      |              dimension basis.
@@ -4318,7 +6704,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`image_representations_example` for more examples using this filter.
      |  
-     |  resample(self: 'ImageData', sample_rate: 'float | VectorLike[float] | None' = None, interpolation: "Literal['nearest', 'linear', 'cubic', 'lanczos', 'hamming', 'blackman']" = 'nearest', *, reference_image: 'ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, anti_aliasing: 'bool' = False, extend_border: 'bool | None' = None, scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'point', inplace: 'bool' = False, progress_bar: 'bool' = False)
+     |  resample(self: 'ImageData', sample_rate: 'float | VectorLike[float] | None' = None, interpolation: '_InterpolationOptions' = 'nearest', *, border_mode: "Literal['clamp', 'wrap', 'mirror']" = 'clamp', reference_image: 'ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, anti_aliasing: 'bool' = False, extend_border: 'bool | None' = None, scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'point', inplace: 'bool' = False, progress_bar: 'bool' = False)
      |      Resample the image to modify its dimensions and spacing.
      |      
      |      The resampling can be controlled in several ways:
@@ -4352,13 +6738,20 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          for each axis. Values greater than ``1.0`` will up-sample the axis and
      |          values less than ``1.0`` will down-sample it. Values must be greater than ``0``.
      |      
-     |      interpolation : 'nearest' | 'linear' | 'cubic', 'lanczos', 'hamming', 'blackman', default: 'nearest'
-     |          Interpolation mode to use. By default, ``'nearest'`` is used which
-     |          duplicates (if upsampling) or removes (if downsampling) values but
-     |          does not modify them. The ``'linear'`` and ``'cubic'`` modes use linear
-     |          and cubic interpolation, respectively, and may modify the values. The
-     |          ``'lanczos'``, ``'hamming'``, and ``'blackman'`` use a windowed sinc filter
-     |          and may be used to preserve sharp details and/or reduce image artifacts.
+     |      interpolation : 'nearest', 'linear', 'cubic', 'lanczos', 'hamming', 'blackman', 'bspline'
+     |          Interpolation mode to use.
+     |      
+     |          - ``'nearest'`` (default) duplicates (if upsampling) or removes (if downsampling)
+     |            values but does not modify them.
+     |          - ``'linear'`` and ``'cubic'`` use linear and cubic interpolation, respectively.
+     |          - ``'lanczos'``, ``'hamming'``, and ``'blackman'`` use a windowed sinc filter
+     |            and may be used to preserve sharp details and/or reduce image artifacts.
+     |          - ``'bspline'`` uses an n-degree basis spline to smoothly interpolate across points.
+     |            The default degree is ``3``, but can range from ``0`` to ``9``. Append the desired
+     |            degree to the string to set it, e.g. ``'bspline5'`` for a 5th-degree B-spline.
+     |      
+     |          .. versionadded:: 0.47
+     |              Added ``'bspline'`` interpolation.
      |      
      |          .. note::
      |      
@@ -4369,6 +6762,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |              - use ``'blackman'`` for minimizing ringing artifacts (at the cost of some detail)
      |              - use ``'hamming'`` for a balance between detail-preservation and reducing ringing
      |      
+     |      border_mode : 'clamp' | 'wrap' | 'mirror', default: 'clamp'
+     |          Controls the interpolation at the image's borders.
+     |      
+     |          - ``'clamp'`` - values outside the image are clamped to the nearest edge.
+     |          - ``'wrap'`` - values outside the image are wrapped periodically along the axis.
+     |          - ``'mirror'`` - values outside the image are mirrored at the boundary.
+     |      
+     |          .. versionadded:: 0.47
+     |      
      |      reference_image : ImageData, optional
      |          Reference image to use. If specified, the input is resampled
      |          to match the geometry of the reference. The :attr:`~pyvista.ImageData.dimensions`,
@@ -4376,7 +6778,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          :attr:`~pyvista.ImageData.offset`, and :attr:`~pyvista.ImageData.direction_matrix`
      |          of the resampled image will all match the reference image.
      |      
-     |      dimensions : VectorLike[int]
+     |      dimensions : VectorLike[int], optional
      |          Set the output :attr:`~pyvista.ImageData.dimensions` of the resampled image.
      |      
      |          .. note::
@@ -4422,6 +6824,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See Also
      |      --------
+     |      crop
+     |          Crop image to remove points at the image's boundaries.
+     |      
      |      :meth:`~pyvista.DataObjectFilters.sample`
      |          Resample array data from one mesh onto another.
      |      
@@ -4446,7 +6851,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      :attr:`~pyvista.CellType.PIXEL` (or :attr:`~pyvista.CellType.VOXEL`) cells
      |      instead. Grayscale coloring is used and the camera is adjusted to fit the image.
      |      
-     |      >>> def image_plotter(image: pv.ImageData) -> pv.Plotter:
+     |      >>> def image_plotter(image: pv.ImageData, clim=(0, 255)) -> pv.Plotter:
      |      ...     pl = pv.Plotter()
      |      ...     image = image.points_to_cells()
      |      ...     pl.add_mesh(
@@ -4454,10 +6859,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...         lighting=False,
      |      ...         show_edges=True,
      |      ...         cmap='grey',
+     |      ...         clim=clim,
      |      ...         show_scalar_bar=False,
+     |      ...         line_width=3,
      |      ...     )
      |      ...     pl.view_xy()
      |      ...     pl.camera.tight()
+     |      ...     pl.enable_anti_aliasing()
      |      ...     return pl
      |      
      |      Show the image.
@@ -4529,25 +6937,35 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> image_as_cells = image.points_to_cells()
      |      >>> image_as_cells.bounds
-     |      BoundsTuple(x_min=-0.5, x_max=2.5, y_min=-0.5, y_max=1.5, z_min=0.0, z_max=0.0)
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  2.5,
+     |                  y_min = -0.5,
+     |                  y_max =  1.5,
+     |                  z_min =  0.0,
+     |                  z_max =  0.0)
      |      
      |      >>> upsampled_as_cells = upsampled.points_to_cells()
      |      >>> upsampled_as_cells.bounds
-     |      BoundsTuple(x_min=-0.5, x_max=2.5, y_min=-0.5, y_max=1.5, z_min=0.0, z_max=0.0)
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  2.5,
+     |                  y_min = -0.5,
+     |                  y_max =  1.5,
+     |                  z_min =  0.0,
+     |                  z_max =  0.0)
      |      
      |      Plot the two images together as wireframe to visualize them. The original is in
      |      red, and the resampled image is in black.
      |      
-     |      >>> plt = pv.Plotter()
-     |      >>> _ = plt.add_mesh(
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(
      |      ...     image_as_cells, style='wireframe', color='red', line_width=10
      |      ... )
-     |      >>> _ = plt.add_mesh(
+     |      >>> _ = pl.add_mesh(
      |      ...     upsampled_as_cells, style='wireframe', color='black', line_width=2
      |      ... )
-     |      >>> plt.view_xy()
-     |      >>> plt.camera.tight()
-     |      >>> plt.show()
+     |      >>> pl.view_xy()
+     |      >>> pl.camera.tight()
+     |      >>> pl.show()
      |      
      |      Disable ``extend_border`` to force the input and output bounds of the points
      |      to be the same instead.
@@ -4613,65 +7031,108 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      bounds are not (and cannot be) extended.
      |      
      |      >>> volume.bounds
-     |      BoundsTuple(x_min=-0.5, x_max=2.5, y_min=-0.5, y_max=1.5, z_min=-0.5, z_max=0.5)
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  2.5,
+     |                  y_min = -0.5,
+     |                  y_max =  1.5,
+     |                  z_min = -0.5,
+     |                  z_max =  0.5)
      |      >>> resampled.bounds
-     |      BoundsTuple(x_min=-0.5, x_max=2.5, y_min=-0.5, y_max=1.5, z_min=-0.5, z_max=0.5)
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  2.5,
+     |                  y_min = -0.5,
+     |                  y_max =  1.5,
+     |                  z_min = -0.5,
+     |                  z_max =  0.5)
      |      
      |      Use a reference image to control the resampling instead. Here we load two
      |      images with different dimensions:
-     |      :func:`~pyvista.examples.downloads.download_puppy` and
+     |      :func:`~pyvista.examples.downloads.download_bird` and
      |      :func:`~pyvista.examples.downloads.download_gourds`.
      |      
-     |      >>> puppy = examples.download_puppy()
-     |      >>> puppy.dimensions
-     |      (1600, 1200, 1)
+     |      >>> bird = examples.download_bird()
+     |      >>> bird.dimensions
+     |      (458, 342, 1)
      |      
      |      >>> gourds = examples.download_gourds()
      |      >>> gourds.dimensions
      |      (640, 480, 1)
      |      
-     |      Use ``reference_image`` to resample the puppy to match the gourds geometry or
+     |      Use ``reference_image`` to resample the bird to match the gourds geometry or
      |      vice-versa.
      |      
-     |      >>> puppy_resampled = puppy.resample(reference_image=gourds)
-     |      >>> puppy_resampled.dimensions
+     |      >>> bird_resampled = bird.resample(reference_image=gourds)
+     |      >>> bird_resampled.dimensions
      |      (640, 480, 1)
      |      
-     |      >>> gourds_resampled = gourds.resample(reference_image=puppy)
+     |      >>> gourds_resampled = gourds.resample(reference_image=bird)
      |      >>> gourds_resampled.dimensions
-     |      (1600, 1200, 1)
+     |      (458, 342, 1)
      |      
-     |      Downsample the puppy image to 1/10th its original resolution using ``'lanczos'``
+     |      Downsample the gourds image to 1/10th its original resolution using ``'lanczos'``
      |      interpolation.
      |      
-     |      >>> downsampled = puppy.resample(0.1, 'lanczos')
+     |      >>> downsampled = gourds.resample(1 / 8, 'lanczos')
      |      >>> downsampled.dimensions
-     |      (160, 120, 1)
+     |      (80, 60, 1)
      |      
      |      Compare the downsampled image to the original and zoom in to show detail.
      |      
      |      >>> def compare_images_plotter(image1, image2):
-     |      ...     plt = pv.Plotter(shape=(1, 2))
-     |      ...     _ = plt.add_mesh(image1, rgba=True, show_edges=False, lighting=False)
-     |      ...     plt.subplot(0, 1)
-     |      ...     _ = plt.add_mesh(image2, rgba=True, show_edges=False, lighting=False)
-     |      ...     plt.link_views()
-     |      ...     plt.view_xy()
-     |      ...     plt.camera.zoom(3.0)
-     |      ...     return plt
+     |      ...     pl = pv.Plotter(shape=(1, 2))
+     |      ...     _ = pl.add_mesh(image1, rgba=True, show_edges=False, lighting=False)
+     |      ...     pl.subplot(0, 1)
+     |      ...     _ = pl.add_mesh(image2, rgba=True, show_edges=False, lighting=False)
+     |      ...     pl.link_views()
+     |      ...     pl.view_xy()
+     |      ...     pl.camera.zoom(3.0)
+     |      ...     return pl
      |      
-     |      >>> plt = compare_images_plotter(puppy, downsampled)
-     |      >>> plt.show()
+     |      >>> pl = compare_images_plotter(gourds, downsampled)
+     |      >>> pl.show()
      |      
      |      Note that downsampling can create image artifacts caused by aliasing. Enable
      |      anti-aliasing to smooth the image before resampling.
      |      
-     |      >>> downsampled2 = puppy.resample(0.1, 'lanczos', anti_aliasing=True)
+     |      >>> downsampled2 = gourds.resample(1 / 8, 'lanczos', anti_aliasing=True)
      |      
      |      Compare down-sampling with aliasing (left) to without aliasing (right).
      |      
-     |      >>> plt = compare_images_plotter(downsampled, downsampled2)
-     |      >>> plt.show()
+     |      >>> pl = compare_images_plotter(downsampled, downsampled2)
+     |      >>> pl.show()
+     |      
+     |      Load an MRI of a knee and downsample it.
+     |      
+     |      >>> knee = pv.examples.download_knee().resample(
+     |      ...     0.1, 'linear', anti_aliasing=True
+     |      ... )
+     |      
+     |      Crop and plot it.
+     |      
+     |      >>> knee = knee.crop(normalized_bounds=[0.2, 0.8, 0.2, 0.8, 0.0, 1.0])
+     |      >>> vmin = knee.active_scalars.min()
+     |      >>> vmax = knee.active_scalars.max()
+     |      >>> pl = image_plotter(knee, clim=[vmin, vmax])
+     |      >>> pl.show()
+     |      
+     |      Upsample it with B-spline interpolation. The interpolation is very smooth.
+     |      
+     |      >>> upsampled = knee.resample(2.0, 'bspline', border_mode='clamp')
+     |      >>> pl = image_plotter(upsampled, clim=[vmin, vmax])
+     |      >>> pl.show()
+     |      
+     |      Use the ``'wrap'`` border mode. Note how points at the border are brighter than previously,
+     |      since the bright pixels from the opposite edge are now included in the interpolation.
+     |      
+     |      >>> upsampled = knee.resample(2.0, 'bspline', border_mode='wrap')
+     |      >>> pl = image_plotter(upsampled, clim=[vmin, vmax])
+     |      >>> pl.show()
+     |      
+     |      Compare B-spline interpolation to ``'hamming'``.
+     |      
+     |      >>> upsampled = knee.resample(2.0, 'hamming')
+     |      >>> pl = image_plotter(upsampled, clim=[vmin, vmax])
+     |      >>> pl.show()
      |  
      |  rfft(self, output_scalars_name=None, progress_bar: 'bool' = False)
      |      Apply a reverse fast Fourier transform (RFFT) to the active scalars.
@@ -4777,9 +7238,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |              - ``[0, float('inf')]`` to select values greater than or equal to zero.
      |              - ``[float('-inf'), 0]`` to select values less than or equal to zero.
      |      
-     |      fill_value : float | VectorLike[float], default: 0
+     |      fill_value : float | VectorLike[float] | None, default: 0
      |          Value used to fill the image. Can be a single value or a multi-component
-     |          vector. Non-selected parts of the image will have this value.
+     |          vector. Non-selected parts of the image will have this value. Set this to
+     |          ``None`` to keep the input array's original values for non-selected regions.
      |      
      |      replacement_value : float | VectorLike[float], optional
      |          Replacement value for the output array. Can be a single value or a
@@ -4833,13 +7295,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.ImageData or pyvista.MultiBlock
+     |      output : pyvista.ImageData | pyvista.MultiBlock
      |          Image with selected values or a composite of meshes with selected
      |          values, depending on ``split``.
      |      
      |      Examples
      |      --------
-     |      Load a CT image. Here we load :func:`~pyvista.examples.downloads.download_whole_body_ct_male`.
+     |      Load a CT image. Here we load
+     |      :func:`~pyvista.examples.downloads.download_whole_body_ct_male`.
      |      
      |      >>> import pyvista as pv
      |      >>> from pyvista import examples
@@ -4919,6 +7382,135 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> selected.plot(**plot_kwargs)
      |  
+     |  slice_index(self: 'ImageData', i: 'int | VectorLike[int] | slice | None' = None, j: 'int | VectorLike[int] | slice | None' = None, k: 'int | VectorLike[int] | slice | None' = None, *, index_mode: "Literal['extent', 'dimensions']" = 'dimensions', strict_index: 'bool' = False, rebase_coordinates: 'bool' = False, progress_bar: 'bool' = False) -> 'ImageData'
+     |      Extract a subset using IJK indices.
+     |      
+     |      This filter enables slicing :class:`~pyvista.ImageData` with Python-style indexing using
+     |      IJK coordinates. It can be used to extract a single slice, multiple contiguous slices, or
+     |      a volume of interest. Unlike other slicing filters, this filter returns
+     |      :class:`~pyvista.ImageData`.
+     |      
+     |      .. note::
+     |          Slicing by index is also possible using the "get index" operator ``[]``. See examples.
+     |      
+     |      .. versionadded::0.46
+     |      
+     |      Parameters
+     |      ----------
+     |      i, j, k : int | VectorLike[int] | slice, optional
+     |          Indices to slice along the I, J, and K coordinate axes, respectively. Specify an
+     |          integer for a single index, or two integers ``[start, stop)`` for a range of indices.
+     |      
+     |          .. note::
+     |      
+     |              Like regular Python slicing:
+     |      
+     |              - Half-open intervals are used, i.e. the ``start`` index is included in the range
+     |                but the ``stop`` index is not.
+     |              - Negative indexing is supported.
+     |              - An ``IndexError`` is raised when a single integer is specified as the index and
+     |                the index is out-of-bounds.
+     |              - An ``IndexError`` is `not` raised when a range is specified as the index and
+     |                the index is out-of-bounds. This default can be overridden by setting
+     |                ``strict_index=True``.
+     |              - A copy of the data is returned (modifying the sliced output does `not` affect
+     |                the input data).
+     |      
+     |      index_mode : 'extent' | 'dimensions', default: 'dimensions'
+     |          Mode to use when determining the range of values to index from.
+     |      
+     |          - Use ``'dimensions'`` to index values in the range ``[0, dimensions - 1]``.
+     |          - Use ``'extent'`` to index values based on the :class:`~pyvista.ImageData.extent`,
+     |            i.e. ``[offset, offset + dimensions - 1]``.
+     |      
+     |          The main difference between these modes is the inclusion or exclusion of the
+     |          :attr:`~pyvista.ImageData.offset`. ``dimensions`` is more pythonic and is how the
+     |          object's data arrays themselves would be indexed, whereas ``'extent'`` respects VTK's
+     |          definition of ``extent`` and considers the object's geometry.
+     |      
+     |      strict_index : bool, default: False
+     |          Raise an ``IndexError`` if `any` of the indices are out of range. By default, an
+     |          ``IndexError`` is only raised if a single integer index is out of range, but not when
+     |          a range of indices are specified; set this to ``True`` to raise in error in both cases.
+     |      
+     |      rebase_coordinates : bool, default: False
+     |          Rebase the coordinate reference of the extracted subset:
+     |      
+     |          - the :attr:`~pyvista.ImageData.origin` is set to the minimum bounds of the subset
+     |          - the :attr:`~pyvista.ImageData.offset` is reset to ``(0, 0, 0)``
+     |      
+     |          The rebasing effectively applies a positive translation in world (XYZ) coordinates and
+     |          a similar (i.e. inverse) negative translation in voxel (IJK) coordinates. As a result,
+     |          the :attr:`~pyvista.DataSet.bounds` of the output are unchanged, but the coordinate
+     |          reference frame is modified.
+     |      
+     |          Set this to ``False`` to leave the origin unmodified and keep the offset specified by
+     |          the indexing.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      ImageData
+     |          Sliced mesh.
+     |      
+     |      See Also
+     |      --------
+     |      crop
+     |      extract_subset
+     |      :meth:`~pyvista.DataObjectFilters.slice`
+     |      :meth:`~pyvista.DataObjectFilters.slice_implicit`
+     |      :meth:`~pyvista.DataObjectFilters.slice_orthogonal`
+     |      :meth:`~pyvista.DataObjectFilters.slice_along_axis`
+     |      :meth:`~pyvista.DataObjectFilters.slice_along_line`
+     |      
+     |      Examples
+     |      --------
+     |      Create a :class:`~pyvista.ImageData` mesh and give it some point data.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.ImageData(dimensions=(10, 10, 10))
+     |      >>> mesh['data'] = range(mesh.n_points)
+     |      
+     |      Extract a single slice along the k-axis.
+     |      
+     |      >>> sliced = mesh.slice_index(k=5)
+     |      >>> sliced.dimensions
+     |      (10, 10, 1)
+     |      
+     |      Equivalently:
+     |      
+     |      >>> sliced2 = mesh[:, :, 5]
+     |      >>> sliced == sliced2
+     |      True
+     |      
+     |      Extract a volume of interest.
+     |      
+     |      >>> sliced = mesh.slice_index(i=[1, 3], j=[2, 5], k=[5, 10])
+     |      >>> sliced.dimensions
+     |      (2, 3, 5)
+     |      
+     |      Equivalently:
+     |      
+     |      >>> sliced2 = mesh[1:3, 2:5, 5:10]
+     |      >>> sliced == sliced2
+     |      True
+     |      
+     |      Use ``None`` to implicitly define the start and/or stop indices.
+     |      
+     |      >>> sliced = mesh.slice_index(i=[None, 3], j=[2, None], k=None)
+     |      >>> sliced.dimensions
+     |      (3, 8, 10)
+     |      
+     |      Equivalently:
+     |      
+     |      >>> sliced2 = mesh[:3, 2:, :]
+     |      >>> sliced == sliced2
+     |      True
+     |      
+     |      See :ref:`slice_example` for more examples using this filter.
+     |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.filters.data_set.DataSetFilters:
      |  
@@ -4936,8 +7528,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Align a dataset to another.
      |      
      |      Uses the iterative closest point algorithm to align the points of the
-     |      two meshes.  See the VTK class `vtkIterativeClosestPointTransform
-     |      <https://vtk.org/doc/nightly/html/classvtkIterativeClosestPointTransform.html>`_
+     |      two meshes. See the VTK class :vtk:`vtkIterativeClosestPointTransform`.
      |      
      |      Parameters
      |      ----------
@@ -5014,8 +7605,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> np.abs(dist).mean()  # doctest:+SKIP
      |      9.997635192915073e-05
+     |      
+     |      See :ref:`icp_registration_example` for more examples using this filter.
      |  
-     |  align_xyz(self: '_DataSetType', *, centered: 'bool' = True, axis_0_direction: 'VectorLike[float] | str | None' = None, axis_1_direction: 'VectorLike[float] | str | None' = None, axis_2_direction: 'VectorLike[float] | str | None' = None, return_matrix: 'bool' = False)
+     |  align_xyz(self: '_DataSetType', *, centered: 'bool' = True, axis_0_direction: 'VectorLike[float] | str | None' = None, axis_1_direction: 'VectorLike[float] | str | None' = None, axis_2_direction: 'VectorLike[float] | str | None' = None, cell_centers: 'bool' = False, merge_points: 'bool' = False, return_matrix: 'bool' = False)
      |      Align a dataset to the x-y-z axes.
      |      
      |      This filter aligns a mesh's :func:`~pyvista.principal_axes` to the world x-y-z
@@ -5055,6 +7648,28 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          alignment. If set, this axis is flipped such that it best aligns with
      |          the specified vector. Can be a vector or string specifying the axis by
      |          name (e.g. ``'x'`` or ``'-x'``, etc.).
+     |      
+     |      cell_centers : bool, default: False
+     |          Use the mesh's :meth:`~pyvista.DataObjectFilters.cell_centers` when
+     |          computing the :func:`~pyvista.principal_axes`. Points not associated
+     |          with cells are treated as vertex cells. By default, the mesh's
+     |          points are used directly.
+     |      
+     |          .. versionadded:: 0.48
+     |      
+     |      merge_points : bool, default: False
+     |          Merge coincident points with
+     |          :meth:`~pyvista.DataSetFilters.merge_points` before computing the
+     |          :func:`~pyvista.principal_axes`. Duplicate points can bias the
+     |          principal axes, so enabling this can improve the alignment. By
+     |          default the mesh's points are used as-is.
+     |      
+     |          .. note::
+     |      
+     |              Points are only merged for the alignment. The points of the
+     |              returned mesh are *not* merged.
+     |      
+     |          .. versionadded:: 0.48
      |      
      |      return_matrix : bool, default: False
      |          Return the transform matrix as well as the aligned mesh.
@@ -5157,7 +7772,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     labels=["X'", "Y'", "Z'"],
      |      ... )
      |      
-     |      Plot the original mesh with its local axes, along with the algned mesh and its
+     |      Plot the original mesh with its local axes, along with the aligned mesh and its
      |      axes.
      |      
      |      >>> axes_aligned = pv.AxesAssembly(scale=aligned.length)
@@ -5228,7 +7843,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.MultiBlock or pyvista.PolyData
+     |      output : pyvista.MultiBlock | pyvista.PolyData
      |          MultiBlock with six named cube faces when ``as_composite=True`` and
      |          PolyData otherwise.
      |      
@@ -5296,7 +7911,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.view_yz()
      |      >>> pl.show()
      |  
-     |  clip_scalar(self: '_DataSetType', scalars: 'str | None' = None, invert: 'bool' = True, value: 'float' = 0.0, inplace: 'bool' = False, progress_bar: 'bool' = False, both: 'bool' = False)
+     |  clip_scalar(self: '_DataSetType', scalars: 'str | None' = None, invert: 'bool' = True, value: 'float | VectorLike[float]' = 0.0, inplace: 'bool' = False, progress_bar: 'bool' = False, both: 'bool' = False)
      |      Clip a dataset by a scalar.
      |      
      |      Parameters
@@ -5309,8 +7924,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          only the mesh below ``value`` will be kept.  When
      |          ``False``, only values above ``value`` will be kept.
      |      
-     |      value : float, default: 0.0
-     |          Set the clipping value.
+     |      value : float | VectorLike[float], default: 0.0
+     |          Set the clipping value. Can also be set as a range of values.
+     |          The range produces an output similar to an isovolume filter of Paraview.
      |      
      |      inplace : bool, default: False
      |          Update mesh in-place.
@@ -5323,7 +7939,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.PolyData or tuple
+     |      output : pyvista.PolyData | tuple
      |          Clipped dataset if ``both=False``.  If ``both=True`` then
      |          returns a tuple of both clipped datasets.
      |      
@@ -5355,12 +7971,30 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     scalars='sample_point_scalars', value=100, invert=False
      |      ... )
      |      >>> clipped.plot()
+     |      
+     |      Clip the part of the mesh with "sample_point_scalars" between 200 and 250.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> dataset = examples.load_hexbeam()
+     |      >>> clipped = dataset.clip_scalar(
+     |      ...     scalars='sample_point_scalars', value=(200, 250)
+     |      ... )
+     |      >>> clipped.plot()
+     |      
+     |      .. seealso::
+     |      
+     |          :ref:`compare_threshold_filters_example`
+     |              This example showcases this filter and
+     |              other similar ones.
      |  
      |  clip_surface(self: '_DataSetType', surface: 'DataSet | _vtk.vtkDataSet', invert: 'bool' = True, value: 'float' = 0.0, compute_distance: 'bool' = False, progress_bar: 'bool' = False, crinkle: 'bool' = False)
      |      Clip any mesh type using a :class:`pyvista.PolyData` surface mesh.
      |      
-     |      This will return a :class:`pyvista.UnstructuredGrid` of the clipped
-     |      mesh. Geometry of the input dataset will be preserved where possible.
+     |      The clipped mesh type matches the input type for :class:`~pyvista.PointSet` and
+     |      :class:`~pyvista.PolyData`, otherwise the output type is
+     |      :class:`~pyvista.UnstructuredGrid`.
+     |      Geometry of the input dataset will be preserved where possible.
      |      Geometries near the clip intersection will be triangulated/tessellated.
      |      
      |      Parameters
@@ -5394,8 +8028,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.PolyData
-     |          Clipped surface.
+     |      DataSet
+     |          Clipped mesh. Output type matches input type for
+     |          :class:`~pyvista.PointSet`, :class:`~pyvista.PolyData`, and
+     |          :class:`~pyvista.MultiBlock`; otherwise the output type is
+     |          :class:`~pyvista.UnstructuredGrid`.
      |      
      |      Examples
      |      --------
@@ -5410,7 +8047,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      See :ref:`clip_with_surface_example` for more examples using
      |      this filter.
      |  
-     |  color_labels(self: 'DataSet', colors: 'str | ColorLike | Sequence[ColorLike] | dict[float, ColorLike]' = 'glasbey_category10', *, coloring_mode: "Literal['index', 'cycle'] | None" = None, color_type: "Literal['int_rgb', 'float_rgb', 'int_rgba', 'float_rgba']" = 'int_rgb', negative_indexing: 'bool' = False, scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'cell', output_scalars: 'str | None' = None, inplace: 'bool' = False)
+     |  color_labels(self: 'DataSet', colors: 'str | ColorLike | Sequence[ColorLike] | dict[float, ColorLike] | ColormapOptions' = 'glasbey_category10', *, coloring_mode: "Literal['index', 'cycle'] | None" = None, color_type: "Literal['int_rgb', 'float_rgb', 'int_rgba', 'float_rgba']" = 'int_rgb', negative_indexing: 'bool' = False, scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'cell', output_scalars: 'str | None' = None, return_dict: 'bool' = False, inplace: 'bool' = False)
      |      Add RGB(A) scalars to labeled data.
      |      
      |      This filter adds a color array to map label values to specific colors.
@@ -5451,7 +8088,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Label data based on its connectivity.
      |      
      |      pyvista.ImageDataFilters.contour_labels
-     |          Generate contours from labeled image data. The contours may be colored with this filter.
+     |          Generate contours from labeled images. The contours may be colored with this filter.
      |      
      |      pack_labels
      |          Make labeled data contiguous. May be used as a pre-processing step before
@@ -5462,14 +8099,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      colors : str | ColorLike | Sequence[ColorLike] | dict[float, ColorLike], default: 'glasbey_category10'
+     |      colors : str | ColorLike | Sequence[ColorLike] | dict[float, ColorLike],
      |          Color(s) to use. Specify a dictionary to explicitly control the mapping
      |          from label values to colors. Alternatively, specify colors only using a
      |          colormap or a sequence of colors and use ``coloring_mode`` to implicitly
      |          control the mapping. A single color is also supported to color the entire
      |          mesh with one color.
      |      
-     |          By default, a variation of the ``'glasbey'`` categorical colormap is used
+     |          By default,the ``'glasbey_category10'`` categorical colormap is used
      |          where the first 10 colors are the same default colors used by ``matplotlib``.
      |          See `colorcet categorical colormaps <https://colorcet.holoviz.org/user_guide/Categorical.html#>`_
      |          for more information.
@@ -5519,8 +8156,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      output_scalars : str, optional
      |          Name of the color scalars array. By default, the output array
-     |          is the same as ``scalars`` with `_rgb`` or ``_rgba`` appended
+     |          is the same as ``scalars`` with ``_rgb`` or ``_rgba`` appended
      |          depending on ``color_type``.
+     |      
+     |      return_dict : bool, default: False
+     |          Return a dictionary with a mapping from label values to the
+     |          colors applied by the filter. The colors have the same type
+     |          specified by ``color_type``.
+     |      
+     |          .. versionadded:: 0.46
      |      
      |      inplace : bool, default: False
      |          If ``True``, the mesh is updated in-place.
@@ -5535,6 +8179,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Load labeled data and crop it with :meth:`~pyvista.ImageDataFilters.extract_subset`
      |      to simplify the data.
      |      
+     |      >>> import pyvista as pv
      |      >>> from pyvista import examples
      |      >>> import numpy as np
      |      >>> image_labels = examples.load_channels()
@@ -5552,11 +8197,20 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> label_ids
      |      pyvista_ndarray([0, 1, 2, 3, 4])
      |      
-     |      Color the labels with the filter then plot them. Note that the
+     |      Color the labels with the filter. Note that the
      |      ``'glasbey_category10'`` color map is used by default.
      |      
-     |      >>> colored_labels = image_labels.color_labels()
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels, color_dict = image_labels.color_labels(return_dict=True)
+     |      
+     |      Plot the labels. We define a helper function to include a legend with the plot.
+     |      
+     |      >>> def labels_plotter(mesh, color_dict):
+     |      ...     pl = pv.Plotter()
+     |      ...     pl.add_mesh(mesh)
+     |      ...     pl.add_legend(color_dict)
+     |      ...     return pl
+     |      
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Since the labels are unsigned integers, the ``'index'`` coloring mode is used
      |      by default. Unlike the uniform sampling used by the plotter in the previous
@@ -5575,29 +8229,33 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Despite the changes to the dataset, the regions have the same coloring
      |      as before.
      |      
-     |      >>> colored_labels = subset_labels.color_labels()
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels, color_dict = subset_labels.color_labels(return_dict=True)
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Use the ``'cycle'`` coloring mode instead to map label values to colors
      |      sequentially.
      |      
-     |      >>> colored_labels = subset_labels.color_labels(coloring_mode='cycle')
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels, color_dict = subset_labels.color_labels(
+     |      ...     coloring_mode='cycle', return_dict=True
+     |      ... )
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Map the colors explicitly using a dictionary.
      |      
-     |      >>> colors = {0: 'black', 1: 'red', 2: 'lime', 3: 'blue', 4: 'yellow'}
-     |      >>> colored_labels = image_labels.color_labels(colors)
-     |      >>> colored_labels.plot()
+     |      >>> color_dict = {0: 'black', 1: 'red', 2: 'lime', 3: 'blue', 4: 'gold'}
+     |      >>> colored_labels = image_labels.color_labels(color_dict)
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Omit the background value from the mapping and specify float colors. When
      |      floats are specified, values without a mapping are assigned ``nan`` values
      |      and are not plotted by default.
      |      
-     |      >>> colors.pop(0)
+     |      >>> color_dict.pop(0)
      |      'black'
-     |      >>> colored_labels = image_labels.color_labels(colors, color_type='float_rgba')
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels = image_labels.color_labels(
+     |      ...     color_dict, color_type='float_rgba'
+     |      ... )
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Modify the scalars and make two of the labels negative.
      |      
@@ -5612,14 +8270,18 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      color in the colormap, respectively. Negative values ``-3`` and ``-4`` are
      |      colored with the third-last and fourth-last color in the colormap, respectively.
      |      
-     |      >>> colored_labels = image_labels.color_labels(negative_indexing=True)
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels, color_dict = image_labels.color_labels(
+     |      ...     negative_indexing=True, return_dict=True
+     |      ... )
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      If ``negative_indexing`` is disabled, the coloring defaults to the
      |      ``'cycle'`` coloring mode instead.
      |      
-     |      >>> colored_labels = image_labels.color_labels(negative_indexing=False)
-     |      >>> colored_labels.plot()
+     |      >>> colored_labels, color_dict = image_labels.color_labels(
+     |      ...     negative_indexing=False, return_dict=True
+     |      ... )
+     |      >>> labels_plotter(colored_labels, color_dict).show()
      |      
      |      Load the :func:`~pyvista.examples.downloads.download_foot_bones` dataset.
      |      
@@ -5677,109 +8339,23 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> from pyvista import examples
      |      >>> mesh = examples.download_can_crushed_vtu()
      |      >>> cqual = mesh.compute_boundary_mesh_quality()
-     |      >>> plotter = pv.Plotter(shape=(2, 2))
-     |      >>> _ = plotter.add_mesh(mesh, show_edges=True)
-     |      >>> plotter.subplot(1, 0)
-     |      >>> _ = plotter.add_mesh(cqual, scalars='DistanceFromCellCenterToFaceCenter')
-     |      >>> plotter.subplot(0, 1)
-     |      >>> _ = plotter.add_mesh(cqual, scalars='DistanceFromCellCenterToFacePlane')
-     |      >>> plotter.subplot(1, 1)
-     |      >>> _ = plotter.add_mesh(
+     |      >>> pl = pv.Plotter(shape=(2, 2))
+     |      >>> _ = pl.add_mesh(mesh, show_edges=True)
+     |      >>> pl.subplot(1, 0)
+     |      >>> _ = pl.add_mesh(cqual, scalars='DistanceFromCellCenterToFaceCenter')
+     |      >>> pl.subplot(0, 1)
+     |      >>> _ = pl.add_mesh(cqual, scalars='DistanceFromCellCenterToFacePlane')
+     |      >>> pl.subplot(1, 1)
+     |      >>> _ = pl.add_mesh(
      |      ...     cqual,
      |      ...     scalars='AngleFaceNormalAndCellCenterToFaceCenterVector',
      |      ... )
-     |      >>> plotter.show()
-     |  
-     |  compute_cell_quality(self: '_DataSetType', quality_measure: 'str' = 'scaled_jacobian', null_value: 'float' = -1.0, progress_bar: 'bool' = False)
-     |      Compute a function of (geometric) quality for each cell of a mesh.
-     |      
-     |      The per-cell quality is added to the mesh's cell data, in an
-     |      array named ``"CellQuality"``. Cell types not supported by this
-     |      filter or undefined quality of supported cell types will have an
-     |      entry of -1.
-     |      
-     |      Defaults to computing the scaled Jacobian.
-     |      
-     |      Options for cell quality measure:
-     |      
-     |      - ``'area'``
-     |      - ``'aspect_beta'``
-     |      - ``'aspect_frobenius'``
-     |      - ``'aspect_gamma'``
-     |      - ``'aspect_ratio'``
-     |      - ``'collapse_ratio'``
-     |      - ``'condition'``
-     |      - ``'diagonal'``
-     |      - ``'dimension'``
-     |      - ``'distortion'``
-     |      - ``'jacobian'``
-     |      - ``'max_angle'``
-     |      - ``'max_aspect_frobenius'``
-     |      - ``'max_edge_ratio'``
-     |      - ``'med_aspect_frobenius'``
-     |      - ``'min_angle'``
-     |      - ``'oddy'``
-     |      - ``'radius_ratio'``
-     |      - ``'relative_size_squared'``
-     |      - ``'scaled_jacobian'``
-     |      - ``'shape'``
-     |      - ``'shape_and_size'``
-     |      - ``'shear'``
-     |      - ``'shear_and_size'``
-     |      - ``'skew'``
-     |      - ``'stretch'``
-     |      - ``'taper'``
-     |      - ``'volume'``
-     |      - ``'warpage'``
-     |      
-     |      .. note::
-     |      
-     |          Refer to the `Verdict Library Reference Manual <https://public.kitware.com/Wiki/images/6/6b/VerdictManual-revA.pdf>`_
-     |          for low-level technical information about how each metric is computed,
-     |          which :class:`~pyvista.CellType` it applies to as well as the metric's
-     |          full, normal, and acceptable range of values.
-     |      
-     |      .. deprecated:: 0.45
-     |      
-     |          Use :meth:`~pyvista.DataObjectFilters.cell_quality` instead. Note that
-     |          this new filter does not include an array named ``'CellQuality'``.
-     |      
-     |      Parameters
-     |      ----------
-     |      quality_measure : str, default: 'scaled_jacobian'
-     |          The cell quality measure to use.
-     |      
-     |      null_value : float, default: -1.0
-     |          Float value for undefined quality. Undefined quality are qualities
-     |          that could be addressed by this filter but is not well defined for
-     |          the particular geometry of cell in question, e.g. a volume query
-     |          for a triangle. Undefined quality will always be undefined.
-     |          The default value is -1.
-     |      
-     |      progress_bar : bool, default: False
-     |          Display a progress bar to indicate progress.
-     |      
-     |      Returns
-     |      -------
-     |      pyvista.DataSet
-     |          Dataset with the computed mesh quality in the
-     |          ``cell_data`` as the ``"CellQuality"`` array.
-     |      
-     |      Examples
-     |      --------
-     |      Compute and plot the minimum angle of a sample sphere mesh.
-     |      
-     |      >>> import pyvista as pv
-     |      >>> sphere = pv.Sphere(theta_resolution=20, phi_resolution=20)
-     |      >>> cqual = sphere.compute_cell_quality('min_angle')  # doctest:+SKIP
-     |      >>> cqual.plot(show_edges=True)  # doctest:+SKIP
-     |      
-     |      See the :ref:`mesh_quality_example` for more examples using this filter.
+     |      >>> pl.show()
      |  
      |  compute_derivative(self: '_DataSetType', scalars: 'str | None' = None, gradient: 'bool | str' = True, divergence: 'bool | str' = False, vorticity: 'bool | str' = False, qcriterion: 'bool | str' = False, faster: 'bool' = False, preference: "Literal['point', 'cell']" = 'point', progress_bar: 'bool' = False)
      |      Compute derivative-based quantities of point/cell scalar field.
      |      
-     |      Utilize ``vtkGradientFilter`` to compute derivative-based quantities,
+     |      Utilize :vtk:`vtkGradientFilter` to compute derivative-based quantities,
      |      such as gradient, divergence, vorticity, and Q-criterion, of the
      |      selected point or cell scalar field.
      |      
@@ -5876,6 +8452,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Dataset containing the ``'implicit_distance'`` array in
      |          ``point_data``.
      |      
+     |      See Also
+     |      --------
+     |      select_interior_points
+     |      
      |      Examples
      |      --------
      |      Compute the distance between all the points on a sphere and a
@@ -5917,10 +8497,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> pl.show()
      |      
      |      See :ref:`clip_with_surface_example` and
-     |      :ref:`voxelize_surface_mesh_example` for more examples using
+     |      :ref:`voxelize_example` for more examples using
      |      this filter.
      |  
-     |  connectivity(self: '_DataSetType', extraction_mode: "Literal['all', 'largest', 'specified', 'cell_seed', 'point_seed', 'closest']" = 'all', variable_input: 'float | VectorLike[float] | None' = None, scalar_range: 'VectorLike[float] | None' = None, scalars: 'str | None' = None, label_regions: 'bool' = True, region_ids: 'VectorLike[int] | None' = None, point_ids: 'VectorLike[int] | None' = None, cell_ids: 'VectorLike[int] | None' = None, closest_point: 'VectorLike[float] | None' = None, inplace: 'bool' = False, progress_bar: 'bool' = False, **kwargs)
+     |  connectivity(self: '_DataSetType', extraction_mode: "Literal['all', 'largest', 'specified', 'cell_seed', 'point_seed', 'closest']" = 'all', variable_input: 'float | VectorLike[float] | None' = None, scalar_range: 'VectorLike[float] | None' = None, scalars: 'str | None' = None, label_regions: 'bool' = True, region_assignment_mode: "Literal['ascending', 'descending', 'unspecified']" = 'descending', region_ids: 'VectorLike[int] | None' = None, point_ids: 'VectorLike[int] | None' = None, cell_ids: 'VectorLike[int] | None' = None, closest_point: 'VectorLike[float] | None' = None, inplace: 'bool' = False, progress_bar: 'bool' = False, **kwargs)
      |      Find and label connected regions.
      |      
      |      This filter extracts cell regions based on a specified connectivity
@@ -5933,7 +8513,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      must also have at least one point with scalar values in the
      |      specified range to be considered connected.
      |      
-     |      See :ref:`connectivity_example` and :ref:`volumetric_example` for
+     |      See :ref:`connectivity_example` and :ref:`volumetric_analysis_example` for
      |      more examples using this filter.
      |      
      |      .. versionadded:: 0.43.0
@@ -5987,7 +8567,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          .. note::
      |             This filter requires point scalars to determine region
      |             connectivity. If cell scalars are provided, they are first
-     |             converted to point scalars with :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`
+     |             converted to point scalars with
+     |             :func:`~pyvista.DataObjectFilters.cell_data_to_point_data`
      |             before applying the filter. The converted point scalars are
      |             removed from the output after applying the filter.
      |      
@@ -5996,6 +8577,22 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Each region is assigned a unique ID. IDs are zero-indexed and are
      |          assigned by region cell count in descending order (i.e. the largest
      |          region has ID ``0``).
+     |      
+     |      region_assignment_mode : str, default: "descending"
+     |          Strategy used to assign connected region IDs if ``label_regions`` is True.
+     |          Can be either:
+     |      
+     |          - ``"ascending"``: IDs are sorted by increasing order of cell count
+     |          - ``"descending"``: IDs are sorted by decreasing order of cell counts
+     |          - ``"unspecified"``: no particular order
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |          .. admonition:: ParaView compatibility
+     |              :class: note dropdown
+     |      
+     |              The default value ``"descending"`` differs from ParaView's, which
+     |              is set to ``"unspecified"`` (verified for 5.11 and 6.0 versions).
      |      
      |      region_ids : sequence[int], optional
      |          Region ids to extract. Only used if ``extraction_mode`` is
@@ -6040,6 +8637,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Create a single mesh with three disconnected regions where each
      |      region has a different cell count.
      |      
+     |      >>> import numpy as np
      |      >>> import pyvista as pv
      |      >>> large = pv.Sphere(
      |      ...     center=(-4, 0, 0), phi_resolution=40, theta_resolution=40
@@ -6050,31 +8648,55 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> small = pv.Sphere(center=(0, 0, 0), phi_resolution=7, theta_resolution=7)
      |      >>> mesh = large + medium + small
      |      
-     |      Plot their connectivity.
+     |      Compute connectivity. There are three regions, one for each sphere.
      |      
      |      >>> conn = mesh.connectivity('all')
-     |      >>> conn.plot(cmap=['red', 'green', 'blue'], show_edges=True)
+     |      >>> np.unique(conn['RegionId'])
+     |      pyvista_ndarray([0, 1, 2])
+     |      
+     |      Plot the connectivity labels using :meth:`~pyvista.DataSetFilters.color_labels`.
+     |      
+     |      >>> def labels_plotter(dataset: pv.DataSet) -> pv.Plotter:
+     |      ...     rgb = ['red', 'green', 'blue']
+     |      ...     colored, color_dict = dataset.color_labels(rgb, return_dict=True)
+     |      ...     pl = pv.Plotter()
+     |      ...     pl.add_mesh(colored, show_edges=True)
+     |      ...     pl.add_legend(color_dict)
+     |      ...     pl.camera_position = pv.CameraPosition(
+     |      ...         position=(3.8, 5.8, 5.8),
+     |      ...         focal_point=(-2.0, 0.0, 0.0),
+     |      ...         viewup=(0.0, 0.0, 1.0),
+     |      ...     )
+     |      ...     return pl
+     |      >>>
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
+     |      
      |      
      |      Restrict connectivity to a scalar range.
      |      
      |      >>> mesh['y_coordinates'] = mesh.points[:, 1]
      |      >>> conn = mesh.connectivity('all', scalar_range=[-1, 0])
-     |      >>> conn.plot(cmap=['red', 'green', 'blue'], show_edges=True)
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
      |      
      |      Extract the region closest to the origin.
      |      
      |      >>> conn = mesh.connectivity('closest', (0, 0, 0))
-     |      >>> conn.plot(color='blue', show_edges=True)
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
      |      
-     |      Extract a region using a cell ID ``100`` as a seed.
+     |      Extract a region using a cell ID ``3100`` as a seed.
      |      
-     |      >>> conn = mesh.connectivity('cell_seed', 100)
-     |      >>> conn.plot(color='green', show_edges=True)
+     |      >>> conn = mesh.connectivity('cell_seed', 3100)
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
      |      
      |      Extract the largest region.
      |      
      |      >>> conn = mesh.connectivity('largest')
-     |      >>> conn.plot(color='red', show_edges=True)
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
      |      
      |      Extract the largest and smallest regions by specifying their
      |      region IDs. Note that the region IDs of the output differ from
@@ -6084,7 +8706,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> large_id = 0  # largest always has ID '0'
      |      >>> small_id = 2  # smallest has ID 'N-1' with N=3 regions
      |      >>> conn = mesh.connectivity('specified', (small_id, large_id))
-     |      >>> conn.plot(cmap=['red', 'blue'], show_edges=True)
+     |      >>> pl = labels_plotter(conn)
+     |      >>> pl.show()
      |  
      |  contour(self: '_DataSetType', isosurfaces: 'int | Sequence[float]' = 10, scalars: 'str | NumpyArray[float] | None' = None, compute_normals: 'bool' = False, compute_gradients: 'bool' = False, compute_scalars: 'bool' = True, rng: 'VectorLike[float] | None' = None, preference: "Literal['point', 'cell']" = 'point', method: "Literal['contour', 'marching_cubes', 'flying_edges']" = 'contour', progress_bar: 'bool' = False)
      |      Contour an input self by an array.
@@ -6185,8 +8808,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ... )
      |      >>> out.plot(color='lightblue', smooth_shading=True)
      |      
-     |      See :ref:`common_filter_example` or
-     |      :ref:`marching_cubes_example` for more examples using this
+     |      See :ref:`using_filters_example`, :ref:`marching_cubes_example`, or
+     |      :ref:`gyroid_example` for more examples using this
      |      filter.
      |  
      |  decimate_boundary(self: '_DataSetType', target_reduction: 'float' = 0.5, progress_bar: 'bool' = False)
@@ -6258,6 +8881,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> grid = sphere.delaunay_3d()
      |      >>> edges = grid.extract_all_edges()
      |      >>> edges.plot(line_width=5, color='k')
+     |      
+     |      See :ref:`convex_hull_example` for more examples using this filter.
      |  
      |  explode(self: '_DataSetType', factor: 'float' = 0.1)
      |      Push each individual cell away from the center of the dataset.
@@ -6290,16 +8915,29 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> exploded = grid.explode()
      |      >>> exploded.plot(show_edges=True)
      |  
-     |  extract_cells(self: '_DataSetType', ind: 'int | VectorLike[int]', invert: 'bool' = False, progress_bar: 'bool' = False)
+     |  extract_cells(self: '_DataSetType', ind: 'int | VectorLike[int]', invert: 'bool' = False, pass_cell_ids: 'bool' = True, pass_point_ids: 'bool' = True, progress_bar: 'bool' = False)
      |      Return a subset of the grid.
      |      
      |      Parameters
      |      ----------
-     |      ind : sequence[int]
-     |          Numpy array of cell indices to be extracted.
+     |      ind : int | VectorLike[int]
+     |          Cell indices to extract. Can be a single int or a vector of ints.
+     |          A bool vector is also supported; the vector size should match the number of cells.
      |      
      |      invert : bool, default: False
      |          Invert the selection.
+     |      
+     |      pass_point_ids : bool, default: True
+     |          Add a point array ``'vtkOriginalPointIds'`` that identifies the original
+     |          points the extracted points correspond to.
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |      pass_cell_ids : bool, default: True
+     |          Add a cell array ``'vtkOriginalCellIds'`` that identifies the original cells
+     |          the extracted cells correspond to.
+     |      
+     |          .. versionadded:: 0.47
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -6384,7 +9022,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(tet_cells, show_edges=True)
      |      >>> pl.show()
      |  
-     |  extract_feature_edges(self: '_DataSetType', feature_angle: 'float' = 30.0, boundary_edges: 'bool' = True, non_manifold_edges: 'bool' = True, feature_edges: 'bool' = True, manifold_edges: 'bool' = True, clear_data: 'bool' = False, progress_bar: 'bool' = False)
+     |  extract_feature_edges(self: '_DataSetType', feature_angle: 'float' = 30.0, boundary_edges: 'bool' = True, non_manifold_edges: 'bool' = True, feature_edges: 'bool' = True, manifold_edges: 'bool' = True, clear_data: 'bool' = False, progress_bar: 'bool' = False) -> 'PolyData'
      |      Extract edges from the surface of the mesh.
      |      
      |      If the given mesh is not PolyData, the external surface of the given
@@ -6441,14 +9079,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See the :ref:`extract_edges_example` for more examples using this filter.
      |  
-     |  extract_geometry(self: '_DataSetType', extent: 'VectorLike[float] | None' = None, progress_bar: 'bool' = False)
+     |  extract_geometry(self: '_DataSetType', extent: 'VectorLike[float] | None' = None, progress_bar: 'bool' = False) -> 'PolyData'
      |      Extract the outer surface of a volume or structured grid dataset.
      |      
      |      This will extract all 0D, 1D, and 2D cells producing the
      |      boundary faces of the dataset.
      |      
-     |      .. note::
-     |          This tends to be less efficient than :func:`extract_surface`.
+     |      .. deprecated:: 0.47.0
+     |          Use :meth:`~pyvista.DataObjectFilters.extract_surface` instead
+     |          with keyword `algorithm=None`.
      |      
      |      Parameters
      |      ----------
@@ -6471,7 +9110,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> from pyvista import examples
      |      >>> hex_beam = pv.read(examples.hexbeamfile)
-     |      >>> hex_beam.extract_geometry()
+     |      >>> hex_beam.extract_geometry()  # doctest:+SKIP
      |      PolyData (...)
      |        N Cells:    88
      |        N Points:   90
@@ -6512,13 +9151,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> largest = mesh.extract_largest()
      |      >>> largest.plot()
      |      
-     |      See :ref:`connectivity_example` and :ref:`volumetric_example` for
+     |      See :ref:`connectivity_example` and :ref:`volumetric_analysis_example` for
      |      more examples using this filter.
      |      
      |      .. seealso::
      |          :func:`pyvista.DataSetFilters.connectivity`
      |  
-     |  extract_points(self: '_DataSetType', ind: 'int | VectorLike[int] | VectorLike[bool]', adjacent_cells: 'bool' = True, include_cells: 'bool' = True, progress_bar: 'bool' = False)
+     |  extract_points(self: '_DataSetType', ind: 'int | VectorLike[int] | VectorLike[bool]', adjacent_cells: 'bool' = True, include_cells: 'bool' = True, pass_cell_ids: 'bool' = True, pass_point_ids: 'bool' = True, progress_bar: 'bool' = False)
      |      Return a subset of the grid (with cells) that contains any of the given point indices.
      |      
      |      Parameters
@@ -6534,6 +9173,18 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      include_cells : bool, default: True
      |          Specifies if the cells shall be returned or not.
+     |      
+     |      pass_point_ids : bool, default: True
+     |          Add a point array ``'vtkOriginalPointIds'`` that identifies the original
+     |          points the extracted points correspond to.
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |      pass_cell_ids : bool, default: True
+     |          Add a cell array ``'vtkOriginalCellIds'`` that identifies the original cells
+     |          the extracted cells correspond to.
+     |      
+     |          .. versionadded:: 0.47
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -6558,84 +9209,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ... )
      |      >>> extracted.clear_data()  # clear for plotting
      |      >>> extracted.plot()
-     |  
-     |  extract_surface(self: '_DataSetType', pass_pointid: 'bool' = True, pass_cellid: 'bool' = True, nonlinear_subdivision: 'int' = 1, progress_bar: 'bool' = False)
-     |      Extract surface mesh of the grid.
-     |      
-     |      Parameters
-     |      ----------
-     |      pass_pointid : bool, default: True
-     |          Adds a point array ``"vtkOriginalPointIds"`` that
-     |          identifies which original points these surface points
-     |          correspond to.
-     |      
-     |      pass_cellid : bool, default: True
-     |          Adds a cell array ``"vtkOriginalCellIds"`` that
-     |          identifies which original cells these surface cells
-     |          correspond to.
-     |      
-     |      nonlinear_subdivision : int, default: 1
-     |          If the input is an unstructured grid with nonlinear faces,
-     |          this parameter determines how many times the face is
-     |          subdivided into linear faces.
-     |      
-     |          If 0, the output is the equivalent of its linear
-     |          counterpart (and the midpoints determining the nonlinear
-     |          interpolation are discarded). If 1 (the default), the
-     |          nonlinear face is triangulated based on the midpoints. If
-     |          greater than 1, the triangulated pieces are recursively
-     |          subdivided to reach the desired subdivision. Setting the
-     |          value to greater than 1 may cause some point data to not
-     |          be passed even if no nonlinear faces exist. This option
-     |          has no effect if the input is not an unstructured grid.
-     |      
-     |      progress_bar : bool, default: False
-     |          Display a progress bar to indicate progress.
-     |      
-     |      Returns
-     |      -------
-     |      pyvista.PolyData
-     |          Surface mesh of the grid.
-     |      
-     |      Warnings
-     |      --------
-     |      Both ``"vtkOriginalPointIds"`` and ``"vtkOriginalCellIds"`` may be
-     |      affected by other VTK operations. See `issue 1164
-     |      <https://github.com/pyvista/pyvista/issues/1164>`_ for
-     |      recommendations on tracking indices across operations.
-     |      
-     |      Examples
-     |      --------
-     |      Extract the surface of an UnstructuredGrid.
-     |      
-     |      >>> import pyvista as pv
-     |      >>> from pyvista import examples
-     |      >>> grid = examples.load_hexbeam()
-     |      >>> surf = grid.extract_surface()
-     |      >>> type(surf)
-     |      <class 'pyvista.core.pointset.PolyData'>
-     |      >>> surf['vtkOriginalPointIds']
-     |      pyvista_ndarray([ 0,  2, 36, 27,  7,  8, 81,  1, 18,  4, 54,  3,  6, 45,
-     |                       72,  5, 63,  9, 35, 44, 11, 16, 89, 17, 10, 26, 62, 13,
-     |                       12, 53, 80, 15, 14, 71, 19, 37, 55, 20, 38, 56, 21, 39,
-     |                       57, 22, 40, 58, 23, 41, 59, 24, 42, 60, 25, 43, 61, 28,
-     |                       82, 29, 83, 30, 84, 31, 85, 32, 86, 33, 87, 34, 88, 46,
-     |                       73, 47, 74, 48, 75, 49, 76, 50, 77, 51, 78, 52, 79, 64,
-     |                       65, 66, 67, 68, 69, 70])
-     |      >>> surf['vtkOriginalCellIds']
-     |      pyvista_ndarray([ 0,  0,  0,  1,  1,  1,  3,  3,  3,  2,  2,  2, 36, 36,
-     |                       36, 37, 37, 37, 39, 39, 39, 38, 38, 38,  5,  5,  9,  9,
-     |                       13, 13, 17, 17, 21, 21, 25, 25, 29, 29, 33, 33,  4,  4,
-     |                        8,  8, 12, 12, 16, 16, 20, 20, 24, 24, 28, 28, 32, 32,
-     |                        7,  7, 11, 11, 15, 15, 19, 19, 23, 23, 27, 27, 31, 31,
-     |                       35, 35,  6,  6, 10, 10, 14, 14, 18, 18, 22, 22, 26, 26,
-     |                       30, 30, 34, 34])
-     |      
-     |      Note that in the "vtkOriginalCellIds" array, the same original cells
-     |      appears multiple times since this array represents the original cell of
-     |      each surface cell extracted.
-     |      
-     |      See the :ref:`extract_surface_example` for more examples using this filter.
      |  
      |  extract_values(self: '_DataSetType', values: 'float | VectorLike[float] | MatrixLike[float] | dict[str, float] | dict[float, str] | None' = None, *, ranges: 'VectorLike[float] | MatrixLike[float] | dict[str, VectorLike[float]] | dict[tuple[float, float], str] | None' = None, scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'point', component_mode: "Literal['any', 'all', 'multi'] | int" = 'all', invert: 'bool' = False, adjacent_cells: 'bool' = True, include_cells: 'bool | None' = None, split: 'bool' = False, pass_point_ids: 'bool' = True, pass_cell_ids: 'bool' = True, progress_bar: 'bool' = False)
      |      Return a subset of the mesh based on the value(s) of point or cell data.
@@ -6771,7 +9344,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      See Also
      |      --------
      |      split_values
-     |          Wrapper around this filter to split values and return a :class:`~pyvista.MultiBlock` by default.
+     |          Wrapper around this filter to split values and return a :class:`~pyvista.MultiBlock`.
      |      :meth:`~pyvista.ImageDataFilters.select_values`
      |          Similar filter specialized for :class:`~pyvista.ImageData`.
      |      extract_points
@@ -6782,10 +9355,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Similar filter for thresholding a mesh by value.
      |      partition
      |          Split a mesh into a number of sub-parts.
+     |      :ref:`compare_threshold_filters_example`
+     |          This example showcases this filter and
+     |          other similar ones.
      |      
      |      Returns
      |      -------
-     |      pyvista.UnstructuredGrid or pyvista.MultiBlock
+     |      output : pyvista.UnstructuredGrid | pyvista.MultiBlock
      |          An extracted mesh or a composite of extracted meshes, depending on ``split``.
      |      
      |      Examples
@@ -6811,7 +9387,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> extracted = mesh.extract_values(0, include_cells=False)
      |      >>> extracted.get_data_range()
      |      (np.float64(0.0), np.float64(0.0))
-     |      >>> extracted.plot(render_points_as_spheres=True, point_size=100)
+     |      >>> extracted.plot(render_points_as_spheres=True, point_size=100, color=True)
      |      
      |      Use ``ranges`` to extract values from a grid's point data in range.
      |      
@@ -6905,6 +9481,64 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> point_cloud['colors'][point_ids] = yellow
      |      >>> point_cloud.plot(**plot_kwargs)
      |  
+     |  gaussian_splatting(self: '_DataSetType', *, radius: 'float' = 0.1, dimensions: 'VectorLike[int]' = (50, 50, 50), progress_bar: 'bool' = False)
+     |      Splat points into a volume using a Gaussian distribution.
+     |      
+     |      This filter uses :vtk:`vtkGaussianSplatter` to splat points into a volume
+     |      dataset. Each point is surrounded with a Gaussian distribution function
+     |      weighted by input scalar data. The distribution function is volumetrically
+     |      sampled to create a structured dataset.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      Parameters
+     |      ----------
+     |      radius : float, default: 0.1
+     |          This value is expressed as a percentage of the length of the longest side of
+     |          the sampling volume. This determines the "width" of the splatter in
+     |          terms of the distribution. Smaller numbers greatly reduce execution time.
+     |      
+     |      dimensions : VectorLike[int], default: (50, 50, 50)
+     |          Sampling dimensions of the structured point set. Higher values produce better
+     |          results but are much slower. This is the :attr:`~pyvista.ImageData.dimensions`
+     |          of the returned :class:`~pyvista.ImageData`.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.ImageData
+     |          Image data with scalar values representing the splatting
+     |          of the points.
+     |      
+     |      See Also
+     |      --------
+     |      voxelize_binary_mask
+     |          Alternative method for generating :class:`~pyvista.ImageData` from a dataset.
+     |      
+     |      Examples
+     |      --------
+     |      Create an image data volume from a point cloud using gaussian splatter.
+     |      
+     |      >>> import pyvista as pv
+     |      
+     |      Load the Stanford Bunny mesh.
+     |      
+     |      >>> bunny = pv.examples.download_bunny()
+     |      
+     |      Apply Gaussian splatter to generate a volumetric representation.
+     |      
+     |      >>> volume = bunny.gaussian_splatting(radius=0.01)
+     |      
+     |      Threshold the volume to filter out low-density regions.
+     |      
+     |      >>> threshed = volume.threshold(0.05)
+     |      
+     |      Visualize the thresholded volume with semi-transparency and no scalar bar.
+     |      
+     |      >>> threshed.plot(opacity=0.5, show_scalar_bar=False)
+     |  
      |  glyph(self: '_DataSetType', orient: 'bool | str' = True, scale: 'bool | str' = True, factor: 'float' = 1.0, geom: '_vtk.vtkDataSet | DataSet | Sequence[_vtk.vtkDataSet | DataSet] | None' = None, indices: 'VectorLike[int] | None' = None, tolerance: 'float | None' = None, absolute: 'bool' = False, clamping: 'bool' = False, rng: 'VectorLike[float] | None' = None, color_mode: "Literal['scale', 'scalar', 'vector']" = 'scale', progress_bar: 'bool' = False)
      |      Copy a geometric representation (called a glyph) to the input dataset.
      |      
@@ -6930,7 +9564,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      factor : float, default: 1.0
      |          Scale factor applied to scaling array.
      |      
-     |      geom : vtk.vtkDataSet or tuple(vtk.vtkDataSet), optional
+     |      geom : :vtk:`vtkDataSet` | tuple[:vtk:`vtkDataSet`], optional
      |          The geometry to use for the glyph. If missing, an arrow glyph
      |          is used. If a sequence, the datasets inside define a table of
      |          geometries to choose from based on scalars or vectors. In this
@@ -7002,17 +9636,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ... )
      |      >>> pl.show()
      |      
-     |      See :ref:`glyph_example` and :ref:`glyph_table_example` for more
-     |      examples using this filter.
+     |      See :ref:`glyph_example`, :ref:`movie_glyphs_example`, and
+     |      :ref:`glyph_table_example` for more examples using this filter.
      |  
      |  integrate_data(self: '_DataSetType', progress_bar: 'bool' = False)
      |      Integrate point and cell data.
      |      
      |      Area or volume is also provided in point data.
      |      
-     |      This filter uses the VTK `vtkIntegrateAttributes
-     |      <https://vtk.org/doc/nightly/html/classvtkIntegrateAttributes.html>`_
-     |      and requires VTK v9.1.0 or newer.
+     |      This filter uses :vtk:`vtkIntegrateAttributes`.
      |      
      |      Parameters
      |      ----------
@@ -7042,7 +9674,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> integrated['data'][0]
      |      np.float64(6.28)
      |      
-     |      See the :ref:`integrate_example` for more examples using this filter.
+     |      See the :ref:`integrate_data_example` for more examples using this filter.
      |  
      |  interpolate(self: '_DataSetType', target: 'DataSet | _vtk.vtkDataSet', sharpness: 'float' = 2.0, radius: 'float' = 1.0, strategy: "Literal['null_value', 'mask_points', 'closest_point']" = 'null_value', null_value: 'float' = 0.0, n_points: 'int | None' = None, pass_cell_data: 'bool' = True, pass_point_data: 'bool' = True, progress_bar: 'bool' = False)
      |      Interpolate values onto this mesh from a given dataset.
@@ -7138,9 +9770,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(plane, style='wireframe', line_width=5)
      |      >>> pl.show()
      |      
-     |      See :ref:`interpolate_example` for more examples using this filter.
+     |      See :ref:`interpolate_example`, :ref:`interpolate_sample_example`,
+     |      and :ref:`resampling_example` for more examples using this filter.
      |  
-     |  merge(self: '_DataSetType', grid: 'DataSet | _vtk.vtkDataSet | MultiBlock | Sequence[DataSet | _vtk.vtkDataSet] | None' = None, merge_points: 'bool' = True, tolerance: 'float' = 0.0, inplace: 'bool' = False, main_has_priority: 'bool' = True, progress_bar: 'bool' = False)
+     |  merge(self: '_DataSetType', grid: 'DataSet | _vtk.vtkDataSet | MultiBlock | Sequence[DataSet | _vtk.vtkDataSet] | None' = None, merge_points: 'bool' = True, tolerance: 'float' = 0.0, inplace: 'bool' = False, main_has_priority: 'bool | None' = None, progress_bar: 'bool' = False)
      |      Join one or many other grids to this grid.
      |      
      |      Can be used to merge points of adjacent cells when no grids
@@ -7152,9 +9785,21 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |         :class:`pyvista.UnstructuredGrid`, in-place merging via
      |         ``+=`` is similarly possible.
      |      
+     |      
+     |      .. warning::
+     |      
+     |          The merge order of this filter depends on the installed version
+     |          of VTK. For example, if merging meshes ``a``, ``b``, and ``c``,
+     |          the merged order is ``bca`` for VTK<9.5 and ``abc`` for VTK>=9.5.
+     |          This may be a breaking change for some applications. If only
+     |          merging two meshes, it may be possible to maintain `some` backwards
+     |          compatibility by swapping the input order of the two meshes,
+     |          though this may also affect the merged arrays and is therefore
+     |          not fully backwards-compatible.
+     |      
      |      Parameters
      |      ----------
-     |      grid : vtk.vtkUnstructuredGrid | list[vtk.vtkUnstructuredGrid], optional
+     |      grid : :vtk:`vtkUnstructuredGrid` | list[:vtk:`vtkUnstructuredGrid`], optional
      |          Grids to merge to this grid.
      |      
      |      merge_points : bool, default: True
@@ -7173,6 +9818,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          When this parameter is true and merge_points is true,
      |          the arrays of the merging grids will be overwritten
      |          by the original main mesh.
+     |      
+     |          .. deprecated:: 0.46
+     |      
+     |              This keyword will be removed in a future version. The main mesh
+     |              always has priority with VTK 9.5.0 or later.
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -7219,7 +9869,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.PolyData or pyvista.UnstructuredGrid
+     |      output : pyvista.PolyData | pyvista.UnstructuredGrid
      |          Mesh with merged points. PolyData is returned only if the input is PolyData.
      |      
      |      Examples
@@ -7312,7 +9962,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.MultiBlock or pyvista.PolyData
+     |      output : pyvista.MultiBlock | pyvista.PolyData
      |          MultiBlock with six named cube faces when ``as_composite=True`` and
      |          PolyData otherwise.
      |      
@@ -7414,7 +10064,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> outline = sphere.outline()
      |      >>> pv.plot([sphere, outline], line_width=5)
      |      
-     |      See :ref:`common_filter_example` for more examples using this filter.
+     |      See :ref:`using_filters_example` for more examples using this filter.
      |  
      |  outline_corners(self: '_DataObjectType', factor: 'float' = 0.2, progress_bar: 'bool' = False)
      |      Produce an outline of the corners for the input dataset.
@@ -7460,8 +10110,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Notes
      |      -----
-     |      This filter uses ``vtkPackLabels`` as the underlying method which
-     |      requires VTK version 9.3 or higher. If ``vtkPackLabels`` is not
+     |      This filter uses :vtk:`vtkPackLabels` as the underlying method which
+     |      requires VTK version 9.3 or higher. If :vtk:`vtkPackLabels` is not
      |      available, packing is done with ``NumPy`` instead which may be
      |      slower. For best performance, consider upgrading VTK.
      |      
@@ -7540,8 +10190,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      is specified for ``n_partitions``, then the load balancing simply
      |      uses the power-of-two greater than the requested value
      |      
-     |      For more details, see `vtkRedistributeDataSetFilter
-     |      <https://vtk.org/doc/nightly/html/classvtkRedistributeDataSetFilter.html>`_.
+     |      For more details, see :vtk:`vtkRedistributeDataSetFilter`.
      |      
      |      Parameters
      |      ----------
@@ -7567,7 +10216,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.MultiBlock or pyvista.UnstructuredGrid
+     |      output : pyvista.MultiBlock | pyvista.UnstructuredGrid
      |          UnStructuredGrid if ``as_composite=False`` and MultiBlock when ``True``.
      |      
      |      Examples
@@ -7658,7 +10307,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ... )  # doctest:+SKIP
      |  
      |  plot_over_circular_arc_normal(self: '_DataSetType', center: 'VectorLike[float]', resolution: 'int | None' = None, normal: 'VectorLike[float] | None' = None, polar: 'VectorLike[float] | None' = None, angle: 'float | None' = None, scalars: 'str | None' = None, title: 'str | None' = None, ylabel: 'str | None' = None, figsize: 'tuple[int, int] | None' = None, figure: 'bool' = True, show: 'bool' = True, tolerance: 'float | None' = None, fname: 'str | None' = None, progress_bar: 'bool' = False) -> 'None'
-     |      Sample a dataset along a resolution circular arc defined by a normal and polar vector and plot it.
+     |      Sample a dataset along a circular arc defined by a normal and polar vector and plot it.
      |      
      |      Plot the variables of interest in 2D where the X-axis is
      |      distance from Point A and the Y-axis is the variable of
@@ -7715,6 +10364,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
+     |      
+     |      See Also
+     |      --------
+     |      :ref:`plot_over_circular_arc_example`
      |      
      |      Examples
      |      --------
@@ -7786,6 +10439,85 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      --------
      |      See the :ref:`plot_over_line_example` example.
      |  
+     |  remove_nan_cells(self: '_DataSetType', scalars: 'str | None' = None, preference: "Literal['point', 'cell']" = 'point', component_mode: "Literal['component', 'all', 'any']" = 'all', component: 'int' = 0, progress_bar: 'bool' = False) -> 'UnstructuredGrid'
+     |      Remove cells whose scalar values are NaN.
+     |      
+     |      A cell is considered NaN if any of its associated scalar values are
+     |      NaN. For point data, this means any cell containing a NaN point is
+     |      dropped; for cell data, cells whose value is NaN are dropped.
+     |      
+     |      .. versionadded:: 0.48
+     |      
+     |      .. note::
+     |          This filter is equivalent to calling
+     |          :meth:`~pyvista.DataSetFilters.threshold` with ``all_scalars=True``
+     |          and the default (auto-computed) value range, which uses
+     |          :func:`numpy.nanmin` and :func:`numpy.nanmax` to exclude NaN
+     |          values from the bounds. It is provided as a convenience because
+     |          ``threshold`` defaults to ``preference='cell'`` and
+     |          ``all_scalars=False``, which does not reliably remove NaN cells
+     |          from point data.
+     |      
+     |      Parameters
+     |      ----------
+     |      scalars : str, optional
+     |          Name of scalars to check for NaN values. Defaults to the
+     |          currently active scalars.
+     |      
+     |      preference : str, default: 'point'
+     |          When ``scalars`` is specified, this is the preferred array
+     |          type to search for in the dataset. Must be either ``'point'``
+     |          or ``'cell'``.
+     |      
+     |      component_mode : {'component', 'all', 'any'}, default: 'all'
+     |          The method to satisfy the criteria for multicomponent scalars.
+     |          ``'component'`` uses only the single component specified by
+     |          ``component``. ``'all'`` drops a cell if any component is NaN.
+     |          ``'any'`` keeps a cell as long as at least one component is
+     |          finite.
+     |      
+     |      component : int, default: 0
+     |          When using ``component_mode='component'``, this sets which
+     |          component to check for NaN values.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.UnstructuredGrid
+     |          Dataset with NaN cells removed.
+     |      
+     |      See Also
+     |      --------
+     |      threshold
+     |          Threshold a dataset by value. ``remove_nan_cells`` is a thin
+     |          wrapper around this filter.
+     |      :meth:`~pyvista.DataSetFilters.extract_cells`
+     |          Extract a subset of cells by index.
+     |      :meth:`~pyvista.DataSetFilters.extract_values`
+     |          Threshold-like filter for extracting specific values and ranges.
+     |      
+     |      Examples
+     |      --------
+     |      Create a small grid with some NaN point values and remove the
+     |      affected cells.
+     |      
+     |      >>> import numpy as np
+     |      >>> import pyvista as pv
+     |      >>> grid = pv.ImageData(dimensions=(5, 5, 5))
+     |      >>> values = np.arange(grid.n_points, dtype=float)
+     |      >>> values[::7] = np.nan
+     |      >>> grid.point_data['values'] = values
+     |      >>> cleaned = grid.remove_nan_cells(scalars='values')
+     |      >>> cleaned.n_cells < grid.n_cells
+     |      True
+     |      >>> bool(np.any(np.isnan(cleaned.point_data['values'])))
+     |      False
+     |      
+     |      See :ref:`using_filters_example` for an end-to-end filter pipeline
+     |      that begins with this filter.
+     |  
      |  sample_over_circular_arc(self: '_DataSetType', pointa: 'VectorLike[float]', pointb: 'VectorLike[float]', center: 'VectorLike[float]', resolution: 'int | None' = None, tolerance: 'float | None' = None, progress_bar: 'bool' = False)
      |      Sample a dataset over a circular arc.
      |      
@@ -7841,7 +10573,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     uniform.bounds.y_min,
      |      ...     uniform.bounds.z_min,
      |      ... ]
-     |      >>> sampled_arc = uniform.sample_over_circular_arc(pointa, pointb, center)
+     |      >>> sampled_arc = uniform.sample_over_circular_arc(
+     |      ...     pointa=pointa, pointb=pointb, center=center
+     |      ... )
      |      >>> pl = pv.Plotter()
      |      >>> _ = pl.add_mesh(uniform, style='wireframe')
      |      >>> _ = pl.add_mesh(sampled_arc, line_width=10)
@@ -7905,7 +10639,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     uniform.bounds.z_max,
      |      ... ]
      |      >>> arc = uniform.sample_over_circular_arc_normal(
-     |      ...     center, normal=normal, polar=polar
+     |      ...     center=center, normal=normal, polar=polar
      |      ... )
      |      >>> pl = pv.Plotter()
      |      >>> _ = pl.add_mesh(uniform, style='wireframe')
@@ -7998,7 +10732,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> plane.clear_data()
      |      >>> plane = plane.interpolate(pdata, sharpness=3.5)
      |      >>> sample = plane.sample_over_multiple_lines(
-     |      ...     [[-0.5, -0.5, 0], [0.5, -0.5, 0], [0.5, 0.5, 0]]
+     |      ...     [
+     |      ...         [-0.5, -0.5, 0],
+     |      ...         [0.5, -0.5, 0],
+     |      ...         [0.5, 0.5, 0],
+     |      ...     ]
      |      ... )
      |      >>> pl = pv.Plotter()
      |      >>> _ = pl.add_mesh(pdata, render_points_as_spheres=True, point_size=50)
@@ -8011,12 +10749,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      This evaluates all the input points to determine whether they are in an
      |      enclosed surface. The filter produces a (0,1) mask
-     |      (in the form of a vtkDataArray) that indicates whether points are
+     |      (in the form of a :vtk:`vtkDataArray`) that indicates whether points are
      |      outside (mask value=0) or inside (mask value=1) a provided surface.
-     |      (The name of the output vtkDataArray is ``"SelectedPoints"``.)
+     |      (The name of the output :vtk:`vtkDataArray` is ``"SelectedPoints"``.)
      |      
      |      This filter produces and output data array, but does not modify the
-     |      input dataset. If you wish to extract cells or poinrs, various
+     |      input dataset. If you wish to extract cells or points, various
      |      threshold filters are available (i.e., threshold the output array).
      |      
      |      .. warning::
@@ -8024,6 +10762,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |         manifold. A boolean flag can be set to force the filter to
      |         first check whether this is true. If ``False`` and not manifold,
      |         an error will be raised.
+     |      
+     |      .. deprecated:: 0.47
+     |          This filter may be unreliable as it can erroneously mark outside points as inside.
+     |          Use :meth:`select_interior_points` instead.
      |      
      |      Parameters
      |      ----------
@@ -8054,6 +10796,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      pyvista.PolyData
      |          Mesh containing the ``point_data['SelectedPoints']`` array.
      |      
+     |      See Also
+     |      --------
+     |      :ref:`extract_cells_inside_surface_example`
+     |      
      |      Examples
      |      --------
      |      Determine which points on a plane are inside a manifold sphere
@@ -8063,14 +10809,111 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> sphere = pv.Sphere()
      |      >>> plane = pv.Plane()
-     |      >>> selected = plane.select_enclosed_points(sphere)
-     |      >>> pts = plane.extract_points(
+     |      >>> selected = plane.select_enclosed_points(sphere)  # doctest:+SKIP
+     |      >>> pts = plane.extract_points(  # doctest:+SKIP
      |      ...     selected['SelectedPoints'].view(bool),
      |      ...     adjacent_cells=False,
      |      ... )
+     |      >>> pl = pv.Plotter()  # doctest:+SKIP
+     |      >>> _ = pl.add_mesh(sphere, style='wireframe')  # doctest:+SKIP
+     |      >>> _ = pl.add_points(pts, color='r')  # doctest:+SKIP
+     |      >>> pl.show()  # doctest:+SKIP
+     |  
+     |  select_interior_points(self: '_DataSetType', surface: 'pv.PolyData', *, method: '_SelectInteriorPointsOptions' = 'signed_distance', inside_out: 'bool' = False, check_surface: 'bool' = True, locator_tolerance: 'float | None' = None) -> '_DataSetType'
+     |      Mark points from this mesh as inside or outside relative to a closed surface.
+     |      
+     |      Evaluate all of this mesh's points to determine if they are inside an enclosed surface.
+     |      The filter produces a boolean point array named ``'selected_points'`` with ``True``
+     |      values indicating points are inside, and ``False`` values indicating points are outside the
+     |      provided surface.
+     |      
+     |      By default, the input surface is checked to ensure it is closed. Optionally, this check may
+     |      be disabled.
+     |      
+     |      .. note::
+     |          This filter generates a data array, but does not modify the
+     |          input dataset. If you wish to extract cells or points, various
+     |          threshold filters are available (i.e., threshold the output array).
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Parameters
+     |      ----------
+     |      surface : PolyData
+     |         Surface used to test for containment. It should be a closed surface such that it has
+     |         a defined "inside" and "outside".
+     |      
+     |      method : 'signed_distance' | 'cell_locator', default: 'signed_distance'
+     |          Underlying method used to select points.
+     |      
+     |          - ``'signed_distance'``: Use :meth:`compute_implicit_distance` and select points based
+     |            on the distance. Points with negative distance are inside, points with positive
+     |            distance are outside.
+     |          - ``'cell_locator'``: Use :vtk:`vtkSelectEnclosedPoints` to select points. This uses
+     |            :vtk:`vtkStaticCellLocator` internally to spatially search for interior points. Use
+     |            the ``locator_tolerance`` to control the search tolerance.
+     |      
+     |          .. note::
+     |              The ``'signed_distance'`` method is generally slower, but is also more reliable
+     |              for correctly identifying interior points.
+     |      
+     |          .. warning::
+     |              The ``'cell_locator'`` option can erroneously mark outside points as inside.
+     |      
+     |      inside_out : bool, default: False
+     |          By default, points inside the surface have value ``True``, and points outside
+     |          have value ``False``. Set ``inside_out=True`` to invert this.
+     |      
+     |      check_surface : bool, default: True
+     |          Specify whether to check the surface for closure. When ``True``, the
+     |          algorithm first checks to see if the surface is closed and
+     |          manifold. If the surface is not closed, a runtime error is raised.
+     |      
+     |      locator_tolerance : float, default: 0.001
+     |          The tolerance on the intersection when using the ``'cell_locator'`` method. The
+     |          tolerance is expressed as a fraction of the bounding box of the enclosing surface.
+     |      
+     |      Returns
+     |      -------
+     |      PolyData
+     |          Mesh with a new ``'selected_points'`` :attr:`~pyvista.DataSet.point_data` array.
+     |      
+     |      See Also
+     |      --------
+     |      compute_implicit_distance, extract_points, extract_cells
+     |      :ref:`extract_cells_inside_surface_example`
+     |      
+     |      Examples
+     |      --------
+     |      Determine which points on a plane are inside a manifold sphere surface mesh.
+     |      Extract these points using the :func:`~DataSetFilters.extract_points` filter
+     |      and then plot them.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> sphere = pv.Sphere()
+     |      >>> plane = pv.Plane()
+     |      >>> selected = plane.select_interior_points(sphere)
+     |      >>> pts = plane.extract_points(
+     |      ...     selected['selected_points'], include_cells=False
+     |      ... )
      |      >>> pl = pv.Plotter()
-     |      >>> _ = pl.add_mesh(sphere, style='wireframe')
-     |      >>> _ = pl.add_points(pts, color='r')
+     |      >>> _ = pl.add_mesh(sphere, style='wireframe', line_width=3)
+     |      >>> _ = pl.add_points(
+     |      ...     pts, color='r', point_size=15, render_points_as_spheres=True
+     |      ... )
+     |      >>> pl.show()
+     |      
+     |      Select the outside points instead.
+     |      
+     |      >>> selected = plane.select_interior_points(sphere, inside_out=True)
+     |      >>> pts = plane.extract_points(
+     |      ...     selected['selected_points'], include_cells=False
+     |      ... )
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(sphere, style='wireframe', line_width=3)
+     |      >>> _ = pl.add_points(
+     |      ...     pts, color='r', point_size=15, render_points_as_spheres=True
+     |      ... )
      |      >>> pl.show()
      |  
      |  separate_cells(self: '_DataSetType')
@@ -8341,10 +11184,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Plot the regions.
      |      
-     |      >>> plot = pv.Plotter()
-     |      >>> _ = plot.add_composite(multiblock, multi_colors=True)
-     |      >>> _ = plot.show_grid()
-     |      >>> plot.show()
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_composite(multiblock, multi_colors=True)
+     |      >>> _ = pl.show_grid()
+     |      >>> pl.show()
      |      
      |      Note that the block names are generic by default.
      |      
@@ -8369,14 +11212,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> _ = [block.clear_data() for block in multiblock]
      |      >>>
-     |      >>> plot = pv.Plotter()
-     |      >>> plot.set_color_cycler('default')
+     |      >>> pl = pv.Plotter()
+     |      >>> pl.set_color_cycler('default')
      |      >>> _ = [
-     |      ...     plot.add_mesh(block, label=label)
+     |      ...     pl.add_mesh(block, label=label)
      |      ...     for block, label in zip(multiblock, labels)
      |      ... ]
-     |      >>> _ = plot.add_legend()
-     |      >>> plot.show()
+     |      >>> _ = pl.add_legend()
+     |      >>> pl.show()
      |  
      |  streamlines(self: '_DataSetType', vectors: 'str | None' = None, source_center: 'VectorLike[float] | None' = None, source_radius: 'float | None' = None, n_points: 'int' = 100, start_position: 'VectorLike[float] | None' = None, return_source: 'bool' = False, pointa: 'VectorLike[float] | None' = None, pointb: 'VectorLike[float] | None' = None, progress_bar: 'bool' = False, **kwargs)
      |      Integrate a vector field to generate streamlines.
@@ -8509,7 +11352,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      compute_vorticity : bool, default: True
      |          Vorticity computation at streamline points. Necessary for generating
-     |          proper stream-ribbons using the ``vtkRibbonFilter``.
+     |          proper stream-ribbons using the :vtk:`vtkRibbonFilter`.
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -8537,12 +11380,12 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     separating_distance=3,
      |      ...     separating_distance_ratio=0.2,
      |      ... )
-     |      >>> plotter = pv.Plotter()
-     |      >>> _ = plotter.add_mesh(streams.tube(radius=0.02), scalars='vorticity_mag')
-     |      >>> plotter.view_xy()
-     |      >>> plotter.show()
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(streams.tube(radius=0.02), scalars='vorticity_mag')
+     |      >>> pl.view_xy()
+     |      >>> pl.show()
      |      
-     |      See :ref:`2d_streamlines_example` for more examples using this filter.
+     |      See :ref:`streamlines_2D_example` for more examples using this filter.
      |  
      |  streamlines_from_source(self: '_DataSetType', source: '_vtk.vtkDataSet', vectors: 'str | None' = None, integrator_type: 'Literal[45, 2, 4]' = 45, integration_direction: "Literal['both', 'backward', 'forward']" = 'both', surface_streamlines: 'bool' = False, initial_step_length: 'float' = 0.5, step_unit: "Literal['cl', 'l']" = 'cl', min_step_length: 'float' = 0.01, max_step_length: 'float' = 1.0, max_steps: 'int' = 2000, terminal_speed: 'float' = 1e-12, max_error: 'float' = 1e-06, max_time: 'float | None' = None, compute_vorticity: 'bool' = True, rotation_scale: 'float' = 1.0, interpolator_type: "Literal['point', 'cell', 'p', 'c']" = 'point', progress_bar: 'bool' = False, max_length: 'float | None' = None)
      |      Generate streamlines of vectors from the points of a source mesh.
@@ -8613,7 +11456,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      compute_vorticity : bool, default: True
      |          Vorticity computation at streamline points. Necessary for generating
-     |          proper stream-ribbons using the ``vtkRibbonFilter``.
+     |          proper stream-ribbons using the :vtk:`vtkRibbonFilter`.
      |      
      |      rotation_scale : float, default: 1.0
      |          This can be used to scale the rate with which the streamribbons
@@ -8650,6 +11493,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  surface_indices(self: '_DataSetType', progress_bar: 'bool' = False)
      |      Return the surface indices of a grid.
      |      
+     |      .. versionchanged:: 0.47
+     |          The underlying algorithm used to compute surface indices has changed.
+     |          :vtk:`vtkGeometryFilter` is now used, previously it was :vtk:`vtkDataSetSurfaceFilter`.
+     |      
      |      Parameters
      |      ----------
      |      progress_bar : bool, default: False
@@ -8667,8 +11514,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> from pyvista import examples
      |      >>> grid = examples.load_hexbeam()
      |      >>> ind = grid.surface_indices()
-     |      >>> ind[:10]  # doctest:+SKIP
-     |      pyvista_ndarray([ 0,  2, 36, 27,  7,  8, 81,  1, 18,  4])
+     |      >>> ind[:10]
+     |      pyvista_ndarray([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
      |  
      |  tessellate(self: '_DataSetType', max_n_subdivide: 'int' = 3, merge_points: 'bool' = True, progress_bar: 'bool' = False)
      |      Tessellate a mesh.
@@ -8678,7 +11525,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      as attributes in the input mesh's point data. The attribute's copy
      |      flags are honored, except for normals.
      |      
-     |      For more details see `vtkTessellatorFilter <https://vtk.org/doc/nightly/html/classvtkTessellatorFilter.html#details>`_.
+     |      For more details see :vtk:`vtkTessellatorFilter`.
      |      
      |      Parameters
      |      ----------
@@ -8815,9 +11662,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      See :ref:`texture_example`.
      |  
      |  threshold(self: '_DataSetType', value: 'float | VectorLike[float] | None' = None, scalars: 'str | None' = None, invert: 'bool' = False, continuous: 'bool' = False, preference: "Literal['point', 'cell']" = 'cell', all_scalars: 'bool' = False, component_mode: "Literal['component', 'all', 'any']" = 'all', component: 'int' = 0, method: "Literal['upper', 'lower']" = 'upper', progress_bar: 'bool' = False)
-     |      Apply a ``vtkThreshold`` filter to the input dataset.
+     |      Apply a :vtk:`vtkThreshold` filter to the input dataset.
      |      
-     |      This filter will apply a ``vtkThreshold`` filter to the input
+     |      This filter will apply a :vtk:`vtkThreshold` filter to the input
      |      dataset and return the resulting object. This extracts cells
      |      where the scalar value in each cell satisfies the threshold
      |      criterion.  If ``scalars`` is ``None``, the input's active
@@ -8901,12 +11748,18 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      --------
      |      threshold_percent
      |          Threshold a dataset by a percentage of its scalar range.
+     |      :meth:`~pyvista.DataSetFilters.remove_nan_cells`
+     |          Convenience wrapper to remove cells containing NaN values.
      |      :meth:`~pyvista.DataSetFilters.extract_values`
      |          Threshold-like filter for extracting specific values and ranges.
      |      :meth:`~pyvista.ImageDataFilters.image_threshold`
      |          Similar method for thresholding :class:`~pyvista.ImageData`.
      |      :meth:`~pyvista.ImageDataFilters.select_values`
-     |          Threshold-like filter for :class:`~pyvista.ImageData` to keep some values and replace others.
+     |          Threshold-like filter for ``ImageData`` to keep some values and replace others.
+     |      :ref:`compare_threshold_filters_example`
+     |          This example showcases this filter and
+     |          other similar ones.
+     |      
      |      
      |      Returns
      |      -------
@@ -8936,7 +11789,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> noise = pv.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
      |      >>> grid = pv.sample_function(
-     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
+     |      ...     noise, bounds=[0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
      |      ... )
      |      >>> grid.plot(
      |      ...     cmap='gist_earth_r',
@@ -8949,7 +11802,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> noise = pv.perlin_noise(0.1, (1, 1, 1), (0, 0, 0))
      |      >>> grid = pv.sample_function(
-     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
+     |      ...     noise, bounds=[0, 1.0, -0, 1.0, 0, 1.0], dim=(20, 20, 20)
      |      ... )
      |      >>> threshed = grid.threshold(value=0.02)
      |      >>> threshed.plot(
@@ -8958,7 +11811,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     show_edges=True,
      |      ... )
      |      
-     |      See :ref:`common_filter_example` and :ref:`image_representations_example`
+     |      See :ref:`using_filters_example` and :ref:`image_representations_example`
      |      for more examples using this filter.
      |  
      |  threshold_percent(self: '_DataSetType', percent: 'float' = 0.5, scalars: 'str | None' = None, invert: 'bool' = False, continuous: 'bool' = False, preference: "Literal['point', 'cell']" = 'cell', method: "Literal['upper', 'lower']" = 'upper', progress_bar: 'bool' = False)
@@ -9027,7 +11880,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> import pyvista as pv
      |      >>> noise = pv.perlin_noise(0.1, (2, 2, 2), (0, 0, 0))
      |      >>> grid = pv.sample_function(
-     |      ...     noise, [0, 1.0, -0, 1.0, 0, 1.0], dim=(30, 30, 30)
+     |      ...     noise, bounds=[0, 1.0, -0, 1.0, 0, 1.0], dim=(30, 30, 30)
      |      ... )
      |      >>> threshed = grid.threshold_percent(0.5)
      |      >>> threshed.plot(
@@ -9045,17 +11898,152 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ...     show_edges=True,
      |      ... )
      |      
-     |      See :ref:`common_filter_example` for more examples using a similar filter.
+     |      See :ref:`using_filters_example` for more examples using a similar filter.
      |  
-     |  voxelize_binary_mask(self: 'DataSet', *, background_value: 'int | float' = 0, foreground_value: 'int | float' = 1, reference_volume: 'pyvista.ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, spacing: 'float | VectorLike[float] | None' = None, rounding_func: 'Callable[[VectorLike[float]], VectorLike[int]] | None' = None, cell_length_percentile: 'float | None' = None, cell_length_sample_size: 'int | None' = None, progress_bar: 'bool' = False)
+     |  voxelize(self: 'DataSet', *, reference_volume: 'ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, spacing: 'float | VectorLike[float] | None' = None, rounding_func: 'Callable[[VectorLike[float]], VectorLike[int]] | None' = None, cell_length_percentile: 'float | None' = None, cell_length_sample_size: 'int | None' = None, progress_bar: 'bool' = False) -> 'UnstructuredGrid'
+     |      Voxelize mesh to UnstructuredGrid.
+     |      
+     |      The voxelization can be controlled in several ways:
+     |      
+     |      #. Specify the output geometry using a ``reference_volume``.
+     |      
+     |      #. Specify the ``spacing`` explicitly.
+     |      
+     |      #. Specify the ``dimensions`` explicitly.
+     |      
+     |      #. Specify the ``cell_length_percentile``. The spacing is estimated from the
+     |         surface's cells using the specified percentile.
+     |      
+     |      Use ``reference_volume`` for full control of the output geometry. For
+     |      all other options, the geometry is implicitly defined such that the generated
+     |      mesh fits the bounds of the input mesh.
+     |      
+     |      If no inputs are provided, ``cell_length_percentile=0.1`` (10th percentile) is
+     |      used by default to estimate the spacing.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      .. note::
+     |      
+     |          This method is a wrapper around :meth:`voxelize_binary_mask`. See that
+     |          method for additional information.
+     |      
+     |      Parameters
+     |      ----------
+     |      reference_volume : ImageData, optional
+     |          Volume to use as a reference. The output will have the same ``dimensions``,
+     |          and ``spacing`` as the reference.
+     |      
+     |      dimensions : VectorLike[int], optional
+     |          Dimensions of the voxelized mesh. Set this value to control the
+     |          dimensions explicitly. If unset, the dimensions are defined implicitly
+     |          through other parameter. See summary and examples for details.
+     |      
+     |          .. note::
+     |      
+     |              Dimensions is the number of points along each axis, not cells. Set
+     |              dimensions to ``N+1`` instead for ``N`` cells along each axis.
+     |      
+     |      spacing : float | VectorLike[float], optional
+     |          Approximate spacing to use for the generated mesh. Set this value
+     |          to control the spacing explicitly. If unset, the spacing is defined
+     |          implicitly through other parameters. See summary and examples for details.
+     |      
+     |      rounding_func : Callable[VectorLike[float], VectorLike[int]], optional
+     |          Control how the dimensions are rounded to integers based on the provided or
+     |          calculated ``spacing``. Should accept a length-3 vector containing the
+     |          dimension values along the three directions and return a length-3 vector.
+     |          :func:`numpy.round` is used by default.
+     |      
+     |          Rounding the dimensions implies rounding the actual spacing.
+     |      
+     |          Has no effect if ``dimensions`` is specified.
+     |      
+     |      cell_length_percentile : float, optional
+     |          Cell length percentage ``p`` to use for computing the default ``spacing``.
+     |          Default is ``0.1`` (10th percentile) and must be between ``0`` and ``1``.
+     |          The ``p``-th percentile is computed from the cumulative distribution function
+     |          (CDF) of lengths which are representative of the cell length scales present
+     |          in the input. The CDF is computed by:
+     |      
+     |          #. Triangulating the input cells.
+     |          #. Sampling a subset of up to ``cell_length_sample_size`` cells.
+     |          #. Computing the distance between two random points in each cell.
+     |          #. Inserting the distance into an ordered set to create the CDF.
+     |      
+     |          Has no effect if ``dimensions`` is specified.
+     |      
+     |      cell_length_sample_size : int, optional
+     |          Number of samples to use for the cumulative distribution function (CDF)
+     |          when using the ``cell_length_percentile`` option. ``100 000`` samples are
+     |          used by default.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      UnstructuredGrid
+     |          Voxelized unstructured grid of the original mesh.
+     |      
+     |      See Also
+     |      --------
+     |      voxelize_rectilinear
+     |          Similar function that returns a :class:`~pyvista.RectilinearGrid` with cell data.
+     |      
+     |      voxelize_binary_mask
+     |          Similar function that returns a :class:`~pyvista.ImageData` with point data.
+     |      
+     |      Examples
+     |      --------
+     |      Create a voxelized mesh with uniform spacing.
+     |      
+     |      >>> import numpy as np
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> mesh = examples.download_bunny_coarse()
+     |      >>> vox = mesh.voxelize(spacing=0.01)
+     |      >>> vox.plot(show_edges=True)
+     |      
+     |      Create a voxelized mesh using non-uniform spacing.
+     |      
+     |      >>> vox = mesh.voxelize(spacing=(0.01, 0.005, 0.002))
+     |      >>> vox.plot(show_edges=True)
+     |      
+     |      The bounds of the voxelized mesh always match the bounds of the input.
+     |      
+     |      >>> mesh.bounds
+     |      BoundsTuple(x_min = -0.13155962526798248,
+     |                  x_max =  0.18016336858272552,
+     |                  y_min = -0.12048563361167908,
+     |                  y_max =  0.18769524991512299,
+     |                  z_min = -0.14300920069217682,
+     |                  z_max =  0.09850578755140305)
+     |      
+     |      >>> vox.bounds
+     |      BoundsTuple(x_min = -0.13155962526798248,
+     |                  x_max =  0.18016336858272552,
+     |                  y_min = -0.12048563361167908,
+     |                  y_max =  0.18769524991512299,
+     |                  z_min = -0.14300920069217682,
+     |                  z_max =  0.09650979936122894)
+     |      
+     |      Create a voxelized mesh with ``3 x 4 x 5`` cells. Since ``dimensions`` is the
+     |      number of points, not cells, we need to add ``1`` to get the number of desired cells.
+     |      
+     |      >>> mesh = pv.Box()
+     |      >>> cell_dimensions = np.array((3, 4, 5))
+     |      >>> vox = mesh.voxelize(dimensions=cell_dimensions + 1)
+     |      >>> vox.plot(show_edges=True)
+     |  
+     |  voxelize_binary_mask(self: 'DataSet', *, background_value: 'int | float' = 0, foreground_value: 'int | float' = 1, reference_volume: 'ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, spacing: 'float | VectorLike[float] | None' = None, rounding_func: 'Callable[[VectorLike[float]], VectorLike[int]] | None' = None, cell_length_percentile: 'float | None' = None, cell_length_sample_size: 'int | None' = None, progress_bar: 'bool' = False)
      |      Voxelize mesh as a binary :class:`~pyvista.ImageData` mask.
      |      
      |      The binary mask is a point data array where points inside and outside of the
      |      input surface are labelled with ``foreground_value`` and ``background_value``,
      |      respectively.
      |      
-     |      This filter implements `vtkPolyDataToImageStencil
-     |      <https://vtk.org/doc/nightly/html/classvtkPolyDataToImageStencil.html>`_. This
+     |      This filter implements :vtk:`vtkPolyDataToImageStencil`. This
      |      algorithm operates as follows:
      |      
      |      * The algorithm iterates through the z-slice of the ``reference_volume``.
@@ -9092,7 +12080,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          surface is considered closed if it has zero :attr:`~pyvista.PolyData.n_open_edges`.
      |      
      |      .. note::
-     |          This filter returns voxels represented as point data, not :attr:`~pyvista.CellType.VOXEL` cells.
+     |          This filter returns voxels represented as point data, not
+     |          :attr:`~pyvista.CellType.VOXEL` cells.
      |          This differs from :func:`~pyvista.voxelize` and :func:`~pyvista.voxelize_volume`
      |          which return meshes with voxel cells. See :ref:`image_representations_example`
      |          for examples demonstrating the difference.
@@ -9110,7 +12099,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      foreground_value : int, default: 1
      |          Foreground value of the generated mask.
      |      
-     |      reference_volume : pyvista.ImageData, optional
+     |      reference_volume : ImageData, optional
      |          Volume to use as a reference. The output will have the same ``dimensions``,
      |          ``origin``, ``spacing``, and ``direction_matrix`` as the reference.
      |      
@@ -9119,7 +12108,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          dimensions explicitly. If unset, the dimensions are defined implicitly
      |          through other parameter. See summary and examples for details.
      |      
-     |      spacing : VectorLike[float], optional
+     |      spacing : float | VectorLike[float], optional
      |          Approximate spacing to use for the generated mask image. Set this value
      |          to control the spacing explicitly. If unset, the spacing is defined
      |          implicitly through other parameters. See summary and examples for details.
@@ -9146,7 +12135,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          #. Computing the distance between two random points in each cell.
      |          #. Inserting the distance into an ordered set to create the CDF.
      |      
-     |          Has no effect if ``dimension`` or ``reference_volume`` are specified.
+     |          Has no effect if ``dimensions`` or ``reference_volume`` are specified.
      |      
      |          .. note::
      |              This option is only available for VTK 9.2 or greater.
@@ -9161,7 +12150,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      pyvista.ImageData
+     |      ImageData
      |          Generated binary mask with a ``'mask'``  point data array. The data array
      |          has dtype :class:`numpy.uint8` if the foreground and background values are
      |          unsigned and less than 256.
@@ -9172,7 +12161,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Similar function that returns a :class:`~pyvista.UnstructuredGrid` of
      |          :attr:`~pyvista.CellType.VOXEL` cells.
      |      
-     |      voxelize_volume
+     |      voxelize_rectilinear
      |          Similar function that returns a :class:`~pyvista.RectilinearGrid` with cell data.
      |      
      |      pyvista.ImageDataFilters.contour_labels
@@ -9183,7 +12172,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          Convert voxels represented as points to :attr:`~pyvista.CellType.VOXEL`
      |          cells.
      |      
-     |      pyvista.ImageData
+     |      ImageData
      |          Class used to build custom ``reference_volume``.
      |      
      |      Examples
@@ -9222,14 +12211,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> def mask_and_polydata_plotter(mask, poly):
      |      ...     voxel_cells = mask.points_to_cells().threshold(0.5)
      |      ...
-     |      ...     plot = pv.Plotter()
-     |      ...     _ = plot.add_mesh(voxel_cells, color='blue')
-     |      ...     _ = plot.add_mesh(poly, color='lime')
-     |      ...     plot.camera_position = 'xy'
-     |      ...     return plot
+     |      ...     pl = pv.Plotter()
+     |      ...     _ = pl.add_mesh(voxel_cells, color='blue')
+     |      ...     _ = pl.add_mesh(poly, color='lime')
+     |      ...     pl.camera_position = 'xy'
+     |      ...     return pl
      |      
-     |      >>> plot = mask_and_polydata_plotter(mask, poly)
-     |      >>> plot.show()
+     |      >>> pl = mask_and_polydata_plotter(mask, poly)
+     |      >>> pl.show()
      |      
      |      The spacing of the mask image is automatically adjusted to match the
      |      density of the input.
@@ -9238,14 +12227,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> poly = examples.download_bunny()
      |      >>> mask = poly.voxelize_binary_mask()
-     |      >>> plot = mask_and_polydata_plotter(mask, poly)
-     |      >>> plot.show()
+     |      >>> pl = mask_and_polydata_plotter(mask, poly)
+     |      >>> pl.show()
      |      
      |      Control the spacing manually instead. Here, a very coarse spacing is used.
      |      
      |      >>> mask = poly.voxelize_binary_mask(spacing=(0.01, 0.04, 0.02))
-     |      >>> plot = mask_and_polydata_plotter(mask, poly)
-     |      >>> plot.show()
+     |      >>> pl = mask_and_polydata_plotter(mask, poly)
+     |      >>> pl.show()
      |      
      |      Note that the spacing is only approximate. Check the mask's actual spacing.
      |      
@@ -9264,8 +12253,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Set the dimensions instead of the spacing.
      |      
      |      >>> mask = poly.voxelize_binary_mask(dimensions=(10, 20, 30))
-     |      >>> plot = mask_and_polydata_plotter(mask, poly)
-     |      >>> plot.show()
+     |      >>> pl = mask_and_polydata_plotter(mask, poly)
+     |      >>> pl.show()
      |      
      |      >>> mask.dimensions
      |      (10, 20, 30)
@@ -9279,19 +12268,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Now create the mask from the polydata using the volume as a reference.
      |      
      |      >>> mask = poly.voxelize_binary_mask(reference_volume=volume)
-     |      >>> plot = mask_and_polydata_plotter(mask, poly)
-     |      >>> plot.show()
+     |      >>> pl = mask_and_polydata_plotter(mask, poly)
+     |      >>> pl.show()
      |      
      |      Visualize the effect of internal surfaces.
      |      
-     |      >>> mesh = pv.Cylinder() + pv.Cylinder((0, 0.75, 0))
+     |      >>> mesh = pv.Cylinder() + pv.Cylinder(center=(0, 0.75, 0))
      |      >>> binary_mask = mesh.voxelize_binary_mask(
      |      ...     dimensions=(1, 100, 50)
      |      ... ).points_to_cells()
-     |      >>> plot = pv.Plotter()
-     |      >>> _ = plot.add_mesh(binary_mask)
-     |      >>> _ = plot.add_mesh(mesh.slice(), color='red')
-     |      >>> plot.show(cpos='yz')
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(binary_mask)
+     |      >>> _ = pl.add_mesh(mesh.slice(), color='red')
+     |      >>> pl.show(cpos='yz')
      |      
      |      Note how the intersection is excluded from the mask.
      |      To include the voxels delimited by internal surfaces in the foreground, the internal
@@ -9302,7 +12291,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Alternatively, the intersecting parts of the mesh can be processed sequentially.
      |      
      |      >>> cylinder_1 = pv.Cylinder()
-     |      >>> cylinder_2 = pv.Cylinder((0, 0.75, 0))
+     |      >>> cylinder_2 = pv.Cylinder(center=(0, 0.75, 0))
      |      
      |      >>> reference_volume = pv.ImageData(
      |      ...     dimensions=(1, 100, 50),
@@ -9319,11 +12308,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      >>> binary_mask_1['mask'] = binary_mask_1['mask'] | binary_mask_2['mask']
      |      
-     |      >>> plot = pv.Plotter()
-     |      >>> _ = plot.add_mesh(binary_mask_1)
-     |      >>> _ = plot.add_mesh(cylinder_1.slice(), color='red')
-     |      >>> _ = plot.add_mesh(cylinder_2.slice(), color='red')
-     |      >>> plot.show(cpos='yz')
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(binary_mask_1)
+     |      >>> _ = pl.add_mesh(cylinder_1.slice(), color='red')
+     |      >>> _ = pl.add_mesh(cylinder_2.slice(), color='red')
+     |      >>> pl.show(cpos='yz')
      |      
      |      When multiple internal surfaces are nested, they are successively treated as
      |      interfaces between background and foreground.
@@ -9332,10 +12321,163 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> binary_mask = mesh.voxelize_binary_mask(
      |      ...     dimensions=(1, 50, 50)
      |      ... ).points_to_cells()
-     |      >>> plot = pv.Plotter()
-     |      >>> _ = plot.add_mesh(binary_mask)
-     |      >>> _ = plot.add_mesh(mesh.slice(), color='red')
-     |      >>> plot.show(cpos='yz')
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(binary_mask)
+     |      >>> _ = pl.add_mesh(mesh.slice(), color='red')
+     |      >>> pl.show(cpos='yz')
+     |  
+     |  voxelize_rectilinear(self: 'DataSet', *, background_value: 'int | float' = 0, foreground_value: 'int | float' = 1, reference_volume: 'ImageData | None' = None, dimensions: 'VectorLike[int] | None' = None, spacing: 'float | VectorLike[float] | None' = None, rounding_func: 'Callable[[VectorLike[float]], VectorLike[int]] | None' = None, cell_length_percentile: 'float | None' = None, cell_length_sample_size: 'int | None' = None, progress_bar: 'bool' = False) -> 'RectilinearGrid'
+     |      Voxelize mesh to create a RectilinearGrid voxel volume.
+     |      
+     |      The voxelization can be controlled in several ways:
+     |      
+     |      #. Specify the output geometry using a ``reference_volume``.
+     |      
+     |      #. Specify the ``spacing`` explicitly.
+     |      
+     |      #. Specify the ``dimensions`` explicitly.
+     |      
+     |      #. Specify the ``cell_length_percentile``. The spacing is estimated from the
+     |         surface's cells using the specified percentile.
+     |      
+     |      Use ``reference_volume`` for full control of the output grid's geometry. For
+     |      all other options, the geometry is implicitly defined such that the generated
+     |      grid fits the bounds of the input mesh.
+     |      
+     |      If no inputs are provided, ``cell_length_percentile=0.1`` (10th percentile) is
+     |      used by default to estimate the spacing. On systems with VTK < 9.2, the default
+     |      spacing is set to ``1/100`` of the input mesh's length.
+     |      
+     |      A point data array ``mask`` is included where points inside and outside of the
+     |      input surface are labelled with ``foreground_value`` and ``background_value``,
+     |      respectively.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      .. note::
+     |      
+     |          This method is a wrapper around :meth:`voxelize_binary_mask`. See that
+     |          method for additional information.
+     |      
+     |      Parameters
+     |      ----------
+     |      background_value : int, default: 0
+     |          Background value of the generated grid.
+     |      
+     |      foreground_value : int, default: 1
+     |          Foreground value of the generated grid.
+     |      
+     |      reference_volume : ImageData, optional
+     |          Volume to use as a reference. The output will have the same ``dimensions``,
+     |          ``origin``, and ``spacing`` as the reference.
+     |      
+     |      dimensions : VectorLike[int], optional
+     |          Dimensions of the generated rectilinear grid. Set this value to control the
+     |          dimensions explicitly. If unset, the dimensions are defined implicitly
+     |          through other parameter. See summary and examples for details.
+     |      
+     |          .. note::
+     |      
+     |              Dimensions is the number of points along each axis, not cells. Set
+     |              dimensions to ``N+1`` instead for ``N`` cells along each axis.
+     |      
+     |      spacing : float | VectorLike[float], optional
+     |          Approximate spacing to use for the generated grid. Set this value
+     |          to control the spacing explicitly. If unset, the spacing is defined
+     |          implicitly through other parameters. See summary and examples for details.
+     |      
+     |      rounding_func : Callable[VectorLike[float], VectorLike[int]], optional
+     |          Control how the dimensions are rounded to integers based on the provided or
+     |          calculated ``spacing``. Should accept a length-3 vector containing the
+     |          dimension values along the three directions and return a length-3 vector.
+     |          :func:`numpy.round` is used by default.
+     |      
+     |          Rounding the dimensions implies rounding the actual spacing.
+     |      
+     |          Has no effect if ``reference_volume`` or ``dimensions`` are specified.
+     |      
+     |      cell_length_percentile : float, optional
+     |          Cell length percentage ``p`` to use for computing the default ``spacing``.
+     |          Default is ``0.1`` (10th percentile) and must be between ``0`` and ``1``.
+     |          The ``p``-th percentile is computed from the cumulative distribution function
+     |          (CDF) of lengths which are representative of the cell length scales present
+     |          in the input. The CDF is computed by:
+     |      
+     |          #. Triangulating the input cells.
+     |          #. Sampling a subset of up to ``cell_length_sample_size`` cells.
+     |          #. Computing the distance between two random points in each cell.
+     |          #. Inserting the distance into an ordered set to create the CDF.
+     |      
+     |          Has no effect if ``dimensions`` or ``reference_volume`` are specified.
+     |      
+     |          .. note::
+     |              This option is only available for VTK 9.2 or greater.
+     |      
+     |      cell_length_sample_size : int, optional
+     |          Number of samples to use for the cumulative distribution function (CDF)
+     |          when using the ``cell_length_percentile`` option. ``100 000`` samples are
+     |          used by default.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      RectilinearGrid
+     |          RectilinearGrid as voxelized volume with discretized cells.
+     |      
+     |      See Also
+     |      --------
+     |      voxelize
+     |          Similar function that returns a :class:`~pyvista.UnstructuredGrid` of
+     |          :attr:`~pyvista.CellType.VOXEL` cells.
+     |      
+     |      voxelize_binary_mask
+     |          Similar function that returns a :class:`~pyvista.ImageData` with point data.
+     |      
+     |      Examples
+     |      --------
+     |      Create a voxel volume of a nut. By default, the spacing is automatically
+     |      estimated.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> mesh = pv.examples.load_nut()
+     |      >>> vox = mesh.voxelize_rectilinear()
+     |      
+     |      Plot the mesh together with its volume.
+     |      
+     |      >>> pl = pv.Plotter()
+     |      >>> _ = pl.add_mesh(mesh=vox, show_edges=True)
+     |      >>> _ = pl.add_mesh(mesh=mesh, show_edges=True, opacity=1)
+     |      >>> pl.show()
+     |      
+     |      Load a mesh of a cow.
+     |      
+     |      >>> mesh = examples.download_cow()
+     |      
+     |      Create an equal density voxel volume and plot the result.
+     |      
+     |      >>> vox = mesh.voxelize_rectilinear(spacing=0.15)
+     |      >>> cpos = pv.CameraPosition(
+     |      ...     position=(15, 3, 15), focal_point=(0, 0, 0), viewup=(0, 0, 0)
+     |      ... )
+     |      >>> vox.plot(scalars='mask', show_edges=True, cpos=cpos)
+     |      
+     |      Slice the voxel volume to view the ``mask`` scalars.
+     |      
+     |      >>> slices = vox.slice_orthogonal()
+     |      >>> slices.plot(scalars='mask', show_edges=True)
+     |      
+     |      Create a voxel volume from unequal density dimensions and plot result.
+     |      
+     |      >>> vox = mesh.voxelize_rectilinear(spacing=(0.15, 0.15, 0.5))
+     |      >>> vox.plot(scalars='mask', show_edges=True, cpos=cpos)
+     |      
+     |      Slice the unequal density voxel volume to view the ``mask`` scalars.
+     |      
+     |      >>> slices = vox.slice_orthogonal()
+     |      >>> slices.plot(scalars='mask', show_edges=True, cpos=cpos)
      |  
      |  warp_by_scalar(self: '_DataSetType', scalars: 'str | None' = None, factor: 'float' = 1.0, normal: 'VectorLike[float] | None' = None, inplace: 'bool' = False, progress_bar: 'bool' = False, **kwargs)
      |      Warp the dataset's points by a point data scalars array's values.
@@ -9384,7 +12526,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> warped = mesh.warp_by_scalar('Elevation')
      |      >>> warped.plot(cmap='gist_earth', show_scalar_bar=False)
      |      
-     |      See :ref:`surface_normal_example` for more examples using this filter.
+     |      See :ref:`compute_normals_example` for more examples using this filter.
      |  
      |  warp_by_vector(self: '_DataSetType', vectors: 'str | None' = None, factor: 'float' = 1.0, inplace: 'bool' = False, progress_bar: 'bool' = False)
      |      Warp the dataset's points by a point data vectors array's values.
@@ -9432,13 +12574,45 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> actor = pl.add_mesh(warped, color='white')
      |      >>> pl.show()
      |      
-     |      See :ref:`warp_by_vectors_example` and :ref:`eigenmodes_example` for
+     |      See :ref:`warp_by_vector_example` and :ref:`warp_by_vector_eigenmodes_example` for
      |      more examples using this filter.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Readonly properties inherited from pyvista.core.utilities.misc._BoundsSizeMixin:
+     |  
+     |  bounds_size
+     |      Return the size of each axis of the object's bounding box.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      Returns
+     |      -------
+     |      tuple[float, float, float]
+     |          Size of each x-y-z axis.
+     |      
+     |      Examples
+     |      --------
+     |      Get the size of a cube. The cube has edge lengths af ``(1.0, 1.0, 1.0)``
+     |      by default.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Cube()
+     |      >>> mesh.bounds_size
+     |      (1.0, 1.0, 1.0)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from pyvista.core.utilities.misc._BoundsSizeMixin:
+     |  
+     |  __dict__
+     |      dictionary for instance variables
+     |  
+     |  __weakref__
+     |      list of weak references to the object
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.filters.data_object.DataObjectFilters:
      |  
-     |  cell_centers(self: '_DataSetOrMultiBlockType', vertex: 'bool' = True, progress_bar: 'bool' = False)
+     |  cell_centers(self: '_DataSetOrMultiBlockType', vertex: 'bool' = True, pass_cell_data: 'bool' = True, progress_bar: 'bool' = False)
      |      Generate points at the center of the cells in this dataset.
      |      
      |      These points can be used for placing glyphs or vectors.
@@ -9447,6 +12621,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ----------
      |      vertex : bool, default: True
      |          Enable or disable the generation of vertex cells.
+     |      
+     |      pass_cell_data : bool, default: True
+     |          If enabled, pass the input cell data through to the output.
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -9496,7 +12673,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with the point data transformed into cell data.
      |          Return type matches input.
      |      
@@ -9544,7 +12721,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      .. note::
      |      
-     |          Refer to the `Verdict Library Reference Manual <https://public.kitware.com/Wiki/images/6/6b/VerdictManual-revA.pdf>`_
+     |          Refer to the `Verdict Library Reference Manual <https://github.com/sandialabs/verdict/raw/master/SAND2007-2853p.pdf>`_
      |          for low-level technical information about how each metric is computed.
      |      
      |      .. versionadded:: 0.45
@@ -9574,7 +12751,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with the computed mesh quality. Return type matches input.
      |          Cell data array(s) with the computed quality measure(s) are included.
      |      
@@ -9582,6 +12759,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      --------
      |      :func:`~pyvista.cell_quality_info`
      |          Return information about a cell's quality measure, e.g. acceptable range.
+     |      :meth:`~pyvista.DataObjectFilters.cell_validator`
+     |      :meth:`~pyvista.DataObjectFilters.validate_mesh`
      |      
      |      Examples
      |      --------
@@ -9620,25 +12799,224 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`mesh_quality_example` for more examples using this filter.
      |  
-     |  clip(self: '_DataSetOrMultiBlockType', normal: 'VectorLike[float] | NormalsLiteral' = 'x', origin: 'VectorLike[float] | None' = None, invert: 'bool' = True, value: 'float' = 0.0, inplace: 'bool' = False, return_clipped: 'bool' = False, progress_bar: 'bool' = False, crinkle: 'bool' = False)
+     |  cell_validator(self: '_DataSetOrMultiBlockType', *, tolerance: 'float | None' = None, planarity_tolerance: 'float | None' = None, size_tolerance: 'float | None' = None)
+     |      Check the validity of each cell in this dataset.
+     |      
+     |              The status of each cell is encoded as a bit field cell data array ``'validity_state'``.
+     |              The possible cell status values are:
+     |      
+     |              
+     |      - :attr:`~pyvista.CellStatus.VALID`: Cell is valid and has no issues.
+     |      - :attr:`~pyvista.CellStatus.COINCIDENT_POINTS`: Cell has duplicate coordinates or repeated use of the same connectivity entry.
+     |      - :attr:`~pyvista.CellStatus.DEGENERATE_FACES`: Face(s) collapse to a line or a point through repeated collocated vertices.
+     |      - :attr:`~pyvista.CellStatus.INTERSECTING_EDGES`: 2D cell has two edges that intersect.
+     |      - :attr:`~pyvista.CellStatus.INTERSECTING_FACES`: 3D cell has two faces that intersect.
+     |      - :attr:`~pyvista.CellStatus.INVALID_POINT_REFERENCES`: Cell references points outside the mesh's :class:`~pyvista.DataSet.points` array.
+     |      - :attr:`~pyvista.CellStatus.INVERTED_FACES`: Cell face(s) do not point in the direction required by its :class:`~pyvista.CellType`.
+     |      - :attr:`~pyvista.CellStatus.NEGATIVE_SIZE`: 1D, 2D, or 3D cell has negative length, area, or volume, respectively.
+     |      - :attr:`~pyvista.CellStatus.NON_CONTIGUOUS_EDGES`: 2D cell's perimeter edges are not contiguous.
+     |      - :attr:`~pyvista.CellStatus.NON_CONVEX`: 2D or 3D cell is not convex.
+     |      - :attr:`~pyvista.CellStatus.NON_PLANAR_FACES`: Vertices for a face do not all lie in the same plane.
+     |      - :attr:`~pyvista.CellStatus.WRONG_NUMBER_OF_POINTS`: Cell does not have the minimum number of points needed to describe it.
+     |      - :attr:`~pyvista.CellStatus.ZERO_SIZE`: 1D, 2D, or 3D cell has zero length, area, or volume, respectively.
+     |      
+     |              Internally, :vtk:`vtkCellValidator` is first used to determine the initial status of each
+     |              cell, then additional PyVista-exclusive checks are made and encoded in the validity state.
+     |      
+     |              For convenience, a field data array for each status is also appended:
+     |      
+     |              - Each field data array contains the indices of cells with the specified status.
+     |              - The array names are lower-case versions of the status names above.
+     |              - The ``VALID`` status is excluded from the field data, and an array named ``'invalid'``
+     |                is included instead with cell ids for all invalid cells.
+     |      
+     |              .. versionadded:: 0.47
+     |      
+     |              .. versionchanged:: 0.48
+     |                  Include cell status checks for
+     |                  :attr:`~pyvista.CellStatus.INVALID_POINT_REFERENCES`,
+     |                  :attr:`~pyvista.CellStatus.ZERO_SIZE`,
+     |                  :attr:`~pyvista.CellStatus.NEGATIVE_SIZE`.
+     |      
+     |              .. versionchanged:: 0.48
+     |                  The ``'validity_state'`` array is now a 64-bit integer array. Previously, it was a
+     |                  16-bit array.
+     |      
+     |              .. versionadded:: 0.48
+     |                  Add tolerance keywords.
+     |      
+     |              Parameters
+     |              ----------
+     |              tolerance : float, default: 1.1920929e-07
+     |                  Value used for most floating point equality checks throughout the cell checking
+     |                  process, e.g. for checking coincident points or intersecting edges.
+     |                  The default value is the epsilon (``eps``) of ``float32`` dtype using
+     |                  :attr:`numpy.finfo`.
+     |      
+     |                  .. note::
+     |                      This tolerance is independent of other tolerances.
+     |      
+     |              planarity_tolerance : float, default: 0.1
+     |                  Allowed relative distance a planar polyhedral cell face may protrude out of
+     |                  its plane compared to the largest distance between a face center and
+     |                  any of its corner points. Defaults to 0.1, meaning any polygonal cell whose face
+     |                  protrudes more than 10% of their radius out of the plane will be marked as invalid
+     |                  with status :attr:`~pyvista.CellStatus.NON_PLANAR_FACES`.
+     |      
+     |                  Set this value to 0 to disable planarity checks for polyhedron cells.
+     |      
+     |                  .. note::
+     |                      This tolerance only applies to :attr:`~pyvista.CellType.POLYHEDRON` cells, and
+     |                      is independent of other tolerances.
+     |      
+     |              size_tolerance : float, optional
+     |                  Value used for evaluating the
+     |                  :meth:`size <pyvista.DataObjectFilters.compute_cell_sizes>` of a cell. Cells with an
+     |                  absolute size less than or equal to this value are flagged as having
+     |                  :attr:`~pyvista.CellStatus.ZERO_SIZE`, and
+     |                  cells with a size less than this value are flagged as having
+     |                  :attr:`~pyvista.CellStatus.NEGATIVE_SIZE`.
+     |                  The default value is the epsilon (``eps``) of the mesh's points dtype using
+     |                  :attr:`numpy.finfo`.
+     |      
+     |                  Setting this tolerance explicitly may be useful for marking small cells as invalid.
+     |      
+     |                  .. note::
+     |                      This tolerance is independent of any other tolerances.
+     |      
+     |              Returns
+     |              -------
+     |              DataSet
+     |                  Dataset with field data of cell validity.
+     |      
+     |              See Also
+     |              --------
+     |              :meth:`~pyvista.DataObjectFilters.validate_mesh`
+     |              :meth:`~pyvista.DataObjectFilters.cell_quality`
+     |              :ref:`mesh_validation_example`
+     |      
+     |              Examples
+     |              --------
+     |              Load a mesh with invalid cells.
+     |      
+     |              >>> import numpy as np
+     |              >>> import pyvista as pv
+     |              >>> from pyvista import examples
+     |              >>> mesh = examples.download_cow()
+     |      
+     |              Validate the cells and show the included arrays.
+     |      
+     |              >>> validated = mesh.cell_validator()
+     |              >>> validated.array_names  # doctest: +NORMALIZE_WHITESPACE
+     |              ['validity_state',
+     |               'invalid',
+     |               'coincident_points',
+     |               'degenerate_faces',
+     |               'intersecting_edges',
+     |               'intersecting_faces',
+     |               'invalid_point_references',
+     |               'inverted_faces',
+     |               'negative_size',
+     |               'non_contiguous_edges',
+     |               'non_convex',
+     |               'non_planar_faces',
+     |               'wrong_number_of_points',
+     |               'zero_size']
+     |      
+     |              There are many arrays, but most are empty. Show unique scalar values.
+     |      
+     |              >>> validity_state = validated.cell_data['validity_state']
+     |              >>> np.unique(validity_state)
+     |              pyvista_ndarray([ 0, 16])
+     |      
+     |              The ``0`` cells are valid, and the cells with value ``16`` (i.e. hex ``0x10``) have a
+     |              nonconvex state. We confirm this by printing the ``'non_convex'`` array, which shows there
+     |              are three invalid cells.
+     |      
+     |              >>> validated.field_data['non_convex']
+     |              pyvista_ndarray([1013, 1532, 3250])
+     |      
+     |              Check the status of cells explicitly using :class:`~pyvista.CellStatus`. For checking
+     |              if is a cell is valid, use equality ``==``.
+     |      
+     |              >>> validity_state[0] == pv.CellStatus.VALID
+     |              np.True_
+     |      
+     |              >>> validity_state[1013] == pv.CellStatus.VALID
+     |              np.False_
+     |      
+     |              Equality can also be used for checking specific status bits, but will only be ``True`` if
+     |              the cell has exactly one status bit set.
+     |      
+     |              >>> validity_state[1013] == pv.CellStatus.NON_CONVEX
+     |              np.True_
+     |      
+     |              In general, checking the status with bit operators should be preferred.
+     |      
+     |              >>> (
+     |              ...     validity_state[1013] & pv.CellStatus.NON_CONVEX
+     |              ... ) == pv.CellStatus.NON_CONVEX
+     |              np.True_
+     |      
+     |              We can also show all invalid cells. This matches the nonconvex ids, which confirms
+     |              these are the only invalid cells.
+     |      
+     |              >>> validated.field_data['invalid']
+     |              pyvista_ndarray([1013, 1532, 3250])
+     |      
+     |              Plot the cell states using :meth:`~pyvista.DataSetFilters.color_labels`. Orient the
+     |              camera to show the underside of the cow where two of the invalid cells are located.
+     |      
+     |              >>> colored, color_map = validated.color_labels(
+     |              ...     scalars='validity_state', return_dict=True
+     |              ... )
+     |              >>> pl = pv.Plotter()
+     |              >>> _ = pl.add_mesh(colored)
+     |              >>> _ = pl.add_legend(color_map)
+     |              >>> pl.view_xz()
+     |              >>> pl.camera.zoom(2.5)
+     |              >>> pl.show()
+     |      
+     |              Extract the invalid cells and plot them along with the original mesh as wireframe for
+     |              context. Orient the camera to focus on the cow's left eye where the third invalid cell is
+     |              located.
+     |      
+     |              >>> invalid_cells = mesh.extract_cells(validated['invalid'])
+     |      
+     |              >>> pl = pv.Plotter()
+     |              >>> _ = pl.add_mesh(mesh, style='wireframe', color='light gray')
+     |              >>> _ = pl.add_mesh(invalid_cells, color='lime')
+     |              >>> pl.camera_position = pv.CameraPosition(
+     |              ...     position=(5.1, 1.8, -4.9),
+     |              ...     focal_point=(4.7, 1.8, 0.38),
+     |              ...     viewup=(0.0, 1.0, 0.0),
+     |              ... )
+     |              >>> pl.show()
+     |  
+     |  clip(self: '_DataSetOrMultiBlockType', normal: 'VectorLike[float] | _NormalsLiteral | None' = None, origin: 'VectorLike[float] | None' = None, invert: 'bool' = True, value: 'float' = 0.0, inplace: 'bool' = False, return_clipped: 'bool' = False, progress_bar: 'bool' = False, crinkle: 'bool' = False, plane: 'PolyData | None' = None)
      |      Clip a dataset by a plane by specifying the origin and normal.
      |      
-     |      If no parameters are given the clip will occur in the center
-     |      of that dataset.
+     |      The origin and normal may be set explicitly or implicitly using a
+     |      :func:`~pyvista.Plane`.
+     |      
+     |      If no parameters are given, the clip will occur in the center
+     |      of the dataset along the x-axis.
      |      
      |      Parameters
      |      ----------
-     |      normal : tuple(float) | str, default: 'x'
-     |          Length 3 tuple for the normal vector direction. Can also
+     |      normal : VectorLike[float] | str, optional
+     |          Length-3 vector for the normal vector direction. Can also
      |          be specified as a string conventional direction such as
      |          ``'x'`` for ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
+     |          The ``'x'`` direction is used by default.
      |      
-     |      origin : sequence[float], optional
+     |      origin : VectorLike[float], optional
      |          The center ``(x, y, z)`` coordinate of the plane on which the clip
      |          occurs. The default is the center of the dataset.
      |      
      |      invert : bool, default: True
-     |          Flag on whether to flip/invert the clip.
+     |          If ``True``, remove mesh parts in the ``normal`` direction from ``origin``.
+     |          If ``False``, remove parts in the opposite direction.
      |      
      |      value : float, default: 0.0
      |          Set the clipping value along the normal direction.
@@ -9658,11 +13036,22 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          attribute that tracks the original cell IDs of the original
      |          dataset.
      |      
+     |      plane : PolyData, optional
+     |          :func:`~pyvista.Plane` mesh to use for clipping. Use this as an
+     |          alternative to setting ``origin`` and ``normal``. The mean of the
+     |          plane's normal vectors is used for the ``normal`` parameter and
+     |          the mean of the plane's points is used for the ``origin`` parameter.
+     |      
+     |          .. versionadded:: 0.47
+     |      
      |      Returns
      |      -------
-     |      pyvista.PolyData | tuple[pyvista.PolyData]
-     |          Clipped mesh when ``return_clipped=False``,
-     |          otherwise a tuple containing the unclipped and clipped datasets.
+     |      output : DataSet | MultiBlock | tuple[DataSet | MultiBlock, DataSet | MultiBlock]
+     |          Clipped mesh when ``return_clipped=False`` or a tuple containing the
+     |          unclipped and clipped meshes. Output mesh type matches input type for
+     |          :class:`~pyvista.PointSet`, :class:`~pyvista.PolyData`, and
+     |          :class:`~pyvista.MultiBlock`; otherwise the output type is
+     |          :class:`~pyvista.UnstructuredGrid`.
      |      
      |      Examples
      |      --------
@@ -9685,7 +13074,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`clip_with_surface_example` for more examples using this filter.
      |  
-     |  clip_box(self: '_DataSetOrMultiBlockType', bounds: 'float | VectorLike[float] | pyvista.PolyData | None' = None, invert: 'bool' = True, factor: 'float' = 0.35, progress_bar: 'bool' = False, merge_points: 'bool' = True, crinkle: 'bool' = False)
+     |  clip_box(self: '_DataSetOrMultiBlockType', bounds: 'float | VectorLike[float] | PolyData | None' = None, invert: 'bool' = True, factor: 'float' = 0.35, progress_bar: 'bool' = False, merge_points: 'bool' = True, crinkle: 'bool' = False)
      |      Clip a dataset by a bounding box defined by the bounds.
      |      
      |      If no bounds are given, a corner of the dataset bounds will be removed.
@@ -9740,6 +13129,84 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`clip_with_plane_box_example` for more examples using this filter.
      |  
+     |  clip_slab(self: '_DataSetOrMultiBlockType', thickness: 'float', normal: 'VectorLike[float] | _NormalsLiteral | None' = None, *, origin: 'VectorLike[float] | None' = None, invert: 'bool' = False, progress_bar: 'bool' = False, crinkle: 'bool' = False, plane: 'PolyData | None' = None)
+     |      Clip a dataset by a slab of finite thickness around a plane.
+     |      
+     |      The slab is the volumetric region bounded by two parallel planes offset
+     |      symmetrically by ``thickness / 2`` on each side of ``origin`` along
+     |      ``normal``. This is sometimes called a "thick slice" because it yields
+     |      a volumetric subset of the input rather than a 2D cross-section like
+     |      :meth:`slice`.
+     |      
+     |      .. versionadded:: 0.48
+     |      
+     |      Parameters
+     |      ----------
+     |      thickness : float
+     |          Total slab thickness measured perpendicular to ``normal``. Must be
+     |          strictly positive. Half of ``thickness`` is applied on each side
+     |          of ``origin``.
+     |      
+     |      normal : VectorLike[float] | str, optional
+     |          Length-3 vector defining the slab's normal direction. Can also be
+     |          specified as a string conventional direction such as ``'x'`` for
+     |          ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc. The ``'x'``
+     |          direction is used by default.
+     |      
+     |      origin : VectorLike[float], optional
+     |          The center ``(x, y, z)`` coordinate of the slab. The default is
+     |          the center of the dataset.
+     |      
+     |      invert : bool, default: False
+     |          If ``False`` (the default), the slab interior is kept. If
+     |          ``True``, the slab interior is removed and everything outside the
+     |          two bounding planes is returned.
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      crinkle : bool, default: False
+     |          Crinkle the clip by extracting the entire cells along the slab
+     |          boundaries. This adds the ``"cell_ids"`` array to the ``cell_data``
+     |          attribute that tracks the original cell IDs of the input dataset.
+     |      
+     |      plane : PolyData, optional
+     |          :func:`~pyvista.Plane` mesh to use for defining the slab orientation.
+     |          Use this as an alternative to setting ``origin`` and ``normal``.
+     |          The mean of the plane's normal vectors is used for the ``normal``
+     |          parameter and the mean of the plane's points is used for the
+     |          ``origin`` parameter.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.DataSet | pyvista.MultiBlock
+     |          Clipped dataset. Output mesh type matches the input type for
+     |          :class:`~pyvista.PointSet`, :class:`~pyvista.PolyData`, and
+     |          :class:`~pyvista.MultiBlock`; otherwise the output type is
+     |          :class:`~pyvista.UnstructuredGrid`.
+     |      
+     |      Raises
+     |      ------
+     |      ValueError
+     |          If ``thickness`` is not strictly positive, or if ``normal`` is a
+     |          zero vector.
+     |      
+     |      See Also
+     |      --------
+     |      clip
+     |      clip_box
+     |      slice
+     |      
+     |      Examples
+     |      --------
+     |      Extract a thick slab through the center of a sphere along the
+     |      ``z``-axis.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> sphere = pv.Sphere()
+     |      >>> slab = sphere.clip_slab(thickness=0.2, normal='z')
+     |      >>> slab.plot(show_edges=True)
+     |  
      |  compute_cell_sizes(self: '_DataSetOrMultiBlockType', length: 'bool' = True, area: 'bool' = True, volume: 'bool' = True, progress_bar: 'bool' = False, vertex_count: 'bool' = False)
      |      Compute sizes for 0D (vertex count), 1D (length), 2D (area) and 3D (volume) cells.
      |      
@@ -9747,12 +13214,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ----------
      |      length : bool, default: True
      |          Specify whether or not to compute the length of 1D cells.
+     |          This generates a ``'Length'`` cell data array.
      |      
      |      area : bool, default: True
      |          Specify whether or not to compute the area of 2D cells.
+     |          This generates an ``'Area'`` cell data array.
      |      
      |      volume : bool, default: True
      |          Specify whether or not to compute the volume of 3D cells.
+     |          This generates a ``'Volume'`` cell data array.
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
@@ -9760,10 +13230,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      vertex_count : bool, default: False
      |          Specify whether or not to compute sizes for vertex and polyvertex cells (0D cells).
      |          The computed value is the number of points in the cell.
+     |          This generates a ``'VertexCount'`` cell data array.
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with `cell_data` containing the ``"VertexCount"``,
      |          ``"Length"``, ``"Area"``, and ``"Volume"`` arrays if set
      |          in the parameters.  Return type matches input.
@@ -9781,6 +13252,29 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> surf = examples.load_airplane()
      |      >>> surf = surf.compute_cell_sizes(length=False, volume=False)
      |      >>> surf.plot(show_edges=True, scalars='Area')
+     |      
+     |      Create a mesh with cells of various dimensions.
+     |      
+     |      >>> mesh_0D = examples.cells.Vertex()
+     |      >>> mesh_1D = examples.cells.Line()
+     |      >>> mesh_2D = examples.cells.Quadrilateral()
+     |      >>> mesh_3D = examples.cells.Hexahedron()
+     |      >>> mesh = mesh_0D + mesh_1D + mesh_2D + mesh_3D
+     |      
+     |      Compute all arrays and compare them.
+     |      
+     |      >>> sizes = mesh.compute_cell_sizes(vertex_count=True)
+     |      >>> sizes['VertexCount']
+     |      pyvista_ndarray([1., 0., 0., 0.])
+     |      
+     |      >>> sizes['Length']
+     |      pyvista_ndarray([0., 1., 0., 0.])
+     |      
+     |      >>> sizes['Area']
+     |      pyvista_ndarray([0., 0., 1., 0.])
+     |      
+     |      >>> sizes['Volume']
+     |      pyvista_ndarray([0., 0., 0., 1.])
      |  
      |  ctp(self: '_DataSetOrMultiBlockType', pass_cell_data: 'bool' = False, progress_bar: 'bool' = False, **kwargs)
      |      Transform cell data into point data.
@@ -9804,7 +13298,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with the cell data transformed into point data.
      |          Return type matches input.
      |  
@@ -9855,7 +13349,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset containing elevation scalars in the
      |          ``"Elevation"`` array in ``point_data``.
      |      
@@ -9875,25 +13369,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> sphere_elv['Elevation'][:4]  # doctest:+SKIP
      |      array([-0.5       ,  0.5       , -0.49706897, -0.48831028], dtype=float32)
      |      
-     |      See :ref:`common_filter_example` for more examples using this filter.
+     |      See :ref:`using_filters_example` for more examples using this filter.
      |  
-     |  extract_all_edges(self: '_DataSetOrMultiBlockType', use_all_points: 'bool' = False, clear_data: 'bool' = False, progress_bar: 'bool' = False)
+     |  extract_all_edges(self: '_DataSetOrMultiBlockType', use_all_points: 'bool | None' = None, clear_data: 'bool' = False, progress_bar: 'bool' = False)
      |      Extract all the internal/external edges of the dataset as PolyData.
      |      
      |      This produces a full wireframe representation of the input dataset.
      |      
      |      Parameters
      |      ----------
-     |      use_all_points : bool, default: False
-     |          Indicates whether all of the points of the input mesh should exist
-     |          in the output. When ``True``, point numbering does not change and
-     |          a threaded approach is used, which avoids the use of a point locator
-     |          and is quicker.
-     |      
-     |          By default this is set to ``False``, and unused points are omitted
-     |          from the output.
-     |      
-     |          This parameter can only be set to ``True`` with ``vtk==9.1.0`` or newer.
+     |      use_all_points : bool, optional
+     |          .. deprecated:: 0.44.0
+     |             Parameter ``use_all_points`` is deprecated since VTK < 9.2 is no
+     |             longer supported. This parameter has no effect and is always ``True``.
      |      
      |      clear_data : bool, default: False
      |          Clear any point, cell, or field data. This is useful
@@ -9920,7 +13408,121 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`cell_centers_example` for more examples using this filter.
      |  
-     |  flip_normal(self: 'DataSet | MultiBlock', normal: 'VectorLike[float]', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  extract_surface(self: 'DataSet | MultiBlock', pass_pointid: 'bool' = True, pass_cellid: 'bool' = True, nonlinear_subdivision: 'int | None' = None, algorithm: '_ExtractSurfaceOptions | type[_SENTINEL]' = <class 'pyvista.core.filters.data_object._SENTINEL'>, progress_bar: 'bool' = False) -> 'PolyData'
+     |      Extract surface geometry of the mesh as :class:`~pyvista.PolyData`.
+     |      
+     |      .. note::
+     |          The underlying VTK algorithm can be selected for surface extraction.
+     |          Using ``algorithm=None`` is recommended, and the appropriate algorithm
+     |          will automatically be selected. The current default is ``'dataset_surface'``,
+     |          but this will change to ``None`` in a future version.
+     |      
+     |      .. versionchanged:: 0.47
+     |          This filter is now generalized to also work with :class:`~pyvista.MultiBlock`.
+     |      
+     |      Parameters
+     |      ----------
+     |      pass_pointid : bool, default: True
+     |          Adds a point array ``"vtkOriginalPointIds"`` that identifies which original points
+     |          these surface points correspond to.
+     |      
+     |      pass_cellid : bool, default: True
+     |          Adds a cell array ``"vtkOriginalCellIds"`` that identifies which original cells these
+     |          surface cells correspond to.
+     |      
+     |      nonlinear_subdivision : int, default: 1
+     |          Determines how many times the faces of non-linear cells are subdivided into linear
+     |          faces. This option is only relevant when the input is an
+     |          :class:`~pyvista.UnstructuredGrid` with non-linear cells, and cannot be used with
+     |          the ``'geometry'`` algorithm.
+     |      
+     |          If ``0``, the output is the equivalent to its linear counterpart (and the midpoints
+     |          determining the non-linear interpolation are discarded). If ``1`` (the default), the
+     |          non-linear face is triangulated based on the midpoints. If greater than ``1``, the
+     |          triangulated pieces are recursively subdivided to reach the desired subdivision.
+     |          Setting the value to greater than ``1`` may cause some point data to not be passed even
+     |          if no nonlinear faces exist.
+     |      
+     |      algorithm : 'auto' | 'geometry' | 'dataset_surface'
+     |          VTK algorithm to use internally.
+     |      
+     |          - ``'geometry'``: use :vtk:`vtkGeometryFilter`.
+     |          - ``'dataset_surface'``: use :vtk:`vtkDataSetSurfaceFilter`.
+     |          - ``None``: The algorithm is automatically selected based on the input. For most
+     |            cases, the ``'geometry'`` algorithm is selected by default. The ``'dataset_surface'``
+     |            algorithm is only selected for cases where the input is an
+     |            :class:`~pyvista.UnstructuredGrid` with non-linear cells.
+     |      
+     |          Using ``algorithm=None`` is recommended. The current default is ``'dataset_surface'``,
+     |          but this will change to ``None`` in a future version.
+     |      
+     |          Both algorithms produce similar surfaces, but ``'geometry'`` is more performant.
+     |          The ``'geometry'`` algorithm also
+     |      
+     |          - merges points by default,
+     |          - tends to preserve the original mesh's point order and connectivity, and
+     |          - generates closed surfaces where closed surfaces would normally be expected.
+     |      
+     |          See :ref:`compare_surface_extract_algorithms` for some examples of differences.
+     |      
+     |          In general, users should not need to select the specific algorithm. This option is
+     |          mostly provided for backwards-compatibility or specific use cases. For example, if
+     |          working with both linear and non-linear meshes, it may be preferable to use
+     |          ``'dataset_surface'`` explicitly so that the generated surfaces may be more directly
+     |          comparable.
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |      progress_bar : bool, default: False
+     |          Display a progress bar to indicate progress.
+     |      
+     |      Returns
+     |      -------
+     |      pyvista.PolyData
+     |          Surface mesh of the grid.
+     |      
+     |      Warnings
+     |      --------
+     |      Both ``"vtkOriginalPointIds"`` and ``"vtkOriginalCellIds"`` may be
+     |      affected by other VTK operations. See `issue 1164
+     |      <https://github.com/pyvista/pyvista/issues/1164>`_ for
+     |      recommendations on tracking indices across operations.
+     |      
+     |      Examples
+     |      --------
+     |      Extract the surface of an UnstructuredGrid.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> grid = examples.load_hexbeam()
+     |      >>> surf = grid.extract_surface(algorithm=None)
+     |      >>> type(surf)
+     |      <class 'pyvista.core.pointset.PolyData'>
+     |      >>> surf['vtkOriginalPointIds']
+     |      pyvista_ndarray([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13,
+     |                       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+     |                       28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41,
+     |                       42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
+     |                       56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+     |                       70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+     |                       84, 85, 86, 87, 88, 89])
+     |      >>> surf['vtkOriginalCellIds']
+     |      pyvista_ndarray([ 0,  0,  0,  1,  1,  1,  3,  3,  3,  2,  2,  2, 36, 36,
+     |                       36, 37, 37, 37, 39, 39, 39, 38, 38, 38,  5,  5,  9,  9,
+     |                       13, 13, 17, 17, 21, 21, 25, 25, 29, 29, 33, 33,  4,  4,
+     |                        8,  8, 12, 12, 16, 16, 20, 20, 24, 24, 28, 28, 32, 32,
+     |                        7,  7, 11, 11, 15, 15, 19, 19, 23, 23, 27, 27, 31, 31,
+     |                       35, 35,  6,  6, 10, 10, 14, 14, 18, 18, 22, 22, 26, 26,
+     |                       30, 30, 34, 34])
+     |      
+     |      Note that in the "vtkOriginalCellIds" array, the same original cells
+     |      appears multiple times since this array represents the original cell of
+     |      each surface cell extracted.
+     |      
+     |      See the :ref:`extract_surface_example` and :ref:`surface_smoothing_example`
+     |      for more examples using this filter.
+     |  
+     |  flip_normal(self: '_MeshType_co', normal: 'VectorLike[float]', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Flip mesh about the normal.
      |      
      |      .. note::
@@ -9946,10 +13548,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Dataset flipped about its normal. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Dataset flipped about its normal. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -9971,7 +13571,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(mesh2)
      |      >>> pl.show(cpos='xy')
      |  
-     |  flip_x(self: 'DataSet | MultiBlock', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  flip_x(self: '_MeshType_co', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Flip mesh about the x-axis.
      |      
      |      .. note::
@@ -9994,10 +13594,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Flipped dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Flipped dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10019,7 +13617,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(mesh2)
      |      >>> pl.show(cpos='xy')
      |  
-     |  flip_y(self: 'DataSet | MultiBlock', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  flip_y(self: '_MeshType_co', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Flip mesh about the y-axis.
      |      
      |      .. note::
@@ -10042,10 +13640,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Flipped dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Flipped dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10067,7 +13663,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_mesh(mesh2)
      |      >>> pl.show(cpos='xy')
      |  
-     |  flip_z(self: 'DataSet | MultiBlock', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  flip_z(self: '_MeshType_co', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Flip mesh about the z-axis.
      |      
      |      .. note::
@@ -10090,10 +13686,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Flipped dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Flipped dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10144,7 +13738,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with the point data transformed into cell data.
      |          Return type matches input.
      |      
@@ -10200,11 +13794,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset with the point data transformed into cell data.
      |          Return type matches input.
      |  
-     |  reflect(self: 'DataSet | MultiBlock', normal: 'VectorLike[float]', point: 'VectorLike[float] | None' = None, inplace: 'bool' = False, transform_all_input_vectors: 'bool' = False, progress_bar: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  reflect(self: '_MeshType_co', normal: 'VectorLike[float]', point: 'VectorLike[float] | None' = None, inplace: 'bool' = False, transform_all_input_vectors: 'bool' = False, progress_bar: 'bool' = False) -> '_MeshType_co'
      |      Reflect a dataset across a plane.
      |      
      |      Parameters
@@ -10228,10 +13822,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Reflected dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Reflected dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10247,7 +13839,134 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See the :ref:`reflect_example` for more examples using this filter.
      |  
-     |  rotate(self: 'DataSet | MultiBlock', rotation: 'RotationLike', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  resize(self: '_MeshType_co', *, bounds: 'VectorLike[float] | None' = None, bounds_size: 'float | VectorLike[float] | None' = None, length: 'float | None' = None, center: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
+     |      Resize the dataset's bounds.
+     |      
+     |      This filter rescales and translates the mesh to fit specified bounds. This is useful for
+     |      normalizing datasets, changing units, or fitting datasets into specific coordinate ranges.
+     |      
+     |      It has three independent use cases:
+     |      
+     |      #. Use ``bounds`` to set the mesh's :attr:`~pyvista.DataSet.bounds` directly.
+     |      #. Use ``bounds_size`` to set the mesh's ``bounds_size`` directly.
+     |      #. Use ``length`` to set the mesh's diagonal ``length`` directly.
+     |      
+     |      By default, the ``bounds_size`` and ``length`` options resize the mesh so that its
+     |      ``center`` is unchanged. Optionally, ``center`` may be set explicitly for these cases.
+     |      
+     |      .. versionadded:: 0.46
+     |      
+     |      See Also
+     |      --------
+     |      :meth:`scale`, :meth:`translate`
+     |          Scale and/or translate a mesh. Used internally by :meth:`resize`.
+     |      
+     |      Parameters
+     |      ----------
+     |      bounds : VectorLike[float], optional
+     |          Target :attr:`~pyvista.DataSet.bounds` for the resized dataset in the format
+     |          ``[xmin, xmax, ymin, ymax, zmin, zmax]``. If provided, the dataset is scaled and
+     |          translated to fit exactly within these bounds. Cannot be used together with
+     |          ``bounds_size``, ``length``, or ``center``.
+     |      
+     |      bounds_size : float | VectorLike[float], optional
+     |          Target size of the :attr:`~pyvista.DataSet.bounds` for the resized dataset. Use a
+     |          single float to specify the size of all three axes, or a 3-element vector to set the
+     |          size of each axis independently. Cannot be used together with ``bounds`` or ``length``.
+     |      
+     |      length : float, optional
+     |          Target length of the :attr:`~pyvista.DataSet.bounds` for the resized dataset.
+     |          Cannot be used together with ``bounds`` or ``bounds_size``.
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |      center : VectorLike[float], optional
+     |          Center of the resized dataset in ``[x, y, z]``. By default, the mesh's
+     |          :attr:`~pyvista.DataSet.center` is used. Only used when ``bounds_size`` or ``length``
+     |          is specified.
+     |      
+     |      transform_all_input_vectors : bool, default: False
+     |          When ``True``, all input vectors are transformed as part of the resize. Otherwise, only
+     |          the points, normals and active vectors are transformed.
+     |      
+     |      inplace : bool, default: False
+     |          If True, the dataset is modified in place. If False, a new dataset is returned.
+     |      
+     |      Returns
+     |      -------
+     |      output : DataSet | MultiBlock
+     |          Resized dataset. Return type matches input.
+     |      
+     |      Examples
+     |      --------
+     |      Load a mesh with asymmetric bounds and show them.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> mesh = pv.Cube(
+     |      ...     x_length=1.0, y_length=2.0, z_length=3.0, center=(1.0, 2.0, 3.0)
+     |      ... )
+     |      >>> mesh.bounds
+     |      BoundsTuple(x_min = 0.5,
+     |                  x_max = 1.5,
+     |                  y_min = 1.0,
+     |                  y_max = 3.0,
+     |                  z_min = 1.5,
+     |                  z_max = 4.5)
+     |      
+     |      Resize it to fit specific bounds.
+     |      
+     |      >>> resized = mesh.resize(bounds=[-1, 2, -3, 4, -5, 6])
+     |      >>> resized.bounds
+     |      BoundsTuple(x_min = -1.0,
+     |                  x_max =  2.0,
+     |                  y_min = -3.0,
+     |                  y_max =  4.0,
+     |                  z_min = -5.0,
+     |                  z_max =  6.0)
+     |      
+     |      Resize the mesh so its diagonal length is ``4.0``. The mesh's center is unchanged.
+     |      
+     |      >>> resized = mesh.resize(length=4.0)
+     |      >>> resized.length
+     |      4.0
+     |      >>> resized.center
+     |      (1.0, 2.0, 3.0)
+     |      
+     |      Resize the mesh so its size is ``4.0``. The mesh's center is again unchanged.
+     |      
+     |      >>> resized = mesh.resize(bounds_size=4.0)
+     |      >>> resized.bounds_size
+     |      (4.0, 4.0, 4.0)
+     |      >>> resized.center
+     |      (1.0, 2.0, 3.0)
+     |      >>> resized.bounds
+     |      BoundsTuple(x_min = -1.0,
+     |                  x_max =  3.0,
+     |                  y_min =  0.0,
+     |                  y_max =  4.0,
+     |                  z_min =  1.0,
+     |                  z_max =  5.0)
+     |      
+     |      Specify a different size for each axis and set the desired center.
+     |      
+     |      >>> resized = mesh.resize(bounds_size=(2.0, 1.0, 0.5), center=(1.0, 0.5, 0.25))
+     |      >>> resized.bounds_size
+     |      (2.0, 1.0, 0.5)
+     |      >>> resized.center
+     |      (1.0, 0.5, 0.25)
+     |      
+     |      Center the mesh at the origin and normalize its bounds to ``1.0``.
+     |      
+     |      >>> resized = mesh.resize(bounds_size=1.0, center=(0.0, 0.0, 0.0))
+     |      >>> resized.bounds
+     |      BoundsTuple(x_min = -0.5,
+     |                  x_max =  0.5,
+     |                  y_min = -0.5,
+     |                  y_max =  0.5,
+     |                  z_min = -0.5,
+     |                  z_max =  0.5)
+     |  
+     |  rotate(self: '_MeshType_co', rotation: 'RotationLike', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Rotate mesh about a point with a rotation matrix or ``Rotation`` object.
      |      
      |      .. note::
@@ -10272,10 +13991,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Rotated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Rotated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10308,7 +14025,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_vector(self: 'DataSet | MultiBlock', vector: 'VectorLike[float]', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  rotate_vector(self: '_MeshType_co', vector: 'VectorLike[float]', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Rotate mesh about a vector.
      |      
      |      .. note::
@@ -10336,10 +14053,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Rotated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Rotated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10362,7 +14077,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_x(self: 'DataSet | MultiBlock', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  rotate_x(self: '_MeshType_co', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Rotate mesh about the x-axis.
      |      
      |      .. note::
@@ -10387,10 +14102,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Rotated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Rotated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10413,7 +14126,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_y(self: 'DataSet | MultiBlock', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  rotate_y(self: '_MeshType_co', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Rotate mesh about the y-axis.
      |      
      |      .. note::
@@ -10437,10 +14150,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Rotated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Rotated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10463,7 +14174,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.add_axes_at_origin()
      |      >>> pl.show()
      |  
-     |  rotate_z(self: 'DataSet | MultiBlock', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  rotate_z(self: '_MeshType_co', angle: 'float', point: 'VectorLike[float] | None' = None, transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Rotate mesh about the z-axis.
      |      
      |      .. note::
@@ -10488,10 +14199,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Rotated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Rotated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -10528,7 +14237,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      with a value of 1 meaning successful sampling. And a value of 0 means
      |      unsuccessful.
      |      
-     |      This uses :class:`vtk.vtkResampleWithDataSet`.
+     |      This uses :vtk:`vtkResampleWithDataSet`.
      |      
      |      Parameters
      |      ----------
@@ -10555,15 +14264,15 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
-     |      locator : vtkAbstractCellLocator or str or None, default: 'static_cell'
+     |      locator : :vtk:`vtkAbstractCellLocator` or str or None, default: 'static_cell'
      |          Prototype cell locator to perform the ``FindCell()``
      |          operation.  If ``None``, uses the DataSet ``FindCell`` method.
      |          Valid strings with mapping to vtk cell locators are
      |      
-     |              * 'cell' - vtkCellLocator
-     |              * 'cell_tree' - vtkCellTreeLocator
-     |              * 'obb_tree' - vtkOBBTree
-     |              * 'static_cell' - vtkStaticCellLocator
+     |              * 'cell' - :vtk:`vtkCellLocator`
+     |              * 'cell_tree' - :vtk:`vtkCellTreeLocator`
+     |              * 'obb_tree' - :vtk:`vtkOBBTree`
+     |              * 'static_cell' - :vtk:`vtkStaticCellLocator`
      |      
      |      pass_field_data : bool, default: True
      |          Preserve source mesh's original field data arrays.
@@ -10579,7 +14288,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
+     |      output : DataSet | MultiBlock
      |          Dataset containing resampled data.
      |      
      |      See Also
@@ -10612,9 +14321,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> result['Spatial Point Data']
      |      pyvista_ndarray([ 46.5 , 225.12])
      |      
-     |      See :ref:`resampling_example` for more examples using this filter.
+     |      See :ref:`resampling_example` and :ref:`interpolate_sample_example`
+     |      for more examples using this filter.
      |  
-     |  scale(self: 'DataSet | MultiBlock', xyz: 'float | VectorLike[float]', transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False, point: 'VectorLike[float] | None' = None) -> 'DataSet | MultiBlock'
+     |  scale(self: '_MeshType_co', xyz: 'float | VectorLike[float]', transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False, point: 'VectorLike[float] | None' = None) -> '_MeshType_co'
      |      Scale the mesh.
      |      
      |      .. note::
@@ -10639,15 +14349,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Scaled dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Scaled dataset. Return type matches input.
      |      
      |      See Also
      |      --------
      |      pyvista.Transform.scale
      |          Concatenate a scale matrix with a transformation.
+     |      
+     |      pyvista.DataObjectFilters.resize
+     |          Resize a mesh.
      |      
      |      Examples
      |      --------
@@ -10671,26 +14382,43 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> _ = pl.show_grid()
      |      >>> pl.show(cpos='xy')
      |  
-     |  slice(self: '_DataSetOrMultiBlockType', normal: 'VectorLike[float] | NormalsLiteral' = 'x', origin: 'VectorLike[float] | None' = None, generate_triangles: 'bool' = False, contour: 'bool' = False, progress_bar: 'bool' = False)
+     |  slice(self: '_DataSetOrMultiBlockType', normal: 'VectorLike[float] | _NormalsLiteral | None' = None, origin: 'VectorLike[float] | None' = None, generate_triangles: 'bool' = False, contour: 'bool' = False, progress_bar: 'bool' = False, plane: 'PolyData | None' = None)
      |      Slice a dataset by a plane at the specified origin and normal vector orientation.
      |      
-     |      If no origin is specified, the center of the input dataset will be used.
+     |      The origin and normal may be set explicitly or implicitly using a
+     |      :func:`~pyvista.Plane`.
+     |      
+     |      If no parameters are given, the slice will occur in the center
+     |      of the dataset along the x-axis.
      |      
      |      Parameters
      |      ----------
-     |      normal : sequence[float] | str, default: 'x'
-     |          Length 3 tuple for the normal vector direction. Can also be
-     |          specified as a string conventional direction such as ``'x'`` for
-     |          ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
+     |      normal : VectorLike[float] | str, optional
+     |          Length-3 vector for the normal vector direction. Can also
+     |          be specified as a string conventional direction such as
+     |          ``'x'`` for ``(1, 0, 0)`` or ``'-x'`` for ``(-1, 0, 0)``, etc.
+     |          The ``'x'`` direction is used by default.
      |      
      |      origin : sequence[float], optional
      |          The center ``(x, y, z)`` coordinate of the plane on which
-     |          the slice occurs.
+     |          the slice occurs. The default is the center of the dataset.
      |      
      |      generate_triangles : bool, default: False
      |          If this is enabled (``False`` by default), the output will
      |          be triangles. Otherwise the output will be the intersection
      |          polygons.
+     |      
+     |          .. note::
+     |      
+     |             PyVista's default is ``False``, which differs from
+     |             :vtk:`vtkCutter`'s default of ``True``. The polygon
+     |             codepath in :vtk:`vtkCutter` is significantly slower than
+     |             the triangulation path: on a 1.3M-cell UnstructuredGrid
+     |             the polygon path measures ~89 ms/op vs ~20 ms/op with
+     |             ``generate_triangles=True`` (~5x slowdown). Pass
+     |             ``generate_triangles=True`` for the fast path when the
+     |             output cell shape is not load-bearing for your downstream
+     |             code.
      |      
      |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
@@ -10698,10 +14426,27 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
+     |      plane : PolyData, optional
+     |          :func:`~pyvista.Plane` mesh to use for slicing. Use this as an
+     |          alternative to setting ``origin`` and ``normal``. The mean of the
+     |          plane's normal vectors is used for the ``normal`` parameter and
+     |          the mean of the plane's points is used for the ``origin`` parameter.
+     |      
+     |          .. versionadded:: 0.47
+     |      
      |      Returns
      |      -------
      |      pyvista.PolyData
      |          Sliced dataset.
+     |      
+     |      See Also
+     |      --------
+     |      slice_implicit
+     |      slice_orthogonal
+     |      slice_along_axis
+     |      slice_along_line
+     |      clip_slab
+     |      :meth:`~pyvista.ImageDataFilters.slice_index`
      |      
      |      Examples
      |      --------
@@ -10741,6 +14486,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          When ``True``, the output will be triangles. Otherwise the output
      |          will be the intersection polygons.
      |      
+     |          .. note::
+     |      
+     |             PyVista's default differs from :vtk:`vtkCutter` (which
+     |             defaults to ``True``). The polygon path is ~5x slower on
+     |             UnstructuredGrids. Pass ``generate_triangles=True`` for
+     |             the fast path. See :meth:`slice_implicit` for details.
+     |      
      |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
@@ -10762,6 +14514,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      pyvista.PolyData
      |          Sliced dataset.
      |      
+     |      See Also
+     |      --------
+     |      slice
+     |      slice_implicit
+     |      slice_orthogonal
+     |      slice_along_line
+     |      :meth:`~pyvista.ImageDataFilters.slice_index`
+     |      
      |      Examples
      |      --------
      |      Slice the random hills dataset in the X direction.
@@ -10780,7 +14540,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`slice_example` for more examples using this filter.
      |  
-     |  slice_along_line(self: '_DataSetOrMultiBlockType', line: 'pyvista.PolyData', generate_triangles: 'bool' = False, contour: 'bool' = False, progress_bar: 'bool' = False)
+     |  slice_along_line(self: '_DataSetOrMultiBlockType', line: 'pv.PolyData', generate_triangles: 'bool' = False, contour: 'bool' = False, progress_bar: 'bool' = False)
      |      Slice a dataset using a polyline/spline as the path.
      |      
      |      This also works for lines generated with :func:`pyvista.Line`.
@@ -10794,6 +14554,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          When ``True``, the output will be triangles. Otherwise the output
      |          will be the intersection polygons.
      |      
+     |          .. note::
+     |      
+     |             PyVista's default differs from :vtk:`vtkCutter` (which
+     |             defaults to ``True``). The polygon path is ~5x slower on
+     |             UnstructuredGrids. Pass ``generate_triangles=True`` for
+     |             the fast path. See :meth:`slice_implicit` for details.
+     |      
      |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
@@ -10804,6 +14571,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      -------
      |      pyvista.PolyData
      |          Sliced dataset.
+     |      
+     |      See Also
+     |      --------
+     |      slice
+     |      slice_implicit
+     |      slice_orthogonal
+     |      slice_along_axis
+     |      :meth:`~pyvista.ImageDataFilters.slice_index`
      |      
      |      Examples
      |      --------
@@ -10816,7 +14591,9 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> center = np.array(hills.center)
      |      >>> point_a = center + np.array([5, 0, 0])
      |      >>> point_b = center + np.array([-5, 0, 0])
-     |      >>> arc = pv.CircularArc(point_a, point_b, center, resolution=100)
+     |      >>> arc = pv.CircularArc(
+     |      ...     pointa=point_a, pointb=point_b, center=center, resolution=100
+     |      ... )
      |      >>> line_slice = hills.slice_along_line(arc)
      |      
      |      Plot the circular arc and the hills mesh.
@@ -10839,15 +14616,27 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      implicit_function : vtk.vtkImplicitFunction
+     |      implicit_function : :vtk:`vtkImplicitFunction`
      |          Specify the implicit function to perform the cutting.
      |      
      |      generate_triangles : bool, default: False
-     |          If this is enabled (``False`` by default), the output will
-     |          be triangles. Otherwise the output will be the intersection
-     |          polygons. If the cutting function is not a plane, the
-     |          output will be 3D polygons, which might be nice to look at
-     |          but hard to compute with downstream.
+     |          If ``True``, the output will be triangles. Otherwise the
+     |          output will be the intersection polygons. If the cutting
+     |          function is not a plane, the output will be 3D polygons,
+     |          which might be nice to look at but hard to compute with
+     |          downstream.
+     |      
+     |          .. note::
+     |      
+     |             PyVista's default is ``False``, which differs from
+     |             :vtk:`vtkCutter`'s default of ``True``. The polygon
+     |             codepath in :vtk:`vtkCutter` is significantly slower than
+     |             the triangulation path: on a 1.3M-cell UnstructuredGrid
+     |             the polygon path measures ~89 ms/op vs ~20 ms/op with
+     |             ``generate_triangles=True`` (~5x slowdown). Pass
+     |             ``generate_triangles=True`` for the fast path when the
+     |             output cell shape is not load-bearing for your downstream
+     |             code.
      |      
      |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
@@ -10859,6 +14648,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      -------
      |      pyvista.PolyData
      |          Sliced dataset.
+     |      
+     |      See Also
+     |      --------
+     |      slice
+     |      slice_orthogonal
+     |      slice_along_axis
+     |      slice_along_line
+     |      :meth:`~pyvista.ImageDataFilters.slice_index`
      |      
      |      Examples
      |      --------
@@ -10898,6 +14695,13 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          When ``True``, the output will be triangles. Otherwise the output
      |          will be the intersection polygons.
      |      
+     |          .. note::
+     |      
+     |             PyVista's default differs from :vtk:`vtkCutter` (which
+     |             defaults to ``True``). The polygon path is ~5x slower on
+     |             UnstructuredGrids. Pass ``generate_triangles=True`` for
+     |             the fast path. See :meth:`slice_implicit` for details.
+     |      
      |      contour : bool, default: False
      |          If ``True``, apply a ``contour`` filter after slicing.
      |      
@@ -10908,6 +14712,14 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      -------
      |      pyvista.PolyData
      |          Sliced dataset.
+     |      
+     |      See Also
+     |      --------
+     |      slice
+     |      slice_implicit
+     |      slice_along_axis
+     |      slice_along_line
+     |      :meth:`~pyvista.ImageDataFilters.slice_index`
      |      
      |      Examples
      |      --------
@@ -10920,7 +14732,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      See :ref:`slice_example` for more examples using this filter.
      |  
-     |  transform(self: 'DataSet | MultiBlock', trans: 'TransformLike', transform_all_input_vectors: 'bool' = False, inplace: 'bool | None' = None, progress_bar: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  transform(self: '_MeshType_co', trans: 'TransformLike', transform_all_input_vectors: 'bool' = False, inplace: 'bool | None' = None, progress_bar: 'bool' = False) -> '_MeshType_co'
      |      Transform this mesh with a 4x4 transform.
      |      
      |      .. warning::
@@ -10943,16 +14755,33 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          this conversion always applies to the input mesh.
      |      
      |      .. warning::
-     |          Shear transformations are not supported for :class:`~pyvista.ImageData`.
-     |          If present, any shear component is removed by the filter.
+     |          Shear transformations are not supported for :class:`~pyvista.ImageData` or
+     |          :class:`~pyvista.RectilinearGrid`, and rotations are not supported for
+     |          :class:`~pyvista.RectilinearGrid`. If present, a ``ValueError`` is raised.
+     |          To fully support these transformations, the input should be cast to
+     |          :class:`~pyvista.StructuredGrid` `before` applying this filter.
      |      
      |      .. note::
-     |          Transforming :class:`~pyvista.ImageData` modifies its :class:`~pyvista.ImageData.origin`,
-     |          :class:`~pyvista.ImageData.spacing`, and :class:`~pyvista.ImageData.direction_matrix`
-     |          properties.
+     |          Transforming :class:`~pyvista.ImageData` modifies its
+     |          :class:`~pyvista.ImageData.origin`,
+     |          :class:`~pyvista.ImageData.spacing`, and
+     |          :class:`~pyvista.ImageData.direction_matrix` properties.
      |      
-     |      .. deprecated:: 0.45.0
-     |          `inplace` was previously defaulted to `True`. In the future this will change to `False`.
+     |      .. versionchanged:: 0.48.0
+     |          The parameter ``inplace`` must be specified whereas it previously
+     |          defaulted to ``True``.
+     |      
+     |      .. versionchanged:: 0.45.0
+     |          Transforming :class:`~pyvista.ImageData` now returns ``ImageData``.
+     |          Previously, :class:`~pyvista.StructuredGrid` was returned.
+     |      
+     |      .. versionchanged:: 0.46.0
+     |          Transforming :class:`~pyvista.RectilinearGrid` now returns ``RectilinearGrid``.
+     |          Previously, :class:`~pyvista.StructuredGrid` was returned.
+     |      
+     |      .. versionchanged:: 0.47.0
+     |          An error is now raised instead of a warning if a transformation cannot be
+     |          applied.
      |      
      |      Parameters
      |      ----------
@@ -10965,18 +14794,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          transformed. Otherwise, only the normals and vectors are
      |          transformed.  See the warning for more details.
      |      
-     |      inplace : bool, default: True
-     |          When ``True``, modifies the dataset inplace.
+     |      inplace : bool
+     |          When ``True``, modifies the dataset inplace and returned dataset is
+     |          the same dataset. When ``False`` a new transformed dataset is
+     |          returned with the original unchanged. The value of this parameter
+     |          must be explicitly set.
      |      
      |      progress_bar : bool, default: False
      |          Display a progress bar to indicate progress.
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Transformed dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Transformed dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -11007,7 +14837,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> transformed = mesh.transform(transform_matrix, inplace=False)
      |      >>> transformed.plot(show_edges=True)
      |  
-     |  translate(self: 'DataSet | MultiBlock', xyz: 'VectorLike[float]', transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> 'DataSet | MultiBlock'
+     |  translate(self: '_MeshType_co', xyz: 'VectorLike[float]', transform_all_input_vectors: 'bool' = False, inplace: 'bool' = False) -> '_MeshType_co'
      |      Translate the mesh.
      |      
      |      .. note::
@@ -11029,10 +14859,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns
      |      -------
-     |      DataSet | MultiBlock
-     |          Translated dataset. Return type matches input unless
-     |          input dataset is a :class:`~pyvista.RectilinearGrid`, in which
-     |          case the output datatype is a :class:`~pyvista.StructuredGrid`.
+     |      output : DataSet | MultiBlock
+     |          Translated dataset. Return type matches input.
      |      
      |      See Also
      |      --------
@@ -11083,17 +14911,382 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> mesh = plane.triangulate()
      |      >>> mesh.plot(show_edges=True, line_width=5)
      |  
-     |  ----------------------------------------------------------------------
-     |  Data descriptors inherited from pyvista.core.filters.data_object.DataObjectFilters:
-     |  
-     |  __dict__
-     |      dictionary for instance variables
-     |  
-     |  __weakref__
-     |      list of weak references to the object
+     |  validate_mesh(self: '_DataSetOrMultiBlockType', validation_fields: 'MeshValidationFields | Sequence[MeshValidationFields] | None' = None, action: '_ActionOptions | None' = None, *, exclude_fields: 'MeshValidationFields | Sequence[MeshValidationFields] | None' = None, report_body: '_ReportBodyOptions' = 'message', **cell_validator_kwargs) -> '_MeshValidationReport[_DataSetOrMultiBlockType]'
+     |      Validate this mesh's array data, points, and cells.
+     |      
+     |      This method returns a ``MeshValidationReport`` dataclass with information about the
+     |      validity of a mesh. The dataclass contains validation fields which are specific to the
+     |      mesh's data, points, and cells. By default, all validation fields below are checked and
+     |      included in the report. Optionally, only a subset of fields may be requested, and a
+     |      warning or error may be raised if the mesh is not valid.
+     |      
+     |      **Data validation fields**
+     |      
+     |      Fields specific to :attr:`~pyvista.DataSet.cell_data` and
+     |      :attr:`~pyvista.DataSet.point_data` arrays.
+     |      
+     |      - ``cell_data_wrong_length``: Ensure the length of each cell data array matches
+     |        :attr:`~pyvista.DataSet.n_cells`.
+     |      - ``point_data_wrong_length``: Ensure the length of each point data array matches
+     |        :attr:`~pyvista.DataSet.n_points`.
+     |      
+     |      .. note::
+     |          When setting new arrays using PyVista's API, similar array validation checks are
+     |          `already` implicitly performed. As such, these checks may be redundant in many cases.
+     |          They are most useful for validating `newly` loaded or :func:`wrapped <pyvista.wrap>`
+     |          meshes.
+     |      
+     |      **Point validation fields**
+     |      
+     |      - ``non_finite_points``: Ensure all points have real values (i.e. no ``NaN`` or ``Inf``).
+     |      - ``unused_points``: Ensure all points are referenced by at least one cell.
+     |      
+     |      **Cell validation fields**
+     |      
+     |      - ``coincident_points``: Ensure there are no duplicate coordinates or repeated use of the
+     |        same connectivity entry.
+     |      - ``degenerate_faces``: Ensure faces do not collapse to a line or a point through repeated
+     |        collocated vertices.
+     |      - ``intersecting_edges``: Ensure two edges of a 2D cell do not intersect.
+     |      - ``intersecting_faces``: Ensure two faces of a 3D cell do not intersect.
+     |      - ``invalid_point_references``: Ensure all points referenced by cells are valid point ids
+     |        that can be indexed by :class:`~pyvista.DataSet.points`.
+     |      - ``inverted_faces``: Ensure the faces of a cell point in the direction required by its
+     |        :class:`~pyvista.CellType`.
+     |      - ``negative_size``: Ensure 1D, 2D, and 3D cells have positive length, area, and volume,
+     |        respectively.
+     |      - ``non_contiguous_edges``: Ensure edges around the perimeter of a 2D cell are contiguous.
+     |      - ``non_convex``: Ensure all 2D and 3D cells are convex.
+     |      - ``non_planar_faces``: Ensure vertices for a face all lie in the same plane.
+     |      - ``wrong_number_of_points``: Ensure each cell has the minimum number of points needed to
+     |        describe it.
+     |      - ``zero_size``: Ensure 1D, 2D, and 3D cells have non-zero length, area, and volume,
+     |        respectively.
+     |      
+     |      .. note::
+     |        All cell fields are computed using :meth:`~pyvista.DataObjectFilters.cell_validator`,
+     |        and the field names correspond to :class:`~pyvista.CellStatus` names.
+     |      
+     |      For each field, its value is:
+     |      
+     |      - ``None`` if the field is omitted from the report,
+     |      - an empty list ``[]`` if the field is included but there is no issue to report for it, or
+     |      - a list of invalid items (e.g. invalid array names or cell/point ids).
+     |      
+     |      In addition to the validation fields above, the report includes properties for
+     |      convenience:
+     |      
+     |      - ``is_valid``: evaluates to ``True`` when all fields are ``None`` or empty.
+     |      - ``invalid_fields``: tuple of validation field names where problems were detected.
+     |      - ``mesh``: a shallow copy of the validated mesh. If any cell fields are included which
+     |        are computed by :meth:`~pyvista.DataObjectFilters.cell_validator`, this mesh includes the
+     |        output from that filter.
+     |      - ``message``: message string generated by the report. The message contains a compact
+     |        summary of any problems detected, and is formatted for printing to console. This is the
+     |        message used when the ``action`` keyword is set for emitting warnings or raising errors.
+     |        This value is ``None`` if the mesh is valid.
+     |      
+     |      Validating composite :class:`~pyvista.MultiBlock` is also supported. In this case, all
+     |      mesh blocks are validated separately and the results are aggregated and reported per-block.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      .. versionchanged:: 0.48
+     |      
+     |          - Include cell fields ``zero_size`` and ``negative_size``.
+     |          - Report fields are now sorted in alphabetical order. Point fields are also reported
+     |            before cell fields.
+     |          - The body of the report now shows the error message instead of validation fields,
+     |            i.e. the default value of ``report_body`` is now ``'message'`` instead of
+     |            ``'fields'``.
+     |      
+     |      Parameters
+     |      ----------
+     |      validation_fields : MeshValidationFields | sequence[MeshValidationFields], optional
+     |          Select which field(s) to include in the validation report. All data, point, and cell
+     |          fields are included by default. Specify individual fields by name, or use group name(s)
+     |          to include multiple related validation fields:
+     |      
+     |          - ``'data'`` to include all data fields
+     |          - ``'points'`` to include all point fields
+     |          - ``'cells'`` to include all cell fields
+     |          - ``'memory_safe'`` to include all fields that, if invalid, may cause a segmentation
+     |            fault and crash Python. This option includes ``cell_data_wrong_length``,
+     |            ``point_data_wrong_length``, and ``invalid_point_references``.
+     |      
+     |          Fields that are excluded from the report will have a value of ``None``.
+     |      
+     |      action : 'warn' | 'error', optional
+     |          Issue a warning or raise an error if the mesh is not valid for the specified fields.
+     |          By default, no action is taken.
+     |      
+     |      exclude_fields : MeshValidationFields | sequence[MeshValidationFields], optional
+     |          Select which field(s) to exclude from the validation report. This is similar to
+     |          using ``validation_fields``, but is subtractive instead of additive. All data, point,
+     |          and cell fields are `included` by default, and no fields are excluded.
+     |      
+     |          .. versionadded:: 0.48
+     |      
+     |      report_body : 'fields' | 'message', optional
+     |          Contents to show in the body of the report.
+     |      
+     |          - ``'fields'``: Show all validated fields. A list of any/all invalid ids are shown.
+     |          - ``'message'``: Show the error message as the body of the report (if any).
+     |      
+     |          Using ``'fields'`` as the body is more explicit in terms of showing `which` fields
+     |          have been validated. Using ``'message'`` is typically visually more compact though,
+     |          and the message includes additional cell type-specific information.
+     |      
+     |          .. versionadded:: 0.48
+     |      
+     |      cell_validator_kwargs
+     |          Keyword arguments passed to :meth:`~pyvista.DataObjectFilters.cell_validator`.
+     |      
+     |          .. versionadded:: 0.48
+     |      
+     |      Returns
+     |      -------
+     |      MeshValidationReport
+     |          Report dataclass with information about mesh validity.
+     |      
+     |      See Also
+     |      --------
+     |      :meth:`~pyvista.DataObjectFilters.cell_validator`
+     |      :meth:`~pyvista.DataObjectFilters.cell_quality`
+     |      :meth:`~pyvista.UnstructuredGridFilters.remove_unused_points`
+     |      :ref:`mesh_validation_example`
+     |      
+     |      Examples
+     |      --------
+     |      Create a :func:`~pyvista.Sphere` and check if it's a valid mesh.
+     |      
+     |      >>> import pyvista as pv
+     |      >>> from pyvista import examples
+     |      >>> mesh = pv.Sphere()
+     |      >>> report = mesh.validate_mesh()
+     |      >>> report.is_valid
+     |      True
+     |      
+     |      Print the report. By default, the report is relatively minimal, and only includes
+     |      an error message if the mesh is invalid.
+     |      
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type           : PolyData
+     |          N Points       : 842
+     |          N Cells        : 1680
+     |          Cell types     : {TRIANGLE}
+     |      Report summary:
+     |          Is valid       : True
+     |          Invalid fields : ()
+     |      
+     |      Use ``report_body`` to explicitly show the validated fields.
+     |      
+     |      >>> report = mesh.validate_mesh(report_body='fields')
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type                     : PolyData
+     |          N Points                 : 842
+     |          N Cells                  : 1680
+     |          Cell types               : {TRIANGLE}
+     |      Report summary:
+     |          Is valid                 : True
+     |          Invalid fields           : ()
+     |      Invalid data arrays:
+     |          Cell data wrong length   : []
+     |          Point data wrong length  : []
+     |      Invalid point ids:
+     |          Non-finite points        : []
+     |          Unused points            : []
+     |      Invalid cell ids:
+     |          Coincident points        : []
+     |          Degenerate faces         : []
+     |          Intersecting edges       : []
+     |          Intersecting faces       : []
+     |          Invalid point references : []
+     |          Inverted faces           : []
+     |          Negative size            : []
+     |          Non-contiguous edges     : []
+     |          Non-convex               : []
+     |          Non-planar faces         : []
+     |          Wrong number of points   : []
+     |          Zero size                : []
+     |      
+     |      Load a mesh with invalid cells, e.g. :func:`~pyvista.examples.downloads.download_cow`
+     |      and validate it. Use ``'cells'`` to only validate the cells specifically.
+     |      
+     |      >>> mesh = examples.download_cow()
+     |      >>> report = mesh.validate_mesh('cells', report_body='fields')
+     |      
+     |      Alternatively, use ``exclude_fields`` to `remove` fields from the report instead.
+     |      For example, excluding ``data`` and ``points`` is the same as including ``cells``.
+     |      
+     |      >>> report_excluded = mesh.validate_mesh(exclude_fields=['data', 'points'])
+     |      >>> report_excluded == report
+     |      True
+     |      
+     |      Show the report. Note that only cell validation fields are reported (array and point
+     |      fields are omitted).
+     |      
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type                     : PolyData
+     |          N Points                 : 2903
+     |          N Cells                  : 3263
+     |          Cell types               : {TRIANGLE, POLYGON, QUAD}
+     |      Report summary:
+     |          Is valid                 : False
+     |          Invalid fields (1)       : ('non_convex',)
+     |      Invalid cell ids:
+     |          Coincident points        : []
+     |          Degenerate faces         : []
+     |          Intersecting edges       : []
+     |          Intersecting faces       : []
+     |          Invalid point references : []
+     |          Inverted faces           : []
+     |          Negative size            : []
+     |          Non-contiguous edges     : []
+     |          Non-convex (3)           : [1013, 1532, 3250]
+     |          Non-planar faces         : []
+     |          Wrong number of points   : []
+     |          Zero size                : []
+     |      
+     |      >>> report.is_valid
+     |      False
+     |      
+     |      Show what the issue(s) are.
+     |      
+     |      >>> report.invalid_fields
+     |      ('non_convex',)
+     |      
+     |      Show the cell ids of the non-convex cells.
+     |      
+     |      >>> report.non_convex
+     |      [1013, 1532, 3250]
+     |      
+     |      Access the same underlying mesh array of non-convex cell ids that was internally computed
+     |      by :meth:`~pyvista.DataObjectFilters.cell_validator`.
+     |      
+     |      >>> report.mesh.field_data['non_convex']
+     |      pyvista_ndarray([1013, 1532, 3250])
+     |      
+     |      Print the message generated by the report. This is the message used when the
+     |      ``action`` keyword is set for emitting warnings or raising errors.
+     |      
+     |      >>> print(report.message)
+     |      PolyData mesh is not valid:
+     |       - Mesh has 3 non-convex QUAD cells. Invalid cell ids: [1013, 1532, 3250]
+     |      
+     |      Show a validation report for cells with intersecting edges and unused points only.
+     |      
+     |      >>> report = mesh.validate_mesh(
+     |      ...     ['intersecting_edges', 'unused_points'], report_body='fields'
+     |      ... )
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type                     : PolyData
+     |          N Points                 : 2903
+     |          N Cells                  : 3263
+     |          Cell types               : {TRIANGLE, POLYGON, QUAD}
+     |      Report summary:
+     |          Is valid                 : True
+     |          Invalid fields           : ()
+     |      Invalid point ids:
+     |          Unused points            : []
+     |      Invalid cell ids:
+     |          Intersecting edges       : []
+     |      
+     |      Even though other fields are invalid (i.e. ``non_convex``), for `these` specific
+     |      validation fields the mesh is considered valid.
+     |      
+     |      >>> report.is_valid
+     |      True
+     |      
+     |      Do minimal validation to ensure the mesh properties are "memory_safe". This helps to avoid
+     |      a segmentation fault which may be caused by invalid memory accesses by VTK. In this case,
+     |      we use ``action`` to raise an error if the mesh is not valid.
+     |      
+     |      >>> _ = mesh.validate_mesh('memory_safe', action='error')
+     |      
+     |      Validate the mesh as a :class:`~pyvista.MultiBlock` instead.
+     |      
+     |      >>> multi = mesh.cast_to_multiblock()
+     |      >>> report = multi.validate_mesh()
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type               : MultiBlock
+     |          N Blocks           : 1
+     |      Report summary:
+     |          Is valid           : False
+     |          Invalid fields (1) : ('non_convex',)
+     |      Error message:
+     |          MultiBlock mesh is not valid:
+     |           * Block id 0 'Block-00' PolyData mesh is not valid:
+     |             - Mesh has 3 non-convex QUAD cells. Invalid cell ids: [1013, 1532, 3250]
+     |      
+     |      Validate again but show the fields in report body.
+     |      Instead of reporting problems with specific arrays, point ids, or cell ids, the errors
+     |      are reported by block id. Here, block id ``0`` is reported as having non-convex cells.
+     |      
+     |      >>> report = multi.validate_mesh(report_body='fields')
+     |      >>> print(report)
+     |      Mesh Validation Report
+     |      ----------------------
+     |      Mesh info:
+     |          Type                     : MultiBlock
+     |          N Blocks                 : 1
+     |      Report summary:
+     |          Is valid                 : False
+     |          Invalid fields (1)       : ('non_convex',)
+     |      Blocks with invalid data arrays:
+     |          Cell data wrong length   : []
+     |          Point data wrong length  : []
+     |      Blocks with invalid points:
+     |          Non-finite points        : []
+     |          Unused points            : []
+     |      Blocks with invalid cells:
+     |          Coincident points        : []
+     |          Degenerate faces         : []
+     |          Intersecting edges       : []
+     |          Intersecting faces       : []
+     |          Invalid point references : []
+     |          Inverted faces           : []
+     |          Negative size            : []
+     |          Non-contiguous edges     : []
+     |          Non-convex (1)           : [0]
+     |          Non-planar faces         : []
+     |          Wrong number of points   : []
+     |          Zero size                : []
+     |      
+     |      Subreports for each block can be accessed with indexing.
+     |      
+     |      >>> len(report)
+     |      1
+     |      >>> subreport = report[0]
+     |      >>> subreport.non_convex
+     |      [1013, 1532, 3250]
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from pyvista.core.dataobject.DataObject:
+     |  
+     |  __dir__(self: 'Self') -> 'list[str]'
+     |      Include pending accessor names so tab completion surfaces them.
+     |      
+     |      Plugin-contributed accessors registered via the ``pyvista.accessors``
+     |      entry-point group are imported lazily on first attribute access.
+     |      Listing their names alongside the normal attribute set lets IPython
+     |      / Jupyter / REPL tab completion surface them without paying the
+     |      plugin import cost ahead of time.
      |  
      |  __eq__(self: 'Self', other: 'object') -> 'bool'
      |      Test equivalency between data objects.
@@ -11149,6 +15342,18 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      >>> blocks.add_field_data([1, 2, 3], 'my-field-data')
      |      >>> blocks.field_data['my-field-data']
      |      pyvista_ndarray([1, 2, 3])
+     |  
+     |  cast_to_multiblock(self) -> 'MultiBlock'
+     |      Convert this :class:`DataObject` to a :class:`~pyvista.MultiBlock`.
+     |      
+     |      Uses :vtk:`vtkConvertToMultiBlockDataSet` internally.
+     |      
+     |      .. versionadded:: 0.47
+     |      
+     |      Returns
+     |      -------
+     |      MultiBlock
+     |          Converted dataset.
      |  
      |  clear_field_data(self: 'Self') -> 'None'
      |      Remove all field data.
@@ -11214,7 +15419,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      dataset : vtk.vtkDataSet
+     |      dataset : :vtk:`vtkDataSet`
      |          Dataset to copy the geometry and topology from.
      |      
      |      Examples
@@ -11230,7 +15435,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      to_copy : pyvista.DataObject or vtk.vtkDataObject
+     |      to_copy : DataObject | :vtk:`vtkDataObject`
      |          Data object to perform a deep copy from.
      |  
      |  head(self: 'Self', display: 'bool' = True, html: 'bool | None' = None) -> 'str'
@@ -11252,8 +15457,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      str
      |          Header statistics.
      |  
-     |  save(self: 'Self', filename: 'Path | str', binary: 'bool' = True, texture: 'NumpyArray[np.uint8] | str | None' = None) -> 'None'
+     |  save(self: 'Self', filename: 'Path | str', binary: 'bool' = True, texture: 'NumpyArray[np.uint8] | str | None' = None, compression: '_CompressionOptions' = 'zlib', **writer_kwargs: 'Any') -> 'None'
      |      Save this vtk object to file.
+     |      
+     |      .. include:: /api/utilities/mesh_io.rst
      |      
      |      .. versionadded:: 0.45
      |      
@@ -11286,6 +15493,34 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          .. note::
      |             This feature is only available when saving PLY files.
      |      
+     |      compression : str or None, default: 'zlib'
+     |          The compression type to use when ``binary`` is ``True``
+     |          and VTK writer is of type :vtk:`vtkXMLWriter`. This
+     |          argument has no effect otherwise. Acceptable values are
+     |          ``'zlib'``, ``'lz4'``, ``'lzma'``, and ``None``. ``None``
+     |          indicates no compression.
+     |      
+     |          .. versionadded:: 0.47
+     |      
+     |      **writer_kwargs : dict, optional
+     |          Additional keyword arguments forwarded verbatim to a custom
+     |          writer registered via :func:`pyvista.register_writer`.  Use
+     |          these to expose format-specific options such as compression
+     |          level or thread count.  When the target extension dispatches
+     |          to a built-in VTK writer or to the pickle path, passing any
+     |          extra keyword arguments raises :class:`TypeError` — PyVista
+     |          never silently drops writer options.
+     |      
+     |          .. versionadded:: 0.48
+     |      
+     |      Raises
+     |      ------
+     |      TypeError
+     |          If ``**writer_kwargs`` are provided but the target extension
+     |          does not dispatch to a registered custom writer.
+     |      ValueError
+     |          If ``file_ext`` is not a supported extension.
+     |      
      |      Notes
      |      -----
      |      Binary files write much faster than ASCII and have a smaller
@@ -11296,7 +15531,7 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Parameters
      |      ----------
-     |      to_copy : pyvista.DataObject or vtk.vtkDataObject
+     |      to_copy : DataObject | :vtk:`vtkDataObject`
      |          Data object to perform a shallow copy from.
      |  
      |  ----------------------------------------------------------------------
@@ -11383,11 +15618,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      .. note::
      |      
-     |          The user dict is a convenience property and is intended for metadata storage.
-     |          It has an inefficient dictionary implementation and should only be used to
-     |          store a small number of infrequently-accessed keys with relatively small
-     |          values. It should not be used to store frequently accessed array data
-     |          with many entries (a regular field data array should be used instead).
+     |          The user dict is a convenience property intended for metadata storage.
+     |          Values are JSON-serialized on every mutation, so it is not a substitute
+     |          for a regular field data array when storing bulk array data with many
+     |          entries (use a regular field data array for that instead).
      |      
      |      .. warning::
      |      
@@ -11402,7 +15636,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Returns
      |      -------
      |      UserDict
-     |          JSON-serialized dict-like object which is subclassed from :py:class:`collections.UserDict`.
+     |          JSON-serialized dict-like object which is subclassed from
+     |          :py:class:`collections.UserDict`.
      |      
      |      Examples
      |      --------
@@ -11455,13 +15690,24 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  __hash__ = None
      |  
      |  ----------------------------------------------------------------------
-     |  Methods inherited from pyvista.core._vtk_core.DisableVtkSnakeCase:
+     |  Methods inherited from pyvista.core.utilities.misc._NoNewAttrMixin:
      |  
-     |  __getattribute__(self, attr)
+     |  __setattr__(self, key: 'str', value: 'Any') -> 'None'
+     |      Prevent adding new attributes to classes using "normal" methods.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pyvista.core._vtk_utilities.DisableVtkSnakeCase:
+     |  
+     |  __getattribute__(self, item)
      |      Return getattr(self, name).
      |  
      |  ----------------------------------------------------------------------
-     |  Class methods inherited from pyvista.core._vtk_core.vtkPyVistaOverride:
+     |  Static methods inherited from pyvista.core._vtk_utilities.DisableVtkSnakeCase:
+     |  
+     |  check_attribute(target, attr)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from pyvista.core._vtk_utilities.vtkPyVistaOverride:
      |  
      |  __init_subclass__(**kwargs)
      |      This method is called when a class is subclassed.
@@ -11508,27 +15754,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      \sa SetSpacing
      |      \sa SetDirectionMatrix
      |  
-     |  BlankCell(...)
-     |      BlankCell(self, ptId:int) -> None
-     |      C++: virtual void BlankCell(vtkIdType ptId)
-     |      BlankCell(self, i:int, j:int, k:int) -> None
-     |      C++: virtual void BlankCell(int i, int j, int k)
-     |      
-     |      Methods for supporting blanking of cells. Blanking turns on or
-     |      off cells in the structured grid. These methods should be called
-     |      only after the dimensions of the grid are set.
-     |  
-     |  BlankPoint(...)
-     |      BlankPoint(self, ptId:int) -> None
-     |      C++: virtual void BlankPoint(vtkIdType ptId)
-     |      BlankPoint(self, i:int, j:int, k:int) -> None
-     |      C++: virtual void BlankPoint(int i, int j, int k)
-     |      
-     |      Methods for supporting blanking of cells. Blanking turns on or
-     |      off points in the structured grid, and hence the cells connected
-     |      to them. These methods should be called only after the dimensions
-     |      of the grid are set.
-     |  
      |  ComputeBounds(...)
      |      ComputeBounds(self) -> None
      |      C++: void ComputeBounds() override;
@@ -11538,10 +15763,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  
      |  ComputeCellId(...)
      |      ComputeCellId(self, ijk:[int, int, int]) -> int
-     |      C++: virtual vtkIdType ComputeCellId(int ijk[3])
+     |      C++: vtkIdType ComputeCellId(int ijk[3]) override;
      |      
      |      Given a location in structured coordinates (i-j-k), return the
-     |      cell id.
+     |      cell id. Rely on vtkStructuredData::ComputeCellIdForExtent
      |  
      |  ComputeIndexToPhysicalMatrix(...)
      |      ComputeIndexToPhysicalMatrix(origin:(float, float, float),
@@ -11580,22 +15805,27 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  
      |  ComputePointId(...)
      |      ComputePointId(self, ijk:[int, int, int]) -> int
-     |      C++: virtual vtkIdType ComputePointId(int ijk[3])
+     |      C++: vtkIdType ComputePointId(int ijk[3]) override;
      |      
      |      Given a location in structured coordinates (i-j-k), return the
-     |      point id.
+     |      point id. Rely on vtkStructuredData::ComputePointIdForExtent
      |  
      |  ComputeStructuredCoordinates(...)
      |      ComputeStructuredCoordinates(self, x:(float, float, float),
      |          ijk:[int, int, int], pcoords:[float, float, float]) -> int
+     |      C++: int ComputeStructuredCoordinates(const double x[3],
+     |          int ijk[3], double pcoords[3]) override;
+     |      ComputeStructuredCoordinates(self, x:(float, float, float),
+     |          ijk:[int, int, int], pcoords:[float, float, float],
+     |          tol2:float) -> int
      |      C++: virtual int ComputeStructuredCoordinates(const double x[3],
-     |          int ijk[3], double pcoords[3])
+     |          int ijk[3], double pcoords[3], double tol2)
      |      
-     |      Convenience function computes the structured coordinates for a
-     |      point x[3]. The voxel is specified by the array ijk[3], and the
-     |      parametric coordinates in the cell are specified with pcoords[3].
-     |      The function returns a 0 if the point x is outside of the volume,
-     |      and a 1 if inside the volume.
+     |      Computes the structured coordinates for a point x[3]. The voxel
+     |      is specified by the array ijk[3], and the parametric coordinates
+     |      in the cell are specified with pcoords[3]. The function returns a
+     |      0 if the point x is outside of the volume, and a 1 if inside the
+     |      volume, using squared tolerance tol2 (1e-12 if not provided).
      |  
      |  CopyAndCastFrom(...)
      |      CopyAndCastFrom(self, inData:vtkImageData, extent:[int, int, int,
@@ -11663,21 +15893,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      ExtendedNew() -> vtkImageData
      |      C++: static vtkImageData *ExtendedNew()
      |  
-     |  FindAndGetCell(...)
-     |      FindAndGetCell(self, x:[float, float, float], cell:vtkCell,
-     |          cellId:int, tol2:float, subId:int, pcoords:[float, float,
-     |          float], weights:[float, ...]) -> vtkCell
-     |      C++: vtkCell *FindAndGetCell(double x[3], vtkCell *cell,
-     |          vtkIdType cellId, double tol2, int &subId, double pcoords[3],
-     |          double *weights) override;
-     |      
-     |      Locate the cell that contains a point and return the cell. Also
-     |      returns the subcell id, parametric coordinates and weights for
-     |      subsequent interpolation. This method combines the derived class
-     |      methods int FindCell and vtkCell *GetCell. Derived classes may
-     |      provide a more efficient implementation. See for example
-     |      vtkStructuredPoints. THIS METHOD IS NOT THREAD SAFE.
-     |  
      |  FindCell(...)
      |      FindCell(self, x:[float, float, float], cell:vtkCell, cellId:int,
      |          tol2:float, subId:int, pcoords:[float, float, float],
@@ -11705,6 +15920,8 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  FindPoint(...)
      |      FindPoint(self, x:[float, float, float]) -> int
      |      C++: vtkIdType FindPoint(double x[3]) override;
+     |      FindPoint(self, x:float, y:float, z:float) -> int
+     |      C++: vtkIdType FindPoint(double x, double y, double z)
      |  
      |  GetActualMemorySize(...)
      |      GetActualMemorySize(self) -> int
@@ -11731,6 +15948,10 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          int]) -> Pointer
      |      C++: void *GetArrayPointer(vtkDataArray *array,
      |          int coordinates[3])
+     |      GetArrayPointer(self, array:vtkDataArray, x:int, y:int, z:int)
+     |          -> Pointer
+     |      C++: void *GetArrayPointer(vtkDataArray *array, int x, int y,
+     |          int z)
      |  
      |  GetArrayPointerForExtent(...)
      |      GetArrayPointerForExtent(self, array:vtkDataArray, extent:[int,
@@ -11749,26 +15970,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          int &max, const int *updateExtent)
      |  
      |  GetCell(...)
+     |      GetCell(self, cellId:int, cell:vtkGenericCell) -> None
+     |      C++: void GetCell(vtkIdType cellId, vtkGenericCell *cell)
+     |          override;
      |      GetCell(self, cellId:int) -> vtkCell
      |      C++: vtkCell *GetCell(vtkIdType cellId) override;
      |      GetCell(self, i:int, j:int, k:int) -> vtkCell
      |      C++: vtkCell *GetCell(int i, int j, int k) override;
-     |      GetCell(self, cellId:int, cell:vtkGenericCell) -> None
-     |      C++: void GetCell(vtkIdType cellId, vtkGenericCell *cell)
-     |          override;
      |      
-     |      Get cell with cellId such that: 0 <= cellId < NumberOfCells. The
-     |      returned vtkCell is an object owned by this instance, hence the
-     |      return value must not be deleted by the caller.
-     |      
-     |      @warning Repeat calls to this function for different face ids
-     |          will change
-     |      the data stored in the internal member object whose pointer is
-     |      returned by this function.
-     |      
-     |      @warning THIS METHOD IS NOT THREAD SAFE. For a thread-safe
-     |          version, please use
-     |      void GetCell(vtkIdType cellId, vtkGenericCell* cell).
+     |      Standard vtkDataSet API methods. See vtkDataSet for more
+     |      information.
      |  
      |  GetCellBounds(...)
      |      GetCellBounds(self, cellId:int, bounds:[float, float, float,
@@ -11784,90 +15995,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Subclasses should override this method to provide an efficient
      |      implementation. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
      |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
-     |  
-     |  GetCellDims(...)
-     |      GetCellDims(self, cellDims:[int, int, int]) -> None
-     |      C++: void GetCellDims(int cellDims[3])
-     |      
-     |      Given the node dimensions of this grid instance, this method
-     |      computes the node dimensions. The value in each dimension can
-     |      will have a lowest value of "1" such that computing the total
-     |      number of cells can be achieved by simply by
-     |      cellDims[0]*cellDims[1]*cellDims[2].
-     |  
-     |  GetCellNeighbors(...)
-     |      GetCellNeighbors(self, cellId:int, ptIds:vtkIdList,
-     |          cellIds:vtkIdList) -> None
-     |      C++: void GetCellNeighbors(vtkIdType cellId, vtkIdList *ptIds,
-     |          vtkIdList *cellIds) override;
-     |      GetCellNeighbors(self, cellId:int, ptIds:vtkIdList,
-     |          cellIds:vtkIdList, seedLoc:[int, ...]) -> None
-     |      C++: void GetCellNeighbors(vtkIdType cellId, vtkIdList *ptIds,
-     |          vtkIdList *cellIds, int *seedLoc)
-     |      
-     |      Topological inquiry to get all cells using list of points
-     |      exclusive of cell specified (e.g., cellId). Note that the list
-     |      consists of only cells that use ALL the points provided. THIS
-     |      METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND
-     |      THE DATASET IS NOT MODIFIED
-     |  
-     |  GetCellPoints(...)
-     |      GetCellPoints(self, cellId:int, npts:int, pts:(int, ...),
-     |          ptIds:vtkIdList) -> None
-     |      C++: void GetCellPoints(vtkIdType cellId, vtkIdType &npts,
-     |          vtkIdType const *&pts, vtkIdList *ptIds) override;
-     |      GetCellPoints(self, cellId:int, ptIds:vtkIdList) -> None
-     |      C++: void GetCellPoints(vtkIdType cellId, vtkIdList *ptIds)
-     |          override;
-     |      
-     |      Topological inquiry to get points defining cell.
-     |      
-     |      This function MAY use ptIds, which is an object that is created
-     |      by each thread, to guarantee thread safety.
-     |      
-     |      @warning Subsequent calls to this method may invalidate previous
-     |          call
-     |      results.
-     |      
-     |      THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD
-     |      AND THE DATASET IS NOT MODIFIED
-     |  
-     |  GetCellSize(...)
-     |      GetCellSize(self, cellId:int) -> int
-     |      C++: vtkIdType GetCellSize(vtkIdType cellId) override;
-     |      
-     |      Get the size of cell with cellId such that: 0 <= cellId <
-     |      NumberOfCells. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
-     |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
-     |      
-     |      @warning This method MUST be overridden for performance reasons.
-     |      Default implementation is very inefficient.
-     |  
-     |  GetCellType(...)
-     |      GetCellType(self, cellId:int) -> int
-     |      C++: int GetCellType(vtkIdType cellId) override;
-     |      
-     |      Get type of cell with cellId such that: 0 <= cellId <
-     |      NumberOfCells. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
-     |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
-     |  
-     |  GetCellTypesArray(...)
-     |      GetCellTypesArray(self) -> vtkConstantArray_IiE
-     |      C++: vtkConstantArray<int> *GetCellTypesArray()
-     |      
-     |      Get the array of all cell types in the image data. Each
-     |      single-component integer value is the same. The array is of size
-     |      GetNumberOfCells().
-     |      
-     |      NOTE: the returned object should not be modified.
-     |  
-     |  GetCells(...)
-     |      GetCells(self) -> vtkStructuredCellArray
-     |      C++: vtkStructuredCellArray *GetCells()
-     |      
-     |      Return the image data connectivity array.
-     |      
-     |      NOTE: the returned object should not be modified.
      |  
      |  GetContinuousIncrements(...)
      |      GetContinuousIncrements(self, extent:[int, int, int, int, int,
@@ -11903,37 +16030,11 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Retrieve an instance of this class from an information object.
      |  
-     |  GetDataDescription(...)
-     |      GetDataDescription(self) -> int
-     |      C++: virtual int GetDataDescription()
-     |      
-     |      Get the data description of the image data.
-     |  
-     |  GetDataDimension(...)
-     |      GetDataDimension(self) -> int
-     |      C++: virtual int GetDataDimension()
-     |      
-     |      Return the dimensionality of the data.
-     |  
      |  GetDataObjectType(...)
      |      GetDataObjectType(self) -> int
      |      C++: int GetDataObjectType() override;
      |      
      |      Return what type of dataset this is.
-     |  
-     |  GetDimensions(...)
-     |      GetDimensions(self) -> (int, int, int)
-     |      C++: virtual int *GetDimensions()
-     |      GetDimensions(self, dims:[int, int, int]) -> None
-     |      C++: virtual void GetDimensions(int dims[3])
-     |      GetDimensions(self, dims:[int, int, int]) -> None
-     |      C++: virtual void GetDimensions(vtkIdType dims[3])
-     |      
-     |      Get dimensions of this structured points dataset. It is the
-     |      number of points on each axis. Dimensions are computed from
-     |      Extents during this call.
-     |      \warning Non thread-safe, use second signature if you want it to
-     |          be.
      |  
      |  GetDirectionMatrix(...)
      |      GetDirectionMatrix(self) -> vtkMatrix3x3
@@ -11942,16 +16043,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Set/Get the direction transform of the dataset. The direction
      |      matrix is a 3x3 transformation matrix supporting scaling and
      |      rotation.
-     |  
-     |  GetExtent(...)
-     |      GetExtent(self) -> (int, int, int, int, int, int)
-     |      C++: virtual int *GetExtent()
-     |  
-     |  GetExtentType(...)
-     |      GetExtentType(self) -> int
-     |      C++: int GetExtentType() override;
-     |      
-     |      The extent type is a 3D extent
      |  
      |  GetIncrements(...)
      |      GetIncrements(self) -> (int, int, int)
@@ -11992,36 +16083,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      physical space coordinate system of the dataset. The transform is
      |      a 4 by 4 matrix.
      |  
-     |  GetMaxCellSize(...)
-     |      GetMaxCellSize(self) -> int
-     |      C++: int GetMaxCellSize() override;
-     |      
-     |      Convenience method returns largest cell size in dataset. This is
-     |      generally used to allocate memory for supporting data structures.
-     |      THIS METHOD IS THREAD SAFE
-     |  
-     |  GetMaxSpatialDimension(...)
-     |      GetMaxSpatialDimension(self) -> int
-     |      C++: int GetMaxSpatialDimension() override;
-     |      
-     |      Get the maximum spatial dimensionality of the data which is the
-     |      maximum dimension of all cells.
-     |      
-     |      @warning This method MUST be overridden for performance reasons.
-     |      Default implementation is very inefficient.
-     |  
-     |  GetNumberOfCells(...)
-     |      GetNumberOfCells(self) -> int
-     |      C++: vtkIdType GetNumberOfCells() override;
-     |      
-     |      Standard vtkDataSet API methods. See vtkDataSet for more
-     |      information.
-     |      \warning If GetCell(int,int,int) gets overridden in a subclass,
-     |          it is
-     |      necessary to override GetCell(vtkIdType) in that class as well
-     |      since vtkImageData::GetCell(vtkIdType) will always call
-     |      vkImageData::GetCell(int,int,int)
-     |  
      |  GetNumberOfGenerationsFromBase(...)
      |      GetNumberOfGenerationsFromBase(self, type:str) -> int
      |      C++: vtkIdType GetNumberOfGenerationsFromBase(const char *type)
@@ -12048,20 +16109,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      responses will always be nonnegative. This method works in
      |      combination with vtkTypeMacro found in vtkSetGet.h.
      |  
-     |  GetNumberOfPoints(...)
-     |      GetNumberOfPoints(self) -> int
-     |      C++: vtkIdType GetNumberOfPoints() override;
-     |      
-     |      Determine the number of points composing the dataset. THIS METHOD
-     |      IS THREAD SAFE
-     |  
-     |  GetNumberOfScalarComponents(...)
-     |      GetNumberOfScalarComponents(meta_data:vtkInformation) -> int
-     |      C++: static int GetNumberOfScalarComponents(
-     |          vtkInformation *meta_data)
-     |      GetNumberOfScalarComponents(self) -> int
-     |      C++: int GetNumberOfScalarComponents()
-     |  
      |  GetOrigin(...)
      |      GetOrigin(self) -> (float, float, float)
      |      C++: virtual double *GetOrigin()
@@ -12081,24 +16128,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      index space coordinate system of the dataset. The transform is a
      |      4 by 4 matrix.
      |  
-     |  GetPoint(...)
-     |      GetPoint(self, ptId:int) -> (float, float, float)
-     |      C++: double *GetPoint(vtkIdType ptId) override;
-     |      GetPoint(self, id:int, x:[float, float, float]) -> None
-     |      C++: void GetPoint(vtkIdType id, double x[3]) override;
-     |      
-     |      Get point coordinates with ptId such that: 0 <= ptId <
-     |      NumberOfPoints. THIS METHOD IS NOT THREAD SAFE.
-     |  
-     |  GetPointCells(...)
-     |      GetPointCells(self, ptId:int, cellIds:vtkIdList) -> None
-     |      C++: void GetPointCells(vtkIdType ptId, vtkIdList *cellIds)
-     |          override;
-     |      
-     |      Topological inquiry to get cells using point. THIS METHOD IS
-     |      THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND THE DATASET
-     |      IS NOT MODIFIED
-     |  
      |  GetPointGradient(...)
      |      GetPointGradient(self, i:int, j:int, k:int, s:vtkDataArray,
      |          g:[float, float, float]) -> None
@@ -12110,15 +16139,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      at that point. The scalars s are the scalars from which the
      |      gradient is to be computed. This method will treat structured
      |      point datasets of any dimension.
-     |  
-     |  GetPoints(...)
-     |      GetPoints(self) -> vtkPoints
-     |      C++: vtkPoints *GetPoints() override;
-     |      
-     |      If the subclass has (implicit/explicit) points, then return them.
-     |      Otherwise, create a vtkPoints object and return that.
-     |      
-     |      DO NOT MODIFY THE RETURNED POINTS OBJECT.
      |  
      |  GetScalarComponentAsDouble(...)
      |      GetScalarComponentAsDouble(self, x:int, y:int, z:int,
@@ -12170,16 +16190,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Get the size of the scalar type in bytes.
      |  
-     |  GetScalarType(...)
-     |      GetScalarType(meta_data:vtkInformation) -> int
-     |      C++: static int GetScalarType(vtkInformation *meta_data)
-     |      GetScalarType(self) -> int
-     |      C++: int GetScalarType()
-     |  
-     |  GetScalarTypeAsString(...)
-     |      GetScalarTypeAsString(self) -> str
-     |      C++: const char *GetScalarTypeAsString()
-     |  
      |  GetScalarTypeMax(...)
      |      GetScalarTypeMax(self, meta_data:vtkInformation) -> float
      |      C++: virtual double GetScalarTypeMax(vtkInformation *meta_data)
@@ -12202,18 +16212,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Set the spacing (width,height,length) of the cubical cells that
      |      compose the data set.
      |  
-     |  GetTupleIndex(...)
-     |      GetTupleIndex(self, array:vtkDataArray, coordinates:[int, int,
-     |          int]) -> int
-     |      C++: vtkIdType GetTupleIndex(vtkDataArray *array,
-     |          int coordinates[3])
-     |      
-     |      Given a data array and a coordinate, return the index of the
-     |      tuple in the array corresponding to that coordinate.
-     |      
-     |      This method is analogous to GetArrayPointer(), but it conforms to
-     |      the API of vtkGenericDataArray.
-     |  
      |  GetVoxelGradient(...)
      |      GetVoxelGradient(self, i:int, j:int, k:int, s:vtkDataArray,
      |          g:vtkDataArray) -> None
@@ -12229,35 +16227,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      gradient is to be computed. This method will treat only 3D
      |      structured point datasets (i.e., volumes).
      |  
-     |  HasAnyBlankCells(...)
-     |      HasAnyBlankCells(self) -> bool
-     |      C++: bool HasAnyBlankCells() override;
-     |      
-     |      Returns 1 if there is any visibility constraint on the cells, 0
-     |      otherwise.
-     |  
-     |  HasAnyBlankPoints(...)
-     |      HasAnyBlankPoints(self) -> bool
-     |      C++: bool HasAnyBlankPoints() override;
-     |      
-     |      Returns 1 if there is any visibility constraint on the points, 0
-     |      otherwise.
-     |  
-     |  HasNumberOfScalarComponents(...)
-     |      HasNumberOfScalarComponents(meta_data:vtkInformation) -> bool
-     |      C++: static bool HasNumberOfScalarComponents(
-     |          vtkInformation *meta_data)
-     |  
-     |  HasScalarType(...)
-     |      HasScalarType(meta_data:vtkInformation) -> bool
-     |      C++: static bool HasScalarType(vtkInformation *meta_data)
-     |  
-     |  Initialize(...)
-     |      Initialize(self) -> None
-     |      C++: void Initialize() override;
-     |      
-     |      Restore object to initial state. Release memory back to system.
-     |  
      |  IsA(...)
      |      IsA(self, type:str) -> int
      |      C++: vtkTypeBool IsA(const char *type) override;
@@ -12265,22 +16234,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Return 1 if this class is the same type of (or a subclass of) the
      |      named class. Returns 0 otherwise. This method works in
      |      combination with vtkTypeMacro found in vtkSetGet.h.
-     |  
-     |  IsCellVisible(...)
-     |      IsCellVisible(self, cellId:int) -> int
-     |      C++: unsigned char IsCellVisible(vtkIdType cellId)
-     |      
-     |      Return non-zero value if specified point is visible. These
-     |      methods should be called only after the dimensions of the grid
-     |      are set.
-     |  
-     |  IsPointVisible(...)
-     |      IsPointVisible(self, ptId:int) -> int
-     |      C++: unsigned char IsPointVisible(vtkIdType ptId)
-     |      
-     |      Return non-zero value if specified point is visible. These
-     |      methods should be called only after the dimensions of the grid
-     |      are set.
      |  
      |  IsTypeOf(...)
      |      IsTypeOf(type:str) -> int
@@ -12314,14 +16267,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Set / Get the extent on just one axis
      |  
-     |  SetDimensions(...)
-     |      SetDimensions(self, i:int, j:int, k:int) -> None
-     |      C++: virtual void SetDimensions(int i, int j, int k)
-     |      SetDimensions(self, dims:(int, int, int)) -> None
-     |      C++: virtual void SetDimensions(const int dims[3])
-     |      
-     |      Same as SetExtent(0, i-1, 0, j-1, 0, k-1)
-     |  
      |  SetDirectionMatrix(...)
      |      SetDirectionMatrix(self, m:vtkMatrix3x3) -> None
      |      C++: virtual void SetDirectionMatrix(vtkMatrix3x3 *m)
@@ -12334,32 +16279,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      C++: virtual void SetDirectionMatrix(double e00, double e01,
      |          double e02, double e10, double e11, double e12, double e20,
      |          double e21, double e22)
-     |  
-     |  SetExtent(...)
-     |      SetExtent(self, extent:[int, int, int, int, int, int]) -> None
-     |      C++: virtual void SetExtent(int extent[6])
-     |      SetExtent(self, x1:int, x2:int, y1:int, y2:int, z1:int, z2:int)
-     |          -> None
-     |      C++: virtual void SetExtent(int x1, int x2, int y1, int y2,
-     |          int z1, int z2)
-     |      
-     |      Set/Get the extent. On each axis, the extent is defined by the
-     |      index of the first point and the index of the last point.  The
-     |      extent should be set before the "Scalars" are set or allocated. 
-     |      The Extent is stored in the order (X, Y, Z). The dataset extent
-     |      does not have to start at (0,0,0). (0,0,0) is just the extent of
-     |      the origin. The first point (the one with Id=0) is at extent
-     |      (Extent[0],Extent[2],Extent[4]). As for any dataset, a data array
-     |      on point data starts at Id=0.
-     |  
-     |  SetNumberOfScalarComponents(...)
-     |      SetNumberOfScalarComponents(n:int, meta_data:vtkInformation)
-     |          -> None
-     |      C++: static void SetNumberOfScalarComponents(int n,
-     |          vtkInformation *meta_data)
-     |      
-     |      Set/Get the number of scalar components for points. As with the
-     |      SetScalarType method this is setting pipeline info.
      |  
      |  SetOrigin(...)
      |      SetOrigin(self, i:float, j:float, k:float) -> None
@@ -12378,10 +16297,6 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |          component:int, v:float) -> None
      |      C++: virtual void SetScalarComponentFromFloat(int x, int y, int z,
      |           int component, float v)
-     |  
-     |  SetScalarType(...)
-     |      SetScalarType(__a:int, meta_data:vtkInformation) -> None
-     |      C++: static void SetScalarType(int, vtkInformation *meta_data)
      |  
      |  SetSpacing(...)
      |      SetSpacing(self, i:float, j:float, k:float) -> None
@@ -12458,6 +16373,404 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      Convert coordinates from physical space (xyz) to index space
      |      (ijk).
      |  
+     |  __delattr__(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from vtkmodules.vtkCommonDataModel.vtkImageData:
+     |  
+     |  __this__
+     |      Pointer to the C++ object.
+     |  
+     |  data_object_type
+     |      read-only, calls GetDataObjectType
+     |  
+     |  increments
+     |      read-only, calls GetIncrements
+     |  
+     |  scalar_pointer
+     |      read-only, calls GetScalarPointer
+     |  
+     |  scalar_size
+     |      read-only, calls GetScalarSize
+     |  
+     |  scalar_type_max
+     |      read-only, calls GetScalarTypeMax
+     |  
+     |  scalar_type_min
+     |      read-only, calls GetScalarTypeMin
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes inherited from vtkmodules.vtkCommonDataModel.vtkImageData:
+     |  
+     |  __vtkname__ = 'vtkImageData'
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from vtkmodules.vtkCommonDataModel.vtkCartesianGrid:
+     |  
+     |  BlankCell(...)
+     |      BlankCell(self, ptId:int) -> None
+     |      C++: virtual void BlankCell(vtkIdType ptId)
+     |      BlankCell(self, i:int, j:int, k:int) -> None
+     |      C++: virtual void BlankCell(int i, int j, int k)
+     |      
+     |      Methods for supporting blanking of cells. Blanking turns on or
+     |      off cells in the structured grid. These methods should be called
+     |      only after the dimensions of the grid are set.
+     |  
+     |  BlankPoint(...)
+     |      BlankPoint(self, ptId:int) -> None
+     |      C++: virtual void BlankPoint(vtkIdType ptId)
+     |      BlankPoint(self, i:int, j:int, k:int) -> None
+     |      C++: virtual void BlankPoint(int i, int j, int k)
+     |      
+     |      Methods for supporting blanking of cells. Blanking turns on or
+     |      off points in the structured grid, and hence the cells connected
+     |      to them. These methods should be called only after the dimensions
+     |      of the grid are set.
+     |  
+     |  FindAndGetCell(...)
+     |      FindAndGetCell(self, x:[float, float, float], cell:vtkCell,
+     |          cellId:int, tol2:float, subId:int, pcoords:[float, float,
+     |          float], weights:[float, ...]) -> vtkCell
+     |      C++: vtkCell *FindAndGetCell(double x[3], vtkCell *cell,
+     |          vtkIdType cellId, double tol2, int &subId, double pcoords[3],
+     |          double *weights) override;
+     |      
+     |      Locate the cell that contains a point and return the cell. Also
+     |      returns the subcell id, parametric coordinates and weights for
+     |      subsequent interpolation. This method combines the derived class
+     |      methods int FindCell and vtkCell *GetCell. Derived classes may
+     |      provide a more efficient implementation. See for example
+     |      vtkStructuredPoints. THIS METHOD IS NOT THREAD SAFE.
+     |  
+     |  GetCellDims(...)
+     |      GetCellDims(self, cellDims:[int, int, int]) -> None
+     |      C++: void GetCellDims(int cellDims[3])
+     |      
+     |      Given the node dimensions of this grid instance, this method
+     |      computes the node dimensions. The value in each dimension can
+     |      will have a lowest value of "1" such that computing the total
+     |      number of cells can be achieved by simply by
+     |      cellDims[0]*cellDims[1]*cellDims[2].
+     |  
+     |  GetCellNeighbors(...)
+     |      GetCellNeighbors(self, cellId:int, ptIds:vtkIdList,
+     |          cellIds:vtkIdList) -> None
+     |      C++: void GetCellNeighbors(vtkIdType cellId, vtkIdList *ptIds,
+     |          vtkIdList *cellIds) override;
+     |      GetCellNeighbors(self, cellId:int, ptIds:vtkIdList,
+     |          cellIds:vtkIdList, seedLoc:[int, ...]) -> None
+     |      C++: void GetCellNeighbors(vtkIdType cellId, vtkIdList *ptIds,
+     |          vtkIdList *cellIds, int *seedLoc)
+     |      
+     |      Topological inquiry to get all cells using list of points
+     |      exclusive of cell specified (e.g., cellId). Note that the list
+     |      consists of only cells that use ALL the points provided. THIS
+     |      METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND
+     |      THE DATASET IS NOT MODIFIED
+     |  
+     |  GetCellPoints(...)
+     |      GetCellPoints(self, cellId:int, npts:int, pts:(int, ...),
+     |          ptIds:vtkIdList) -> None
+     |      C++: void GetCellPoints(vtkIdType cellId, vtkIdType &npts,
+     |          vtkIdType const *&pts, vtkIdList *ptIds) override;
+     |      GetCellPoints(self, cellId:int, ptIds:vtkIdList) -> None
+     |      C++: void GetCellPoints(vtkIdType cellId, vtkIdList *ptIds)
+     |          override;
+     |      
+     |      Topological inquiry to get points defining cell.
+     |      
+     |      This function MAY use ptIds, which is an object that is created
+     |      by each thread, to guarantee thread safety.
+     |      
+     |      @warning Subsequent calls to this method may invalidate previous
+     |          call
+     |      results.
+     |      
+     |      THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD
+     |      AND THE DATASET IS NOT MODIFIED
+     |  
+     |  GetCellSize(...)
+     |      GetCellSize(self, cellId:int) -> int
+     |      C++: vtkIdType GetCellSize(vtkIdType cellId) override;
+     |      
+     |      Get the size of cell with cellId such that: 0 <= cellId <
+     |      NumberOfCells. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
+     |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
+     |      
+     |      @warning This method MUST be overridden for performance reasons.
+     |      Default implementation is very inefficient.
+     |  
+     |  GetCellType(...)
+     |      GetCellType(self, cellId:int) -> int
+     |      C++: int GetCellType(vtkIdType cellId) override;
+     |      
+     |      Get type of cell with cellId such that: 0 <= cellId <
+     |      NumberOfCells. THIS METHOD IS THREAD SAFE IF FIRST CALLED FROM A
+     |      SINGLE THREAD AND THE DATASET IS NOT MODIFIED
+     |  
+     |  GetCellTypes(...)
+     |      GetCellTypes(self) -> vtkConstantArray_IhE
+     |      C++: vtkConstantArray<unsigned char> *GetCellTypes()
+     |      GetCellTypes(self, types:vtkCellTypes) -> None
+     |      C++: virtual void GetCellTypes(vtkCellTypes *types)
+     |  
+     |  GetCellTypesArray(...)
+     |      GetCellTypesArray(self) -> vtkConstantArray_IiE
+     |      C++: vtkConstantArray<int> *GetCellTypesArray()
+     |  
+     |  GetCells(...)
+     |      GetCells(self) -> vtkStructuredCellArray
+     |      C++: vtkStructuredCellArray *GetCells()
+     |      
+     |      Return the image data connectivity array.
+     |      
+     |      NOTE: the returned object should not be modified.
+     |  
+     |  GetDataDescription(...)
+     |      GetDataDescription(self) -> int
+     |      C++: virtual int GetDataDescription()
+     |      
+     |      Get the data description of the rectilinear grid.
+     |  
+     |  GetDataDimension(...)
+     |      GetDataDimension(self) -> int
+     |      C++: int GetDataDimension()
+     |      
+     |      Return the dimensionality of the data.
+     |  
+     |  GetDimensions(...)
+     |      GetDimensions(self) -> (int, int, int)
+     |      C++: int *GetDimensions()
+     |      GetDimensions(self, dims:[int, int, int]) -> None
+     |      C++: void GetDimensions(int dims[3])
+     |      GetDimensions(self, dims:[int, int, int]) -> None
+     |      C++: void GetDimensions(vtkIdType dims[3])
+     |      
+     |      Get dimensions of this structured points dataset. It is the
+     |      number of points on each axis. Dimensions are computed from
+     |      Extents during this call.
+     |      \warning Non thread-safe, use second signature if you want it to
+     |          be.
+     |  
+     |  GetExtent(...)
+     |      GetExtent(self) -> (int, int, int, int, int, int)
+     |      C++: virtual int *GetExtent()
+     |  
+     |  GetExtentType(...)
+     |      GetExtentType(self) -> int
+     |      C++: int GetExtentType() override;
+     |      
+     |      Structured extent. The extent type is a 3D extent
+     |  
+     |  GetMaxCellSize(...)
+     |      GetMaxCellSize(self) -> int
+     |      C++: int GetMaxCellSize() override;
+     |      
+     |      Convenience method returns largest cell size in dataset. This is
+     |      generally used to allocate memory for supporting data structures.
+     |      THIS METHOD IS THREAD SAFE
+     |  
+     |  GetMaxSpatialDimension(...)
+     |      GetMaxSpatialDimension(self) -> int
+     |      C++: int GetMaxSpatialDimension() override;
+     |      
+     |      Get the maximum/minimum spatial dimensionality of the data which
+     |      is the maximum/minimum dimension of all cells.
+     |      
+     |      @warning This method MUST be overridden for performance reasons.
+     |      Default implementation is very inefficient.
+     |  
+     |  GetMinSpatialDimension(...)
+     |      GetMinSpatialDimension(self) -> int
+     |      C++: int GetMinSpatialDimension() override;
+     |  
+     |  GetNumberOfCells(...)
+     |      GetNumberOfCells(self) -> int
+     |      C++: vtkIdType GetNumberOfCells() override;
+     |      
+     |      Determine the number of cells composing the dataset. THIS METHOD
+     |      IS THREAD SAFE
+     |  
+     |  GetNumberOfPoints(...)
+     |      GetNumberOfPoints(self) -> int
+     |      C++: vtkIdType GetNumberOfPoints() override;
+     |      
+     |      Determine the number of points composing the dataset. THIS METHOD
+     |      IS THREAD SAFE
+     |  
+     |  GetNumberOfScalarComponents(...)
+     |      GetNumberOfScalarComponents(meta_data:vtkInformation) -> int
+     |      C++: static int GetNumberOfScalarComponents(
+     |          vtkInformation *meta_data)
+     |      GetNumberOfScalarComponents(self) -> int
+     |      C++: int GetNumberOfScalarComponents()
+     |  
+     |  GetPoint(...)
+     |      GetPoint(self, id:int, x:[float, float, float]) -> None
+     |      C++: void GetPoint(vtkIdType id, double x[3]) override;
+     |      GetPoint(self, ptId:int) -> (float, float, float)
+     |      C++: double *GetPoint(vtkIdType ptId) override;
+     |      
+     |      Copy point coordinates into user provided array x[3] for
+     |      specified point id. THIS METHOD IS THREAD SAFE IF FIRST CALLED
+     |      FROM A SINGLE THREAD AND THE DATASET IS NOT MODIFIED
+     |  
+     |  GetPointCells(...)
+     |      GetPointCells(self, ptId:int, cellIds:vtkIdList) -> None
+     |      C++: void GetPointCells(vtkIdType ptId, vtkIdList *cellIds)
+     |          override;
+     |      
+     |      Topological inquiry to get cells using point. THIS METHOD IS
+     |      THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND THE DATASET
+     |      IS NOT MODIFIED
+     |  
+     |  GetPoints(...)
+     |      GetPoints(self) -> vtkPoints
+     |      C++: vtkPoints *GetPoints() override;
+     |      
+     |      Standard vtkDataSet API methods. See vtkDataSet for more
+     |      information.
+     |  
+     |  GetScalarType(...)
+     |      GetScalarType(meta_data:vtkInformation) -> int
+     |      C++: static int GetScalarType(vtkInformation *meta_data)
+     |      GetScalarType(self) -> int
+     |      C++: int GetScalarType()
+     |  
+     |  GetScalarTypeAsString(...)
+     |      GetScalarTypeAsString(self) -> str
+     |      C++: const char *GetScalarTypeAsString()
+     |  
+     |  GetTupleIndex(...)
+     |      GetTupleIndex(self, array:vtkDataArray, coordinates:[int, int,
+     |          int]) -> int
+     |      C++: vtkIdType GetTupleIndex(vtkDataArray *array,
+     |          int coordinates[3])
+     |      GetTupleIndex(self, array:vtkDataArray, x:int, y:int, z:int)
+     |          -> int
+     |      C++: vtkIdType GetTupleIndex(vtkDataArray *array, int x, int y,
+     |          int z)
+     |  
+     |  GetTupleIndexForExtent(...)
+     |      GetTupleIndexForExtent(self, array:vtkDataArray, extent:[int, int,
+     |           int, int, int, int]) -> int
+     |      C++: vtkIdType GetTupleIndexForExtent(vtkDataArray *array,
+     |          int extent[6])
+     |      
+     |      Given a data array and a coordinate, return the index of the
+     |      tuple in the array corresponding to that coordinate.
+     |  
+     |  GetValueIndex(...)
+     |      GetValueIndex(self, array:vtkDataArray, coordinates:[int, int,
+     |          int]) -> int
+     |      C++: vtkIdType GetValueIndex(vtkDataArray *array,
+     |          int coordinates[3])
+     |      GetValueIndex(self, array:vtkDataArray, x:int, y:int, z:int)
+     |          -> int
+     |      C++: vtkIdType GetValueIndex(vtkDataArray *array, int x, int y,
+     |          int z)
+     |  
+     |  GetValueIndexForExtent(...)
+     |      GetValueIndexForExtent(self, array:vtkDataArray, extent:[int, int,
+     |           int, int, int, int]) -> int
+     |      C++: vtkIdType GetValueIndexForExtent(vtkDataArray *array,
+     |          int extent[6])
+     |      
+     |      Given a data array and a coordinate, return the index of the
+     |      value in the array corresponding to that coordinate, considering
+     |      the number of components.
+     |  
+     |  HasAnyBlankCells(...)
+     |      HasAnyBlankCells(self) -> bool
+     |      C++: bool HasAnyBlankCells() override;
+     |      
+     |      Returns 1 if there are any blanking cells 0 otherwise. Blanking
+     |      is supported only for vtkStructuredGrid and vtkUniformGrid
+     |  
+     |  HasAnyBlankPoints(...)
+     |      HasAnyBlankPoints(self) -> bool
+     |      C++: bool HasAnyBlankPoints() override;
+     |      
+     |      Returns 1 if there are any blanking points 0 otherwise. Blanking
+     |      is supported only for vtkStructuredGrid and vtkUniformGrid
+     |  
+     |  HasNumberOfScalarComponents(...)
+     |      HasNumberOfScalarComponents(meta_data:vtkInformation) -> bool
+     |      C++: static bool HasNumberOfScalarComponents(
+     |          vtkInformation *meta_data)
+     |  
+     |  HasScalarType(...)
+     |      HasScalarType(meta_data:vtkInformation) -> bool
+     |      C++: static bool HasScalarType(vtkInformation *meta_data)
+     |  
+     |  Initialize(...)
+     |      Initialize(self) -> None
+     |      C++: void Initialize() override;
+     |      
+     |      Restore data object to initial state. THIS METHOD IS NOT THREAD
+     |      SAFE.
+     |  
+     |  IsCellVisible(...)
+     |      IsCellVisible(self, cellId:int) -> int
+     |      C++: unsigned char IsCellVisible(vtkIdType cellId)
+     |      
+     |      Return non-zero value if specified point is visible. These
+     |      methods should be called only after the dimensions of the grid
+     |      are set.
+     |  
+     |  IsPointVisible(...)
+     |      IsPointVisible(self, ptId:int) -> int
+     |      C++: unsigned char IsPointVisible(vtkIdType ptId)
+     |      
+     |      Return non-zero value if specified point is visible. These
+     |      methods should be called only after the dimensions of the grid
+     |      are set.
+     |  
+     |  SetDimensions(...)
+     |      SetDimensions(self, i:int, j:int, k:int) -> None
+     |      C++: void SetDimensions(int i, int j, int k)
+     |      SetDimensions(self, dim:(int, int, int)) -> None
+     |      C++: void SetDimensions(const int dim[3])
+     |      
+     |      Set dimensions of rectilinear grid dataset. This also sets the
+     |      extent.
+     |  
+     |  SetExtent(...)
+     |      SetExtent(self, extent:[int, int, int, int, int, int]) -> None
+     |      C++: void SetExtent(int extent[6])
+     |      SetExtent(self, xMin:int, xMax:int, yMin:int, yMax:int, zMin:int,
+     |          zMax:int) -> None
+     |      C++: void SetExtent(int xMin, int xMax, int yMin, int yMax,
+     |          int zMin, int zMax)
+     |      
+     |      Set/Get the extent. On each axis, the extent is defined by the
+     |      index of the first point and the index of the last point.  The
+     |      extent should be set before the "Scalars" are set or allocated. 
+     |      The Extent is stored in the order (X, Y, Z). The dataset extent
+     |      does not have to start at (0,0,0). (0,0,0) is just the extent of
+     |      the origin. The first point (the one with Id=0) is at extent
+     |      (Extent[0],Extent[2],Extent[4]). As for any dataset, a data array
+     |      on point data starts at Id=0.
+     |  
+     |  SetNumberOfScalarComponents(...)
+     |      SetNumberOfScalarComponents(n:int, meta_data:vtkInformation)
+     |          -> None
+     |      C++: static void SetNumberOfScalarComponents(int n,
+     |          vtkInformation *meta_data)
+     |      
+     |      Set/Get the number of scalar components for points. As with the
+     |      SetScalarType method this is setting pipeline info. 1 if not set
+     |      or empty.
+     |  
+     |  SetScalarType(...)
+     |      SetScalarType(__a:int, meta_data:vtkInformation) -> None
+     |      C++: static void SetScalarType(int, vtkInformation *meta_data)
+     |      
+     |      Set/Get the scalar data type for the points. This is setting
+     |      pipeline info. Assume VTK_DOUBLE if not set or empty.
+     |  
      |  UnBlankCell(...)
      |      UnBlankCell(self, ptId:int) -> None
      |      C++: virtual void UnBlankCell(vtkIdType ptId)
@@ -12470,67 +16783,41 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      UnBlankPoint(self, i:int, j:int, k:int) -> None
      |      C++: virtual void UnBlankPoint(int i, int j, int k)
      |  
-     |  __delattr__(self, name, /)
-     |      Implement delattr(self, name).
-     |  
-     |  __setattr__(self, name, value, /)
-     |      Implement setattr(self, name, value).
-     |  
      |  ----------------------------------------------------------------------
-     |  Data descriptors inherited from vtkmodules.vtkCommonDataModel.vtkImageData:
+     |  Data descriptors inherited from vtkmodules.vtkCommonDataModel.vtkCartesianGrid:
      |  
-     |  __this__
-     |      Pointer to the C++ object.
+     |  cell_types
+     |      read-only, calls GetCellTypes
      |  
      |  cell_types_array
-     |      read-only, Calls GetCellTypesArray
+     |      read-only, calls GetCellTypesArray
      |  
      |  cells
-     |      read-only, Calls GetCells
+     |      read-only, calls GetCells
      |  
      |  data_description
-     |      read-only, Calls GetDataDescription
+     |      read-only, calls GetDataDescription
      |  
      |  data_dimension
-     |      read-only, Calls GetDataDimension
-     |  
-     |  data_object_type
-     |      read-only, Calls GetDataObjectType
+     |      read-only, calls GetDataDimension
      |  
      |  extent_type
-     |      read-only, Calls GetExtentType
-     |  
-     |  increments
-     |      read-only, Calls GetIncrements
+     |      read-only, calls GetExtentType
      |  
      |  max_cell_size
-     |      read-only, Calls GetMaxCellSize
+     |      read-only, calls GetMaxCellSize
      |  
      |  max_spatial_dimension
-     |      read-only, Calls GetMaxSpatialDimension
+     |      read-only, calls GetMaxSpatialDimension
+     |  
+     |  min_spatial_dimension
+     |      read-only, calls GetMinSpatialDimension
      |  
      |  number_of_scalar_components
-     |      read-only, Calls GetNumberOfScalarComponents
-     |  
-     |  scalar_pointer
-     |      read-only, Calls GetScalarPointer
-     |  
-     |  scalar_size
-     |      read-only, Calls GetScalarSize
+     |      read-only, calls GetNumberOfScalarComponents
      |  
      |  scalar_type
-     |      read-only, Calls GetScalarType
-     |  
-     |  scalar_type_max
-     |      read-only, Calls GetScalarTypeMax
-     |  
-     |  scalar_type_min
-     |      read-only, Calls GetScalarTypeMin
-     |  
-     |  ----------------------------------------------------------------------
-     |  Data and other attributes inherited from vtkmodules.vtkCommonDataModel.vtkImageData:
-     |  
-     |  __vtkname__ = 'vtkImageData'
+     |      read-only, calls GetScalarType
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from vtkmodules.vtkCommonDataModel.vtkDataSet:
@@ -12616,28 +16903,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  GetCellNumberOfFaces(...)
      |      GetCellNumberOfFaces(self, cellId:int, cellType:int,
      |          cell:vtkGenericCell) -> int
-     |      C++: int GetCellNumberOfFaces(vtkIdType cellId,
+     |      C++: virtual int GetCellNumberOfFaces(vtkIdType cellId,
      |          unsigned char &cellType, vtkGenericCell *cell)
      |      
      |      Get the number of faces of a cell.
      |      
      |      Most of the times extracting the number of faces requires only
      |      extracting the cell type. However, for some cell types, the
-     |      number of faces is not constant. For example, a vtkPolyhedron
+     |      number of faces is not constant. For example, a convex point set
      |      cell can have a different number of faces for each cell. That's
      |      why this method requires the cell id and the dataset.
-     |  
-     |  GetCellTypes(...)
-     |      GetCellTypes(self, types:vtkCellTypes) -> None
-     |      C++: virtual void GetCellTypes(vtkCellTypes *types)
-     |      
-     |      Get a list of types of cells in a dataset. The list consists of
-     |      an array of types (not necessarily in any order), with a single
-     |      entry per type. For example a dataset 5 triangles, 3 lines, and
-     |      100 hexahedra would result a list of three entries, corresponding
-     |      to the types VTK_TRIANGLE, VTK_LINE, and VTK_HEXAHEDRON. THIS
-     |      METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND
-     |      THE DATASET IS NOT MODIFIED
      |  
      |  GetCenter(...)
      |      GetCenter(self) -> (float, float, float)
@@ -12647,6 +16922,18 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Get the center of the bounding box. THIS METHOD IS NOT THREAD
      |      SAFE.
+     |  
+     |  GetDistinctCellTypes(...)
+     |      GetDistinctCellTypes(self, types:vtkCellTypes) -> None
+     |      C++: virtual void GetDistinctCellTypes(vtkCellTypes *types)
+     |      
+     |      Get a list of types of cells in a dataset. The list consists of
+     |      an array of types (not necessarily in any order), with a single
+     |      entry per type. For example a dataset 5 triangles, 3 lines, and
+     |      100 hexahedra would result a list of three entries, corresponding
+     |      to the types VTK_TRIANGLE, VTK_LINE, and VTK_HEXAHEDRON. THIS
+     |      METHOD IS THREAD SAFE IF FIRST CALLED FROM A SINGLE THREAD AND
+     |      THE DATASET IS NOT MODIFIED
      |  
      |  GetGhostArray(...)
      |      GetGhostArray(self, type:int) -> vtkUnsignedCharArray
@@ -12765,38 +17052,26 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      
      |      Returns true for POINT or CELL, false otherwise
      |  
-     |  UpdateCellGhostArrayCache(...)
-     |      UpdateCellGhostArrayCache(self) -> None
-     |      C++: void UpdateCellGhostArrayCache()
-     |      
-     |      Updates the pointer to the cell ghost array.
-     |  
-     |  UpdatePointGhostArrayCache(...)
-     |      UpdatePointGhostArrayCache(self) -> None
-     |      C++: void UpdatePointGhostArrayCache()
-     |      
-     |      Updates the pointer to the point ghost array.
-     |  
      |  ----------------------------------------------------------------------
      |  Data descriptors inherited from vtkmodules.vtkCommonDataModel.vtkDataSet:
      |  
      |  cell_ghost_array
-     |      read-only, Calls GetCellGhostArray
+     |      read-only, calls GetCellGhostArray
      |  
      |  length2
-     |      read-only, Calls GetLength2
+     |      read-only, calls GetLength2
      |  
      |  m_time
-     |      read-only, Calls GetMTime
+     |      read-only, calls GetMTime
      |  
      |  mesh_m_time
-     |      read-only, Calls GetMeshMTime
+     |      read-only, calls GetMeshMTime
      |  
      |  point_ghost_array
-     |      read-only, Calls GetPointGhostArray
+     |      read-only, calls GetPointGhostArray
      |  
      |  scalar_range
-     |      read-only, Calls GetScalarRange
+     |      read-only, calls GetScalarRange
      |  
      |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from vtkmodules.vtkCommonDataModel.vtkDataSet:
@@ -12916,6 +17191,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |      C++: static vtkInformationIntegerKey *FIELD_ASSOCIATION()
      |      
      |      \ingroup InformationKeys
+     |  
+     |  FIELD_ATTRIBUTE_COMPONENT(...)
+     |      FIELD_ATTRIBUTE_COMPONENT() -> vtkInformationIntegerKey
+     |      C++: static vtkInformationIntegerKey *FIELD_ATTRIBUTE_COMPONENT()
+     |      
+     |      \ingroup InformationKeys
+     |      
+     |      If present, this key specifies an actual or virtual component of
+     |      the array. Virtual components are functions of tuples that
+     |      evaluate to a single number – such as L₁ or L₂ norms.
+     |      
+     |      This takes on values from the vtkArrayComponents enumeration as
+     |      well as non-negative integers.
      |  
      |  FIELD_ATTRIBUTE_TYPE(...)
      |      FIELD_ATTRIBUTE_TYPE() -> vtkInformationIntegerKey
@@ -13173,16 +17461,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  Data descriptors inherited from vtkmodules.vtkCommonDataModel.vtkDataObject:
      |  
      |  data_released
-     |      read-only, Calls GetDataReleased
+     |      read-only, calls GetDataReleased
      |  
      |  global_release_data_flag
-     |      read-write, Calls GetGlobalReleaseDataFlag/SetGlobalReleaseDataFlag
+     |      read-write, calls GetGlobalReleaseDataFlag/SetGlobalReleaseDataFlag
      |  
      |  information
-     |      read-write, Calls GetInformation/SetInformation
+     |      read-write, calls GetInformation/SetInformation
      |  
      |  update_time
-     |      read-only, Calls GetUpdateTime
+     |      read-only, calls GetUpdateTime
      |  
      |  ----------------------------------------------------------------------
      |  Data and other attributes inherited from vtkmodules.vtkCommonDataModel.vtkDataObject:
@@ -13376,16 +17664,16 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  Data descriptors inherited from vtkmodules.vtkCommonCore.vtkObject:
      |  
      |  debug
-     |      read-write, Calls GetDebug/SetDebug
+     |      read-write, calls GetDebug/SetDebug
      |  
      |  global_warning_display
-     |      read-write, Calls GetGlobalWarningDisplay/SetGlobalWarningDisplay
+     |      read-write, calls GetGlobalWarningDisplay/SetGlobalWarningDisplay
      |  
      |  object_description
-     |      read-only, Calls GetObjectDescription
+     |      read-only, calls GetObjectDescription
      |  
      |  object_name
-     |      read-write, Calls GetObjectName/SetObjectName
+     |      read-write, calls GetObjectName/SetObjectName
      |  
      |  ----------------------------------------------------------------------
      |  Methods inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
@@ -13504,19 +17792,19 @@ Now create your own :class:`pyvista.ImageData` from a 3D NumPy array!
      |  Data descriptors inherited from vtkmodules.vtkCommonCore.vtkObjectBase:
      |  
      |  class_name
-     |      read-only, Calls GetClassName
+     |      read-only, calls GetClassName
      |  
      |  is_in_memkind
-     |      read-only, Calls GetIsInMemkind
+     |      read-only, calls GetIsInMemkind
      |  
      |  memkind_directory
-     |      write-only, Calls SetMemkindDirectory
+     |      write-only, calls SetMemkindDirectory
      |  
      |  reference_count
-     |      read-write, Calls GetReferenceCount/SetReferenceCount
+     |      read-write, calls GetReferenceCount/SetReferenceCount
      |  
      |  using_memkind
-     |      read-only, Calls GetUsingMemkind
+     |      read-only, calls GetUsingMemkind
 
 
 
@@ -13719,7 +18007,7 @@ Here's one of these example datasets:
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/c_create-uniform-grid.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/02_mesh/solutions/c_create-uniform-grid.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -13727,7 +18015,7 @@ Here's one of these example datasets:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.845 seconds)
+   **Total running time of the script:** (0 minutes 5.139 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_c_create-uniform-grid.py:
@@ -13739,7 +18027,7 @@ Here's one of these example datasets:
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/c_create-uniform-grid.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/c_create-uniform-grid.ipynb
         :alt: Launch binder
         :width: 150 px
 

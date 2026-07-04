@@ -60,12 +60,12 @@ point labels to a scene.
 
     Help on function add_point_labels in module pyvista.plotting.plotter:
 
-    add_point_labels(self, points, labels, italic=False, bold=True, font_size=None, text_color=None, font_family=None, font_file=None, shadow=False, show_points=True, point_color=None, point_size=None, name=None, shape_color='grey', shape='rounded_rect', fill_shape=True, margin=3, shape_opacity=1.0, pickable=False, render_points_as_spheres=False, tolerance=0.001, reset_camera=None, always_visible=False, render=True, justification_horizontal=None, justification_vertical=None, background_color=None, background_opacity=None)
+    add_point_labels(self, points: 'MatrixLike[float] | VectorLike[float] | DataSet | _vtk.vtkAlgorithm', labels: 'Sequence[str | int] | str', italic: 'bool' = False, bold: 'bool' = True, font_size: 'int | None' = None, text_color: 'ColorLike | None' = None, font_family: 'FontFamilyOptions | None' = None, font_file: 'str | None' = None, shadow: 'bool' = False, show_points: 'bool' = True, point_color: 'ColorLike | None' = None, point_size: 'float | None' = None, name: 'str | None' = None, shape_color: 'ColorLike' = 'grey', shape: "Literal['rect', 'rounded_rect'] | None" = 'rounded_rect', fill_shape: 'bool' = True, margin: 'int' = 3, shape_opacity: 'float' = 1.0, pickable: 'bool' = False, render_points_as_spheres: 'bool' = False, tolerance: 'float' = 0.001, reset_camera: 'bool | None' = None, always_visible: 'bool' = False, render: 'bool' = True, justification_horizontal: 'HorizontalOptions | None' = None, justification_vertical: 'VerticalOptions | None' = None, background_color: 'ColorLike | None' = None, background_opacity: 'float | None' = None) -> '_vtk.vtkActor2D'
         Create a point actor with one label from list labels assigned to each point.
     
         Parameters
         ----------
-        points : sequence | pyvista.DataSet | vtk.vtkAlgorithm
+        points : sequence | DataSet | :vtk:`vtkAlgorithm`
             An ``n x 3`` sequence points or :class:`pyvista.DataSet` with
             points or mesh-producing algorithm.
     
@@ -182,16 +182,20 @@ point labels to a scene.
                 Please use the background color.
                 See: https://github.com/pyvista/pyvista/pull/5407
     
-        background_color : pyvista.Color, optional
+        background_color : Color, optional
             Background color of text's property.
     
-        background_opacity : pyvista.Color, optional
+        background_opacity : float, optional
             Background opacity of text's property.
     
         Returns
         -------
-        vtk.vtkActor2D
+        :vtk:`vtkActor2D`
             VTK label actor.  Can be used to change properties of the labels.
+    
+        See Also
+        --------
+        :ref:`point_labels_example`
     
         Examples
         --------
@@ -261,25 +265,485 @@ node:
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
-    <table style='width: 100%;'><tr><th>Header</th><th>Data Arrays</th></tr><tr><td>
-    <table style='width: 100%;'>
-    <tr><th>PolyData</th><th>Information</th></tr>
-    <tr><td>N Cells</td><td>10</td></tr>
-    <tr><td>N Points</td><td>10</td></tr>
-    <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>1.068e-01, 8.813e-01</td></tr>
-    <tr><td>Y Bounds</td><td>4.452e-02, 8.546e-01</td></tr>
-    <tr><td>Z Bounds</td><td>3.052e-04, 7.851e-01</td></tr>
-    <tr><td>N Arrays</td><td>1</td></tr>
-    </table>
+    <div><style>/* PyVista HTML repr stylesheet.
+     * Uses pv- prefix to avoid conflicts with other libraries.
+     */
 
-    </td><td>
-    <table style='width: 100%;'>
-    <tr><th>Name</th><th>Field</th><th>Type</th><th>N Comp</th><th>Min</th><th>Max</th></tr>
-    <tr><td>My Labels</td><td>Points</td><td><U7</td><td>1</td><td>nan</td><td>nan</td></tr>
-    </table>
+    :root {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-border-color: var(--jp-border-color2, #e0e0e0);
+      --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --pv-badge-active: #1b5e20;
+      --pv-badge-normals: #0d47a1;
+      --pv-badge-vectors: #00695c;
+      --pv-badge-tcoords: #4527a0;
+    }
 
-    </td></tr> </table>
+    body[data-jp-theme-light="false"] {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-border-color: var(--jp-border-color2, #424242);
+      --pv-disabled-color: var(--jp-layout-color3, #616161);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    html[theme="dark"],
+    html[data-theme="dark"],
+    body[data-theme="dark"],
+    body.vscode-dark {
+      --pv-font-color0: rgba(255, 255, 255, 1);
+      --pv-font-color2: rgba(255, 255, 255, 0.54);
+      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-border-color: #424242;
+      --pv-disabled-color: #616161;
+      --pv-background-color-row-even: #1a1a1a;
+      --pv-background-color-row-odd: #252525;
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) {
+        --pv-font-color0: rgba(255, 255, 255, 1);
+        --pv-font-color2: rgba(255, 255, 255, 0.54);
+        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-border-color: #424242;
+        --pv-disabled-color: #616161;
+        --pv-background-color-row-even: #1a1a1a;
+        --pv-background-color-row-odd: #252525;
+        --pv-badge-active: #66bb6a;
+        --pv-badge-normals: #64b5f6;
+        --pv-badge-vectors: #4db6ac;
+        --pv-badge-tcoords: #b39ddb;
+      }
+    }
+
+    .pv-wrap {
+      display: block !important;
+      min-width: 300px;
+      max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
+      font-family: var(--jp-ui-font-family, sans-serif);
+      font-size: var(--jp-ui-font-size1, 13px);
+      color: var(--pv-font-color0);
+    }
+
+    .pv-text-repr-fallback {
+      display: none;
+    }
+
+    /* Header */
+    .pv-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: solid 1px var(--pv-border-color);
+      margin-bottom: 4px;
+    }
+
+    .pv-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .pv-obj-type {
+      font-weight: 600;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-header-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: var(--pv-font-color2);
+      border: 1px solid var(--pv-border-color);
+      white-space: nowrap;
+    }
+
+    /* Metadata (always-visible key-value rows) */
+    .pv-metadata {
+      margin: 4px 0 6px 0;
+      font-size: 0.92em;
+      line-height: 1.5;
+    }
+
+    .pv-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px 14px;
+      padding: 1px 0;
+    }
+
+    .pv-meta-row-label {
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .pv-meta-entry {
+      white-space: nowrap;
+    }
+
+    /* Copy-to-clipboard button */
+    .pv-copy-btn {
+      display: inline-block;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size: 0.85em;
+      padding: 0 3px;
+      vertical-align: middle;
+      transition: opacity 0.15s;
+      user-select: none;
+      border: none;
+      background: none;
+      color: var(--pv-font-color3);
+    }
+
+    .pv-copy-btn:hover {
+      opacity: 1;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-meta-label {
+      color: var(--pv-font-color3);
+      font-weight: 400;
+      padding-right: 2px;
+    }
+
+    /* Sections grid */
+    .pv-sections {
+      padding-left: 0 !important;
+      display: grid;
+      grid-template-columns: 150px auto auto auto 1fr 20px 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      list-style: none;
+    }
+
+    .pv-section-item {
+      display: contents;
+    }
+
+    /* Hidden checkbox for expand/collapse */
+    .pv-section-item > input {
+      display: block;
+      opacity: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .pv-section-item > input + label {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-item > input:enabled + label {
+      cursor: pointer;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-section-item > input:enabled + label:hover {
+      color: var(--pv-font-color0);
+    }
+
+    /* Section summary (left column label) */
+    .pv-section-summary {
+      grid-column: 1;
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pv-section-summary > span {
+      display: inline-block;
+      padding-left: 0.3em;
+    }
+
+    .pv-section-summary-in:disabled + label {
+      color: var(--pv-font-color2);
+    }
+
+    /* Expand/collapse arrows */
+    .pv-section-summary-in + label:before {
+      display: inline-block;
+      content: "\25b6";
+      font-size: 11px;
+      width: 15px;
+      text-align: center;
+    }
+
+    .pv-section-summary-in:disabled + label:before {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-summary-in:checked + label:before {
+      content: "\25bc";
+    }
+
+    .pv-section-summary-in:checked + label > span {
+      display: none;
+    }
+
+    .pv-section-summary,
+    .pv-section-inline-details {
+      padding-top: 4px;
+    }
+
+    .pv-section-inline-details {
+      grid-column: 2 / -1;
+    }
+
+    .pv-section-details {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      margin-bottom: 5px;
+    }
+
+    .pv-section-summary-in ~ .pv-section-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-inline-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details {
+      display: block;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details:has(.pv-var-list) {
+      display: contents;
+    }
+
+    /* Variable (array) list */
+    .pv-var-list,
+    .pv-var-item {
+      display: contents;
+    }
+
+    .pv-var-item > div,
+    .pv-var-item label,
+    .pv-var-item > .pv-var-name span {
+      background-color: var(--pv-background-color-row-even);
+      border-color: var(--pv-background-color-row-odd);
+      margin-bottom: 0;
+      padding-top: 2px;
+    }
+
+    .pv-var-list > li:nth-child(odd) > div,
+    .pv-var-list > li:nth-child(odd) > label,
+    .pv-var-list > li:nth-child(odd) > .pv-var-name span {
+      background-color: var(--pv-background-color-row-odd);
+      border-color: var(--pv-background-color-row-even);
+    }
+
+    .pv-var-name {
+      grid-column: 1;
+    }
+
+    .pv-var-dims {
+      grid-column: 2;
+    }
+
+    .pv-var-dtype {
+      grid-column: 3;
+      text-align: right;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-var-range {
+      grid-column: 4;
+      color: var(--pv-font-color3);
+      font-size: 0.92em;
+    }
+
+    .pv-var-badges {
+      grid-column: 5;
+      padding-left: 8px;
+    }
+
+    .pv-var-name,
+    .pv-var-dims,
+    .pv-var-dtype,
+    .pv-var-range {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+    }
+
+    .pv-var-name:hover,
+    .pv-var-dims:hover,
+    .pv-var-dtype:hover,
+    .pv-var-range:hover {
+      overflow: visible;
+      width: auto;
+      z-index: 1;
+    }
+
+    .pv-var-name span {
+      padding-left: 25px !important;
+    }
+
+    .pv-var-name-active span {
+      font-weight: 600;
+    }
+
+    /* Badges */
+    .pv-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .pv-badge-active {
+      color: var(--pv-badge-active);
+      border: 1px solid var(--pv-badge-active);
+    }
+
+    .pv-badge-normals {
+      color: var(--pv-badge-normals);
+      border: 1px solid var(--pv-badge-normals);
+    }
+
+    .pv-badge-vectors {
+      color: var(--pv-badge-vectors);
+      border: 1px solid var(--pv-badge-vectors);
+    }
+
+    .pv-badge-tcoords {
+      color: var(--pv-badge-tcoords);
+      border: 1px solid var(--pv-badge-tcoords);
+    }
+
+    /* Logo and Icons */
+    .pv-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pv-brand-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-brand-logo svg {
+      height: 20px;
+      width: auto;
+    }
+
+    /* Children list (MultiBlock / PartitionedDataSet) */
+    .pv-children-list {
+      padding-left: 25px !important;
+      list-style: none;
+    }
+
+    .pv-children-list li {
+      padding: 1px 0;
+    }
+
+    .pv-child-name {
+      font-weight: 500;
+    }
+
+    .pv-child-type {
+      color: var(--pv-font-color2);
+      font-style: italic;
+    }
+
+    .pv-child-type:before {
+      content: "\00b7";
+      padding: 0 6px;
+      font-style: normal;
+    }
+
+    .pv-child-detail {
+      color: var(--pv-font-color3);
+      font-size: 0.9em;
+    }
+
+    .pv-child-detail:not(:empty):before {
+      content: "\00b7";
+      padding: 0 6px;
+    }
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f5c0902bb80)
+      N Cells:    10
+      N Points:   10
+      N Strips:   0
+      X Bounds:   4.838e-01, 9.778e-01
+      Y Bounds:   2.003e-01, 9.564e-01
+      Z Bounds:   8.500e-02, 9.836e-01
+      N Arrays:   1</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#376fa0"/>
+        </linearGradient>
+      </defs>
+      <polygon points="6,6 22,4 14,16" fill="#376fa0" opacity="0.9"/>
+      <polygon points="22,4 28,16 14,16" fill="url(#pv-pd-g1)" opacity="0.85"/>
+      <polygon points="6,6 14,16 4,26" fill="#1a4a70" opacity="0.85"/>
+      <polygon points="14,16 28,16 20,28" fill="#376fa0" opacity="0.8"/>
+      <polygon points="4,26 14,16 20,28" fill="#ffd040" opacity="0.8"/>
+      <g stroke="rgba(255,255,255,0.65)" stroke-width="0.6" fill="none">
+        <line x1="6" y1="6" x2="22" y2="4"/>
+        <line x1="22" y1="4" x2="28" y2="16"/>
+        <line x1="28" y1="16" x2="20" y2="28"/>
+        <line x1="20" y1="28" x2="4" y2="26"/>
+        <line x1="4" y1="26" x2="6" y2="6"/>
+        <line x1="6" y1="6" x2="14" y2="16"/>
+        <line x1="22" y1="4" x2="14" y2="16"/>
+        <line x1="28" y1="16" x2="14" y2="16"/>
+        <line x1="14" y1="16" x2="4" y2="26"/>
+        <line x1="14" y1="16" x2="20" y2="28"/>
+      </g>
+      <g fill="rgba(255,255,255,0.85)">
+        <circle cx="6" cy="6" r="1.3"/>
+        <circle cx="22" cy="4" r="1.3"/>
+        <circle cx="28" cy="16" r="1.3"/>
+        <circle cx="14" cy="16" r="1.3"/>
+        <circle cx="20" cy="28" r="1.3"/>
+        <circle cx="4" cy="26" r="1.3"/>
+      </g>
+    </svg>
+    </span><div class='pv-header-text'><div class='pv-obj-type'>PolyData <span class='pv-header-badge'>10 points</span> <span class='pv-header-badge'>10 cells</span> <span class='pv-header-badge'>4 KiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
+      <text x="0" y="18" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" font-style="italic" letter-spacing="-0.5">
+        <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
+      </text>
+    </svg>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.4837889759631404, 0.9778228583645984, 0.20034476733730489, 0.956440619904385, 0.0850042724297082, 0.9835784931916086)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.838e-01, 9.778e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [2.003e-01, 9.564e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [8.500e-02, 9.836e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 10</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-2472203c-b877-446a-abf3-6238585e0c92' class='pv-section-summary-in' type='checkbox' checked /><label for='section-2472203c-b877-446a-abf3-6238585e0c92' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>My Labels</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='My Labels' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>&lt;U7</div><div class='pv-var-range'></div><div class='pv-var-badges'></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -500,7 +964,7 @@ This example will label each point with their scalar values
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/e_labels.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/bonus/e_labels.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -508,7 +972,7 @@ This example will label each point with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.787 seconds)
+   **Total running time of the script:** (0 minutes 0.511 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_e_labels.py:
@@ -520,7 +984,7 @@ This example will label each point with their scalar values
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/e_labels.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/e_labels.ipynb
         :alt: Launch binder
         :width: 150 px
 

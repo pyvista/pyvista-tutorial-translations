@@ -53,7 +53,7 @@ Bonus Content
 
 .. only:: html
 
-  .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_g_orbit_thumb.png
+  .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_g_orbit_thumb.gif
     :alt:
 
   :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`

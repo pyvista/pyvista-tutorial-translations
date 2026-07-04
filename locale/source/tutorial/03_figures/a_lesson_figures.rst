@@ -237,7 +237,7 @@ Take a look at all of the options for `add_mesh <https://docs.pyvista.org/api/pl
 
 The ``add_mesh`` method can be called over and over to add different data to the same ``Plotter`` scene. For example, we can create many different mesh objects and plot them together:
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-74
+.. GENERATED FROM PYTHON SOURCE LINES 48-77
 
 .. code-block:: Python
 
@@ -257,7 +257,10 @@ The ``add_mesh`` method can be called over and over to add different data to the
         (-1, 2, 0),
     ]
 
-    solids = [pv.PlatonicSolid(kind, radius=0.4, center=center) for kind, center in zip(kinds, centers)]
+    solids = [
+        pv.PlatonicSolid(kind, radius=0.4, center=center)
+        for kind, center in zip(kinds, centers, strict=True)
+    ]
 
     pl = pv.Plotter(window_size=[1000, 1000])
     for _ind, solid in enumerate(solids):
@@ -301,14 +304,14 @@ The ``add_mesh`` method can be called over and over to add different data to the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 75-79
+.. GENERATED FROM PYTHON SOURCE LINES 78-82
 
 Subplotting
 +++++++++++
 
 Creating side-by-side comparisons of datasets is easy with PyVista's subplotting API. Get started by specifying the shape of the :class:`pyvista.Plotter` object then registering the active subplot by the :func:`pyvista.Plotter.subplot` method much like how you subplot with Matplotlib's API.
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-89
+.. GENERATED FROM PYTHON SOURCE LINES 82-92
 
 .. code-block:: Python
 
@@ -356,7 +359,7 @@ Creating side-by-side comparisons of datasets is easy with PyVista's subplotting
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-95
+.. GENERATED FROM PYTHON SOURCE LINES 93-98
 
 Below is an example of side-by-side comparisons of the contours and slices of a single dataset.
 
@@ -364,7 +367,7 @@ Below is an example of side-by-side comparisons of the contours and slices of a 
 
    You can link the cameras of both views with the :func:`pyvista.Plotter.link_views` method
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-110
+.. GENERATED FROM PYTHON SOURCE LINES 98-113
 
 .. code-block:: Python
 
@@ -417,14 +420,14 @@ Below is an example of side-by-side comparisons of the contours and slices of a 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-115
+.. GENERATED FROM PYTHON SOURCE LINES 114-118
 
 Axes and Bounds
 +++++++++++++++
 
 Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-124
+.. GENERATED FROM PYTHON SOURCE LINES 118-127
 
 .. code-block:: Python
 
@@ -471,7 +474,7 @@ Axes can be added to the scene with :func:`pyvista.Plotter.show_axes`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-130
+.. GENERATED FROM PYTHON SOURCE LINES 128-133
 
 And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
@@ -479,7 +482,7 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
     See `Plotting Bounds <https://docs.pyvista.org/examples/02-plot/bounds.html>`_ for more details.
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-138
+.. GENERATED FROM PYTHON SOURCE LINES 133-141
 
 .. code-block:: Python
 
@@ -525,12 +528,12 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-146
+.. GENERATED FROM PYTHON SOURCE LINES 142-149
 
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/a_lesson_figures.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/a_lesson_figures.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -538,7 +541,7 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.690 seconds)
+   **Total running time of the script:** (0 minutes 4.068 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_a_lesson_figures.py:
@@ -550,7 +553,7 @@ And bounds similarly with :func:`pyvista.Plotter.show_bounds`
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/a_lesson_figures.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/a_lesson_figures.ipynb
         :alt: Launch binder
         :width: 150 px
 

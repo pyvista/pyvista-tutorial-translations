@@ -56,6 +56,13 @@ a statue as though it were metallic.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:26: UserWarning: download_nefertiti returns a dataset licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
+      mesh = examples.download_nefertiti()
+
 
 
 
@@ -237,6 +244,23 @@ Combine custom lighting and physically based rendering.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:80: PyVistaDeprecationWarning: 
+    /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    From version 0.50, passing these as positional arguments will result in a TypeError.
+      light = pv.Light((-2, 2, 0), (0, 0, 0), "white")
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:83: PyVistaDeprecationWarning: 
+    /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    From version 0.50, passing these as positional arguments will result in a TypeError.
+      light = pv.Light((2, 0, 0), (0, 0, 0), (0.7, 0.0862, 0.0549))
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:86: PyVistaDeprecationWarning: 
+    /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    From version 0.50, passing these as positional arguments will result in a TypeError.
+      light = pv.Light((0, 0, 10), (0, 0, 0), "white")
+
 
 
 
@@ -245,7 +269,7 @@ Combine custom lighting and physically based rendering.
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/bonus/d_pbr.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -253,7 +277,7 @@ Combine custom lighting and physically based rendering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (12 minutes 38.740 seconds)
+   **Total running time of the script:** (1 minutes 16.080 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py:
@@ -265,7 +289,7 @@ Combine custom lighting and physically based rendering.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/bonus/d_pbr.ipynb
         :alt: Launch binder
         :width: 150 px
 

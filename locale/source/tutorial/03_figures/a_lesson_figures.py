@@ -61,7 +61,10 @@ centers = [
     (-1, 2, 0),
 ]
 
-solids = [pv.PlatonicSolid(kind, radius=0.4, center=center) for kind, center in zip(kinds, centers)]
+solids = [
+    pv.PlatonicSolid(kind, radius=0.4, center=center)
+    for kind, center in zip(kinds, centers, strict=True)
+]
 
 pl = pv.Plotter(window_size=[1000, 1000])
 for _ind, solid in enumerate(solids):
@@ -139,7 +142,7 @@ pl.show()
 # .. raw:: html
 #
 #     <center>
-#       <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/a_lesson_figures.ipynb">
+#       <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/a_lesson_figures.ipynb">
 #         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
 #       </a>
 #     </center>

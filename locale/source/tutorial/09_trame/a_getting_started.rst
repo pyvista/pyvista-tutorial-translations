@@ -113,7 +113,7 @@ Now, let's build a simple application that updates the mesh color with the click
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/09_trame/a_getting_started.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/09_trame/a_getting_started.ipynb
         :alt: Launch binder
         :width: 150 px
 

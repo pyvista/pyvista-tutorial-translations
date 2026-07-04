@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-200.75980562, -198.96322193,    1.84158576],
-           [-179.09066119, -198.96322193,    2.77924346],
-           [-155.94340544, -198.96322193,    4.09568802],
-           [-134.51407358, -198.96322193,    5.5909555 ],
-           [-116.82506829, -198.96322193,    6.98278038]])
+    array([[-204.95849119, -200.77838951,    1.63096676],
+           [-182.5993216 , -200.77838951,    2.51543686],
+           [-157.36694697, -200.77838951,    3.86265319],
+           [-138.68921698, -200.77838951,    5.09284776],
+           [-112.78843577, -200.77838951,    7.05340542]])
 
 
 
@@ -227,11 +227,11 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
         >>> squar = squar.rotate_z(45, inplace=False)
         >>> circ0 = pv.Polygon(center=(2, 3, 0), n_sides=30, radius=1)
         >>> circ1 = pv.Polygon(center=(-2, -3, 0), n_sides=30, radius=1)
-        >>> comb = circ0 + circ1 + squar
+        >>> comb = circ0.append_polydata(circ1, squar)
         >>> tess = comb.delaunay_2d(edge_source=comb)
         >>> tess.plot(cpos='xy', show_edges=True)
     
-        See :ref:`triangulated_surface` for more examples using this filter.
+        See :ref:`create_tri_surface_example` for more examples using this filter.
 
 
 
@@ -316,19 +316,485 @@ Clean Edges & Triangulations
 .. raw:: html
 
     <div class="output_subarea output_html rendered_html output_result">
+    <div><style>/* PyVista HTML repr stylesheet.
+     * Uses pv- prefix to avoid conflicts with other libraries.
+     */
 
-    <table style='width: 100%;'>
-    <tr><th>PolyData</th><th>Information</th></tr>
-    <tr><td>N Cells</td><td>100</td></tr>
-    <tr><td>N Points</td><td>100</td></tr>
-    <tr><td>N Strips</td><td>0</td></tr>
-    <tr><td>X Bounds</td><td>4.113e-02, 9.239e+00</td></tr>
-    <tr><td>Y Bounds</td><td>5.016e-03, 9.300e+00</td></tr>
-    <tr><td>Z Bounds</td><td>0.000e+00, 0.000e+00</td></tr>
-    <tr><td>N Arrays</td><td>0</td></tr>
-    </table>
+    :root {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-border-color: var(--jp-border-color2, #e0e0e0);
+      --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+      --pv-badge-active: #1b5e20;
+      --pv-badge-normals: #0d47a1;
+      --pv-badge-vectors: #00695c;
+      --pv-badge-tcoords: #4527a0;
+    }
 
+    body[data-jp-theme-light="false"] {
+      --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-border-color: var(--jp-border-color2, #424242);
+      --pv-disabled-color: var(--jp-layout-color3, #616161);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
 
+    html[theme="dark"],
+    html[data-theme="dark"],
+    body[data-theme="dark"],
+    body.vscode-dark {
+      --pv-font-color0: rgba(255, 255, 255, 1);
+      --pv-font-color2: rgba(255, 255, 255, 0.54);
+      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-border-color: #424242;
+      --pv-disabled-color: #616161;
+      --pv-background-color-row-even: #1a1a1a;
+      --pv-background-color-row-odd: #252525;
+      --pv-badge-active: #66bb6a;
+      --pv-badge-normals: #64b5f6;
+      --pv-badge-vectors: #4db6ac;
+      --pv-badge-tcoords: #b39ddb;
+    }
+
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) {
+        --pv-font-color0: rgba(255, 255, 255, 1);
+        --pv-font-color2: rgba(255, 255, 255, 0.54);
+        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-border-color: #424242;
+        --pv-disabled-color: #616161;
+        --pv-background-color-row-even: #1a1a1a;
+        --pv-background-color-row-odd: #252525;
+        --pv-badge-active: #66bb6a;
+        --pv-badge-normals: #64b5f6;
+        --pv-badge-vectors: #4db6ac;
+        --pv-badge-tcoords: #b39ddb;
+      }
+    }
+
+    .pv-wrap {
+      display: block !important;
+      min-width: 300px;
+      max-width: 700px;
+      line-height: 1.6;
+      padding-bottom: 4px;
+      font-family: var(--jp-ui-font-family, sans-serif);
+      font-size: var(--jp-ui-font-size1, 13px);
+      color: var(--pv-font-color0);
+    }
+
+    .pv-text-repr-fallback {
+      display: none;
+    }
+
+    /* Header */
+    .pv-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border-bottom: solid 1px var(--pv-border-color);
+      margin-bottom: 4px;
+    }
+
+    .pv-header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .pv-obj-type {
+      font-weight: 600;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-header-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      color: var(--pv-font-color2);
+      border: 1px solid var(--pv-border-color);
+      white-space: nowrap;
+    }
+
+    /* Metadata (always-visible key-value rows) */
+    .pv-metadata {
+      margin: 4px 0 6px 0;
+      font-size: 0.92em;
+      line-height: 1.5;
+    }
+
+    .pv-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px 14px;
+      padding: 1px 0;
+    }
+
+    .pv-meta-row-label {
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .pv-meta-entry {
+      white-space: nowrap;
+    }
+
+    /* Copy-to-clipboard button */
+    .pv-copy-btn {
+      display: inline-block;
+      cursor: pointer;
+      opacity: 0.5;
+      font-size: 0.85em;
+      padding: 0 3px;
+      vertical-align: middle;
+      transition: opacity 0.15s;
+      user-select: none;
+      border: none;
+      background: none;
+      color: var(--pv-font-color3);
+    }
+
+    .pv-copy-btn:hover {
+      opacity: 1;
+      color: var(--pv-font-color0);
+    }
+
+    .pv-meta-label {
+      color: var(--pv-font-color3);
+      font-weight: 400;
+      padding-right: 2px;
+    }
+
+    /* Sections grid */
+    .pv-sections {
+      padding-left: 0 !important;
+      display: grid;
+      grid-template-columns: 150px auto auto auto 1fr 20px 20px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      list-style: none;
+    }
+
+    .pv-section-item {
+      display: contents;
+    }
+
+    /* Hidden checkbox for expand/collapse */
+    .pv-section-item > input {
+      display: block;
+      opacity: 0;
+      height: 0;
+      margin: 0;
+    }
+
+    .pv-section-item > input + label {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-item > input:enabled + label {
+      cursor: pointer;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-section-item > input:enabled + label:hover {
+      color: var(--pv-font-color0);
+    }
+
+    /* Section summary (left column label) */
+    .pv-section-summary {
+      grid-column: 1;
+      color: var(--pv-font-color2);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .pv-section-summary > span {
+      display: inline-block;
+      padding-left: 0.3em;
+    }
+
+    .pv-section-summary-in:disabled + label {
+      color: var(--pv-font-color2);
+    }
+
+    /* Expand/collapse arrows */
+    .pv-section-summary-in + label:before {
+      display: inline-block;
+      content: "\25b6";
+      font-size: 11px;
+      width: 15px;
+      text-align: center;
+    }
+
+    .pv-section-summary-in:disabled + label:before {
+      color: var(--pv-disabled-color);
+    }
+
+    .pv-section-summary-in:checked + label:before {
+      content: "\25bc";
+    }
+
+    .pv-section-summary-in:checked + label > span {
+      display: none;
+    }
+
+    .pv-section-summary,
+    .pv-section-inline-details {
+      padding-top: 4px;
+    }
+
+    .pv-section-inline-details {
+      grid-column: 2 / -1;
+    }
+
+    .pv-section-details {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      margin-bottom: 5px;
+    }
+
+    .pv-section-summary-in ~ .pv-section-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-inline-details {
+      display: none;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details {
+      display: block;
+    }
+
+    .pv-section-summary-in:checked ~ .pv-section-details:has(.pv-var-list) {
+      display: contents;
+    }
+
+    /* Variable (array) list */
+    .pv-var-list,
+    .pv-var-item {
+      display: contents;
+    }
+
+    .pv-var-item > div,
+    .pv-var-item label,
+    .pv-var-item > .pv-var-name span {
+      background-color: var(--pv-background-color-row-even);
+      border-color: var(--pv-background-color-row-odd);
+      margin-bottom: 0;
+      padding-top: 2px;
+    }
+
+    .pv-var-list > li:nth-child(odd) > div,
+    .pv-var-list > li:nth-child(odd) > label,
+    .pv-var-list > li:nth-child(odd) > .pv-var-name span {
+      background-color: var(--pv-background-color-row-odd);
+      border-color: var(--pv-background-color-row-even);
+    }
+
+    .pv-var-name {
+      grid-column: 1;
+    }
+
+    .pv-var-dims {
+      grid-column: 2;
+    }
+
+    .pv-var-dtype {
+      grid-column: 3;
+      text-align: right;
+      color: var(--pv-font-color2);
+    }
+
+    .pv-var-range {
+      grid-column: 4;
+      color: var(--pv-font-color3);
+      font-size: 0.92em;
+    }
+
+    .pv-var-badges {
+      grid-column: 5;
+      padding-left: 8px;
+    }
+
+    .pv-var-name,
+    .pv-var-dims,
+    .pv-var-dtype,
+    .pv-var-range {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+    }
+
+    .pv-var-name:hover,
+    .pv-var-dims:hover,
+    .pv-var-dtype:hover,
+    .pv-var-range:hover {
+      overflow: visible;
+      width: auto;
+      z-index: 1;
+    }
+
+    .pv-var-name span {
+      padding-left: 25px !important;
+    }
+
+    .pv-var-name-active span {
+      font-weight: 600;
+    }
+
+    /* Badges */
+    .pv-badge {
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .pv-badge-active {
+      color: var(--pv-badge-active);
+      border: 1px solid var(--pv-badge-active);
+    }
+
+    .pv-badge-normals {
+      color: var(--pv-badge-normals);
+      border: 1px solid var(--pv-badge-normals);
+    }
+
+    .pv-badge-vectors {
+      color: var(--pv-badge-vectors);
+      border: 1px solid var(--pv-badge-vectors);
+    }
+
+    .pv-badge-tcoords {
+      color: var(--pv-badge-tcoords);
+      border: 1px solid var(--pv-badge-tcoords);
+    }
+
+    /* Logo and Icons */
+    .pv-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-logo svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pv-brand-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .pv-brand-logo svg {
+      height: 20px;
+      width: auto;
+    }
+
+    /* Children list (MultiBlock / PartitionedDataSet) */
+    .pv-children-list {
+      padding-left: 25px !important;
+      list-style: none;
+    }
+
+    .pv-children-list li {
+      padding: 1px 0;
+    }
+
+    .pv-child-name {
+      font-weight: 500;
+    }
+
+    .pv-child-type {
+      color: var(--pv-font-color2);
+      font-style: italic;
+    }
+
+    .pv-child-type:before {
+      content: "\00b7";
+      padding: 0 6px;
+      font-style: normal;
+    }
+
+    .pv-child-detail {
+      color: var(--pv-font-color3);
+      font-size: 0.9em;
+    }
+
+    .pv-child-detail:not(:empty):before {
+      content: "\00b7";
+      padding: 0 6px;
+    }
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f5bfc3be380)
+      N Cells:    100
+      N Points:   100
+      N Strips:   0
+      X Bounds:   2.200e-02, 9.283e+00
+      Y Bounds:   8.898e-03, 9.270e+00
+      Z Bounds:   0.000e+00, 0.000e+00
+      N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffd040"/>
+          <stop offset="100%" stop-color="#376fa0"/>
+        </linearGradient>
+      </defs>
+      <polygon points="6,6 22,4 14,16" fill="#376fa0" opacity="0.9"/>
+      <polygon points="22,4 28,16 14,16" fill="url(#pv-pd-g1)" opacity="0.85"/>
+      <polygon points="6,6 14,16 4,26" fill="#1a4a70" opacity="0.85"/>
+      <polygon points="14,16 28,16 20,28" fill="#376fa0" opacity="0.8"/>
+      <polygon points="4,26 14,16 20,28" fill="#ffd040" opacity="0.8"/>
+      <g stroke="rgba(255,255,255,0.65)" stroke-width="0.6" fill="none">
+        <line x1="6" y1="6" x2="22" y2="4"/>
+        <line x1="22" y1="4" x2="28" y2="16"/>
+        <line x1="28" y1="16" x2="20" y2="28"/>
+        <line x1="20" y1="28" x2="4" y2="26"/>
+        <line x1="4" y1="26" x2="6" y2="6"/>
+        <line x1="6" y1="6" x2="14" y2="16"/>
+        <line x1="22" y1="4" x2="14" y2="16"/>
+        <line x1="28" y1="16" x2="14" y2="16"/>
+        <line x1="14" y1="16" x2="4" y2="26"/>
+        <line x1="14" y1="16" x2="20" y2="28"/>
+      </g>
+      <g fill="rgba(255,255,255,0.85)">
+        <circle cx="6" cy="6" r="1.3"/>
+        <circle cx="22" cy="4" r="1.3"/>
+        <circle cx="28" cy="16" r="1.3"/>
+        <circle cx="14" cy="16" r="1.3"/>
+        <circle cx="20" cy="28" r="1.3"/>
+        <circle cx="4" cy="26" r="1.3"/>
+      </g>
+    </svg>
+    </span><div class='pv-header-text'><div class='pv-obj-type'>PolyData <span class='pv-header-badge'>100 points</span> <span class='pv-header-badge'>100 cells</span> <span class='pv-header-badge'>5 KiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
+      <text x="0" y="18" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" font-style="italic" letter-spacing="-0.5">
+        <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
+      </text>
+    </svg>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.021998976392279355, 9.282866671568007, 0.008897900485618504, 9.26970576525666, 0.0, 0.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [2.200e-02, 9.283e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [8.898e-03, 9.270e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 0.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -469,7 +935,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/02_mesh/solutions/d_create-tri-surface.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -477,7 +943,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.979 seconds)
+   **Total running time of the script:** (0 minutes 0.718 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:
@@ -489,7 +955,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/d_create-tri-surface.ipynb
         :alt: Launch binder
         :width: 150 px
 

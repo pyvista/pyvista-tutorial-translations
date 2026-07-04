@@ -159,7 +159,7 @@ And here is a screen capture of a user interacting with this
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/08_widgets/d_multi-slider-widget.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -167,7 +167,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.243 seconds)
+   **Total running time of the script:** (0 minutes 0.171 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_d_multi-slider-widget.py:
@@ -179,7 +179,7 @@ And here is a screen capture of a user interacting with this
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/08_widgets/d_multi-slider-widget.ipynb
         :alt: Launch binder
         :width: 150 px
 

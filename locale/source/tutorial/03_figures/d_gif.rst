@@ -28,7 +28,7 @@ Generate a moving gif from an active plotter.
    Use ``lighting=False`` to reduce the size of the color space to avoid
    "jittery" GIFs, especially for the scalar bar.
 
-.. GENERATED FROM PYTHON SOURCE LINES 13-56
+.. GENERATED FROM PYTHON SOURCE LINES 13-57
 
 .. code-block:: Python
 
@@ -44,12 +44,13 @@ Generate a moving gif from an active plotter.
 
     # Create and structured surface
     grid = pv.StructuredGrid(x, y, z)
+    grid["Height"] = z.ravel()
 
     # Create a plotter object and set the scalars to the Z height
     plotter = pv.Plotter(notebook=False, off_screen=True)
     plotter.add_mesh(
         grid,
-        scalars=z.ravel(),
+        scalars="Height",
         lighting=False,
         show_edges=True,
         scalar_bar_args={"title": "Height"},
@@ -67,7 +68,7 @@ Generate a moving gif from an active plotter.
         z = np.sin(r + phase)
         pts[:, -1] = z.ravel()
         grid.points = pts
-        plotter.update_scalars(z.ravel(), render=False)
+        grid["Height"] = z.ravel()
 
         # Write a frame. This triggers a render.
         plotter.write_frame()
@@ -87,22 +88,15 @@ Generate a moving gif from an active plotter.
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:4989: PyVistaDeprecationWarning: This method is deprecated and will be removed in a future version of PyVista. Directly modify the scalars of a mesh in-place instead.
-      warnings.warn(
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 57-64
+.. GENERATED FROM PYTHON SOURCE LINES 58-65
 
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/d_gif.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/d_gif.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -110,7 +104,7 @@ Generate a moving gif from an active plotter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.112 seconds)
+   **Total running time of the script:** (0 minutes 2.062 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_d_gif.py:
@@ -122,7 +116,7 @@ Generate a moving gif from an active plotter.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/d_gif.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/d_gif.ipynb
         :alt: Launch binder
         :width: 150 px
 

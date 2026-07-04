@@ -193,7 +193,7 @@ pass the entire cell on through the boundary.
 
 This option is available for :func:`pyvista.DataSetFilters.clip`,
 :func:`pyvista.DataSetFilters.clip_box`, and
-:func:`pyvista.DataSetFilters.clip_sruface`, but not available when clipping
+:func:`pyvista.DataSetFilters.clip_surface`, but not available when clipping
 by scalar in :func:`pyvista.DataSetFilters.clip_scalar`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 110-114
@@ -262,7 +262,7 @@ Plot comparison
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/04_filters/exercises/b_clipping.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/04_filters/exercises/b_clipping.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -277,7 +277,7 @@ Plot comparison
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/04_filters/exercises/b_clipping.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/04_filters/exercises/b_clipping.ipynb
         :alt: Launch binder
         :width: 150 px
 

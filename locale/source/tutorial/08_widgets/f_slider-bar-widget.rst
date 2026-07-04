@@ -115,8 +115,10 @@ After interacting with the scene, the threshold mesh is available as:
 
  .. code-block:: none
 
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/f_slider-bar-widget.py:32: PyVistaDeprecationWarning: ``Plotter.threshold_meshes`` is deprecated; use ``Plotter.widgets.threshold_meshes`` instead.
+      pl.threshold_meshes
 
-    [UnstructuredGrid (0x7feed6705b40)
+    [UnstructuredGrid (0x7f5be07400a0)
       N Cells:    295424
       N Points:   394455
       X Bounds:   3.615e+01, 1.178e+02
@@ -203,7 +205,7 @@ And here is a screen capture of a user interacting with this
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/08_widgets/f_slider-bar-widget.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -211,7 +213,7 @@ And here is a screen capture of a user interacting with this
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.080 seconds)
+   **Total running time of the script:** (0 minutes 2.554 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_f_slider-bar-widget.py:
@@ -223,7 +225,7 @@ And here is a screen capture of a user interacting with this
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/08_widgets/f_slider-bar-widget.ipynb
         :alt: Launch binder
         :width: 150 px
 

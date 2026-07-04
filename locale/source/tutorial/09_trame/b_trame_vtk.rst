@@ -100,7 +100,7 @@ parameters of the VTK filter.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/09_trame/b_trame_vtk.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/09_trame/b_trame_vtk.ipynb
         :alt: Launch binder
         :width: 150 px
 

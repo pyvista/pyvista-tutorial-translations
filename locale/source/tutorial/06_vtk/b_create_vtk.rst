@@ -89,7 +89,7 @@ Add point data
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkImageData(0x5615f81f39a0) at 0x7feee5beee60>
+    <vtkmodules.vtkCommonDataModel.vtkImageData(0x562417c25a10) at 0x7f5c0a4dbd00>
 
 
 
@@ -176,7 +176,7 @@ Create ``vtkStructuredGrid``
  .. code-block:: none
 
 
-    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x5615ee22a5b0) at 0x7feee5650ee0>
+    <vtkmodules.vtkCommonDataModel.vtkStructuredGrid(0x56241b7aecb0) at 0x7f5bea9af5e0>
 
 
 
@@ -255,7 +255,7 @@ Plot with PyVista for simplicity
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/b_create_vtk.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/06_vtk/b_create_vtk.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -263,7 +263,7 @@ Plot with PyVista for simplicity
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.586 seconds)
+   **Total running time of the script:** (0 minutes 0.405 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_b_create_vtk.py:
@@ -275,7 +275,7 @@ Plot with PyVista for simplicity
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/06_vtk/b_create_vtk.ipynb
         :alt: Launch binder
         :width: 150 px
 

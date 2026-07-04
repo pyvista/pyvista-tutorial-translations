@@ -94,7 +94,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
 
     Help on method add_mesh in module pyvista.plotting.plotter:
 
-    add_mesh(mesh, color=None, style=None, scalars=None, clim=None, show_edges=None, edge_color=None, point_size=None, line_width=None, opacity=None, flip_scalars=False, lighting=None, n_colors=256, interpolate_before_map=None, cmap=None, label=None, reset_camera=None, scalar_bar_args=None, show_scalar_bar=None, multi_colors=False, name=None, texture=None, render_points_as_spheres=None, render_lines_as_tubes=None, smooth_shading=None, split_sharp_edges=None, ambient=None, diffuse=None, specular=None, specular_power=None, nan_color=None, nan_opacity=1.0, culling=None, rgb=None, categories=False, silhouette=None, use_transparency=False, below_color=None, above_color=None, annotations=None, pickable=True, preference='point', log_scale=False, pbr=None, metallic=None, roughness=None, render=True, user_matrix=None, component=None, emissive=None, copy_mesh=False, backface_params=None, show_vertices=None, edge_opacity=None, **kwargs) -> 'Actor' method of pyvista.plotting.plotter.Plotter instance
+    add_mesh(mesh: 'MatrixLike[float] | PlottableType | _vtk.vtkAlgorithm', color: 'ColorLike | None' = None, style: 'StyleOptions | None' = None, scalars: 'str | NumpyArray[float] | None' = None, clim: 'Sequence[float] | None' = None, show_edges: 'bool | None' = None, edge_color: 'ColorLike | None' = None, point_size: 'float | None' = None, line_width: 'float | None' = None, opacity: 'float | OpacityOptions | Sequence[float] | None' = None, flip_scalars: 'bool' = False, lighting: 'bool | None' = None, n_colors: 'int' = 256, interpolate_before_map: 'bool | None' = None, cmap: 'ColormapOptions | LookupTable | None' = None, label: 'str | None' = None, reset_camera: 'bool | None' = None, scalar_bar_args: 'ScalarBarArgs | None' = None, show_scalar_bar: 'bool | None' = None, multi_colors: 'bool' = False, name: 'str | None' = None, texture: 'Texture | NumpyArray[float] | None' = None, render_points_as_spheres: 'bool | None' = None, point_shape: 'PointSpriteShape | str | None' = None, render_lines_as_tubes: 'bool | None' = None, smooth_shading: 'bool | None' = None, split_sharp_edges: 'bool | None' = None, ambient: 'float | None' = None, diffuse: 'float | None' = None, specular: 'float | None' = None, specular_power: 'float | None' = None, nan_color: 'ColorLike | None' = None, nan_opacity: 'float' = 1.0, culling: 'CullingOptions | bool | None' = None, rgb: 'bool | None' = None, categories: 'bool' = False, silhouette: 'SilhouetteArgs | bool | None' = None, use_transparency: 'bool' = False, below_color: 'ColorLike | None' = None, above_color: 'ColorLike | None' = None, annotations: 'dict[float, str] | None' = None, pickable: 'bool' = True, preference: 'PointLiteral | CellLiteral' = 'point', log_scale: 'bool' = False, pbr: 'bool | None' = None, metallic: 'float | None' = None, roughness: 'float | None' = None, render: 'bool' = True, user_matrix: 'TransformLike | None' = None, component: 'int | None' = None, emissive: 'bool | None' = None, copy_mesh: 'bool' = False, backface_params: 'BackfaceArgs | Property | None' = None, show_vertices: 'bool | None' = None, edge_opacity: 'float | None' = None, remove_existing_actor: 'bool | None' = None, force_opaque: 'bool' = False, **kwargs) -> 'Actor' method of pyvista.plotting.plotter.Plotter instance
         Add any PyVista/VTK mesh or dataset that PyVista can wrap to the scene.
     
         This method is using a mesh representation to view the surfaces
@@ -106,14 +106,18 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
     
         Parameters
         ----------
-        mesh : pyvista.DataSet or pyvista.MultiBlock or vtk.vtkAlgorithm
+        mesh : DataSet | MultiBlock | :vtk:`vtkAlgorithm` | str | Path
             Any PyVista or VTK mesh is supported. Also, any dataset
             that :func:`pyvista.wrap` can handle including NumPy
             arrays of XYZ points. Plotting also supports VTK algorithm
-            objects (``vtk.vtkAlgorithm`` and ``vtk.vtkAlgorithmOutput``).
+            objects (:vtk:`vtkAlgorithm` and :vtk:`vtkAlgorithmOutput`).
             When passing an algorithm, the rendering pipeline will be
             connected to the passed algorithm to dynamically update
-            the scene.
+            the scene (see :ref:`plotting_algorithms_example` for examples).
+    
+            .. versionadded:: 0.47
+    
+                Support adding a mesh directly from file.
     
         color : ColorLike, optional
             Use to make the entire mesh have a single solid color.
@@ -141,6 +145,16 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             ``color`` and ``scalars`` are ``None``, then the active
             scalars are used.
     
+            When a raw numpy array is passed, it is attached to
+            ``mesh`` under a generated name (typically
+            ``pyvista.DEFAULT_SCALARS_NAME`` or
+            ``Data-<n>`` if that name is taken). This makes the
+            array visible to downstream pipeline stages (for example
+            smooth-shading surface extraction) and lets callers
+            later mutate it via ``mesh[name] = ...`` to update the
+            render. Mutation is scoped to raw-numpy inputs only.
+            Passing ``scalars=<str>`` never modifies the mesh.
+    
         clim : sequence[float], optional
             Two item color bar range for scalars.  Defaults to minimum and
             maximum of scalars array.  Example: ``[-1, 2]``. ``rng`` is
@@ -165,7 +179,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             Thickness of lines.  Only valid for wireframe and surface
             representations.  Default ``None``.
     
-        opacity : float | str| array_like
+        opacity : float | str | array_like
             Opacity of the mesh. If a single float value is given, it
             will be the global opacity of the mesh and uniformly
             applied everywhere - should be between 0 and 1. A string
@@ -195,9 +209,11 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             mapped colors which can result is showing colors that are
             not present in the color map.
     
-        cmap : str | list | pyvista.LookupTable, default: :attr:`pyvista.plotting.themes.Theme.cmap`
+        cmap : str | list | LookupTable, default: :attr:`pyvista.plotting.themes.Theme.cmap`
             If a string, this is the name of the ``matplotlib`` colormap to use
-            when mapping the ``scalars``.  See available Matplotlib colormaps.
+            when mapping the ``scalars``. See :ref:`named_colormaps` for supported
+            colormaps.
+    
             Only applicable for when displaying ``scalars``.
             ``colormap`` is also an accepted alias
             for this. If ``colorcet`` or ``cmocean`` are installed, their
@@ -252,6 +268,17 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
     
         render_points_as_spheres : bool, optional
             Render points as spheres rather than dots.
+    
+        point_shape : PointSpriteShape | str, optional
+            Render points as a custom sprite shape instead of squares.
+            Accepts a :class:`pyvista.plotting.opts.PointSpriteShape`
+            enum value or a string. Must be one of ``'circle'``,
+            ``'triangle'``, ``'hexagon'``, ``'diamond'``, ``'asterisk'``,
+            or ``'star'``. Requires ``style='points'``. If
+            ``render_points_as_spheres`` is ``True`` (explicitly or via
+            theme), it will be automatically disabled with a warning.
+    
+            .. versionadded:: 0.48
     
         render_lines_as_tubes : bool, optional
             Show lines as thick tubes rather than flat lines.  Control
@@ -380,7 +407,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         render : bool, default: True
             Force a render when ``True``.
     
-        user_matrix : np.ndarray | vtk.vtkMatrix4x4, default: np.eye(4)
+        user_matrix : TransformLike, default: np.eye(4)
             Matrix passed to the Actor class before rendering. This affects the
             actor/rendering only, not the input volume itself. The user matrix is the
             last transformation applied to the actor before rendering. Defaults to the
@@ -389,7 +416,8 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         component : int, optional
             Set component of vector valued scalars to plot.  Must be
             nonnegative, if supplied. If ``None``, the magnitude of
-            the vector is plotted.
+            the vector is plotted. See :ref:`vector_component_example`
+            for examples.
     
         emissive : bool, optional
             Treat the points/splats as emissive light sources. Only valid for
@@ -404,9 +432,9 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             have these updates rendered, e.g. by changing the active scalars or
             through an interactive widget. This should only be set to ``True``
             with caution. Defaults to ``False``. This is ignored if the input
-            is a ``vtkAlgorithm`` subclass.
+            is a :vtk:`vtkAlgorithm` subclass.
     
-        backface_params : dict | pyvista.Property, optional
+        backface_params : dict | Property, optional
             A :class:`pyvista.Property` or a dict of parameters to use for
             backface rendering. This is useful for instance when the inside of
             oriented surfaces has a different color than the outside. When a
@@ -426,6 +454,8 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             * ``vertex_style`` - Change style to ``'points_gaussian'``
             * ``vertex_opacity`` - Control the opacity of the vertices
     
+            See :ref:`vertices_example` for examples.
+    
         edge_opacity : float, optional
             Edge opacity of the mesh. A single float value that will be applied globally
             edge opacity of the mesh and uniformly applied everywhere - should be
@@ -435,6 +465,20 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
                 `edge_opacity` uses ``SetEdgeOpacity`` as the underlying method which
                 requires VTK version 9.3 or higher. If ``SetEdgeOpacity`` is not
                 available, `edge_opacity` is set to 1.
+    
+        remove_existing_actor : bool, optional
+            Remove any existing actor in the renderer with the same name before adding
+            this actor. By default, this is ``True`` when ``name`` is provided, and
+            ``False`` when ``name`` is ``None``. Set to ``False`` to improve performance
+            when adding multiple named actors, particularly during initial scene setup
+            where no actors exist yet.
+    
+        force_opaque : bool, default: False
+            Whether to force the returned actor to be opaque. Can be useful for web visualization
+            with ``culling = "front"`` and ``opacity`` smaller than 1.
+            See https://github.com/Kitware/trame-vtk/issues/105 for more details.
+    
+            .. versionadded:: 0.48
     
         **kwargs : dict, optional
             Optional keyword arguments.
@@ -452,9 +496,9 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         >>> import pyvista as pv
         >>> sphere = pv.Sphere()
         >>> sphere['Data'] = sphere.points[:, 2]
-        >>> plotter = pv.Plotter()
-        >>> _ = plotter.add_mesh(sphere, scalar_bar_args={'title': 'Z Position'})
-        >>> plotter.show()
+        >>> pl = pv.Plotter()
+        >>> _ = pl.add_mesh(sphere, scalar_bar_args={'title': 'Z Position'})
+        >>> pl.show()
     
         Plot using RGB on a single cell.  Note that since the number of
         points and the number of cells are identical, we have to pass
@@ -478,32 +522,32 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         ...     [0, 0, 255],
         ...     [255, 0, 0],
         ... ]
-        >>> plotter = pv.Plotter()
-        >>> _ = plotter.add_mesh(
+        >>> pl = pv.Plotter()
+        >>> _ = pl.add_mesh(
         ...     mesh,
         ...     scalars='colors',
         ...     lighting=False,
         ...     rgb=True,
         ...     preference='cell',
         ... )
-        >>> plotter.camera_position = 'xy'
-        >>> plotter.show()
+        >>> pl.camera_position = 'xy'
+        >>> pl.show()
     
         Note how this varies from ``preference=='point'``.  This is
         because each point is now being individually colored, versus
         in ``preference=='point'``, each cell face is individually
         colored.
     
-        >>> plotter = pv.Plotter()
-        >>> _ = plotter.add_mesh(
+        >>> pl = pv.Plotter()
+        >>> _ = pl.add_mesh(
         ...     mesh,
         ...     scalars='colors',
         ...     lighting=False,
         ...     rgb=True,
         ...     preference='point',
         ... )
-        >>> plotter.camera_position = 'xy'
-        >>> plotter.show()
+        >>> pl.camera_position = 'xy'
+        >>> pl.show()
     
         Plot a plane with a constant color and vary its opacity by point.
     
@@ -831,7 +875,7 @@ There you go! Those are a few of the most commonly used display options!
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/03_figures/solutions/a_display_options.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/03_figures/solutions/a_display_options.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -839,7 +883,7 @@ There you go! Those are a few of the most commonly used display options!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.177 seconds)
+   **Total running time of the script:** (0 minutes 1.979 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py:
@@ -851,7 +895,7 @@ There you go! Those are a few of the most commonly used display options!
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/a_display_options.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/03_figures/solutions/a_display_options.ipynb
         :alt: Launch binder
         :width: 150 px
 

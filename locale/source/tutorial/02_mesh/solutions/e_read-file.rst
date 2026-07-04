@@ -65,7 +65,7 @@ airplane mesh.
 
     Help on function read in module pyvista.core.utilities.fileio:
 
-    read(filename: 'PathStrSeq', force_ext: 'str | None' = None, file_format: 'str | None' = None, progress_bar: 'bool' = False) -> 'DataObject'
+    read(filename: 'PathStrSeq', force_ext: 'str | None' = None, file_format: 'str | None' = None, progress_bar: 'bool' = False, *, cls: 'type[DataObject] | None' = None, validate: 'bool | None' = None) -> 'DataObject'
         Read any file type supported by ``vtk`` or ``meshio``.
     
         Automatically determines the correct reader to use then wraps the
@@ -73,7 +73,15 @@ airplane mesh.
         readers first then tries to use ``meshio``. :py:mod:`Pickled<pickle>`
         meshes (``'.pkl'`` or ``'.pickle'``) are also supported.
     
+        Remote URIs (``https://``, ``s3://``, etc.) are downloaded to a
+        temporary file automatically.  Install ``fsspec`` for full protocol
+        support (``pip install pyvista[io]``); ``pooch`` is used as a
+        fallback for HTTP(S).  Third-party reader plugins registered via
+        :func:`pyvista.register_reader` are also checked.
+    
         See :func:`pyvista.get_reader` for list of vtk formats supported.
+    
+        .. include:: /api/utilities/mesh_io.rst
     
         .. note::
            See https://github.com/nschloe/meshio for formats supported by
@@ -113,10 +121,29 @@ airplane mesh.
         progress_bar : bool, default: False
             Optionally show a progress bar. Ignored when using ``meshio``.
     
+        cls : type, optional
+            Expected concrete type of the returned mesh. When given, the
+            result is checked with :func:`isinstance` and a
+            :class:`TypeError` is raised on mismatch. Static type checkers
+            (``mypy``, ``pyright``) use this to narrow the return type to
+            ``cls`` directly, so callers do not need ``typing.cast`` or a
+            manual ``assert isinstance`` to access subclass-specific
+            attributes, e.g. ``pv.read('file.vtu', cls=pv.UnstructuredGrid)``.
+    
+        validate : bool, optional
+            Forwarded to :func:`pyvista.wrap` as the ``validate`` keyword when
+            using a ``vtk`` reader. When ``None`` (the default), honors
+            :attr:`pyvista.core.config.Config.validate_on_wrap`. Pass ``False`` to
+            skip the cheap array-length sanity check on very large trusted
+            files. Has no effect for ``meshio`` or pickle code paths.
+    
+            .. versionadded:: 0.48
+    
         Returns
         -------
-        pyvista.DataSet
-            Wrapped PyVista dataset.
+        pyvista.DataSet | pyvista.MultiBlock
+            Wrapped PyVista dataset. When ``cls`` is given, an instance of
+            ``cls`` is returned instead.
     
         Examples
         --------
@@ -126,6 +153,12 @@ airplane mesh.
         >>> from pyvista import examples
         >>> mesh = pv.read(examples.antfile)
         >>> mesh.plot(cpos='xz')
+    
+        Narrow the return type to a specific class. This avoids the need for
+        a manual ``cast`` when working with type checkers such as ``mypy``
+        or ``pyright``.
+    
+        >>> mesh = pv.read('mesh.vtu', cls=pv.UnstructuredGrid)  # doctest:+SKIP
     
         Load a vtk file.
     
@@ -152,7 +185,7 @@ extensions are listed in an internal function:
 
 .. code-block:: Python
 
-    help(pv.core.utilities.reader.get_reader)
+    help(pv.get_reader)
 
 
 
@@ -170,133 +203,7 @@ extensions are listed in an internal function:
     
         Supported file types and Readers:
     
-        +----------------+---------------------------------------------+
-        | File Extension | Class                                       |
-        +================+=============================================+
-        | ``.bmp``       | :class:`pyvista.BMPReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.cas``       | :class:`pyvista.FluentReader`               |
-        +----------------+---------------------------------------------+
-        | ``.case``      | :class:`pyvista.EnSightReader`              |
-        +----------------+---------------------------------------------+
-        | ``.cgns``      | :class:`pyvista.CGNSReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.cube``      | :class:`pyvista.GaussianCubeReader`         |
-        +----------------+---------------------------------------------+
-        | ``.dat``       | :class:`pyvista.TecplotReader`              |
-        +----------------+---------------------------------------------+
-        | ``.dcm``       | :class:`pyvista.DICOMReader`                |
-        +----------------+---------------------------------------------+
-        | ``.dem``       | :class:`pyvista.DEMReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.e``         | :class:`pyvista.ExodusIIReader`             |
-        +----------------+---------------------------------------------+
-        | ``.exo``       | :class:`pyvista.ExodusIIReader`             |
-        +----------------+---------------------------------------------+
-        | ``.exii``      | :class:`pyvista.ExodusIIReader`             |
-        +----------------+---------------------------------------------+
-        | ``.ex2``       | :class:`pyvista.ExodusIIReader`             |
-        +----------------+---------------------------------------------+
-        | ``.facet``     | :class:`pyvista.FacetReader`                |
-        +----------------+---------------------------------------------+
-        | ``.foam``      | :class:`pyvista.POpenFOAMReader`            |
-        +----------------+---------------------------------------------+
-        | ``.g``         | :class:`pyvista.BYUReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.gif``       | :class:`pyvista.GIFReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.glb``       | :class:`pyvista.GLTFReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.gltf``      | :class:`pyvista.GLTFReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.hdf``       | :class:`pyvista.HDFReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.img``       | :class:`pyvista.DICOMReader`                |
-        +----------------+---------------------------------------------+
-        | ``.inp``       | :class:`pyvista.AVSucdReader`               |
-        +----------------+---------------------------------------------+
-        | ``.jpg``       | :class:`pyvista.JPEGReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.jpeg``      | :class:`pyvista.JPEGReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.hdr``       | :class:`pyvista.HDRReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.mha``       | :class:`pyvista.MetaImageReader`            |
-        +----------------+---------------------------------------------+
-        | ``.mhd``       | :class:`pyvista.MetaImageReader`            |
-        +----------------+---------------------------------------------+
-        | ``.nek5000``   | :class:`pyvista.Nek5000Reader`              |
-        +----------------+---------------------------------------------+
-        | ``.nii``       | :class:`pyvista.NIFTIReader`                |
-        +----------------+---------------------------------------------+
-        | ``.nii.gz``    | :class:`pyvista.NIFTIReader`                |
-        +----------------+---------------------------------------------+
-        | ``.nhdr``      | :class:`pyvista.NRRDReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.nrrd``      | :class:`pyvista.NRRDReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.obj``       | :class:`pyvista.OBJReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.p3d``       | :class:`pyvista.Plot3DMetaReader`           |
-        +----------------+---------------------------------------------+
-        | ``.ply``       | :class:`pyvista.PLYReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.png``       | :class:`pyvista.PNGReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.pnm``       | :class:`pyvista.PNMReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.pts``       | :class:`pyvista.PTSReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.pvd``       | :class:`pyvista.PVDReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.pvti``      | :class:`pyvista.XMLPImageDataReader`        |
-        +----------------+---------------------------------------------+
-        | ``.pvtk``      | :class:`pyvista.VTKPDataSetReader`          |
-        +----------------+---------------------------------------------+
-        | ``.pvtr``      | :class:`pyvista.XMLPRectilinearGridReader`  |
-        +----------------+---------------------------------------------+
-        | ``.pvtu``      | :class:`pyvista.XMLPUnstructuredGridReader` |
-        +----------------+---------------------------------------------+
-        | ``.res``       | :class:`pyvista.MFIXReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.segy``      | :class:`pyvista.SegYReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.sgy``       | :class:`pyvista.SegYReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.slc``       | :class:`pyvista.SLCReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.stl``       | :class:`pyvista.STLReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.tif``       | :class:`pyvista.TIFFReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.tiff``      | :class:`pyvista.TIFFReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.tri``       | :class:`pyvista.BinaryMarchingCubesReader`  |
-        +----------------+---------------------------------------------+
-        | ``.vrt``       | :class:`pyvista.ProStarReader`              |
-        +----------------+---------------------------------------------+
-        | ``.vti``       | :class:`pyvista.XMLImageDataReader`         |
-        +----------------+---------------------------------------------+
-        | ``.vtk``       | :class:`pyvista.VTKDataSetReader`           |
-        +----------------+---------------------------------------------+
-        | ``.vtkhdf``    | :class:`pyvista.HDFReader`                  |
-        +----------------+---------------------------------------------+
-        | ``.vtm``       | :class:`pyvista.XMLMultiBlockDataReader`    |
-        +----------------+---------------------------------------------+
-        | ``.vtmb``      | :class:`pyvista.XMLMultiBlockDataReader`    |
-        +----------------+---------------------------------------------+
-        | ``.vtp``       | :class:`pyvista.XMLPolyDataReader`          |
-        +----------------+---------------------------------------------+
-        | ``.vtr``       | :class:`pyvista.XMLRectilinearGridReader`   |
-        +----------------+---------------------------------------------+
-        | ``.vts``       | :class:`pyvista.XMLStructuredGridReader`    |
-        +----------------+---------------------------------------------+
-        | ``.vtu``       | :class:`pyvista.XMLUnstructuredGridReader`  |
-        +----------------+---------------------------------------------+
-        | ``.xdmf``      | :class:`pyvista.XdmfReader`                 |
-        +----------------+---------------------------------------------+
-        | ``.vtpd``      | :class:`pyvista.XMLPartitionedDataSetReader`|
-        +----------------+---------------------------------------------+
+        .. include:: /api/readers/readers_table.rst
     
         Parameters
         ----------
@@ -354,7 +261,7 @@ file, displays an airplane mesh and returns the camera's position:
  .. code-block:: none
 
 
-    '/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/examples/airplane.ply'
+    '/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/pyvista/examples/airplane.ply'
 
 
 
@@ -691,7 +598,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/02_mesh/solutions/e_read-file.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/02_mesh/solutions/e_read-file.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -699,7 +606,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.354 seconds)
+   **Total running time of the script:** (0 minutes 3.372 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py:
@@ -711,7 +618,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/e_read-file.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/02_mesh/solutions/e_read-file.ipynb
         :alt: Launch binder
         :width: 150 px
 

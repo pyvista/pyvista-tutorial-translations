@@ -98,8 +98,10 @@ After interacting with the scene, the clipped mesh is available as:
 
  .. code-block:: none
 
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/e_plane-widget.py:29: PyVistaDeprecationWarning: ``Plotter.plane_clipped_meshes`` is deprecated; use ``Plotter.widgets.plane_clipped_meshes`` instead.
+      pl.plane_clipped_meshes
 
-    [UnstructuredGrid (0x7feed6a018a0)
+    [UnstructuredGrid (0x7f5be0699180)
       N Cells:    3538080
       N Points:   3613484
       X Bounds:   9.000e+01, 1.800e+02
@@ -179,8 +181,10 @@ After interacting with the scene, the slice is available as:
 
  .. code-block:: none
 
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/e_plane-widget.py:44: PyVistaDeprecationWarning: ``Plotter.plane_sliced_meshes`` is deprecated; use ``Plotter.widgets.plane_sliced_meshes`` instead.
+      pl.plane_sliced_meshes
 
-    [PolyData (0x7feef4be9f00)
+    [PolyData (0x7f5be0699540)
       N Cells:    38880
       N Points:   39277
       N Strips:   0
@@ -430,7 +434,7 @@ the ``InteractionEvent`` observer:
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/e_plane-widget.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/08_widgets/e_plane-widget.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -438,7 +442,7 @@ the ``InteractionEvent`` observer:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.443 seconds)
+   **Total running time of the script:** (0 minutes 10.729 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_e_plane-widget.py:
@@ -450,7 +454,7 @@ the ``InteractionEvent`` observer:
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/e_plane-widget.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/08_widgets/e_plane-widget.ipynb
         :alt: Launch binder
         :width: 150 px
 

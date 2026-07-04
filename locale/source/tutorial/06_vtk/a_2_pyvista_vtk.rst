@@ -291,7 +291,7 @@ Use PyVista to plot
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/06_vtk/a_2_pyvista_vtk.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -299,7 +299,7 @@ Use PyVista to plot
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.275 seconds)
+   **Total running time of the script:** (0 minutes 1.781 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_a_2_pyvista_vtk.py:
@@ -311,7 +311,7 @@ Use PyVista to plot
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/06_vtk/a_2_pyvista_vtk.ipynb
         :alt: Launch binder
         :width: 150 px
 

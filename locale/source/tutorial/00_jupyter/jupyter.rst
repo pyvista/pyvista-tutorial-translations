@@ -133,9 +133,9 @@ Client-side rendering only (in browser)
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:6959: UserWarning: Not within a jupyter notebook environment.
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/00_jupyter/jupyter.py:25: UserWarning: Not within a jupyter notebook environment.
     Ignoring ``jupyter_backend``.
-      warnings.warn(
+      pl.show(jupyter_backend="client")
 
 
 
@@ -188,9 +188,9 @@ Server-side rendering only
 
  .. code-block:: none
 
-    /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages/pyvista/plotting/plotter.py:6959: UserWarning: Not within a jupyter notebook environment.
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/00_jupyter/jupyter.py:33: UserWarning: Not within a jupyter notebook environment.
     Ignoring ``jupyter_backend``.
-      warnings.warn(
+      pl.show(jupyter_backend="server")
 
 
 
@@ -200,7 +200,7 @@ Server-side rendering only
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/00_jupyter/jupyter.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/00_jupyter/jupyter.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -208,7 +208,7 @@ Server-side rendering only
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.909 seconds)
+   **Total running time of the script:** (0 minutes 1.528 seconds)
 
 
 .. _sphx_glr_download_tutorial_00_jupyter_jupyter.py:
@@ -220,7 +220,7 @@ Server-side rendering only
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/00_jupyter/jupyter.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/00_jupyter/jupyter.ipynb
         :alt: Launch binder
         :width: 150 px
 

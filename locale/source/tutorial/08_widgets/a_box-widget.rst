@@ -51,6 +51,13 @@ scene with a box widget that controls its extent, the
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:25: UserWarning: download_nefertiti returns a dataset licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
+      mesh = examples.download_nefertiti()
+
 
 
 
@@ -116,8 +123,10 @@ After interacting with the scene, the clipped mesh is available as:
 
  .. code-block:: none
 
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:36: PyVistaDeprecationWarning: ``Plotter.box_clipped_meshes`` is deprecated; use ``Plotter.widgets.box_clipped_meshes`` instead.
+      pl.box_clipped_meshes
 
-    [UnstructuredGrid (0x7feed432ad40)
+    [UnstructuredGrid (0x7f5bea9c26e0)
       N Cells:    2018232
       N Points:   1009118
       X Bounds:   -1.194e+02, 1.194e+02
@@ -132,7 +141,7 @@ After interacting with the scene, the clipped mesh is available as:
 .. raw:: html
 
     <center>
-      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/gh-pages/notebooks/tutorial/08_widgets/a_box-widget.ipynb">
+      <a target="_blank" href="https://colab.research.google.com/github/pyvista/pyvista-tutorial/blob/tutorial/notebooks/08_widgets/a_box-widget.ipynb">
         <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ width="150px">
       </a>
     </center>
@@ -140,7 +149,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.085 seconds)
+   **Total running time of the script:** (0 minutes 12.784 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:
@@ -152,7 +161,7 @@ After interacting with the scene, the clipped mesh is available as:
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/gh-pages?urlpath=lab/tree/notebooks/tutorial/08_widgets/a_box-widget.ipynb
+        :target: https://mybinder.org/v2/gh/pyvista/pyvista-tutorial/tutorial?urlpath=lab/tree/notebooks/tutorial/08_widgets/a_box-widget.ipynb
         :alt: Launch binder
         :width: 150 px
 
