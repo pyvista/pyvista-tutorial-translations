@@ -126,7 +126,7 @@ After interacting with the scene, the clipped mesh is available as:
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:36: PyVistaDeprecationWarning: ``Plotter.box_clipped_meshes`` is deprecated; use ``Plotter.widgets.box_clipped_meshes`` instead.
       pl.box_clipped_meshes
 
-    [UnstructuredGrid (0x7f2f57115ba0)
+    [UnstructuredGrid (0x7fc6a0bfaf20)
       N Cells:    2018232
       N Points:   1009118
       X Bounds:   -1.194e+02, 1.194e+02
@@ -149,7 +149,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.720 seconds)
+   **Total running time of the script:** (0 minutes 12.697 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:

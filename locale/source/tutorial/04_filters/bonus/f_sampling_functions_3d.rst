@@ -513,7 +513,7 @@ terrain that is open or closed
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f2f8165b100)
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7fc6a09dc340)
       N Cells:    109863
       N Points:   121638
       X Bounds:   0.000e+00, 3.000e+00
@@ -568,7 +568,7 @@ terrain that is open or closed
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 3.0, 0.0, 1.0, 0.0, 1.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 3.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 1.000e+00]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-88481745-ac4f-4989-957b-3412016f385e' class='pv-section-summary-in' type='checkbox' checked /><label for='section-88481745-ac4f-4989-957b-3412016f385e' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>scalars <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>scalars</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='scalars' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[-6.143e-02, 9.082e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 3.0, 0.0, 1.0, 0.0, 1.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 3.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 1.000e+00]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f3ab9cb7-f1c0-45f3-bc12-efedb6d79ac8' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f3ab9cb7-f1c0-45f3-bc12-efedb6d79ac8' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>scalars <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>scalars</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='scalars' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[-6.143e-02, 9.082e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -640,7 +640,7 @@ color limits without blue
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.487 seconds)
+   **Total running time of the script:** (0 minutes 0.492 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_bonus_f_sampling_functions_3d.py:

@@ -700,7 +700,7 @@ Let's extract 2D iso-surfaces of a scalar field from a 3D mesh.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f2f722e0940)
+    </style><pre class='pv-text-repr-fallback'>ImageData (0x7fc6a09dd2a0)
       N Cells:      16581375
       N Points:     16777216
       X Bounds:     0.000e+00, 2.550e+02
@@ -752,7 +752,7 @@ Let's extract 2D iso-surfaces of a scalar field from a 3D mesh.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 255.0, 0.0, 255.0, 0.0, 255.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 2.550e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 2.550e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 2.550e+02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 256 x 256 x 256</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 1.000e+00, 1.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-6f01eb7c-2232-43c0-b7dd-6b43e34d8f88' class='pv-section-summary-in' type='checkbox' checked /><label for='section-6f01eb7c-2232-43c0-b7dd-6b43e34d8f88' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>SLCImage <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>SLCImage</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='SLCImage' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>uint8</div><div class='pv-var-range'>[0.000e+00, 1.970e+02]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0, 255.0, 0.0, 255.0, 0.0, 255.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [0.000e+00, 2.550e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [0.000e+00, 2.550e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 2.550e+02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 256 x 256 x 256</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 1.000e+00, 1.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-6e030e3e-0bcb-4841-b3ae-95dc67a209b7' class='pv-section-summary-in' type='checkbox' checked /><label for='section-6e030e3e-0bcb-4841-b3ae-95dc67a209b7' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>SLCImage <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>SLCImage</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='SLCImage' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>uint8</div><div class='pv-var-range'>[0.000e+00, 1.970e+02]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -837,7 +837,7 @@ of 50 and 200
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.774 seconds)
+   **Total running time of the script:** (0 minutes 7.709 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_d_contouring.py:
