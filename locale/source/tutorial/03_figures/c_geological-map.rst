@@ -503,7 +503,7 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7fe7d90629e0)
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f2fd996a4a0)
       N Cells:    824278
       N Points:   413250
       X Bounds:   3.299e+05, 3.442e+05
@@ -1115,7 +1115,7 @@ GDAL.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7fe7d90629e0)
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f2fd996a4a0)
       N Cells:    824278
       N Points:   413250
       X Bounds:   3.299e+05, 3.442e+05
@@ -1170,7 +1170,7 @@ GDAL.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(329924.98816, 344152.930125, 4252833.48213, 4270951.09811, 1493.69165039, 2722.76904297)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.299e+05, 3.442e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.253e+06, 4.271e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.494e+03, 2.723e+03]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-61dd51a5-aa60-4b9d-afc0-e70308db949e' class='pv-section-summary-in' type='checkbox' checked /><label for='section-61dd51a5-aa60-4b9d-afc0-e70308db949e' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Texture Coordinates</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Texture Coordinates' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>2 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[3.737e-01, 8.576e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-tcoords'>tcoords</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(329924.98816, 344152.930125, 4252833.48213, 4270951.09811, 1493.69165039, 2722.76904297)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.299e+05, 3.442e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.253e+06, 4.271e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.494e+03, 2.723e+03]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-c09dc0c0-e67d-48a0-8bc8-c3034d6c0060' class='pv-section-summary-in' type='checkbox' checked /><label for='section-c09dc0c0-e67d-48a0-8bc8-c3034d6c0060' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Texture Coordinates</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Texture Coordinates' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>2 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[3.737e-01, 8.576e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-tcoords'>tcoords</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1302,7 +1302,7 @@ Read the GeoTIFF as a ``Texture`` in PyVista:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.163 seconds)
+   **Total running time of the script:** (0 minutes 12.896 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_c_geological-map.py:

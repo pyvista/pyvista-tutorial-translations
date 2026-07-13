@@ -65,11 +65,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.26587725, 0.72840746, 0.98285788],
-           [0.54418624, 0.0568558 , 0.8478139 ],
-           [0.25293403, 0.03716612, 0.70898716],
-           [0.63520007, 0.73229674, 0.95254743],
-           [0.90689029, 0.51181125, 0.65760612]])
+    array([[0.11955265, 0.31386413, 0.08026101],
+           [0.91244661, 0.07538761, 0.33500749],
+           [0.55645306, 0.88158327, 0.03573199],
+           [0.39541688, 0.64910262, 0.37462208],
+           [0.33015398, 0.01145923, 0.63207514]])
 
 
 
@@ -525,13 +525,13 @@ Pass numpy array of points (n by 3) to PolyData
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fe7d900f880)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f2fc4974e80)
       N Cells:    100
       N Points:   100
       N Strips:   0
-      X Bounds:   3.724e-04, 9.967e-01
-      Y Bounds:   1.164e-02, 9.909e-01
-      Z Bounds:   4.705e-04, 9.973e-01
+      X Bounds:   1.786e-02, 9.873e-01
+      Y Bounds:   1.146e-02, 9.976e-01
+      Z Bounds:   1.522e-02, 9.921e-01
       N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
         <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
@@ -570,7 +570,7 @@ Pass numpy array of points (n by 3) to PolyData
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0003723723457819128, 0.9967065063970841, 0.011641053455916706, 0.9908678028834543, 0.0004705293371251029, 0.9972915996121879)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.724e-04, 9.967e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [1.164e-02, 9.909e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [4.705e-04, 9.973e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.017858439680723648, 0.9873426055701511, 0.011459232278013709, 0.9976455742882131, 0.015220443533598749, 0.9920999231978122)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.786e-02, 9.873e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [1.146e-02, 9.976e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.522e-02, 9.921e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -745,7 +745,7 @@ show some information about it, and plot its location among the mesh.
  .. code-block:: none
 
 
-    Cell (0x7fe7d900f9a0)
+    Cell (0x7f2fc4975780)
       Type:        <CellType.HEXAHEDRON: 12>
       Linear:      True
       Dimension:   3
@@ -1091,7 +1091,7 @@ Note how this varies from assigning scalars to each point
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.490 seconds)
+   **Total running time of the script:** (0 minutes 2.752 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:

@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-204.55406232, -204.05276171,    1.53906561],
-           [-176.8878515 , -204.05276171,    2.60863764],
-           [-158.44861408, -204.05276171,    3.55372213],
-           [-133.30836138, -204.05276171,    5.12811296],
-           [-116.03249986, -204.05276171,    6.36056148]])
+    array([[-199.72226967, -202.21024672,    1.76168677],
+           [-182.28399771, -202.21024672,    2.45800047],
+           [-160.93091744, -202.21024672,    3.545868  ],
+           [-139.62958113, -202.21024672,    4.8836847 ],
+           [-120.77778815, -202.21024672,    6.24235357]])
 
 
 
@@ -749,12 +749,12 @@ Clean Edges & Triangulations
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fe7cbdfc940)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f2ff39430a0)
       N Cells:    100
       N Points:   100
       N Strips:   0
-      X Bounds:   1.074e-02, 9.297e+00
-      Y Bounds:   3.341e-02, 9.267e+00
+      X Bounds:   5.690e-03, 9.259e+00
+      Y Bounds:   3.270e-02, 9.276e+00
       Z Bounds:   0.000e+00, 0.000e+00
       N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
@@ -794,7 +794,7 @@ Clean Edges & Triangulations
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.010744622909916889, 9.297491992592109, 0.033407899413311126, 9.267493137363928, 0.0, 0.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.074e-02, 9.297e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.341e-02, 9.267e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 0.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.005689632978331416, 9.258569427840955, 0.03269996122359907, 9.276129697133593, 0.0, 0.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [5.690e-03, 9.259e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.270e-02, 9.276e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 0.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -943,7 +943,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.708 seconds)
+   **Total running time of the script:** (0 minutes 0.736 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:
