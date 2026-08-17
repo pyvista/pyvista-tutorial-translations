@@ -578,7 +578,7 @@ Assign the data to the cell data. Be sure to flatten the data for
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f5ab6b8d540)
+    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f4dc638d6c0)
       N Cells:      1000
       N Points:     1386
       X Bounds:     1.000e+02, 1.200e+02
@@ -630,7 +630,7 @@ Assign the data to the cell data. Be sure to flatten the data for
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 120.0, 33.0, 58.0, 55.6, 75.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.200e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.800e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.560e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 21 x 6 x 11</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-33afc0e8-7830-41b7-91a5-78c4cd91813e' class='pv-section-summary-in' type='checkbox' checked /><label for='section-33afc0e8-7830-41b7-91a5-78c4cd91813e' class='pv-section-summary' title='Expand/collapse section'>Cell Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 120.0, 33.0, 58.0, 55.6, 75.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.200e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.800e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.560e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 21 x 6 x 11</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-93b51f9c-f33c-48e7-8500-95dda5212d8c' class='pv-section-summary-in' type='checkbox' checked /><label for='section-93b51f9c-f33c-48e7-8500-95dda5212d8c' class='pv-section-summary' title='Expand/collapse section'>Cell Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1185,7 +1185,7 @@ Add the data values to the cell data
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f5ab4de4d60)
+    </style><pre class='pv-text-repr-fallback'>ImageData (0x7f4dc638c700)
       N Cells:      684
       N Points:     1000
       X Bounds:     1.000e+02, 1.190e+02
@@ -1237,7 +1237,7 @@ Add the data values to the cell data
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 119.0, 33.0, 53.0, 55.6, 73.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.190e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.300e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.360e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 20 x 5 x 10</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f9ff25f6-1471-4d20-8228-2fe9ae1b8991' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f9ff25f6-1471-4d20-8228-2fe9ae1b8991' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(100.0, 119.0, 33.0, 53.0, 55.6, 73.6)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e+02, 1.190e+02]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.300e+01, 5.300e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.560e+01, 7.360e+01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Grid</span><span class='pv-meta-entry'><span class='pv-meta-label'>dims</span> 20 x 5 x 10</span><span class='pv-meta-entry'><span class='pv-meta-label'>spacing</span> (1.000e+00, 5.000e+00, 2.000e+00)</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-d52f2dba-2a8f-4ea7-bf4e-6eeec8f94407' class='pv-section-summary-in' type='checkbox' checked /><label for='section-d52f2dba-2a8f-4ea7-bf4e-6eeec8f94407' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>values <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>values</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='values' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[0.000e+00, 1.000e+01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -18015,7 +18015,7 @@ Here's one of these example datasets:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.235 seconds)
+   **Total running time of the script:** (0 minutes 5.208 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_c_create-uniform-grid.py:
