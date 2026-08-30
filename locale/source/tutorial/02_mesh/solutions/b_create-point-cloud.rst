@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81078375e+05, 4.40009670e+06, 1.76492004e+03],
-                     [4.81062975e+05, 4.40020070e+06, 1.75841003e+03],
-                     [4.80990475e+05, 4.40012010e+06, 1.76160999e+03],
-                     [4.81008375e+05, 4.40020770e+06, 1.77343994e+03],
-                     [4.81045475e+05, 4.40008270e+06, 1.76651001e+03]])
+    pyvista_ndarray([[4.81070975e+05, 4.40023650e+06, 1.75706995e+03],
+                     [4.80940975e+05, 4.40010580e+06, 1.76354004e+03],
+                     [4.81058575e+05, 4.40017380e+06, 1.75968005e+03],
+                     [4.80970475e+05, 4.40022900e+06, 1.75820996e+03],
+                     [4.81108975e+05, 4.40014890e+06, 1.75906995e+03]])
 
 
 
@@ -541,7 +541,7 @@ data or your own project, create a PyVista mesh using those points.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f4ddaa53940)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f99faf39480)
       N Cells:    67841
       N Points:   67841
       N Strips:   0
@@ -586,7 +586,7 @@ data or your own project, create a PyVista mesh using those points.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.949951171875, 1784.56005859375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.785e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 67,841</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.969970703125, 1784.5799560546875)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.785e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 67,841</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -798,11 +798,11 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[-0.35353798,  0.82415028,  0.44247848],
-                     [-0.24930558,  0.51221313,  0.8218786 ],
-                     [-0.25967678,  0.96194387, -0.08504088],
-                     [ 0.06197351,  0.58248732,  0.81047382],
-                     [-0.87383113, -0.1239157 ,  0.47017449]])
+    pyvista_ndarray([[-0.42924408, -0.38578352,  0.81665207],
+                     [-0.78923899,  0.44693563,  0.42112986],
+                     [-0.68530165, -0.32543492,  0.65150116],
+                     [-0.13540732, -0.49095751,  0.86059606],
+                     [-0.95382101, -0.14403492, -0.26358948]])
 
 
 
@@ -897,7 +897,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.176 seconds)
+   **Total running time of the script:** (0 minutes 5.315 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
