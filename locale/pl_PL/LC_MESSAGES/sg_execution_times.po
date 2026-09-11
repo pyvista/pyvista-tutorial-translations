@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyVista Tutorial\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 02:14+0000\n"
+"POT-Creation-Date: 2026-09-11 13:01+0000\n"
 "PO-Revision-Date: 2024-02-24 00:32+0000\n"
 "Language-Team: Polish (Poland) (https://app.transifex.com/tkoyama010/teams/112279/pl_PL/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:9
 msgid ""
-"**05:17.412** total execution time for 59 files **from all galleries**:"
+"**05:30.948** total execution time for 59 files **from all galleries**:"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:32
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:36
-msgid "01:18.301"
+msgid "01:20.689"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:37
@@ -117,7 +117,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:39
-msgid "00:58.705"
+msgid "01:01.219"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:41
@@ -127,7 +127,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:42
-msgid "00:37.363"
+msgid "00:39.110"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:44
@@ -137,7 +137,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:45
-msgid "00:25.131"
+msgid "00:25.950"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:47
@@ -147,7 +147,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:48
-msgid "00:13.098"
+msgid "00:14.275"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:50
@@ -157,7 +157,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:51
-msgid "00:12.879"
+msgid "00:13.511"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:53
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:54
-msgid "00:11.735"
+msgid "00:12.282"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:56
@@ -177,7 +177,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:57
-msgid "00:08.511"
+msgid "00:08.663"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:59
@@ -187,7 +187,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:60
-msgid "00:07.085"
+msgid "00:07.584"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:62
@@ -197,57 +197,57 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:63
-msgid "00:06.910"
+msgid "00:07.295"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:65
-msgid ""
-":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` "
-"(``../../tutorial/04_filters/a_lesson_filters.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:66
-msgid "00:06.136"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:68
-msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py` "
-"(``../../tutorial/02_mesh/solutions/b_create-point-cloud.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:69
-msgid "00:06.122"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:71
-msgid ""
-":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` "
-"(``../../tutorial/01_basic/a_lesson_basic.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:72
-msgid "00:05.247"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:74
 msgid ""
 ":ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py` "
 "(``../../tutorial/01_basic/solutions/a_load_examples_solution.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:75
-msgid "00:05.194"
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:66
+msgid "00:06.672"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:77
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:68
+msgid ""
+":ref:`sphx_glr_tutorial_04_filters_a_lesson_filters.py` "
+"(``../../tutorial/04_filters/a_lesson_filters.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:69
+msgid "00:06.447"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:71
+msgid ""
+":ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py` "
+"(``../../tutorial/02_mesh/solutions/b_create-point-cloud.py``)"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:72
+msgid "00:06.059"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:74
 msgid ""
 ":ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py` "
 "(``../../tutorial/02_mesh/solutions/c_create-uniform-grid.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:75
+msgid "00:05.587"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:77
+msgid ""
+":ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py` "
+"(``../../tutorial/01_basic/a_lesson_basic.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:78
-msgid "00:05.051"
+msgid "00:05.244"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:80
@@ -257,77 +257,77 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:81
-msgid "00:04.179"
+msgid "00:04.487"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:83
-msgid ""
-":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py` "
-"(``../../tutorial/02_mesh/a_lesson_mesh.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:84
-msgid "00:02.679"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:86
 msgid ""
 ":ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py` "
 "(``../../tutorial/08_widgets/f_slider-bar-widget.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:84
+msgid "00:02.626"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:86
+msgid ""
+":ref:`sphx_glr_tutorial_02_mesh_a_lesson_mesh.py` "
+"(``../../tutorial/02_mesh/a_lesson_mesh.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:87
-msgid "00:02.533"
+msgid "00:02.555"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:89
-msgid ""
-":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` "
-"(``../../tutorial/03_figures/solutions/a_display_options.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:90
-msgid "00:01.970"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:92
 msgid ""
 ":ref:`sphx_glr_tutorial_03_figures_d_gif.py` "
 "(``../../tutorial/03_figures/d_gif.py``)"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:93
-msgid "00:01.956"
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:90
+msgid "00:02.106"
 msgstr ""
 
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:95
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:92
 msgid ""
 ":ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py` "
 "(``../../tutorial/04_filters/solutions/b_clipping.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:93
+msgid "00:02.076"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:95
+msgid ""
+":ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py` "
+"(``../../tutorial/03_figures/solutions/a_display_options.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:96
-msgid "00:01.950"
+msgid "00:02.031"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:98
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` "
-"(``../../tutorial/08_widgets/c_line-widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:99
-msgid "00:01.807"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:101
 msgid ""
 ":ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py` "
 "(``../../tutorial/06_vtk/a_2_pyvista_vtk.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:99
+msgid "00:01.874"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:101
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py` "
+"(``../../tutorial/08_widgets/c_line-widget.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:102
-msgid "00:01.788"
+msgid "00:01.538"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:104
@@ -337,7 +337,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:105
-msgid "00:01.518"
+msgid "00:01.523"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:107
@@ -347,7 +347,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:108
-msgid "00:01.424"
+msgid "00:01.470"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:110
@@ -357,7 +357,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:111
-msgid "00:01.412"
+msgid "00:01.171"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:113
@@ -367,7 +367,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:114
-msgid "00:01.007"
+msgid "00:01.008"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:116
@@ -377,7 +377,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:117
-msgid "00:00.965"
+msgid "00:00.995"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:119
@@ -387,7 +387,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:120
-msgid "00:00.949"
+msgid "00:00.979"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:122
@@ -397,47 +397,47 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:123
-msgid "00:00.707"
+msgid "00:00.717"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:125
-msgid ""
-":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` "
-"(``../../tutorial/08_widgets/b_checkbox-widget.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:126
-msgid "00:00.631"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:128
 msgid ""
 ":ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py` "
 "(``../../tutorial/06_vtk/c_vtk_algorithms.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:126
+msgid "00:00.630"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:128
+msgid ""
+":ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py` "
+"(``../../tutorial/08_widgets/b_checkbox-widget.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:129
-msgid "00:00.594"
+msgid "00:00.619"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:131
-msgid ""
-":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` "
-"(``../../tutorial/03_figures/bonus/e_labels.py``)"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:132
-msgid "00:00.501"
-msgstr ""
-
-#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:134
 msgid ""
 ":ref:`sphx_glr_tutorial_04_filters_bonus_f_sampling_functions_3d.py` "
 "(``../../tutorial/04_filters/bonus/f_sampling_functions_3d.py``)"
 msgstr ""
 
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:132
+msgid "00:00.512"
+msgstr ""
+
+#: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:134
+msgid ""
+":ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py` "
+"(``../../tutorial/03_figures/bonus/e_labels.py``)"
+msgstr ""
+
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:135
-msgid "00:00.477"
+msgid "00:00.507"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:137
@@ -447,7 +447,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:138
-msgid "00:00.401"
+msgid "00:00.419"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:140
@@ -457,7 +457,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:141
-msgid "00:00.326"
+msgid "00:00.343"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:143
@@ -467,7 +467,7 @@ msgid ""
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:144
-msgid "00:00.170"
+msgid "00:00.176"
 msgstr ""
 
 #: ../../pyvista-tutorial/doc/source/sg_execution_times.rst:146
