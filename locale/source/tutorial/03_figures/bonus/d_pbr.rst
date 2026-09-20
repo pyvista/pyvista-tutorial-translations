@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -60,7 +60,7 @@ a statue as though it were metallic.
 
  .. code-block:: none
 
-    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:26: UserWarning: download_nefertiti returns a dataset licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:26: UserWarning: The nefertiti dataset is licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
       mesh = examples.download_nefertiti()
 
 
@@ -249,15 +249,15 @@ Combine custom lighting and physically based rendering.
  .. code-block:: none
 
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:80: PyVistaDeprecationWarning: 
-    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:461: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
     From version 0.50, passing these as positional arguments will result in a TypeError.
       light = pv.Light((-2, 2, 0), (0, 0, 0), "white")
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:83: PyVistaDeprecationWarning: 
-    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:461: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
     From version 0.50, passing these as positional arguments will result in a TypeError.
       light = pv.Light((2, 0, 0), (0, 0, 0), (0.7, 0.0862, 0.0549))
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/03_figures/bonus/d_pbr.py:86: PyVistaDeprecationWarning: 
-    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:442: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
+    /opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/core/utilities/misc.py:461: Arguments 'position', 'focal_point', 'color' must be passed as keyword arguments to function 'Light.__init__'.
     From version 0.50, passing these as positional arguments will result in a TypeError.
       light = pv.Light((0, 0, 10), (0, 0, 0), "white")
 
@@ -277,7 +277,7 @@ Combine custom lighting and physically based rendering.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 20.689 seconds)
+   **Total running time of the script:** (1 minutes 0.396 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_d_pbr.py:

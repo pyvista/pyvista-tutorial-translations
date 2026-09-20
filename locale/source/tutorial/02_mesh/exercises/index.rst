@@ -6,6 +6,10 @@ Do it yourself
 ~~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Do it yourself
   .. image:: /tutorial/02_mesh/exercises/images/thumb/sphx_glr_b_create-point-cloud_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_exercises_b_create-point-cloud.py`
+  :doc:`/tutorial/02_mesh/exercises/b_create-point-cloud`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Do it yourself
   .. image:: /tutorial/02_mesh/exercises/images/thumb/sphx_glr_c_create-uniform-grid_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_exercises_c_create-uniform-grid.py`
+  :doc:`/tutorial/02_mesh/exercises/c_create-uniform-grid`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Do it yourself
   .. image:: /tutorial/02_mesh/exercises/images/thumb/sphx_glr_d_create-tri-surface_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_exercises_d_create-tri-surface.py`
+  :doc:`/tutorial/02_mesh/exercises/d_create-tri-surface`
 
 .. raw:: html
 
@@ -73,7 +77,7 @@ Do it yourself
   .. image:: /tutorial/02_mesh/exercises/images/thumb/sphx_glr_e_read-file_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_exercises_e_read-file.py`
+  :doc:`/tutorial/02_mesh/exercises/e_read-file`
 
 .. raw:: html
 

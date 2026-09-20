@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -76,11 +76,11 @@ First, create some points for the surface.
  .. code-block:: none
 
 
-    array([[-204.99976084, -200.47096328,    1.63966956],
-           [-177.50965934, -200.47096328,    2.77390444],
-           [-159.64999733, -200.47096328,    3.74841749],
-           [-133.40727056, -200.47096328,    5.50614553],
-           [-112.5746539 , -200.47096328,    7.11416022]])
+    array([[-203.85383879, -196.6178324 ,    1.81198369],
+           [-179.4515971 , -196.6178324 ,    2.89243237],
+           [-161.34367669, -196.6178324 ,    3.93791929],
+           [-134.05133413, -196.6178324 ,    5.89293147],
+           [-118.42663491, -196.6178324 ,    7.17783778]])
 
 
 
@@ -195,7 +195,7 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
             edges and loops. If set, and lines/polygons are defined, a
             constrained triangulation is created. The lines/polygons
             are assumed to reference points in the input point set
-            (i.e. point ids are identical in the input and
+            (that is, point ids are identical in the input and
             source).
     
         progress_bar : bool, default: False
@@ -204,10 +204,12 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
         Returns
         -------
         pyvista.PolyData
-            Mesh from the 2D delaunay filter.
+            Mesh from the 2D Delaunay filter.
     
         Examples
         --------
+        .. autoopengraph_thumbnail:: 2
+    
         First, generate 30 points on circle and plot them.
     
         >>> import pyvista as pv
@@ -220,7 +222,7 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
         >>> filled_circle = circle.delaunay_2d()
         >>> filled_circle.plot(show_edges=True, line_width=5)
     
-        Use the ``edge_source`` parameter to create a constrained delaunay
+        Use the ``edge_source`` parameter to create a constrained Delaunay
         triangulation and plot it.
     
         >>> squar = pv.Polygon(n_sides=4, radius=8, fill=False)
@@ -230,8 +232,6 @@ See :func:`pyvista.UnstructuredGridFilters.delaunay_2d`.
         >>> comb = circ0.append_polydata(circ1, squar)
         >>> tess = comb.delaunay_2d(edge_source=comb)
         >>> tess.plot(cpos='xy', show_edges=True)
-    
-        See :ref:`create_tri_surface_example` for more examples using this filter.
 
 
 
@@ -322,10 +322,11 @@ Clean Edges & Triangulations
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -336,45 +337,58 @@ Clean Edges & Triangulations
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -382,15 +396,28 @@ Clean Edges & Triangulations
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -458,10 +485,13 @@ Clean Edges & Triangulations
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -749,12 +779,12 @@ Clean Edges & Triangulations
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f8044bdcf40)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f91c1a4f8e0)
       N Cells:    100
       N Points:   100
       N Strips:   0
-      X Bounds:   5.481e-02, 9.224e+00
-      Y Bounds:   1.897e-02, 9.178e+00
+      X Bounds:   2.656e-02, 9.297e+00
+      Y Bounds:   3.419e-02, 9.294e+00
       Z Bounds:   0.000e+00, 0.000e+00
       N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
@@ -794,7 +824,7 @@ Clean Edges & Triangulations
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.05481349857016197, 9.223814702358517, 0.018969281836566387, 9.177814369975383, 0.0, 0.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [5.481e-02, 9.224e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [1.897e-02, 9.178e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 0.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.02656362304823686, 9.296928964128645, 0.03419456600076861, 9.293757117666855, 0.0, 0.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [2.656e-02, 9.297e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.419e-02, 9.294e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [0.000e+00, 0.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -943,7 +973,7 @@ added unwanted triangles. We can mitigate that with the ``alpha`` parameter.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.717 seconds)
+   **Total running time of the script:** (0 minutes 0.555 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_d_create-tri-surface.py:

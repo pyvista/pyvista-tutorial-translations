@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -65,11 +65,11 @@ You can create one by defining a 2D array of Cartesian coordinates like so:
  .. code-block:: none
 
 
-    array([[0.23483463, 0.34547185, 0.65638914],
-           [0.46490052, 0.08004595, 0.07114847],
-           [0.96750138, 0.7438176 , 0.69219386],
-           [0.28856507, 0.74280778, 0.3968089 ],
-           [0.48353172, 0.40201888, 0.54802362]])
+    array([[0.31269304, 0.36544213, 0.11191742],
+           [0.370441  , 0.67233445, 0.85245599],
+           [0.63150703, 0.22873692, 0.00517608],
+           [0.99251274, 0.33628285, 0.79605765],
+           [0.57752547, 0.04169029, 0.09339497]])
 
 
 
@@ -98,10 +98,11 @@ Pass numpy array of points (n by 3) to PolyData
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -112,45 +113,58 @@ Pass numpy array of points (n by 3) to PolyData
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -158,15 +172,28 @@ Pass numpy array of points (n by 3) to PolyData
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -234,10 +261,13 @@ Pass numpy array of points (n by 3) to PolyData
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -525,13 +555,13 @@ Pass numpy array of points (n by 3) to PolyData
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f801a0f1ba0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f921599ebc0)
       N Cells:    100
       N Points:   100
       N Strips:   0
-      X Bounds:   6.614e-03, 9.916e-01
-      Y Bounds:   5.795e-03, 9.940e-01
-      Z Bounds:   3.060e-02, 9.981e-01
+      X Bounds:   3.914e-03, 9.986e-01
+      Y Bounds:   3.114e-04, 9.911e-01
+      Z Bounds:   5.176e-03, 9.931e-01
       N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
         <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
@@ -570,7 +600,7 @@ Pass numpy array of points (n by 3) to PolyData
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.0066144554190379345, 0.9915765869211939, 0.0057946355084216306, 0.9940418474510182, 0.03060369314222955, 0.9980538688303978)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [6.614e-03, 9.916e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [5.795e-03, 9.940e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [3.060e-02, 9.981e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.003914040226709381, 0.9986404832099126, 0.00031138179317158343, 0.9910976973712564, 0.005176077150126135, 0.9931421145360171)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.914e-03, 9.986e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.114e-04, 9.911e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [5.176e-03, 9.931e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 100</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -745,7 +775,7 @@ show some information about it, and plot its location among the mesh.
  .. code-block:: none
 
 
-    Cell (0x7f801a0f31c0)
+    Cell (0x7f91c1a4d8a0)
       Type:        <CellType.HEXAHEDRON: 12>
       Linear:      True
       Dimension:   3
@@ -1091,7 +1121,7 @@ Note how this varies from assigning scalars to each point
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.555 seconds)
+   **Total running time of the script:** (0 minutes 2.071 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_a_lesson_mesh.py:

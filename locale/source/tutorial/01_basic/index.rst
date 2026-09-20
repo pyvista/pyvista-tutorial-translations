@@ -133,6 +133,10 @@ This is the notebook rendering of this page where you can interactively follow
 along with this lesson.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -149,7 +153,7 @@ along with this lesson.
   .. image:: /tutorial/01_basic/images/thumb/sphx_glr_a_lesson_basic_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_01_basic_a_lesson_basic.py`
+  :doc:`/tutorial/01_basic/a_lesson_basic`
 
 .. raw:: html
 
@@ -173,6 +177,10 @@ Exercises
 =========
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -189,7 +197,7 @@ Exercises
   .. image:: /tutorial/01_basic/exercises/images/thumb/sphx_glr_a_load_examples_exercise_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_01_basic_exercises_a_load_examples_exercise.py`
+  :doc:`/tutorial/01_basic/exercises/a_load_examples_exercise`
 
 .. raw:: html
 
@@ -209,6 +217,10 @@ Solutions
 These are the solutions to the above examples.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -225,7 +237,7 @@ These are the solutions to the above examples.
   .. image:: /tutorial/01_basic/solutions/images/thumb/sphx_glr_a_load_examples_solution_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`
+  :doc:`/tutorial/01_basic/solutions/a_load_examples_solution`
 
 .. raw:: html
 

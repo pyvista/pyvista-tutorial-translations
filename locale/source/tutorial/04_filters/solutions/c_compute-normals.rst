@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -103,10 +103,11 @@ exaggerated topographic relief.
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -117,45 +118,58 @@ exaggerated topographic relief.
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -163,15 +177,28 @@ exaggerated topographic relief.
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -239,10 +266,13 @@ exaggerated topographic relief.
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -530,7 +560,7 @@ exaggerated topographic relief.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f801af15360)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f91eff018a0)
       N Cells:    2333880
       N Points:   2336041
       N Strips:   0
@@ -575,7 +605,7 @@ exaggerated topographic relief.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-1.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.000e+00, 1.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 2,333,880</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f197400d-44d8-411f-899a-43c7abbd50d1' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f197400d-44d8-411f-899a-43c7abbd50d1' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>altitude <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>altitude</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='altitude' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.042e+04, 6.527e+03]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li><li class='pv-section-item'><input id='section-ff51f5cb-8c11-4ee8-a6d5-c8b668282fc2' class='pv-section-summary-in' type='checkbox' checked /><label for='section-ff51f5cb-8c11-4ee8-a6d5-c8b668282fc2' class='pv-section-summary' title='Expand/collapse section'>Cell Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-1.000e+00, 1.000e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.000e+00, 1.000e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 2,333,880</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f586fff9-2883-4184-9ae2-3347df06be10' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f586fff9-2883-4184-9ae2-3347df06be10' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>altitude <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>altitude</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='altitude' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.042e+04, 6.527e+03]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li><li class='pv-section-item'><input id='section-b29ad2f8-2b15-4372-8ac3-f3bb11d7ac04' class='pv-section-summary-in' type='checkbox' checked /><label for='section-b29ad2f8-2b15-4372-8ac3-f3bb11d7ac04' class='pv-section-summary' title='Expand/collapse section'>Cell Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-1.000e+00, 1.000e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -706,7 +736,7 @@ the normals along its cell faces, and extract the faces that face upward.
 
  .. code-block:: none
 
-    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/04_filters/solutions/c_compute-normals.py:44: UserWarning: download_nefertiti returns a dataset licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/04_filters/solutions/c_compute-normals.py:44: UserWarning: The nefertiti dataset is licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
       mesh = examples.download_nefertiti()
 
 
@@ -725,7 +755,7 @@ the normals along its cell faces, and extract the faces that face upward.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 39.110 seconds)
+   **Total running time of the script:** (0 minutes 23.886 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_c_compute-normals.py:

@@ -382,6 +382,10 @@ Exercises
 .. leave blank after this point for Sphinx-Gallery to populate examples
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -398,7 +402,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_a_1_transition_vtk_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_a_1_transition_vtk.py`
+  :doc:`/tutorial/06_vtk/a_1_transition_vtk`
 
 .. raw:: html
 
@@ -415,7 +419,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_a_2_pyvista_vtk_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_a_2_pyvista_vtk.py`
+  :doc:`/tutorial/06_vtk/a_2_pyvista_vtk`
 
 .. raw:: html
 
@@ -432,7 +436,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_b_create_vtk_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_b_create_vtk.py`
+  :doc:`/tutorial/06_vtk/b_create_vtk`
 
 .. raw:: html
 
@@ -449,7 +453,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_c_vtk_algorithms_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_c_vtk_algorithms.py`
+  :doc:`/tutorial/06_vtk/c_vtk_algorithms`
 
 .. raw:: html
 
@@ -466,7 +470,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_d_wasm_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_d_wasm.py`
+  :doc:`/tutorial/06_vtk/d_wasm`
 
 .. raw:: html
 
@@ -483,7 +487,7 @@ Exercises
   .. image:: /tutorial/06_vtk/images/thumb/sphx_glr_e_vtk_next_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_06_vtk_e_vtk_next.py`
+  :doc:`/tutorial/06_vtk/e_vtk_next`
 
 .. raw:: html
 

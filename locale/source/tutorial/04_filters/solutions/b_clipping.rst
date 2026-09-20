@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -69,10 +69,11 @@ Clip any dataset by a user defined plane using the
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -83,45 +84,58 @@ Clip any dataset by a user defined plane using the
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -129,15 +143,28 @@ Clip any dataset by a user defined plane using the
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -205,10 +232,13 @@ Clip any dataset by a user defined plane using the
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -496,7 +526,7 @@ Clip any dataset by a user defined plane using the
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f801ad6a800)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f91ef341e40)
       N Cells:    1000
       N Points:   872
       N Strips:   0
@@ -541,7 +571,7 @@ Clip any dataset by a user defined plane using the
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-0.13155962526798248, 0.18016336858272552, -0.12048563361167908, 0.18769524991512299, -0.14300920069217682, 0.09850578755140305)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.316e-01, 1.802e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-1.205e-01, 1.877e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.430e-01, 9.851e-02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 1,000</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-8b977597-2e39-40ad-bdcc-b6c7fd85987d' class='pv-section-summary-in' type='checkbox' checked /><label for='section-8b977597-2e39-40ad-bdcc-b6c7fd85987d' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-9.998e-01, 9.977e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-0.13155962526798248, 0.18016336858272552, -0.12048563361167908, 0.18769524991512299, -0.14300920069217682, 0.09850578755140305)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.316e-01, 1.802e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-1.205e-01, 1.877e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.430e-01, 9.851e-02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 1,000</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f3408674-9fd1-4b5e-8fdd-286a1f57cf55' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f3408674-9fd1-4b5e-8fdd-286a1f57cf55' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-9.998e-01, 9.977e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -591,7 +621,9 @@ Clip any dataset by a user defined plane using the
             Set the clipping value along the normal direction.
     
         inplace : bool, default: False
-            Updates mesh in-place.
+            Updates mesh in-place. Only :class:`~pyvista.PolyData`,
+            :class:`~pyvista.PointSet` and :class:`~pyvista.UnstructuredGrid` inputs
+            support this; any other input raises ``TypeError``.
     
         return_clipped : bool, default: False
             Return both unclipped and clipped parts of the dataset.
@@ -616,11 +648,12 @@ Clip any dataset by a user defined plane using the
         Returns
         -------
         output : DataSet | MultiBlock | tuple[DataSet | MultiBlock, DataSet | MultiBlock]
-            Clipped mesh when ``return_clipped=False`` or a tuple containing the
-            unclipped and clipped meshes. Output mesh type matches input type for
-            :class:`~pyvista.PointSet`, :class:`~pyvista.PolyData`, and
-            :class:`~pyvista.MultiBlock`; otherwise the output type is
-            :class:`~pyvista.UnstructuredGrid`.
+            Clipped mesh when ``return_clipped=False``, or a tuple of the kept and the
+            removed mesh when it is ``True``. A :class:`~pyvista.PolyData` gives a
+            ``PolyData`` and a :class:`~pyvista.PointSet` gives a ``PointSet``; every
+            other dataset gives an :class:`~pyvista.UnstructuredGrid`. A
+            :class:`~pyvista.MultiBlock` gives a ``MultiBlock`` whose blocks each follow
+            that rule, nested blocks included.
     
         Examples
         --------
@@ -672,10 +705,11 @@ Perform a clip with a Y axis normal
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -686,45 +720,58 @@ Perform a clip with a Y axis normal
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -732,15 +779,28 @@ Perform a clip with a Y axis normal
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -808,10 +868,13 @@ Perform a clip with a Y axis normal
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -1099,7 +1162,7 @@ Perform a clip with a Y axis normal
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f801ad697e0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f9208e7ef80)
       N Cells:    427
       N Points:   248
       N Strips:   0
@@ -1144,7 +1207,7 @@ Perform a clip with a Y axis normal
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-0.13155962526798248, 0.1325545310974121, 0.033604808151721954, 0.18769524991512299, -0.14300920069217682, 0.08721379190683365)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.316e-01, 1.326e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.360e-02, 1.877e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.430e-01, 8.721e-02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 427</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-c7ecd393-6428-4956-9b2d-72b03b103d95' class='pv-section-summary-in' type='checkbox' checked /><label for='section-c7ecd393-6428-4956-9b2d-72b03b103d95' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-9.927e-01, 9.977e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-0.13155962526798248, 0.1325545310974121, 0.033604808151721954, 0.18769524991512299, -0.14300920069217682, 0.08721379190683365)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.316e-01, 1.326e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [3.360e-02, 1.877e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [-1.430e-01, 8.721e-02]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 427</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-42ccec32-0f4a-4867-afc9-f2c01604035d' class='pv-section-summary-in' type='checkbox' checked /><label for='section-42ccec32-0f4a-4867-afc9-f2c01604035d' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-9.927e-01, 9.977e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1243,14 +1306,35 @@ First, download an example dataset.
     
         If no bounds are given, a corner of the dataset bounds will be removed.
     
+        A :class:`~pyvista.PolyData` is clipped with :vtk:`vtkBoxClipDataSet`, which splits
+        the cells the box cuts into simplices, and a :class:`~pyvista.PointSet` is clipped
+        the same way through its vertices. All other inputs,
+        that is :class:`~pyvista.ImageData`, :class:`~pyvista.RectilinearGrid`,
+        :class:`~pyvista.StructuredGrid`, :class:`~pyvista.ExplicitStructuredGrid`, and
+        :class:`~pyvista.UnstructuredGrid`, are clipped by the six box planes in turn with
+        the same clipper as :meth:`clip`, which keeps hexahedra and other cell types.
+    
+        .. versionchanged:: 0.49
+    
+            - :class:`~pyvista.ImageData`, :class:`~pyvista.RectilinearGrid`,
+              :class:`~pyvista.StructuredGrid`, :class:`~pyvista.ExplicitStructuredGrid`, and
+              :class:`~pyvista.UnstructuredGrid` inputs are clipped by the six box planes
+              instead of :vtk:`vtkBoxClipDataSet`, so cells the box does not cut keep their
+              type instead of being split into tetrahedra, and the output normally has fewer
+              cells and points for the same clipped volume, whatever ``merge_points`` is.
+              Call :meth:`~pyvista.DataObjectFilters.triangulate` on the output for an
+              all-tetrahedra mesh as before.
+            - A :class:`~pyvista.PolyData` input gives a ``PolyData`` instead of an
+              :class:`~pyvista.UnstructuredGrid`, with the same points and cells.
+    
         Parameters
         ----------
         bounds : sequence[float], optional
             Length 6 sequence of floats: ``(x_min, x_max, y_min, y_max, z_min, z_max)``.
-            Length 3 sequence of floats: distances from the min coordinate of
+            Length 3 sequence of floats: distances from the min coordinate
             of the input mesh. Single float value: uniform distance from the
             min coordinate. Length 12 sequence of length 3 sequence of floats:
-            a plane collection (normal, center, ...).
+            a plane collection (normal, center, and so on).
             :class:`pyvista.PolyData`: if a poly mesh is passed that represents
             a box with 6 faces that all form a standard box, then planes will
             be extracted from the box to define the clipping region.
@@ -1267,7 +1351,9 @@ First, download an example dataset.
     
         merge_points : bool, default: True
             If ``True``, coinciding points of independently defined mesh
-            elements will be merged.
+            elements will be merged. It has no effect on the inputs clipped by
+            the box planes when ``invert=False``, which produce no coinciding
+            points to merge.
     
         crinkle : bool, default: False
             Crinkle the clip by extracting the entire cells along the
@@ -1277,8 +1363,12 @@ First, download an example dataset.
     
         Returns
         -------
-        pyvista.UnstructuredGrid
-            Clipped dataset.
+        pyvista.DataSet | pyvista.MultiBlock
+            Clipped dataset. A :class:`~pyvista.PolyData` gives a ``PolyData`` and a
+            :class:`~pyvista.PointSet` gives a ``PointSet``, clipped through its
+            vertices; every other dataset gives an :class:`~pyvista.UnstructuredGrid`. A
+            :class:`~pyvista.MultiBlock` gives a ``MultiBlock`` whose blocks each follow
+            that rule, nested blocks included.
     
         Examples
         --------
@@ -1290,8 +1380,6 @@ First, download an example dataset.
         >>> cube = pv.Cube().triangulate().subdivide(3)
         >>> clipped_cube = cube.clip_box([0, 1, 0, 1, 0, 1])
         >>> clipped_cube.plot()
-    
-        See :ref:`clip_with_plane_box_example` for more examples using this filter.
 
 
 
@@ -1324,10 +1412,11 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -1338,45 +1427,58 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -1384,15 +1486,28 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -1460,10 +1575,13 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -1751,9 +1869,9 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f801ad6bee0)
-      N Cells:    38690
-      N Points:   8118
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f9208e7efe0)
+      N Cells:    7210
+      N Points:   7960
       X Bounds:   1.000e-02, 4.500e+00
       Y Bounds:   1.000e-02, 4.500e+00
       Z Bounds:   1.000e-02, 2.500e+00
@@ -1801,12 +1919,12 @@ Clip the dataset with a bounding box defined by the values in ``bounds``
         <circle cx="18" cy="28" r="0.9"/>
       </g>
     </svg>
-    </span><div class='pv-header-text'><div class='pv-obj-type'>UnstructuredGrid <span class='pv-header-badge'>8,118 points</span> <span class='pv-header-badge'>38,690 cells</span> <span class='pv-header-badge'>1.7 MiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
+    </span><div class='pv-header-text'><div class='pv-obj-type'>UnstructuredGrid <span class='pv-header-badge'>7,960 points</span> <span class='pv-header-badge'>7,210 cells</span> <span class='pv-header-badge'>736 KiB</span></div></div><span class='pv-brand-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 24">
       <text x="0" y="18" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="700" font-style="italic" letter-spacing="-0.5">
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.009999998845160007, 4.5, 0.009999998845160007, 4.5, 0.009999998845160007, 2.5)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e-02, 4.500e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [1.000e-02, 4.500e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.000e-02, 2.500e+00]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-cbbc96cc-3ebf-42e3-8a94-2ff0aad818ff' class='pv-section-summary-in' type='checkbox' checked /><label for='section-cbbc96cc-3ebf-42e3-8a94-2ff0aad818ff' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>scalars <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>scalars</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='scalars' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-3.870e+00, 7.186e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li><li class='pv-var-item'><div class='pv-var-name'><span>vectors</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='vectors' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-6.729e-01, 4.289e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-vectors'>vectors</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.009999998845160007, 4.5, 0.009999998845160007, 4.5, 0.009999998845160007, 2.5)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [1.000e-02, 4.500e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [1.000e-02, 4.500e+00]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.000e-02, 2.500e+00]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-55a8d56c-e278-4038-9776-4c1feddb298a' class='pv-section-summary-in' type='checkbox' checked /><label for='section-55a8d56c-e278-4038-9776-4c1feddb298a' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>scalars <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>scalars</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='scalars' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-3.870e+00, 7.186e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li><li class='pv-var-item'><div class='pv-var-name'><span>vectors</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='vectors' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-6.729e-01, 4.289e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-vectors'>vectors</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -2115,7 +2233,7 @@ Plot comparison
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.076 seconds)
+   **Total running time of the script:** (0 minutes 1.426 seconds)
 
 
 .. _sphx_glr_download_tutorial_04_filters_solutions_b_clipping.py:

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_c_geological-map.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -76,10 +76,11 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -90,45 +91,58 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -136,15 +150,28 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -212,10 +239,13 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -503,7 +533,7 @@ Originally posted here: https://github.com/pyvista/pyvista-support/issues/14
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f8028d3e380)
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f920a886080)
       N Cells:    824278
       N Points:   413250
       X Bounds:   3.299e+05, 3.442e+05
@@ -688,10 +718,11 @@ GDAL.
 
     :root {
       --pv-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.55));
       --pv-border-color: var(--jp-border-color2, #e0e0e0);
       --pv-disabled-color: var(--jp-layout-color3, #bdbdbd);
+      --pv-background-color: var(--jp-layout-color0, #ffffff);
       --pv-background-color-row-even: var(--jp-layout-color1, #f5f5f5);
       --pv-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
       --pv-badge-active: #1b5e20;
@@ -702,45 +733,58 @@ GDAL.
 
     body[data-jp-theme-light="false"] {
       --pv-font-color0: var(--jp-content-font-color0, rgba(255, 255, 255, 1));
-      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.54));
-      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.38));
+      --pv-font-color2: var(--jp-content-font-color2, rgba(255, 255, 255, 0.6));
+      --pv-font-color3: var(--jp-content-font-color3, rgba(255, 255, 255, 0.55));
       --pv-border-color: var(--jp-border-color2, #424242);
       --pv-disabled-color: var(--jp-layout-color3, #616161);
-      --pv-background-color-row-even: var(--jp-layout-color1, #1a1a1a);
-      --pv-background-color-row-odd: var(--jp-layout-color2, #252525);
+      --pv-background-color: var(--jp-layout-color0, #1a1a1a);
+      --pv-background-color-row-even: var(--jp-layout-color1, #1f1f1f);
+      --pv-background-color-row-odd: var(--jp-layout-color2, #2a2a2a);
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
+    /* Values here are deliberately hardcoded rather than written as
+     * var(--jp-*, fallback), because a var() fallback only applies when the variable
+     * is *undefined*, not when it is defined with a value belonging to the other
+     * theme. Custom properties inherit, so a host that defines the --jp-* variables
+     * light-only on :root would have those light values resolve here, and the dark
+     * fallback would never be reached. Do not "simplify" these into var() chains.
+     */
     html[theme="dark"],
     html[data-theme="dark"],
     body[data-theme="dark"],
     body.vscode-dark {
       --pv-font-color0: rgba(255, 255, 255, 1);
-      --pv-font-color2: rgba(255, 255, 255, 0.54);
-      --pv-font-color3: rgba(255, 255, 255, 0.38);
+      --pv-font-color2: rgba(255, 255, 255, 0.6);
+      --pv-font-color3: rgba(255, 255, 255, 0.55);
       --pv-border-color: #424242;
       --pv-disabled-color: #616161;
-      --pv-background-color-row-even: #1a1a1a;
-      --pv-background-color-row-odd: #252525;
+      --pv-background-color: #1a1a1a;
+      --pv-background-color-row-even: #1f1f1f;
+      --pv-background-color-row-odd: #2a2a2a;
       --pv-badge-active: #66bb6a;
       --pv-badge-normals: #64b5f6;
       --pv-badge-vectors: #4db6ac;
       --pv-badge-tcoords: #b39ddb;
     }
 
-    /* OS-level dark mode fallback: applies when no explicit data-theme is set */
+    /* OS-level dark mode fallback: applies when no explicit data-theme is set.
+     * Keep these values identical to the explicit dark block above, and hardcoded
+     * for the same reason.
+     */
     @media (prefers-color-scheme: dark) {
       html:not([data-theme="light"]) {
         --pv-font-color0: rgba(255, 255, 255, 1);
-        --pv-font-color2: rgba(255, 255, 255, 0.54);
-        --pv-font-color3: rgba(255, 255, 255, 0.38);
+        --pv-font-color2: rgba(255, 255, 255, 0.6);
+        --pv-font-color3: rgba(255, 255, 255, 0.55);
         --pv-border-color: #424242;
         --pv-disabled-color: #616161;
-        --pv-background-color-row-even: #1a1a1a;
-        --pv-background-color-row-odd: #252525;
+        --pv-background-color: #1a1a1a;
+        --pv-background-color-row-even: #1f1f1f;
+        --pv-background-color-row-odd: #2a2a2a;
         --pv-badge-active: #66bb6a;
         --pv-badge-normals: #64b5f6;
         --pv-badge-vectors: #4db6ac;
@@ -748,15 +792,28 @@ GDAL.
       }
     }
 
+    /* The background is set explicitly so that it is always resolved from the same
+     * theme block as the text color. Without it the repr inherits the host's
+     * background, which can disagree with our text color and render the repr
+     * unreadable -- e.g. on docs.pyvista.org, where pydata-sphinx-theme gives HTML
+     * cell outputs a light background in dark mode.
+     *
+     * A host can opt out and let the repr blend into its own surface by overriding
+     * --pv-background-color, or by neutralising whatever backdrop it applies. The
+     * PyVista docs do the latter in doc/source/_static/jupyter_sphinx_theme.css.
+     */
     .pv-wrap {
       display: block !important;
       min-width: 300px;
       max-width: 700px;
       line-height: 1.6;
-      padding-bottom: 4px;
+      padding: 6px 8px 8px 8px;
+      box-sizing: border-box;
+      border-radius: 3px;
       font-family: var(--jp-ui-font-family, sans-serif);
       font-size: var(--jp-ui-font-size1, 13px);
       color: var(--pv-font-color0);
+      background-color: var(--pv-background-color);
     }
 
     .pv-text-repr-fallback {
@@ -824,10 +881,13 @@ GDAL.
     }
 
     /* Copy-to-clipboard button */
+    /* opacity compounds with the alpha of --pv-font-color3, so keep it high enough
+     * that this control still clears the 3:1 non-text contrast minimum.
+     */
     .pv-copy-btn {
       display: inline-block;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.75;
       font-size: 0.85em;
       padding: 0 3px;
       vertical-align: middle;
@@ -1115,7 +1175,7 @@ GDAL.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f8028d3e380)
+    </style><pre class='pv-text-repr-fallback'>UnstructuredGrid (0x7f920a886080)
       N Cells:    824278
       N Points:   413250
       X Bounds:   3.299e+05, 3.442e+05
@@ -1170,7 +1230,7 @@ GDAL.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(329924.98816, 344152.930125, 4252833.48213, 4270951.09811, 1493.69165039, 2722.76904297)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.299e+05, 3.442e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.253e+06, 4.271e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.494e+03, 2.723e+03]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-a2213da4-ddfc-4ffc-a369-8d1cf62a7869' class='pv-section-summary-in' type='checkbox' checked /><label for='section-a2213da4-ddfc-4ffc-a369-8d1cf62a7869' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Texture Coordinates</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Texture Coordinates' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>2 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[3.737e-01, 8.576e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-tcoords'>tcoords</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(329924.98816, 344152.930125, 4252833.48213, 4270951.09811, 1493.69165039, 2722.76904297)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [3.299e+05, 3.442e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.253e+06, 4.271e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.494e+03, 2.723e+03]</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-f2ae3734-87de-4955-b733-542ed3afbc34' class='pv-section-summary-in' type='checkbox' checked /><label for='section-f2ae3734-87de-4955-b733-542ed3afbc34' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Texture Coordinates</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Texture Coordinates' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>2 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[3.737e-01, 8.576e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-tcoords'>tcoords</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -1302,7 +1362,7 @@ Read the GeoTIFF as a ``Texture`` in PyVista:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.275 seconds)
+   **Total running time of the script:** (0 minutes 9.005 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_c_geological-map.py:

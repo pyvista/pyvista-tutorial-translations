@@ -8,6 +8,10 @@ Exercises
 See `GeoVista tutorial <https://geovista.readthedocs.io/en/latest/tutorials/region-manifold-extraction.html>`_ .
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 

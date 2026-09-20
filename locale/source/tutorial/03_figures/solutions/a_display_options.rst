@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -94,7 +94,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
 
     Help on method add_mesh in module pyvista.plotting.plotter:
 
-    add_mesh(mesh: 'MatrixLike[float] | PlottableType | _vtk.vtkAlgorithm', color: 'ColorLike | None' = None, style: 'StyleOptions | None' = None, scalars: 'str | NumpyArray[float] | None' = None, clim: 'Sequence[float] | None' = None, show_edges: 'bool | None' = None, edge_color: 'ColorLike | None' = None, point_size: 'float | None' = None, line_width: 'float | None' = None, opacity: 'float | OpacityOptions | Sequence[float] | None' = None, flip_scalars: 'bool' = False, lighting: 'bool | None' = None, n_colors: 'int' = 256, interpolate_before_map: 'bool | None' = None, cmap: 'ColormapOptions | LookupTable | None' = None, label: 'str | None' = None, reset_camera: 'bool | None' = None, scalar_bar_args: 'ScalarBarArgs | None' = None, show_scalar_bar: 'bool | None' = None, multi_colors: 'bool' = False, name: 'str | None' = None, texture: 'Texture | NumpyArray[float] | None' = None, render_points_as_spheres: 'bool | None' = None, point_shape: 'PointSpriteShape | str | None' = None, render_lines_as_tubes: 'bool | None' = None, smooth_shading: 'bool | None' = None, split_sharp_edges: 'bool | None' = None, ambient: 'float | None' = None, diffuse: 'float | None' = None, specular: 'float | None' = None, specular_power: 'float | None' = None, nan_color: 'ColorLike | None' = None, nan_opacity: 'float' = 1.0, culling: 'CullingOptions | bool | None' = None, rgb: 'bool | None' = None, categories: 'bool' = False, silhouette: 'SilhouetteArgs | bool | None' = None, use_transparency: 'bool' = False, below_color: 'ColorLike | None' = None, above_color: 'ColorLike | None' = None, annotations: 'dict[float, str] | None' = None, pickable: 'bool' = True, preference: 'PointLiteral | CellLiteral' = 'point', log_scale: 'bool' = False, pbr: 'bool | None' = None, metallic: 'float | None' = None, roughness: 'float | None' = None, render: 'bool' = True, user_matrix: 'TransformLike | None' = None, component: 'int | None' = None, emissive: 'bool | None' = None, copy_mesh: 'bool' = False, backface_params: 'BackfaceArgs | Property | None' = None, show_vertices: 'bool | None' = None, edge_opacity: 'float | None' = None, remove_existing_actor: 'bool | None' = None, force_opaque: 'bool' = False, **kwargs) -> 'Actor' method of pyvista.plotting.plotter.Plotter instance
+    add_mesh(mesh: 'MatrixLike[float] | PlottableType | _vtk.vtkAlgorithm', color: 'ColorLike | None' = None, style: 'StyleOptions | None' = None, scalars: 'str | NumpyArray[float] | None' = None, clim: 'Sequence[float] | None' = None, show_edges: 'bool | None' = None, edge_color: 'ColorLike | None' = None, point_size: 'float | None' = None, line_width: 'float | None' = None, opacity: 'float | OpacityOptions | Sequence[float] | None' = None, flip_scalars: 'bool' = False, lighting: 'bool | None' = None, n_colors: 'int' = 256, interpolate_before_map: 'bool | None' = None, cmap: 'ColormapOptions | LookupTable | None' = None, label: 'str | None' = None, reset_camera: 'bool | None' = None, scalar_bar_args: 'ScalarBarArgs | None' = None, show_scalar_bar: 'bool | None' = None, multi_colors: 'bool' = False, name: 'str | None' = None, texture: 'Texture | NumpyArray[float] | None' = None, render_points_as_spheres: 'bool | None' = None, point_shape: 'PointSpriteShape | str | None' = None, render_lines_as_tubes: 'bool | None' = None, smooth_shading: 'bool | None' = None, split_sharp_edges: 'bool | None' = None, ambient: 'float | None' = None, diffuse: 'float | None' = None, specular: 'float | None' = None, specular_power: 'float | None' = None, nan_color: 'ColorLike | None' = None, nan_opacity: 'float' = 1.0, culling: 'CullingOptions | bool | None' = None, rgb: 'bool | None' = None, categories: 'bool' = False, silhouette: 'SilhouetteArgs | bool | None' = None, use_transparency: 'bool' = False, below_color: 'ColorLike | None' = None, above_color: 'ColorLike | None' = None, annotations: 'dict[float, str] | None' = None, pickable: 'bool' = True, preference: 'PointLiteral | CellLiteral' = 'point', log_scale: 'bool' = False, pbr: 'bool | None' = None, metallic: 'float | None' = None, roughness: 'float | None' = None, render: 'bool' = True, static: 'bool' = False, user_matrix: 'TransformLike | None' = None, component: 'int | None' = None, emissive: 'bool | None' = None, copy_mesh: 'bool' = False, backface_params: 'BackfaceArgs | Property | None' = None, show_vertices: 'bool | None' = None, edge_opacity: 'float | None' = None, remove_existing_actor: 'bool | None' = None, force_opaque: 'bool' = False, **kwargs) -> 'Actor' method of pyvista.plotting.plotter.Plotter instance
         Add any PyVista/VTK mesh or dataset that PyVista can wrap to the scene.
     
         This method is using a mesh representation to view the surfaces
@@ -145,14 +145,14 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             ``color`` and ``scalars`` are ``None``, then the active
             scalars are used.
     
-            When a raw numpy array is passed, it is attached to
+            When a raw NumPy array is passed, it is attached to
             ``mesh`` under a generated name (typically
             ``pyvista.DEFAULT_SCALARS_NAME`` or
             ``Data-<n>`` if that name is taken). This makes the
             array visible to downstream pipeline stages (for example
             smooth-shading surface extraction) and lets callers
             later mutate it via ``mesh[name] = ...`` to update the
-            render. Mutation is scoped to raw-numpy inputs only.
+            render. Mutation is scoped to raw-NumPy inputs only.
             Passing ``scalars=<str>`` never modifies the mesh.
     
         clim : sequence[float], optional
@@ -193,7 +193,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             ``n_colors`` in length or shorter.
     
         flip_scalars : bool, default: False
-            Flip direction of cmap. Most colormaps allow ``*_r``
+            Flip direction of ``cmap``. Most colormaps allow ``*_r``
             suffix to do this as well.
     
         lighting : bool, optional
@@ -274,11 +274,18 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             Accepts a :class:`pyvista.plotting.opts.PointSpriteShape`
             enum value or a string. Must be one of ``'circle'``,
             ``'triangle'``, ``'hexagon'``, ``'diamond'``, ``'asterisk'``,
-            or ``'star'``. Requires ``style='points'``. If
-            ``render_points_as_spheres`` is ``True`` (explicitly or via
-            theme), it will be automatically disabled with a warning.
+            or ``'star'``. Backends with native point shapes apply the shape
+            to vertex cells in all representation styles. Spheres and
+            Gaussian splats retain their own silhouettes.
+    
+            On older backends, requires ``style='points'`` and automatically
+            disables ``render_points_as_spheres`` with a warning.
     
             .. versionadded:: 0.48
+    
+            .. versionchanged:: 0.49
+                Native point shapes apply to vertices in all representations
+                and preserve explicit sphere rendering.
     
         render_lines_as_tubes : bool, optional
             Show lines as thick tubes rather than flat lines.  Control
@@ -407,6 +414,15 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         render : bool, default: True
             Force a render when ``True``.
     
+        static : bool, default: False
+            If ``True``, the mapper assumes the input data is static and skips
+            checking its input pipeline for updates when rendering. The mapper's
+            input may still be replaced explicitly. Keeping the topology unchanged
+            between replacements may allow the rendering backend to reuse index
+            buffers while updating vertex attributes.
+    
+            .. versionadded:: 0.49
+    
         user_matrix : TransformLike, default: np.eye(4)
             Matrix passed to the Actor class before rendering. This affects the
             actor/rendering only, not the input volume itself. The user matrix is the
@@ -429,7 +445,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             mesh to a plotter multiple times and display different
             scalars. Setting ``copy_mesh`` to ``False`` is necessary if you
             would like to update the mesh after adding it to the plotter and
-            have these updates rendered, e.g. by changing the active scalars or
+            have these updates rendered, for example, by changing the active scalars or
             through an interactive widget. This should only be set to ``True``
             with caution. Defaults to ``False``. This is ignored if the input
             is a :vtk:`vtkAlgorithm` subclass.
@@ -462,9 +478,9 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
             between 0 and 1.
     
             .. note::
-                `edge_opacity` uses ``SetEdgeOpacity`` as the underlying method which
+                ``edge_opacity`` uses ``SetEdgeOpacity`` as the underlying method which
                 requires VTK version 9.3 or higher. If ``SetEdgeOpacity`` is not
-                available, `edge_opacity` is set to 1.
+                available, ``edge_opacity`` is set to 1.
     
         remove_existing_actor : bool, optional
             Remove any existing actor in the renderer with the same name before adding
@@ -571,7 +587,7 @@ See also https://docs.pyvista.org/api/plotting/_autosummary/pyvista.Plotter.add_
         ...     show_scalar_bar=False,
         ... )
     
-        Plot spheres using `points_gaussian` style and scale them by radius.
+        Plot spheres using ``'points_gaussian'`` style and scale them by radius.
     
         >>> N_SPHERES = 1_000_000
         >>> rng = np.random.default_rng(seed=0)
@@ -883,7 +899,7 @@ There you go! Those are a few of the most commonly used display options!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.031 seconds)
+   **Total running time of the script:** (0 minutes 1.445 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_a_display_options.py:

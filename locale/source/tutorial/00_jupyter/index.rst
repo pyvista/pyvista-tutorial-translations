@@ -175,6 +175,10 @@ setting the following flag to ``True`` or ``False``:
   <pyvista.plotting.themes._TrameConfig.jupyter_extension_enabled>`
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -191,7 +195,7 @@ setting the following flag to ``True`` or ``False``:
   .. image:: /tutorial/00_jupyter/images/thumb/sphx_glr_jupyter_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_00_jupyter_jupyter.py`
+  :doc:`/tutorial/00_jupyter/jupyter`
 
 .. raw:: html
 

@@ -6,6 +6,10 @@ Solutions
 ~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Solutions
   .. image:: /tutorial/02_mesh/solutions/images/thumb/sphx_glr_b_create-point-cloud_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_solutions_b_create-point-cloud.py`
+  :doc:`/tutorial/02_mesh/solutions/b_create-point-cloud`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Solutions
   .. image:: /tutorial/02_mesh/solutions/images/thumb/sphx_glr_c_create-uniform-grid_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_solutions_c_create-uniform-grid.py`
+  :doc:`/tutorial/02_mesh/solutions/c_create-uniform-grid`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Solutions
   .. image:: /tutorial/02_mesh/solutions/images/thumb/sphx_glr_d_create-tri-surface_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_solutions_d_create-tri-surface.py`
+  :doc:`/tutorial/02_mesh/solutions/d_create-tri-surface`
 
 .. raw:: html
 
@@ -73,7 +77,7 @@ Solutions
   .. image:: /tutorial/02_mesh/solutions/images/thumb/sphx_glr_e_read-file_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_02_mesh_solutions_e_read-file.py`
+  :doc:`/tutorial/02_mesh/solutions/e_read-file`
 
 .. raw:: html
 

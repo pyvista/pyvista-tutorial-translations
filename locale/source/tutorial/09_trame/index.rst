@@ -142,6 +142,10 @@ Exercises
 Do not run these examples in Jupyter but rather as standalone scripts.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -158,7 +162,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_a_getting_started_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_a_getting_started.py`
+  :doc:`/tutorial/09_trame/a_getting_started`
 
 .. raw:: html
 
@@ -175,7 +179,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_a_trame_simple_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_a_trame_simple.py`
+  :doc:`/tutorial/09_trame/a_trame_simple`
 
 .. raw:: html
 
@@ -192,7 +196,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_b_trame_actor_color_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_b_trame_actor_color.py`
+  :doc:`/tutorial/09_trame/b_trame_actor_color`
 
 .. raw:: html
 
@@ -209,7 +213,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_b_trame_vtk_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_b_trame_vtk.py`
+  :doc:`/tutorial/09_trame/b_trame_vtk`
 
 .. raw:: html
 
@@ -226,7 +230,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_c_trame_scalars_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_c_trame_scalars.py`
+  :doc:`/tutorial/09_trame/c_trame_scalars`
 
 .. raw:: html
 
@@ -243,7 +247,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_d_trame_scalar_range_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_d_trame_scalar_range.py`
+  :doc:`/tutorial/09_trame/d_trame_scalar_range`
 
 .. raw:: html
 
@@ -260,7 +264,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_e_trame_algorithm_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_e_trame_algorithm.py`
+  :doc:`/tutorial/09_trame/e_trame_algorithm`
 
 .. raw:: html
 
@@ -277,7 +281,7 @@ Do not run these examples in Jupyter but rather as standalone scripts.
   .. image:: /tutorial/09_trame/images/thumb/sphx_glr_f_trame_open_file_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_09_trame_f_trame_open_file.py`
+  :doc:`/tutorial/09_trame/f_trame_open_file`
 
 .. raw:: html
 

@@ -6,6 +6,10 @@ Bonus Content
 ~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_d_pbr_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`
+  :doc:`/tutorial/03_figures/bonus/d_pbr`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_e_labels_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py`
+  :doc:`/tutorial/03_figures/bonus/e_labels`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_g_orbit_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`
+  :doc:`/tutorial/03_figures/bonus/g_orbit`
 
 .. raw:: html
 

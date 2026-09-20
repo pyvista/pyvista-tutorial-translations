@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_e_plane-widget.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -101,7 +101,7 @@ After interacting with the scene, the clipped mesh is available as:
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/e_plane-widget.py:29: PyVistaDeprecationWarning: ``Plotter.plane_clipped_meshes`` is deprecated; use ``Plotter.widgets.plane_clipped_meshes`` instead.
       pl.plane_clipped_meshes
 
-    [UnstructuredGrid (0x7f7ff03b5600)
+    [UnstructuredGrid (0x7f91d1b01180)
       N Cells:    3538080
       N Points:   3613484
       X Bounds:   9.000e+01, 1.800e+02
@@ -184,7 +184,7 @@ After interacting with the scene, the slice is available as:
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/e_plane-widget.py:44: PyVistaDeprecationWarning: ``Plotter.plane_sliced_meshes`` is deprecated; use ``Plotter.widgets.plane_sliced_meshes`` instead.
       pl.plane_sliced_meshes
 
-    [PolyData (0x7f7ff03b4c40)
+    [PolyData (0x7f91c18ed240)
       N Cells:    38880
       N Points:   39277
       N Strips:   0
@@ -442,7 +442,7 @@ the ``InteractionEvent`` observer:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.282 seconds)
+   **Total running time of the script:** (0 minutes 9.018 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_e_plane-widget.py:

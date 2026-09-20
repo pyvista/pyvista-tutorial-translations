@@ -6,6 +6,10 @@ Do it yourself
 ~~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Do it yourself
   .. image:: /tutorial/04_filters/exercises/images/thumb/sphx_glr_b_clipping_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_exercises_b_clipping.py`
+  :doc:`/tutorial/04_filters/exercises/b_clipping`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Do it yourself
   .. image:: /tutorial/04_filters/exercises/images/thumb/sphx_glr_c_compute-normals_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_exercises_c_compute-normals.py`
+  :doc:`/tutorial/04_filters/exercises/c_compute-normals`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Do it yourself
   .. image:: /tutorial/04_filters/exercises/images/thumb/sphx_glr_d_contouring_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_exercises_d_contouring.py`
+  :doc:`/tutorial/04_filters/exercises/d_contouring`
 
 .. raw:: html
 
@@ -73,7 +77,7 @@ Do it yourself
   .. image:: /tutorial/04_filters/exercises/images/thumb/sphx_glr_e_glyphs_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_exercises_e_glyphs.py`
+  :doc:`/tutorial/04_filters/exercises/e_glyphs`
 
 .. raw:: html
 

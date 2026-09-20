@@ -8,6 +8,10 @@ Solutions
 These are the solutions to the above examples.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -24,7 +28,7 @@ These are the solutions to the above examples.
   .. image:: /tutorial/01_basic/solutions/images/thumb/sphx_glr_a_load_examples_solution_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_01_basic_solutions_a_load_examples_solution.py`
+  :doc:`/tutorial/01_basic/solutions/a_load_examples_solution`
 
 .. raw:: html
 

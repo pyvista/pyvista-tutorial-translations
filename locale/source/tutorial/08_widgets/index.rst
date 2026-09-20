@@ -28,6 +28,10 @@ Widget Examples
 .. leave blank after this point for Sphinx-Gallery to populate examples
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -44,7 +48,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_a_box-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_a_box-widget.py`
+  :doc:`/tutorial/08_widgets/a_box-widget`
 
 .. raw:: html
 
@@ -61,7 +65,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_b_checkbox-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_b_checkbox-widget.py`
+  :doc:`/tutorial/08_widgets/b_checkbox-widget`
 
 .. raw:: html
 
@@ -78,7 +82,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_c_line-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_c_line-widget.py`
+  :doc:`/tutorial/08_widgets/c_line-widget`
 
 .. raw:: html
 
@@ -95,7 +99,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_d_multi-slider-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_d_multi-slider-widget.py`
+  :doc:`/tutorial/08_widgets/d_multi-slider-widget`
 
 .. raw:: html
 
@@ -112,7 +116,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_e_plane-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_e_plane-widget.py`
+  :doc:`/tutorial/08_widgets/e_plane-widget`
 
 .. raw:: html
 
@@ -129,7 +133,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_f_slider-bar-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_f_slider-bar-widget.py`
+  :doc:`/tutorial/08_widgets/f_slider-bar-widget`
 
 .. raw:: html
 
@@ -146,7 +150,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_g_sphere-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_g_sphere-widget.py`
+  :doc:`/tutorial/08_widgets/g_sphere-widget`
 
 .. raw:: html
 
@@ -163,7 +167,7 @@ Widget Examples
   .. image:: /tutorial/08_widgets/images/thumb/sphx_glr_h_spline-widget_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_08_widgets_h_spline-widget.py`
+  :doc:`/tutorial/08_widgets/h_spline-widget`
 
 .. raw:: html
 

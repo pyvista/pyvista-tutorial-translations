@@ -281,6 +281,10 @@ Exercises
 .. leave blank after this point for Sphinx-Gallery to populate examples
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -297,7 +301,7 @@ Exercises
   .. image:: /tutorial/03_figures/images/thumb/sphx_glr_a_lesson_figures_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_a_lesson_figures.py`
+  :doc:`/tutorial/03_figures/a_lesson_figures`
 
 .. raw:: html
 
@@ -314,7 +318,7 @@ Exercises
   .. image:: /tutorial/03_figures/images/thumb/sphx_glr_b_shading_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_b_shading.py`
+  :doc:`/tutorial/03_figures/b_shading`
 
 .. raw:: html
 
@@ -331,7 +335,7 @@ Exercises
   .. image:: /tutorial/03_figures/images/thumb/sphx_glr_c_geological-map_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_c_geological-map.py`
+  :doc:`/tutorial/03_figures/c_geological-map`
 
 .. raw:: html
 
@@ -348,7 +352,7 @@ Exercises
   .. image:: /tutorial/03_figures/images/thumb/sphx_glr_d_gif_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_d_gif.py`
+  :doc:`/tutorial/03_figures/d_gif`
 
 .. raw:: html
 
@@ -375,6 +379,10 @@ Bonus Content
 ~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -391,7 +399,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_d_pbr_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_d_pbr.py`
+  :doc:`/tutorial/03_figures/bonus/d_pbr`
 
 .. raw:: html
 
@@ -408,7 +416,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_e_labels_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_e_labels.py`
+  :doc:`/tutorial/03_figures/bonus/e_labels`
 
 .. raw:: html
 
@@ -425,7 +433,7 @@ Bonus Content
   .. image:: /tutorial/03_figures/bonus/images/thumb/sphx_glr_g_orbit_thumb.gif
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_bonus_g_orbit.py`
+  :doc:`/tutorial/03_figures/bonus/g_orbit`
 
 .. raw:: html
 
@@ -443,6 +451,10 @@ Do it yourself
 ~~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -459,7 +471,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_a_display_options_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_a_display_options.py`
+  :doc:`/tutorial/03_figures/exercises/a_display_options`
 
 .. raw:: html
 
@@ -476,7 +488,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_b_lighting_mesh_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_b_lighting_mesh.py`
+  :doc:`/tutorial/03_figures/exercises/b_lighting_mesh`
 
 .. raw:: html
 
@@ -493,7 +505,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_c_edl_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_c_edl.py`
+  :doc:`/tutorial/03_figures/exercises/c_edl`
 
 .. raw:: html
 
@@ -511,6 +523,10 @@ Solutions
 ~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -527,7 +543,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_a_display_options_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py`
+  :doc:`/tutorial/03_figures/solutions/a_display_options`
 
 .. raw:: html
 
@@ -544,7 +560,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_b_lighting_mesh_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py`
+  :doc:`/tutorial/03_figures/solutions/b_lighting_mesh`
 
 .. raw:: html
 
@@ -561,7 +577,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_c_edl_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`
+  :doc:`/tutorial/03_figures/solutions/c_edl`
 
 .. raw:: html
 

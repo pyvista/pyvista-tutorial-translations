@@ -308,6 +308,10 @@ bottom of the page and clicking on either the ``*.py`` (script) or ``*.ipynb``
 (notebook) file format.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -324,7 +328,7 @@ bottom of the page and clicking on either the ``*.py`` (script) or ``*.ipynb``
   .. image:: /tutorial/00_intro/images/thumb/sphx_glr_a_basic_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_00_intro_a_basic.py`
+  :doc:`/tutorial/00_intro/a_basic`
 
 .. raw:: html
 

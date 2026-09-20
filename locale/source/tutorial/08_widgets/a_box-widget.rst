@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_08_widgets_a_box-widget.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -55,7 +55,7 @@ scene with a box widget that controls its extent, the
 
  .. code-block:: none
 
-    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:25: UserWarning: download_nefertiti returns a dataset licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
+    /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:25: UserWarning: The nefertiti dataset is licensed under CC BY-NC-SA 4.0 ("The Other Nefertiti" by Al-Badri and Nelles, 2016). It may not be used for commercial purposes, and derivative works must be shared under the same license. For a CC0 alternative suitable for commercial use, see download_washington_bust or download_lincoln_life_mask.
       mesh = examples.download_nefertiti()
 
 
@@ -126,7 +126,7 @@ After interacting with the scene, the clipped mesh is available as:
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/a_box-widget.py:36: PyVistaDeprecationWarning: ``Plotter.box_clipped_meshes`` is deprecated; use ``Plotter.widgets.box_clipped_meshes`` instead.
       pl.box_clipped_meshes
 
-    [UnstructuredGrid (0x7f7ffaa324a0)
+    [UnstructuredGrid (0x7f91d1b03ac0)
       N Cells:    2018232
       N Points:   1009118
       X Bounds:   -1.194e+02, 1.194e+02
@@ -149,7 +149,7 @@ After interacting with the scene, the clipped mesh is available as:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 13.511 seconds)
+   **Total running time of the script:** (0 minutes 8.060 seconds)
 
 
 .. _sphx_glr_download_tutorial_08_widgets_a_box-widget.py:

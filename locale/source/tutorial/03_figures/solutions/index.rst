@@ -6,6 +6,10 @@ Solutions
 ~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_a_display_options_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_a_display_options.py`
+  :doc:`/tutorial/03_figures/solutions/a_display_options`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_b_lighting_mesh_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_b_lighting_mesh.py`
+  :doc:`/tutorial/03_figures/solutions/b_lighting_mesh`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Solutions
   .. image:: /tutorial/03_figures/solutions/images/thumb/sphx_glr_c_edl_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_solutions_c_edl.py`
+  :doc:`/tutorial/03_figures/solutions/c_edl`
 
 .. raw:: html
 

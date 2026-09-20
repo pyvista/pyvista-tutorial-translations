@@ -6,6 +6,10 @@ Solutions
 ~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Solutions
   .. image:: /tutorial/04_filters/solutions/images/thumb/sphx_glr_b_clipping_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_solutions_b_clipping.py`
+  :doc:`/tutorial/04_filters/solutions/b_clipping`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Solutions
   .. image:: /tutorial/04_filters/solutions/images/thumb/sphx_glr_c_compute-normals_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_solutions_c_compute-normals.py`
+  :doc:`/tutorial/04_filters/solutions/c_compute-normals`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Solutions
   .. image:: /tutorial/04_filters/solutions/images/thumb/sphx_glr_d_contouring_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_solutions_d_contouring.py`
+  :doc:`/tutorial/04_filters/solutions/d_contouring`
 
 .. raw:: html
 
@@ -73,7 +77,7 @@ Solutions
   .. image:: /tutorial/04_filters/solutions/images/thumb/sphx_glr_e_glyphs_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_solutions_e_glyphs.py`
+  :doc:`/tutorial/04_filters/solutions/e_glyphs`
 
 .. raw:: html
 

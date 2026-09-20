@@ -6,6 +6,10 @@ Do it yourself
 ~~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_a_display_options_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_a_display_options.py`
+  :doc:`/tutorial/03_figures/exercises/a_display_options`
 
 .. raw:: html
 
@@ -39,7 +43,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_b_lighting_mesh_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_b_lighting_mesh.py`
+  :doc:`/tutorial/03_figures/exercises/b_lighting_mesh`
 
 .. raw:: html
 
@@ -56,7 +60,7 @@ Do it yourself
   .. image:: /tutorial/03_figures/exercises/images/thumb/sphx_glr_c_edl_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_03_figures_exercises_c_edl.py`
+  :doc:`/tutorial/03_figures/exercises/c_edl`
 
 .. raw:: html
 

@@ -6,6 +6,10 @@ Bonus Content
 ~~~~~~~~~~~~~
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Bonus Content
   .. image:: /tutorial/04_filters/bonus/images/thumb/sphx_glr_f_sampling_functions_3d_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_04_filters_bonus_f_sampling_functions_3d.py`
+  :doc:`/tutorial/04_filters/bonus/f_sampling_functions_3d`
 
 .. raw:: html
 

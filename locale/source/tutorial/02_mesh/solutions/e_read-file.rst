@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py>`
-        to download the full example code. or to run this example in your browser via Binder
+        to download the full example code or to run this example in your browser via Binder.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -65,13 +65,16 @@ airplane mesh.
 
     Help on function read in module pyvista.core.utilities.fileio:
 
-    read(filename: 'PathStrSeq', force_ext: 'str | None' = None, file_format: 'str | None' = None, progress_bar: 'bool' = False, *, cls: 'type[DataObject] | None' = None, validate: 'bool | None' = None) -> 'DataObject'
+    read(filename: 'PathStrSeq', force_ext: 'str | None' = None, file_format: 'str | None' = None, progress_bar: 'bool' = False, *, cls: 'type[DataObject] | None' = None, validate: 'bool | None' = None, **kwargs) -> 'DataObject'
         Read any file type supported by ``vtk`` or ``meshio``.
+    
+        .. note::
+            Reading a file and saving it in another format is also available via
+            command-line interface. See :ref:`pyvista convert <cli_convert>` for details.
     
         Automatically determines the correct reader to use then wraps the
         corresponding mesh as a pyvista object.  Attempts native ``vtk``
-        readers first then tries to use ``meshio``. :py:mod:`Pickled<pickle>`
-        meshes (``'.pkl'`` or ``'.pickle'``) are also supported.
+        readers first then tries to use ``meshio``.
     
         Remote URIs (``https://``, ``s3://``, etc.) are downloaded to a
         temporary file automatically.  Install ``fsspec`` for full protocol
@@ -88,15 +91,14 @@ airplane mesh.
            ``meshio``. Be sure to install ``meshio`` with ``pip install
            meshio`` if you wish to use it.
     
-        .. versionadded:: 0.45
-    
-            Support reading pickled meshes.
-    
         .. warning::
     
-            The pickle module is not secure. Only read pickled mesh files
-            (``'.pkl'`` or ``'.pickle'``) you trust. See :py:mod:`pickle`
-            for details.
+            ``.pkl`` / ``.pickle`` files are **not** supported and will be
+            refused. Pickle is a Python serialization protocol, not a mesh
+            file format, and loading an untrusted pickle is arbitrary code
+            execution (CWE-502). Use a real mesh format (``.vtu``, ``.vtp``,
+            ``.vtm``, ``.vtk``, ``.ply``, ``.stl``, and so on) or install
+            ``pyvista-zstd`` for the ``.pv`` single-blob format.
     
         See Also
         --------
@@ -128,16 +130,38 @@ airplane mesh.
             (``mypy``, ``pyright``) use this to narrow the return type to
             ``cls`` directly, so callers do not need ``typing.cast`` or a
             manual ``assert isinstance`` to access subclass-specific
-            attributes, e.g. ``pv.read('file.vtu', cls=pv.UnstructuredGrid)``.
+            attributes, for example, ``pv.read('file.vtu', cls=pv.UnstructuredGrid)``.
     
         validate : bool, optional
             Forwarded to :func:`pyvista.wrap` as the ``validate`` keyword when
             using a ``vtk`` reader. When ``None`` (the default), honors
             :attr:`pyvista.core.config.Config.validate_on_wrap`. Pass ``False`` to
             skip the cheap array-length sanity check on very large trusted
-            files. Has no effect for ``meshio`` or pickle code paths.
+            files. Has no effect for ``meshio`` code paths.
     
             .. versionadded:: 0.48
+    
+        **kwargs : dict, optional
+            Additional keyword arguments set on the reader after initialization but before reading
+            the file.
+    
+            This is effectively the same as using :func:`~pyvista.get_reader` and ``setattr``.
+    
+            .. code-block:: python
+    
+                reader = pyvista.get_reader(file)
+                for key, value in kwargs.items():
+                    setattr(reader, key, value)
+                mesh = reader.read()
+    
+            When the extension resolves to a callable registered with
+            :func:`pyvista.register_reader`, ``**kwargs`` is forwarded to that
+            callable as ``handler(path, **kwargs)`` instead. ``progress_bar`` and
+            ``validate`` are never forwarded, and a callable that overrides an
+            extension PyVista already reads is bypassed entirely so that these
+            arguments keep naming attributes of the built-in reader.
+    
+            .. versionadded:: 0.49
     
         Returns
         -------
@@ -168,9 +192,11 @@ airplane mesh.
     
         >>> mesh = pv.read('mesh.obj')  # doctest:+SKIP
     
-        Load a pickled mesh file.
+        Load a ``.foam`` file and use keyword arguments to set reader-specific properties
+        such as :attr:`~pyvista.OpenFOAMReader.skip_zero_time`.
     
-        >>> mesh = pv.read('mesh.pkl')  # doctest:+SKIP
+        >>> file = examples.download_openfoam_tubes(load=False)
+        >>> mesh = pv.read(file, skip_zero_time=True)
 
 
 
@@ -217,6 +243,12 @@ extensions are listed in an internal function:
         -------
         pyvista.BaseReader
             A subclass of :class:`pyvista.BaseReader` is returned based on file type.
+    
+        See Also
+        --------
+        pyvista.register_reader
+            Register a :class:`BaseReader` subclass for an extension PyVista
+            does not ship a reader for.
     
         Examples
         --------
@@ -606,7 +638,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.295 seconds)
+   **Total running time of the script:** (0 minutes 7.318 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py:

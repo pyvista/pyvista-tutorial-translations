@@ -6,6 +6,10 @@ Exercises
 =========
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
@@ -22,7 +26,7 @@ Exercises
   .. image:: /tutorial/01_basic/exercises/images/thumb/sphx_glr_a_load_examples_exercise_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorial_01_basic_exercises_a_load_examples_exercise.py`
+  :doc:`/tutorial/01_basic/exercises/a_load_examples_exercise`
 
 .. raw:: html
 
