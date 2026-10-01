@@ -531,7 +531,7 @@ Here is a sample mesh
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fd162d694e0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f6cede79ba0)
       N Cells:    19602
       N Points:   10000
       N Strips:   0
@@ -576,7 +576,7 @@ Here is a sample mesh
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-10.0, 10.0, -2.3092638912203256e-14, 20.0, 0.1415802240371704, 7.483089447021484)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.000e+01, 1.000e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-2.309e-14, 2.000e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.416e-01, 7.483e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 19,602</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-be9a0477-71d2-4128-8fd6-7c9a5efd8229' class='pv-section-summary-in' type='checkbox' checked /><label for='section-be9a0477-71d2-4128-8fd6-7c9a5efd8229' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>Elevation <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-8.663e-01, 9.999e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>Elevation</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Elevation' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[1.416e-01, 7.483e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(-10.0, 10.0, -2.3092638912203256e-14, 20.0, 0.1415802240371704, 7.483089447021484)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [-1.000e+01, 1.000e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [-2.309e-14, 2.000e+01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.416e-01, 7.483e+00]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>faces</span> 19,602</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-879e677b-0ef3-416c-9f31-8f970a23cab3' class='pv-section-summary-in' type='checkbox' checked /><label for='section-879e677b-0ef3-416c-9f31-8f970a23cab3' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(2)</span></label><div class='pv-section-inline-details'>Elevation <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>Normals</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Normals' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>3 comp</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[-8.663e-01, 9.999e-01]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-normals'>normals</span></div></li><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>Elevation</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Elevation' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float32</div><div class='pv-var-range'>[1.416e-01, 7.483e+00]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -2553,7 +2553,7 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fd1a792d0c0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f6cc8a41a80)
       N Cells:    0
       N Points:   0
       N Strips:   0
@@ -3085,7 +3085,7 @@ Remember that you will have to wrap the output of the algorithm with :func:`pyvi
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fd1a792d4e0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f6cc8a424a0)
       N Cells:    12
       N Points:   8
       N Strips:   0
@@ -3208,7 +3208,7 @@ See https://kitware.github.io/vtk-examples/site/Python/
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.530 seconds)
+   **Total running time of the script:** (0 minutes 0.527 seconds)
 
 
 .. _sphx_glr_download_tutorial_06_vtk_c_vtk_algorithms.py:
