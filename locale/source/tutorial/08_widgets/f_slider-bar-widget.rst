@@ -118,7 +118,7 @@ After interacting with the scene, the threshold mesh is available as:
     /home/runner/work/pyvista-tutorial-translations/pyvista-tutorial-translations/pyvista-tutorial/tutorial/08_widgets/f_slider-bar-widget.py:32: PyVistaDeprecationWarning: ``Plotter.threshold_meshes`` is deprecated; use ``Plotter.widgets.threshold_meshes`` instead.
       pl.threshold_meshes
 
-    [UnstructuredGrid (0x7f6cc8673d00)
+    [UnstructuredGrid (0x7f8fe4dfada0)
       N Cells:    295424
       N Points:   394455
       X Bounds:   3.615e+01, 1.178e+02

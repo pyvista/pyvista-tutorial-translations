@@ -531,7 +531,7 @@ Take this Lidar point cloud for example:
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f6ced989000)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x7f901e391d20)
       N Cells:    3392091
       N Points:   3392091
       N Strips:   0
@@ -576,7 +576,7 @@ Take this Lidar point cloud for example:
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.949951171875, 1786.7099609375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.787e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 3,392,091</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-7c362b16-dd7d-4add-8c93-554df3aa2f37' class='pv-section-summary-in' type='checkbox' checked /><label for='section-7c362b16-dd7d-4add-8c93-554df3aa2f37' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>Elevation <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>Elevation</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Elevation' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[1.754e+03, 1.787e+03]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.949951171875, 1786.7099609375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.787e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 3,392,091</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-7dedcbc8-82dc-4b9b-b24f-ed3d888ed39c' class='pv-section-summary-in' type='checkbox' checked /><label for='section-7dedcbc8-82dc-4b9b-b24f-ed3d888ed39c' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'>Elevation <span class='pv-badge pv-badge-active'>active</span></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name pv-var-name-active'><span>Elevation</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='Elevation' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>float64</div><div class='pv-var-range'>[1.754e+03, 1.787e+03]</div><div class='pv-var-badges'> <span class='pv-badge pv-badge-active'>active</span></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -745,7 +745,7 @@ the ``add_mesh`` call.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 18.802 seconds)
+   **Total running time of the script:** (0 minutes 19.233 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_solutions_c_edl.py:
