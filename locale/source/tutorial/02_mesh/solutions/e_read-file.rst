@@ -293,7 +293,7 @@ file, displays an airplane mesh and returns the camera's position:
  .. code-block:: none
 
 
-    '/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/pyvista/examples/airplane.ply'
+    '/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/site-packages/pyvista/examples/airplane.ply'
 
 
 
@@ -638,7 +638,7 @@ https://github.com/pyvista/pyvista-tutorial/raw/main/tutorial/02_mesh/scipy.vtk
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.020 seconds)
+   **Total running time of the script:** (0 minutes 3.545 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_e_read-file.py:
