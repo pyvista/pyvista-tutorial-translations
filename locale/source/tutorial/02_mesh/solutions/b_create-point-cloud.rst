@@ -79,11 +79,11 @@ locations.
  .. code-block:: none
 
 
-    pyvista_ndarray([[4.81112675e+05, 4.40024270e+06, 1.77463000e+03],
-                     [4.81074175e+05, 4.40019030e+06, 1.75868994e+03],
-                     [4.80966475e+05, 4.40009690e+06, 1.76488000e+03],
-                     [4.81045275e+05, 4.40010040e+06, 1.76795996e+03],
-                     [4.80936875e+05, 4.40022330e+06, 1.76070996e+03]])
+    pyvista_ndarray([[4.81092575e+05, 4.40013400e+06, 1.75970996e+03],
+                     [4.81087975e+05, 4.40012830e+06, 1.75991003e+03],
+                     [4.80973975e+05, 4.40009720e+06, 1.77418994e+03],
+                     [4.81088075e+05, 4.40010460e+06, 1.76329004e+03],
+                     [4.80962075e+05, 4.40020440e+06, 1.75900000e+03]])
 
 
 
@@ -571,13 +571,13 @@ data or your own project, create a PyVista mesh using those points.
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fdc8524bbe0)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x71261a9477c0)
       N Cells:    67841
       N Points:   67841
       N Strips:   0
       X Bounds:   4.809e+05, 4.811e+05
       Y Bounds:   4.400e+06, 4.400e+06
-      Z Bounds:   1.754e+03, 1.785e+03
+      Z Bounds:   1.754e+03, 1.787e+03
       N Arrays:   0</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
         <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
@@ -616,7 +616,7 @@ data or your own project, create a PyVista mesh using those points.
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.969970703125, 1784.5799560546875)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.785e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 67,841</span></div></div><ul class='pv-sections'></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(480929.875, 481126.87499995413, 4400075.5, 4400247.499999359, 1753.949951171875, 1786.7099609375)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [4.809e+05, 4.811e+05]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [4.400e+06, 4.400e+06]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [1.754e+03, 1.787e+03]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 67,841</span></div></div><ul class='pv-sections'></ul></div></div>
     </div>
     <br />
     <br />
@@ -828,11 +828,11 @@ This time, we're going to create a totally new, random point cloud containing
  .. code-block:: none
 
 
-    pyvista_ndarray([[ 0.67086181,  0.26616666,  0.69217031],
-                     [-0.13905052,  0.79791677,  0.58650984],
-                     [-0.90369115, -0.29342899, -0.31183608],
-                     [ 0.80400889, -0.19671177,  0.56113652],
-                     [-0.67040111,  0.51022984, -0.538728  ]])
+    pyvista_ndarray([[-0.52579186,  0.83895698, -0.14033565],
+                     [-0.37414787,  0.23908901,  0.89601887],
+                     [-0.38210643,  0.04730868,  0.92290659],
+                     [-0.97814718, -0.16796812,  0.12253494],
+                     [ 0.179372  ,  0.74675133,  0.64045931]])
 
 
 
@@ -927,7 +927,7 @@ for more details).
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.976 seconds)
+   **Total running time of the script:** (0 minutes 5.855 seconds)
 
 
 .. _sphx_glr_download_tutorial_02_mesh_solutions_b_create-point-cloud.py:
