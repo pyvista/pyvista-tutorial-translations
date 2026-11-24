@@ -724,13 +724,13 @@ node:
       content: "\00b7";
       padding: 0 6px;
     }
-    </style><pre class='pv-text-repr-fallback'>PolyData (0x7fac1146be20)
+    </style><pre class='pv-text-repr-fallback'>PolyData (0x74d50f52f7c0)
       N Cells:    10
       N Points:   10
       N Strips:   0
-      X Bounds:   5.534e-02, 9.806e-01
-      Y Bounds:   7.495e-02, 9.232e-01
-      Z Bounds:   7.504e-02, 8.121e-01
+      X Bounds:   5.458e-02, 7.038e-01
+      Y Bounds:   2.436e-03, 8.883e-01
+      Z Bounds:   6.061e-02, 9.418e-01
       N Arrays:   1</pre><div class='pv-wrap' style='display:none'><div class='pv-header'><span class='pv-logo'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
       <defs>
         <linearGradient id="pv-pd-g1" x1="0" y1="0" x2="1" y2="1">
@@ -769,7 +769,7 @@ node:
         <tspan fill="#3776AB" opacity="0.7">P</tspan><tspan fill="#FFD43B" opacity="0.7">y</tspan><tspan fill="#008c9e">Vista</tspan>
       </text>
     </svg>
-    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.05533561023547373, 0.9806111924864509, 0.07495452891245868, 0.923224886422693, 0.07503952259130708, 0.8120699884017201)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [5.534e-02, 9.806e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [7.495e-02, 9.232e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [7.504e-02, 8.121e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 10</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-fdde50f4-7483-4e77-80af-4e6bf8bc139b' class='pv-section-summary-in' type='checkbox' checked /><label for='section-fdde50f4-7483-4e77-80af-4e6bf8bc139b' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>My Labels</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='My Labels' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>&lt;U7</div><div class='pv-var-range'></div><div class='pv-var-badges'></div></li></ul></div></li></ul></div></div>
+    </span></div><div class='pv-metadata'><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Bounds</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='(0.05458334125558617, 0.7038082760808444, 0.0024360918688096644, 0.8883447944519752, 0.0606051100061098, 0.941781199191358)' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button><span class='pv-meta-entry'><span class='pv-meta-label'>X</span> [5.458e-02, 7.038e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Y</span> [2.436e-03, 8.883e-01]</span><span class='pv-meta-entry'><span class='pv-meta-label'>Z</span> [6.061e-02, 9.418e-01]</span></div><div class='pv-meta-row pv-copyable'><span class='pv-meta-row-label'>Cells</span><span class='pv-meta-entry'><span class='pv-meta-label'>verts</span> 10</span></div></div><ul class='pv-sections'><li class='pv-section-item'><input id='section-5d811611-6e44-4c23-9de5-c78f99e60633' class='pv-section-summary-in' type='checkbox' checked /><label for='section-5d811611-6e44-4c23-9de5-c78f99e60633' class='pv-section-summary' title='Expand/collapse section'>Point Data: <span>(1)</span></label><div class='pv-section-inline-details'></div><div class='pv-section-details'><ul class='pv-var-list'><li class='pv-var-item'><div class='pv-var-name'><span>My Labels</span><button class='pv-copy-btn' title='Copy to clipboard' data-copy='My Labels' onclick="navigator.clipboard.writeText(this.dataset.copy)">⧉</button></div><div class='pv-var-dims'>scalar</div><div class='pv-var-dtype'>&lt;U7</div><div class='pv-var-range'></div><div class='pv-var-badges'></div></li></ul></div></li></ul></div></div>
     </div>
     <br />
     <br />
@@ -998,7 +998,7 @@ This example will label each point with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.434 seconds)
+   **Total running time of the script:** (0 minutes 0.543 seconds)
 
 
 .. _sphx_glr_download_tutorial_03_figures_bonus_e_labels.py:
